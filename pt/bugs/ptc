@@ -1,0 +1,2 @@
+#!/bin/csh
+../usr/local/bin/ptc -L ../usr/local/lib/pt $*

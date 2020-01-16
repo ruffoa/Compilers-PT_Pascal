@@ -1,0 +1,22 @@
+#!/bin/csh
+foreach i (*.pt)
+    echo "=== ptc $i; ${i:r}.out ==="
+    /bin/rm -f ${i:r}.out
+    if ( -f ${i:r}.dat ) then
+        ./ptc $i
+        ./${i:r}.out ${i:r}.dat < ${i:r}.dat
+    else
+        ./ptc $i 
+        ./${i:r}.out 
+    endif
+    /bin/rm ${i:r}.out
+end
+# foreach i (*.pt)
+#     echo "=== pti $i ==="
+#     if ( -f ${i:r}.dat ) then
+#         ./pti $i ${i:r}.dat < ${i:r}.dat
+#     else
+#         ./pti $i 
+#     endif
+# end
+echo "=== ==="
