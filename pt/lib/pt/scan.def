@@ -31,6 +31,11 @@
         lNewPage = 25;
         lEndFile = 26;
         lastCharClass = 26;
+        lForwardSlash = 27;
+        lPercent   = 28;
+        lAmpersand = 29;  
+        lBar       = 30;  
+        lUnderscore  = 31;
 
         { Output Tokens }
         pDiv = 0;

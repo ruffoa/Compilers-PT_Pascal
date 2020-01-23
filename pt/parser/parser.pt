@@ -89,7 +89,12 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         lNewPage = 25;
         lEndFile = 26;
         lastCharClass = 26;
-
+        lForwardSlash = 27;
+        lPercent   = 28;
+        lAmpersand = 29;  
+        lBar       = 30;  
+        lUnderscore  = 31;
+        
         { Output Tokens }
         pDiv = 0;
         firstKeywordToken = 0;
@@ -412,7 +417,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
 
         { misc. }
         tab = '	';
-        blank = ' ';
+        blank = ' ';        { TODO: Change this to be a proper double quote }
         quote = '''';
         null = 0;
 
@@ -921,6 +926,11 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
             charClassMap[ord(']')] := lRightBracket;
             charClassMap[ord('{')] := lLeftBrace;
             charClassMap[ord('}')] := lRightBrace;
+            charClassMap[ord('/')] := lForwardSlash;
+            charClassMap[ord('%')] := lPercent;
+            charClassMap[ord('&')] := lAmpersand;
+            charClassMap[ord('|')] := lBar;
+            charClassMap[ord('_')] := lUnderscore;
 
             { Initialize the scan ssl table }
             reset(scanSsl {, NscanSsl} );

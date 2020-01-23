@@ -25,7 +25,7 @@ Input :
         lDot            '.'
         lComma          ','
         lSemicolon      ';'
-        lQuote
+        lQuote          '"'
         lBackslash
         lLeftAngle      '<'
         lRightAngle     '>'
@@ -43,6 +43,11 @@ Input :
         lNewPage 
         lEndFile
         lastCharClass = lEndFile;
+        lForwardSlash   '/'
+        lPercent        '%'
+        lAmpersand      '&'
+        lBar            '|'
+        lUnderscore     '_'
 
 Output :
         % Keyword tokens -
