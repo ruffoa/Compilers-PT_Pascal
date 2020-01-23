@@ -36,7 +36,7 @@
         pPlus = 28;
         pMinus = 29;
         pStar = 30;
-        pExclamation = 31;
+        pColonEquals = 31;
         pDot = 32;
         pComma = 33;
         pSemicolon = 34;

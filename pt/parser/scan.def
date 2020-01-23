@@ -31,11 +31,6 @@
         lNewPage = 25;
         lEndFile = 26;
         lastCharClass = 26;
-        lForwardSlash = 27;
-        lPercent   = 28;
-        lAmpersand = 29;  
-        lBar       = 30;  
-        lUnderscore  = 31;
 
         { Output Tokens }
         pDiv = 0;
@@ -73,7 +68,7 @@
         pPlus = 28;
         pMinus = 29;
         pStar = 30;
-        pExclamation = 31;
+        pColonEquals = 31;
         pDot = 32;
         pComma = 33;
         pSemicolon = 34;
