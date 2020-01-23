@@ -93,12 +93,12 @@ Output :
         pPlus
         pMinus
         pStar
-        pColonEquals
         pDot
         pComma
         pSemicolon
         pColon
         pEquals
+        pExclamation
         pNotEqual
         pLess
         pLessEqual
@@ -164,12 +164,7 @@ Scan :
             | ',':
                 .pComma
             | ':':
-                [
-                    | '=':
-                        .pColonEquals
-                    | *:
-                        .pColon
-                ]
+                .pColon
             | lDigit:
                 oBufferSave
                 @Integer
@@ -197,8 +192,6 @@ Scan :
                 ]
             | '<':
                 [
-                    | '>':
-                        .pNotEqual
                     | '=':
                         .pLessEqual
                     | *:
@@ -210,6 +203,13 @@ Scan :
                         .pGreaterEqual
                     | *:
                         .pGreater
+                ]
+            | '!': 
+                [
+                    | '=':
+                        .pNotEqual
+                    | *:
+                        .pExclamation
                 ]
             | '{':
                 @Comment
