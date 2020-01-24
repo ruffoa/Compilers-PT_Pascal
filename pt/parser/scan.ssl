@@ -103,12 +103,17 @@ Output :
         pSemicolon
         pColon
         pEquals
+        pPlusEquals
+        pMinusEquals
+        pEqualsEquals
         pForwardSlash
         pExclamation
         pQuestionMark
         pPercent
         pAmpersand
+        pDoubleAmpersand
         pBar
+        pDoubleBar
         pUnderscore
         pNotEqual
         pLess
@@ -119,6 +124,8 @@ Output :
         pRightParen
         pLeftBracket
         pRightBracket
+        pLeftBrace 
+        pRightBrace
         pDotDot
         lastSyntaxToken = pDotDot;
 
@@ -172,6 +179,10 @@ Scan :
                 .pLeftBracket
             | ']':
                 .pRightBracket
+            | '{':
+                .pLeftBrace
+            | '}':
+                .pRightBrace
             | ',':
                 .pComma
             | ':':
@@ -188,17 +199,29 @@ Scan :
                 ]
             | '=': 
                 [
-                    | '>'
+                    | '>':
                         .pEqualGreater
+                    | '=':
+                        .pEqualsEquals
                     | *: 
                         .pEquals
                 ]
             | '+':
-                .pPlus
+                [
+                    | '=':
+                        .pPlusEquals
+                    | *:
+                        .pPlus
+                ]
             | lQuote:
                 @StringLiteral
             | '-':
-                .pMinus
+                [
+                    | '=':
+                        .pMinusEquals
+                    | *:
+                        .pMinus
+                ]
             | '.':
                 [
                     | '.':
@@ -231,9 +254,19 @@ Scan :
             | '%': 
                 .pPercent
             | '&':
-                .pAmpersand
-            | '|':
-                .pBar
+                [
+                    | '&':
+                        .pDoubleAmpersand
+                    | *:
+                        .pAmpersand
+                ]
+            | '|': 
+                [
+                    | '|':
+                        .pDoubleBar
+                    | *:
+                        .pBar
+                ]
             | '_':
                 .pUnderscore
             | '/':
