@@ -11,8 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: set path variables
       run: | 
-        ls
-        pwd
+        chmod -x ./binaries/ptc
         ls -la ./binaries
         export PATH=$PATH:$(pwd)/binaries/ptc
         $PATH
