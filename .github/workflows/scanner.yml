@@ -9,6 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - working-directory: pt
     - name: make scanner
       run: make scanner
+      working-directory: ./pt
+
