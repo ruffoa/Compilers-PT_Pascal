@@ -16,6 +16,9 @@ jobs:
         echo $PATH
         # ptc
     - name: make scanner
-      run: make scanner
+      run: |
+        echo $PATH
+        ptc
+        make scanner
       working-directory: ./pt
 
