@@ -38,7 +38,9 @@ Input :
         lRightBrace     '}'
         lPercent        '%'
         lAmpersand      '&'
-        lBar            '|'
+        lExclamation	'!'
+	lQuestionMark	'?'
+	lBar            '|'
         lUnderscore     '_'
         lBlank
         lIllegal
@@ -245,8 +247,6 @@ Scan :
                     | *:
                         .pExclamation
                 ]
-            | '{':
-                @Comment
             | '*':
                 .pStar
             | '?':
