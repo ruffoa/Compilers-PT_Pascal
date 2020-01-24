@@ -17,8 +17,8 @@ jobs:
         # ptc
     - name: make scanner
       run: |
-        echo $PATH
-        ptc
+        chmod +x ../binaries/ptc
+        export PATH=$PATH:$(pwd)/../binaries
         make scanner
       working-directory: ./pt
 
