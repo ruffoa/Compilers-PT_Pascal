@@ -73,28 +73,29 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         lSemicolon = 9;
         lQuote = 10;
         lBackslash = 11;
-        lLeftAngle = 12;
-        lRightAngle = 13;
-        lLeftParen = 14;
-        lRightParen = 15;
-        lLeftBracket = 16;
-        lRightBracket = 17;
-        lLeftBrace = 18;
-        lRightBrace = 19;
-        lBlank = 20;
-        lIllegal = 21;
-        lNewLine = 22;
-        lCarriageReturn = 23;
-        lTab = 24;
-        lNewPage = 25;
-        lEndFile = 26;
-        lastCharClass = 26;
-        lForwardSlash = 27;
-        lPercent   = 28;
-        lAmpersand = 29;  
-        lBar       = 30;  
-        lUnderscore  = 31;
-        lQuestionMark = 32;
+        lForwardSlash = 12;
+        lLeftAngle = 13;
+        lRightAngle = 14;
+        lLeftParen = 15;
+        lRightParen = 16;
+        lLeftBracket = 17;
+        lRightBracket = 18;
+        lLeftBrace = 19;
+        lRightBrace = 20;
+        lPercent = 21;
+        lAmpersand = 22;
+        lExclamation = 23;
+        lQuestionMark = 24;
+        lBar = 25;
+        lUnderscore = 26;
+        lBlank = 27;
+        lIllegal = 28;
+        lNewLine = 29;
+        lCarriageReturn = 30;
+        lTab = 31;
+        lNewPage = 32;
+        lEndFile = 33;
+        lastCharClass = 33;
 
         { Output Tokens }
         pDiv = 0;
@@ -132,24 +133,36 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         pPlus = 28;
         pMinus = 29;
         pStar = 30;
-        pExclamation = 31;
-        pDot = 32;
-        pComma = 33;
-        pSemicolon = 34;
-        pColon = 35;
-        pEquals = 36;
-        pNotEqual = 37;
-        pLess = 38;
-        pLessEqual = 39;
-        pGreaterEqual = 40;
-        pGreater = 41;
-        pLeftParen = 42;
-        pRightParen = 43;
-        pLeftBracket = 44;
-        pRightBracket = 45;
-        pDotDot = 46;
-        lastSyntaxToken = 46;
-        pQuestionMark = 47;
+        pDot = 31;
+        pComma = 32;
+        pSemicolon = 33;
+        pColon = 34;
+        pEquals = 35;
+        pPlusEquals = 36;
+        pMinusEquals = 37;
+        pEqualsEquals = 38;
+        pForwardSlash = 39;
+        pExclamation = 40;
+        pQuestionMark = 41;
+        pPercent = 42;
+        pAmpersand = 43;
+        pDoubleAmpersand = 44;
+        pBar = 45;
+        pDoubleBar = 46;
+        pUnderscore = 47;
+        pNotEqual = 48;
+        pLess = 49;
+        pLessEqual = 50;
+        pEqualGreater = 51;
+        pGreater = 52;
+        pLeftParen = 53;
+        pRightParen = 54;
+        pLeftBracket = 55;
+        pRightBracket = 56;
+        pLeftBrace = 57;
+        pRightBrace = 58;
+        pDotDot = 59;
+        lastSyntaxToken = 59;
 
         { Input/Output Tokens }
 
@@ -166,15 +179,15 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
 
         { S/SL Rule Table Addresses } {
         Scan = 0;
-        Identifier = 212;
-        AlternateComment = 325;
-        Integer = 229;
-        StringLiteral = 244;
-        Comment = 296;
+        Identifier = 296;
+        AlternateComment = 409;
+        Integer = 313;
+        StringLiteral = 328;
+        Comment = 380;
         }
 
         { S/SL Table Parameters }
-        sslTblSize = 361;
+        sslTblSize = 445;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;
 
