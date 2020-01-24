@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: set path variables
+      run: export PATH=$PATH:$(pwd)/binaries/ptc
     - name: make scanner
       run: make scanner
       working-directory: ./pt
