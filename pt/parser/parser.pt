@@ -944,8 +944,11 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
             charClassMap[ord('/')] := lForwardSlash;
             charClassMap[ord('%')] := lPercent;
             charClassMap[ord('&')] := lAmpersand;
+            charClassMap[ord('!')] := lExclamation;
+            charClassMap[ord('?')] := lQuestionMark;
             charClassMap[ord('|')] := lBar;
             charClassMap[ord('_')] := lUnderscore;
+
 
             { Initialize the scan ssl table }
             reset(scanSsl {, NscanSsl} );

@@ -39,8 +39,8 @@ Input :
         lPercent        '%'
         lAmpersand      '&'
         lExclamation	'!'
-	lQuestionMark	'?'
-	lBar            '|'
+        lQuestionMark	'?'
+        lBar            '|'
         lUnderscore     '_'
         lBlank
         lIllegal
