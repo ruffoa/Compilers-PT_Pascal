@@ -433,7 +433,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         { misc. }
         tab = '	';
         blank = ' ';        { TODO: Change this to be a proper double quote }
-        quote = '""';
+        quote = '"';
         null = 0;
 
         { Phase identification values - for use by common routines }
