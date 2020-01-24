@@ -13,6 +13,7 @@ jobs:
       run: | 
         ls
         pwd
+        ls -la ./binaries
         export PATH=$PATH:$(pwd)/binaries/ptc
         $PATH
     - name: make scanner
