@@ -12,7 +12,6 @@ jobs:
     - name: set path variables
       run: | 
         chmod -x ./binaries/ptc
-        ls -la /binaries
         export PATH=$PATH:$(pwd)/binaries
         $PATH
     - name: make scanner
