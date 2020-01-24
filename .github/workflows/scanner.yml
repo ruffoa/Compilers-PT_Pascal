@@ -12,7 +12,7 @@ jobs:
     - name: set path variables
       run: | 
         chmod -x ./binaries/ptc
-        export PATH=$PATH:$(pwd)/binaries/
+        export PATH=$PATH:$(pwd)/binaries
         # $PATH
     - name: make scanner
       run: make scanner
