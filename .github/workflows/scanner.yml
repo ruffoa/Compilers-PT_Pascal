@@ -9,15 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: set path variables
-      run: | 
-        chmod +x ./binaries/ptc
-        export PATH=$PATH:$(pwd)/binaries
-        echo $PATH
-        # ptc
     - name: make scanner
       run: |
         chmod +x ../binaries/ptc
+        mkdir -p /opt/caslab/lib/pt
         export PATH=$PATH:$(pwd)/../binaries
         make scanner
       working-directory: ./pt
