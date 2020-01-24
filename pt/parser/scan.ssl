@@ -27,6 +27,7 @@ Input :
         lSemicolon      ';'
         lQuote          '"'
         lBackslash
+        lForwardSlash   '/'
         lLeftAngle      '<'
         lRightAngle     '>'
         lLeftParen      '('
@@ -35,6 +36,10 @@ Input :
         lRightBracket   ']'
         lLeftBrace      '{'
         lRightBrace     '}'
+        lPercent        '%'
+        lAmpersand      '&'
+        lBar            '|'
+        lUnderscore     '_'
         lBlank
         lIllegal
         lNewLine
@@ -43,11 +48,6 @@ Input :
         lNewPage 
         lEndFile
         lastCharClass = lEndFile;
-        lForwardSlash   '/'
-        lPercent        '%'
-        lAmpersand      '&'
-        lBar            '|'
-        lUnderscore     '_'
 
 Output :
         % Keyword tokens -
@@ -103,11 +103,17 @@ Output :
         pSemicolon
         pColon
         pEquals
+        pForwardSlash
         pExclamation
+        pQuestionMark
+        pPercent
+        pAmpersand
+        pBar
+        pUnderscore
         pNotEqual
         pLess
         pLessEqual
-        pGreaterEqual
+        pEqualGreater
         pGreater
         pLeftParen
         pRightParen
@@ -180,8 +186,13 @@ Scan :
                         @Identifier
                     | *:
                 ]
-            | '=':
-                .pEquals
+            | '=': 
+                [
+                    | '>'
+                        .pEqualGreater
+                    | *: 
+                        .pEquals
+                ]
             | '+':
                 .pPlus
             | lQuote:
@@ -203,12 +214,7 @@ Scan :
                         .pLess
                 ]
             | '>':
-                [
-                    | '=':
-                        .pGreaterEqual
-                    | *:
-                        .pGreater
-                ]
+                .pGreater
             | '!': 
                 [
                     | '=':
@@ -220,6 +226,18 @@ Scan :
                 @Comment
             | '*':
                 .pStar
+            | '?':
+                .pQuestionMark
+            | '%': 
+                .pPercent
+            | '&':
+                .pAmpersand
+            | '|':
+                .pBar
+            | '_':
+                .pUnderscore
+            | '/':
+                .pForwardSlash
             | lNewPage:
             | lEndFile:
                 .pEndFile
