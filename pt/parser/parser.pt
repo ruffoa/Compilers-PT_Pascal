@@ -432,7 +432,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
 
         { misc. }
         tab = '	';
-        blank = ' ';        { TODO: Change this to be a proper double quote }
+        blank = ' ';
         quote = '"';
         null = 0;
 
