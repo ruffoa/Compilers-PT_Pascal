@@ -34,7 +34,7 @@ Input :
         pFn                     'fn'
         pLoop                   'loop'
         pBreak                  'break'
-        pMatch                  'match
+        pMatch                  'match'
         lastKeywordToken = pMatch 
 
         % Scanner tokens -
