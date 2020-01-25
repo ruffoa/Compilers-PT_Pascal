@@ -42,7 +42,7 @@ false
 reset
 rewrite
 print
-pritnln
+println
 read
 readln
 chr
