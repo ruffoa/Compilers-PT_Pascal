@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: install 32bit libs
-      run: sudo apt-get install gcc-multilib ia32-libs-dev
+      run: sudo apt-get install gcc-multilib lib32z1-dev
     - name: make scanner
       run: |
         chmod +x ../binaries/ptc
