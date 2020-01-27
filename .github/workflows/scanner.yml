@@ -9,6 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: install 32bit libs
+      run: sudo apt-get install ia32-libs
     - name: make scanner
       run: |
         chmod +x ../binaries/ptc
