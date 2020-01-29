@@ -38,7 +38,7 @@ jobs:
         make scanner
         
         pwd
-        ls test/
+        ls -l test/
         cp ./test/scanTest.qu ./test/scanTest.pt
         timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
