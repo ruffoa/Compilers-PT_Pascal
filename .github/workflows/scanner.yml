@@ -20,6 +20,8 @@ jobs:
         mkdir -p /opt/caslab/lib/
         cp -r ../base-files/. /opt/caslab/lib/
         chmod -R 755 /opt/caslab/lib/
+        chmod -R 755 ./
+
         export PATH=$PATH:$(pwd)/../binaries
 
         make scanner
@@ -27,17 +29,14 @@ jobs:
       working-directory: ./pt
     - name: Test scanner (simpleTest.qu)
       run: |
-        # chmod +x ../binaries/ptc
-        # chmod +x ../binaries/ssl
-        # chmod +x ../binaries/ssltrace
+        chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
 
-        # mkdir -p /opt/caslab/lib/
-        # cp -r ../base-files/. /opt/caslab/lib/
-        ls -l /opt/caslab/lib/pt/
-        # chmod -R 755 /opt/caslab/lib/
-        # export PATH=$PATH:$(pwd)/../binaries
-        
-        # make scanner
+        export PATH=$PATH:$(pwd)/../binaries
+        chmod -R 755 ./
+
+        make scanner
         
         cd test/
         cp simpleTest.qu simpleTest.pt
