@@ -19,6 +19,8 @@ jobs:
         
         mkdir -p /opt/caslab/lib/
         cp -r ../base-files/ /opt/caslab/lib/
+        ls /opt/caslab/lib
+        tree /opt/caslab/lib
         export PATH=$PATH:$(pwd)/../binaries
 
         make scanner
