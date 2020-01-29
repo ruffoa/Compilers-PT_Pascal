@@ -1,0 +1,177 @@
+        { Semantic Operations }
+        oEnterCall = 14;
+        oEmitNullCallAddress = 15;
+        oResolveCalls = 16;
+        oSetClass = 17; { (15) }
+        osSetClassFromSymbolClass = 18;
+        ouSetClassFromSymbolValue = 19;
+        ovSetClassFromSymbolResultClass = 20;
+        owSetClassFromSymbolParameterClass = 21;
+        oxSetClassFromChoiceClass = 22;
+        oChooseClass = 23; { >>15 }
+        oySetClassValue = 24;
+        ozSetClassValueFromSymbolValue = 25;
+        oIncrementClassValue = 26;
+        oEnterNewSymbol = 27;
+        oLookupSymbol = 28;
+        oChangeSymbolClass = 29;
+        oChooseSymbolClass = 30; { >>15 }
+        oVerifySymbolClass = 31; { >>13 }
+        oxEnterNewSymbolValue = 32;
+        oEnterSecondNewSymbolValue = 33;
+        oEnterSymbolValueFromAddress = 34;
+        oxChooseSymbolValue = 35; { >>14 }
+        oEmitSymbolValue = 36;
+        oxVerifySymbolClassValue = 37; { >>13 }
+        oxEnterSymbolParameterClass = 38;
+        oyEnterSymbolResultClass = 39;
+        oyChooseSymbolResultClass = 40; { >>15 }
+        oSaveEnclosingSymbol = 41;
+        oRestoreEnclosingSymbol = 42;
+        oSaveCurrentSymbol = 43;
+        owRestoreCurrentSymbol = 44;
+        oPushCycle = 45;
+        oPopCycle = 46;
+        owChooseCycleDepth = 47; { >>14 }
+        oEmitCycleAddress = 48;
+        oEnterCycleExit = 49;
+        owResolveCycleExits = 50;
+        ozChooseCycleExits = 51; { >>14 }
+        oPushChoice = 52;
+        oPopChoice = 53;
+        oChangeChoiceClass = 54;
+        osChooseChoiceClass = 55; { >>15 }
+        oVerifyChoiceSymbolLabel = 56; { >>13 }
+        oEnterChoiceSymbolLabel = 57;
+        oxEnterChoiceMerge = 58;
+        oxResolveChoiceMerges = 59;
+        oEmitChoiceTable = 60;
+        osResolveChoiceTableAddress = 61;
+        oEmitFirstChoiceValue = 62;
+        oxEmitFirstChoiceAddress = 63;
+        oGenerateDefinitions = 64;
+        owGenerateTable = 65;
+        oEmitValue = 66;
+        owEmitNullAddress = 67;
+
+        { Input Tokens }
+        tIdent = 0;
+        tString = 1;
+        tInteger = 2;
+        tColon = 3;
+        tSemicolon = 4;
+        tEqual = 5;
+        tQuestionMark = 6;
+        tPeriod = 7;
+        tErrorSignal = 8;
+        tCall = 9;
+        tExit = 10;
+        tReturn = 11;
+        tLeftParen = 12;
+        tRightParen = 13;
+        tCycle = 14;
+        tCycleEnd = 15;
+        tChoice = 16;
+        tChoiceEnd = 17;
+        tComma = 18;
+        tOr = 19;
+        tOtherwise = 20;
+        tInput = 21;
+        tOutput = 22;
+        tError = 23;
+        tType = 24;
+        tMechanism = 25;
+        tRules = 26;
+        tEnd = 27;
+        tNewLine = 28;
+        tEndOfFile = 29;
+
+        { Output Tokens }
+        aCall = 0;
+        aReturn = 1;
+        aRuleEnd = 2;
+        aJumpBack = 3;
+        aJumpForward = 4;
+        aInput = 5;
+        aInputAny = 6;
+        aInputChoice = 7;
+        aEmit = 8;
+        aError = 9;
+        aChoice = 10;
+        aChoiceEnd = 11;
+        aSetParameter = 12;
+        aSetResult = 13;
+
+        { Input/Output Tokens }
+
+        { Error Codes }
+        eCycleHasNoExits = 10;
+        eDuplicateLabel = 11;
+        eExitNotInCycle = 12;
+        eBadParameterClass = 13;
+        eBadResultClass = 14;
+        eBadNonvaluedReturn = 15;
+        eBadStringSynonym = 16;
+        eBadValuedReturn = 17;
+        eSymbolPreviouslyDefined = 18;
+        eUndefinedSymbol = 19;
+        eWrongDeclaredResultClass = 20;
+        eWrongLabelClass = 21;
+        eWrongParameterClass = 22;
+        eWrongResultClass = 23;
+        eWrongSymbolClass = 24;
+
+        { Type Values }
+        { Type 13 }
+        invalid = 0;
+        valid = 1;
+        { Type 14 }
+        zero = 0;
+        undefined = -9999;
+        { Type 15 }
+        cNotFound = 0;
+        cInput = 1;
+        cOutput = 2;
+        cInputOutput = 3;
+        cError = 4;
+        cType = 5;
+        cMechanism = 6;
+        cUpdateOp = 7;
+        cParmUpdateOp = 8;
+        cChoiceOp = 9;
+        cParmChoiceOp = 10;
+        cRule = 11;
+        cChoiceRule = 12;
+
+        { S/SL Rule Table Addresses } {
+        Program = 0;
+        InputOutputDefinitions = 11;
+        ErrorDefinitions = 165;
+        TypeAndMechanismDefinitions = 178;
+        RuleDefinitions = 351;
+        SymbolDefinitions = 67;
+        OutputDefinitions = 40;
+        VerifyNewSymbol = 1247;
+        Value = 126;
+        OperationDefinitions = 218;
+        Actions = 514;
+        InputOperation = 618;
+        InputAny = 641;
+        OutputOperation = 644;
+        ErrorSignal = 667;
+        RuleCall = 688;
+        ReturnOperation = 713;
+        InputOrUpdateOperation = 781;
+        CycleAction = 871;
+        CycleExit = 894;
+        SemanticChoice = 909;
+        RuleChoice = 1006;
+        InputChoice = 1045;
+        ChoiceBody = 1054;
+        Labels = 1153;
+        }
+
+        { S/SL Table Parameters }
+        sslTblSize = 1259;
+        minSslTableValue = -32767;
+        maxSslTableValue = 32767;
