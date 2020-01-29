@@ -20,8 +20,6 @@ jobs:
         mkdir -p /opt/caslab/lib/
         cp -r ../base-files/. /opt/caslab/lib/
         chmod -R 755 /opt/caslab/lib/
-        ls -l /opt/caslab/lib/pt
-        ls -l /opt/caslab/lib/ssl
         export PATH=$PATH:$(pwd)/../binaries
 
         make scanner
@@ -35,6 +33,7 @@ jobs:
 
         mkdir -p /opt/caslab/lib/
         cp -r ../base-files/. /opt/caslab/lib/
+        chmod -R 755 /opt/caslab/lib/
         export PATH=$PATH:$(pwd)/../binaries
         
         make scanner
@@ -49,8 +48,8 @@ jobs:
         chmod +x ../binaries/ssl
         chmod +x ../binaries/ssltrace
 
-        mkdir -p /opt/caslab/lib/
         cp -r ../base-files/. /opt/caslab/lib/
+        chmod -R 755 /opt/caslab/lib/
         export PATH=$PATH:$(pwd)/../binaries
         
         make scanner
