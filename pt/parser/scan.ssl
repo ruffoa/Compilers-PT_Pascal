@@ -25,9 +25,9 @@ Input :
         lDot            '.'
         lComma          ','
         lSemicolon      ';'
-        lQuote          '"'
+        lQuote          '"'     % Change the quote to be a double quote
         lBackslash
-        lForwardSlash   '/'
+        lForwardSlash   '/'     % Add in the new tokens
         lLeftAngle      '<'
         lRightAngle     '>'
         lLeftParen      '('
@@ -41,7 +41,7 @@ Input :
         lExclamation	'!'
         lQuestionMark	'?'
         lBar            '|'
-        lUnderscore     '_'
+        lUnderscore     '_'     % End new tokens section
         lBlank
         lIllegal
         lNewLine
@@ -101,7 +101,7 @@ Output :
         pPlusEquals
         pMinusEquals
         pEqualsEquals
-        pForwardSlash
+        pForwardSlash   % Add in the new parse tokens throughout this section
         pExclamation
         pQuestionMark
         pPercent
@@ -148,7 +148,9 @@ rules
 % Note that the order of choice alternatives
 % may have a significant effect on performance
 % under some implementations of S/SL.
-Scan :
+
+% Added in new cases as neccesary
+Scan :  
         {[
             | lBlank :
             | lLetter:

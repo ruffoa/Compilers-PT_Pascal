@@ -433,7 +433,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         { misc. }
         tab = '	';
         blank = ' ';
-        quote = '"';
+        quote = '"';    { Change the quote identifier to be a double quote from a single quote }
         null = 0;
 
         { Phase identification values - for use by common routines }
@@ -939,7 +939,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
             charClassMap[ord('>')] := lRightAngle;
             charClassMap[ord('[')] := lLeftBracket;
             charClassMap[ord(']')] := lRightBracket;
-            charClassMap[ord('{')] := lLeftBrace;
+            charClassMap[ord('{')] := lLeftBrace;   { Add in the new chars to the init table }
             charClassMap[ord('}')] := lRightBrace;
             charClassMap[ord('/')] := lForwardSlash;
             charClassMap[ord('%')] := lPercent;
@@ -947,7 +947,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
             charClassMap[ord('!')] := lExclamation;
             charClassMap[ord('?')] := lQuestionMark;
             charClassMap[ord('|')] := lBar;
-            charClassMap[ord('_')] := lUnderscore;
+            charClassMap[ord('_')] := lUnderscore;  { end new chars }
 
 
             { Initialize the scan ssl table }
