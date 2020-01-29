@@ -34,7 +34,9 @@ jobs:
         chmod +x ../binaries/ssltrace
 
         export PATH=$PATH:$(pwd)/../binaries
-
+        rm -rf lib/
+        mkdir -p lib/pt/
+        
         make scanner
         
         make scanner
