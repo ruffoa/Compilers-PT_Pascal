@@ -20,16 +20,28 @@ jobs:
         mkdir -p /opt/caslab/lib/
         cp -r ../base-files/. /opt/caslab/lib/
         chmod -R 755 /opt/caslab/lib/
-                ls -l parser/
-
-        chmod -R 777 ./
-        ls -l parser/
 
         export PATH=$PATH:$(pwd)/../binaries
 
         make scanner
         ssl parser/scanner.ssl
       working-directory: ./pt
+    
+    - name: Test scanner (scanTest.qu)
+      run: |
+        chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
+
+        export PATH=$PATH:$(pwd)/../binaries
+
+        make scanner
+        
+        cd test/
+        cp scanTest.qu scanTest.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt scanTest.pt" lib/pt/scan.def -e; echo exit=$
+      working-directory: ./pt
+    
     - name: Test scanner (simpleTest.qu)
       run: |
         chmod +x ../binaries/ptc
@@ -37,9 +49,6 @@ jobs:
         chmod +x ../binaries/ssltrace
 
         export PATH=$PATH:$(pwd)/../binaries
-        ls -l parser/
-        chmod -R 777 ./
-        ls -l parser/
 
         make scanner
         
@@ -47,6 +56,7 @@ jobs:
         cp simpleTest.qu simpleTest.pt
         timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt simpleTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
+    
     - name: Test scanner (test.qu)
       run: |
         chmod +x ../binaries/ptc
