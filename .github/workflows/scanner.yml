@@ -22,12 +22,12 @@ jobs:
         chmod -R 755 /opt/caslab/lib/
                 ls -l parser/
 
-        # chmod -R 755 ./
-        # ls -l parser/
+        chmod -R 777 ./
+        ls -l parser/
 
         export PATH=$PATH:$(pwd)/../binaries
 
-        sudo make scanner
+        make scanner
         ssl parser/scanner.ssl
       working-directory: ./pt
     - name: Test scanner (simpleTest.qu)
@@ -37,11 +37,11 @@ jobs:
         chmod +x ../binaries/ssltrace
 
         export PATH=$PATH:$(pwd)/../binaries
-        # ls -l parser/
-        # chmod -R 755 ./
-        # ls -l parser/
+        ls -l parser/
+        chmod -R 777 ./
+        ls -l parser/
 
-        sudo make scanner
+        make scanner
         
         cd test/
         cp simpleTest.qu simpleTest.pt
