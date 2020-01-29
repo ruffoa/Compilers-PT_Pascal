@@ -40,7 +40,7 @@ jobs:
         pwd
         ls test/
         cp ./test/scanTest.qu ./test/scanTest.pt
-        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
     
     - name: Test scanner (simpleTest.qu)
