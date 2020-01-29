@@ -2,4 +2,4 @@ let mut const
 
 | || && == <= => ! ? _ -= += % / "
 
-int bool
+int bool str
