@@ -37,9 +37,8 @@ jobs:
 
         make scanner
         
-        cd test/
-        cp scanTest.qu scanTest.pt
-        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt scanTest.pt" lib/pt/scan.def -e; echo exit=$
+        cp test/scanTest.qu test/scanTest.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
     
     - name: Test scanner (simpleTest.qu)
