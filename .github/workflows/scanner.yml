@@ -37,8 +37,8 @@ jobs:
 
         make scanner
         
-        pwd
-        ls test/
+        make scanner
+
         cp ./test/scanTest.qu ./test/scanTest.pt
         timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
@@ -53,9 +53,8 @@ jobs:
 
         make scanner
         
-        cd test/
-        cp simpleTest.qu simpleTest.pt
-        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt simpleTest.pt" lib/pt/scan.def -e; echo exit=$
+        cp ./test/simpleTest.qu ./test/simpleTest.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/simpleTest.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
     
     - name: Test scanner (test.qu)
@@ -70,9 +69,8 @@ jobs:
         
         make scanner
         
-        cd test/
-        cp test.qu test.pt
-        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt test.pt" lib/pt/scan.def -e; echo exit=$
+        cp ./test/test.qu ./test/test.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/test.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
 
 
