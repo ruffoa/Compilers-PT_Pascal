@@ -14,9 +14,62 @@ jobs:
     - name: make scanner
       run: |
         chmod +x ../binaries/ptc
-        mkdir -p /opt/caslab/lib/pt
-        cp -r ../base-files/. /opt/caslab/lib/pt/
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
+        
+        mkdir -p /opt/caslab/lib/
+        cp -r ../base-files/. /opt/caslab/lib/
+        chmod -R 755 /opt/caslab/lib/
+
         export PATH=$PATH:$(pwd)/../binaries
+
         make scanner
+        ssl parser/scanner.ssl
       working-directory: ./pt
+    
+    - name: Test scanner (scanTest.qu)
+      run: |
+        chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
+
+        export PATH=$PATH:$(pwd)/../binaries
+
+        make scanner
+        
+        cp ./test/scanTest.qu ./test/scanTest.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/scanTest.pt" lib/pt/scan.def -e #; echo exit=$
+      working-directory: ./pt
+    
+    - name: Test scanner (simpleTest.qu)
+      run: |
+        chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
+
+        export PATH=$PATH:$(pwd)/../binaries
+
+        make scanner
+        
+        cp ./test/simpleTest.qu ./test/simpleTest.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/simpleTest.pt" lib/pt/scan.def -e
+      working-directory: ./pt
+    
+    - name: Test scanner (test.qu)
+      run: |
+        chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
+        chmod +x ../binaries/ssltrace
+
+        cp -r ../base-files/. /opt/caslab/lib/
+        chmod -R 755 /opt/caslab/lib/
+        export PATH=$PATH:$(pwd)/../binaries
+        
+        make scanner
+        
+        cp ./test/test.qu ./test/test.pt
+        timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/test.pt" lib/pt/scan.def -e
+      working-directory: ./pt
+
+
 
