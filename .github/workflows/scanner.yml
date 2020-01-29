@@ -14,6 +14,7 @@ jobs:
     - name: make scanner
       run: |
         chmod +x ../binaries/ptc
+        chmod +x ../binaries/ssl
         mkdir -p /opt/caslab/lib/pt
         cp -r ../base-files/. /opt/caslab/lib/pt/
         export PATH=$PATH:$(pwd)/../binaries
