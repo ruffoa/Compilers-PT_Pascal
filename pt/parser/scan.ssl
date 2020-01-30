@@ -161,7 +161,7 @@ Scan :
             | ';':
                 .pSemicolon
             | '(':
-                .plLeftParen
+                .pLeftParen
             | ')':
                 .pRightParen
             | '[':
