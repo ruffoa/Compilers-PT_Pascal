@@ -161,7 +161,7 @@ Scan :
             | ';':
                 .pSemicolon
             | '(':
-                p.lLeftParen
+                .plLeftParen
             | ')':
                 .pRightParen
             | '[':
@@ -180,12 +180,7 @@ Scan :
             | ',':
                 .pComma
             | ':':
-                [
-                    | '=':
-                        .pColonEquals
-                    | *:
-                        .pColon
-                ]
+                .pColon
             | lDigit:
                 oBufferSave
                 @Integer
@@ -197,14 +192,31 @@ Scan :
                     | *:
                 ]
             | '=':
-                .pEquals
+                [
+                    | '=':
+                        .pDoubleEquals
+                    | '>':
+                        .pEqualGreater
+                    | *:
+                        .pEquals
+                ]
             | '+':
-                .pPlus
+                [
+                    | '=':
+                        .pPlusEquals
+                    | *:
+                        .pPlus
+                ]
             | lQuote:
                 oBufferSave
                 @StringLiteral
             | '-':
-                .pMinus
+                [
+                    | '=':
+                        .pMinusEquals
+                    | *:
+                        .pMinus
+                ]
             | '.':
                 [
                     | '.':
@@ -214,22 +226,45 @@ Scan :
                 ]
             | '<':
                 [
-                    | '>':
-                        .pNotEqual
                     | '=':
                         .pLessEqual
                     | *:
                         .pLess
                 ]
             | '>':
+                .pGreater
+            | '{':
+                .pLeftBrace
+            | '}':
+                .pRightBrace
+            | '?':
+                .pQuestionMark
+            | '!':
                 [
                     | '=':
-                        .pGreaterEqual
+                        .pNotEqual
                     | *:
-                        .pGreater
+                        .pNot
                 ]
-            | '{':
-                @Comment
+            | '_':
+                .pUnderscore
+            | '|':
+                [
+                    | '|':
+                        .pDoubleBar
+                    | *:
+                        .pBar
+                ]
+            | '%':
+                .pPercent
+            | '&':
+                [
+                    | '&':
+                        .pDoubleAmpersand
+                    | *:                    % if not a double ampersand than it's an illegal syntax token
+                        ?
+                        #eIllegalChar
+                ]
             | '*':
                 .pStar
             | lNewPage:
