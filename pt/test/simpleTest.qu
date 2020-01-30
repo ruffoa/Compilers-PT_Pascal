@@ -1,0 +1,76 @@
+mod main (output) {
+    
+    const hello = "Hello";
+    let mut boolTest: bool = false;
+
+    // Test re-asigning a mutable variable 
+    boolTest = true;
+
+    // test re-assignning a non-mutable variable
+    hello = "Goodbye!";
+
+    // test assignning a wrong type to a variable
+    boolTest = 99;
+
+    // test assignning strings
+    let mut concatStr = "Hi!";
+    concatStr += hello;
+
+    print("Concat string is: " + concatStr);
+    println();
+
+    let mut num: int = 0;
+
+    // test new operators
+    num += 10;
+    num -= 1;
+    
+    print("Test div (12 / " + num + "): " + 12 / num); println();
+
+    let mut isGreaterThan1: bool;
+
+    if num > 1 {
+        isGreaterThan1 = true;
+    } else {
+        isGreaterThan1 = false;
+    }
+
+    print("Num is: " + num + " > 1? " + isGreaterThan1);
+    println();
+
+    let modulus = num % 2;
+
+    print(num + " mod 2: " + modulus);
+
+    let mut i = 0;
+
+    loop {
+        print(i + " loops"); println();
+        
+        if (i == 1) {
+            print("equals equals works!");
+        }
+
+        break if i >= 3;
+
+        i += 1;
+    } 
+
+    // test boolean operators
+    let bTrue = true;
+    let bFalse = false;
+
+    // Test and operator
+    print("Should be false: " + bTrue && bFalse); println();
+    print("Should be false: " + bFalse && bFalse); println();
+    print("Should be true: " + bTrue && bTrue); println();
+
+    // Test or operator
+    print("Should be false: " + bFalse || bFalse); println();
+    print("Should be true: " + bTrue || bFalse); println();
+    print("Should be true: " + bTrue || bTrue); println();
+
+    // Test negation
+    print("Should be false: " + !bTrue); println();
+    print("Should be true: " + !bFalse); println();
+}
