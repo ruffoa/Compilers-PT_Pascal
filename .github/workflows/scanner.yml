@@ -18,7 +18,7 @@ jobs:
         chmod +x ../binaries/ssltrace
         
         mkdir -p /opt/caslab/lib/
-        cp -r ../lib/pt/. /opt/caslab/lib/pt/
+        cp -r lib/pt/. /opt/caslab/lib/pt/
         cp -r ../basefiles/ssl/. /opt/caslab/lib/ssl/
 
         chmod -R 755 /opt/caslab/lib/
