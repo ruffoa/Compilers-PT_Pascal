@@ -1,0 +1,5 @@
+mod main(args[]){
+    let mut a = "this is a test"
+    println(a)
+}
+
