@@ -1,0 +1,44 @@
+#!/bin/sh 
+
+# PT S/SL Trace Formatter  v4.0
+# J.R. Cordy,  January 1990
+
+# (Revised v4.0 - 15 Dec 2017)
+
+# This script takes as standard input the output from a traced PT S/SL
+# compiler pass and formats the trace into human readable form.
+
+USAGE='
+Usage:  ssltrace "(command that generates trace of phase)" phase.def [option]
+
+E.G.:   ssltrace "ptc -t2 -L mypt/lib test.pt" mypt/parser/parser.def 
+
+Options are:    -r                show trace of rule calls and returns only
+                -m MECHNAME       show trace of semantic mechanism MECHNAME only
+                -o RULENAME       show trace of rule RULENAME only
+                -e                show trace of emitted output only
+                -i                show trace of accepted input only
+'
+
+if [ $# -lt 2 ]
+then
+    echo "$USAGE"
+    exit 99
+fi
+
+LIB=/opt/caslab/lib/ssl
+
+case "$3" in
+    -r)
+        $1 | $LIB/ssltrace.x $2 | egrep -e "@|;" -e "#" ;;
+    -m)
+        $1 | $LIB/ssltrace.x $2 | egrep -e "@|;|o$4" -e "#"  ;;
+    -o)
+        $1 | $LIB/ssltrace.x $2 | $LIB/ssltrf.x -e "$4" -e "#" ;;
+    -e)
+        $1 | $LIB/ssltrace.x $2 | egrep -e "\.|oEmit" -e "% " -e "#" ;;
+    -i)
+        $1 | $LIB/ssltrace.x $2 | egrep -e "\?|\[ \(" -e "#" ;;
+    *)
+        $1 | $LIB/ssltrace.x $2 ;;
+esac
