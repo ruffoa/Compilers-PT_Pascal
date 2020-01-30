@@ -34,7 +34,14 @@ Input :
         lLeftBracket    '['
         lRightBracket   ']'
         lLeftBrace      '{'
-        lRightBrace     '}'
+        lRightBrace     '}'     % adding new character classes below here
+        lQuestionMark   '?'
+        lForwardSlash   '/'
+        lPercent        '%'
+        lAmpersand      '&'
+        lBar            '|'
+        lExclamation    '!'
+        lUnderscore     '_'
         lBlank
         lIllegal
         lNewLine
@@ -49,31 +56,24 @@ Output :
         %   Tokens pDiv through pRepeat are keywords which will be separated
         %   from user defined identifiers by the Screener.  This Scanner
         %   treats them all as identifiers.
-        pDiv 
-        firstKeywordToken = pDiv
-        pMod
-        pOr
-        pAnd
-        pNot
-        pThen
-        pElse
+        pElse 
+        firstKeywordToken = pElse
         pOf
-        pEnd
-        pUntil
-        pDo
-        pArray
         pFile
-        pProgram
         pConst
-        pVar
         pType
-        pProcedure
-        pBegin
         pIf
-        pCase
         pWhile
-        pRepeat
-        lastKeywordToken = pRepeat
+        pPub
+        pMod
+        pMain
+        pLet
+        pMut
+        pFn
+        pLoop
+        pBreak
+        pMatch
+        lastKeywordToken = pMatch
 
         % Scanner tokens -
         %   These are the tokens actually recognized by the Scanner itself.
@@ -93,7 +93,6 @@ Output :
         pPlus
         pMinus
         pStar
-        pColonEquals
         pDot
         pComma
         pSemicolon
@@ -102,12 +101,25 @@ Output :
         pNotEqual
         pLess
         pLessEqual
-        pGreaterEqual
         pGreater
         pLeftParen
         pRightParen
         pLeftBracket
-        pRightBracket
+        pRightBracket           % adding new syntax tokens below here
+        pLeftBrace
+        pRightBrace
+        pPlusEquals
+        pMinusEquals
+        pForwardSlash
+        pPercent
+        pDoubleEquals
+        pDoubleAmpersand
+        pDoubleBar
+        pBar
+        pNot
+        pUnderscore
+        pQuestionMark
+        pEqualGreater
         pDotDot
         lastSyntaxToken = pDotDot;
 
@@ -149,18 +161,22 @@ Scan :
             | ';':
                 .pSemicolon
             | '(':
-                [
-                    | '*':
-                        @AlternateComment
-                    | *:
-                        .pLeftParen
-                ]
+                p.lLeftParen
             | ')':
                 .pRightParen
             | '[':
                 .pLeftBracket
             | ']':
                 .pRightBracket
+            | '/':
+                [
+                    | '/':
+                        @Comment
+                    | '*':
+                        @AlternateComment
+                    | *:
+                        .pForwardSlash
+                ]
             | ',':
                 .pComma
             | ':':
@@ -185,6 +201,7 @@ Scan :
             | '+':
                 .pPlus
             | lQuote:
+                oBufferSave
                 @StringLiteral
             | '-':
                 .pMinus
@@ -251,13 +268,13 @@ StringLiteral :
 
         {[
             | lQuote:
-                [
-                    | lQuote:
-                        oBufferSave
-                    | *:
-                        .pStringLiteral
-                        >
-                ]
+                oBufferSave
+                .pStringLiteral
+                >
+            | lBackslash:       % this is the escape character in qust
+                oBufferSave
+                ?
+                oBufferSave
             | lNewLine:         % literal must not cross a line boundary
                 #eStringLiteralLine
                 .pNewLine
@@ -267,11 +284,6 @@ StringLiteral :
                 .pEndFile
                 >
             | *:        % literal may contain any other character
-                [
-                    | lBackslash:
-                        oBufferSave
-                    | *:
-                ]
                 ?
                 oBufferSave
         ]};
@@ -280,10 +292,9 @@ Comment :
         % Discard the contents of a comment
 
         {[
-            | '}':
-                >
             | lNewLine:
                 .pNewLine
+                >
             | lEndFile:         % comment must be closed before EOF
                 #eCommentEOF
                 .pEndFile
@@ -296,9 +307,10 @@ AlternateComment :
         {[
             | '*':
                 [
-                    | ')':
+                    | '/':
                         >
-                    | *:
+                    | *:    % not the end of the comment so consume character
+                        ?
                 ]
             | lNewLine:
                 .pNewLine

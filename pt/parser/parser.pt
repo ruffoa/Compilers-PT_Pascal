@@ -413,7 +413,7 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         { misc. }
         tab = '	';
         blank = ' ';
-        quote = '''';
+        quote = '"'; { this was originaly: '''' not sure why it had two single quotes inside... }
         null = 0;
 
         { Phase identification values - for use by common routines }
@@ -920,7 +920,15 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
             charClassMap[ord('[')] := lLeftBracket;
             charClassMap[ord(']')] := lRightBracket;
             charClassMap[ord('{')] := lLeftBrace;
-            charClassMap[ord('}')] := lRightBrace;
+            charClassMap[ord('}')] := lRightBrace; { new charClasses added below here}
+            charClassMap[ord('?')] := lQuestionMark;
+            charClassMap[ord('/')] := lForwardSlash;
+            charClassMap[ord('%')] := lPercent;
+            charClassMap[ord('&')] := lAmpersand;
+            charClassMap[ord('|')] := lBar;
+            charClassMap[ord('!')] := lExclamation;
+            charClassMap[ord('_')] := lUnderscore;
+
 
             { Initialize the scan ssl table }
             reset(scanSsl {, NscanSsl} );
