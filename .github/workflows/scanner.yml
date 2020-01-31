@@ -130,7 +130,7 @@ jobs:
       uses: ad-m/github-push-action@v0.5.0
       with: 
         branch: ${GITHUB_REF#refs/heads/} 
-        github_token: ${{ secrets.GITHUB_PA_TOKEN	}}
+        github_token: ${{ secrets.GITHUB_TOKEN	}}
 
 
 
