@@ -13,7 +13,7 @@ jobs:
       uses: actions/cache@v1.0.3
       id: lib-cache
       with:
-        path: "../packages"
+        path: "~/packages"
         key: "1"
 
     - name: install 32bit libs
@@ -21,9 +21,11 @@ jobs:
         CACHE_HIT: ${{steps.lib-cache.outputs.cache-hit}}
       run: |
         if [[ "$CACHE_HIT" == 'true' ]]; then
-          sudo cp --verbose --force --recursive ../packages/* /
+          sudo cp --verbose --force --recursive ~/packages/* /
         else
-          sudo apt-get install gcc-multilib lib32z1-dev
+          # sudo apt-get install gcc-multilib lib32z1-dev
+          mkdir -p ~/packages
+          sudo dpkg -L gcc-multilib lib32z1-dev | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/
         fi
 
     - name: make scanner
@@ -129,7 +131,7 @@ jobs:
     - name: Push Changes
       uses: ad-m/github-push-action@v0.5.0
       with: 
-        branch: ${GITHUB_REF#refs/heads/} 
+        branch: ${{ github.head_ref }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
 
 
