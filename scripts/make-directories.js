@@ -9,10 +9,12 @@ const tokens = "pub mod main let mut fn loop break match const " +
     + " int bool string print println";
 
 const deletedTokens = "div or and not then end until do array program var procedure begin case repeat" + 
-    "integer char boolean write writeln" + 
+    " integer char boolean write writeln" + 
     " ' := (* *) <> ";
 
-const defaultTestDocs = (token, exists = true) => `The purpose of this test case is to test that ${aliases[token] ? `${aliases[token]} (${token})`: token } is ${!exists ? 'not ' : ''}matched`;
+const defaultTestDocs = (token, exists = true) => { 
+    `The purpose of this test case is to test that the ${exists ? '' : aliases[token] ? 'old PT Pascale token' : 'old PT Pascale keyword '}` + 
+    `${aliases[token]} (${token}) is ${!exists ? 'not ' : ''}matched by the screener${!exists ? 'and instead treated as a regular identifier.' : ''}`
 const defualtTest = (token) => specialTests[token] ? specialTests[token] : `${token}`;
 
 const specialTests = {
