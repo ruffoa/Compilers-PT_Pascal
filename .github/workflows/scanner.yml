@@ -12,12 +12,15 @@ jobs:
 
     - name: install 32bit libs
       run: sudo apt-get install gcc-multilib lib32z1-dev
-
-    - name: make scanner
+    
+    - name: setup files
       run: |
-        chmod +x ../binaries/ptc
-        chmod +x ../binaries/ssl
-        chmod +x ../binaries/ssltrace
+        mkdir ~/binaries
+        cp -r ../binaries/. ~/binaries
+
+        chmod +x ~/binaries/ptc
+        chmod +x ~/binaries/ssl
+        chmod +x ~/binaries/ssltrace
         
         mkdir -p /opt/caslab/lib/
         # cp -r lib/pt/. /opt/caslab/lib/pt/
@@ -26,19 +29,18 @@ jobs:
 
         chmod -R 755 /opt/caslab/lib/
 
-        export PATH=$PATH:$(pwd)/../binaries
+        export PATH=$PATH:~/binaries
+      working-directory: ./pt
 
+    - name: make scanner
+      run: |
         make scanner
         ssl parser/scanner.ssl
       working-directory: ./pt
     
     - name: Test scanner (scanTest.qu)
       run: |
-        chmod +x ../binaries/ptc
-        chmod +x ../binaries/ssl
-        chmod +x ../binaries/ssltrace
-
-        export PATH=$PATH:$(pwd)/../binaries
+        export PATH=$PATH:~/binaries
         rm -rf lib/
         mkdir -p lib/pt/
         
@@ -52,11 +54,7 @@ jobs:
     
     - name: Test scanner (simpleTest.qu)
       run: |
-        chmod +x ../binaries/ptc
-        chmod +x ../binaries/ssl
-        chmod +x ../binaries/ssltrace
-
-        export PATH=$PATH:$(pwd)/../binaries
+        export PATH=$PATH:~/binaries
 
         make scanner
         
@@ -66,11 +64,7 @@ jobs:
     
     - name: Test scanner (test.qu)
       run: |
-        chmod +x ../binaries/ptc
-        chmod +x ../binaries/ssl
-        chmod +x ../binaries/ssltrace
-
-        export PATH=$PATH:$(pwd)/../binaries
+        export PATH=$PATH:~/binaries
         
         make scanner
         
@@ -84,11 +78,8 @@ jobs:
 
     - name: Build and export the Test Suite Results
       run: |
-        chmod +x ../binaries/ptc
-        chmod +x ../binaries/ssl
-        chmod +x ../binaries/ssltrace
+        export PATH=$PATH:~/binaries
 
-        export PATH=$PATH:$(pwd)/../binaries
         make scanner
         make scanner
 
@@ -111,8 +102,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.txt
         git status
-        git commit -m "Update test suite output files with latest test results" || echo "##[set-output name=should_push;]$(0)" 
-      id: commit_changes
+        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash
@@ -124,6 +114,5 @@ jobs:
       with: 
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
-      # if: ${{ steps.commit_changes.outputs.should_push }}
 
 

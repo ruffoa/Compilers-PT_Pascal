@@ -1,3 +1,0 @@
- .pStar
- .pRightParen
- .pEndFile
