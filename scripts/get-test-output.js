@@ -33,7 +33,7 @@ async function findAllFilesInDir(dir) {
 
 async function runFile(file) {
     try {
-    const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${file}" ${ptHomePath}lib/pt/ scan .def -e`);
+    const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${folderPath}${dir}/${file}" ${ptHomePath}lib/pt/ scan .def -e`);
     // const output = await exec(`echo "HELOO"`);
     console.log(output.stdout, output.stderr || output.stdout);
 
@@ -54,4 +54,5 @@ function writeResults(content, file, dir) {
     fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`, content);
 }
 
+console.log("PT HOME PATH: ", ptHomePath)
 loopTestDirectories();
