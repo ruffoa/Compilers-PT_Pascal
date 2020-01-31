@@ -1,0 +1,1 @@
+The purpose of this test is to verify that escaped characters in a Qust string are properly recognized
