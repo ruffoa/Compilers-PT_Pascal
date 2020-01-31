@@ -113,10 +113,15 @@ jobs:
         git status
         git commit -m "Update test suite output files with latest test results"
 
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
     - name: Push Changes
       uses: ad-m/github-push-action@v0.5.0
       with: 
-        branch: ${{ GITHUB_REF##*/ }}
+        branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
 
 
