@@ -30,8 +30,10 @@ async function findAllFilesInDir(dir) {
 }
 
 async function runFile(file) {
-    // const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${file}" ${ptHomePath}lib/pt/ scan .def -e`);
-    const output = await exec(`echo "HELOO"`);
+    const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${file}" ${ptHomePath}lib/pt/ scan .def -e`);
+    // const output = await exec(`echo "HELOO"`);
+    console.log(output.stdout, output.stderr || output.stdout);
+
     if (output.stderr) {
         console.error("ERROR IN FILE " + file + ": ", output.stderr);
     }
@@ -42,7 +44,7 @@ async function runFile(file) {
 function writeResults(content, file, dir) {
     console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`);
 
-    fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt') - 3)}-output.txt`, '');
+    fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`, content);
 }
 
 loopTestDirectories();
