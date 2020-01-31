@@ -25,7 +25,8 @@ jobs:
         else
           # sudo apt-get install gcc-multilib lib32z1-dev
           mkdir -p ~/packages
-          sudo dpkg -L gcc-multilib lib32z1-dev | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/
+          sudo dpkg -L gcc-multilib | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/gcc-multilib
+          sudo dpkg -L lib32z1-dev | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/lib32z1-dev
         fi
 
     - name: make scanner
