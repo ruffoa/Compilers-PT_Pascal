@@ -78,7 +78,7 @@ jobs:
         timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/test.pt" lib/pt/scan.def -e; echo exit=$
       working-directory: ./pt
 
-  - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
 
