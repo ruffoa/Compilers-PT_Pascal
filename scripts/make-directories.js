@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 var path = require('path');
 
 const segment = "Scanner"
@@ -10,9 +10,9 @@ const tokens = "pub mod main let mut fun loop break match const " +
 
 const deletedTokens = "div or and not then end until do array program var procedure begin case repeat" + 
     "integer char boolean write writeln" + 
-    "' := (* <> ";
+    " ' := (* *) <> ";
 
-const defaultTestDocs = (token, exists = true) => `The purpose of this test case is to test that ${aliases[token] || token} is ${!exists && 'not '}matched`;
+const defaultTestDocs = (token, exists = true) => `The purpose of this test case is to test that ${aliases[token] ? `${aliases[token]} (${token})`: token } is ${!exists ? 'not ' : ''}matched`;
 const defualtTest = (token) => `${token}`;
 
 const aliases = {
@@ -22,21 +22,24 @@ const aliases = {
     '/': 'Slash',
     '"': "Quote",
     '!': 'ExclamationMark',
+    '!=': 'NotEqual',
     '//': 'Comment',
     '/*': 'StartComment',
     '*/': 'EndComment',
-    '<>': 'OldNotEqual'
+    '<>': 'OldNotEqual',
+    '(*': 'OldStartComment',
+    '*)': 'OldEndComment'
 }
 
 function createDirs() {
     tokens.split(' ').forEach((token) => {
-        const trimmed = aliases[token.trim()] || token.trim();
+        const trimmed = aliases[token.trim()] || token.trim().charAt(0).toUpperCase() + token.trim().slice(1);
         
         try {
             if (!fs.existsSync(folderPath + trimmed)){
-                fs.mkdirSync(dir);
-                createFiles(token, folderPath + trimmed);
-              }
+                fs.mkdirSync(folderPath + trimmed);
+                createFiles(token, folderPath + trimmed, trimmed);
+            }
             
         } catch (e) {
             console.error("SOMETHING BROKE :( " + e);
@@ -48,8 +51,8 @@ function createDirs() {
         
         try {
             if (!fs.existsSync(folderPath + trimmed)){
-                fs.mkdirSync(dir);
-                createFiles(token, folderPath + trimmed);
+                fs.mkdirSync(folderPath + trimmed);
+                createFiles(token, folderPath + trimmed, trimmed, false);
               }
             
         } catch (e) {
@@ -58,11 +61,11 @@ function createDirs() {
     });
 }
 
-function createFiles(token, dirPath) {
+function createFiles(token, dirPath, nameToken, exists) {
     try {
-        fs.writeFileSync(`${dirPath}/${token}.md`, defaultTestDocs(token));
-        fs.writeFileSync(`${dirPath}/${token}.pt`, defualtTest(token));
-        fs.writeFileSync(`${dirPath}/${token}-output.txt`, '');
+        fs.writeFileSync(`${dirPath}/${nameToken}.md`, defaultTestDocs(token, exists));
+        fs.writeFileSync(`${dirPath}/${nameToken}.pt`, defualtTest(token));
+        fs.writeFileSync(`${dirPath}/${nameToken}-output.txt`, '');
     } catch (e) {
         console.error(`CREATING FILES BROKE :( for ${token} at ${path} ` + e);
     }
