@@ -28,7 +28,18 @@ const aliases = {
     '*/': 'EndComment',
     '<>': 'OldNotEqual',
     '(*': 'OldStartComment',
-    '*)': 'OldEndComment'
+    '*)': 'OldEndComment',
+    '<=': 'LessThanEquals',
+    '=>': 'EqualsGreater',
+    '{': 'LeftBrace',
+    '}': 'RightBrace',
+    '%': 'Mod',
+    '-=': 'MinusEquals',
+    '+=': 'PlusEquals',
+    '==': 'EqualsEquals',
+    ':=': 'ColonEquals',
+    '&&': 'DoubleAmpersand',
+    '_': 'Underscore'
 }
 
 function createDirs() {
