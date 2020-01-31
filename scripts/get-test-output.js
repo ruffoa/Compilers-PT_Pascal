@@ -8,6 +8,7 @@ const core = require('@actions/core');
 
 const segment = "Scanner"
 const folderPath = path.join(__dirname, `../TestSuite/${segment}/`);
+const relativeFolderPath = `../TestSuite/${segment}/`;
 const ptHomePath = path.join(__dirname, `../pt/`);
 
 async function loopTestDirectories() {
@@ -33,7 +34,7 @@ async function findAllFilesInDir(dir) {
 
 async function runFile(file, dir) {
     try {
-    const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${folderPath}${dir}/${file}" ${ptHomePath}lib/pt/scan.def -e`);
+    const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt .${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`);
     // const output = await exec(`echo "HELOO"`);
     console.log(output.stdout, output.stderr || output.stdout);
 
