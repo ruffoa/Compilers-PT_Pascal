@@ -34,15 +34,22 @@ async function findAllFilesInDir(dir) {
 
 async function runFile(file, dir) {
     try {
-    const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`);
-    // const output = await exec(`echo "HELOO"`);
-    console.log(output.stdout, output.stderr || output.stdout);
+        const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`);
+        // const output = await exec(`echo "HELOO"`);
+        console.log(output.stdout, output.stderr || output.stdout);
 
-    if (output.stderr) {
-        console.error("ERROR IN FILE " + file + ": ", output.stderr);
-    }
+        let isRealError = true;
 
-    return output.stderr || output.stdout;
+        if (output.stderr) {
+            if (output.stderr.indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
+                isRealError = false;
+            } else {
+                console.error("ERROR IN FILE " + file + ": ", output.stderr);
+            }
+        }
+
+        return output.stderr && isRealError || output.stdout;
+        
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
