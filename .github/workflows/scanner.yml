@@ -34,6 +34,8 @@ jobs:
 
     - name: make scanner
       run: |
+        export PATH=$PATH:~/binaries
+
         make scanner
         ssl parser/scanner.ssl
       working-directory: ./pt
@@ -45,8 +47,7 @@ jobs:
         mkdir -p lib/pt/
         
         make scanner
-        
-        make scanner
+        make scanner # Do this twice because sometimes it breaks on the first run :(
 
         cp ./test/scanTest.qu ./test/scanTest.pt
         timeout 3 ssltrace "ptc -o1 -t1 -L lib/pt ./test/scanTest.pt" lib/pt/scan.def -e; echo exit=$
