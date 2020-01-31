@@ -25,13 +25,13 @@ async function findAllFilesInDir(dir) {
         
         if (file.endsWith('.pt')) {
             console.log(file);
-            const res = await runFile(file);
+            const res = await runFile(file, dir);
             writeResults(res, file, dir);
         }
     });          
 }
 
-async function runFile(file) {
+async function runFile(file, dir) {
     try {
     const output = await exec(`ssltrace "ptc -o1 -t1 -L ${ptHomePath}lib/pt ${folderPath}${dir}/${file}" ${ptHomePath}lib/pt/ scan .def -e`);
     // const output = await exec(`echo "HELOO"`);
@@ -54,5 +54,4 @@ function writeResults(content, file, dir) {
     fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`, content);
 }
 
-console.log("PT HOME PATH: ", ptHomePath)
 loopTestDirectories();
