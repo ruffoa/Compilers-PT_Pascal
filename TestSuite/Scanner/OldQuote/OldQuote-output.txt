@@ -1,5 +1,0 @@
- #eIllegalChar
-  .pIdentifier
-  % Output token text 'test'
- #eIllegalChar
- .pEndFile

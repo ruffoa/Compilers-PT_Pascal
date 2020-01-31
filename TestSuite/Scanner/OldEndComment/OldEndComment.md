@@ -1,1 +1,0 @@
-The purpose of this test case is to test that OldEndComment (*)) is not matched
