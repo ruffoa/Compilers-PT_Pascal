@@ -9,25 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Cache 32bit libs
-      uses: actions/cache@v1.0.3
-      id: lib-cache
-      with:
-        path: "~/packages"
-        key: "1"
 
     - name: install 32bit libs
-      env:
-        CACHE_HIT: ${{steps.lib-cache.outputs.cache-hit}}
-      run: |
-        if [[ "$CACHE_HIT" == 'true' ]]; then
-          sudo cp --verbose --force --recursive ~/packages/* /
-        else
-          # sudo apt-get install gcc-multilib lib32z1-dev
-          mkdir -p ~/packages
-          sudo dpkg -L gcc-multilib | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/gcc-multilib
-          sudo dpkg -L lib32z1-dev | while IFS= read -r f; do if test -f $f; then echo $f; fi; done | xargs cp --parents --target-directory ~/packages/lib32z1-dev
-        fi
+      run: sudo apt-get install gcc-multilib lib32z1-dev
 
     - name: make scanner
       run: |
