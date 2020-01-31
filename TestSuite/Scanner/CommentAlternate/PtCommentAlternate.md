@@ -1,0 +1,1 @@
+The purpose of this test is to verify that the alternate PT Pascale comments using tokens (* & *) are no longer recognized. 

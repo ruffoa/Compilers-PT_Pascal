@@ -1,1 +1,1 @@
-The purpose of this test case is to test that procedure is not matched
+The purpose of this test case is to test that the old PT Pascale keyword 'procedure' is not matched by the screener and instead treated as a regular identifier.

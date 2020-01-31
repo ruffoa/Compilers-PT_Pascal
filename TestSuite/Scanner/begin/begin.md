@@ -1,1 +1,1 @@
-The purpose of this test case is to test that begin is not matched
+The purpose of this test case is to test that the old PT Pascale keyword 'begin' is not matched by the screener and instead treated as a regular identifier.

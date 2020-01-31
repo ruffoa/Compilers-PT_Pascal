@@ -1,1 +1,1 @@
-The purpose of this test case is to test that then is not matched
+The purpose of this test case is to test that the old PT Pascale keyword 'then' is not matched by the screener and instead treated as a regular identifier.
