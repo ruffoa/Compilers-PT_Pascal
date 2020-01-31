@@ -13,7 +13,19 @@ const deletedTokens = "div or and not then end until do array program var proced
     " ' := (* *) <> ";
 
 const defaultTestDocs = (token, exists = true) => `The purpose of this test case is to test that ${aliases[token] ? `${aliases[token]} (${token})`: token } is ${!exists ? 'not ' : ''}matched`;
-const defualtTest = (token) => `${token}`;
+const defualtTest = (token) => specialTests[token] ? specialTests[token] : `${token}`;
+
+const specialTests = {
+    '"': `"test"`,
+    '\'': "'test'",
+    '//': "// I am a comment",
+    '/*': "/* I am a long comment */",
+    '*/': "/* I am a long comment */",
+    '(*': "/* I am a old-style long comment */",
+    '*)': "/* I am a old-style long comment */",
+    '{': "{ \n { I am an old-style standard comment }",
+    '}': "} \n { I am an old-style standard comment }",
+}
 
 const aliases = {
     '?': 'QuestionMark',
@@ -21,6 +33,7 @@ const aliases = {
     '||': 'DoubleBar',
     '/': 'Slash',
     '"': "Quote",
+    '\'': 'OldQuote',
     '!': 'ExclamationMark',
     '!=': 'NotEqual',
     '//': 'Comment',

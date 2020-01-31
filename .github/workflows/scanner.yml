@@ -111,8 +111,9 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.txt
         git status
-        git commit -m "Update test suite output files with latest test results"
-
+        git commit -m "Update test suite output files with latest test results" || echo "##[set-output name=should_push;]$(0)" 
+      id: commit_changes
+      
     - name: Extract branch name
       shell: bash
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
@@ -123,6 +124,6 @@ jobs:
       with: 
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
-
+      # if: ${{ steps.commit_changes.outputs.should_push }}
 
 
