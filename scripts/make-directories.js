@@ -4,7 +4,7 @@ var path = require('path');
 const segment = "Scanner"
 const folderPath = path.join(__dirname, `../TestSuite/${segment}/`);
 
-const tokens = "pub mod main let mut fun loop break match const " + 
+const tokens = "pub mod main let mut fn loop break match const " + 
     "{ } += -= / % == && || | ! _ ? => \" /* */ // !="
     + " int bool string print println";
 
