@@ -98,6 +98,8 @@ jobs:
         node ./get-test-output.js
 
         ls -l -R ../TestSuite/Scanner
+        cd ../TestSuite/Scanner/
+        cat */*.txt
       working-directory: ./pt
 
     # - name: Push Changes

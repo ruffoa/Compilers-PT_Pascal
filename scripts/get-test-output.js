@@ -50,7 +50,7 @@ async function runFile(file, dir) {
 }
 
 function writeResults(content, file, dir) {
-    console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`);
+    console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt` + '\n--------------------------------\n');
 
     fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.txt`, content);
 }
