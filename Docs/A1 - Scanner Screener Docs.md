@@ -310,3 +310,20 @@ Added code to break on a new line, and removed handling for the PT end comment b
 
 ### SSL Alternate Comment Function
 Changed the parenthesis to a slash, and a wildcard token for the else case
+
+# `parser.pt` Changes
+-The auto-generated ssl tokens were copy and pasted from the scan.def file, in order to both support the new Qust tokens, and remove the old PT tokens
+
+-The `numberStdIdentifiers` was changed to `35` from `42`
+- The quote token was changed from `'` to `"`
+- The charClassMap was updated with the new character tokens, in order to let the scanner recognize the new input characters and map them to the respective token
+    ```pt
+        charClassMap[ord('?')] := lQuestionMark;
+        charClassMap[ord('/')] := lForwardSlash;
+        charClassMap[ord('%')] := lPercent;
+        charClassMap[ord('&')] := lAmpersand;
+        charClassMap[ord('|')] := lBar;
+        charClassMap[ord('!')] := lExclamation;
+        charClassMap[ord('_')] := lUnderscore;
+    ```
+
