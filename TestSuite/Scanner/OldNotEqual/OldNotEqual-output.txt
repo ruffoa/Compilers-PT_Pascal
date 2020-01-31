@@ -1,3 +1,0 @@
- .pLess
- .pGreater
- .pEndFile
