@@ -58,7 +58,7 @@ All of the below changes also had related changes in `parser.pt`
         lAmpersand    
         lBar          
         lExclamation  
-        lUnderscore`.  This was done to get the new Quest tokens to be recognized by the scanner
+        lUnderscore`.  This was done to get the new Qust tokens to be recognized by the scanner
 
 - In the output token section, added the following tokens:
         `pPub
@@ -153,7 +153,7 @@ Slash:
 +        ]
     ...
 ```
-Added in the forward slash token, as well as implemented the comment and alternate commen logic here
+Added in the forward slash token, as well as implemented the comment and alternate comment logic here
 
 Equals (and related compound tokens): 
 ```diff
