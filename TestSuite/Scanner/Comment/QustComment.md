@@ -1,0 +1,1 @@
+The purpose of this test case is to test that Comment (//) is matched and the following characters are ommited

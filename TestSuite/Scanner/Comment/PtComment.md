@@ -1,0 +1,1 @@
+The purpose of this test is to verify that old Pt comments using token ({}) are not longer recognized.
