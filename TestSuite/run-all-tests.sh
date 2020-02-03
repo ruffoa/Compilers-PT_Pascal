@@ -26,7 +26,8 @@ if [ "$1" != "" ]; then
 
 else
     echo "Please enter the name of the section you want to run tests against (eg. 'Scanner'). This *should* match the directory name"
-    tput setaf 1; 
+    tput setaf 2; 
     echo "Eg: ./run-all-tests scanner"
+    tput setaf 7; 
 fi
 
