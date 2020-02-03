@@ -17,7 +17,7 @@ if [ "$1" != "" ]; then
         for file in $DIR/*/*.pt
         do
             echo -e "\n----------------------------\nRunning tests for $file" 
-            ssltrace "ptc -o1 -t1 -L ../../../pt/lib/pt $file" ../../../pt/lib/pt/scan.def -e 
+            ssltrace "ptc -o1 -t1 -L ../pt/lib/pt $file" ../pt/lib/pt/scan.def -e 
             echo -e "----------------------------\n"
         done
     fi
