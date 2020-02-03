@@ -5,7 +5,7 @@ const segment = "Scanner"
 const folderPath = path.join(__dirname, `../TestSuite/${segment}/`);
 
 const tokens = "pub mod main let mut fn loop break match const " + 
-    "{ } += -= / % == && || | ! _ ? => \" /* */ // !="
+    "{ } , + += -= = / % == && || | ! _ ? => < \" * /* */ // !="
     + " int bool string print println";
 
 const deletedTokens = "div or and not then end until do array program var procedure begin case repeat" + 
@@ -54,7 +54,12 @@ const aliases = {
     '==': 'EqualsEquals',
     ':=': 'ColonEquals',
     '&&': 'DoubleAmpersand',
-    '_': 'Underscore'
+    '_': 'Underscore',
+    '<': 'LessThan',
+    '+': 'Plus',
+    '=': 'Equals',
+    ',': 'Comma',
+    '*': 'Star'
 }
 
 function createDirs() {
