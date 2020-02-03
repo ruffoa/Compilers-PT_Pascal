@@ -1,5 +1,5 @@
 # CMPE 458 – A1 Scanner / Screener Docs
-Alex Ruffo – 10180070, David Findlay – 10187718
+Alex Ruffo – 10180070, David Findlay – 10187718, Quentin Le Bars - 20194155
 
 ## `stdIdentifiers` Changes
 All of the below changes also had a counterpart within `parser.pt`, as the new definitions generated from the identifiers had to be pasted into `parser.pt`
