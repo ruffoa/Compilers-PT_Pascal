@@ -22,7 +22,6 @@ Input :
         lStar           '*'
         lColon          ':'
         lEquals         '='
-        lDot            '.'
         lComma          ','
         lSemicolon      ';'
         lQuote
@@ -93,7 +92,6 @@ Output :
         pPlus
         pMinus
         pStar
-        pDot
         pComma
         pSemicolon
         pColon
@@ -120,8 +118,7 @@ Output :
         pUnderscore
         pQuestionMark
         pEqualGreater
-        pDotDot
-        lastSyntaxToken = pDotDot;
+        lastSyntaxToken = pEqualGreater;
 
 Error :
         eIllegalChar = 5
@@ -216,13 +213,6 @@ Scan :
                         .pMinusEquals
                     | *:
                         .pMinus
-                ]
-            | '.':
-                [
-                    | '.':
-                        .pDotDot
-                    | *:
-                        .pDot
                 ]
             | '<':
                 [

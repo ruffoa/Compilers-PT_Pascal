@@ -10,7 +10,7 @@ const tokens = "pub mod main let mut fn loop break match const " +
 
 const deletedTokens = "div or and not then end until do array program var procedure begin case repeat" + 
     " integer char boolean write writeln" + 
-    " ' := (* *) <> ";
+    " ' . := (* *) <> ";
 
 const defaultTestDocs = (token, exists = true) => { 
     `The purpose of this test case is to test that the ${exists ? '' : aliases[token] ? 'old PT Pascale token' : 'old PT Pascale keyword '}` + 
@@ -59,7 +59,8 @@ const aliases = {
     '+': 'Plus',
     '=': 'Equals',
     ',': 'Comma',
-    '*': 'Star'
+    '*': 'Star',
+    '.': 'Dot'
 }
 
 function createDirs() {
