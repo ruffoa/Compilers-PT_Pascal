@@ -60,6 +60,9 @@ All of the below changes also had related changes in `parser.pt`
         lExclamation  
         lUnderscore`.  This was done to get the new Qust tokens to be recognized by the scanner
 
+- In the input tokens section, removed the following tokens:
+        `lDot`.  This is no longer valid input in Qust, hence it was removed from the scanner.
+
 - In the output token section, added the following tokens:
         `pPub
         pMod
@@ -75,7 +78,8 @@ All of the below changes also had related changes in `parser.pt`
 - In the output token section, removed the following tokens:
         `pDiv
         pOr	
-        pAnd	
+        pAnd
+        pDot	
         pNot	
         pThen	
         pEnd	
@@ -278,6 +282,17 @@ Removed the left brace comment rule
 -    @Comment
 ```
 
+Removed the `.` and `..` choice rules, as these inputs are no longer present in Qust.
+```diff
+-| '.':
+-    [
+-        | '.':
+-            .pDotDot
+-        | *:
+-            .pDot
+-    ]
+```
+
 ### SSL String Literal Function
 Changed the quote handling to handle the backslash token, and break on a quote token
 
@@ -326,4 +341,8 @@ Changed the parenthesis to a slash, and a wildcard token for the else case
         charClassMap[ord('!')] := lExclamation;
         charClassMap[ord('_')] := lUnderscore;
     ```
+    - The `.` was removed from the charClassMap as it is not valid input in Qust
+        ```pt
+            charClassMap[ord('.')] := lDot;
+        ```
 
