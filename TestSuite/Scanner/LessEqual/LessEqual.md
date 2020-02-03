@@ -1,0 +1,1 @@
+The purpose of this test is to check that the '<=' .pLessEqual token is matched by the scanner.
