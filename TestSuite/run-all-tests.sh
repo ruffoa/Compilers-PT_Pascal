@@ -16,10 +16,12 @@ if [ "$1" != "" ]; then
     if [ "$DIR" != "" ]; then
         for file in $DIR/*/*.pt
         do
-            echo -e "\n----------------------------\nRunning tests for $file" 
-            ssltrace "ptc -o1 -t1 -L ../pt/lib/pt $file" ../pt/lib/pt/scan.def -e 
-            echo -e "----------------------------\n"
+            echo -e "\n----------------------------\nRunning tests for $file" | tee -a test_results.txt
+            ssltrace "ptc -o1 -t1 -L ../pt/lib/pt $file" ../pt/lib/pt/scan.def -e | tee -a test_results.txt
+            echo -e "----------------------------\n" | tee -a test_results.txt
         done
+        
+        echo  -e "\n----------------------------\nDone!  The results are also saved to './test_results.txt' for easier reading :)"
     fi
 
 else
