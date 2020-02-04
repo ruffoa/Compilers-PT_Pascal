@@ -1,11 +1,13 @@
 {
-    "name": "scripts",
-    "devDependencies": {
-      "@babel/core": "^7.8.3",
-      "@babel/register": "^7.8.3"
-    },
-    "scripts": {
-      "create-dirs": "node -r @babel/register ./make-directories.js"
-    }
+  "name": "scripts",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/register": "^7.8.3"
+  },
+  "scripts": {
+    "create-dirs": "node -r @babel/register ./make-directories.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.2"
   }
-  
+}
