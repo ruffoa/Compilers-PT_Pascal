@@ -73,7 +73,8 @@ function compareResults(content, file) {
     }
 
     for (var i = 0; i < expectedOutput.length; i++) {
-        console.log(expectedOutput[i], testOutput[i]);
+        // console.log(expectedOutput[i], testOutput[i]);
+        
         if (expectedOutput[i] !== testOutput[i]) {
             console.error(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
             core.setFailed(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
@@ -81,5 +82,4 @@ function compareResults(content, file) {
     }
 }
 
-console.log(__dirname)
 findAllFilesInDir();
