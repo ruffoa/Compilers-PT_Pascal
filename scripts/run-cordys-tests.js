@@ -12,7 +12,8 @@ const folderPath = path.join(__dirname, `../CordyTests`);
 const outputMap = {
     '.pForwardSlash': '.pSlash',
     '.pDoubleBar': '.pDoubleOrBar',
-    '.pBar': '.pOrBar'
+    '.pBar': '.pOrBar',
+    '.pEqualGreater': '.pGreaterEqual'
 };
 
 async function findAllFilesInDir() {
