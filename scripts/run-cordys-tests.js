@@ -22,7 +22,7 @@ async function findAllFilesInDir() {
 
 async function runFile(file) {
     try {
-        const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${file}" ../pt/lib/pt/scan.def -e`);
+        const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
         console.log(output.stdout, output.stderr || output.stdout);
 
