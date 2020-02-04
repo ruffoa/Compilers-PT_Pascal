@@ -1,3 +1,3 @@
   .pStringLiteral
-  % Output token text '"this string  has escaped " chaac	es!"'
+  % Output token text 'this string  has escaped " chaac	es!'
  .pEndFile

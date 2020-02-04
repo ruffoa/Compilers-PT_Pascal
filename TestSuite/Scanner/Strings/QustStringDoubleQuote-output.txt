@@ -1,8 +1,4 @@
   .pStringLiteral
-  % Output token text '"Null strings look like this: "'
-  .pStringLiteral
-  % Output token text '""'
-  .pStringLiteral
-  % Output token text '""'
+  % Output token text 'Null strings look like this: ""'
  .pNewLine
  .pEndFile
