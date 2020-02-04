@@ -5,6 +5,7 @@
 # By the CMPE458 Dream Team - Alex Ruffo, David Findlay
 
 DIR=""
+rm -f test_results.txt
 
 if [ "$1" != "" ]; then
     if [ "$1" == "scanner" ] || [ "$1" == "Scanner" ]; then 
