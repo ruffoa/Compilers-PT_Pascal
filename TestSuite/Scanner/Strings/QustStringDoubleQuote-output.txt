@@ -1,0 +1,7 @@
+  .pStringLiteral
+  % Output token text '""'
+  .pStringLiteral
+  % Output token text '""'
+  #eStringLiteralLine
+  .pNewLine
+ .pEndFile
