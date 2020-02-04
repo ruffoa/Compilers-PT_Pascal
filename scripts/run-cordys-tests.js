@@ -74,7 +74,7 @@ function compareResults(content, file) {
 
     if (expectedOutput.length !== testOutput.length) {
         console.error("Lengths do not match!  Something went wrong in ", file);
-        console.error(`Output is: \n-------------------------\n${testOutput}\n------------------------`)
+        console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
         core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
         return;
