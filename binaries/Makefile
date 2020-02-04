@@ -7,7 +7,7 @@ ptruntime.o:	ptruntime.c
 	gcc -m32 -w -c ptruntime.c
 
 install: ptruntime.o
-	/bin/cp ptruntime.o ../lib/pt
+	/bin/cp ptruntime.o ../pt/lib/pt
 
 clean:
 	/bin/rm -f ptruntime.o
