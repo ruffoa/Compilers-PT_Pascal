@@ -41,7 +41,7 @@ mod main (input, output) {
 	break if i > Ndown ;
 	let mut j = 1;
 	loop {
-	    break if j >= height - 1 ;
+	    break if j => height - 1 ;
 	    print (middle) ;
 	    println();
 	    j += 1;

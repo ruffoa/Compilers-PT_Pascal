@@ -51,7 +51,7 @@ mod main (output) {
             print("equals equals works!");
         }
 
-        break if i >= 3;
+        break if i => 3;
 
         i += 1;
     } 
