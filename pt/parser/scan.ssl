@@ -205,7 +205,6 @@ Scan :
                         .pPlus
                 ]
             | lQuote:
-                oBufferSave
                 @StringLiteral
             | '-':
                 [
@@ -293,7 +292,9 @@ StringLiteral :
 
         {[
             | lQuote:
-                oBufferSave
+                |lQuote:
+                    oBufferSave
+                |*:
                 .pStringLiteral
                 >
             | lBackslash:       % this is the escape character in qust
@@ -346,5 +347,5 @@ AlternateComment :
             | *:
                 ?
         ]};
-
+        
 end
