@@ -80,8 +80,8 @@ function compareResults(content, file) {
     for (var i = 0; i < expectedOutput.length; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[expectedOutput[i]] !== testOutput[i] && expectedOutput[i] !== testOutput[i]) {
-            console.error(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
+        if (outputMap[expectedOutput[i].trim()] !== testOutput[i].trim() && expectedOutput[i] !== testOutput[i]) {
+            console.error(`${outputMap[expectedOutput[i].trim()] ? outputMap[expectedOutput[i].trim()] : expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
             core.setFailed(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
         }
     }
