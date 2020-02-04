@@ -292,11 +292,11 @@ StringLiteral :
 
         {[
             | lQuote:
-                |lQuote:
+                | lQuote:
                     oBufferSave
-                |*:
-                .pStringLiteral
-                >
+                | *:
+                    .pStringLiteral
+                    >
             | lBackslash:       % this is the escape character in qust
                 oBufferSave
                 ?
@@ -347,5 +347,5 @@ AlternateComment :
             | *:
                 ?
         ]};
-        
+
 end
