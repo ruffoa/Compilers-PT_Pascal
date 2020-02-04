@@ -1,0 +1,1524 @@
+
+----------------------------
+Running tests for Scanner/and/and.pt
+  .pIdentifier
+  % Output token text 'and'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/array/array.pt
+  .pIdentifier
+  % Output token text 'array'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bar/Bar.pt
+ .pBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/begin/begin.pt
+  .pIdentifier
+  % Output token text 'begin'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bool/Bool.pt
+  .pIdentifier
+  % Output token text 'bool'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/boolean/boolean.pt
+  .pIdentifier
+  % Output token text 'boolean'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Break/Break.pt
+  .pIdentifier (screened to pBreak)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/case/case.pt
+  .pIdentifier
+  % Output token text 'case'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/char/char.pt
+  .pIdentifier
+  % Output token text 'char'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ColonEquals/ColonEquals.pt
+ .pColon
+ .pEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/PtCommentAlternate.pt
+ .pLeftParen
+ .pStar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pStar
+ .pRightParen
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/QustCommentAlternate.pt
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/Comment.pt
+  #eCommentEOF
+  .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/PtComment.pt
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/QustComment.pt
+  .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Const/Const.pt
+  .pIdentifier (screened to pConst)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/div/div.pt
+  .pIdentifier
+  % Output token text 'div'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/do/do.pt
+  .pIdentifier
+  % Output token text 'do'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleAmpersand/DoubleAmpersand.pt
+ .pDoubleAmpersand
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleBar/DoubleBar.pt
+ .pDoubleBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/end/end.pt
+  .pIdentifier
+  % Output token text 'end'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsEquals/EqualsEquals.pt
+ .pDoubleEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsGreater/EqualsGreater.pt
+ .pEqualGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ExclamationMark/ExclamationMark.pt
+ .pNot
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Fn/Fn.pt
+  .pIdentifier (screened to pFn)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/integer/integer.pt
+  .pIdentifier
+  % Output token text 'integer'
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Int/Int.pt
+  .pIdentifier
+  % Output token text 'int'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/LeftBrace/LeftBrace.pt
+ .pLeftBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Let/Let.pt
+  .pIdentifier (screened to pLet)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Loop/Loop.pt
+  .pIdentifier (screened to pLoop)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Main/Main.pt
+  .pIdentifier (screened to pMain)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Match/Match.pt
+  .pIdentifier (screened to pMatch)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/MinusEquals/MinusEquals.pt
+ .pMinusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mod/Mod.pt
+  .pIdentifier (screened to pMod)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mut/Mut.pt
+  .pIdentifier (screened to pMut)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/NotEqual/NotEqual.pt
+ .pNotEqual
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/not/not.pt
+  .pIdentifier
+  % Output token text 'not'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/OldNotEqual/OldNotEqual.pt
+ .pLess
+ .pGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/or/or.pt
+  .pIdentifier
+  % Output token text 'or'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/PlusEquals/PlusEquals.pt
+ .pPlusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Println/Println.pt
+  .pIdentifier
+  % Output token text 'println'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Print/Print.pt
+  .pIdentifier
+  % Output token text 'print'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/procedure/procedure.pt
+  .pIdentifier
+  % Output token text 'procedure'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/program/program.pt
+  .pIdentifier
+  % Output token text 'program'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Pub/Pub.pt
+  .pIdentifier (screened to pPub)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/QuestionMark/QuestionMark.pt
+ .pQuestionMark
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/RightBrace/RightBrace.pt
+ .pRightBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Slash/Slash.pt
+ .pForwardSlash
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/PtString.pt
+ #eIllegalChar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'a'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'string'
+ #eIllegalChar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustStringEscaped.pt
+  .pStringLiteral
+  % Output token text '"this string  has escaped " chaac	es!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustString.pt
+  .pStringLiteral
+  % Output token text '"This is a Qust string!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/then/then.pt
+  .pIdentifier
+  % Output token text 'then'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Underscore/Underscore.pt
+ .pUnderscore
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/until/until.pt
+  .pIdentifier
+  % Output token text 'until'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/var/var.pt
+  .pIdentifier
+  % Output token text 'var'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/writeln/writeln.pt
+  .pIdentifier
+  % Output token text 'writeln'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/write/write.pt
+  .pIdentifier
+  % Output token text 'write'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/and/and.pt
+  .pIdentifier
+  % Output token text 'and'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/array/array.pt
+  .pIdentifier
+  % Output token text 'array'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bar/Bar.pt
+ .pBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/begin/begin.pt
+  .pIdentifier
+  % Output token text 'begin'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bool/Bool.pt
+  .pIdentifier
+  % Output token text 'bool'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/boolean/boolean.pt
+  .pIdentifier
+  % Output token text 'boolean'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Break/Break.pt
+  .pIdentifier (screened to pBreak)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/case/case.pt
+  .pIdentifier
+  % Output token text 'case'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/char/char.pt
+  .pIdentifier
+  % Output token text 'char'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ColonEquals/ColonEquals.pt
+ .pColon
+ .pEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/PtCommentAlternate.pt
+ .pLeftParen
+ .pStar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pStar
+ .pRightParen
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/QustCommentAlternate.pt
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/Comment.pt
+  #eCommentEOF
+  .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/PtComment.pt
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/QustComment.pt
+  .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Const/Const.pt
+  .pIdentifier (screened to pConst)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/div/div.pt
+  .pIdentifier
+  % Output token text 'div'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/do/do.pt
+  .pIdentifier
+  % Output token text 'do'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleAmpersand/DoubleAmpersand.pt
+ .pDoubleAmpersand
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleBar/DoubleBar.pt
+ .pDoubleBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/end/end.pt
+  .pIdentifier
+  % Output token text 'end'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsEquals/EqualsEquals.pt
+ .pDoubleEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsGreater/EqualsGreater.pt
+ .pEqualGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ExclamationMark/ExclamationMark.pt
+ .pNot
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Fn/Fn.pt
+  .pIdentifier (screened to pFn)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/integer/integer.pt
+  .pIdentifier
+  % Output token text 'integer'
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Int/Int.pt
+  .pIdentifier
+  % Output token text 'int'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/LeftBrace/LeftBrace.pt
+ .pLeftBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Let/Let.pt
+  .pIdentifier (screened to pLet)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Loop/Loop.pt
+  .pIdentifier (screened to pLoop)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Main/Main.pt
+  .pIdentifier (screened to pMain)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Match/Match.pt
+  .pIdentifier (screened to pMatch)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/MinusEquals/MinusEquals.pt
+ .pMinusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mod/Mod.pt
+  .pIdentifier (screened to pMod)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mut/Mut.pt
+  .pIdentifier (screened to pMut)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/NotEqual/NotEqual.pt
+ .pNotEqual
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/not/not.pt
+  .pIdentifier
+  % Output token text 'not'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/OldNotEqual/OldNotEqual.pt
+ .pLess
+ .pGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/or/or.pt
+  .pIdentifier
+  % Output token text 'or'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/PlusEquals/PlusEquals.pt
+ .pPlusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Println/Println.pt
+  .pIdentifier
+  % Output token text 'println'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Print/Print.pt
+  .pIdentifier
+  % Output token text 'print'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/procedure/procedure.pt
+  .pIdentifier
+  % Output token text 'procedure'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/program/program.pt
+  .pIdentifier
+  % Output token text 'program'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Pub/Pub.pt
+  .pIdentifier (screened to pPub)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/QuestionMark/QuestionMark.pt
+ .pQuestionMark
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/RightBrace/RightBrace.pt
+ .pRightBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Slash/Slash.pt
+ .pForwardSlash
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/PtString.pt
+ #eIllegalChar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'a'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'string'
+ #eIllegalChar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustStringEscaped.pt
+  .pStringLiteral
+  % Output token text '"this string  has escaped " chaac	es!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustString.pt
+  .pStringLiteral
+  % Output token text '"This is a Qust string!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/then/then.pt
+  .pIdentifier
+  % Output token text 'then'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Underscore/Underscore.pt
+ .pUnderscore
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/until/until.pt
+  .pIdentifier
+  % Output token text 'until'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/var/var.pt
+  .pIdentifier
+  % Output token text 'var'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/writeln/writeln.pt
+  .pIdentifier
+  % Output token text 'writeln'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/write/write.pt
+  .pIdentifier
+  % Output token text 'write'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/and/and.pt
+  .pIdentifier
+  % Output token text 'and'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/array/array.pt
+  .pIdentifier
+  % Output token text 'array'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bar/Bar.pt
+ .pBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/begin/begin.pt
+  .pIdentifier
+  % Output token text 'begin'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Bool/Bool.pt
+  .pIdentifier
+  % Output token text 'bool'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/boolean/boolean.pt
+  .pIdentifier
+  % Output token text 'boolean'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Break/Break.pt
+  .pIdentifier (screened to pBreak)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/case/case.pt
+  .pIdentifier
+  % Output token text 'case'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/char/char.pt
+  .pIdentifier
+  % Output token text 'char'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ColonEquals/ColonEquals.pt
+ .pColon
+ .pEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/PtCommentAlternate.pt
+ .pLeftParen
+ .pStar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pStar
+ .pRightParen
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/CommentAlternate/QustCommentAlternate.pt
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/Comment.pt
+  #eCommentEOF
+  .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/PtComment.pt
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Comment/QustComment.pt
+  .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Const/Const.pt
+  .pIdentifier (screened to pConst)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/div/div.pt
+  .pIdentifier
+  % Output token text 'div'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/do/do.pt
+  .pIdentifier
+  % Output token text 'do'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleAmpersand/DoubleAmpersand.pt
+ .pDoubleAmpersand
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/DoubleBar/DoubleBar.pt
+ .pDoubleBar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/end/end.pt
+  .pIdentifier
+  % Output token text 'end'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsEquals/EqualsEquals.pt
+ .pDoubleEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/EqualsGreater/EqualsGreater.pt
+ .pEqualGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/ExclamationMark/ExclamationMark.pt
+ .pNot
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Fn/Fn.pt
+  .pIdentifier (screened to pFn)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/integer/integer.pt
+  .pIdentifier
+  % Output token text 'integer'
+ .pNewLine
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Int/Int.pt
+  .pIdentifier
+  % Output token text 'int'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/LeftBrace/LeftBrace.pt
+ .pLeftBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Let/Let.pt
+  .pIdentifier (screened to pLet)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Loop/Loop.pt
+  .pIdentifier (screened to pLoop)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Main/Main.pt
+  .pIdentifier (screened to pMain)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Match/Match.pt
+  .pIdentifier (screened to pMatch)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/MinusEquals/MinusEquals.pt
+ .pMinusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mod/Mod.pt
+  .pIdentifier (screened to pMod)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Mut/Mut.pt
+  .pIdentifier (screened to pMut)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/NotEqual/NotEqual.pt
+ .pNotEqual
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/not/not.pt
+  .pIdentifier
+  % Output token text 'not'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/OldNotEqual/OldNotEqual.pt
+ .pLess
+ .pGreater
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/or/or.pt
+  .pIdentifier
+  % Output token text 'or'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/PlusEquals/PlusEquals.pt
+ .pPlusEquals
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Println/Println.pt
+  .pIdentifier
+  % Output token text 'println'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Print/Print.pt
+  .pIdentifier
+  % Output token text 'print'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/procedure/procedure.pt
+  .pIdentifier
+  % Output token text 'procedure'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/program/program.pt
+  .pIdentifier
+  % Output token text 'program'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Pub/Pub.pt
+  .pIdentifier (screened to pPub)
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/QuestionMark/QuestionMark.pt
+ .pQuestionMark
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/RightBrace/RightBrace.pt
+ .pRightBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Slash/Slash.pt
+ .pForwardSlash
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/PtString.pt
+ #eIllegalChar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'a'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'string'
+ #eIllegalChar
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustStringEscaped.pt
+  .pStringLiteral
+  % Output token text '"this string  has escaped " chaac	es!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Strings/QustString.pt
+  .pStringLiteral
+  % Output token text '"This is a Qust string!"'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/then/then.pt
+  .pIdentifier
+  % Output token text 'then'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/Underscore/Underscore.pt
+ .pUnderscore
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/until/until.pt
+  .pIdentifier
+  % Output token text 'until'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/var/var.pt
+  .pIdentifier
+  % Output token text 'var'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/writeln/writeln.pt
+  .pIdentifier
+  % Output token text 'writeln'
+ .pEndFile
+----------------------------
+
+
+----------------------------
+Running tests for Scanner/write/write.pt
+  .pIdentifier
+  % Output token text 'write'
+ .pEndFile
+----------------------------
+

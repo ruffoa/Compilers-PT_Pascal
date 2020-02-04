@@ -1,0 +1,70 @@
+// Qust module example program 
+// Bubble sort a list of random ints 
+mod main (output) {
+
+    // Limits
+    const nelements = 25;;
+    const maxval = 99;
+
+    mod elements {
+	// The list 
+	let mut list : [int:nelements];
+
+	// Utility routines
+	pub fn lessthan (i : int, j : int, mut b : bool) {
+	    b = (list [i] < list [j]);
+	}
+
+	pub fn swap (i: int, j : int) {
+	    let t = list [i];
+	    list [i] = list [j];
+	    list [j] = t;
+	}
+
+	// Routine to print the list
+	pub fn show()  {
+	    let mut i = 1;
+	    loop {
+		print (list[i]:4);
+		i += 1;
+		break if i > nelements ;
+	    }
+	    println();
+	}
+
+	// Initialize list to a random set of ints 
+	list[1] = 61;
+
+	let mut i = 1;
+	loop {
+	    i += 1;
+	    let j = list[i-1] * 1271;
+	    list[i] = j % maxval;
+	    break if i == nelements ;
+	}
+    }
+
+    // The bubble sort algorithm
+    fn sort() {
+	let mut i = nelements - 1;
+	loop {
+	    break if i == 0 ;
+	    let mut j = 1;
+	    loop {
+		break if j == nelements;
+		let mut lt: bool;
+		lessthan (j, j+1, mut lt);
+		if !lt {
+		    swap (j, j + 1);
+		}
+		j += 1;
+	    }
+	    i -= 1;
+	}
+    }
+
+    // Main program - show them, sort, then show them sorted
+    show();
+    sort();
+    show();
+}

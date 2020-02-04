@@ -1,0 +1,511 @@
+// Qust example program with modules
+// Blackjack playing program
+mod main (input, output) {
+
+    // J.R. Cordy, Computer Systems Research Group, 
+    // University of Toronto, July 1975             
+    // For instructions on use, run once with no input.
+
+    // hands of players                              
+    type handarray = [int:7];
+    let mut playershand : handarray, 
+        mut dealershand : handarray;
+    let mut playerscards : int, 
+        mut dealerscards : int;
+
+    // game counts for each shuffle 
+    let mut gamesplayed : int;
+    let mut gamesplayerwon : int, 
+        mut gamesdealerwon : int;
+
+    // player's hand values 
+    let mut dealerscount : int, 
+        mut playerscount : int;
+
+    // flags to indicate player's status 
+    let mut dealerstops : bool,
+        mut playerstops : bool;
+
+    // player parameters 
+    let mut playersname : str;
+
+    // player's count limit for naive strategy 
+    let mut joenaivesguts : int;
+
+
+    // random number generation
+    mod random {
+	// random seed 
+	let mut seed : int;
+	let mut multiplier : int;
+
+	fn initialize () {
+	    // initialize random seed
+	    seed = 13277;
+	    multiplier = 17;
+	}
+
+	pub fn randint (mut result : int, modulus : int) {
+	    if multiplier == 17 {
+		multiplier = 19;
+	    } else {
+		multiplier = 17;
+	    }
+	    seed = (seed * multiplier) % 10000;
+	    result = (seed % modulus) + 1;
+	}
+
+	initialize();
+    }
+
+
+    // deck to deal cards from 
+    mod cards {
+	let mut deck : [int:52];
+	let mut nextcard : int;
+
+	pub fn shuffle() {
+	    // puts a new shuffled deck of cards in the array 'deck'. 
+	    // cards are coded as 1 to 13, 1 being ace, 
+	    // 2-10 as they are, and 11-13 being j,q,k respectively. 
+
+	    let mut cardcount : [int:13];
+
+	    let mut c = 1;
+	    loop {
+		cardcount [c] = 0;
+		c += 1;
+		break if c > 13 ;
+	    }
+
+	    let mut ncards = 1;
+	    loop {
+	        let mut card : int;
+		randint (mut card, 13);
+		loop {
+		    break if cardcount [card] != 4 ;
+		    randint (mut card, 13);
+		}
+	
+		deck [ncards] = card;
+		cardcount [card] = cardcount [card] + 1;
+	
+		ncards += 1;
+		break if ncards > 52 ;
+	    }
+	
+	    nextcard = 0;
+	}
+
+	pub fn dealcard (mut card : int){
+	    nextcard += 1;
+	    card = deck [nextcard];
+	}
+
+	pub fn cardsleft (mut number : int){
+	    number = 52 - nextcard + 1;
+	}
+    }
+
+
+    mod namesofcards {
+	// alphanumeric card names 
+	let mut cardnames : [str:13];
+
+	pub fn puthandimage (ncards : int, mut hand : handarray) {
+	    // print out an image of the hand  
+	    let mut i = 1;
+	    loop {
+		break if i > ncards ;
+		print (" ", cardnames [hand [i]]);
+		i += 1;
+	    }
+	}
+
+	// initialize card names
+	cardnames [1] = "A";
+	cardnames [2] = "2";
+	cardnames [3] = "3";
+	cardnames [4] = "4";
+	cardnames [5] = "5";
+	cardnames [6] = "6";
+	cardnames [7] = "7";
+	cardnames [8] = "8";
+	cardnames [9] = "9";
+	cardnames [10] = "10";
+	cardnames [11] = "J";
+	cardnames [12] = "Q";
+	cardnames [13] = "K";
+    }
+
+
+    fn putplayersname() {
+	// print out the player's name 
+	if playersname == "e" {
+	    print ("E.O. Thorp");
+	} else if playersname == "j" {
+	    print ("Jim");
+	} else {
+	    print ("Pooja");
+	}
+    }
+
+
+    fn somebodyplays (mut r : bool) {
+	// returns true if (there is another shuffle to   
+	// be played (i.e. if (another player name is     
+	// input), false otherwise initializes new shuffle                       
+	gamesplayed = 0;
+	gamesplayerwon = 0;
+	gamesdealerwon = 0;
+	println(); println();
+	print ("New shuffle."); println();
+	println();
+	print ("Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): ");
+	read (playersname); readln();
+
+	if playersname == "q" {
+	    r = false;
+	} else {
+	    if playersname != "e" {
+		print ("What does s/he stand on? ");
+		read (joenaivesguts); readln();
+		loop {
+		    break if (joenaivesguts > 0) && (joenaivesguts < 21) ;
+		    print ("(1..20): ");
+		    read (joenaivesguts); readln();
+		}
+	    }
+
+	    if playersname == "e" {
+		println();
+		print ("E.O.Thorp plays this time."); println();
+	    } else {
+		println();
+		print ("Next player is ");
+		putplayersname();
+		print ("."); println();
+		print ("S/he stops at ", joenaivesguts:1, "."); println();
+
+		if joenaivesguts < 15 {
+		    print ("(What a hamburger!)"); println();
+		} else {
+		    print ("Good luck, ");
+		    putplayersname();
+		    print ("."); println();
+		}
+	    }
+
+	    r = true;
+	}
+    }
+
+
+    fn playing (mut r : bool) {
+	// returns true if (enough cards left for        
+	// another game, otherwise puts a shuffle      
+	// summary and returns false.                    
+
+	let mut numcards: int;
+	cardsleft (mut numcards);
+
+	if numcards > 10 {
+	    println();
+	    print ("New game."); println();
+	    gamesplayed += 1;
+	    r = true;
+	} else {
+	    println();
+	    print ("Too few cards left for another game."); println();
+	    print ("Of ", gamesplayed:1, " games, ");
+	    putplayersname();
+	    print (" won ", gamesplayerwon:1, ", dealer won ", gamesdealerwon:1, "."); println();
+
+	    if gamesdealerwon > gamesplayerwon {
+		print ("House cleans up on ");
+		putplayersname();
+		print (" this time."); println();
+	    } else if gamesplayerwon > gamesdealerwon {
+		if playersname == "e" {
+		    print ("E.O.Thorp does it again."); println();
+		} else {
+		    putplayersname();
+		    print (" must have doctored the shuffle."); println();
+		}
+	    } else {
+		print ("Even shuffle."); println();
+	    }
+
+	    r = false;
+	}
+    }
+
+
+    fn playertakesacard() {
+	// player's hand gets another card from the top of the deck. 
+	playerscards += 1;
+	dealcard (mut playershand [playerscards]);
+    }
+
+
+    fn dealertakesacard() {
+	// dealer's hand gets another card from the top  of the deck.                                  
+	dealerscards += 1;
+	dealcard (mut dealershand [dealerscards]);
+    }
+
+
+    fn deal() {
+	// initializes for a new hand and performs initial deal.                                 
+	// player and dealer each get two cards.         
+
+	playerstops = false;
+	dealerstops = false;
+	playerscards = 0;
+	dealerscards = 0;
+
+	playertakesacard();
+	dealertakesacard();
+	playertakesacard();
+	dealertakesacard();
+
+	print ("The initial deal gives ");
+	putplayersname();
+	print (" :");
+	puthandimage (playerscards, mut playershand); println();
+	print ("  and the dealer :"); ;
+	puthandimage (dealerscards, mut dealershand);
+	print ("."); println();
+    }
+
+
+    fn evaluate (ncards : int, mut hand : handarray,
+		  mut softhand : bool, mut value : int) {
+	// evaluates the best count for the hand, and    
+	// sets 'softhand' to true if one or more aces are counted as 11.                            
+
+	value = 0;
+	let mut nacescounted11 = 0;
+
+	let mut i = 1;
+	loop {
+	    break if i > ncards ;
+
+	    match hand [i] {
+	      |2|3|4|5|6|7|8|9|10 => {
+		// 2-10 
+		value += hand [i];
+		}
+	      |1 => {
+		// A 
+		value += 11;
+		nacescounted11 += 1;
+		}
+	      |_ => {
+		// J,Q,K 
+		value += 10;
+		}
+	    }
+
+	    i += 1;
+	}
+
+	loop {
+	    break if (value <= 21) || (nacescounted11 == 0) ;
+	    value -= 10;
+	    nacescounted11 -= 1;
+	}
+
+	softhand = nacescounted11 > 0;
+    }
+
+
+    fn dealer() {
+	// simulates play of dealer.                         
+	// dealer plays the standard strategy of standing with 17 or better.                       
+	// when dealer decides to stop, puts hand summary. 
+
+	let mut softhand : bool;
+
+	evaluate (dealerscards, mut dealershand, mut softhand, mut dealerscount);
+
+	if dealerscount > 21 {
+	    print ("Dealer goes bust."); println();
+	    dealerstops = true;
+	    gamesplayerwon += 1;
+	} else if dealerscount == 21 {
+	    print ("Dealer calls blackjack."); println();
+	    dealerstops = true;
+	    gamesdealerwon += 1;
+	} else {
+	    if dealerscount < 17 {
+		dealertakesacard();
+	    } else {
+		dealerstops = true;
+	    }
+	}
+
+	if dealerstops {
+	    print ("Dealer stands with ", dealerscount:1, "."); println();
+
+	    if dealerscount > playerscount {
+		print ("House wins."); println();
+		gamesdealerwon += 1;
+	    } else if dealerscount < playerscount {
+		putplayersname();
+		print (" wins."); println();
+		gamesplayerwon += 1;
+	    } else {
+		print ("Tie game."); println();
+	    }
+
+	} else {
+	    print ("Dealer takes a card and now has ");
+	    puthandimage (dealerscards, mut dealershand); println();
+	}
+
+    }
+
+
+    mod players {
+
+	fn playerjoenaive() {
+	    // simulates the naive player strategy 
+	    if playerscount < joenaivesguts {
+		playertakesacard();
+	    } else {
+		playerstops = true;
+	    }
+	}
+
+	fn playerthorp (softhand : bool) {
+	    // simulates a simplified version of the player       
+	    // strategy described by E.O.Thorp in his book        
+	    // "Beat the Dealer" (Vintage books, 1966) pp. 20,21. 
+
+	    let mut dealershows: int;
+	    dealershows = dealershand [1];
+
+	    if softhand {
+		// soft hand strategy 
+		if dealershows > 8 {
+		    // 9 or 10  
+		    playerstops = playerscount > 18;
+		} else {
+		    // 2-8,A  
+		    playerstops = playerscount > 17;
+		}
+	    } else {
+		// hard hand strategy  
+		if (dealershows > 1) && (dealershows < 4) {
+		    // 2 or 3  
+		    playerstops = playerscount > 12;
+		} else if (dealershows > 3) && (dealershows < 7) {
+		    // 4 to 6  
+		    playerstops = playerscount > 11;
+		} else {
+		    // 7 to 10,A  
+		    playerstops = playerscount > 16;
+		}
+	    }
+
+	    if !playerstops {
+		playertakesacard();
+	    }
+
+	}
+
+	pub fn player() {
+	    // simulates play of player                                
+	    // player plays either the naive strategy                  
+	    // or, if playersname == "E.O.Thorp", E.O.Thorp's strategy. 
+
+	    let mut softhand : bool;
+
+	    evaluate (playerscards, mut playershand, mut softhand, mut playerscount);
+
+	    if playerscount == 21 {
+		putplayersname();
+		print (" calls blackjack."); println();
+		playerstops = true;
+		dealerstops = true;
+		gamesplayerwon += 1;
+	    } else if playerscount > 21 {
+		putplayersname();
+		print (" goes bust."); println();
+		playerstops = true;
+		dealerstops = true;
+		gamesdealerwon += 1;
+	    } else {
+		if playersname == "e" {
+		    playerthorp (softhand);
+		} else {
+		    playerjoenaive();
+		}
+	    }
+
+	    if playerstops {
+		putplayersname();
+		print (" stands with ", playerscount:1, "."); println();
+	    } else {
+		putplayersname();
+		print (" takes a card and now has ");
+		puthandimage (playerscards, mut playershand); println();
+	    }
+	}
+    }
+
+
+    // main program  
+
+    // print out program explanation 
+    print ("This program simulates the game of blackjack."); println();
+    println();
+    print ("The dealer plays the compulsory strategy of standing on 17 or better."); println();
+    println();
+    print ("The player plays either"); println();
+    print ("  [1] The standard naive strategy of standing on n or better, or"); println();
+    print ("  [2] A simplified version of the strategy described by  E.O.Thorp"); println();
+    print ("      in his book ""Beat the Dealer"" (Vintage Books, 1966); pp. 20-21."); println();
+    println();
+    print ("Input :"); println();
+    print ("  For each shuffle, a player name (character string of <= 20 characters),"); println();
+    print ("  and if (the player name specified is not ""E.O.Thorp"", the count [n]"); println();
+    print ("  on which the player stands."); println();
+    println();
+    print ("If the player name specified is ""E.O.Thorp"", the player strategy used", " will be Thorp's.");
+    println();
+    print ("Otherwise, the player will use the standard stop on count > n strategy."); println();
+    println();
+    print ("The program will simulate one complete shuffle of play for each player."); println();
+
+    // commence the games! 
+    let mut continue : bool;
+
+    somebodyplays (mut continue);
+
+    loop {
+       break if !continue;
+	shuffle();
+	playing (mut continue);
+
+	loop {
+	    break if !continue;
+	    deal();
+
+	    loop {
+		break if playerstops ;
+		player();
+	    }
+
+	    loop {
+		break if dealerstops ;
+		dealer();
+	    }
+
+	    playing (mut continue);
+	}
+
+	somebodyplays (mut continue);
+    }
+}
