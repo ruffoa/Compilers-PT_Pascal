@@ -12,6 +12,7 @@ const folderPath = path.join(__dirname, `../CordyTests`);
 const outputMap = {
     '.pSlash': '.ForwardSlash',
     '.pDoubleBar': '.pDoubleOrBar',
+    '.pBar': '.pOrBar'
 };
 
 async function findAllFilesInDir() {
@@ -80,9 +81,9 @@ function compareResults(content, file) {
     for (var i = 0; i < expectedOutput.length; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[expectedOutput[i].trim()] !== testOutput[i].trim() && expectedOutput[i] !== testOutput[i]) {
-            console.error(`${outputMap[expectedOutput[i].trim()] ? outputMap[expectedOutput[i].trim()] : expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
-            core.setFailed(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
+        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
+            console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+            core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
         }
     }
 }
