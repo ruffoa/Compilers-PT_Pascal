@@ -10,7 +10,7 @@ const segment = "t1";
 const folderPath = path.join(__dirname, `../CordyTests`);
 
 const outputMap = {
-    '.pSlash': '.ForwardSlash',
+    '.pForwardSlash': '.pSlash',
     '.pDoubleBar': '.pDoubleOrBar',
     '.pBar': '.pOrBar'
 };
@@ -74,7 +74,9 @@ function compareResults(content, file) {
 
     if (expectedOutput.length !== testOutput.length) {
         console.error("Lengths do not match!  Something went wrong in ", file);
-        core.setFailed("Lengths do not match!  Something went wrong in ", file);
+        console.error(`Output is: \n-------------------------\n${testOutput}\n------------------------`)
+        core.setFailed("Lengths do not match!  Something went wrong in " + file);
+
         return;
     }
 
