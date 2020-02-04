@@ -292,11 +292,13 @@ StringLiteral :
 
         {[
             | lQuote:
-                | lQuote:
-                    oBufferSave
-                | *:
-                    .pStringLiteral
-                    >
+                [
+                    | lQuote:
+                        oBufferSave
+                    | *:
+                        .pStringLiteral
+                        >
+                ]
             | lBackslash:       % this is the escape character in qust
                 oBufferSave
                 ?
