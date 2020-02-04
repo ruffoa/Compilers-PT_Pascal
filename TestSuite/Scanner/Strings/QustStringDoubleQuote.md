@@ -1,1 +1,1 @@
-The purpose of this test is to verify that the string """" in Qust is correctly recognized as the stringLiteral "".
+The purpose of this test is to verify that the string '"""""' in Qust is correctly recognized as the stringLiteral '""'.
