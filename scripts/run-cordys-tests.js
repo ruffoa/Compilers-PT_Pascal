@@ -9,6 +9,11 @@ const core = require('@actions/core');
 const segment = "t1";
 const folderPath = path.join(__dirname, `../CordyTests`);
 
+const outputMap = {
+    '.pSlash': '.ForwardSlash',
+    '.pDoubleBar': '.pDoubleOrBar',
+};
+
 async function findAllFilesInDir() {
     fs.readdirSync(folderPath).forEach(async file => {
         
@@ -75,7 +80,7 @@ function compareResults(content, file) {
     for (var i = 0; i < expectedOutput.length; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (expectedOutput[i] !== testOutput[i]) {
+        if (outputMap[expectedOutput[i]] !== testOutput[i] && expectedOutput[i] !== testOutput[i]) {
             console.error(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
             core.setFailed(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
         }
