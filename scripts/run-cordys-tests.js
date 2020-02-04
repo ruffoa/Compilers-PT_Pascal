@@ -24,7 +24,7 @@ async function runFile(file) {
     try {
         const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
-        console.log(output.stdout, output.stderr || output.stdout);
+        // console.log(output.stdout, output.stderr || output.stdout);
 
         let isRealError = true;
 
@@ -74,7 +74,7 @@ function compareResults(content, file) {
 
     for (var i = 0; i < expectedOutput.length; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
-        
+
         if (expectedOutput[i] !== testOutput[i]) {
             console.error(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
             core.setFailed(`${expectedOutput[i]} !== ${testOutput[i]} on line ${i} of ${file}`);
