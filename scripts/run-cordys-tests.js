@@ -20,7 +20,7 @@ async function findAllFilesInDir() {
     });          
 }
 
-async function runFile(file, dir) {
+async function runFile(file) {
     try {
         const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
@@ -81,4 +81,5 @@ function compareResults(content, file) {
     }
 }
 
+console.log(__dirname)
 findAllFilesInDir();
