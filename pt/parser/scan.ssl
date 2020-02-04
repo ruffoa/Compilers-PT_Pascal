@@ -299,10 +299,6 @@ StringLiteral :
                         .pStringLiteral
                         >
                 ]
-            | lBackslash:       % this is the escape character in qust
-                oBufferSave
-                ?
-                oBufferSave
             | lNewLine:         % literal must not cross a line boundary
                 #eStringLiteralLine
                 .pNewLine
@@ -312,6 +308,11 @@ StringLiteral :
                 .pEndFile
                 >
             | *:        % literal may contain any other character
+                [
+                    | lBackslash:
+                        oBufferSave
+                    | *:
+                ]
                 ?
                 oBufferSave
         ]};
