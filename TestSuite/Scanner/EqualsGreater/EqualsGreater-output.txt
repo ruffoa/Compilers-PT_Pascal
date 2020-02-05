@@ -1,2 +1,4 @@
  .pEqualGreater
+ .pNewLine
+ .pEqualGreater
  .pEndFile
