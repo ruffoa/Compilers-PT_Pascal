@@ -89,6 +89,7 @@ jobs:
         npm install
         npm install @actions/core
 
+        rm -f ../CordyTests/combinedOutput.txt
         node ./run-cordys-tests.js
       working-directory: ./pt
 
