@@ -1,3 +1,5 @@
  .pLessEqual
  .pNewLine
+ .pLessEqual
+ .pNewLine
  .pEndFile
