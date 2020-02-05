@@ -1,0 +1,20 @@
+ .pRightBrace
+ .pNewLine
+ .pLeftBrace
+  .pIdentifier
+  % Output token text 'i'
+  .pIdentifier
+  % Output token text 'am'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+ .pMinus
+  .pIdentifier
+  % Output token text 'style'
+  .pIdentifier
+  % Output token text 'standard'
+  .pIdentifier
+  % Output token text 'comment'
+ .pRightBrace
+ .pEndFile

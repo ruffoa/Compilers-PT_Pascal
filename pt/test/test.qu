@@ -1,0 +1,65 @@
+// Primes: determines the primes up to maxprimes using the sieve method
+mod main (output) {
+    const maxprimes = 100;
+    // Prime flags
+    const prime = true;
+    const notprime = false;
+    mod flags {
+        let mut flagvector: [bool : maxprimes];
+        
+        pub fn flagset (f: int, tf: bool) {
+            flagvector [f] = tf
+        }
+
+        pub fn flagget (f: int, mut set: bool) {
+            set = flagvector [f]
+        }
+
+        // Everything begins as prime
+        let mut i = 1;
+        while i <= maxprimes {
+            flagvector [i] = prime;
+            i += 1
+        }
+    }
+
+    // Main program
+    let mut isprime: bool;
+
+    // Pick out multiples of each prime factor and set these to notprime
+    let mut multiple = 2;
+    let mut factor = 2;
+
+    while factor <= maxprimes / 2 {
+        // Set multiples of factor to notprime
+        multiple = factor + factor;
+        while multiple <= maxprimes {
+            flagset (multiple, notprime);
+            multiple += factor
+        }
+
+        // Set factor = next prime
+        factor += 1;
+
+        loop {
+            flagget (factor, mut isprime);
+            break if (factor > maxprimes / 2) || isprime;
+            factor += 1
+        }
+    }
+
+    // Now report the results
+    print("The primes up to ", maxprimes:1, " are:");
+    println();
+    factor = 2;
+
+    while factor <= maxprimes {
+        flagget (factor, mut isprime);
+        if isprime {
+            print (factor:4)
+        }
+        factor += 1
+    }
+    
+    println()
+}

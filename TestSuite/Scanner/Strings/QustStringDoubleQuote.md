@@ -1,0 +1,1 @@
+The purpose of this test is to verify that the string '"Null strings look like this: """""' in Qust is correctly recognized as the stringLiteral 'Null strings look like this: ""'.

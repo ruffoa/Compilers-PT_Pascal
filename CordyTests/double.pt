@@ -1,0 +1,13 @@
+// Qust example program 
+mod main (input, output) {
+    let mut word : str;
+
+    print ("Anything you can say, I can say twice (end with 'bye'):"); println();
+    loop {
+	read (word);
+	print (word + " " + word);
+	println();
+	break if word == "bye";
+	readln();
+    }
+}

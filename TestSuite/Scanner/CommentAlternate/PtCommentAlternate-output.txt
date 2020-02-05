@@ -1,0 +1,20 @@
+ .pLeftParen
+ .pStar
+  .pIdentifier
+  % Output token text 'this'
+  .pIdentifier
+  % Output token text 'is'
+  .pIdentifier
+  % Output token text 'an'
+  .pIdentifier
+  % Output token text 'old'
+  .pIdentifier
+  % Output token text 'pt'
+  .pIdentifier
+  % Output token text 'pascale'
+  .pIdentifier
+  % Output token text 'comment'
+ .pStar
+ .pRightParen
+ .pNewLine
+ .pEndFile

@@ -6,29 +6,22 @@
 %   These must be in the exact same order as the keyword token definitions 
 %   in the Output section of scan.ssl and the Input section of parser.ssl
 
-div
-mod
-or
-and
-not
-then
 else
 of
-end
-until
-do
-array
 file
-program
 const
-var
 type
-procedure
-begin
 if
-case
 while
-repeat
+pub
+mod
+main
+let
+mut
+fn
+loop
+break
+match
 
 % End of keywords
 
@@ -37,9 +30,9 @@ repeat
 %   in semantic.ssl.  
 
 % Predeclared type names
-integer
-char
-boolean
+int
+str
+bool
 text
 
 % Predeclared constants
@@ -49,8 +42,8 @@ false
 % Predeclared procedures and functions
 reset
 rewrite
-write
-writeln
+print
+println
 read
 readln
 chr

@@ -1,0 +1,248 @@
+// Memory cache experiement
+mod main (input, output) {
+
+    /* Example CISC 211A Assignment 2 Solution 
+       J.R. Cordy, October 1995 
+
+       Program parameters :
+         N is the number of customers in the database,
+         M is the number of random lookups to try 
+    */
+
+    let mut N : int,
+        mut M : int;
+
+    // The database is modelled by a set of random integers 
+    let mut customer : [int:1000];
+
+    // Counter for total number of compares 
+    let mut ncompares : int;
+
+    // initialize random seed 
+    let mut seed = 13277;
+    let mut multiplier = 17;
+
+    // cache for use by cache strategy 
+    let mut cachename : [int:10];
+    let mut cacheindx : [int:10];
+    let mut cp : int;
+
+
+    // Procedure to generate random numbers 
+
+    fn randint (mut result : int, modulus : int) {
+        // random number generation 
+        if multiplier == 17 {
+            multiplier = 19;
+        } else { 
+            multiplier = 17;
+	}
+        seed = (seed * multiplier) % 10000;
+        result = (seed % modulus) + 1;
+    }
+
+
+    // Procedure to initialize the customer database to N random 
+    // integers between 100000 and 999999 
+
+    fn initialize() {
+        let mut i = 1;
+        while i <= N {
+	    let mut p: int;
+            randint (mut p, 9000);
+            p += 1000;
+            customer [i] = p;
+            i += 1;
+        }
+    }
+
+
+    // Function to generate a random successful lookup key. 
+    // We generate a random index of the array, { use 
+    // the value there to look up. 
+
+    fn randomname (mut r : int) {
+        let mut p : int;
+        randint (mut p, N);
+        r = customer [p];
+    }
+
+
+    // Function implementing a naive linear lookup. 
+
+    fn findlinear (name : int, mut r : int) {
+        let mut i = 1;
+        r = 0;
+        while (i <=  N) && (r == 0) {
+            ncompares += 1;
+            if customer [i] == name {
+                r = i;
+	    }
+            i += 1;
+        }
+    }
+
+
+    // Function impelementing a linear lookup with cache of size 10. 
+    // The cache strategy is LRE - that is, least recently 
+    // entered cache item gets replaced.  This is effectively 
+    // round-robin use of the cache. 
+
+
+    fn findcache (name : int, mut r : int) {
+        let mut c = 1;
+        r = 0;
+        while (c <= 10) && (r == 0) {
+            ncompares += 1;
+            if cachename [c] == name {
+                r = cacheindx [c];
+	    }
+            c += 1;
+        }
+        let mut i = 1;
+        while (i <= N) && (r == 0) {
+            ncompares += 1;
+            if customer [i] == name {
+		// Put it in the cache 
+		cp += 1;
+		if cp > 10 {
+		    cp = 1;
+		    cachename [cp] = name;
+		    cacheindx [cp] = i;
+		    r = i;
+                }
+	    }
+            i += 1;
+        }
+    }
+
+
+    // Procedure to bubble sort the customer array so that 
+    // we can use binary search.  Compares used here count 
+    // as part of the total cost of that strategy. 
+
+    fn swap (n1: int, n2 : int) {
+        let temp = customer [n1];
+        customer [n1] = customer [n2];
+        customer [n2] = temp;
+    }
+
+    fn bubblesort() {
+	let mut nswaps = 1;
+	let mut j = N;
+        while (j > 1) && (nswaps != 0) {
+            nswaps = 0;
+            let mut k = 1;
+            while k < j {
+                ncompares += 1;
+                if customer [k] > customer [k + 1] {
+		    nswaps += 1;
+		    swap (k, k + 1);
+		}
+                k += 1;
+            }
+            j -= 1;
+        }
+    }
+
+
+    // Function implementing a binary search. 
+    // Assumes that the database is sorted in increasing order. 
+
+    fn findbinary (name : int, mut r : int) {
+        let mut first = 1;
+        let mut last = N;
+        while first != last {
+            let mid = (first + last) / 2;
+            ncompares += 1;
+            if name > customer [mid] {
+                first = mid + 1;
+            } else {
+                last = mid;
+	    }
+        }
+        ncompares += 1;
+        if customer [first] == name {
+            r = first;
+        } else {
+            r = 0;
+	}
+    }
+
+
+    // Main program. 
+    // Initialize the database to N random integers 
+    // then look up M of them using each method. 
+
+    // Get the number of customers in the database N and the number of random lookups to try M 
+    print ("Enter N (number of elements, at most 1000, e.g. 100): ");
+    read (N); readln();
+    print ("Enter M (number of lookups, e.g. 1000): ");
+    read (M); readln();
+    print ("Enter a prime number (e.g. 13, 19, 51, ...): ");
+    read (multiplier); readln();
+
+    initialize();
+
+    // Linear lookup 
+    println(); print ("Linear lookup"); println();
+    ncompares = 0;
+
+    let mut c = 1;
+    while c <= M {
+	let mut nm: int,
+	    mut indx: int;
+        randomname (mut nm);
+        findlinear (nm, mut indx);
+        c += 1;
+    }
+
+    let mut cavg = ncompares / M;
+    print ("N= ", N:1, "  Average compares per search (Cavg) == ", cavg:1); println();
+
+
+    // Linear lookup with cache 
+    println(); print ("Linear lookup with cache"); println();
+    ncompares = 0;
+
+    // Initialize the cache to empty 
+    cp = 0;
+    let mut j = 1;
+    while j <= 10 {
+        cachename [j] = 0;
+        j += 1;
+    }
+
+    c = 1;
+    while c <= M {
+	let mut nm: int,
+	    mut indx: int;
+        randomname (mut nm);
+        findcache (nm, mut indx);
+        c += 1;
+    }
+
+    cavg = ncompares / M;
+    print ("N= ", N:1, "  Average compares per search (Cavg) == ", cavg:1); println();
+
+
+    // Binary search 
+    println(); print ("Binary search"); println();
+    ncompares = 0;
+
+    // Count compares of bubble sort in total 
+    bubblesort();
+
+    c = 1;
+    while c <= M {
+	let mut nm: int,
+	    mut indx: int;
+        randomname (mut nm);
+        findbinary (nm, mut indx);
+        c += 1;
+    }
+
+    cavg = ncompares / M;
+    print ("N= ", N:1, "  Average compares per search (Cavg) == ", cavg:1); println();
+
+}

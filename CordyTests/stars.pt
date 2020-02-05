@@ -1,0 +1,16 @@
+// Qust example program 
+// Print a triangle of stars
+mod main (output) {
+
+    let mut stars: str;
+    let mut i: int;
+
+    i = 1;
+    stars = "";
+    loop {
+	break if i > 50;
+	stars = "*" + stars;
+	print (stars); println();
+	i += 1;
+    }
+}

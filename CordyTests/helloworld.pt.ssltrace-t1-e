@@ -1,0 +1,25 @@
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Hello world'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile

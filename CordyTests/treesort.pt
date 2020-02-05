@@ -1,0 +1,119 @@
+// MiniT example program 
+// Binary tree sort
+mod main (input, output) {;
+
+    // Limits
+    const nilPointer = 0;
+    const maxTreeElements = 100;
+    type treeReference = int;
+
+    // Binary tree node representation
+    let mut root : treeReference;
+    let mut treeleft :  [treeReference:maxTreeElements],
+        mut treeright : [treeReference:maxTreeElements];
+    let mut treeval : [int:maxTreeElements];
+
+    // Keep track of next free node
+    let mut avail : int;
+
+    // Binary tree insert routine
+    fn Insert (val : int) {
+	let mut node : treeReference;
+
+	treeval [avail] = val;
+	treeright [avail] = nilPointer;
+	treeleft [avail] = nilPointer;
+
+	if root == nilPointer {
+	    root = avail;
+	} else {
+	    node = root;
+	    loop {
+		if val < treeval [node] {
+		    if treeleft [node] == nilPointer {
+			treeleft [node] = avail;
+			node = avail;
+		    } else {
+			node = treeleft [node];
+		    }
+
+		} else if val > treeval [node] {
+		    if treeright [node] == nilPointer {
+			treeright [node] = avail;
+			node = avail;
+		    } else {
+			node = treeright [node];
+		    }
+		}
+
+		break if treeval [node] == val ;
+	    }
+
+	}
+
+	avail += 1;
+    }
+
+    // Binary tree depth first left-right walk
+    fn Walk()  {
+	let mut stack : [treeReference:maxTreeElements];
+	let mut top : int ;
+	let mut node : treeReference;
+	let mut done : bool;
+	top = 0;
+	node = root;
+	done = false;
+	loop {
+	    if node != nilPointer {
+		top += 1;
+		stack [top] = node;
+		node = treeLeft [node];
+	    } else {
+		if top > 0 {
+		    node = stack [top];
+		    top -= 1;
+		    print (treeval [node]: 1, " ") ;
+		    node = treeRight [node];
+		} else {
+		    done = true;
+		}
+	    }
+
+	    break if done ;
+	}
+	println();
+    }
+
+
+    // Main program  
+    let mut s : int;
+    let mut i : int;
+
+    // Initialization 
+    i = 1;
+    loop {
+	break if i > maxTreeElements ;
+	treeval [i] = 0;
+	treeleft [i] = nilPointer;
+	treeright [i] = nilPointer;
+	i += 1;
+    }
+
+    avail = 1;
+    root = nilPointer;
+
+    // Get ints to be sorted and insert them in the binary tree
+    print ("Type in some integers, please, ending with 0");
+    println();
+
+    loop {
+	read (s);
+	if s != 0 {
+	    Insert (s);
+	}
+	break if s == 0 ;
+    }
+
+    // Output the sorted result
+    Walk();
+}

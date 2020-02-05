@@ -1,0 +1,4 @@
+  .pStringLiteral
+  % Output token text 'Null strings look like this: ""'
+ .pNewLine
+ .pEndFile

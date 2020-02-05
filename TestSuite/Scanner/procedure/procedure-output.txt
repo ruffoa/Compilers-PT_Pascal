@@ -1,0 +1,3 @@
+  .pIdentifier
+  % Output token text 'procedure'
+ .pEndFile

@@ -1,0 +1,69 @@
+// Qust example program 
+// Lunch - the singing program
+mod main (output) {
+
+    // Sing about the old lady!
+    let mut animal: [str:8], mut remark: [str:8];
+
+    let mut verse: int, mut countdown: int;
+
+    // All the animals ...
+    animal [1] = "fly";
+    animal [2] = "spider";
+    animal [3] = "bird";
+    animal [4] = "cat";
+    animal [5] = "dog";
+    animal [6] = "goat";
+    animal [7] = "cow";
+    animal [8] = "horse";
+
+    // ... and their stories
+    remark [1] = "I don't know why she swallowed a fly.";
+    remark [2] = "That wiggled and jiggled and tickled inside her.";
+    remark [3] = "How absurd, to swallow a bird.";
+    remark [4] = "Imagine that, she swallowed a cat.";
+    remark [5] = "What a hog, to swallow a dog.";
+    remark [6] = "What a dope, to swallow a goat.";
+    remark [7] = "I don't know how she swallowed that cow.";
+    remark [8] = "She died of course.";
+
+    // Title it
+    print ("I Know an Old Lady"); println();
+
+    // Now sing, starting with verse 1
+    verse = 1;
+
+    loop {
+	break if verse => 8;
+	println();
+	print ("I know an old lady"); println();
+	print ("Who swallowed a " + animal [verse]); println();
+	print (remark [verse]); println();
+
+	countdown = verse;
+	loop {
+	    break if countdown < 2;
+	    print ("She swallowed the " + animal [countdown]);
+	    print (" to catch the " + animal [countdown - 1] + ","); println();
+	    countdown -= 1;
+	}
+
+	if verse > 1 {
+	    print (remark [1]); println();
+	}
+
+	if verse < 8 {
+	    print ("Perhaps she'll die."); println();
+	}
+
+	verse += 1;
+    }
+
+    // End nicely
+    println();
+    print ("The end."); println();
+    println();
+    print ("Thank you very much, you're too kind."); println();
+    print ("I'll be here until Thursday - try the veal!"); println();
+    println();
+}

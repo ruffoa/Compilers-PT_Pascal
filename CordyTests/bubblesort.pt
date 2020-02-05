@@ -1,0 +1,66 @@
+// Bubble sort of a list of ints 
+mod main (output) {
+
+    const nelements = 25;
+    const maxval = 99;
+
+    let mut list : [int:nelements];
+    let mut current: int;
+
+    fn lessthan (i : int, j : int, mut b : bool) {
+	current = i;
+	b = (list [i] < list [j]);
+    }
+
+    fn swap (i: int, j : int) {
+	let mut t : int;
+	current = j;
+	t = list [i];
+	list [i] = list [j];
+	list [j] = t;
+    }
+
+    fn show() {
+	let mut i = 1;
+	loop {
+	    print (list[i]:4);
+	    i += 1;
+	    break if i > nelements;
+	}
+	println();
+    }
+
+    fn sort() {
+	let mut i = nelements - 1;
+	while i > 0 {
+	    let mut j = 1;
+	    while j < nelements {
+		let mut lt: bool;
+		lessthan (j, j+1, mut lt);
+		if !lt {
+		    swap (j, j + 1);
+		}
+		j += 1;
+	    }
+	    i -= 1;
+	}
+    }
+
+    // Initialization 
+    list[1] = 61;
+
+    let mut i = 1;
+    loop {
+	i += 1;
+	let j = list[i-1] * 1271;
+	list[i] = j % maxval;
+	break if i == nelements;
+    }
+
+    current = 0;
+
+    // Main program 
+    show();
+    sort();
+    show();
+}

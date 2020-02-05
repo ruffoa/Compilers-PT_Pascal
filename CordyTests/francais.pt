@@ -1,0 +1,60 @@
+// Qust example program 
+// Program to conjugate regular French verbs
+mod main (input, output) {
+
+    let mut infinitive : str, 
+        mut root : str;
+
+    loop {
+	print ("Please give me a regular French 'er' verb (end with 'arreter')"); println();
+	read (infinitive);
+	println();
+
+	print  ("Thanks, here is the present conjugation"); println();
+
+	root = infinitive / 1 : (?infinitive-2);
+	print  ("The root of this verb is '", root, "'"); println();
+	println();
+
+	if infinitive / (?infinitive - 1) : ?infinitive == "er" {
+	
+	    if (root / 1:1 == "a") || (root / 1:1 == "e")
+		   || (root / 1:1 == "i") || (root / 1:1 == "o")
+		   || (root / 1:1 == "u") {
+		print  ("J'" + root + "e");
+	    } else {
+		print  ("Je " + root + "e");
+	    }
+
+	    println();
+
+	    print  ("Tu " + root + "es"); println();
+	    print  ("Il ou elle " + root + "e"); println();
+	    println();
+
+	    if root / ?root : ?root == "g" {
+		print  ("Nous " + root + "eons");
+	    } else {
+		print  ("Nous " + root + "ons");
+	    }
+
+	    println();
+
+	    print  ("Vous " + root + "ez"); println();
+	    print  ("Ils ou elles " + root + "ent"); println();
+	    println();
+
+	} else if infinitive / (?infinitive - 1) : ?infinitive == "ir" {
+	    print  ("I'm too tired to do an 'ir' verb"); println();
+	    println();
+
+	} else {
+	    print  ("I don't like the looks of this verb"); println();
+	    println();
+	}
+
+	break if infinitive == "arreter";
+
+	readln();
+    }
+}

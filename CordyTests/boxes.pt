@@ -1,0 +1,54 @@
+// Qust example program 
+// Draw boxes on the console
+mod main (input, output) {
+
+    let mut top : str, mut middle : str, mut bottom : str;
+    let mut width : int, mut height : int;
+    let mut Nacross : int, Ndown : int;
+
+    // Ask for size and number of boxes to draw
+    print ("enter box width and height: ");
+    read (width, height);
+    print ("enter number of boxes across and down: ");
+    read (Nacross, Ndown);
+
+    // Add 1 for boundaries 
+    width += 1; height += 1;
+
+    // Comprinte top, bottom and middle lines 
+    top = ""; middle = ""; bottom = "";
+    let mut i = 0;
+    loop {
+	break if i > width * Nacross ;
+	if i % width == 0 {
+	    top += " ";
+	    middle += "|";
+	    bottom += "|";
+	} else {
+	    top += "_";
+	    middle += " ";
+	    bottom += "_";
+	}
+	i += 1;
+    }
+
+    // Now outprint the whole thing
+    print (top) ;
+    println();
+
+    i = 1;
+    loop {
+	break if i > Ndown ;
+	let mut j = 1;
+	loop {
+	    break if j >= height - 1 ;
+	    print (middle) ;
+	    println();
+	    j += 1;
+	}
+
+	print (bottom) ;
+	println();
+	i += 1;
+    }
+}
