@@ -57,7 +57,7 @@ async function runFile(file) {
 
 function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
-    stream.write(`\n--------------------------------\nReading file ${file}`);
+    stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
     const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
     // console.log(results, content)
@@ -103,6 +103,8 @@ function compareResults(content, file) {
             stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
         }
     }
+
+    stream.write("end file");
 }
 
 findAllFilesInDir();
