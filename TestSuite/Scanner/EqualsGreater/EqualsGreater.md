@@ -1,1 +1,1 @@
-The purpose of this test case is to test that EqualsGreater (=>) is matched
+The purpose of this test case is to test that EqualsGreater (`=>`) and (`>=`) are matched

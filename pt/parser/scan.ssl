@@ -194,6 +194,8 @@ Scan :
                         .pDoubleEquals
                     | '>':
                         .pEqualGreater
+                    | '<':
+                        .pLessEqual
                     | *:
                         .pEquals
                 ]
@@ -220,8 +222,13 @@ Scan :
                     | *:
                         .pLess
                 ]
-            | '>':
-                .pGreater
+            | '>': 
+                [
+                    | '=':
+                        .pEqualGreater
+                    | *:
+                        .pGreater
+                ]
             | '{':
                 .pLeftBrace
             | '}':
