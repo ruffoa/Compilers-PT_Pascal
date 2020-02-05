@@ -168,6 +168,8 @@ Equals (and related compound tokens):
 +                .pDoubleEquals
 +            | '>':
 +                .pEqualGreater
++            | '<':
++                .pLessEqual
 +            | *:
 +                .pEquals
 +        ]    
@@ -253,6 +255,20 @@ Added in the doubleAmpersand token to the scanner, as well as a catch to error o
         | *:    % if not a double ampersand than it's an illegal syntax token
             ?
             #eIllegalChar
+    ]
+...
+```
+
+EqualsGreater:
+Added in the match rule for the alternate equalGreater token syntax to the scanner
+```
+...
+| '>': 
+    [
+        | '=':
+            .pEqualGreater
+        | *:
+            .pGreater
     ]
 ...
 ```
