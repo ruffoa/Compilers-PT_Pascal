@@ -276,8 +276,6 @@ Added in the match rule for the alternate equalGreater token syntax to the scann
 Added in the following simple token rules
 ```
 ...
-| '>':
-    .pGreater
 | '{':
     .pLeftBrace
 | '}':
