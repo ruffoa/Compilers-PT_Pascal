@@ -89,6 +89,7 @@ jobs:
         npm install
         npm install @actions/core
 
+        rm -f ../CordyTests/combinedOutput.txt
         node ./run-cordys-tests.js
       working-directory: ./pt
 
@@ -117,6 +118,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.txt
+        git add CordyTests/combinedOutput.txt
         git status
         git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
       
