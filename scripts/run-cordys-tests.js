@@ -37,6 +37,7 @@ async function runFile(file) {
         const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
         // console.log(output.stdout, output.stderr || output.stdout);
+        console.log("Got res for " + file)
 
         let isRealError = true;
 
@@ -48,6 +49,7 @@ async function runFile(file) {
             }
         }
 
+        console.log("done if " + file)
         return output.stderr && isRealError || output.stdout;
         
     } catch (e) {
