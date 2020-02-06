@@ -20,7 +20,7 @@ const outputMap = {
 const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'a'});
 
 async function findAllFilesInDir() {
-    fs.readdirSync(folderPath).sort((a,b) => a < b).forEach(async file => {
+    await fs.readdirSync(folderPath).sort((a,b) => a < b).forEach(async file => {
         
         if (file.endsWith('.pt')) {
             console.log(file);
