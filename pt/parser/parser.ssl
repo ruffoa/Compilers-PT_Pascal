@@ -18,31 +18,24 @@ Input :
         % Keywords must be first both here and in stdIdentifiers,
         % and they must appear in the exact same order
 
-        pDiv                    'div'
-        firstKeywordToken = pDiv
-        pMod                    'mod'
-        pOr                     'or'
-        pAnd                    'and'
-        pNot                    'not'
-        pThen                   'then'
-        pElse                   'else'
-        pOf                     'of'
-        pEnd                    'end'
-        pUntil                  'until'
-        pDo                     'do'
-        pArray                  'array'
-        pFile                   'file'
-        pProgram                'program'
-        pConst                  'const'
-        pVar                    'var'
-        pType                   'type'
-        pProcedure              'procedure'
-        pBegin                  'begin'
-        pIf                     'if'
-        pCase                   'case'
-        pWhile                  'while'
-        pRepeat                 'repeat'
-        lastKeywordToken = pRepeat 
+        pElse                       'else'
+        firstKeywordToken = pElse
+        pOf                         'of'
+        pFile                       'file'
+        pConst                      'const'
+        pType                       'type'
+        pIf                         'if'
+        pWhile                      'while'
+        pPub                        'pub'
+        pMod                        'mod'
+        pMain                       'main'
+        pLet                        'let'
+        pMut                        'mut'
+        pFn                         'fn'
+        pLoop                       'loop'
+        pBreak                      'break'
+        pMatch                      'match'
+        lastKeywordToken = pMatch
 
         % Scanner tokens -
         %   These are the tokens actually recognized by the Scanner itself.
@@ -62,8 +55,6 @@ Input :
         pPlus                   '+'
         pMinus                  '-'
         pStar                   '*'
-        pColonEquals            ':='
-        pDot                    '.'
         pComma                  ','
         pSemicolon              ';'
         pColon                  ':'
@@ -71,14 +62,26 @@ Input :
         pNotEqual               '<>'
         pLess                   '<'
         pLessEqual              '<='
-        pGreaterEqual           '>='
         pGreater                '>'
         pLeftParen              '('
         pRightParen             ')'
         pLeftBracket            '['
         pRightBracket           ']'
-        pDotDot                 '..'
-        lastSyntaxToken = pDotDot;
+        pLeftBrace              '{'
+        pRightBrace             '}'
+        pPlusEquals             '+='
+        pMinusEquals            '-='
+        pForwardSlash           '/'
+        pPercent                '%'
+        pDoubleEquals           '=='
+        pDoubleAmpersand        '&&'
+        pDoubleBar              '||'
+        pBar                    '|'
+        pNot                    '!'
+        pUnderscore             '_'
+        pQuestionMark           '?'
+        pEqualGreater           '=>'
+        lastSyntaxToken = pEqualGreater;
 
 Output :
         sIdentifier 
@@ -89,11 +92,15 @@ Output :
         lastCompoundSemanticToken = sStringLiteral
 
         sProgram
+        sModule
+        sPublic
         sParmBegin
         sParmEnd
         sConst
         sType
         sVar
+        sMutable
+        sInitialValue
         sProcedure
         sBegin
         sEnd
@@ -102,20 +109,24 @@ Output :
         sFile
         sRange
         sCaseStmt
+        sCaseOtherwise
         sCaseEnd
         sLabelEnd
         sExpnEnd
         sNullStmt
         sAssignmentStmt
         sSubscript
+        sSubstring
+        sLength
         sCallStmt
         sFieldWidth
         sIfStmt
         sThen
         sElse
         sWhileStmt
-        sRepeatStmt
-        sRepeatEnd
+        sLoopStmt
+        sLoopBreak
+        sLoopEnd
         sEq
         sNE
         sLT
