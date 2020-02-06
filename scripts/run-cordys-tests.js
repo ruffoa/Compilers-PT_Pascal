@@ -58,7 +58,7 @@ async function runFile(file) {
 
 async function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
-    await stream.write(`\n--------------------------------\nReading file ${file}\n`);
+    // await stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
     // const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
     // // console.log(results, content)
