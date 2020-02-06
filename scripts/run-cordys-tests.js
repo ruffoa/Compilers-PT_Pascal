@@ -60,52 +60,52 @@ async function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
     await stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
-    const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
-    // console.log(results, content)
+    // const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
+    // // console.log(results, content)
 
-    if (!results || !content) {
-        let eFile = `the local test ouput (results from ${file})`;
+    // if (!results || !content) {
+    //     let eFile = `the local test ouput (results from ${file})`;
 
-        if (!results) {
-            eFile = "Cordy's results"
-        }
+    //     if (!results) {
+    //         eFile = "Cordy's results"
+    //     }
 
-        console.error("Error, could not read ", eFile);
-        core.setFailed("Error, could not read " + eFile);
-        await stream.write("Error, could not read " + eFile + '\n');
+    //     console.error("Error, could not read ", eFile);
+    //     core.setFailed("Error, could not read " + eFile);
+    //     await stream.write("Error, could not read " + eFile + '\n');
 
-        return;
-    }
+    //     return;
+    // }
 
-    const expectedOutput = results.split('\n');
-    const testOutput = content.split('\n');
+    // const expectedOutput = results.split('\n');
+    // const testOutput = content.split('\n');
 
-    if (expectedOutput.length !== testOutput.length) {
-        console.error("Lengths do not match!  Something went wrong in ", file);
-        console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-        core.setFailed("Lengths do not match!  Something went wrong in " + file);
+    // if (expectedOutput.length !== testOutput.length) {
+    //     console.error("Lengths do not match!  Something went wrong in ", file);
+    //     console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
+    //     core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-        await stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
-        await stream.write(`Output is: \n-------------------------\n${content}\n------------------------\n`);
+    //     await stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
+    //     await stream.write(`Output is: \n-------------------------\n${content}\n------------------------\n`);
 
-        return;
-    }
+    //     return;
+    // }
 
-    await stream.write(content + '\n');
-    await stream.write("File diff\n-------------------------" + '\n');
+    // await stream.write(content + '\n');
+    // await stream.write("File diff\n-------------------------" + '\n');
 
-    for (var i = 0; i < expectedOutput.length; i++) {
-        // console.log(expectedOutput[i], testOutput[i]);
+    // for (var i = 0; i < expectedOutput.length; i++) {
+    //     // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
-            console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-            core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+    //     if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
+    //         console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+    //         core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
-            await stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
-        }
-    }
+    //         await stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
+    //     }
+    // }
 
-    await stream.write("end file");
+    // await stream.write("end file");
 }
 
 findAllFilesInDir();
