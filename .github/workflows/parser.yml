@@ -39,6 +39,8 @@ jobs:
     - name: check parser ssl definitions
       run: |
         export PATH=$PATH:~/binaries
+        npm install
+        npm install @actions/core
 
         cd parser
         make || echo "true"
