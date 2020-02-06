@@ -25,7 +25,7 @@ async function findAllFilesInDir() {
         if (file.endsWith('.pt')) {
             console.log(file);
             const res = await runFile(file);
-            await compareResults(res, file);
+            compareResults(res, file);
         }
     });          
 }
@@ -56,7 +56,7 @@ async function runFile(file) {
     }
 }
 
-async function compareResults(content, file) {
+function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
     // await stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
