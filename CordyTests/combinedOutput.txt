@@ -123,455 +123,6 @@ File diff
 -------------------------
 end file
 --------------------------------
-Reading file stars.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'stars'
- .pColon
-  .pIdentifier
-  % Output token text 'str'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'stars'
- .pEquals
-  .pStringLiteral
-  % Output token text ''
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pInteger
-  % Output token text '50'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'stars'
- .pEquals
-  .pStringLiteral
-  % Output token text '*'
- .pPlus
-  .pIdentifier
-  % Output token text 'stars'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'stars'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file boxes.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'input'
- .pComma
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'top'
- .pColon
-  .pIdentifier
-  % Output token text 'str'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'middle'
- .pColon
-  .pIdentifier
-  % Output token text 'str'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'bottom'
- .pColon
-  .pIdentifier
-  % Output token text 'str'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'width'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'height'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nacross'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'ndown'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'enter box width and height: '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'width'
- .pComma
-  .pIdentifier
-  % Output token text 'height'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'enter number of boxes across and down: '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nacross'
- .pComma
-  .pIdentifier
-  % Output token text 'ndown'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'width'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
-  .pIdentifier
-  % Output token text 'height'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'top'
- .pEquals
-  .pStringLiteral
-  % Output token text ''
- .pSemicolon
-  .pIdentifier
-  % Output token text 'middle'
- .pEquals
-  .pStringLiteral
-  % Output token text ''
- .pSemicolon
-  .pIdentifier
-  % Output token text 'bottom'
- .pEquals
-  .pStringLiteral
-  % Output token text ''
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pIdentifier
-  % Output token text 'width'
- .pStar
-  .pIdentifier
-  % Output token text 'nacross'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pPercent
-  .pIdentifier
-  % Output token text 'width'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'top'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text ' '
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'middle'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text '|'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'bottom'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text '|'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'top'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text '_'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'middle'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text ' '
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'bottom'
- .pPlusEquals
-  .pStringLiteral
-  % Output token text '_'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'top'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pIdentifier
-  % Output token text 'ndown'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'j'
- .pEqualGreater
-  .pIdentifier
-  % Output token text 'height'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'middle'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'j'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'bottom'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
 Reading file bubblesort.pt
   .pNewLine
   .pIdentifier (screened to pMod)
@@ -1039,6 +590,1259 @@ File diff
 -------------------------
 end file
 --------------------------------
+Reading file stars.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'stars'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'stars'
+ .pEquals
+  .pStringLiteral
+  % Output token text ''
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pInteger
+  % Output token text '50'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'stars'
+ .pEquals
+  .pStringLiteral
+  % Output token text '*'
+ .pPlus
+  .pIdentifier
+  % Output token text 'stars'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'stars'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file boxes.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'input'
+ .pComma
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'top'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'middle'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'bottom'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'width'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'height'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nacross'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'ndown'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'enter box width and height: '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'width'
+ .pComma
+  .pIdentifier
+  % Output token text 'height'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'enter number of boxes across and down: '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nacross'
+ .pComma
+  .pIdentifier
+  % Output token text 'ndown'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'width'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'height'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'top'
+ .pEquals
+  .pStringLiteral
+  % Output token text ''
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'middle'
+ .pEquals
+  .pStringLiteral
+  % Output token text ''
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'bottom'
+ .pEquals
+  .pStringLiteral
+  % Output token text ''
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'width'
+ .pStar
+  .pIdentifier
+  % Output token text 'nacross'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pPercent
+  .pIdentifier
+  % Output token text 'width'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'top'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text ' '
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'middle'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text '|'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'bottom'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text '|'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'top'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text '_'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'middle'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text ' '
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'bottom'
+ .pPlusEquals
+  .pStringLiteral
+  % Output token text '_'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'top'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'ndown'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'j'
+ .pEqualGreater
+  .pIdentifier
+  % Output token text 'height'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'middle'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'j'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'bottom'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file pascal.pt
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'pascal'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '15'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'col'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'row'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'addto'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'index'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'index'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '1'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'index'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'index'
+ .pRightBracket
+ .pPlus
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'index'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'col'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'col'
+ .pGreater
+  .pInteger
+  % Output token text '15'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '5'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'row'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pEquals
+  .pIdentifier
+  % Output token text 'row'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'col'
+ .pEqualGreater
+  .pInteger
+  % Output token text '1'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'addto'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'col'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'col'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'row'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'pascal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'col'
+ .pRightBracket
+ .pColon
+  .pInteger
+  % Output token text '5'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'col'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'row'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'row'
+ .pGreater
+  .pInteger
+  % Output token text '15'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file francais.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'input'
+ .pComma
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'root'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Please give me a regular French 'er' verb (end with 'arreter')'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Thanks, here is the present conjugation'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'root'
+ .pEquals
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+ .pLeftParen
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pMinus
+  .pInteger
+  % Output token text '2'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The root of this verb is ''
+ .pComma
+  .pIdentifier
+  % Output token text 'root'
+ .pComma
+  .pStringLiteral
+  % Output token text '''
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pForwardSlash
+ .pLeftParen
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pColon
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'er'
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'a'
+ .pRightParen
+ .pDoubleBar
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'e'
+ .pRightParen
+ .pNewLine
+ .pDoubleBar
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'i'
+ .pRightParen
+ .pDoubleBar
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'o'
+ .pRightParen
+ .pNewLine
+ .pDoubleBar
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+  .pInteger
+  % Output token text '1'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'u'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'J''
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'e'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Je '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'e'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Tu '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'es'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Il ou elle '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'e'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'root'
+ .pForwardSlash
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'root'
+ .pColon
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'root'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'g'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Nous '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'eons'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Nous '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'ons'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Vous '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'ez'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Ils ou elles '
+ .pPlus
+  .pIdentifier
+  % Output token text 'root'
+ .pPlus
+  .pStringLiteral
+  % Output token text 'ent'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pForwardSlash
+ .pLeftParen
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pColon
+ .pQuestionMark
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'ir'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I'm too tired to do an 'ir' verb'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I don't like the looks of this verb'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'infinitive'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'arreter'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
 Reading file mbubblesort.pt
   .pNewLine
   .pNewLine
@@ -1483,306 +2287,6 @@ Reading file mbubblesort.pt
  .pLeftParen
  .pRightParen
  .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file pascal.pt
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'pascal'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '15'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'col'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'row'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'addto'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'index'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'index'
- .pDoubleEquals
-  .pInteger
-  % Output token text '1'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'index'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'index'
- .pRightBracket
- .pPlus
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'index'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'col'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'col'
- .pGreater
-  .pInteger
-  % Output token text '15'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '5'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'row'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pEquals
-  .pIdentifier
-  % Output token text 'row'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'col'
- .pEqualGreater
-  .pInteger
-  % Output token text '1'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'addto'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'col'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pMinusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'col'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'row'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'pascal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'col'
- .pRightBracket
- .pColon
-  .pInteger
-  % Output token text '5'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'col'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'row'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'row'
- .pGreater
-  .pInteger
-  % Output token text '15'
- .pSemicolon
- .pNewLine
- .pRightBrace
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -2619,61 +3123,277 @@ File diff
 -------------------------
 end file
 --------------------------------
-Reading file francais.pt
+Reading file lunch.pt
   .pNewLine
   .pNewLine
   .pIdentifier (screened to pMod)
   .pIdentifier (screened to pMain)
  .pLeftParen
   .pIdentifier
-  % Output token text 'input'
- .pComma
-  .pIdentifier
   % Output token text 'output'
  .pRightParen
  .pLeftBrace
  .pNewLine
  .pNewLine
+  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'infinitive'
+  % Output token text 'animal'
  .pColon
+ .pLeftBracket
   .pIdentifier
   % Output token text 'str'
+ .pColon
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
  .pComma
- .pNewLine
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'root'
+  % Output token text 'remark'
  .pColon
+ .pLeftBracket
   .pIdentifier
   % Output token text 'str'
+ .pColon
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'verse'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'countdown'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'fly'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '2'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'spider'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '3'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'bird'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '4'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'cat'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '5'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'dog'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '6'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'goat'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'cow'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'horse'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'I don't know why she swallowed a fly.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '2'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'That wiggled and jiggled and tickled inside her.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '3'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'How absurd, to swallow a bird.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '4'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'Imagine that, she swallowed a cat.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '5'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'What a hog, to swallow a dog.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '6'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'What a dope, to swallow a goat.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'I don't know how she swallowed that cow.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'She died of course.'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I Know an Old Lady'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'verse'
+ .pEquals
+  .pInteger
+  % Output token text '1'
  .pSemicolon
  .pNewLine
  .pNewLine
   .pIdentifier (screened to pLoop)
  .pLeftBrace
  .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Please give me a regular French 'er' verb (end with 'arreter')'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'infinitive'
- .pRightParen
+  % Output token text 'verse'
+ .pEqualGreater
+  .pInteger
+  % Output token text '8'
  .pSemicolon
  .pNewLine
   .pIdentifier
@@ -2681,13 +3401,49 @@ Reading file francais.pt
  .pLeftParen
  .pRightParen
  .pSemicolon
- .pNewLine
  .pNewLine
   .pIdentifier
   % Output token text 'print'
  .pLeftParen
   .pStringLiteral
-  % Output token text 'Thanks, here is the present conjugation'
+  % Output token text 'I know an old lady'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Who swallowed a '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'verse'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'verse'
+ .pRightBracket
  .pRightParen
  .pSemicolon
   .pIdentifier
@@ -2698,422 +3454,194 @@ Reading file francais.pt
  .pNewLine
  .pNewLine
   .pIdentifier
-  % Output token text 'root'
+  % Output token text 'countdown'
  .pEquals
   .pIdentifier
-  % Output token text 'infinitive'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
- .pLeftParen
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'infinitive'
- .pMinus
-  .pInteger
-  % Output token text '2'
- .pRightParen
+  % Output token text 'verse'
  .pSemicolon
  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The root of this verb is ''
- .pComma
-  .pIdentifier
-  % Output token text 'root'
- .pComma
-  .pStringLiteral
-  % Output token text '''
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'infinitive'
- .pForwardSlash
- .pLeftParen
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'infinitive'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pColon
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'infinitive'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'er'
+  .pIdentifier (screened to pLoop)
  .pLeftBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'a'
- .pRightParen
- .pDoubleBar
- .pLeftParen
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'e'
- .pRightParen
- .pNewLine
- .pDoubleBar
- .pLeftParen
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'i'
- .pRightParen
- .pDoubleBar
- .pLeftParen
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'o'
- .pRightParen
- .pNewLine
- .pDoubleBar
- .pLeftParen
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
-  .pInteger
-  % Output token text '1'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'u'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'J''
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'e'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Je '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'e'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Tu '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'es'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Il ou elle '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'e'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'root'
- .pForwardSlash
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'root'
- .pColon
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'root'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'g'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Nous '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'eons'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Nous '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'ons'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Vous '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'ez'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Ils ou elles '
- .pPlus
-  .pIdentifier
-  % Output token text 'root'
- .pPlus
-  .pStringLiteral
-  % Output token text 'ent'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'infinitive'
- .pForwardSlash
- .pLeftParen
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'infinitive'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pColon
- .pQuestionMark
-  .pIdentifier
-  % Output token text 'infinitive'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'ir'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I'm too tired to do an 'ir' verb'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I don't like the looks of this verb'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
  .pNewLine
   .pIdentifier (screened to pBreak)
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'infinitive'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'arreter'
+  % Output token text 'countdown'
+ .pLess
+  .pInteger
+  % Output token text '2'
  .pSemicolon
  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'She swallowed the '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'countdown'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'readln'
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' to catch the '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'countdown'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pPlus
+  .pStringLiteral
+  % Output token text ','
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'countdown'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'verse'
+ .pGreater
+  .pInteger
+  % Output token text '1'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
  .pLeftParen
  .pRightParen
  .pSemicolon
  .pNewLine
  .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'verse'
+ .pLess
+  .pInteger
+  % Output token text '8'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Perhaps she'll die.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'verse'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The end.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Thank you very much, you're too kind.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I'll be here until Thursday - try the veal!'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -3840,12 +4368,14 @@ File diff
 -------------------------
 end file
 --------------------------------
-Reading file lunch.pt
-  .pNewLine
+Reading file cache.pt
   .pNewLine
   .pIdentifier (screened to pMod)
   .pIdentifier (screened to pMain)
  .pLeftParen
+  .pIdentifier
+  % Output token text 'input'
+ .pComma
   .pIdentifier
   % Output token text 'output'
  .pRightParen
@@ -3853,44 +4383,25 @@ Reading file lunch.pt
  .pNewLine
  .pNewLine
   .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'animal'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'str'
- .pColon
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'remark'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'str'
- .pColon
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pSemicolon
+  .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
  .pNewLine
  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'verse'
+  % Output token text 'n'
  .pColon
   .pIdentifier
   % Output token text 'int'
  .pComma
+ .pNewLine
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'countdown'
+  % Output token text 'm'
  .pColon
   .pIdentifier
   % Output token text 'int'
@@ -3898,340 +4409,809 @@ Reading file lunch.pt
  .pNewLine
  .pNewLine
   .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'animal'
+  % Output token text 'customer'
+ .pColon
  .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'fly'
- .pSemicolon
- .pNewLine
   .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
+  % Output token text 'int'
+ .pColon
   .pInteger
-  % Output token text '2'
+  % Output token text '1000'
  .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'spider'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '3'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'bird'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '4'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'cat'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '5'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'dog'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '6'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'goat'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'cow'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'horse'
  .pSemicolon
  .pNewLine
  .pNewLine
   .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'I don't know why she swallowed a fly.'
- .pSemicolon
- .pNewLine
+  % Output token text 'ncompares'
+ .pColon
   .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '2'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'That wiggled and jiggled and tickled inside her.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '3'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'How absurd, to swallow a bird.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '4'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'Imagine that, she swallowed a cat.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '5'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'What a hog, to swallow a dog.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '6'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'What a dope, to swallow a goat.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'I don't know how she swallowed that cow.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'She died of course.'
+  % Output token text 'int'
  .pSemicolon
  .pNewLine
  .pNewLine
   .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'print'
+  % Output token text 'seed'
+ .pEquals
+  .pInteger
+  % Output token text '13277'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '17'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cachename'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '10'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cacheindx'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '10'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cp'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'randint'
  .pLeftParen
-  .pStringLiteral
-  % Output token text 'I Know an Old Lady'
- .pRightParen
- .pSemicolon
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
+  % Output token text 'result'
+ .pColon
   .pIdentifier
-  % Output token text 'verse'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'modulus'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
  .pLeftBrace
  .pNewLine
-  .pIdentifier (screened to pBreak)
+  .pNewLine
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'verse'
- .pEqualGreater
+  % Output token text 'multiplier'
+ .pDoubleEquals
   .pInteger
-  % Output token text '8'
+  % Output token text '17'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '19'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '17'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'seed'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'seed'
+ .pStar
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pRightParen
+ .pPercent
+  .pInteger
+  % Output token text '10000'
  .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'println'
+  % Output token text 'result'
+ .pEquals
  .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I know an old lady'
- .pRightParen
- .pSemicolon
+  % Output token text 'seed'
+ .pPercent
   .pIdentifier
-  % Output token text 'println'
- .pLeftParen
+  % Output token text 'modulus'
  .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Who swallowed a '
  .pPlus
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'verse'
- .pRightBracket
- .pRightParen
+  .pInteger
+  % Output token text '1'
  .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
   .pIdentifier
-  % Output token text 'println'
+  % Output token text 'initialize'
  .pLeftParen
  .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'verse'
- .pRightBracket
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'countdown'
- .pEquals
-  .pIdentifier
-  % Output token text 'verse'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
  .pLeftBrace
  .pNewLine
-  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'n'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'p'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randint'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'p'
+ .pComma
+  .pInteger
+  % Output token text '9000'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'p'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1000'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'p'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'randomname'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'p'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randint'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'p'
+ .pComma
+  .pIdentifier
+  % Output token text 'n'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'p'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'findlinear'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'name'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'n'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'r'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'countdown'
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'name'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'i'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'findcache'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'name'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'c'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'c'
+ .pLessEqual
+  .pInteger
+  % Output token text '10'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'r'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'cachename'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'c'
+ .pRightBracket
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'name'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'cacheindx'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'c'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'n'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'r'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'name'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'cp'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'cp'
+ .pGreater
+  .pInteger
+  % Output token text '10'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cp'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cachename'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'cp'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'name'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cacheindx'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'cp'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'i'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'i'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'n1'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'n2'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 'temp'
+ .pEquals
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'n1'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'n1'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'n2'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'n2'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'temp'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'bubblesort'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nswaps'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pIdentifier
+  % Output token text 'n'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'j'
+ .pGreater
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nswaps'
+ .pNotEqual
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nswaps'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'k'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'k'
  .pLess
+  .pIdentifier
+  % Output token text 'j'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
   .pInteger
-  % Output token text '2'
+  % Output token text '1'
  .pSemicolon
  .pNewLine
+  .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'She swallowed the '
- .pPlus
-  .pIdentifier
-  % Output token text 'animal'
+  % Output token text 'customer'
  .pLeftBracket
   .pIdentifier
-  % Output token text 'countdown'
+  % Output token text 'k'
  .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
+ .pGreater
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' to catch the '
- .pPlus
-  .pIdentifier
-  % Output token text 'animal'
+  % Output token text 'customer'
  .pLeftBracket
   .pIdentifier
-  % Output token text 'countdown'
- .pMinus
+  % Output token text 'k'
+ .pPlus
   .pInteger
   % Output token text '1'
  .pRightBracket
- .pPlus
-  .pStringLiteral
-  % Output token text ','
- .pRightParen
- .pSemicolon
+ .pLeftBrace
+ .pNewLine
   .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
+  % Output token text 'nswaps'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
  .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'countdown'
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'k'
+ .pComma
+  .pIdentifier
+  % Output token text 'k'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'k'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'j'
  .pMinusEquals
   .pInteger
   % Output token text '1'
@@ -4239,48 +5219,248 @@ Reading file lunch.pt
  .pNewLine
  .pRightBrace
  .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'findbinary'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'name'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'first'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'last'
+ .pEquals
+  .pIdentifier
+  % Output token text 'n'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'first'
+ .pNotEqual
+  .pIdentifier
+  % Output token text 'last'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 'mid'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'first'
+ .pPlus
+  .pIdentifier
+  % Output token text 'last'
+ .pRightParen
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
  .pNewLine
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'verse'
+  % Output token text 'name'
  .pGreater
-  .pInteger
-  % Output token text '1'
+  .pIdentifier
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'mid'
+ .pRightBracket
  .pLeftBrace
  .pNewLine
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
+  % Output token text 'first'
+ .pEquals
   .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
+  % Output token text 'mid'
+ .pPlus
   .pInteger
   % Output token text '1'
- .pRightBracket
- .pRightParen
  .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
   .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
+  % Output token text 'last'
+ .pEquals
+  .pIdentifier
+  % Output token text 'mid'
  .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
  .pNewLine
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'verse'
- .pLess
-  .pInteger
-  % Output token text '8'
+  % Output token text 'customer'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'first'
+ .pRightBracket
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'name'
  .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'first'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Enter N (number of elements, at most 1000, e.g. 100): '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'n'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
  .pNewLine
   .pIdentifier
   % Output token text 'print'
  .pLeftParen
   .pStringLiteral
-  % Output token text 'Perhaps she'll die.'
+  % Output token text 'Enter M (number of lookups, e.g. 1000): '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'm'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Enter a prime number (e.g. 13, 19, 51, ...): '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'initialize'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Linear lookup'
  .pRightParen
  .pSemicolon
   .pIdentifier
@@ -4289,11 +5469,71 @@ Reading file lunch.pt
  .pRightParen
  .pSemicolon
  .pNewLine
- .pRightBrace
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'c'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'c'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'm'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'verse'
+  % Output token text 'randomname'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'findlinear'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nm'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
  .pPlusEquals
   .pInteger
   % Output token text '1'
@@ -4302,18 +5542,235 @@ Reading file lunch.pt
  .pRightBrace
  .pNewLine
  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cavg'
+ .pEquals
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pForwardSlash
+  .pIdentifier
+  % Output token text 'm'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'N= '
+ .pComma
+  .pIdentifier
+  % Output token text 'n'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '  Average compares per search (Cavg) == '
+ .pComma
+  .pIdentifier
+  % Output token text 'cavg'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pNewLine
   .pNewLine
   .pIdentifier
   % Output token text 'println'
  .pLeftParen
  .pRightParen
  .pSemicolon
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Linear lookup with cache'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'cp'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'j'
+ .pLessEqual
+  .pInteger
+  % Output token text '10'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cachename'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'j'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'c'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'm'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randomname'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'findcache'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nm'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cavg'
+ .pEquals
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pForwardSlash
+  .pIdentifier
+  % Output token text 'm'
+ .pSemicolon
  .pNewLine
   .pIdentifier
   % Output token text 'print'
  .pLeftParen
   .pStringLiteral
-  % Output token text 'The end.'
+  % Output token text 'N= '
+ .pComma
+  .pIdentifier
+  % Output token text 'n'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '  Average compares per search (Cavg) == '
+ .pComma
+  .pIdentifier
+  % Output token text 'cavg'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Binary search'
  .pRightParen
  .pSemicolon
   .pIdentifier
@@ -4323,29 +5780,114 @@ Reading file lunch.pt
  .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'println'
+  % Output token text 'ncompares'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'bubblesort'
  .pLeftParen
  .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'c'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'm'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randomname'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nm'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'findbinary'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nm'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'indx'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cavg'
+ .pEquals
+  .pIdentifier
+  % Output token text 'ncompares'
+ .pForwardSlash
+  .pIdentifier
+  % Output token text 'm'
  .pSemicolon
  .pNewLine
   .pIdentifier
   % Output token text 'print'
  .pLeftParen
   .pStringLiteral
-  % Output token text 'Thank you very much, you're too kind.'
- .pRightParen
- .pSemicolon
+  % Output token text 'N= '
+ .pComma
   .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
+  % Output token text 'n'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
   .pStringLiteral
-  % Output token text 'I'll be here until Thursday - try the veal!'
+  % Output token text '  Average compares per search (Cavg) == '
+ .pComma
+  .pIdentifier
+  % Output token text 'cavg'
+ .pColon
+  .pInteger
+  % Output token text '1'
  .pRightParen
  .pSemicolon
   .pIdentifier
@@ -4354,11 +5896,6 @@ Reading file lunch.pt
  .pRightParen
  .pSemicolon
  .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -10466,1543 +12003,6 @@ Reading file mbust.pt
  .pSemicolon
  .pNewLine
  .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file cache.pt
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'input'
- .pComma
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'n'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'm'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'customer'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '1000'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'ncompares'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'seed'
- .pEquals
-  .pInteger
-  % Output token text '13277'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '17'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cachename'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '10'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cacheindx'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '10'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cp'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'result'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'modulus'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'multiplier'
- .pDoubleEquals
-  .pInteger
-  % Output token text '17'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '19'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '17'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'seed'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'seed'
- .pStar
-  .pIdentifier
-  % Output token text 'multiplier'
- .pRightParen
- .pPercent
-  .pInteger
-  % Output token text '10000'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'result'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'seed'
- .pPercent
-  .pIdentifier
-  % Output token text 'modulus'
- .pRightParen
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'initialize'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'n'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'p'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'p'
- .pComma
-  .pInteger
-  % Output token text '9000'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'p'
- .pPlusEquals
-  .pInteger
-  % Output token text '1000'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'p'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'randomname'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'p'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'p'
- .pComma
-  .pIdentifier
-  % Output token text 'n'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'p'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'findlinear'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'name'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'n'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'r'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'name'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'i'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'findcache'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'name'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'c'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'c'
- .pLessEqual
-  .pInteger
-  % Output token text '10'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'r'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'cachename'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'c'
- .pRightBracket
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'name'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'cacheindx'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'c'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'n'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'r'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'name'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'cp'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'cp'
- .pGreater
-  .pInteger
-  % Output token text '10'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'cp'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cachename'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'cp'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'name'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cacheindx'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'cp'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'i'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'i'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'swap'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'n1'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'n2'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier
-  % Output token text 'temp'
- .pEquals
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'n1'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'n1'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'n2'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'n2'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'temp'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'bubblesort'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nswaps'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pIdentifier
-  % Output token text 'n'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'j'
- .pGreater
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nswaps'
- .pNotEqual
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'nswaps'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'k'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'k'
- .pLess
-  .pIdentifier
-  % Output token text 'j'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'k'
- .pRightBracket
- .pGreater
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'k'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'nswaps'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'swap'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'k'
- .pComma
-  .pIdentifier
-  % Output token text 'k'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'k'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'j'
- .pMinusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'findbinary'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'name'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'first'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'last'
- .pEquals
-  .pIdentifier
-  % Output token text 'n'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'first'
- .pNotEqual
-  .pIdentifier
-  % Output token text 'last'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier
-  % Output token text 'mid'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'first'
- .pPlus
-  .pIdentifier
-  % Output token text 'last'
- .pRightParen
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'name'
- .pGreater
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'mid'
- .pRightBracket
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'first'
- .pEquals
-  .pIdentifier
-  % Output token text 'mid'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'last'
- .pEquals
-  .pIdentifier
-  % Output token text 'mid'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'customer'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'first'
- .pRightBracket
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'name'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'first'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Enter N (number of elements, at most 1000, e.g. 100): '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'n'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Enter M (number of lookups, e.g. 1000): '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'm'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Enter a prime number (e.g. 13, 19, 51, ...): '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'multiplier'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'initialize'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Linear lookup'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'c'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'c'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'm'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randomname'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'findlinear'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nm'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cavg'
- .pEquals
-  .pIdentifier
-  % Output token text 'ncompares'
- .pForwardSlash
-  .pIdentifier
-  % Output token text 'm'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'N= '
- .pComma
-  .pIdentifier
-  % Output token text 'n'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '  Average compares per search (Cavg) == '
- .pComma
-  .pIdentifier
-  % Output token text 'cavg'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Linear lookup with cache'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'cp'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'j'
- .pLessEqual
-  .pInteger
-  % Output token text '10'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'cachename'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'j'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'c'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'm'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randomname'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'findcache'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nm'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'cavg'
- .pEquals
-  .pIdentifier
-  % Output token text 'ncompares'
- .pForwardSlash
-  .pIdentifier
-  % Output token text 'm'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'N= '
- .pComma
-  .pIdentifier
-  % Output token text 'n'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '  Average compares per search (Cavg) == '
- .pComma
-  .pIdentifier
-  % Output token text 'cavg'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Binary search'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncompares'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'bubblesort'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'c'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'm'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randomname'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nm'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'findbinary'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nm'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'indx'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'cavg'
- .pEquals
-  .pIdentifier
-  % Output token text 'ncompares'
- .pForwardSlash
-  .pIdentifier
-  % Output token text 'm'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'N= '
- .pComma
-  .pIdentifier
-  % Output token text 'n'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '  Average compares per search (Cavg) == '
- .pComma
-  .pIdentifier
-  % Output token text 'cavg'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
  .pNewLine
  .pRightBrace
  .pNewLine
