@@ -1,4 +1,4 @@
-name: Scanner CI
+name: Parser CI
 
 on: [push]
 
@@ -31,14 +31,6 @@ jobs:
 
         export PATH=$PATH:~/binaries
       working-directory: ./pt
-
-    - name: make parser
-      run: |
-        export PATH=$PATH:~/binaries
-
-        make
-        ssl parser.ssl
-      working-directory: ./pt/parser
     
     - uses: actions/setup-node@v1
       with:
@@ -76,6 +68,14 @@ jobs:
       with: 
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
+
+    - name: make parser
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make
+        ssl parser.ssl
+      working-directory: ./pt/parser
 
     - name: Run Cordy's Tests
       run: |
