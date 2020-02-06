@@ -25,7 +25,7 @@ async function findAllFilesInDir() {
         if (file.endsWith('.pt')) {
             console.log(file);
             const res = await runFile(file);
-            compareResults(res, file);
+            await compareResults(res, file);
         }
     });          
 }
