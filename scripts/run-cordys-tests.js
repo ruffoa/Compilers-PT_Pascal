@@ -20,21 +20,25 @@ const outputMap = {
 const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'a'});
 
 async function findAllFilesInDir() {
-    fs.readdirSync(folderPath).forEach(async file => {
-        
+    const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);   // not really needed, but good to make sure!
+
+    for (const file of dirs) {
         if (file.endsWith('.pt')) {
             console.log(file);
             const res = await runFile(file);
+            console.log("Done getting input from: " + file);
             compareResults(res, file);
         }
-    });          
+    }          
 }
 
 async function runFile(file) {
     try {
+        console.log("Starting to run " + file)
         const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
         // console.log(output.stdout, output.stderr || output.stdout);
+        console.log("Got res for " + file)
 
         let isRealError = true;
 
@@ -46,6 +50,7 @@ async function runFile(file) {
             }
         }
 
+        console.log("done if " + file)
         return output.stderr && isRealError || output.stdout;
         
     } catch (e) {
