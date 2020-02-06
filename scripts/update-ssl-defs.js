@@ -4,7 +4,7 @@ const exec = promisify(require('child_process').exec)
 const fs = require('fs');
 var path = require('path');
 
-const core = require('@actions/core');
+// const core = require('@actions/core');
 
 const segment = "parser";
 const folderPath = path.join(__dirname, `../pt/parser`);
@@ -24,7 +24,7 @@ function readSslDefsFile() {
         writeOutput(res);
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
-        core.setFailed("Bash command failed, aborting" + e.message);
+        // core.setFailed("Bash command failed, aborting" + e.message);
     }
 }
 
@@ -35,7 +35,7 @@ function writeOutput(content) {
 
     if (!content) {
         console.error("Error, something went wrong, file is empty! ");
-        core.setFailed("Error, something went wrong, file is empty! ");
+        // core.setFailed("Error, something went wrong, file is empty! ");
 
         return;
     }
