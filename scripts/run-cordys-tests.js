@@ -21,15 +21,15 @@ const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'
 
 async function findAllFilesInDir() {
     const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);
-    
-    await dirs.forEach(async file => {
+
+    for (const file of dirs) {
         if (file.endsWith('.pt')) {
             console.log(file);
             const res = await runFile(file);
             console.log("Done getting input from: " + file);
             compareResults(res, file);
         }
-    });          
+    }          
 }
 
 async function runFile(file) {
