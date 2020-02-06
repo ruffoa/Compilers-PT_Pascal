@@ -17,8 +17,7 @@ const outputMap = {
 };
 
 // let fileOutput = "";
-// const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'a'});
-const stream = fs.openSync(folderPath + "/combinedOutput.txt", {flags:'a'});
+const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'a'});
 
 async function findAllFilesInDir() {
     fs.readdirSync(folderPath).sort((a,b) => a < b).forEach(async file => {
@@ -52,13 +51,13 @@ async function runFile(file) {
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
-        stream.write("Bash command failed, aborting! " + e.message + '\n');
+        await stream.write("Bash command failed, aborting! " + e.message + '\n');
     }
 }
 
-function compareResults(content, file) {
+async function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
-    fs.writeSync(stream, `\n--------------------------------\nReading file ${file}\n`);
+    await stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
     const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
     // console.log(results, content)
@@ -72,7 +71,7 @@ function compareResults(content, file) {
 
         console.error("Error, could not read ", eFile);
         core.setFailed("Error, could not read " + eFile);
-        fs.writeSync(stream, "Error, could not read " + eFile + '\n');
+        await stream.write("Error, could not read " + eFile + '\n');
 
         return;
     }
@@ -85,14 +84,14 @@ function compareResults(content, file) {
         console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
         core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-        fs.writeSync(stream, "Lengths do not match!  Something went wrong in " + file + '\n');
-        fs.writeSync(stream, `Output is: \n-------------------------\n${content}\n------------------------\n`);
+        await stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
+        await stream.write(`Output is: \n-------------------------\n${content}\n------------------------\n`);
 
         return;
     }
 
-    fs.writeSync(stream, content + '\n');
-    fs.writeSync(stream, "File diff\n-------------------------" + '\n');
+    await stream.write(content + '\n');
+    await stream.write("File diff\n-------------------------" + '\n');
 
     for (var i = 0; i < expectedOutput.length; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
@@ -101,16 +100,11 @@ function compareResults(content, file) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
-            fs.writeSync(stream, `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
+            await stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
         }
     }
 
-    fs.writeSync(stream, "end file");
+    await stream.write("end file");
 }
 
-async function main() {
-    await findAllFilesInDir();
-    fs.closeSync(stream);
-}
-
-main();
+findAllFilesInDir();
