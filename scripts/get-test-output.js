@@ -70,6 +70,8 @@ function compareResults(content, file, dir) {
     console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
     output += "\n";
     
+    core.startGroup(`${dir} - ${file}`);
+
     if (content)
         output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
 
@@ -98,7 +100,7 @@ function compareResults(content, file, dir) {
         if (expectedOutput.length !== testOutput.length) {
             console.error("Lengths do not match!  Something went wrong in ", file);
             console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-            core.setFailed("Lengths do not match!  Something went wrong in " + file);
+            // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
             output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...`;
             // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
@@ -115,8 +117,8 @@ function compareResults(content, file, dir) {
 
             if (testOutput[i] !== expectedOutput[i]) {
                 console.error(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-                core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-
+                // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+                    
                 output += `-${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`;
             }
         }
@@ -127,6 +129,9 @@ function compareResults(content, file, dir) {
 
     output += "end file\n";
     output += '\n```';
+
+    core.endGroup()
+
     return output;
 }
 
