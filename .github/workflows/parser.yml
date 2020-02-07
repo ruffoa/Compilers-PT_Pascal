@@ -46,7 +46,7 @@ jobs:
 
     - name: Build and export the Test Suite Results
       run: |
-        git         export PATH=$PATH:~/binaries
+        export PATH=$PATH:~/binaries
 
         cd parser
         make
