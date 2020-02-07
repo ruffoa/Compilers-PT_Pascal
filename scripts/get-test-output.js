@@ -29,7 +29,7 @@ async function loopTestDirectories() {
 }
 
 async function findAllFilesInDir(dir) {
-    const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);   // not really needed, but good to make sure!
+    const dirs = fs.readdirSync(folderPath + dir).sort((a,b) => a < b);   // not really needed, but good to make sure!
 
     for (const file of dirs) {
         if (file.endsWith('.pt')) {
