@@ -18,31 +18,24 @@ Input :
         % Keywords must be first both here and in stdIdentifiers,
         % and they must appear in the exact same order
 
-        pDiv                    'div'
-        firstKeywordToken = pDiv
-        pMod                    'mod'
-        pOr                     'or'
-        pAnd                    'and'
-        pNot                    'not'
-        pThen                   'then'
-        pElse                   'else'
-        pOf                     'of'
-        pEnd                    'end'
-        pUntil                  'until'
-        pDo                     'do'
-        pArray                  'array'
-        pFile                   'file'
-        pProgram                'program'
-        pConst                  'const'
-        pVar                    'var'
-        pType                   'type'
-        pProcedure              'procedure'
-        pBegin                  'begin'
-        pIf                     'if'
-        pCase                   'case'
-        pWhile                  'while'
-        pRepeat                 'repeat'
-        lastKeywordToken = pRepeat 
+        pElse                       'else'
+        firstKeywordToken = pElse
+        pOf                         'of'
+        pFile                       'file'
+        pConst                      'const'
+        pType                       'type'
+        pIf                         'if'
+        pWhile                      'while'
+        pPub                        'pub'
+        pMod                        'mod'
+        pMain                       'main'
+        pLet                        'let'
+        pMut                        'mut'
+        pFn                         'fn'
+        pLoop                       'loop'
+        pBreak                      'break'
+        pMatch                      'match'
+        lastKeywordToken = pMatch
 
         % Scanner tokens -
         %   These are the tokens actually recognized by the Scanner itself.
@@ -62,23 +55,33 @@ Input :
         pPlus                   '+'
         pMinus                  '-'
         pStar                   '*'
-        pColonEquals            ':='
-        pDot                    '.'
         pComma                  ','
         pSemicolon              ';'
         pColon                  ':'
         pEquals                 '='
-        pNotEqual               '<>'
+        pNotEqual               '!='
         pLess                   '<'
         pLessEqual              '<='
-        pGreaterEqual           '>='
         pGreater                '>'
         pLeftParen              '('
         pRightParen             ')'
         pLeftBracket            '['
         pRightBracket           ']'
-        pDotDot                 '..'
-        lastSyntaxToken = pDotDot;
+        pLeftBrace              '{'
+        pRightBrace             '}'
+        pPlusEquals             '+='
+        pMinusEquals            '-='
+        pForwardSlash           '/'
+        pPercent                '%'
+        pDoubleEquals           '=='
+        pDoubleAmpersand        '&&'
+        pDoubleBar              '||'
+        pBar                    '|'
+        pNot                    '!'
+        pUnderscore             '_'
+        pQuestionMark           '?'
+        pEqualGreater           '=>'
+        lastSyntaxToken = pEqualGreater;
 
 Output :
         sIdentifier 
@@ -89,11 +92,15 @@ Output :
         lastCompoundSemanticToken = sStringLiteral
 
         sProgram
+        sModule
+        sPublic
         sParmBegin
         sParmEnd
         sConst
         sType
         sVar
+        sMutable
+        sInitialValue
         sProcedure
         sBegin
         sEnd
@@ -102,20 +109,24 @@ Output :
         sFile
         sRange
         sCaseStmt
+        sCaseOtherwise
         sCaseEnd
         sLabelEnd
         sExpnEnd
         sNullStmt
         sAssignmentStmt
         sSubscript
+        sSubstring
+        sLength
         sCallStmt
         sFieldWidth
         sIfStmt
         sThen
         sElse
         sWhileStmt
-        sRepeatStmt
-        sRepeatEnd
+        sLoopStmt
+        sLoopBreak
+        sLoopEnd
         sEq
         sNE
         sLT
@@ -140,7 +151,7 @@ Output :
 rules
 
 Program :
-        'program'  .sProgram
+        'mod' 'main' .sProgram
         % program name
         pIdentifier
         % program parameters
@@ -155,7 +166,7 @@ Program :
         }
         ')'
         .sParmEnd
-        ';'  @Block  '.';
+        ';'  @Block;
 
 Block :
         % Strictly speaking, standard Pascal requires that declarations
@@ -169,10 +180,10 @@ Block :
             | 'type':
                 .sType
                 @TypeDefinitions
-            | 'var':
+            | 'let':
                 .sVar
                 @VariableDeclarations
-            | 'procedure':
+            | 'mod':
                 .sProcedure
                 % procedure name
                 pIdentifier  .sIdentifier
@@ -181,7 +192,8 @@ Block :
             | *:
                 >
         ]}
-        'begin'
+        % 'begin'
+        '{'
         @BeginStmt;
 
 ConstantDefinitions :
@@ -233,10 +245,10 @@ TypeDefinitions :
 
 TypeBody :
         [
-            | 'array':
-                .sArray
-                '['  @SimpleType  ']'
-                'of'  @SimpleType
+            %| 'array':
+            %    .sArray
+            %    '['  @SimpleType  ']'
+            %    'of'  @SimpleType
             | 'file':
                 .sFile
                 'of'  @SimpleType
@@ -250,15 +262,15 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                [
-                    | '..':
-                        .sRange         %% this may be unnecessary
-                        @OptionallySignedIntegerConstant
-                    | *:
-                ]
+                %[
+                    %| '..':
+                    %    .sRange         %% this may be unnecessary
+                    %    @OptionallySignedIntegerConstant
+                %    | *:
+                %]
             | *:
                 @OptionallySignedIntegerConstant
-                '..'  .sRange
+                % '..'  .sRange
                 @OptionallySignedIntegerConstant
         ];
 
@@ -291,8 +303,9 @@ ProcedureHeading :
             | '(':
                 {
                     % formal parameter identifier
+                    % ToDo: Get consts working!
                     [
-                        | 'var':
+                        | 'let':
                             pIdentifier  .sIdentifier
                             .sVar
                         | *:
@@ -317,15 +330,15 @@ Statement :
         [
             | pIdentifier:
                 @AssignmentOrCallStmt
-            | 'begin':
+            | '{':
                 @BeginStmt
             | 'if':
                 @IfStmt
             | 'while':
                 @WhileStmt
-            | 'case':
+            | 'match':
                 @CaseStmt
-            | 'repeat':
+            | 'loop':
                 @RepeatStmt
             | *:
                 .sNullStmt
@@ -333,7 +346,7 @@ Statement :
 
 AssignmentOrCallStmt :
         [
-            | ':=':
+            | '=':
                 .sAssignmentStmt
                 .sIdentifier    % identifier accepted in the Statement rule
                 @Expression
@@ -344,7 +357,7 @@ AssignmentOrCallStmt :
                 .sSubscript
                 @Expression
                 .sExpnEnd
-                ']'  ':='
+                ']'  '='
                 @Expression
                 .sExpnEnd
             | *:
@@ -386,7 +399,7 @@ BeginStmt :
             @Statement
             [
                 | ';':
-                | 'end':
+                | '}':
                     .sEnd
                     >
             ]
@@ -396,7 +409,7 @@ IfStmt :
         .sIfStmt
         @Expression
         .sExpnEnd
-        'then'  .sThen
+        .sThen
         @Statement
         [
             | 'else':
@@ -417,12 +430,12 @@ CaseStmt :
                 % for the common situation of an extra semicolon
                 % at the end of the list of case alternatives.
                 [
-                    | 'end':
+                    | '}':
                         >
                     | *:
                         @CaseAlternative
                 ]
-            | 'end':
+            | '}':
                 >
         ]}
         .sCaseEnd;
@@ -446,17 +459,17 @@ WhileStmt :
         .sWhileStmt
         @Expression
         .sExpnEnd
-        'do'
+        % 'do' ToDo: FIX ME!
         @Statement;
 
 RepeatStmt :
-        .sRepeatStmt
+        .sLoopStmt
         {
             @Statement
             [
                 | ';':
-                | 'until':
-                    .sRepeatEnd
+                %| 'until':  ToDo: Fix me!
+                %    .sRepeatEnd
                     >
             ]
         }
@@ -468,7 +481,7 @@ Expression :
         [
             | '=':
                 @SimpleExpression  .sEq
-            | '<>':
+            | '!=':
                 @SimpleExpression  .sNE
             | '<':
                 @SimpleExpression  .sLT
@@ -476,7 +489,7 @@ Expression :
                 @SimpleExpression  .sLE
             | '>':
                 @SimpleExpression  .sGT
-            | '>=':
+            | pEqualGreater:
                 @SimpleExpression  .sGE
             | *:
         ];
@@ -495,7 +508,7 @@ SimpleExpression :
                 @Term  .sAdd
             | '-':
                 @Term  .sSubtract
-            | 'or':
+            | '||':
                 .sInfixOr  @Term  .sOr
             | *:
                 >
@@ -506,11 +519,11 @@ Term :
         {[
             | '*':
                 @Factor  .sMultiply
-            | 'div':
+            | '/':
                 @Factor  .sDivide
-            | 'mod':
+            | '%':
                 @Factor  .sModulus
-            | 'and':
+            | '&&':
                 .sInfixAnd  @Factor  .sAnd
             | *:
                 >
@@ -525,7 +538,7 @@ Factor :
                 .sInteger
             | '(':
                 @Expression  ')'
-            | 'not':
+            | '!':
                 @Factor
                 .sNot
             | pStringLiteral:

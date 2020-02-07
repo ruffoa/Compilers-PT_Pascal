@@ -1,0 +1,82 @@
+name: Parser CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: install 32bit libs
+      run: sudo apt-get install gcc-multilib lib32z1-dev
+    
+    - name: setup files
+      run: |
+        mkdir ~/binaries
+        cp -r ../binaries/. ~/binaries
+
+        chmod +x ~/binaries/ptc
+        chmod +x ~/binaries/ssl
+        chmod +x ~/binaries/ssltrace
+        
+        mkdir -p /opt/caslab/lib/
+        # cp -r lib/pt/. /opt/caslab/lib/pt/
+        # cp -r ../base-files/ssl/. /opt/caslab/lib/ssl/
+        cp -r ../base-files/. /opt/caslab/lib/
+
+        chmod -R 755 /opt/caslab/lib/
+
+        export PATH=$PATH:~/binaries
+      working-directory: ./pt
+
+    - name: make parser
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make
+        ssl parser.ssl
+      working-directory: ./pt/parser
+    
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Build and export the Test Suite Results
+      run: |
+        export PATH=$PATH:~/binaries
+
+        cd parser
+        make
+        make
+
+        cd ../../scripts
+        
+        npm install
+        npm install @actions/core
+
+        node ./get-test-output.js Parser
+
+      working-directory: ./pt
+    
+    - name: Commit new test results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add TestSuite/\*-output.md
+        git add CordyTests/combinedOutput.txt
+        git status
+        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
+      
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@v0.5.0
+      with: 
+        branch: ${{ steps.extract_branch.outputs.branch }}
+        github_token: ${{ secrets.GITHUB_TOKEN	}}
