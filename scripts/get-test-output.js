@@ -47,7 +47,7 @@ async function findAllFilesInDir(dir) {
 async function runFile(file, dir) {
     try {
         console.log('RUnning: ', `ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`, ' In dir ', __dirname)
-        const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`);
+        const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/parser.def -e`);
         // const output = await exec(`echo "HELOO"`);
         // console.log(output.stdout, output.stderr || output.stdout);
 
@@ -105,13 +105,13 @@ function compareResults(content, file, dir) {
             console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
             // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-            output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...`;
+            output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...\n`;
             // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
 
             // return output;
         }
 
-        output += "File diff\n-------------------------" + '\n```diff';
+        output += "File diff\n-------------------------" + '\n```diff\n';
 
         const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
 
