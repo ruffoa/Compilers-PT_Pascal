@@ -44,60 +44,9 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: check parser ssl definitions
-      run: |
-        export PATH=$PATH:~/binaries
-
-        cd parser
-        make
-        ssl parser.ssl
-        cd ../../scripts
-        node update-ssl-defs.js
-        cp ../pt/parser/parser.def ../pt/lib/pt/parser.def
-      working-directory: ./pt
-
-    - name: Commit new parser ssl definitions
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add pt/parser
-        git add pt/lib/pt
-
-        git status
-        git commit -m "Update parser SSL definitions and update /lib to match" || echo "Test outputs are up to date" 
-      
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
-
-    - name: Push Changes
-      uses: ad-m/github-push-action@v0.5.0
-      with: 
-        branch: ${{ steps.extract_branch.outputs.branch }}
-        github_token: ${{ secrets.GITHUB_TOKEN	}}
-
-    - name: Run Cordy's Tests
-      run: |
-        git pull
-        export PATH=$PATH:~/binaries
-
-        cd parser
-        make
-        make
-
-        cd ../../scripts
-        
-        npm install
-        npm install @actions/core
-
-        rm -f ../CordyTests/combinedOutput.txt
-        node ./run-cordys-tests.js
-      working-directory: ./pt
-
     - name: Build and export the Test Suite Results
       run: |
-        export PATH=$PATH:~/binaries
+        git         export PATH=$PATH:~/binaries
 
         cd parser
         make
@@ -108,11 +57,8 @@ jobs:
         npm install
         npm install @actions/core
 
-        node ./get-test-output.js
+        node ./get-test-output.js Parser
 
-        ls -l -R ../TestSuite/Scanner
-
-        cd ../TestSuite/Scanner/
         cat */*.txt
       working-directory: ./pt
     
@@ -120,7 +66,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add TestSuite/\*-output.txt
+        git add TestSuite/\*-output.md
         git add CordyTests/combinedOutput.txt
         git status
         git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 

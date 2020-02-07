@@ -262,12 +262,12 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                [
+                %[
                     %| '..':
                     %    .sRange         %% this may be unnecessary
                     %    @OptionallySignedIntegerConstant
-                    | *:
-                ]
+                %    | *:
+                %]
             | *:
                 @OptionallySignedIntegerConstant
                 % '..'  .sRange
@@ -470,7 +470,7 @@ RepeatStmt :
                 | ';':
                 %| 'until':  ToDo: Fix me!
                 %    .sRepeatEnd
-                %    >
+                    >
             ]
         }
         @Expression
@@ -489,7 +489,7 @@ Expression :
                 @SimpleExpression  .sLE
             | '>':
                 @SimpleExpression  .sGT
-            | '.pEqualGreater:
+            | .pEqualGreater:
                 @SimpleExpression  .sGE
             | *:
         ];
