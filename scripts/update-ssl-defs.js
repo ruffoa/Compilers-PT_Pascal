@@ -43,7 +43,7 @@ function writeOutput(content) {
         return;
     }
 
-    fs.writeFileSync(`${folderPath}/parser.def`, content);
+    fs.writeFileSync(`${folderPath}/parser.pt`, content);
 }
 
 readSslDefsFile();
