@@ -59,7 +59,7 @@ Input :
         pSemicolon              ';'
         pColon                  ':'
         pEquals                 '='
-        pNotEqual               '<>'
+        pNotEqual               '!='
         pLess                   '<'
         pLessEqual              '<='
         pGreater                '>'
@@ -151,7 +151,7 @@ Output :
 rules
 
 Program :
-        'program'  .sProgram
+        'mod' 'main' .sProgram
         % program name
         pIdentifier
         % program parameters
@@ -166,7 +166,7 @@ Program :
         }
         ')'
         .sParmEnd
-        ';'  @Block  '.';
+        ';'  @Block;
 
 Block :
         % Strictly speaking, standard Pascal requires that declarations
@@ -180,10 +180,10 @@ Block :
             | 'type':
                 .sType
                 @TypeDefinitions
-            | 'var':
+            | 'let':
                 .sVar
                 @VariableDeclarations
-            | 'procedure':
+            | 'mod':
                 .sProcedure
                 % procedure name
                 pIdentifier  .sIdentifier
@@ -192,7 +192,8 @@ Block :
             | *:
                 >
         ]}
-        'begin'
+        % 'begin'
+        '{'
         @BeginStmt;
 
 ConstantDefinitions :
@@ -244,10 +245,10 @@ TypeDefinitions :
 
 TypeBody :
         [
-            | 'array':
-                .sArray
-                '['  @SimpleType  ']'
-                'of'  @SimpleType
+            %| 'array':
+            %    .sArray
+            %    '['  @SimpleType  ']'
+            %    'of'  @SimpleType
             | 'file':
                 .sFile
                 'of'  @SimpleType
@@ -262,14 +263,14 @@ SimpleType :
             | pIdentifier:
                 .sIdentifier
                 [
-                    | '..':
-                        .sRange         %% this may be unnecessary
-                        @OptionallySignedIntegerConstant
+                    %| '..':
+                    %    .sRange         %% this may be unnecessary
+                    %    @OptionallySignedIntegerConstant
                     | *:
                 ]
             | *:
                 @OptionallySignedIntegerConstant
-                '..'  .sRange
+                % '..'  .sRange
                 @OptionallySignedIntegerConstant
         ];
 
@@ -302,8 +303,9 @@ ProcedureHeading :
             | '(':
                 {
                     % formal parameter identifier
+                    % ToDo: Get consts working!
                     [
-                        | 'var':
+                        | 'let':
                             pIdentifier  .sIdentifier
                             .sVar
                         | *:
@@ -328,15 +330,15 @@ Statement :
         [
             | pIdentifier:
                 @AssignmentOrCallStmt
-            | 'begin':
+            | '{':
                 @BeginStmt
             | 'if':
                 @IfStmt
             | 'while':
                 @WhileStmt
-            | 'case':
+            | 'match':
                 @CaseStmt
-            | 'repeat':
+            | 'loop':
                 @RepeatStmt
             | *:
                 .sNullStmt
@@ -344,7 +346,7 @@ Statement :
 
 AssignmentOrCallStmt :
         [
-            | ':=':
+            | '=':
                 .sAssignmentStmt
                 .sIdentifier    % identifier accepted in the Statement rule
                 @Expression
@@ -355,7 +357,7 @@ AssignmentOrCallStmt :
                 .sSubscript
                 @Expression
                 .sExpnEnd
-                ']'  ':='
+                ']'  '='
                 @Expression
                 .sExpnEnd
             | *:
@@ -397,7 +399,7 @@ BeginStmt :
             @Statement
             [
                 | ';':
-                | 'end':
+                | '}':
                     .sEnd
                     >
             ]
@@ -407,7 +409,7 @@ IfStmt :
         .sIfStmt
         @Expression
         .sExpnEnd
-        'then'  .sThen
+        .sThen
         @Statement
         [
             | 'else':
@@ -428,12 +430,12 @@ CaseStmt :
                 % for the common situation of an extra semicolon
                 % at the end of the list of case alternatives.
                 [
-                    | 'end':
+                    | '}':
                         >
                     | *:
                         @CaseAlternative
                 ]
-            | 'end':
+            | '}':
                 >
         ]}
         .sCaseEnd;
@@ -457,18 +459,18 @@ WhileStmt :
         .sWhileStmt
         @Expression
         .sExpnEnd
-        'do'
+        % 'do' ToDo: FIX ME!
         @Statement;
 
 RepeatStmt :
-        .sRepeatStmt
+        .sLoopStmt
         {
             @Statement
             [
                 | ';':
-                | 'until':
-                    .sRepeatEnd
-                    >
+                %| 'until':  ToDo: Fix me!
+                %    .sRepeatEnd
+                %    >
             ]
         }
         @Expression
@@ -479,7 +481,7 @@ Expression :
         [
             | '=':
                 @SimpleExpression  .sEq
-            | '<>':
+            | '!=':
                 @SimpleExpression  .sNE
             | '<':
                 @SimpleExpression  .sLT
@@ -487,7 +489,7 @@ Expression :
                 @SimpleExpression  .sLE
             | '>':
                 @SimpleExpression  .sGT
-            | '>=':
+            | '.pEqualGreater:
                 @SimpleExpression  .sGE
             | *:
         ];
@@ -506,7 +508,7 @@ SimpleExpression :
                 @Term  .sAdd
             | '-':
                 @Term  .sSubtract
-            | 'or':
+            | '||':
                 .sInfixOr  @Term  .sOr
             | *:
                 >
@@ -517,11 +519,11 @@ Term :
         {[
             | '*':
                 @Factor  .sMultiply
-            | 'div':
+            | '/':
                 @Factor  .sDivide
-            | 'mod':
+            | '%':
                 @Factor  .sModulus
-            | 'and':
+            | '&&':
                 .sInfixAnd  @Factor  .sAnd
             | *:
                 >
@@ -536,7 +538,7 @@ Factor :
                 .sInteger
             | '(':
                 @Expression  ')'
-            | 'not':
+            | '!':
                 @Factor
                 .sNot
             | pStringLiteral:
