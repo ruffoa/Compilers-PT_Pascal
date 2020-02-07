@@ -19,7 +19,10 @@ function readSslDefsFile() {
         const parserPt = fs.readFileSync(`${folderPath}/parser.pt`, 'utf-8');
 
         const parserSegment = parserPt.indexOf(startStringEnd);
-        const res = parserSegment.replace(`/${startStringEnd}*?${endString}/g`, '\n' + sslDefs + '\n');
+
+        const regex = new RegExp(`/${startStringEnd}*?${endString}/`);
+
+        const res = parserPt.replace(regex, '\n' + sslDefs + '\n');
         
         writeOutput(res);
     } catch (e) {
