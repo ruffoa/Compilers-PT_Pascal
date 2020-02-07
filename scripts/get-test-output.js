@@ -29,8 +29,9 @@ async function loopTestDirectories() {
 }
 
 async function findAllFilesInDir(dir) {
-    fs.readdirSync(folderPath + dir).forEach(async file => {
+    const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);   // not really needed, but good to make sure!
 
+    for (const file of dirs) {
         if (file.endsWith('.pt')) {
             core.startGroup(`${dir} - ${file}`);
 
@@ -41,7 +42,7 @@ async function findAllFilesInDir(dir) {
 
             core.endGroup();
         }
-    });
+    }
 }
 
 async function runFile(file, dir) {
