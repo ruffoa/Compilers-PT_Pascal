@@ -32,10 +32,14 @@ async function findAllFilesInDir(dir) {
     fs.readdirSync(folderPath + dir).forEach(async file => {
 
         if (file.endsWith('.pt')) {
+            core.startGroup(`${dir} - ${file}`);
+
             console.log(file);
             const res = await runFile(file, dir);
             const fileDiff = compareResults(res, file, dir);
             writeResults(fileDiff, file, dir);
+
+            core.endGroup();
         }
     });
 }
@@ -44,7 +48,7 @@ async function runFile(file, dir) {
     try {
         const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`);
         // const output = await exec(`echo "HELOO"`);
-        console.log(output.stdout, output.stderr || output.stdout);
+        // console.log(output.stdout, output.stderr || output.stdout);
 
         let isRealError = true;
 
@@ -55,7 +59,7 @@ async function runFile(file, dir) {
                 console.error("ERROR IN FILE " + file + ": ", output.stderr);
             }
         }
-
+        console.log('IS REAL ERROR? ' + isRealError + " Error: " + output.stderr && output.stderr);
         return output.stderr && isRealError || output.stdout;
 
     } catch (e) {
@@ -70,8 +74,6 @@ function compareResults(content, file, dir) {
     console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
     output += "\n";
     
-    core.startGroup(`${dir} - ${file}`);
-
     if (content)
         output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
 
@@ -129,8 +131,6 @@ function compareResults(content, file, dir) {
 
     output += "end file\n";
     output += '\n```';
-
-    core.endGroup()
 
     return output;
 }

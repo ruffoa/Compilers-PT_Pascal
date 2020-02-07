@@ -59,7 +59,6 @@ jobs:
 
         node ./get-test-output.js Parser
 
-        cat */*.txt
       working-directory: ./pt
     
     - name: Commit new test results
