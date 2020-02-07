@@ -1,4 +1,4 @@
-name: Scanner CI
+name: Parser CI
 
 on: [push]
 
