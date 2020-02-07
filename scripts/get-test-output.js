@@ -100,15 +100,17 @@ function compareResults(content, file, dir) {
             console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
             core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-            output += `Expected output length does not match!  Something went wrong in \`${file}\`\n`;
+            output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...`;
             // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
 
-            return output;
+            // return output;
         }
 
         output += "File diff\n-------------------------" + '\n```diff';
 
-        for (var i = 0; i < expectedOutput.length; i++) {
+        const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
+
+        for (var i = 0; i < smallerOutput.length; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
             if (testOutput[i] !== expectedOutput[i]) {
