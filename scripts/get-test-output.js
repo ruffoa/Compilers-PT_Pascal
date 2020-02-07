@@ -46,7 +46,6 @@ async function findAllFilesInDir(dir) {
 
 async function runFile(file, dir) {
     try {
-        console.log('RUnning: ', `ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/scan.def -e`, ' In dir ', __dirname)
         const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/parser.def -e`);
         // const output = await exec(`echo "HELOO"`);
         // console.log(output.stdout, output.stderr || output.stdout);
@@ -60,7 +59,6 @@ async function runFile(file, dir) {
                 console.error("ERROR IN FILE " + file + ": ", output.stderr);
             }
         }
-        console.log('IS REAL ERROR? ' + isRealError + " Error: " + output.stderr && output.stderr);
         return output.stderr && isRealError || output.stdout;
 
     } catch (e) {
@@ -97,12 +95,12 @@ function compareResults(content, file, dir) {
             return output;
         }
 
-        let expectedOutput = expectedResultFile.split('\n');
+        let expectedOutput = expectedResultFile.trim().split('\n');
         if (expectedOutput[0].indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
             expectedOutput.splice(0, 1);
         }
 
-        const testOutput = content.split('\n');
+        const testOutput = content.trim().split('\n');
 
         if (expectedOutput.length !== testOutput.length) {
             console.error("Lengths do not match!  Something went wrong in ", file);
@@ -135,7 +133,7 @@ function compareResults(content, file, dir) {
     }
 
     output += '\n```';
-    output += "end file\n";
+    output += "\nend file\n";
 
     return output;
 }
