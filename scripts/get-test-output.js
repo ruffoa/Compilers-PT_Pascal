@@ -97,7 +97,11 @@ function compareResults(content, file, dir) {
             return output;
         }
 
-        const expectedOutput = expectedResultFile.split('\n');
+        let expectedOutput = expectedResultFile.split('\n');
+        if (expectedOutput[0].indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
+            expectedOutput.splice(0, 1);
+        }
+
         const testOutput = content.split('\n');
 
         if (expectedOutput.length !== testOutput.length) {
@@ -111,11 +115,11 @@ function compareResults(content, file, dir) {
             // return output;
         }
 
-        output += "File diff\n-------------------------" + '\n```diff\n';
+        output += "\nFile diff\n-------------------------" + '\n```diff\n';
 
         const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
 
-        for (var i = 0; i < smallerOutput.length; i++) {
+        for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
             if (testOutput[i] !== expectedOutput[i]) {
@@ -130,8 +134,8 @@ function compareResults(content, file, dir) {
         output += "```diff\nReading file " + file + "\n";
     }
 
-    output += "end file\n";
     output += '\n```';
+    output += "end file\n";
 
     return output;
 }
