@@ -16,13 +16,8 @@ Test output is:
 
 ```
 ------------------------
-Expected output length does not match!  Something went wrong in `and.pt`
-Showing as much of the diff as possible...
-
-File diff
--------------------------
 ```diff
-- .sParmEnd !== .sEnd on line 2 of and.pt
+Reading file and.pt
 
 ```
 end file
