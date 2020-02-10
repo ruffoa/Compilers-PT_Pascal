@@ -23,8 +23,7 @@ const nLineTokenNumber = getNewLineNumber();
 function getNewLineNumber() {
     const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
     const newLineTokenDefinition = "sNewLine = ";
-    let newLineToken = parserDefs.substr(newLineTokenDefinition + newLineTokenDefinition.length).trim();
-    newLineToken.substr(0, newLineToken.indexOf('\n'));
+    let newLineToken = parserDefs.substr(parserDefs.indexOf(newLineTokenDefinition) + newLineTokenDefinition.length).trim().split('\n')[0];
     const nLineNumber = newLineToken.match(/(\d+)/)[0]; 
     console.log(`NEW LINE Number is: '${nLineNumber}', ${newLineToken.match(/(\d+)/)}`);
     return nLineNumber;
