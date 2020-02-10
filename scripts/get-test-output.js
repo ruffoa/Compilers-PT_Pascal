@@ -18,6 +18,18 @@ const getSegment = {
     'Parser': '-o2 -t2'
 };
 
+const nLineTokenNumber = getNewLineNumber();
+
+function getNewLineNumber() {
+    const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
+    const newLineTokenDefinition = "sNewLine = ";
+    let newLineToken = parserDefs.substr(newLineTokenDefinition + newLineTokenDefinition.length).trim();
+    newLineToken.substr(0, newLineToken.indexOf('\n'));
+    const nLineNumber = newLineToken.match(/(\d+)/).trim(); 
+    console.log(`NEW LINE Number is: '${nLineNumber}'`);
+    return nLineNumber;
+}
+
 async function loopTestDirectories() {
     const getDirectories = fs.readdirSync(folderPath, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
@@ -76,8 +88,12 @@ function compareResults(content, file, dir) {
     console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
     output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
     
-    if (content)
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
+    if (content) {
+        var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        var regex = new RegExp(findReplaceKey, 'g');
+
+        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+    }
 
     try {
         const expectedResultFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}-e.txt`, 'utf-8');
@@ -103,7 +119,14 @@ function compareResults(content, file, dir) {
             expectedOutput.splice(0, 1);
         }
 
-        const testOutput = content.trim().split('\n');
+        let testOutput = content.trim().split('\n');
+        testOutput = testOutput.map((line) => {
+            if (line.trim().contains(`% value emitted ${nLineTokenNumber}`)) {
+                line = "% .sNewLine";
+            }
+
+            return line;
+        });
 
         if (expectedOutput.length !== testOutput.length) {
             console.error("Lengths do not match!  Something went wrong in ", file);
@@ -119,15 +142,22 @@ function compareResults(content, file, dir) {
         output += "\nFile diff\n-------------------------" + '\n```diff\n';
 
         const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
+        let testInputLinesSkip = 0;
 
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
-            if (testOutput[i].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable
-                console.error(`${testOutput[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
+            if (testOutput[i + testInputLinesSkip].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
+
+                if (testOutput[i].trim().contains(`% .sNewLine`)) {
+                    testInputLinesSkip++;
+                    i--;
+                } else {
+                console.error(`${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
                 // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
                     
-                output += `-${testOutput[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}\n`;
+                output += `-${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}\n`;
+                }
             }
         }
     } catch (e) {
