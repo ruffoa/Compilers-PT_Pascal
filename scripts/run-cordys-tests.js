@@ -6,8 +6,18 @@ var path = require('path');
 
 const core = require('@actions/core');
 
-const segment = "t1";
+const segment = (args && args[0]) || "Scanner";
 const folderPath = path.join(__dirname, `../CordyTests`);
+
+const phaseMap = {
+    'Scanner': '1',
+    'Parser': '2'
+};
+
+const defMap = {
+    'Scanner': 'scan',
+    'Parser': 'parser'
+};
 
 const outputMap = {
     '.pForwardSlash': '.pSlash',
@@ -16,8 +26,11 @@ const outputMap = {
     '.pEqualGreater': '.pGreaterEqual'
 };
 
+const phaseNum = phaseMap[segment];
+const defName = defMap[segment];
+
 // let fileOutput = "";
-const stream = fs.createWriteStream(folderPath + "/combinedOutput.txt", {flags:'a'});
+const stream = fs.createWriteStream(folderPath + `/${segment}Output.txt`, {flags:'a'});
 
 async function findAllFilesInDir() {
     const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);   // not really needed, but good to make sure!
@@ -35,7 +48,7 @@ async function findAllFilesInDir() {
 async function runFile(file) {
     try {
         console.log("Starting to run " + file)
-        const output = await exec(`ssltrace "ptc -o1 -t1 -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/scan.def -e`);
+        const output = await exec(`ssltrace "ptc -o${phaseNum} -t${phaseNum} -L ../pt/lib/pt ${folderPath}/${file}" ../pt/lib/pt/${defName}.def -e`);
         // const output = await exec(`echo "HELOO"`);
         // console.log(output.stdout, output.stderr || output.stdout);
         console.log("Got res for " + file)
@@ -64,7 +77,7 @@ function compareResults(content, file) {
     console.log(`\n--------------------------------\nReading file ${file}`);
     stream.write(`\n--------------------------------\nReading file ${file}\n`);
 
-    const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-${segment}-e`, 'utf-8');
+    const results = fs.readFileSync(`${folderPath}/${file}.ssltrace-t${phaseNum}-e`, 'utf-8');
     // console.log(results, content)
 
     if (!results || !content) {
