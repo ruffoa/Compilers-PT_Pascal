@@ -84,7 +84,7 @@ jobs:
         git add TestSuite/\*-output.md
         git add CordyTests/combinedOutput.txt
         git status
-        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash

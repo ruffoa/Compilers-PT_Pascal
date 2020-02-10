@@ -189,6 +189,18 @@ Block :
                 pIdentifier  .sIdentifier
                 @ProcedureHeading
                 @Block  ';'
+            | pIdentifier:
+                @AssignmentOrCallStmt
+            | '{':
+                @BeginStmt
+            | 'if':
+                @IfStmt
+            | 'while':
+                @WhileStmt
+            | 'match':
+                @CaseStmt
+            | 'loop':
+                @RepeatStmt
             | *:
                 >
         ]}

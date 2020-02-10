@@ -115,12 +115,13 @@ jobs:
     
     - name: Commit new test results
       run: |
+        git pull
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.txt
         git add CordyTests/combinedOutput.txt
         git status
-        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update Scanner test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash
