@@ -6,6 +6,8 @@ var path = require('path');
 
 const core = require('@actions/core');
 
+const args = (process.argv && process.argv.length >= 2 && process.argv.slice(2)) || [];
+
 const segment = (args && args[0]) || "Scanner";
 const folderPath = path.join(__dirname, `../CordyTests`);
 
