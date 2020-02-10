@@ -25,7 +25,7 @@ function getNewLineNumber() {
     const newLineTokenDefinition = "sNewLine = ";
     let newLineToken = parserDefs.substr(newLineTokenDefinition + newLineTokenDefinition.length).trim();
     newLineToken.substr(0, newLineToken.indexOf('\n'));
-    const nLineNumber = newLineToken.match(/(\d+)/).trim(); 
+    const nLineNumber = newLineToken.match(/(\d+)/)[0]; 
     console.log(`NEW LINE Number is: '${nLineNumber}'`);
     return nLineNumber;
 }
