@@ -20,17 +20,17 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % .sNewLine
   .sBegin
   .sVar
    .sIdentifier
      .sIdentifier
-   % value emitted 55
+   % .sNewLine
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
-   % value emitted 55
+   % .sNewLine
+   % .sNewLine
    .sIfStmt
            .sIdentifier
    .sExpnEnd
