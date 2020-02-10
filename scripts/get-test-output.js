@@ -121,11 +121,11 @@ function compareResults(content, file, dir) {
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
-            if (testOutput[i] !== expectedOutput[i]) {
-                console.error(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+            if (testOutput[i] !== expectedOutput[i].split('//')[0]) {   // ignore any comments, if applicable
+                console.error(`${testOutput[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
                 // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
                     
-                output += `-${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`;
+                output += `-${testOutput[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}\n`;
             }
         }
     } catch (e) {
