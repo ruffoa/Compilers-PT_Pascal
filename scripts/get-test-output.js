@@ -71,8 +71,10 @@ async function runFile(file, dir) {
 function compareResults(content, file, dir) {
     let output = "";
 
+    const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
+
     console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
-    output += "\n";
+    output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
     
     if (content)
         output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
