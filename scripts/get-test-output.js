@@ -59,9 +59,9 @@ async function findAllFilesInDir(dir) {
 async function runFile(file, dir) {
     try {
         const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/parser.def -e`);
-        // const output = await exec(`echo "HELOO"`);
+        // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
-
+        
         let isRealError = true;
 
         if (output.stderr) {
@@ -119,12 +119,13 @@ function compareResults(content, file, dir) {
         }
 
         let testOutput = content.trim().split('\n');
-        testOutput = testOutput.map((line) => {
-            if (line.trim().contains(`% value emitted ${nLineTokenNumber}`)) {
-                line = "% .sNewLine";
+        testOutput = testOutput.map((tLine) => {
+            // console.log(tLine, " -> ", typeof tLine)
+            if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
+                tLine = "% .sNewLine";
             }
 
-            return line;
+            return tLine;
         });
 
         if (expectedOutput.length !== testOutput.length) {
@@ -146,25 +147,32 @@ function compareResults(content, file, dir) {
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
+            if ((i + testInputLinesSkip) >= testOutput.length || i >= expectedOutput.length) {
+                output += '\n```';
+                return output;
+            }
+
             if (testOutput[i + testInputLinesSkip].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
 
-                if (testOutput[i].trim().contains(`% .sNewLine`)) {
+                if (testOutput[i + testInputLinesSkip].indexOf(`% .sNewLine`) >= 0) {
                     testInputLinesSkip++;
                     i--;
                 } else {
-                console.error(`${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
-                // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-                    
-                output += `-${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}\n`;
+                    console.error(`${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
+                    // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+                        
+                    output += `-${testOutput[i + testInputLinesSkip].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
                 }
             }
         }
+
+        output += '\n```';
+
     } catch (e) {
-        console.log(`No expected result file found (it must be called ${file}-e.txt)`);
-        output += "```diff\nReading file " + file + "\n";
+        console.log(`No expected result file found (it must be called '${file}-e.txt')`);
+        console.log(e)
     }
 
-    output += '\n```';
     output += "\nend file\n";
 
     return output;

@@ -20,17 +20,17 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % .sNewLine
   .sBegin
   .sVar
    .sIdentifier
      .sIdentifier
-   % value emitted 55
+   % .sNewLine
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
-   % value emitted 55
+   % .sNewLine
+   % .sNewLine
    .sIfStmt
            .sIdentifier
    .sExpnEnd
@@ -40,8 +40,16 @@ Test output is:
 
 ```
 ------------------------
+Expected output length does not match!  Something went wrong in `basic-block-program.pt`
+Showing as much of the diff as possible...
+
+File diff
+-------------------------
 ```diff
-Reading file basic-block-program.pt
+-.sInteger !== .sInteger 1 on line 9 of basic-block-program.pt
+-.sExpnEnd !== .sInteger 0 on line 12 of basic-block-program.pt
+-.sThen !== .sEq on line 13 of basic-block-program.pt
+-.sNullStmt !== .sExpnEnd on line 14 of basic-block-program.pt
+-.sEnd !== .sThen on line 15 of basic-block-program.pt
 
 ```
-end file

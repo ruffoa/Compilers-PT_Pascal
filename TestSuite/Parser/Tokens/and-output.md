@@ -5,19 +5,6 @@ Test Content:
 1 && 1
 ```
 ------------------------
-Test output is: 
--------------------------
-```
- .sProgram
- .sIdentifier
- .sParmEnd
-  .sBegin
-  .sEnd
+Error, could not read the local test ouput (results from and.pt)
 
 ```
-------------------------
-```diff
-Reading file and.pt
-
-```
-end file
