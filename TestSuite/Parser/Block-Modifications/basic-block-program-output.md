@@ -15,6 +15,11 @@ Test output is:
     .sInteger
    % value emitted 55
    % value emitted 55
+   .sIfStmt
+           .sIdentifier
+   .sExpnEnd
+   .sThen
+    .sNullStmt
    .sBegin
     .sNullStmt
    % value emitted 55
@@ -38,13 +43,15 @@ File diff
 -    .sInteger !== .sIfStmt on line 10 of basic-block-program.pt
 -   % value emitted 55 !== .sIdentifier  on line 11 of basic-block-program.pt
 -   % value emitted 55 !== .sInteger 0   on line 12 of basic-block-program.pt
--   .sBegin !== .sEq on line 13 of basic-block-program.pt
--    .sNullStmt !== .sExpnEnd on line 14 of basic-block-program.pt
--   % value emitted 55 !== .sThen on line 15 of basic-block-program.pt
--    .sNullStmt !== .sBegin on line 16 of basic-block-program.pt
--   % value emitted 55 !== .sEnd on line 17 of basic-block-program.pt
--   % value emitted 55 !== .sType on line 18 of basic-block-program.pt
--   .sEnd !== .sIdentifier  on line 19 of basic-block-program.pt
+-   .sIfStmt !== .sEq on line 13 of basic-block-program.pt
+-           .sIdentifier !== .sExpnEnd on line 14 of basic-block-program.pt
+-   .sExpnEnd !== .sThen on line 15 of basic-block-program.pt
+-   .sThen !== .sBegin on line 16 of basic-block-program.pt
+-    .sNullStmt !== .sEnd on line 17 of basic-block-program.pt
+-   .sBegin !== .sType on line 18 of basic-block-program.pt
+-    .sNullStmt !== .sIdentifier  on line 19 of basic-block-program.pt
+-   % value emitted 55 !== .sIdentifier  on line 20 of basic-block-program.pt
+-    .sNullStmt !== .sEnd on line 21 of basic-block-program.pt
 
 ```
 end file
