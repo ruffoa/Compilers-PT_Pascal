@@ -44,22 +44,6 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Run Cordy's Tests
-      run: |
-        export PATH=$PATH:~/binaries
-
-        make scanner
-        make scanner
-
-        cd ../scripts
-        
-        npm install
-        npm install @actions/core
-
-        rm -f ../CordyTests/parserOutput.txt
-        node ./run-cordys-tests.js Parser
-      working-directory: ./pt
-
     - name: Build and export the Test Suite Results
       run: |
         export PATH=$PATH:~/binaries
@@ -75,6 +59,22 @@ jobs:
 
         node ./get-test-output.js Parser
 
+      working-directory: ./pt
+
+    - name: Run Cordy's Tests
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make scanner
+        make scanner
+
+        cd ../scripts
+        
+        npm install
+        npm install @actions/core
+
+        rm -f ../CordyTests/parserOutput.txt
+        node ./run-cordys-tests.js Parser
       working-directory: ./pt
     
     - name: Commit new test results
