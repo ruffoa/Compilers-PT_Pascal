@@ -12,7 +12,6 @@ Test output is:
 File diff
 -------------------------
 ```diff
-- .sIdentifier !== .sIdentifier on line 1 of and.pt
 - .sParmEnd !== .sEnd on line 2 of and.pt
 
 ```
