@@ -94,6 +94,7 @@ function getTestIssues(content, file, dir) {
 
     } catch (e) {
         console.log(e)
+        core.setFailed("Something broke, aborting" + e.message);
     }
 
     return output;

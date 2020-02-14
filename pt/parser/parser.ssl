@@ -153,7 +153,7 @@ rules
 Program :
         'mod' 'main' .sProgram
         % program name
-        pIdentifier
+        % pIdentifier
         % program parameters
         '('
         {
