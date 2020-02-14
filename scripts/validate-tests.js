@@ -37,7 +37,7 @@ async function findAllFilesInDir(dir) {
 
             console.log(file);
             const res = await runFile(file, dir);
-            const fileDiff = compareResults(res, file, dir);
+            const fileDiff = getTestIssues(res, file);
             writeResults(fileDiff, file, dir);
 
             core.endGroup();
@@ -49,7 +49,7 @@ async function runFile(file, dir) {
     try {
         const output = await exec(`ptc ${getSegment[segment].split(' ')[0]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}`);
         // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
-        console.log(output.stdout, output.stderr || output.stdout);
+        // console.log(output.stdout, output.stderr || output.stdout);
         
         let isRealError = true;
 
@@ -68,98 +68,39 @@ async function runFile(file, dir) {
     }
 }
 
-function compareResults(content, file, dir) {
+function getTestIssues(content, file) {
     let output = "";
 
-    const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
-
-    console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
-    output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
-    
-    if (content) {
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
-    }
-
     try {
-        const expectedResultFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}-e.txt`, 'utf-8');
-        // console.log(results, content)
+        if (!content) {
+            let eFile = `the ptc command seems to have failed for ${file} :(`;
 
-        if (!expectedResultFile || !content) {
-            let eFile = `the local test ouput (results from ${file})`;
-
-            if (!expectedResultFile) {
-                eFile = "Expected results"
-            }
-
-            console.log("No ", eFile);
+            console.log(eFile);
             // core.setFailed("Error, could not read " + eFile);
-            output += "Error, could not read " + eFile + '\n';
+            output += "Error, " + eFile + '\n';
             output += '\n```';
 
             return output;
         }
 
-        let expectedOutput = expectedResultFile.trim().split('\n');
-        if (expectedOutput[0].indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
-            expectedOutput.splice(0, 1);
-        }
-
-        const testOutput = content.trim().split('\n');
+        // let expectedOutput = expectedResultFile.trim().split('\n');
+        // if (expectedOutput[0].indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
+        //     expectedOutput.splice(0, 1);
+        // }
         
-        if (expectedOutput.length !== testOutput.length) {
-            console.error("Lengths do not match!  Something went wrong in ", file);
-            console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-            // core.setFailed("Lengths do not match!  Something went wrong in " + file);
-
-            output += `Warning, output length does not match (${testOutput.length} vs ${expectedOutput.length})!  You probably have some newlines in the output... \`${file}\`\nShowing as much of the diff as possible...\n`;
-            // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
-
-            // return output;
-        }
-
-        output += "\nFile diff\n-------------------------" + '\n```diff\n';
-
-        const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
-        let testInputLinesSkip = 0;
-
-        for (var i = 0; i < smallerOutput; i++) {
-            // console.log(expectedOutput[i], testOutput[i]);
-
-            if ((i + testInputLinesSkip) >= testOutput.length || i >= expectedOutput.length) {
-                output += '\n```';
-                return output;
-            }
-
-            if (testOutput[i + testInputLinesSkip].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
-
-                if (testOutput[i + testInputLinesSkip].indexOf(`% .sNewLine`) >= 0) {
-                    testInputLinesSkip++;
-                    i--;
-                } else {
-                    console.error(`${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
-                    // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-                        
-                    output += `-${testOutput[i + testInputLinesSkip].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
-                }
-            }
-        }
-
-        output += '\n```';
+        output += "\nOutput\n-------------------------\n```" + content + '```\n';
 
     } catch (e) {
-        console.log(`No expected result file found (it must be called '${file}-e.txt')`);
         console.log(e)
     }
-
-    output += "\nend file\n";
 
     return output;
 }
 
 function writeResults(content, file, dir) {
-    console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.md` + '\n--------------------------------\n');
+    console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-testErr.md` + '\n--------------------------------\n');
 
-    // fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-output.md`, content);
+    fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-testErr.md`, content);
 }
 
 loopTestDirectories();
