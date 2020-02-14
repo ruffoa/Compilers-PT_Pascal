@@ -129,14 +129,21 @@ function compareResults(content, file, dir) {
         });
 
         if (expectedOutput.length !== testOutput.length) {
-            console.error("Lengths do not match!  Something went wrong in ", file);
-            console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-            // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-            output += `Warning, output length does not match (${testOutput.length} vs ${expectedOutput.length})!  You probably have some newlines in the output... \`${file}\`\nShowing as much of the diff as possible...\n`;
-            // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
+            const testOutputWithoutNewLines = testOutput.filter((l) => (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) < 0));
+            
+            if (expectedOutput === testOutputWithoutNewLines) {
+                output += `Test output matches the expected output! :heavy_check_mark:\n`;
+            } else {
+                console.error("Lengths do not match!  Something went wrong in ", file);
+                console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
+                // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-            // return output;
+                output += `Warning, output length does not match (${testOutput.length} vs ${expectedOutput.length})!  You probably have some newlines in the output... \`${file}\`\nShowing as much of the diff as possible...\n`;
+                // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
+
+                // return output;
+            }
         }
 
         output += "\nFile diff\n-------------------------" + '\n```diff\n';
