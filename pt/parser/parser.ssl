@@ -174,7 +174,7 @@ Block :
         % appear only in the order consts, types, vars, procedures.
         % We allow arbitrary intermixing of these instead to preserve
         % programmer sanity.
-        .sBegin % output a begin at the beginning of a block
+        % .sBegin % output a begin at the beginning of a block
         {[
             | 'const':
                 .sConst
@@ -209,7 +209,7 @@ Block :
         %  'begin'
         % '{'
         % @BeginStmt;
-        .sEnd;  % end the block choice rule with an .sEnd token
+        % .sEnd;  % end the block choice rule with an .sEnd token
 
 ConstantDefinitions :
         % Accept one or more named constant definitions
