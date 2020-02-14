@@ -76,17 +76,21 @@ function getTestIssues(content, file) {
 
     try {
         if (!content) {
-            let eFile = `the ptc command seems to have failed for ${file} :(`;
+            // let eFile = `the ptc command seems to have failed for ${file} :(`;
 
-            console.log(eFile);
-            // core.setFailed("Error, could not read " + eFile);
-            output += "Error, " + eFile + '\n';
-            output += '\n```';
+            // console.log(eFile);
+            console.log("Warning: no output for " + file + " this is probably fine though if the test file has no errors!");
+            // // core.setFailed("Error, could not read " + eFile);
+            // output += "Error, " + eFile + '\n';
+            // output += '\n```';
 
             return output;
         }
+
+        const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
+        output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;   
         
-        output += "\nOutput\n-------------------------\n```" + content + '\n```\n';
+        output += "\nTest Errors:\n-------------------------\n```\n" + content + '```\n';
 
     } catch (e) {
         console.log(e)
