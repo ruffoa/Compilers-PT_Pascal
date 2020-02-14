@@ -38,7 +38,10 @@ async function findAllFilesInDir(dir) {
             console.log(file);
             const res = await runFile(file, dir);
             const fileDiff = getTestIssues(res, file);
-            writeResults(fileDiff, file, dir);
+
+            if (fileDiff) {
+                writeResults(fileDiff, file, dir);
+            }
 
             core.endGroup();
         }
@@ -82,13 +85,8 @@ function getTestIssues(content, file) {
 
             return output;
         }
-
-        // let expectedOutput = expectedResultFile.trim().split('\n');
-        // if (expectedOutput[0].indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
-        //     expectedOutput.splice(0, 1);
-        // }
         
-        output += "\nOutput\n-------------------------\n```" + content + '```\n';
+        output += "\nOutput\n-------------------------\n```" + content + '\n```\n';
 
     } catch (e) {
         console.log(e)
