@@ -7,6 +7,7 @@ mod main (output) {
     const y = 1;
 
     if (y == 0) {
+        let z = 1;
     }
 
     type t = int;
@@ -40,7 +41,7 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (20 vs 22)!  You probably have some newlines in the output... `basic-block-program.pt`
+Warning, output length does not match (20 vs 24)!  You probably have some newlines in the output... `basic-block-program.pt`
 Showing as much of the diff as possible...
 
 File diff
