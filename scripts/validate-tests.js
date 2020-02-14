@@ -37,7 +37,7 @@ async function findAllFilesInDir(dir) {
 
             console.log(file);
             const res = await runFile(file, dir);
-            const fileDiff = getTestIssues(res, file);
+            const fileDiff = getTestIssues(res, file, dir);
 
             if (fileDiff) {
                 writeResults(fileDiff, file, dir);
@@ -71,7 +71,7 @@ async function runFile(file, dir) {
     }
 }
 
-function getTestIssues(content, file) {
+function getTestIssues(content, file, dir) {
     let output = "";
 
     try {
