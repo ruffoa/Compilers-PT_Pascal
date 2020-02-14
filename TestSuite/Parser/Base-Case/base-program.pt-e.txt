@@ -1,6 +1,5 @@
-sProgram
-sIdentifier // <identifier index for 'output'>
-sParmEnd
-sBegin
-DeclarationsAndStatements
-sEnd
+.sProgram
+.sIdentifier // <identifier index for 'output'>
+.sParmEnd
+.sBegin
+.sEnd
