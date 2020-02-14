@@ -130,7 +130,7 @@ function compareResults(content, file, dir) {
 
         if (expectedOutput.length !== testOutput.length) {
 
-            const testOutputWithoutNewLines = testOutput.filter((l) => (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) < 0));
+            const testOutputWithoutNewLines = testOutput.filter((l) => (l.indexOf(`% value emitted ${nLineTokenNumber}`) < 0));
             
             if (expectedOutput === testOutputWithoutNewLines) {
                 output += `Test output matches the expected output! :heavy_check_mark:\n`;
