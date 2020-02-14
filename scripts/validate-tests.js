@@ -41,6 +41,8 @@ async function findAllFilesInDir(dir) {
 
             if (fileDiff) {
                 writeResults(fileDiff, file, dir);
+            } else {
+                deleteErrorFileIfExists(file, dir);
             }
 
             core.endGroup();
@@ -104,6 +106,16 @@ function writeResults(content, file, dir) {
     console.log("Writing to " + `${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-testErr.md` + '\n--------------------------------\n');
 
     fs.writeFileSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-testErr.md`, content);
+}
+
+function deleteErrorFileIfExists(file, dir) {
+    console.log("Deleting " + file + " error logs (if they exist), as the test compiled fine :)");
+
+    try {
+    fs.unlinkSync(`${folderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}-testErr.md`);
+    } catch(e) {
+        
+    }
 }
 
 loopTestDirectories();
