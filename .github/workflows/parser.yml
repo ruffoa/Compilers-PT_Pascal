@@ -44,6 +44,23 @@ jobs:
       with:
         node-version: '12.x'
 
+    - name: Test the Test Suite
+      run: |
+        export PATH=$PATH:~/binaries
+
+        cd parser
+        make
+        make
+
+        cd ../../scripts
+        
+        npm install
+        npm install @actions/core
+
+        node ./validate-tests.js Parser
+
+      working-directory: ./pt
+
     - name: Build and export the Test Suite Results
       run: |
         export PATH=$PATH:~/binaries
