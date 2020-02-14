@@ -18,7 +18,7 @@ Test output is:
 
 ```
 ------------------------
-Expected output length does not match!  Something went wrong in `base-program.pt`
+Warning, output length does not match (6 vs 5)!  You probably have some newlines in the output... `base-program.pt`
 Showing as much of the diff as possible...
 
 File diff

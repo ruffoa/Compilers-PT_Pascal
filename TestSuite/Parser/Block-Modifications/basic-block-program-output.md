@@ -40,7 +40,7 @@ Test output is:
 
 ```
 ------------------------
-Expected output length does not match!  Something went wrong in `basic-block-program.pt`
+Warning, output length does not match (20 vs 22)!  You probably have some newlines in the output... `basic-block-program.pt`
 Showing as much of the diff as possible...
 
 File diff
