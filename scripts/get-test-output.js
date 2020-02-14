@@ -133,7 +133,7 @@ function compareResults(content, file, dir) {
             console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
             // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-            output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...\n`;
+            output += `Warning, output length does not match (${testOutput.length} vs ${expectedOutput.length})!  You probably have some newlines in the output... \`${file}\`\nShowing as much of the diff as possible...\n`;
             // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
 
             // return output;
