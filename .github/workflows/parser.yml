@@ -44,6 +44,23 @@ jobs:
       with:
         node-version: '12.x'
 
+    - name: Test the Test Suite
+      run: |
+        export PATH=$PATH:~/binaries
+
+        cd parser
+        make
+        make
+
+        cd ../../scripts
+        
+        npm install
+        npm install @actions/core
+
+        node ./validate-tests.js Parser
+
+      working-directory: ./pt
+
     - name: Build and export the Test Suite Results
       run: |
         export PATH=$PATH:~/binaries
@@ -82,6 +99,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
+        git add TestSuite/\*-testErr.md
         git add CordyTests/combinedOutput.txt
         git status
         git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
