@@ -2,4 +2,5 @@
 .sIdentifier // <identifier index for 'output'>
 .sParmEnd
 .sBegin
+.sNullStmt  // nothing within braces, so it is a null statement
 .sEnd
