@@ -34,24 +34,42 @@ Test output is:
    % .sNewLine
    .sIfStmt
            .sIdentifier
+           .sInteger
+        .sEq
    .sExpnEnd
    .sThen
-    .sNullStmt
+    % .sNewLine
+     .sBegin
+      .sNullStmt
+      .sNullStmt
+     % .sNewLine
+      .sNullStmt
+     % .sNewLine
+     % .sNewLine
+     .sEnd
+  .sType
+   .sIdentifier
+     .sIdentifier
+   % .sNewLine
+   % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (16 vs 24)!  (Newlines are not the issue here!) `basic-block-program.pt`
+Warning, output length does not match (25 vs 24)!  (Newlines are not the issue here!) `basic-block-program.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
 -.sInteger !== .sInteger 1 on line 9 of basic-block-program.pt
--.sExpnEnd !== .sInteger 0 on line 12 of basic-block-program.pt
--.sThen !== .sEq on line 13 of basic-block-program.pt
--.sNullStmt !== .sExpnEnd on line 14 of basic-block-program.pt
--.sEnd !== .sThen on line 15 of basic-block-program.pt
+-.sInteger !== .sInteger 0 on line 12 of basic-block-program.pt
+-.sNullStmt !== .sIdentifier on line 17 of basic-block-program.pt
+-.sNullStmt !== .sInteger 1 on line 18 of basic-block-program.pt
+-.sNullStmt !== .sEnd on line 19 of basic-block-program.pt
+-.sEnd !== .sType on line 20 of basic-block-program.pt
+-.sType !== .sIdentifier on line 21 of basic-block-program.pt
+-.sIdentifier !== .sEnd on line 23 of basic-block-program.pt
 
 ```
 end file
