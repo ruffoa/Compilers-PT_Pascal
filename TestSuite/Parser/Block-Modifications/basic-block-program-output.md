@@ -51,7 +51,7 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (30 vs 24)!  You probably have some newlines in the output... `basic-block-program.pt`
+Warning, output length does not match (20 vs 24)!  (Newlines are not the issue here!) `basic-block-program.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -75,3 +75,4 @@ File diff
 -.sIdentifier !== .sEnd on line 19 of basic-block-program.pt
 
 ```
+end file
