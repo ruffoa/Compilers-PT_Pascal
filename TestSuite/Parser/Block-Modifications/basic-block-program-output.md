@@ -62,8 +62,6 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.sInteger !== .sInteger 1 on line 9 of basic-block-program.pt
--.sInteger !== .sInteger 0 on line 12 of basic-block-program.pt
 -.sNullStmt !== .sIdentifier on line 17 of basic-block-program.pt
 -.sNullStmt !== .sInteger 1 on line 18 of basic-block-program.pt
 -.sNullStmt !== .sEnd on line 19 of basic-block-program.pt
