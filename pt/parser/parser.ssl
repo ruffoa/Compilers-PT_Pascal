@@ -498,7 +498,7 @@ RepeatStmt :
 Expression :
         @SimpleExpression
         [
-            | '=':
+            | '==':
                 @SimpleExpression  .sEq
             | '!=':
                 @SimpleExpression  .sNE
