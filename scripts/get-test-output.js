@@ -156,7 +156,7 @@ function compareResults(content, file, dir) {
                 return output;
             }
 
-            if (testOutputWithoutNewLines[i].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
+            if (testOutputWithoutNewLines[i].trim() !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()) {   // ignore any comments, if applicable, and remove values (if applicable)
                 console.error(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
                 // core.setFailed(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
                     
