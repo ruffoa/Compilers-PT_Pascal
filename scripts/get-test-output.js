@@ -120,7 +120,6 @@ function compareResults(content, file, dir) {
 
         let testOutput = content.trim().split('\n');
         testOutput = testOutput.map((tLine) => {
-            // console.log(tLine, " -> ", typeof tLine)
             if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
                 tLine = "% .sNewLine";
             }
@@ -128,9 +127,11 @@ function compareResults(content, file, dir) {
             return tLine;
         });
 
-        if (expectedOutput.length !== testOutput.length) {
+        const testOutputWithoutNewLines = testOutput.filter((l) => (l.indexOf(`% .sNewLine`) < 0));
 
-            const testOutputWithoutNewLines = testOutput.filter((l) => (l.indexOf(`% value emitted ${nLineTokenNumber}`) < 0));
+        if (expectedOutput.length !== testOutputWithoutNewLines.length) {
+
+            // console.log(testOutputWithoutNewLines, ' OUTPUT ', expectedOutput);
             
             if (expectedOutput === testOutputWithoutNewLines) {
                 output += `Test output matches the expected output! :heavy_check_mark:\n`;
@@ -139,37 +140,27 @@ function compareResults(content, file, dir) {
                 console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
                 // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
-                output += `Warning, output length does not match (${testOutput.length} vs ${expectedOutput.length})!  You probably have some newlines in the output... \`${file}\`\nShowing as much of the diff as possible...\n`;
-                // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
-
-                // return output;
+                output += `Warning, output length does not match (${testOutputWithoutNewLines.length} vs ${expectedOutput.length})!  (Newlines are not the issue here!) \`${file}\`\nShowing as much of the diff as possible...\n`;
             }
         }
 
         output += "\nFile diff\n-------------------------" + '\n```diff\n';
 
-        const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
-        let testInputLinesSkip = 0;
+        const smallerOutput = testOutputWithoutNewLines.length < expectedOutput.length ? testOutputWithoutNewLines.length : expectedOutput.length;
 
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
-            if ((i + testInputLinesSkip) >= testOutput.length || i >= expectedOutput.length) {
+            if ((i) >= testOutputWithoutNewLines.length || i >= expectedOutput.length) {
                 output += '\n```';
                 return output;
             }
 
-            if (testOutput[i + testInputLinesSkip].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
-
-                if (testOutput[i + testInputLinesSkip].indexOf(`% .sNewLine`) >= 0) {
-                    testInputLinesSkip++;
-                    i--;
-                } else {
-                    console.error(`${testOutput[i + testInputLinesSkip]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
-                    // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-                        
-                    output += `-${testOutput[i + testInputLinesSkip].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
-                }
+            if (testOutputWithoutNewLines[i].trim() !== expectedOutput[i].split('//')[0].trim()) {   // ignore any comments, if applicable 
+                console.error(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
+                // core.setFailed(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+                    
+                output += `-${testOutputWithoutNewLines[i].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
             }
         }
 
