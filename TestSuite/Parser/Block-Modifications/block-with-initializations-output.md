@@ -33,8 +33,6 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 13)!  (Newlines are not the issue here!) `block-with-initializations.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
