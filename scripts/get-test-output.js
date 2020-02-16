@@ -147,6 +147,7 @@ function compareResults(content, file, dir) {
         output += "\nFile diff\n-------------------------" + '\n```diff\n';
 
         const smallerOutput = testOutputWithoutNewLines.length < expectedOutput.length ? testOutputWithoutNewLines.length : expectedOutput.length;
+        let diffStr = "";
 
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
@@ -160,10 +161,16 @@ function compareResults(content, file, dir) {
                 console.error(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
                 // core.setFailed(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
                     
-                output += `-${testOutputWithoutNewLines[i].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
+                diffStr += `-${testOutputWithoutNewLines[i].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
             }
         }
-
+        
+        if (!diffStr) {
+            output += '\n```';
+            output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
+        } else {
+            output += diffStr;
+        }
         output += '\n```';
 
     } catch (e) {
