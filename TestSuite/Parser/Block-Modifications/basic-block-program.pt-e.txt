@@ -1,0 +1,24 @@
+.sProgram
+.sIdentifier // identifier for 'output'
+.sParmEnd
+.sBegin  // start the main function
+.sVar
+.sIdentifier // identifier for x
+.sIdentifier // identifier for 'int'
+.sConst
+.sIdentifier // identifier for y
+.sInteger 1  // value for y
+.sIfStmt
+.sIdentifier // identifier for y
+.sInteger 0  // 0 in if statement
+.sEq
+.sExpnEnd
+.sThen
+.sBegin
+.sIdentifier // identifier for z within if
+.sInteger 1  // value for z within if
+.sEnd
+.sType
+.sIdentifier // identifier for t
+.sIdentifier // identifier for int
+.sEnd

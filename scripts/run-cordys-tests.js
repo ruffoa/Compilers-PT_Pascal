@@ -39,10 +39,14 @@ async function findAllFilesInDir() {
 
     for (const file of dirs) {
         if (file.endsWith('.pt')) {
+            core.startGroup(`${file}`);
+
             console.log(file);
             const res = await runFile(file);
             console.log("Done getting input from: " + file);
             compareResults(res, file);
+            
+            core.endGroup();
         }
     }          
 }
@@ -70,7 +74,7 @@ async function runFile(file) {
         
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
-        core.setFailed("Bash command failed, aborting" + e.message);
+        // core.setFailed("Bash command failed, aborting" + e.message);
         stream.write("Bash command failed, aborting! " + e.message + '\n');
     }
 }
@@ -89,7 +93,7 @@ function compareResults(content, file) {
             eFile = "Cordy's results"
         }
 
-        console.error("Error, could not read ", eFile);
+        // console.error("Error, could not read ", eFile);
         core.setFailed("Error, could not read " + eFile);
         stream.write("Error, could not read " + eFile + '\n');
 
@@ -102,7 +106,7 @@ function compareResults(content, file) {
     if (expectedOutput.length !== testOutput.length) {
         console.error("Lengths do not match!  Something went wrong in ", file);
         console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-        core.setFailed("Lengths do not match!  Something went wrong in " + file);
+        // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
         stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
         stream.write(`Output is: \n-------------------------\n${content}\n------------------------\n`);
@@ -118,7 +122,7 @@ function compareResults(content, file) {
 
         if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-            core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+            // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
             stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
         }
