@@ -224,7 +224,7 @@ ConstantDefinitions :
                 pIdentifier
                 .sIdentifier
                 '=' @ConstantValue ';'
-            | ';'
+            | ';':
                 >   % consume the ';' token
             | *:
                 >
