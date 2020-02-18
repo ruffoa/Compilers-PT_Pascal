@@ -245,6 +245,23 @@ ConstantValue :
                 .sStringLiteral
         ];
 
+InitialValue :
+        .sInitialValue
+        [
+            | pInteger:
+                .sInteger
+            | pIdentifier:
+                .sIdentifier
+            | '-':
+                @UnsignedIntegerConstant
+                .sNegate
+            | '+':
+                @UnsignedIntegerConstant
+            | pStringLiteral:
+                .sStringLiteral
+        ]
+        .sExpnEnd;
+
 UnsignedIntegerConstant :
         [
             | pIdentifier:
@@ -318,14 +335,14 @@ VariableDeclarations :
                     | ':':
                         @TypeBody
                     | '=':
-                        @ConstantValue
+                        @InitialValue
                     | *:
                         >
                 ]
             | ':':
                 @TypeBody
             | '=':
-                @ConstantValue
+                @InitialValue
             | ';':
                 >   % handle the semicolon and exit, we are done!
             | *:
