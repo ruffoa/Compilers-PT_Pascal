@@ -318,10 +318,8 @@ VariableDeclarations :
                 [
                     | ':':
                         @TypeBody
-                        >
                     | '=':
                         @ConstantValue
-                        >
                     | *:
                         >
                 ]
