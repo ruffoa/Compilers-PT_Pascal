@@ -2,7 +2,7 @@
 Test Content: 
 -------------------------
 ```
-mod main(){
+mod main(output){
     let v = 5;
 }
 ```
@@ -11,5 +11,5 @@ mod main(){
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 1: syntax error at: )
+scan/parse error, line 2: syntax error at: =
 ```
