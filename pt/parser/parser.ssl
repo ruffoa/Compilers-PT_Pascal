@@ -316,10 +316,14 @@ VariableDeclarations :
                 pIdentifier % consume the pIdentifier token
                 .sIdentifier
                 [
-                    ':':
+                    | ':':
                         @TypeBody
-                    '=':
+                        >
+                    | '=':
                         @ConstantValue
+                        >
+                    | *:
+                        >
                 ]
             | ';':
                 >   % handle the semicolon and exit, we are done!
