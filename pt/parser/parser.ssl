@@ -231,7 +231,7 @@ ConstantDefinitions :
         '=' @ConstantValue
         {[
             | ',':  % handle multiple declarations per line with a ','
-                .sConst
+                % .sConst   % do not output the second const token for now, to keep in line with multi-variable declarations
                 pIdentifier
                 .sIdentifier
                 '=' @ConstantValue
@@ -335,31 +335,12 @@ OptionallySignedIntegerConstant :
                 @UnsignedIntegerConstant
         ];
 
-MultipleVariableDeclarations : 
-        % move the handling of multiple variable declarations into here
-        pIdentifier % consume the pIdentifier token
-        .sIdentifier
-        [
-            | ':':
-                @TypeBody
-            | '=':
-                @InitialValue
-            | *:
-        ];
-
 VariableDeclarations :
         % Accept one or more variable declarations.
         {[
             | ',':
                 %  .sVar  % Take this out for now to align with Cordy's solution
                 >
-                % [
-                %     | 'mut': 
-                %         @VariableDeclarations
-                %         .sMutable
-                %     | *:
-                %         @VariableDeclarations
-                % ]
             | ':':
                 @TypeBody
             | '=':

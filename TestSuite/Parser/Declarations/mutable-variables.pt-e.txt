@@ -10,7 +10,6 @@
 .sIdentifier // identifier for 'y'
 .sIdentifier // identifier index for 'int'
 .sMutable
-.sVar
 .sIdentifier // identifier for 'z'
 .sInitialValue
 .sInteger    // 1
