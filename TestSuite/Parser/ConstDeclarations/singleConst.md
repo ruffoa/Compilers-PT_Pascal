@@ -4,7 +4,7 @@ Test output should be:
 --------------------------
 ```
 .sProgram
-.sIdentifier
+.sIdentifier "output"
 .sParmEnd
 .sBegin
 .sConst
