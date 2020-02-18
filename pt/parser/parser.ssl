@@ -186,13 +186,15 @@ Block :
                 @TypeDefinitions
             | 'let':
                 .sVar
-                [
+                {[
                     | 'mut': 
                         @VariableDeclarations
                         .sMutable
-                    | *:
+                    | pIdentifier:
                         @VariableDeclarations
-                ]
+                    | *:
+                        >
+                ]}
             | 'mod':
                 .sProcedure
                 % procedure name
@@ -348,14 +350,15 @@ VariableDeclarations :
         pIdentifier  .sIdentifier
         {[
             | ',':
-                .sVar
-                [
-                    | 'mut': 
-                        @MultipleVariableDeclarations
-                        .sMutable
-                    | *:
-                        @MultipleVariableDeclarations
-                ]
+                %  .sVar  % Take this out for now to align with Cordy's solution
+                >
+                % [
+                %     | 'mut': 
+                %         @VariableDeclarations
+                %         .sMutable
+                %     | *:
+                %         @VariableDeclarations
+                % ]
             | ':':
                 @TypeBody
             | '=':
