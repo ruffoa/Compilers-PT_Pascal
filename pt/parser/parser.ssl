@@ -188,9 +188,11 @@ Block :
                 .sVar
                 {[
                     | 'mut': 
+                        pIdentifier  .sIdentifier
                         @VariableDeclarations
                         .sMutable
                     | pIdentifier:
+                        .sIdentifier
                         @VariableDeclarations
                     | *:
                         >
@@ -347,7 +349,6 @@ MultipleVariableDeclarations :
 
 VariableDeclarations :
         % Accept one or more variable declarations.
-        pIdentifier  .sIdentifier
         {[
             | ',':
                 %  .sVar  % Take this out for now to align with Cordy's solution
