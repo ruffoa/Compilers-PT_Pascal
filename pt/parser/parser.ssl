@@ -186,6 +186,12 @@ Block :
                 @TypeDefinitions
             | 'let':
                 .sVar
+                [
+                    | 'mut': 
+                        .sMutable
+                    | *:
+                        >
+                ]
                 @VariableDeclarations
             | 'mod':
                 .sProcedure

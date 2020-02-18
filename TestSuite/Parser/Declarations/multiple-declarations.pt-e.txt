@@ -14,12 +14,10 @@
 .sExpnEnd       // end the initial value 'expression'
 .sConst
 .sIdentifier    // identifier for c
-.sInitialValue
 .sInteger 0    // initial value for c
 .sExpnEnd
 .sConst
 .sIdentifier    // identifier for d
-.sInitialValue
 .sInteger d    // initial value for d
 .sExpnEnd
 .sEnd
