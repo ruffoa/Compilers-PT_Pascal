@@ -188,10 +188,11 @@ Block :
                 .sVar
                 [
                     | 'mut': 
+                        @VariableDeclarations
                         .sMutable
                     | *:
+                        @VariableDeclarations
                 ]
-                @VariableDeclarations
             | 'mod':
                 .sProcedure
                 % procedure name
