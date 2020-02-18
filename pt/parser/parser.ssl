@@ -223,7 +223,7 @@ ConstantDefinitions :
             | ',':  % handle multiple declarations per line with a ','
                 pIdentifier
                 .sIdentifier
-                '=' @ConstantValue ';'
+                '=' @ConstantValue
             | ';':
                 >   % consume the ';' token
             | *:
@@ -310,11 +310,19 @@ OptionallySignedIntegerConstant :
 VariableDeclarations :
         % Accept one or more variable declarations.
         pIdentifier  .sIdentifier
-        ':'  @TypeBody  ';'
+        ':'  @TypeBody
         {[
-            | pIdentifier:
+            | ',':
+                pIdentifier % consume the pIdentifier token
                 .sIdentifier
-                ':'  @TypeBody  ';'
+                [
+                    ':':
+                        @TypeBody
+                    '=':
+                        @ConstantValue
+                ]
+            | ';':
+                >   % handle the semicolon and exit, we are done!
             | *:
                 >
         ]};
