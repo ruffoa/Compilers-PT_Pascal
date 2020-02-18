@@ -218,11 +218,14 @@ Block :
 ConstantDefinitions :
         % Accept one or more named constant definitions
         pIdentifier  .sIdentifier
-        '=' @ConstantValue ';'
+        '=' @ConstantValue
         {[
-            | pIdentifier:
+            | ';':
+                >
+            | ',':
+                pIdentifier
                 .sIdentifier
-                '=' @ConstantValue ';'
+                '=' @ConstantValue
             | *:
                 >
         ]};
