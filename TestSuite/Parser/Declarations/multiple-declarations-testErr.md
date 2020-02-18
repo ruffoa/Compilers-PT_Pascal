@@ -1,0 +1,17 @@
+
+Test Content: 
+-------------------------
+```
+mod main (output) {
+    let x = 1, y = 2;
+    const c = 0, d = 6;
+}
+```
+------------------------
+
+Test Errors:
+-------------------------
+```
+scan/parse error, line 2: syntax error at: =
+scan/parse error, line 3: syntax error at: ,
+```
