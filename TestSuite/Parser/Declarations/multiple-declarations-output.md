@@ -24,11 +24,14 @@ Test output is:
   .sConst
    .sIdentifier
     .sInteger
+   .sIdentifier
+    .sInteger
+   % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (12 vs 25)!  (Newlines are not the issue here!) `multiple-declarations.pt`
+Warning, output length does not match (14 vs 25)!  (Newlines are not the issue here!) `multiple-declarations.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -39,7 +42,8 @@ File diff
 -.sConst !== .sExpnEnd on line 8 of multiple-declarations.pt
 -.sIdentifier !== .sVar on line 9 of multiple-declarations.pt
 -.sInteger !== .sIdentifier on line 10 of multiple-declarations.pt
--.sEnd !== .sInitialValue on line 11 of multiple-declarations.pt
+-.sIdentifier !== .sInitialValue on line 11 of multiple-declarations.pt
+-.sEnd !== .sExpnEnd on line 13 of multiple-declarations.pt
 
 ```
 end file
