@@ -44,20 +44,21 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Run Cordy's Tests
+    - name: Test the Test Suite
       run: |
         export PATH=$PATH:~/binaries
 
-        make scanner
-        make scanner
+        cd parser
+        make
+        make
 
-        cd ../scripts
+        cd ../../scripts
         
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/parserOutput.txt
-        node ./run-cordys-tests.js Parser
+        node ./validate-tests.js Parser
+
       working-directory: ./pt
 
     - name: Build and export the Test Suite Results
@@ -76,15 +77,32 @@ jobs:
         node ./get-test-output.js Parser
 
       working-directory: ./pt
+
+    - name: Run Cordy's Tests
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make scanner
+        make scanner
+
+        cd ../scripts
+        
+        npm install
+        npm install @actions/core
+
+        rm -f ../CordyTests/parserOutput.txt
+        node ./run-cordys-tests.js Parser
+      working-directory: ./pt
     
     - name: Commit new test results
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
+        git add TestSuite/\*-testErr.md
         git add CordyTests/combinedOutput.txt
         git status
-        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash

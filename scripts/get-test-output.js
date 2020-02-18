@@ -18,6 +18,17 @@ const getSegment = {
     'Parser': '-o2 -t2'
 };
 
+const nLineTokenNumber = getNewLineNumber();
+
+function getNewLineNumber() {
+    const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
+    const newLineTokenDefinition = "sNewLine = ";
+    let newLineToken = parserDefs.substr(parserDefs.indexOf(newLineTokenDefinition) + newLineTokenDefinition.length).trim().split('\n')[0];
+    const nLineNumber = newLineToken.match(/(\d+)/)[0]; 
+    console.log(`NEW LINE Number is: '${nLineNumber}', ${newLineToken.match(/(\d+)/)}`);
+    return nLineNumber;
+}
+
 async function loopTestDirectories() {
     const getDirectories = fs.readdirSync(folderPath, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
@@ -48,9 +59,9 @@ async function findAllFilesInDir(dir) {
 async function runFile(file, dir) {
     try {
         const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/parser.def -e`);
-        // const output = await exec(`echo "HELOO"`);
+        // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
-
+        
         let isRealError = true;
 
         if (output.stderr) {
@@ -71,11 +82,17 @@ async function runFile(file, dir) {
 function compareResults(content, file, dir) {
     let output = "";
 
+    const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
+
     console.log(`\n--------------------------------\nReading file ${relativeFolderPath}${dir}/${file} from ${dir}`);
-    output += "\n";
+    output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
     
-    if (content)
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`;
+    if (content) {
+        var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        var regex = new RegExp(findReplaceKey, 'g');
+
+        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+    }
 
     try {
         const expectedResultFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}-e.txt`, 'utf-8');
@@ -101,39 +118,66 @@ function compareResults(content, file, dir) {
             expectedOutput.splice(0, 1);
         }
 
-        const testOutput = content.trim().split('\n');
+        let testOutput = content.trim().split('\n');
+        testOutput = testOutput.map((tLine) => {
+            if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
+                tLine = "% .sNewLine";
+            }
 
-        if (expectedOutput.length !== testOutput.length) {
-            console.error("Lengths do not match!  Something went wrong in ", file);
-            console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
-            // core.setFailed("Lengths do not match!  Something went wrong in " + file);
+            return tLine;
+        });
 
-            output += `Expected output length does not match!  Something went wrong in \`${file}\`\nShowing as much of the diff as possible...\n`;
-            // output += `Output is: \n-------------------------\n${content}\n------------------------\n`;
+        const testOutputWithoutNewLines = testOutput.filter((l) => (l.indexOf(`% .sNewLine`) < 0));
 
-            // return output;
+        if (expectedOutput.length !== testOutputWithoutNewLines.length) {
+
+            // console.log(testOutputWithoutNewLines, ' OUTPUT ', expectedOutput);
+            
+            if (expectedOutput === testOutputWithoutNewLines) {
+                output += `Test output matches the expected output! :heavy_check_mark:\n`;
+            } else {
+                console.error("Lengths do not match!  Something went wrong in ", file);
+                console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
+                // core.setFailed("Lengths do not match!  Something went wrong in " + file);
+
+                output += `Warning, output length does not match (${testOutputWithoutNewLines.length} vs ${expectedOutput.length})!  (Newlines are not the issue here!) \`${file}\`\nShowing as much of the diff as possible...\n`;
+            }
         }
 
         output += "\nFile diff\n-------------------------" + '\n```diff\n';
 
-        const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
+        const smallerOutput = testOutputWithoutNewLines.length < expectedOutput.length ? testOutputWithoutNewLines.length : expectedOutput.length;
+        let diffStr = "";
 
         for (var i = 0; i < smallerOutput; i++) {
             // console.log(expectedOutput[i], testOutput[i]);
 
-            if (testOutput[i] !== expectedOutput[i]) {
-                console.error(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
-                // core.setFailed(`${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
+            if ((i) >= testOutputWithoutNewLines.length || i >= expectedOutput.length) {
+                output += '\n```';
+                return output;
+            }
+
+            if (testOutputWithoutNewLines[i].trim() !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()) {   // ignore any comments, if applicable, and remove values (if applicable)
+                console.error(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i].split('//')[0]} on line ${i} of ${file}`);
+                // core.setFailed(`${testOutputWithoutNewLines[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
                     
-                output += `-${testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`;
+                diffStr += `-${testOutputWithoutNewLines[i].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
             }
         }
+        
+        if (!diffStr) {
+            output += '\n```';
+            output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
+        } else {
+            output += diffStr;
+        }
+        output += '\n```';
+
     } catch (e) {
-        console.log(`No expected result file found (it must be called ${file}-e.txt)`);
-        output += "```diff\nReading file " + file + "\n";
+        console.log(`No expected result file found (it must be called '${file}-e.txt')`);
+        console.log(e)
     }
 
-    output += '\n```';
     output += "\nend file\n";
 
     return output;

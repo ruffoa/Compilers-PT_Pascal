@@ -2,7 +2,8 @@
 Test Content: 
 -------------------------
 ```
-1 && 1
+mod main (output) {  
+} 
 ```
 ------------------------
 Test output is: 
@@ -11,18 +12,19 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
+  % .sNewLine
   .sBegin
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (5 vs 3)!  (Newlines are not the issue here!) `and.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sParmEnd !== .sEnd on line 2 of and.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
