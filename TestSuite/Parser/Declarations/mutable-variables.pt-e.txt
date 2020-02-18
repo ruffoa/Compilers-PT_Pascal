@@ -3,7 +3,17 @@
 .sParmEnd
 .sBegin  // start the main function
 .sVar 
-.sIdentifier // identifier index for 'v' 
+.sIdentifier // identifier index for 'x' 
 .sIdentifier // identifier index for 'int' 
+.sMutable
+.sVar
+.sIdentifier // identifier for 'y'
+.sIdentifier // identifier index for 'int'
+.sMutable
+.sVar
+.sIdentifier // identifier for 'z'
+.sInitialValue
+.sInteger    // 1
+.sExpnEnd
 .sMutable
 .sEnd

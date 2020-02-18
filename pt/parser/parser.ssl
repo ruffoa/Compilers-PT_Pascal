@@ -331,21 +331,31 @@ OptionallySignedIntegerConstant :
                 @UnsignedIntegerConstant
         ];
 
+MultipleVariableDeclarations : 
+        % move the handling of multiple variable declarations into here
+        pIdentifier % consume the pIdentifier token
+        .sIdentifier
+        [
+            | ':':
+                @TypeBody
+            | '=':
+                @InitialValue
+            | *:
+                >
+        ];
+
 VariableDeclarations :
         % Accept one or more variable declarations.
         pIdentifier  .sIdentifier
         {[
             | ',':
                 .sVar
-                pIdentifier % consume the pIdentifier token
-                .sIdentifier
                 [
-                    | ':':
-                        @TypeBody
-                    | '=':
-                        @InitialValue
+                    | 'mut': 
+                        @MultipleVariableDeclarations
+                        .sMutable
                     | *:
-                        >
+                        @MultipleVariableDeclarations
                 ]
             | ':':
                 @TypeBody
