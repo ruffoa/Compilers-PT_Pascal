@@ -1,0 +1,1 @@
+This is a base-case test for mutable variables, making sure that the required tokens are output.

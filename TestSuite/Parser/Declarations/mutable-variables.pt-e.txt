@@ -1,0 +1,9 @@
+.sProgram
+.sIdentifier // identifier for 'output'
+.sParmEnd
+.sBegin  // start the main function
+.sVar 
+.sIdentifier // identifier index for 'v' 
+.sIdentifier // identifier index for 'int' 
+.sMutable
+.sEnd

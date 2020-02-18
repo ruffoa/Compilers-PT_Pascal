@@ -1,0 +1,14 @@
+.sProgram
+.sIdentifier // identifier for 'output'
+.sParmEnd
+.sBegin  // start the main function
+.sConst
+.sIdentifier  // identifier index for 'c'
+.sInteger 27 
+.sType 
+.sIdentifier  // identifier index for 't' 
+.sIdentifier  // identifier index for 'int' 
+.sVar 
+.sIdentifier  // identifier index for 'v' 
+.sIdentifier  // identifier index for 'int' 
+.sEnd

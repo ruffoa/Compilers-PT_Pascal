@@ -1,0 +1,1 @@
+This is to make sure that the PT style multiple type declarations are not allowed. 
