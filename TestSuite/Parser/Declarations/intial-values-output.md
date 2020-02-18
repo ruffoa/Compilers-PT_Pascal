@@ -19,7 +19,9 @@ Test output is:
   .sVar
    .sIdentifier
      .sIdentifier
+    .sInitialValue
     .sInteger
+    .sExpnEnd
    % .sNewLine
   .sConst
    .sIdentifier
