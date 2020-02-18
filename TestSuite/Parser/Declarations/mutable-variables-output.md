@@ -17,15 +17,15 @@ Test output is:
   % .sNewLine
   .sBegin
   .sVar
-   .sIdentifier
+  .sIdentifier
      .sIdentifier
    % .sNewLine
   .sMutable
   .sVar
-   .sIdentifier
+  .sIdentifier
      .sIdentifier
   .sMutable
-   .sIdentifier
+  .sIdentifier
     .sInitialValue
     .sInteger
     .sExpnEnd

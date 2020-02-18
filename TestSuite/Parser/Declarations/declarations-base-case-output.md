@@ -18,7 +18,17 @@ Test output is:
   % .sNewLine
   .sBegin
   .sVar
+  .sIdentifier
+     .sIdentifier
+   % .sNewLine
+  .sConst
    .sIdentifier
+    .sInteger
+   % .sNewLine
+  .sType
+   .sIdentifier
+     .sIdentifier
+   % .sNewLine
   .sEnd
 
 ```
