@@ -16,10 +16,10 @@ Test output is:
   % .sNewLine
   .sBegin
   .sVar
-  .sMutable
    .sIdentifier
      .sIdentifier
    % .sNewLine
+  .sMutable
   .sEnd
 
 ```
@@ -28,8 +28,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.sMutable !== .sIdentifier on line 5 of mutable-variables.pt
--.sIdentifier !== .sMutable on line 7 of mutable-variables.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
