@@ -19,6 +19,12 @@ Test output is:
   .sVar
    .sIdentifier
      .sIdentifier
+    .sInteger
+   % .sNewLine
+  .sConst
+   .sIdentifier
+    .sInteger
+   % .sNewLine
   .sEnd
 
 ```
