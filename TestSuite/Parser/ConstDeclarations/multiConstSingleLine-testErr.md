@@ -2,7 +2,7 @@
 Test Content: 
 -------------------------
 ```
-mod main(){
+mod main(output){
     const a = 1, b = -2 , c = "test", d = a;
 }
 ```
@@ -11,5 +11,5 @@ mod main(){
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 1: syntax error at: )
+scan/parse error, line 2: syntax error at: ,
 ```
