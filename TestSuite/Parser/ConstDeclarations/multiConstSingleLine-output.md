@@ -18,6 +18,14 @@ Test output is:
   .sConst
    .sIdentifier
     .sInteger
+   .sIdentifier
+     .sInteger
+    .sNegate
+   .sIdentifier
+    .sStringLiteral
+   .sIdentifier
+    .sIdentifier
+   % .sNewLine
   .sEnd
 
 ```
