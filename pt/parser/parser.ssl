@@ -284,7 +284,7 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                %[
+                %[  % ToDo: Implement this properly!
                     %| '..':
                     %    .sRange         %% this may be unnecessary
                     %    @OptionallySignedIntegerConstant
@@ -310,7 +310,6 @@ OptionallySignedIntegerConstant :
 VariableDeclarations :
         % Accept one or more variable declarations.
         pIdentifier  .sIdentifier
-        ':'  @TypeBody
         {[
             | ',':
                 pIdentifier % consume the pIdentifier token
@@ -323,6 +322,10 @@ VariableDeclarations :
                     | *:
                         >
                 ]
+            | ':':
+                @TypeBody
+            | '=':
+                @ConstantValue
             | ';':
                 >   % handle the semicolon and exit, we are done!
             | *:
