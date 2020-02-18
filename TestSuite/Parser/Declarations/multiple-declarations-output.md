@@ -36,15 +36,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (19 vs 21)!  (Newlines are not the issue here!) `multiple-declarations.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sIdentifier !== .sExpnEnd on line 16 of multiple-declarations.pt
--.sInteger !== .sIdentifier on line 17 of multiple-declarations.pt
--.sEnd !== .sInteger d on line 18 of multiple-declarations.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
