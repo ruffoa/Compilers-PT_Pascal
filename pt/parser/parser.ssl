@@ -221,6 +221,7 @@ ConstantDefinitions :
         '=' @ConstantValue
         {[
             | ',':  % handle multiple declarations per line with a ','
+                .sConst
                 pIdentifier
                 .sIdentifier
                 '=' @ConstantValue
@@ -329,6 +330,7 @@ VariableDeclarations :
         pIdentifier  .sIdentifier
         {[
             | ',':
+                .sVar
                 pIdentifier % consume the pIdentifier token
                 .sIdentifier
                 [
