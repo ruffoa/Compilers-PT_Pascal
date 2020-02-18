@@ -19,27 +19,17 @@ Test output is:
   .sBegin
   .sVar
    .sIdentifier
-     .sIdentifier
-   % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sType
-   .sIdentifier
-     .sIdentifier
-   % .sNewLine
   .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 14)!  (Newlines are not the issue here!) `block-with-initializations.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sEnd !== .sIdentifier on line 6 of block-with-initializations.pt
 
 ```
 end file

@@ -3,15 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-
-    if (y == 0) {
-        let z = 1;
-    }
-
-    type t = int;
-
+    let x = 1, y = 2;
+    const c = 0, d = 6;
 }
 ```
 ------------------------
@@ -19,5 +12,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: :
+scan/parse error, line 2: syntax error at: =
 ```

@@ -9,19 +9,9 @@ mod main (output) {
 }
 ```
 ------------------------
-Test output is: 
+
+Test Errors:
 -------------------------
 ```
- .sProgram
- .sIdentifier
- .sParmEnd
-  % .sNewLine
-  .sBegin
-  .sVar
-   .sIdentifier
-  .sEnd
-
+scan/parse error, line 2: syntax error at: :
 ```
-------------------------
-
-end file
