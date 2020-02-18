@@ -10,7 +10,9 @@ Test output should be:
 .sVar
 .sIdentifier "v"
 .sIdentifier "int"
-.sInitialValue "5"
+.sInitialValue
+.sInteger
+.sExpnEnd
 .sMutable
 .sNullStmnt
 .sEnd

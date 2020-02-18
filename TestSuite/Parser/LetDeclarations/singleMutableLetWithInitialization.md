@@ -12,6 +12,7 @@ Test output should be:
 .sIdentifier "int"
 .sInitialValue
 .sInteger "5"
+.sExpnEnd
 .sMutable
 .sNullStmnt
 .sEnd
