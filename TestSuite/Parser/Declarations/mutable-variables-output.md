@@ -19,7 +19,6 @@ Test output is:
    .sIdentifier
        .sIdentifier
        .sIdentifier
-   % .sNewLine
   .sEnd
 
 ```
