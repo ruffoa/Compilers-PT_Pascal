@@ -3,15 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-
-    if (y == 0) {
-        let z = 1;
-    }
-
-    type t = int;
-
+    let x: int = 64;
+    const y = 53;
 }
 ```
 ------------------------

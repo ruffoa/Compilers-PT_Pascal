@@ -3,7 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let mut x: int;
+    let x = 1, y = 2;
+    const c = 0, d = 6;
 }
 ```
 ------------------------
@@ -11,5 +12,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: mut
+scan/parse error, line 2: syntax error at: x
 ```
