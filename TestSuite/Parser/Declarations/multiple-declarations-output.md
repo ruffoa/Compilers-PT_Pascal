@@ -22,10 +22,10 @@ Test output is:
     .sInteger
     .sExpnEnd
    .sVar
-   .sIdentifier
-    .sInitialValue
-    .sInteger
-    .sExpnEnd
+    .sIdentifier
+     .sInitialValue
+     .sInteger
+     .sExpnEnd
    % .sNewLine
   .sConst
    .sIdentifier
