@@ -191,13 +191,11 @@ Block :
                 .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
-                @Block  ';'
             | 'pub':
                 .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 .sPublic
                 @ProcedureHeading
-                @Block  ';'
             | pIdentifier:
                 @AssignmentOrCallStmt
             | '{':
