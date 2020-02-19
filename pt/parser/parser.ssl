@@ -359,6 +359,7 @@ ProcedureHeading :
             | pIdentifier:
                 .sIdentifier
                 @VariableDeclarations
+            | ',':  % consume comma and loop again 
             | *:
                 >
         ]}
