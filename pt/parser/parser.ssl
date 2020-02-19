@@ -191,13 +191,11 @@ Block :
                 .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
-                '{'
             | 'pub':
                 'fn' .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 .sPublic
                 @ProcedureHeading
-                '{'
             | pIdentifier:
                 @AssignmentOrCallStmt
             | '{':
@@ -334,6 +332,8 @@ ProcedureHeading :
         ]}
         ')'
         .sParmEnd;
+        '{'
+        @BeginStmt
 
 Statement :
         [
