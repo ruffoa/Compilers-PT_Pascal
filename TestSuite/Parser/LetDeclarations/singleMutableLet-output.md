@@ -18,8 +18,8 @@ Test output is:
   .sVar
   .sIdentifier
      .sIdentifier
-   % .sNewLine
   .sMutable
+  % .sNewLine
   .sEnd
 
 ```

@@ -21,8 +21,8 @@ Test output is:
     .sInitialValue
     .sInteger
     .sExpnEnd
-   % .sNewLine
   .sMutable
+  % .sNewLine
   .sEnd
 
 ```

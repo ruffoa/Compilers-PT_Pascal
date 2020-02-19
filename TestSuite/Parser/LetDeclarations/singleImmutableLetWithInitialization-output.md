@@ -21,7 +21,7 @@ Test output is:
     .sInitialValue
     .sInteger
     .sExpnEnd
-   % .sNewLine
+  % .sNewLine
   .sEnd
 
 ```

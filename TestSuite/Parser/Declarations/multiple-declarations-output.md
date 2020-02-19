@@ -25,7 +25,7 @@ Test output is:
     .sInitialValue
     .sInteger
     .sExpnEnd
-   % .sNewLine
+  % .sNewLine
   .sConst
    .sIdentifier
     .sInteger

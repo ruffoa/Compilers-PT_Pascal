@@ -26,7 +26,7 @@ Test output is:
   .sVar
   .sIdentifier
      .sIdentifier
-   % .sNewLine
+  % .sNewLine
   .sConst
    .sIdentifier
     .sInteger

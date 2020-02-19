@@ -17,7 +17,7 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
-   % .sNewLine
+  % .sNewLine
   .sEnd
 
 ```

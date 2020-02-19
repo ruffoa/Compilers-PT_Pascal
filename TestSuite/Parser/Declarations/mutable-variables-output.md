@@ -19,8 +19,8 @@ Test output is:
   .sVar
   .sIdentifier
      .sIdentifier
-   % .sNewLine
   .sMutable
+  % .sNewLine
   .sVar
   .sIdentifier
      .sIdentifier
@@ -29,8 +29,8 @@ Test output is:
     .sInitialValue
     .sInteger
     .sExpnEnd
-   % .sNewLine
   .sMutable
+  % .sNewLine
   .sEnd
 
 ```
