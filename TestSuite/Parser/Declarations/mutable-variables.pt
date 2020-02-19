@@ -1,4 +1,4 @@
 mod main (output) {
-    let mut x: int;
-    let mut y: int, mut z = 1;
+    let mut x : int;
+    let mut y : int, mut z = 1;
 }
