@@ -1,0 +1,16 @@
+
+Test Content: 
+-------------------------
+```
+mod main (output) {
+    let mut x : int;
+    let mut y : int, mut z = 1;
+}
+```
+------------------------
+
+Test Errors:
+-------------------------
+```
+
+```
