@@ -342,15 +342,17 @@ OptionallySignedIntegerConstant :
 
 VariableDeclarations :
         % Accept one or more variable declarations.
-        {[
-            | '=':
-                @InitialValue
-                >
+        [
             | ':':
                 @TypeBody
-            | *:
-                >
-        ]}
+                [
+                    | '=':
+                        @InitialValue
+                    | *:
+                ]
+            | '=':
+                @InitialValue
+        ]
 
         %   {[
         %       | ',':
