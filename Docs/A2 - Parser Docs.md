@@ -27,6 +27,11 @@ __!!NEED TO UPDATE THIS DIFF!!__
 +                @VariableDeclarations
 +            | *:
 +                >
++        ]
++        [
++            | ',':  % consume comma and loop again 
++            | ';':  % consume semicolon and exit loop as statement is done
++                >
 +        ]}
 ```
 This is to match the `mut` keyword, as well as allow for multiple declarations within a single let statement
@@ -72,31 +77,46 @@ __!!NEED TO UPDATE THIS DIFF!!__
 
 ```diff
 VariableDeclarations :
--        % Accept one or more variable declarations.
+        % Accept one or more variable declarations.
 -        pIdentifier  .sIdentifier
 -        ':'  @TypeBody  ';'
-        {[
+-        {[
 -            | pIdentifier:
 -                .sIdentifier
 -                ':'  @TypeBody  ';'
-+            | ',':
-+                %  .sVar  % Take this out for now to align with Cordy's solution
-+                >
+-            | *:
+-                >
+-        ]};
++        [
 +            | ':':
 +                @TypeBody
++                [
++                    | '=':
++                        @InitialValue
++                    | *:
++                ]
 +            | '=':
 +                @InitialValue
-+            | ';':
-+                >   % handle the semicolon and exit, we are done!
-            | *:
-                >
-        ]};
++        ];
+
 ```
 
 - Changed the `TypeDefinitions` rule to dissalow multiple type declarations on a single line. This was done by removing the additional loop.
 
-__!!NEED TO ADD DIFF!!__
-
+```diff
+TypeDefinitions :
+        % Accept one or more named type definitions.
+        pIdentifier  .sIdentifier
+        '='  @TypeBody  ';'
+-        {[
+-            | pIdentifier:
+-                .sIdentifier
+-                '='  @TypeBody  ';'
+-            | *:
+-                >
+-        ]};
++        ;
+```
 
 # Types
 
