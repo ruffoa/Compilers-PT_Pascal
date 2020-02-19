@@ -90,7 +90,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/parserOutput.txt
+        rm -f ../CordyTests/ParserOutput.txt
         node ./run-cordys-tests.js Parser
       working-directory: ./pt
     
