@@ -9,7 +9,10 @@ The following documents all changes made to parser.ssl structured according to t
 
 # Declarations
 ## `parser.ssl` Changes
-- Changed the `let` case statement within the `Block` match to be the following
+- Changed the `let` case statement within the `Block` rule match to be the following
+
+__!!NEED TO UPDATE THIS DIFF!!__
+
 ```diff
     | 'let':
         .sVar
@@ -63,7 +66,7 @@ InitialValue :
         .sExpnEnd;
 ```
 
-- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order
+- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constrainsts concerning an initial value being mandatory if no type is specified.
 
 __!!NEED TO UPDATE THIS DIFF!!__
 
@@ -89,6 +92,11 @@ VariableDeclarations :
                 >
         ]};
 ```
+
+- Changed the `TypeDefinitions` rule to dissalow multiple type declarations on a single line. This was done by removing the additional loop.
+
+__!!NEED TO ADD DIFF!!__
+
 
 # Types
 

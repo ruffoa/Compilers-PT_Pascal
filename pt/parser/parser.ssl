@@ -241,7 +241,7 @@ ConstantDefinitions :
                 .sIdentifier
                 '=' @ConstantValue
             | ';':
-                >   % consume the ';' token
+                >   % consume the ';' token and exit loop
             | *:
                 >
         ]};
@@ -290,13 +290,6 @@ TypeDefinitions :
         % Accept one or more named type definitions.
         pIdentifier  .sIdentifier
         '='  @TypeBody  ';'
-        {[
-            | pIdentifier:
-                .sIdentifier
-                '='  @TypeBody  ';'
-            | *:
-                >
-        ]};
 
 TypeBody :
         [
