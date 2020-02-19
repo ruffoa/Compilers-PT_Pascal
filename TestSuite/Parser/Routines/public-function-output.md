@@ -21,17 +21,23 @@ Test output is:
   .sIdentifier
   .sPublic
    .sParmEnd
+  % .sNewLine
+   .sBegin
+    % .sNewLine
+    .sNullStmt
+   % .sNewLine
+   .sEnd
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (9 vs 12)!  (Newlines are not the issue here!) `public-function.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sBegin on line 8 of public-function.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
