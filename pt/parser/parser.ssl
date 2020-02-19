@@ -196,6 +196,11 @@ Block :
                         @VariableDeclarations
                     | *:
                         >
+                ]
+                [
+                    | ',':  % consume comma and loop again 
+                    | ';':  % consume semicolon and exit loop as statement is done
+                        >
                 ]}
             | 'mod':
                 .sProcedure
@@ -338,18 +343,28 @@ OptionallySignedIntegerConstant :
 VariableDeclarations :
         % Accept one or more variable declarations.
         {[
-            | ',':
-                %  .sVar  % Take this out for now to align with Cordy's solution
+            | '=':
+                @InitialValue
                 >
             | ':':
                 @TypeBody
-            | '=':
-                @InitialValue
-            | ';':
-                >   % handle the semicolon and exit, we are done!
             | *:
                 >
-        ]};
+        ]}
+
+        %   {[
+        %       | ',':
+        %           %  .sVar  % Take this out for now to align with Cordy's solution
+        %           >
+        %       | ':':
+        %           @TypeBody
+        %       | '=':
+        %           @InitialValue
+        %       | ';':
+        %           >   % handle the semicolon and exit, we are done!
+        %       | *:
+        %           >
+        %   ]};
 
 ProcedureHeading :
         % Accept zero or more procedure formal parameter declarations.

@@ -9,7 +9,6 @@ Test output should be:
 .sBegin
 .sVar
 .sIdentifier "v"
-.sIdentifier "int"
 .sInitialValue
 .sInteger
 .sExpnEnd
