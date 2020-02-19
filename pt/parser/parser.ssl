@@ -331,9 +331,9 @@ ProcedureHeading :
                 >
         ]}
         ')'
-        .sParmEnd;
+        .sParmEnd
         '{'
-        @BeginStmt
+        @BeginStmt;
 
 Statement :
         [
