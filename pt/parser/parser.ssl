@@ -367,8 +367,6 @@ ProcedureHeading :
         ]}
         ')'
         .sParmEnd
-        '{'
-        .sBegin
         @Block;
         % @BeginStmt;
 
