@@ -100,7 +100,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
         git add TestSuite/\*-testErr.md
-        git add CordyTests/\parserOutput.txt
+        git add CordyTests/\ParserOutput.txt
         git status
         git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
       
