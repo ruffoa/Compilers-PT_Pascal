@@ -25,8 +25,7 @@ Test output is:
    .sThen
     % .sNewLine
      .sBegin
-      .sNullStmt
-     % .sNewLine
+      % .sNewLine
       .sNullStmt
      % .sNewLine
      .sEnd
@@ -34,13 +33,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (15 vs 14)!  (Newlines are not the issue here!) `basic-block-with-if.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sNullStmt !== .sEnd on line 12 of basic-block-with-if.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
