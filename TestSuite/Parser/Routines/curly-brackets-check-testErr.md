@@ -11,5 +11,8 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: fn
+scan/parse error, line 2: syntax error at: )
+scan/parse error, line 3: syntax error at: }
+scan/parse error, line 3: unexpected end of file
+translation aborted
 ```
