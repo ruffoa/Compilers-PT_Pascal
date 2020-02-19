@@ -3,7 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    type x = int; y = int;
+    fn test(i: bool, j) {
+        ;
+    }
 }
 ```
 ------------------------
@@ -11,5 +13,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: ;
+scan/parse error, line 2: syntax error at: )
 ```

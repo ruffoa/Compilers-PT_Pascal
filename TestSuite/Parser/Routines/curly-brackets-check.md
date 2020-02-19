@@ -1,0 +1,1 @@
+This test is to ensure that the `{ }` brackets are required on a function declaration

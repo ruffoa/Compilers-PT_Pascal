@@ -22,11 +22,13 @@ Test output is:
    .sIdentifier
        .sIdentifier
    .sExpnEnd
+  % .sNewLine
+  .sNullStmt
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (12 vs 11)!  (Newlines are not the issue here!) `pt-multiple-types.pt`
+Warning, output length does not match (13 vs 11)!  (Newlines are not the issue here!) `pt-multiple-types.pt`
 Showing as much of the diff as possible...
 
 File diff

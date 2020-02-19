@@ -3,7 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    const x = 1; y = 2;
+    fn test {
+        ;
+    }
 }
 ```
 ------------------------
@@ -11,5 +13,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: ;
+scan/parse error, line 2: syntax error at: {
 ```

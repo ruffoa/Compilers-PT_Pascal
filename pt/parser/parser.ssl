@@ -202,12 +202,15 @@ Block :
                     | ';':  % consume semicolon and exit loop as statement is done
                         >
                 ]}
-            | 'mod':
+            | 'fn':
                 .sProcedure
-                % procedure name
-                pIdentifier  .sIdentifier
+                pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
-                @Block  ';'
+            | 'pub':
+                'fn' .sProcedure
+                pIdentifier  .sIdentifier   % procedure name
+                .sPublic
+                @ProcedureHeading
             | pIdentifier:
                 @AssignmentOrCallStmt
             | '{':
@@ -220,15 +223,13 @@ Block :
                 @CaseStmt
             | 'loop':
                 @RepeatStmt
+            | ';':
+                .sNullStmt
             | *:
                 >
         ]}
-        %  'begin'
-        % '{'
-        % @BeginStmt;
         '}'
         .sEnd;  % end the block choice rule with an .sEnd token
-        % ;
 
 ConstantDefinitions :
         % Accept one or more named constant definitions
@@ -349,33 +350,31 @@ VariableDeclarations :
         ];
 
 ProcedureHeading :
-        % Accept zero or more procedure formal parameter declarations.
-        [
-            | '(':
-                {
-                    % formal parameter identifier
-                    % ToDo: Get consts working!
-                    [
-                        | 'let':
-                            pIdentifier  .sIdentifier
-                            .sVar
-                        | *:
-                            pIdentifier  .sIdentifier
-                    ]
-                    ':'
-                    % type identifier
+        % Accept zero or more procedure formal parameter declarations, but require the brackets
+        '('
+        {
+            [
+                % formal parameter identifier
+                | 'mut':
                     pIdentifier  .sIdentifier
-                    [
-                        | ';':
-                        | *:
-                            >
-                    ]
-                }
-                ')'
-            | *:
-        ]
-        ';'
-        .sParmEnd;
+                    .sVar
+                | pIdentifier:
+                    .sIdentifier
+                | *: 
+                    >
+            ]
+            ':'
+            % type identifier
+            pIdentifier  .sIdentifier
+            [
+                | ',':  % consume comma and loop again 
+                | *:
+                    >
+            ]
+        }
+        ')'
+        .sParmEnd
+        @Block;
 
 Statement :
         [
@@ -391,6 +390,8 @@ Statement :
                 @CaseStmt
             | 'loop':
                 @RepeatStmt
+            | ';':
+                .sNullStmt
             | *:
                 .sNullStmt
         ];

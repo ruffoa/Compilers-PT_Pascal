@@ -11,8 +11,6 @@ The following documents all changes made to parser.ssl structured according to t
 ## `parser.ssl` Changes
 - Changed the `let` case statement within the `Block` rule match to be the following
 
-__!!NEED TO UPDATE THIS DIFF!!__
-
 ```diff
     | 'let':
         .sVar
@@ -73,8 +71,6 @@ InitialValue :
 
 - Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constrainsts concerning an initial value being mandatory if no type is specified.
 
-__!!NEED TO UPDATE THIS DIFF!!__
-
 ```diff
 VariableDeclarations :
         % Accept one or more variable declarations.
@@ -121,6 +117,112 @@ TypeDefinitions :
 # Types
 
 # Routines
+## `parser.ssl` Changes
+- Rename the `mod` keyword to `fn` inside the `block` statement
+- Update the `fn` block within the `block` statement to call the `ProcedureHeading` SSL function
+```diff
+    | 'fn':
+        .sProcedure
+        pIdentifier  .sIdentifier   % procedure name
++        @ProcedureHeading
+```
+
+- Add support for the `pub` keyword, and implement essentially the same handling as the `fn` keywork within the `block` statement
+```diff
++    | 'pub':
++        'fn' .sProcedure
++        pIdentifier  .sIdentifier   % procedure name
++        .sPublic
++        @ProcedureHeading
+```
+
+- Added suppoort for the null statement `;` within the `block` statement
+```diff
++    | ';':
++        .sNullStmt
+```
+
+Cleaned up some old code that was no longer used from the `block` statement
+```diff
+-        %  'begin'
+-        % '{'
+-        % @BeginStmt;
+```
+
+- Update the `ProcedureHeading` SSL function with the new function header requirements
+    - Move the variable matching into a loop, in order to allow for matching multiple variables
+    - Add in support for the `mut` keyword within the function parameter section
+    - Update the type checking to not look for a `;`, and instead look for a `,` in order to support multiple variables
+    - Call the existing `Block` SSL function at the end of the `ProcedureHeading` function, as any block element is valid inside a function
+
+Before:
+```
+ProcedureHeading :
+ProcedureHeading :
+        % Accept zero or more procedure formal parameter declarations.
+        [
+            | '(':
+                {
+                    % formal parameter identifier
+                    % ToDo: Get consts working!
+                    [
+                        | 'let':
+                            pIdentifier  .sIdentifier
+                            .sVar
+                        | *:
+                            pIdentifier  .sIdentifier
+                    ]
+                    ':'
+                    % type identifier
+                    pIdentifier  .sIdentifier
+                    [
+                        | ';':
+                        | *:
+                            >
+                    ]
+                }
+                ')'
+            | *:
+        ]
+        ';'
+        .sParmEnd;
+```
+
+After:
+```
+ProcedureHeading :
+        % Accept zero or more procedure formal parameter declarations, but require the brackets
+        '('
+        {
+            [
+                % formal parameter identifier
+                | 'mut':
+                    pIdentifier  .sIdentifier
+                    .sVar
+                | pIdentifier:
+                    .sIdentifier
+                | *: 
+                    >
+            ]
+            ':'
+            % type identifier
+            pIdentifier  .sIdentifier
+            [
+                | ',':  % consume comma and loop again 
+                | *:
+                    >
+            ]
+        }
+        ')'
+        .sParmEnd
+        @Block;
+```
+
+- Update the `Statement` function to accept the null statement (`;`)
+```diff
++        | ';':
++            .sNullStmt
+```
 
 # Modules
 

@@ -1,0 +1,803 @@
+
+--------------------------------
+Reading file boxes.pt
+Lengths do not match!  Something went wrong in boxes.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file bubblesort.pt
+Lengths do not match!  Something went wrong in bubblesort.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file bust.pt
+Lengths do not match!  Something went wrong in bust.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sType
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file cache.pt
+Lengths do not match!  Something went wrong in cache.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file double.pt
+Lengths do not match!  Something went wrong in double.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file francais.pt
+Lengths do not match!  Something went wrong in francais.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+   .sLoopStmt
+    % value emitted 55
+     .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+     % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+           .sInteger
+          .sDivide
+       .sExpnEnd
+      .sNullStmt
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+     % value emitted 55
+       .sIfStmt
+           .sIdentifier
+               .sIdentifier
+          .sDivide
+       .sExpnEnd
+       .sThen
+        .sNullStmt
+     % value emitted 55
+     % value emitted 55
+       .sIfStmt
+               .sIdentifier
+               .sInteger
+              .sDivide
+       .sExpnEnd
+       .sThen
+        .sNullStmt
+     % value emitted 55
+      .sNullStmt
+      .sNullStmt
+     % value emitted 55
+      .sNullStmt
+      .sNullStmt
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+      .sNullStmt
+     .sEnd
+       .sIdentifier
+   .sExpnEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file helloworld.pt
+Lengths do not match!  Something went wrong in helloworld.pt
+Output is: 
+-------------------------
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  .sBegin
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file lunch.pt
+Lengths do not match!  Something went wrong in lunch.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file mbubblesort.pt
+Lengths do not match!  Something went wrong in mbubblesort.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sConst
+   .sIdentifier
+    .sInteger
+  % value emitted 55
+  .sNullStmt
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+   % value emitted 55
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file mbust.pt
+Lengths do not match!  Something went wrong in mbust.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sType
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file mprimes.pt
+Lengths do not match!  Something went wrong in mprimes.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file pascal.pt
+Lengths do not match!  Something went wrong in pascal.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file primes.pt
+Lengths do not match!  Something went wrong in primes.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  .sBegin
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sIdentifier
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sIdentifier
+   % value emitted 55
+   % value emitted 55
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file stars.pt
+Lengths do not match!  Something went wrong in stars.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  .sBegin
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+  % value emitted 55
+  .sNullStmt
+   .sAssignmentStmt
+   .sIdentifier
+       .sStringLiteral
+   .sExpnEnd
+  % value emitted 55
+  .sNullStmt
+   .sLoopStmt
+    % value emitted 55
+     .sBegin
+      .sNullStmt
+      .sNullStmt
+     % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sStringLiteral
+           .sIdentifier
+         .sAdd
+       .sExpnEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+      .sNullStmt
+     % value emitted 55
+      .sNullStmt
+     % value emitted 55
+     .sEnd
+       .sIdentifier
+   .sExpnEnd
+  .sEnd
+
+------------------------
+
+--------------------------------
+Reading file treesort.pt
+Lengths do not match!  Something went wrong in treesort.pt
+Output is: 
+-------------------------
+ % value emitted 55
+ % value emitted 55
+ .sProgram
+ .sIdentifier
+ .sIdentifier
+ .sParmEnd
+  .sBegin
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sNullStmt
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sType
+   .sIdentifier
+     .sIdentifier
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
+
+------------------------

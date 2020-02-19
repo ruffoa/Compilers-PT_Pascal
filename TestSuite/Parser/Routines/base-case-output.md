@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    if (1 == 0) {
+    fn test() {
         ;
     }
 }
@@ -17,18 +17,15 @@ Test output is:
  .sParmEnd
   % .sNewLine
   .sBegin
-   .sIfStmt
-           .sInteger
-           .sInteger
-        .sEq
-   .sExpnEnd
-   .sThen
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
     % .sNewLine
-     .sBegin
-      % .sNewLine
-      .sNullStmt
-     % .sNewLine
-     .sEnd
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
+    .sEnd
   .sEnd
 
 ```

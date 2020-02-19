@@ -1,0 +1,7 @@
+mod main (output) {
+    fn foo(i: int) {
+        fn bar(mut j: int) {
+            ;
+        }
+    }
+}

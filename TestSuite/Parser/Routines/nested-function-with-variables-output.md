@@ -3,8 +3,10 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    if (1 == 0) {
-        ;
+    fn foo(i: int) {
+        fn bar(mut j: int) {
+            ;
+        }
     }
 }
 ```
@@ -17,18 +19,27 @@ Test output is:
  .sParmEnd
   % .sNewLine
   .sBegin
-   .sIfStmt
-           .sInteger
-           .sInteger
-        .sEq
-   .sExpnEnd
-   .sThen
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sParmEnd
     % .sNewLine
-     .sBegin
+    .sBegin
+    .sProcedure
+    .sIdentifier
+     .sIdentifier
+     .sVar
+     .sIdentifier
+     .sParmEnd
+      % .sNewLine
+      .sBegin
       % .sNewLine
       .sNullStmt
-     % .sNewLine
-     .sEnd
+      % .sNewLine
+      .sEnd
+    % .sNewLine
+    .sEnd
   .sEnd
 
 ```
