@@ -2,7 +2,8 @@
 .sIdentifier    // identifier for 'output'
 .sParmEnd
 .sBegin         // start the main function
-.sProcedure  
+.sProcedure 
+.sIdentifier    // identifier for 'bar' 
 .sIdentifier    // identifier index for 'j' 
 .sVar           // j is mutable
 .sIdentifier    // identifier for int

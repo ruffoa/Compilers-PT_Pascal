@@ -366,7 +366,8 @@ ProcedureHeading :
         ')'
         .sParmEnd
         '{'
-        @BeginStmt;
+        .sBegin;
+        % @BeginStmt;
 
 Statement :
         [
