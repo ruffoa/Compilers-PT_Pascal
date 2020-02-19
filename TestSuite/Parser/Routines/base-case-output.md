@@ -20,22 +20,23 @@ Test output is:
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % .sNewLine
+  % .sNewLine
    .sBegin
+    % .sNewLine
+    .sNullStmt
+   % .sNewLine
    .sEnd
-  % .sNewLine
-  % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (10 vs 11)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sNullStmt on line 8 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

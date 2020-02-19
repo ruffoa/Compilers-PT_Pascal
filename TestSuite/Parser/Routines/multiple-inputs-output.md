@@ -26,20 +26,17 @@ Test output is:
     % .sNewLine
     % .sNewLine
    .sParmEnd
-   .sBegin
-   .sEnd
-  % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 15)!  (Newlines are not the issue here!) `multiple-inputs.pt`
+Warning, output length does not match (12 vs 15)!  (Newlines are not the issue here!) `multiple-inputs.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sNullStmt on line 12 of multiple-inputs.pt
+-.sEnd !== .sBegin on line 11 of multiple-inputs.pt
 
 ```
 end file
