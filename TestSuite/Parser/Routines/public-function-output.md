@@ -20,27 +20,24 @@ Test output is:
   .sProcedure
   .sIdentifier
   .sPublic
-   .sIdentifier
-   .sVar
-   .sIdentifier
    .sParmEnd
+    % .sNewLine
     .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
     .sEnd
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 12)!  (Newlines are not the issue here!) `public-function.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sIdentifier !== .sParmEnd on line 7 of public-function.pt
--.sVar !== .sBegin on line 8 of public-function.pt
--.sIdentifier !== .sNullStmt on line 9 of public-function.pt
--.sParmEnd !== .sEnd on line 10 of public-function.pt
--.sBegin !== .sEnd on line 11 of public-function.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
