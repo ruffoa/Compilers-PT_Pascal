@@ -1,0 +1,15 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sProcedure  
+.sIdentifier    // identifier index for 'test' 
+.sIdentifier    // identifier for 'i'
+.sIdentifier    // identifier for bool
+.sInitialValue false    // THIS SHOULD ERROR HERE!
+.sIdentifier    // identifier for 'j'
+.sParmEnd
+.sBegin  
+.sNullStmt      // the ';' is a valid statement inside a block apparently :P
+.sEnd 
+.sEnd

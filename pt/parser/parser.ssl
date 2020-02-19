@@ -352,23 +352,27 @@ VariableDeclarations :
 ProcedureHeading :
         % Accept zero or more procedure formal parameter declarations, but require the brackets
         '('
-        {[
-            % formal parameter identifier
-            | 'mut':
-                pIdentifier  .sIdentifier
-                .sVar
-                @VariableDeclarations
-            | pIdentifier:
-                .sIdentifier
-                @VariableDeclarations
-            | ',':  % consume comma and loop again 
-            | *:
-                >
-        ]}
+        {
+            [
+                % formal parameter identifier
+                | 'mut':
+                    pIdentifier  .sIdentifier
+                    .sVar
+                | pIdentifier:
+                    .sIdentifier
+            ]
+            ':'
+            % type identifier
+            pIdentifier  .sIdentifier
+            [
+                | ',':  % consume comma and loop again 
+                | *:
+                    >
+            ]
+        }
         ')'
         .sParmEnd
         @Block;
-        % @BeginStmt;
 
 Statement :
         [

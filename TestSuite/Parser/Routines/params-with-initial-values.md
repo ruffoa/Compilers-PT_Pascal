@@ -1,0 +1,1 @@
+This test is to make sure that function parameters cannot be initialized with a value
