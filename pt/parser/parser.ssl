@@ -191,11 +191,13 @@ Block :
                 .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
+                '{'
             | 'pub':
                 'fn' .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 .sPublic
                 @ProcedureHeading
+                '{'
             | pIdentifier:
                 @AssignmentOrCallStmt
             | '{':
@@ -211,12 +213,8 @@ Block :
             | *:
                 >
         ]}
-        %  'begin'
-        % '{'
-        % @BeginStmt;
         '}'
         .sEnd;  % end the block choice rule with an .sEnd token
-        % ;
 
 ConstantDefinitions :
         % Accept one or more named constant definitions
