@@ -22,7 +22,7 @@ Test output is:
   .sPublic
    .sParmEnd
   % .sNewLine
-  .sEnd
+   .sBegin
 
 ```
 ------------------------
@@ -32,7 +32,9 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.sEnd !== .sBegin on line 8 of public-function.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

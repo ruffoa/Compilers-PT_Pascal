@@ -23,16 +23,11 @@ Test output is:
         .sEq
    .sExpnEnd
    .sThen
-    % .sNewLine
-     .sBegin
-      % .sNewLine
-      .sNullStmt
-     % .sNewLine
-     .sEnd
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (10 vs 14)!  (Newlines are not the issue here!) `basic-block-with-if.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

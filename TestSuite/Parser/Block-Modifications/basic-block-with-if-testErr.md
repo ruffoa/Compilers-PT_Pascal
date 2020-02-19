@@ -3,7 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    fn test() 
+    if (1 == 0) {
+        ;
+    }
 }
 ```
 ------------------------
@@ -11,5 +13,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 3: syntax error at: }
+
 ```
