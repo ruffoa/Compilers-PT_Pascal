@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main(output){
-    let v;
+    let mut v;
 }
 ```
 ------------------------
@@ -19,6 +19,7 @@ Test output is:
   .sIdentifier
        .sIdentifier
        .sIdentifier
+  .sMutable
   .sEnd
 
 ```
