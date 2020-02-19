@@ -345,21 +345,7 @@ VariableDeclarations :
                 ]
             | '=':
                 @InitialValue
-        ]
-
-        %   {[
-        %       | ',':
-        %           %  .sVar  % Take this out for now to align with Cordy's solution
-        %           >
-        %       | ':':
-        %           @TypeBody
-        %       | '=':
-        %           @InitialValue
-        %       | ';':
-        %           >   % handle the semicolon and exit, we are done!
-        %       | *:
-        %           >
-        %   ]};
+        ];
 
 ProcedureHeading :
         % Accept zero or more procedure formal parameter declarations.
