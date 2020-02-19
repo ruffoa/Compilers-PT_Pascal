@@ -46,6 +46,38 @@ Output is:
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
   .sEnd
 
 ------------------------
@@ -253,6 +285,12 @@ Output is:
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
   .sEnd
 
 ------------------------
@@ -406,6 +444,13 @@ Output is:
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
+  % value emitted 55
+  .sNullStmt
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
   .sEnd
 
 ------------------------
@@ -450,6 +495,13 @@ Output is:
   .sConst
    .sIdentifier
     .sInteger
+  % value emitted 55
+  .sNullStmt
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+   % value emitted 55
   .sEnd
 
 ------------------------
@@ -660,6 +712,48 @@ Output is:
    .sIdentifier
        .sInteger
    .sExpnEnd
+  % value emitted 55
+  .sNullStmt
+   .sAssignmentStmt
+   .sIdentifier
+       .sStringLiteral
+   .sExpnEnd
+  % value emitted 55
+  .sNullStmt
+   .sLoopStmt
+    % value emitted 55
+     .sBegin
+      .sNullStmt
+      .sNullStmt
+     % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sStringLiteral
+           .sIdentifier
+         .sAdd
+       .sExpnEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+     % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+      .sNullStmt
+     % value emitted 55
+      .sNullStmt
+     % value emitted 55
+     .sEnd
+       .sIdentifier
+   .sExpnEnd
   .sEnd
 
 ------------------------
@@ -676,6 +770,34 @@ Output is:
  .sIdentifier
  .sParmEnd
   .sBegin
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sNullStmt
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sInteger
+   % value emitted 55
+  .sType
+   .sIdentifier
+     .sIdentifier
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
   .sEnd
 
 ------------------------

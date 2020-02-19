@@ -15,5 +15,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 4: syntax error at: ;
+scan/parse error, line 6: syntax error at: }
 ```

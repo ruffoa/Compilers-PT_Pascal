@@ -34,17 +34,22 @@ Test output is:
    .sParmEnd
    % .sNewLine
    .sBegin
+  % .sNewLine
+  .sNullStmt
+  % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (18 vs 21)!  (Newlines are not the issue here!) `nested-function-with-variables.pt`
+Warning, output length does not match (19 vs 21)!  (Newlines are not the issue here!) `nested-function-with-variables.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sNullStmt on line 17 of nested-function-with-variables.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
