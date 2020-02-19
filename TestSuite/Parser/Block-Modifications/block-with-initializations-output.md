@@ -19,11 +19,20 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
+     .sIdentifier
+  % .sNewLine
+  .sConst
+   .sIdentifier
+    .sInteger
+   % .sNewLine
+  .sType
+   .sIdentifier
+     .sIdentifier
+   % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (6 vs 14)!  (Newlines are not the issue here!) `block-with-initializations.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

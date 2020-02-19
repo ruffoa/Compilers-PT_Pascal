@@ -17,6 +17,10 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+  .sMutable
+  .sEnd
 
 ```
 ------------------------

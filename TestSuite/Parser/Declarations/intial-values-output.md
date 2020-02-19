@@ -18,6 +18,16 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
+     .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  % .sNewLine
+  .sConst
+   .sIdentifier
+    .sInteger
+   % .sNewLine
+  .sEnd
 
 ```
 ------------------------

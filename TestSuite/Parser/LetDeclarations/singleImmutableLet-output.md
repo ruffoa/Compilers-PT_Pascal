@@ -17,11 +17,12 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
+     .sIdentifier
+  % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (6 vs 8)!  (Newlines are not the issue here!) `singleImmutableLet.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
