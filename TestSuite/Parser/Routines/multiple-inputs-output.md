@@ -24,9 +24,11 @@ Test output is:
    .sIdentifier
       .sIdentifier
    .sParmEnd
-   % .sNewLine
-   .sBegin
+    % .sNewLine
     .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
     .sEnd
   .sEnd
 
@@ -36,7 +38,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.sBegin !== .sNullStmt on line 12 of multiple-inputs.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

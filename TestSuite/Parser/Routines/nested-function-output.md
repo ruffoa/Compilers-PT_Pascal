@@ -22,23 +22,30 @@ Test output is:
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % .sNewLine
-   .sBegin
+    % .sNewLine
     .sBegin
+    .sProcedure
+    .sIdentifier
+     .sParmEnd
+      % .sNewLine
+      .sBegin
+      % .sNewLine
+      .sNullStmt
+      % .sNewLine
+      .sEnd
+    % .sNewLine
     .sEnd
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (11 vs 16)!  (Newlines are not the issue here!) `nested-function.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sBegin !== .sProcedure on line 8 of nested-function.pt
--.sEnd !== .sIdentifier on line 9 of nested-function.pt
--.sEnd !== .sParmEnd on line 10 of nested-function.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

@@ -25,9 +25,11 @@ Test output is:
    .sIdentifier
       .sIdentifier
    .sParmEnd
-   % .sNewLine
-   .sBegin
+    % .sNewLine
     .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
     .sEnd
   .sEnd
 
@@ -37,7 +39,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.sBegin !== .sNullStmt on line 13 of mutable-variables.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

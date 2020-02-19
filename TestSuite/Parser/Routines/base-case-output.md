@@ -20,9 +20,11 @@ Test output is:
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % .sNewLine
-   .sBegin
+    % .sNewLine
     .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
     .sEnd
   .sEnd
 
@@ -32,7 +34,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.sBegin !== .sNullStmt on line 8 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
