@@ -13,9 +13,7 @@
 .sExpnEnd       // end the initial value 'expression'
 .sConst
 .sIdentifier    // identifier for c
-.sInteger 0    // initial value for c
-.sExpnEnd
+.sInteger 0     // initial value for c
 .sIdentifier    // identifier for d
-.sInteger d    // initial value for d
-.sExpnEnd
+.sInteger 6     // initial value for d
 .sEnd
