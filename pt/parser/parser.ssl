@@ -290,10 +290,11 @@ TypeDefinitions :
         % Accept one or more named type definitions.
         pIdentifier  .sIdentifier
         '='  @TypeBody  ';'
+        ;
 
 TypeBody :
         [
-            %| 'array':
+            % | 'array':
             %    .sArray
             %    '['  @SimpleType  ']'
             %    'of'  @SimpleType
