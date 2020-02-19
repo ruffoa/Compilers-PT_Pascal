@@ -155,6 +155,68 @@ Cleaned up some old code that was no longer used from the `block` statement
     - Update the type checking to not look for a `;`, and instead look for a `,` in order to support multiple variables
     - Call the existing `Block` SSL function at the end of the `ProcedureHeading` function, as any block element is valid inside a function
 
+Before:
+```
+ProcedureHeading :
+ProcedureHeading :
+        % Accept zero or more procedure formal parameter declarations.
+        [
+            | '(':
+                {
+                    % formal parameter identifier
+                    % ToDo: Get consts working!
+                    [
+                        | 'let':
+                            pIdentifier  .sIdentifier
+                            .sVar
+                        | *:
+                            pIdentifier  .sIdentifier
+                    ]
+                    ':'
+                    % type identifier
+                    pIdentifier  .sIdentifier
+                    [
+                        | ';':
+                        | *:
+                            >
+                    ]
+                }
+                ')'
+            | *:
+        ]
+        ';'
+        .sParmEnd;
+```
+
+After:
+```
+ProcedureHeading :
+        % Accept zero or more procedure formal parameter declarations, but require the brackets
+        '('
+        {
+            [
+                % formal parameter identifier
+                | 'mut':
+                    pIdentifier  .sIdentifier
+                    .sVar
+                | pIdentifier:
+                    .sIdentifier
+                | *: 
+                    >
+            ]
+            ':'
+            % type identifier
+            pIdentifier  .sIdentifier
+            [
+                | ',':  % consume comma and loop again 
+                | *:
+                    >
+            ]
+        }
+        ')'
+        .sParmEnd
+        @Block;
+```
 
 - Update the `Statement` function to accept the null statement (`;`)
 ```diff
