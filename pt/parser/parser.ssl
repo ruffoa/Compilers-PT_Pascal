@@ -326,17 +326,15 @@ ProcedureHeading :
         '('
         {[
             % formal parameter identifier
-            [
-                | 'mut':
-                    pIdentifier  .sIdentifier
-                    .sVar
-                    @VariableDeclarations
-                | pIdentifier:
-                    .sIdentifier
-                    @VariableDeclarations
-                | *:
-                    >
-            ]
+            | 'mut':
+                pIdentifier  .sIdentifier
+                .sVar
+                @VariableDeclarations
+            | pIdentifier:
+                .sIdentifier
+                @VariableDeclarations
+            | *:
+                >
         ]}
         ')'
         .sParmEnd;
