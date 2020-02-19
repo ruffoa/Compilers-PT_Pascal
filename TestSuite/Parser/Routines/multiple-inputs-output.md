@@ -20,9 +20,9 @@ Test output is:
   .sProcedure
   .sIdentifier
    .sIdentifier
-      .sIdentifier
    .sIdentifier
-      .sIdentifier
+   .sIdentifier
+   .sIdentifier
    .sParmEnd
     % .sNewLine
     .sBegin

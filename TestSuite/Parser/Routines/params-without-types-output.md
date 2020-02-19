@@ -3,10 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    fn foo(i: int) {
-        fn bar(mut j: int) {
-            ;
-        }
+    fn test(i: bool, j) {
+        ;
     }
 }
 ```
@@ -23,22 +21,10 @@ Test output is:
   .sIdentifier
    .sIdentifier
    .sIdentifier
+   .sIdentifier
+   .sIdentifier
    .sParmEnd
-    % .sNewLine
     .sBegin
-    .sProcedure
-    .sIdentifier
-     .sIdentifier
-     .sVar
-     .sIdentifier
-     .sParmEnd
-      % .sNewLine
-      .sBegin
-      % .sNewLine
-      .sNullStmt
-      % .sNewLine
-      .sEnd
-    % .sNewLine
     .sEnd
   .sEnd
 
@@ -48,9 +34,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sIdentifier !== .sParmEnd on line 9 of params-without-types.pt
+-.sParmEnd !== .sBegin on line 10 of params-without-types.pt
+-.sBegin !== .sNullStmt on line 11 of params-without-types.pt
 
 ```
 end file

@@ -21,9 +21,9 @@ Test output is:
   .sIdentifier
    .sIdentifier
    .sVar
-      .sIdentifier
    .sIdentifier
-      .sIdentifier
+   .sIdentifier
+   .sIdentifier
    .sParmEnd
     % .sNewLine
     .sBegin

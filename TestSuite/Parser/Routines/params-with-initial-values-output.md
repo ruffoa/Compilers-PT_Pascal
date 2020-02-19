@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    pub fn test() {
+    fn test(i: bool = false, j = 3) {
         ;
     }
 }
@@ -19,9 +19,7 @@ Test output is:
   .sBegin
   .sProcedure
   .sIdentifier
-  .sPublic
    .sIdentifier
-   .sVar
    .sIdentifier
    .sParmEnd
     .sBegin
@@ -30,17 +28,16 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 12)!  (Newlines are not the issue here!) `public-function.pt`
+Warning, output length does not match (12 vs 15)!  (Newlines are not the issue here!) `params-with-initial-values.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sIdentifier !== .sParmEnd on line 7 of public-function.pt
--.sVar !== .sBegin on line 8 of public-function.pt
--.sIdentifier !== .sNullStmt on line 9 of public-function.pt
--.sParmEnd !== .sEnd on line 10 of public-function.pt
--.sBegin !== .sEnd on line 11 of public-function.pt
+-.sParmEnd !== .sInitialValue false on line 8 of params-with-initial-values.pt
+-.sBegin !== .sIdentifier on line 9 of params-with-initial-values.pt
+-.sEnd !== .sParmEnd on line 10 of params-with-initial-values.pt
+-.sEnd !== .sBegin on line 11 of params-with-initial-values.pt
 
 ```
 end file

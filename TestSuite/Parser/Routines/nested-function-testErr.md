@@ -3,7 +3,11 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    fn test() 
+    fn foo() {
+        fn bar() {
+            ;
+        }
+    }
 }
 ```
 ------------------------

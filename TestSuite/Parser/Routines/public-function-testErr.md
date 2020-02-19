@@ -3,7 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    fn test() 
+    pub fn test() {
+        ;
+    }
 }
 ```
 ------------------------
