@@ -19,17 +19,20 @@ Test output is:
   .sIdentifier
    % .sNewLine
    .sParmEnd
-  .sEnd
+    .sBegin
+     .sNullStmt
+     .sNullStmt
 
 ```
 ------------------------
-Warning, output length does not match (8 vs 9)!  (Newlines are not the issue here!) `curly-brackets-check.pt`
+Warning, output length does not match (10 vs 9)!  (Newlines are not the issue here!) `curly-brackets-check.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sNullStmt on line 7 of curly-brackets-check.pt
+-.sBegin !== .sNullStmt on line 7 of curly-brackets-check.pt
+-.sNullStmt !== .sEnd on line 8 of curly-brackets-check.pt
 
 ```
 end file

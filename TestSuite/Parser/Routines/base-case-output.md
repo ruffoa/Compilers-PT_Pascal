@@ -20,13 +20,16 @@ Test output is:
   .sProcedure
   .sIdentifier
    .sParmEnd
-  % .sNewLine
-   .sBegin
+   % .sNewLine
+    .sBegin
+     % .sNewLine
+     .sNullStmt
+    % .sNewLine
+    .sEnd
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (8 vs 11)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

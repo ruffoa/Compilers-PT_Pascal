@@ -3,9 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    pub fn test() {
-        ;
-    }
+    fn test() 
 }
 ```
 ------------------------
@@ -13,5 +11,7 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-
+scan/parse error, line 3: syntax error at: }
+scan/parse error, line 3: unexpected end of file
+translation aborted
 ```
