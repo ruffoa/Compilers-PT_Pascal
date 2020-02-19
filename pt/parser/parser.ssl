@@ -187,10 +187,15 @@ Block :
             | 'let':
                 .sVar
                 @VariableDeclarations
-            | 'mod':
+            | 'fn':
                 .sProcedure
-                % procedure name
-                pIdentifier  .sIdentifier
+                pIdentifier  .sIdentifier   % procedure name
+                @ProcedureHeading
+                @Block  ';'
+            | 'pub':
+                .sProcedure
+                pIdentifier  .sIdentifier   % procedure name
+                .sPublic
                 @ProcedureHeading
                 @Block  ';'
             | pIdentifier:
@@ -317,32 +322,21 @@ VariableDeclarations :
         ]};
 
 ProcedureHeading :
-        % Accept zero or more procedure formal parameter declarations.
-        [
-            | '(':
-                {
-                    % formal parameter identifier
-                    % ToDo: Get consts working!
-                    [
-                        | 'let':
-                            pIdentifier  .sIdentifier
-                            .sVar
-                        | *:
-                            pIdentifier  .sIdentifier
-                    ]
-                    ':'
-                    % type identifier
+        % Accept zero or more procedure formal parameter declarations, but require the brackets
+        '('
+        [{
+            % formal parameter identifier
+            [
+                | 'mut':
                     pIdentifier  .sIdentifier
-                    [
-                        | ';':
-                        | *:
-                            >
-                    ]
-                }
-                ')'
-            | *:
-        ]
-        ';'
+                    .sVar
+                    @VariableDeclarations
+                | *:
+                    pIdentifier  .sIdentifier
+                    @VariableDeclarations
+            ]
+        }]
+        ')'
         .sParmEnd;
 
 Statement :
