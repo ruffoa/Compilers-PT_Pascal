@@ -1,0 +1,8 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sType
+.sIdentifier    // Identifier for t
+.sIdentifier    // Identifier for the int type
+.sEnd

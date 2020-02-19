@@ -24,9 +24,9 @@ Test output is:
   % .sNewLine
   .sBegin
   .sVar
-   .sIdentifier
+  .sIdentifier
      .sIdentifier
-   % .sNewLine
+  % .sNewLine
   .sConst
    .sIdentifier
     .sInteger

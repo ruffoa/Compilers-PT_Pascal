@@ -1,0 +1,3 @@
+mod main(output){
+    let mut v : int = 5;
+}

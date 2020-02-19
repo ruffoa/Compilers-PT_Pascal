@@ -1,0 +1,15 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sConst
+.sIdentifier    // identifier for a
+.sInteger 1
+.sIdentifer     // identifier for b
+.sInteger 2
+.sNegate
+.sIdentifier    // identifier for c
+.sStringLiteral // "test" 
+.sIdentifier    // identifier for d
+.sIdentifier    // identifier a
+.sEnd

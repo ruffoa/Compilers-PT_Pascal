@@ -19,13 +19,13 @@
     .sRange
      .sInteger
    % .sNewLine
-  .sVar
-   .sIdentifier
-      .sIdentifier
+  .sVar             // playershand declaration
+   .sIdentifier     // 'playershand'
+      .sIdentifier  // 'handarray'
    .sMutable
    % .sNewLine
-   .sIdentifier
-      .sIdentifier
+   .sIdentifier     // dealers hand declaration
+      .sIdentifier  // 'handarray'
    .sMutable
    % .sNewLine
   .sVar

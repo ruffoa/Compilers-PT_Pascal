@@ -2,10 +2,8 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let x: int;
-    const y = 1;
-    type t = int;
+mod main(output){
+    const a = 1, b = -2 , c = "test", d = a;
 }
 ```
 ------------------------
@@ -17,17 +15,16 @@ Test output is:
  .sParmEnd
   % .sNewLine
   .sBegin
-  .sVar
-  .sIdentifier
-     .sIdentifier
-  % .sNewLine
   .sConst
    .sIdentifier
     .sInteger
-   % .sNewLine
-  .sType
    .sIdentifier
-     .sIdentifier
+     .sInteger
+    .sNegate
+   .sIdentifier
+    .sStringLiteral
+   .sIdentifier
+    .sIdentifier
    % .sNewLine
   .sEnd
 
@@ -37,9 +34,7 @@ Test output is:
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sIdentifier !== .sIdentifer on line 7 of multiConstSingleLine.pt
 
 ```
 end file
