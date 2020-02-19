@@ -21,11 +21,12 @@ Test output is:
   .sIdentifier
    .sIdentifier
       .sIdentifier
+   .sIdentifier
+      .sIdentifier
    .sParmEnd
+   % .sNewLine
     .sBegin
-     .sNullStmt
-    % .sNewLine
-    % .sNewLine
+     % .sNewLine
      .sNullStmt
     % .sNewLine
     .sEnd
@@ -33,17 +34,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 15)!  (Newlines are not the issue here!) `multiple-inputs.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sParmEnd !== .sIdentifier on line 8 of multiple-inputs.pt
--.sBegin !== .sIdentifier on line 9 of multiple-inputs.pt
--.sNullStmt !== .sParmEnd on line 10 of multiple-inputs.pt
--.sNullStmt !== .sBegin on line 11 of multiple-inputs.pt
--.sEnd !== .sNullStmt on line 12 of multiple-inputs.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
