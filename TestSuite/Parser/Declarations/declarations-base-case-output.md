@@ -28,7 +28,9 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.sVar !== .sConst on line 4 of declarations-base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
