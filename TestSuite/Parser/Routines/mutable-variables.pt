@@ -1,0 +1,5 @@
+mod main (output) {
+    fn bar(mut j: int, k: bool) {
+        ;
+    }
+}
