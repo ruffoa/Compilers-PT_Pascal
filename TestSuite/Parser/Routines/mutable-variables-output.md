@@ -26,27 +26,18 @@ Test output is:
       .sIdentifier
    .sParmEnd
    % .sNewLine
-    .sBegin
-     % .sNewLine
-     .sNullStmt
-    % .sNewLine
-    .sEnd
+   .sBegin
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (16 vs 15)!  (Newlines are not the issue here!) `mutable-variables.pt`
+Warning, output length does not match (14 vs 16)!  (Newlines are not the issue here!) `mutable-variables.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sIdentifier !== .sVar on line 6 of mutable-variables.pt
--.sVar !== .sIdentifier on line 7 of mutable-variables.pt
--.sIdentifier !== .sParmEnd on line 10 of mutable-variables.pt
--.sParmEnd !== .sBegin on line 11 of mutable-variables.pt
--.sBegin !== .sNullStmt on line 12 of mutable-variables.pt
--.sNullStmt !== .sEnd on line 13 of mutable-variables.pt
+-.sEnd !== .sNullStmt on line 13 of mutable-variables.pt
 
 ```
 end file

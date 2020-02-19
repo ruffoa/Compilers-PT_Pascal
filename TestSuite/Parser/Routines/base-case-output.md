@@ -21,22 +21,18 @@ Test output is:
   .sIdentifier
    .sParmEnd
    % .sNewLine
-    .sBegin
-     % .sNewLine
-     .sNullStmt
-    % .sNewLine
-    .sEnd
+   .sBegin
   .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (9 vs 11)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sEnd !== .sNullStmt on line 8 of base-case.pt
 
 ```
 end file

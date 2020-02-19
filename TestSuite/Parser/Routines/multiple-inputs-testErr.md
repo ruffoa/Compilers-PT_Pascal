@@ -3,10 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    fn foo(i: int) {
-        fn bar(mut j: int) {
-            ;
-        }
+    fn test(i: int, j : int) {
+        ;
     }
 }
 ```
@@ -15,5 +13,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 4: syntax error at: ;
+scan/parse error, line 3: syntax error at: ;
 ```

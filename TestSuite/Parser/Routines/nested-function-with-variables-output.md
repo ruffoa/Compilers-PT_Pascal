@@ -25,30 +25,26 @@ Test output is:
       .sIdentifier
    .sParmEnd
    % .sNewLine
-    .sBegin
-     .sNullStmt
-     .sNullStmt
-    % .sNewLine
-    % .sNewLine
-     .sNullStmt
-    % .sNewLine
-    .sEnd
-  % .sNewLine
+   .sBegin
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+      .sIdentifier
+   .sParmEnd
+   % .sNewLine
+   .sBegin
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (15 vs 21)!  (Newlines are not the issue here!) `nested-function-with-variables.pt`
+Warning, output length does not match (18 vs 21)!  (Newlines are not the issue here!) `nested-function-with-variables.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sNullStmt !== .sProcedure on line 10 of nested-function-with-variables.pt
--.sNullStmt !== .sIdentifier on line 11 of nested-function-with-variables.pt
--.sNullStmt !== .sIdentifier on line 12 of nested-function-with-variables.pt
--.sEnd !== .sVar on line 13 of nested-function-with-variables.pt
--.sEnd !== .sIdentifier on line 14 of nested-function-with-variables.pt
+-.sEnd !== .sNullStmt on line 17 of nested-function-with-variables.pt
 
 ```
 end file
