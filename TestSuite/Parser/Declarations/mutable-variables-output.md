@@ -3,9 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-    type t = int;
+    let mut x : int;
+    let mut y : int, mut z = 1;
 }
 ```
 ------------------------
@@ -20,15 +19,18 @@ Test output is:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sType
-   .sIdentifier
+  .sVar
+  .sIdentifier
      .sIdentifier
-   % .sNewLine
+  .sMutable
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  .sMutable
+  % .sNewLine
   .sEnd
 
 ```

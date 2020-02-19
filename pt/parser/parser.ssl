@@ -186,7 +186,22 @@ Block :
                 @TypeDefinitions
             | 'let':
                 .sVar
-                @VariableDeclarations
+                {[
+                    | 'mut': 
+                        pIdentifier  .sIdentifier
+                        @VariableDeclarations
+                        .sMutable
+                    | pIdentifier:
+                        .sIdentifier
+                        @VariableDeclarations
+                    | *:
+                        >
+                ]
+                [
+                    | ',':  % consume comma and loop again 
+                    | ';':  % consume semicolon and exit loop as statement is done
+                        >
+                ]}
             | 'mod':
                 .sProcedure
                 % procedure name
@@ -218,11 +233,15 @@ Block :
 ConstantDefinitions :
         % Accept one or more named constant definitions
         pIdentifier  .sIdentifier
-        '=' @ConstantValue ';'
+        '=' @ConstantValue
         {[
-            | pIdentifier:
+            | ',':  % handle multiple declarations per line with a ','
+                % .sConst   % do not output the second const token for now, to keep in line with multi-variable declarations
+                pIdentifier
                 .sIdentifier
-                '=' @ConstantValue ';'
+                '=' @ConstantValue
+            | ';':
+                >   % consume the ';' token and exit loop
             | *:
                 >
         ]};
@@ -242,6 +261,23 @@ ConstantValue :
                 .sStringLiteral
         ];
 
+InitialValue :
+        .sInitialValue
+        [
+            | pInteger:
+                .sInteger
+            | pIdentifier:
+                .sIdentifier
+            | '-':
+                @UnsignedIntegerConstant
+                .sNegate
+            | '+':
+                @UnsignedIntegerConstant
+            | pStringLiteral:
+                .sStringLiteral
+        ]
+        .sExpnEnd;
+
 UnsignedIntegerConstant :
         [
             | pIdentifier:
@@ -254,17 +290,11 @@ TypeDefinitions :
         % Accept one or more named type definitions.
         pIdentifier  .sIdentifier
         '='  @TypeBody  ';'
-        {[
-            | pIdentifier:
-                .sIdentifier
-                '='  @TypeBody  ';'
-            | *:
-                >
-        ]};
+        ;
 
 TypeBody :
         [
-            %| 'array':
+            % | 'array':
             %    .sArray
             %    '['  @SimpleType  ']'
             %    'of'  @SimpleType
@@ -281,7 +311,7 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                %[
+                %[  % ToDo: Implement this properly!
                     %| '..':
                     %    .sRange         %% this may be unnecessary
                     %    @OptionallySignedIntegerConstant
@@ -306,15 +336,17 @@ OptionallySignedIntegerConstant :
 
 VariableDeclarations :
         % Accept one or more variable declarations.
-        pIdentifier  .sIdentifier
-        ':'  @TypeBody  ';'
-        {[
-            | pIdentifier:
-                .sIdentifier
-                ':'  @TypeBody  ';'
-            | *:
-                >
-        ]};
+        [
+            | ':':
+                @TypeBody
+                [
+                    | '=':
+                        @InitialValue
+                    | *:
+                ]
+            | '=':
+                @InitialValue
+        ];
 
 ProcedureHeading :
         % Accept zero or more procedure formal parameter declarations.

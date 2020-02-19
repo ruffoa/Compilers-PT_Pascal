@@ -2,10 +2,8 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let x: int;
-    const y = 1;
-    type t = int;
+mod main(output){
+    let v : int;
 }
 ```
 ------------------------
@@ -21,14 +19,6 @@ Test output is:
   .sIdentifier
      .sIdentifier
   % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sType
-   .sIdentifier
-     .sIdentifier
-   % .sNewLine
   .sEnd
 
 ```

@@ -1,0 +1,1 @@
+This is a basic test to make sure you can initialize a variable or a const with a value

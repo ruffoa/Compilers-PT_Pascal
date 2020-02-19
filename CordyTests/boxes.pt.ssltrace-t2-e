@@ -7,24 +7,24 @@
  % .sNewLine
  % .sNewLine
   .sBegin
-  .sVar
-   .sIdentifier
-      .sIdentifier
+  .sVar             // block of vars
+   .sIdentifier     // 'top'
+      .sIdentifier  // 'str'
    .sMutable
-   .sIdentifier
-      .sIdentifier
+   .sIdentifier     // 'middle'
+      .sIdentifier  // 'str'
    .sMutable
-   .sIdentifier
-      .sIdentifier
-   .sMutable
+   .sIdentifier     // 'bottom'
+      .sIdentifier  // 'str'
+   .sMutable        // set bottom as mutable
    % .sNewLine
-  .sVar
-   .sIdentifier
-      .sIdentifier
-   .sMutable
-   .sIdentifier
-      .sIdentifier
-   .sMutable
+  .sVar             // new set of vars
+   .sIdentifier     // 'width'
+      .sIdentifier  // 'int'
+   .sMutable        // set width as mutable
+   .sIdentifier     // 'height'
+      .sIdentifier  // 'int'
+   .sMutable        // set height as mutable
    % .sNewLine
   .sVar
    .sIdentifier

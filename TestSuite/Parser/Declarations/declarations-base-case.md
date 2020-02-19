@@ -1,0 +1,1 @@
+This test is to check that the basic declarations (`let`, `type` and `const`) are all working.  Note that this is currently the same as the `block-with-initializations` test, as the base case is the same.

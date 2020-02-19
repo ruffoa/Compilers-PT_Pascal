@@ -1,0 +1,11 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sVar
+.sIdentifier    // Identifier for v
+.sIdentifier    // Identifier for the int type
+.sInitialValue
+.sInteger 5
+.sExpnEnd
+.sEnd

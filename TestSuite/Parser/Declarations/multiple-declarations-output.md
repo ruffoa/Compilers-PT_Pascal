@@ -3,9 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-    type t = int;
+    let x = 1, y = 2;
+    const c = 0, d = 6;
 }
 ```
 ------------------------
@@ -19,15 +18,19 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
-     .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
   % .sNewLine
   .sConst
    .sIdentifier
     .sInteger
-   % .sNewLine
-  .sType
    .sIdentifier
-     .sIdentifier
+    .sInteger
    % .sNewLine
   .sEnd
 

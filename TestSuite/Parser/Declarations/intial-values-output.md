@@ -3,9 +3,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-    type t = int;
+    let x : int = 64;
+    const y = 53;
 }
 ```
 ------------------------
@@ -20,26 +19,17 @@ Test output is:
   .sVar
   .sIdentifier
      .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
   % .sNewLine
   .sConst
    .sIdentifier
     .sInteger
-   % .sNewLine
-  .sType
-   .sIdentifier
-     .sIdentifier
    % .sNewLine
   .sEnd
 
 ```
 ------------------------
 
-File diff
--------------------------
-```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
-
-```
 end file
