@@ -192,7 +192,7 @@ Block :
                 pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
             | 'pub':
-                .sProcedure
+                'fun' .sProcedure
                 pIdentifier  .sIdentifier   % procedure name
                 .sPublic
                 @ProcedureHeading
