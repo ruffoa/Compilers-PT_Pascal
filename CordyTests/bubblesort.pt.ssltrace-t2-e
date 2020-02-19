@@ -34,8 +34,8 @@
    .sIdentifier // int
    .sIdentifier // j
    .sIdentifier // int
-   .sIdentifier // mut
-   .sVar        // b declaration
+   .sIdentifier // b declaration
+   .sVar        // mut
    .sIdentifier // bool
    .sParmEnd
   % .sNewLine
