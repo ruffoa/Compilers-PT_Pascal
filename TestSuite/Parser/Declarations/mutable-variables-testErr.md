@@ -2,8 +2,9 @@
 Test Content: 
 -------------------------
 ```
-mod main(output){
-    let mut v;
+mod main (output) {
+    let mut x: int;
+    let mut y: int, mut z = 1;
 }
 ```
 ------------------------
@@ -11,6 +12,5 @@ mod main(output){
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: ;
 
 ```

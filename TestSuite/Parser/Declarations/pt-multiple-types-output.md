@@ -17,22 +17,18 @@ Test output is:
   .sBegin
   .sType
    .sIdentifier
-     .sIdentifier
-   .sIdentifier
-     .sIdentifier
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (10 vs 11)!  (Newlines are not the issue here!) `pt-multiple-types.pt`
+Warning, output length does not match (6 vs 11)!  (Newlines are not the issue here!) `pt-multiple-types.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sIdentifier !== .sType on line 7 of pt-multiple-types.pt
--.sEnd !== .sIdentifier on line 9 of pt-multiple-types.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

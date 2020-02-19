@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main(output){
-    let mut v;
+    let v : int;
 }
 ```
 ------------------------
@@ -11,6 +11,5 @@ mod main(output){
 Test Errors:
 -------------------------
 ```
-scan/parse error, line 2: syntax error at: ;
 
 ```

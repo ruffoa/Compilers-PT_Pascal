@@ -19,19 +19,16 @@ Test output is:
   .sBegin
   .sVar
   .sIdentifier
-     .sIdentifier
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sType
-   .sIdentifier
-     .sIdentifier
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (6 vs 14)!  (Newlines are not the issue here!) `declarations-base-case.pt`
+Showing as much of the diff as possible...
 
+File diff
+-------------------------
+```diff
+-.sVar !== .sConst on line 4 of declarations-base-case.pt
+
+```
 end file
