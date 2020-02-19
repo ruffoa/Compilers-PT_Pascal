@@ -23,22 +23,17 @@ Test output is:
    .sParmEnd
    % .sNewLine
    .sBegin
-  % .sNewLine
-  .sNullStmt
-  % .sNewLine
+    .sBegin
+    .sEnd
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (11 vs 12)!  (Newlines are not the issue here!) `public-function.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sBegin !== .sNullStmt on line 9 of public-function.pt
 
 ```
 end file
