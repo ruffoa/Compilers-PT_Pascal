@@ -1339,6 +1339,459 @@ File diff
 -------------------------
 end file
 --------------------------------
+Reading file mbubblesort.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'nelements'
+ .pEquals
+  .pInteger
+  % Output token text '25'
+ .pSemicolon
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'maxval'
+ .pEquals
+  .pInteger
+  % Output token text '99'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier
+  % Output token text 'elements'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'list'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pIdentifier
+  % Output token text 'nelements'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'lessthan'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'b'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'b'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pLess
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 't'
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 't'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pColon
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'nelements'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '61'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pStar
+  .pInteger
+  % Output token text '1271'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'j'
+ .pPercent
+  .pIdentifier
+  % Output token text 'maxval'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'nelements'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'sort'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pIdentifier
+  % Output token text 'nelements'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'j'
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'nelements'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'lt'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'lessthan'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'j'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'lt'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+ .pNot
+  .pIdentifier
+  % Output token text 'lt'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'j'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'j'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'sort'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
 Reading file francais.pt
   .pNewLine
   .pNewLine
@@ -1843,840 +2296,6 @@ File diff
 -------------------------
 end file
 --------------------------------
-Reading file primes.pt
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pEquals
-  .pInteger
-  % Output token text '100'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'prime'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'notprime'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier
-  % Output token text 'flags'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'flagvector'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'bool'
- .pColon
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'tf'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'tf'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'set'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'set'
- .pEquals
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'prime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'factor'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pPlus
-  .pIdentifier
-  % Output token text 'factor'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'multiple'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'multiple'
- .pComma
-  .pIdentifier
-  % Output token text 'notprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pPlusEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pRightParen
- .pDoubleBar
-  .pIdentifier
-  % Output token text 'isprime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The primes up to '
- .pComma
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text ' are:'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'factor'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'isprime'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pColon
-  .pInteger
-  % Output token text '4'
- .pRightParen
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file mbubblesort.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'nelements'
- .pEquals
-  .pInteger
-  % Output token text '25'
- .pSemicolon
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'maxval'
- .pEquals
-  .pInteger
-  % Output token text '99'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier
-  % Output token text 'elements'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'list'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pIdentifier
-  % Output token text 'nelements'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'lessthan'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'i'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'j'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'b'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'b'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pLess
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'swap'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'i'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'j'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier
-  % Output token text 't'
- .pEquals
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 't'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'show'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pColon
-  .pInteger
-  % Output token text '4'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pIdentifier
-  % Output token text 'nelements'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '61'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pStar
-  .pInteger
-  % Output token text '1271'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'j'
- .pPercent
-  .pIdentifier
-  % Output token text 'maxval'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'nelements'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'sort'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pIdentifier
-  % Output token text 'nelements'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'j'
- .pDoubleEquals
-  .pIdentifier
-  % Output token text 'nelements'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'lt'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'lessthan'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'j'
- .pComma
-  .pIdentifier
-  % Output token text 'j'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'lt'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
- .pNot
-  .pIdentifier
-  % Output token text 'lt'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'swap'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'j'
- .pComma
-  .pIdentifier
-  % Output token text 'j'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'j'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pMinusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'show'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'sort'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'show'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
 Reading file mprimes.pt
   .pNewLine
   .pNewLine
@@ -3114,6 +2733,387 @@ Reading file mprimes.pt
  .pLeftParen
  .pRightParen
  .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file primes.pt
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pEquals
+  .pInteger
+  % Output token text '100'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'prime'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'notprime'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier
+  % Output token text 'flags'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'bool'
+ .pColon
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'flagset'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'f'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'tf'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'f'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'tf'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'flagget'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'f'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'set'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'set'
+ .pEquals
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'f'
+ .pRightBracket
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'prime'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'factor'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'factor'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlus
+  .pIdentifier
+  % Output token text 'factor'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagset'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'multiple'
+ .pComma
+  .pIdentifier
+  % Output token text 'notprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pPlusEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagget'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pGreater
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pRightParen
+ .pDoubleBar
+  .pIdentifier
+  % Output token text 'isprime'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The primes up to '
+ .pComma
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text ' are:'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'factor'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagget'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pColon
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -5896,3051 +5896,6 @@ Reading file cache.pt
  .pRightParen
  .pSemicolon
  .pNewLine
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file bust.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'input'
- .pComma
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pType)
-  .pIdentifier
-  % Output token text 'handarray'
- .pEquals
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playershand'
- .pColon
-  .pIdentifier
-  % Output token text 'handarray'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershand'
- .pColon
-  .pIdentifier
-  % Output token text 'handarray'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playerscards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'gamesplayed'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playerscount'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playerstops'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playersname'
- .pColon
-  .pIdentifier
-  % Output token text 'str'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'continue'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'deck'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '52'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nextcard'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cardnames'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'str'
- .pColon
-  .pInteger
-  % Output token text '13'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'seed'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'multiplier'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'result'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'modulus'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'multiplier'
- .pDoubleEquals
-  .pInteger
-  % Output token text '17'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '19'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '17'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'seed'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'seed'
- .pStar
-  .pIdentifier
-  % Output token text 'multiplier'
- .pRightParen
- .pPercent
-  .pInteger
-  % Output token text '10000'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'result'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'seed'
- .pPercent
-  .pIdentifier
-  % Output token text 'modulus'
- .pRightParen
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'shuffle'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'card'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'cardcount'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'int'
- .pColon
-  .pInteger
-  % Output token text '13'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'c'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'ncards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardcount'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'c'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'c'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'c'
- .pGreater
-  .pInteger
-  % Output token text '13'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncards'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'card'
- .pComma
-  .pInteger
-  % Output token text '13'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'cardcount'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'card'
- .pRightBracket
- .pNotEqual
-  .pInteger
-  % Output token text '4'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'randint'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'card'
- .pComma
-  .pInteger
-  % Output token text '13'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'deck'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'ncards'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'card'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardcount'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'card'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'cardcount'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'card'
- .pRightBracket
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'ncards'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'ncards'
- .pGreater
-  .pInteger
-  % Output token text '52'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'nextcard'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'dealcard'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'card'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'nextcard'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'card'
- .pEquals
-  .pIdentifier
-  % Output token text 'deck'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'nextcard'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'cardsleft'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'number'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'number'
- .pEquals
-  .pInteger
-  % Output token text '52'
- .pMinus
-  .pIdentifier
-  % Output token text 'nextcard'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'puthandimage'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'ncards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'hand'
- .pColon
-  .pIdentifier
-  % Output token text 'handarray'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pIdentifier
-  % Output token text 'ncards'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' '
- .pComma
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'hand'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'e'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'E.O. Thorp'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'j'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Jim'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Pooja'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'somebodyplays'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayed'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'New shuffle.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'playersname'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'q'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pNotEqual
-  .pStringLiteral
-  % Output token text 'e'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'What does s/he stand on? '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pGreater
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pLess
-  .pInteger
-  % Output token text '21'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '(1..20): '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'read'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'readln'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'e'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'E.O.Thorp plays this time.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Next player is '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'S/he stops at '
- .pComma
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pLess
-  .pInteger
-  % Output token text '15'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '(What a hamburger!)'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Good luck, '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'playing'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'r'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'numcards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardsleft'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'numcards'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'numcards'
- .pGreater
-  .pInteger
-  % Output token text '10'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'New game.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayed'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Too few cards left for another game.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Of '
- .pComma
-  .pIdentifier
-  % Output token text 'gamesplayed'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text ' games, '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' won '
- .pComma
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text ', dealer won '
- .pComma
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pGreater
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'House cleans up on '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' this time.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pGreater
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'e'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'E.O.Thorp does it again.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' must have doctored the shuffle.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Even shuffle.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'r'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'playertakesacard'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerscards'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealcard'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playershand'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'playerscards'
- .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'dealertakesacard'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealcard'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershand'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'deal'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerscards'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'playertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'playertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The initial deal gives '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' :'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'puthandimage'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'playerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playershand'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  and the dealer :'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'puthandimage'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershand'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'evaluate'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'ncards'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'hand'
- .pColon
-  .pIdentifier
-  % Output token text 'handarray'
- .pComma
- .pNewLine
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'softhand'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'value'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'value'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pEquals
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pIdentifier
-  % Output token text 'ncards'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pMatch)
-  .pIdentifier
-  % Output token text 'hand'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pLeftBrace
- .pNewLine
- .pBar
-  .pInteger
-  % Output token text '2'
- .pBar
-  .pInteger
-  % Output token text '3'
- .pBar
-  .pInteger
-  % Output token text '4'
- .pBar
-  .pInteger
-  % Output token text '5'
- .pBar
-  .pInteger
-  % Output token text '6'
- .pBar
-  .pInteger
-  % Output token text '7'
- .pBar
-  .pInteger
-  % Output token text '8'
- .pBar
-  .pInteger
-  % Output token text '9'
- .pBar
-  .pInteger
-  % Output token text '10'
- .pEqualGreater
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'value'
- .pPlusEquals
-  .pIdentifier
-  % Output token text 'hand'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pBar
-  .pInteger
-  % Output token text '1'
- .pEqualGreater
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'value'
- .pPlusEquals
-  .pInteger
-  % Output token text '11'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pBar
- .pUnderscore
- .pEqualGreater
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'value'
- .pPlusEquals
-  .pInteger
-  % Output token text '10'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'value'
- .pLessEqual
-  .pInteger
-  % Output token text '21'
- .pRightParen
- .pDoubleBar
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pDoubleEquals
-  .pInteger
-  % Output token text '0'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'value'
- .pMinusEquals
-  .pInteger
-  % Output token text '10'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pMinusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'softhand'
- .pEquals
-  .pIdentifier
-  % Output token text 'nacescounted11'
- .pGreater
-  .pInteger
-  % Output token text '0'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'dealer'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'softhand'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'evaluate'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershand'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'softhand'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pGreater
-  .pInteger
-  % Output token text '21'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Dealer goes bust.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pDoubleEquals
-  .pInteger
-  % Output token text '21'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Dealer calls blackjack.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pLess
-  .pInteger
-  % Output token text '17'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Dealer stands with '
- .pComma
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pGreater
-  .pIdentifier
-  % Output token text 'playerscount'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'House wins.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerscount'
- .pLess
-  .pIdentifier
-  % Output token text 'playerscount'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' wins.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Tie game.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Dealer takes a card and now has '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'puthandimage'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershand'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'playerjoenaive'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playerscount'
- .pLess
-  .pIdentifier
-  % Output token text 'joenaivesguts'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'playertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'playerthorp'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'softhand'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'dealershows'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealershows'
- .pEquals
-  .pIdentifier
-  % Output token text 'dealershand'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'softhand'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealershows'
- .pGreater
-  .pInteger
-  % Output token text '8'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '18'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '17'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealershows'
- .pGreater
-  .pInteger
-  % Output token text '1'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealershows'
- .pLess
-  .pInteger
-  % Output token text '4'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '12'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealershows'
- .pGreater
-  .pInteger
-  % Output token text '3'
- .pRightParen
- .pDoubleAmpersand
- .pLeftParen
-  .pIdentifier
-  % Output token text 'dealershows'
- .pLess
-  .pInteger
-  % Output token text '7'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '11'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '16'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
- .pNot
-  .pIdentifier
-  % Output token text 'playerstops'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'playertakesacard'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'player'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pNewLine
-  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'softhand'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'evaluate'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'playerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playershand'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'softhand'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playerscount'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playerscount'
- .pDoubleEquals
-  .pInteger
-  % Output token text '21'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' calls blackjack.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesplayerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playerscount'
- .pGreater
-  .pInteger
-  % Output token text '21'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' goes bust.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'gamesdealerwon'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playersname'
- .pDoubleEquals
-  .pStringLiteral
-  % Output token text 'e'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerthorp'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'softhand'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'playerjoenaive'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playerstops'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' stands with '
- .pComma
-  .pIdentifier
-  % Output token text 'playerscount'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text '.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
-  .pIdentifier (screened to pElse)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'putplayersname'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' takes a card and now has '
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'puthandimage'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'playerscards'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'playershand'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'This program simulates the game of blackjack.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The dealer plays the compulsory strategy of standing on 17 or better.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The player plays either'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  [1] The standard naive strategy of standing on n or better, or'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  [2] A simplified version of the strategy described by  E.O.Thorp'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '      in his book "Beat the Dealer" (Vintage Books, 1966) pp. 20-21.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Input :'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  For each shuffle, a player name (character string of <= 20 characters),'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  and if (the player name specified is not "E.O.Thorp", the count [n]'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text '  on which the player stands.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'If the player name specified is "E.O.Thorp", the player strategy used'
- .pComma
-  .pStringLiteral
-  % Output token text ' will be Thorp's.'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Otherwise, the player will use the standard stop on count > n strategy.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The program will simulate one complete shuffle of play for each player.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'seed'
- .pEquals
-  .pInteger
-  % Output token text '13277'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiplier'
- .pEquals
-  .pInteger
-  % Output token text '17'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'A'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '2'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '3'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '3'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '4'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '4'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '5'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '5'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '6'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '6'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '7'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '8'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '9'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '9'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '10'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text '10'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '11'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'J'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '12'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'Q'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'cardnames'
- .pLeftBracket
-  .pInteger
-  % Output token text '13'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'K'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'somebodyplays'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'continue'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pNot
-  .pIdentifier
-  % Output token text 'continue'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'shuffle'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'playing'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'continue'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pNot
-  .pIdentifier
-  % Output token text 'continue'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'deal'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'playerstops'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'player'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'dealerstops'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'dealer'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'playing'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'continue'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'somebodyplays'
- .pLeftParen
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'continue'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -11892,6 +8847,3051 @@ Reading file mbust.pt
  .pSemicolon
  .pNewLine
  .pNewLine
+  .pIdentifier
+  % Output token text 'somebodyplays'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'continue'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pNot
+  .pIdentifier
+  % Output token text 'continue'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'shuffle'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playing'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'continue'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pNot
+  .pIdentifier
+  % Output token text 'continue'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'deal'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'player'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealer'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playing'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'continue'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'somebodyplays'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'continue'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file bust.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'input'
+ .pComma
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pType)
+  .pIdentifier
+  % Output token text 'handarray'
+ .pEquals
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playershand'
+ .pColon
+  .pIdentifier
+  % Output token text 'handarray'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pColon
+  .pIdentifier
+  % Output token text 'handarray'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'gamesplayed'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pColon
+  .pIdentifier
+  % Output token text 'str'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'continue'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'deck'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '52'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nextcard'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'str'
+ .pColon
+  .pInteger
+  % Output token text '13'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'seed'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'randint'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'result'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'modulus'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '17'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '19'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '17'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'seed'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'seed'
+ .pStar
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pRightParen
+ .pPercent
+  .pInteger
+  % Output token text '10000'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'result'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'seed'
+ .pPercent
+  .pIdentifier
+  % Output token text 'modulus'
+ .pRightParen
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'shuffle'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'card'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'cardcount'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pInteger
+  % Output token text '13'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'c'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'ncards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardcount'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'c'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'c'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'c'
+ .pGreater
+  .pInteger
+  % Output token text '13'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncards'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randint'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'card'
+ .pComma
+  .pInteger
+  % Output token text '13'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'cardcount'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'card'
+ .pRightBracket
+ .pNotEqual
+  .pInteger
+  % Output token text '4'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'randint'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'card'
+ .pComma
+  .pInteger
+  % Output token text '13'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'deck'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'ncards'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'card'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardcount'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'card'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'cardcount'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'card'
+ .pRightBracket
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'ncards'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'ncards'
+ .pGreater
+  .pInteger
+  % Output token text '52'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nextcard'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'dealcard'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'card'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nextcard'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'card'
+ .pEquals
+  .pIdentifier
+  % Output token text 'deck'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'nextcard'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'cardsleft'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'number'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'number'
+ .pEquals
+  .pInteger
+  % Output token text '52'
+ .pMinus
+  .pIdentifier
+  % Output token text 'nextcard'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'puthandimage'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'ncards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'hand'
+ .pColon
+  .pIdentifier
+  % Output token text 'handarray'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'ncards'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' '
+ .pComma
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'hand'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'e'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'E.O. Thorp'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'j'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Jim'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Pooja'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'somebodyplays'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayed'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'New shuffle.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'playersname'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'q'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pNotEqual
+  .pStringLiteral
+  % Output token text 'e'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'What does s/he stand on? '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pGreater
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pLess
+  .pInteger
+  % Output token text '21'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '(1..20): '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'read'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'readln'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'e'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'E.O.Thorp plays this time.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Next player is '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'S/he stops at '
+ .pComma
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pLess
+  .pInteger
+  % Output token text '15'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '(What a hamburger!)'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Good luck, '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'playing'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'r'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'numcards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardsleft'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'numcards'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'numcards'
+ .pGreater
+  .pInteger
+  % Output token text '10'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'New game.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayed'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Too few cards left for another game.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Of '
+ .pComma
+  .pIdentifier
+  % Output token text 'gamesplayed'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text ' games, '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' won '
+ .pComma
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text ', dealer won '
+ .pComma
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pGreater
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'House cleans up on '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' this time.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pGreater
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'e'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'E.O.Thorp does it again.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' must have doctored the shuffle.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Even shuffle.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'r'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'playertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealcard'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playershand'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'dealertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealcard'
+ .pLeftParen
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'deal'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The initial deal gives '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' :'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'puthandimage'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playershand'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  and the dealer :'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'puthandimage'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'evaluate'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'ncards'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'hand'
+ .pColon
+  .pIdentifier
+  % Output token text 'handarray'
+ .pComma
+ .pNewLine
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'value'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'value'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'ncards'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pMatch)
+  .pIdentifier
+  % Output token text 'hand'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pLeftBrace
+ .pNewLine
+ .pBar
+  .pInteger
+  % Output token text '2'
+ .pBar
+  .pInteger
+  % Output token text '3'
+ .pBar
+  .pInteger
+  % Output token text '4'
+ .pBar
+  .pInteger
+  % Output token text '5'
+ .pBar
+  .pInteger
+  % Output token text '6'
+ .pBar
+  .pInteger
+  % Output token text '7'
+ .pBar
+  .pInteger
+  % Output token text '8'
+ .pBar
+  .pInteger
+  % Output token text '9'
+ .pBar
+  .pInteger
+  % Output token text '10'
+ .pEqualGreater
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'value'
+ .pPlusEquals
+  .pIdentifier
+  % Output token text 'hand'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pBar
+  .pInteger
+  % Output token text '1'
+ .pEqualGreater
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'value'
+ .pPlusEquals
+  .pInteger
+  % Output token text '11'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pBar
+ .pUnderscore
+ .pEqualGreater
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'value'
+ .pPlusEquals
+  .pInteger
+  % Output token text '10'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'value'
+ .pLessEqual
+  .pInteger
+  % Output token text '21'
+ .pRightParen
+ .pDoubleBar
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '0'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'value'
+ .pMinusEquals
+  .pInteger
+  % Output token text '10'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'softhand'
+ .pEquals
+  .pIdentifier
+  % Output token text 'nacescounted11'
+ .pGreater
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'dealer'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'evaluate'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pGreater
+  .pInteger
+  % Output token text '21'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Dealer goes bust.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '21'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Dealer calls blackjack.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pLess
+  .pInteger
+  % Output token text '17'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Dealer stands with '
+ .pComma
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pGreater
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'House wins.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealerscount'
+ .pLess
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' wins.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Tie game.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Dealer takes a card and now has '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'puthandimage'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'playerjoenaive'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pLess
+  .pIdentifier
+  % Output token text 'joenaivesguts'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'playerthorp'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'softhand'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pEquals
+  .pIdentifier
+  % Output token text 'dealershand'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pGreater
+  .pInteger
+  % Output token text '8'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '18'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '17'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pGreater
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pLess
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '12'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pGreater
+  .pInteger
+  % Output token text '3'
+ .pRightParen
+ .pDoubleAmpersand
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'dealershows'
+ .pLess
+  .pInteger
+  % Output token text '7'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '11'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '16'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+ .pNot
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playertakesacard'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'player'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pNewLine
+  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'evaluate'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playershand'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'softhand'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pDoubleEquals
+  .pInteger
+  % Output token text '21'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' calls blackjack.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesplayerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pGreater
+  .pInteger
+  % Output token text '21'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' goes bust.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'dealerstops'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'gamesdealerwon'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playersname'
+ .pDoubleEquals
+  .pStringLiteral
+  % Output token text 'e'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerthorp'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'softhand'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'playerjoenaive'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'playerstops'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' stands with '
+ .pComma
+  .pIdentifier
+  % Output token text 'playerscount'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text '.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+  .pIdentifier (screened to pElse)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'putplayersname'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' takes a card and now has '
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'puthandimage'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'playerscards'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'playershand'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'This program simulates the game of blackjack.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The dealer plays the compulsory strategy of standing on 17 or better.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The player plays either'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  [1] The standard naive strategy of standing on n or better, or'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  [2] A simplified version of the strategy described by  E.O.Thorp'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '      in his book "Beat the Dealer" (Vintage Books, 1966) pp. 20-21.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Input :'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  For each shuffle, a player name (character string of <= 20 characters),'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  and if (the player name specified is not "E.O.Thorp", the count [n]'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text '  on which the player stands.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'If the player name specified is "E.O.Thorp", the player strategy used'
+ .pComma
+  .pStringLiteral
+  % Output token text ' will be Thorp's.'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Otherwise, the player will use the standard stop on count > n strategy.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The program will simulate one complete shuffle of play for each player.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'seed'
+ .pEquals
+  .pInteger
+  % Output token text '13277'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiplier'
+ .pEquals
+  .pInteger
+  % Output token text '17'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'A'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '2'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '3'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '3'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '4'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '4'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '5'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '5'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '6'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '6'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '7'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '8'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '9'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '9'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '10'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text '10'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '11'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'J'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '12'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'Q'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'cardnames'
+ .pLeftBracket
+  .pInteger
+  % Output token text '13'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'K'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
   .pIdentifier
   % Output token text 'somebodyplays'
  .pLeftParen
