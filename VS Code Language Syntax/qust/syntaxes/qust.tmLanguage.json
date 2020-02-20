@@ -1,0 +1,100 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Qust",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#invalid"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.control.qust",
+				"match": "(mod|main|fn|let|const|mut|loop|while|match|if)"
+			},
+			{
+				"name": "keyword.operator.qust",
+				"match": "(&&|\\|\\||==|!=|;|=|\\+|-|\\+=|-=|:|%|{|})"
+			},
+			{
+				"name": "keyword.other.qust",
+				"match": "((?<!\\w)\\.(p|s|t)\\w+)"
+			}
+		]},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "([A-Z][A-Za-z. ]*:)"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "([0-9]+)"
+				},
+				{
+					"name": "constant.language",
+					"match": "(int|bool|str)"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "entity.name",
+					"match": "([a-z][A-Za-z. ]*:)"
+				},
+				{
+					"name": "entity.name.tag",
+					"match": "([a-z][A-Za-z]*)"
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"match": "((?<!\\w)#\\w+)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.qust",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.qust",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.qust",
+			"match": "//.*"
+		}
+	},
+	"scopeName": "source.qust"
+}

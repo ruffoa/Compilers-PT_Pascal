@@ -1,0 +1,25 @@
+{
+    "name": "qust",
+    "displayName": "Qust",
+    "description": "Qust Syntax",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "qust",
+            "aliases": ["Qust", "qust"],
+            "extensions": [".pt", ".qu"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "qust",
+            "scopeName": "source.qust",
+            "path": "./syntaxes/qust.tmLanguage.json"
+        }]
+    }
+}
