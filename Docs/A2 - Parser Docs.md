@@ -115,6 +115,30 @@ TypeDefinitions :
 ```
 
 # Types
+## `parser.ssl` Changes
+- Changed the `TypeBody` rule to handle Qust array declarations.
+
+```diff
+    TypeBody :
+        [
+-           | 'array':
+-               .sArray
+-               '['  @SimpleType  ']'
+-               'of'  @SimpleType
++           | '[':
++              .sArray
++               @SimpleType
++               ':'
++               .sRange
++               @UnsignedIntegerConstant
++               ']'
+            | 'file':
+                .sFile
+                'of'  @SimpleType
+            | *:
+                @SimpleType
+        ];
+```
 
 # Routines
 ## `parser.ssl` Changes

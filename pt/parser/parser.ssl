@@ -295,10 +295,13 @@ TypeDefinitions :
 
 TypeBody :
         [
-            % | 'array':
-            %    .sArray
-            %    '['  @SimpleType  ']'
-            %    'of'  @SimpleType
+            | '[':
+               .sArray
+                @SimpleType
+                ':'
+                .sRange
+                @UnsignedIntegerConstant
+                ']'
             | 'file':
                 .sFile
                 'of'  @SimpleType
