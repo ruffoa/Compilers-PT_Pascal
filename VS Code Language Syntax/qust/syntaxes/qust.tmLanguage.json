@@ -1,9 +1,12 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "SSL",
+	"name": "Qust",
 	"patterns": [
 		{
 			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
 		},
 		{
 			"include": "#entities"
@@ -25,16 +28,16 @@
 		"keywords": {
 			"patterns": [
 			{
-				"name": "keyword.operator.ssl",
-				"match": "(\\*:|:|\\||\\?)"
+				"name": "keyword.control.qust",
+				"match": "(mod|main|fn|let|const|mut|loop|while|match|if)"
 			},
 			{
-				"name": "keyword.control.ssl",
-				"match": "(>|(?<!\\w)@\\w+|{|}|[|])"
+				"name": "keyword.operator.qust",
+				"match": "(&&|\\|\\||==|!=|;|=|\\+|-|\\+=|-=|:|%|{|})"
 			},
 			{
-				"name": "keyword.other.ssl",
-				"match": "(;|(?<!\\w)\\.(p|s)\\w+)"
+				"name": "keyword.other.qust",
+				"match": "((?<!\\w)\\.(p|s|t)\\w+)"
 			}
 		]},
 		"entities": {
@@ -42,6 +45,22 @@
 				{
 					"name": "entity.name.function",
 					"match": "([A-Z][A-Za-z. ]*:)"
+				},
+				{
+					"name": "entity.name.type",
+					"match": "(int|bool|str)"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "([0-9]+)"
+				},
+				{
+					"name": "constant.language",
+					"match": "(false|true)"
 				}
 			]
 		},
@@ -52,7 +71,7 @@
 					"match": "([a-z][A-Za-z. ]*:)"
 				},
 				{
-					"name": "entity.name.class",
+					"name": "entity.name.tag",
 					"match": "([a-z][A-Za-z]*)"
 				}
 			]
@@ -66,20 +85,20 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.single.ssl",
+			"name": "string.quoted.single.qust",
 			"begin": "'",
 			"end": "'",
 			"patterns": [
 				{
-					"name": "constant.character.escape.ssl",
+					"name": "constant.character.escape.qust",
 					"match": "\\\\."
 				}
 			]
 		},
 		"comments": {
-			"name": "comment.ssl",
-			"match": "%.*"
+			"name": "comment.qust",
+			"match": "//.*"
 		}
 	},
-	"scopeName": "source.ssl"
+	"scopeName": "source.qust"
 }
