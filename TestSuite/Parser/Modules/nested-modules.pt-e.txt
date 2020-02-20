@@ -7,6 +7,7 @@
 .sBegin         // begin test module
 .sModule        // bar module
 .sIdentifier    // identifier for 'bar'
+.sBegin         // begin 'bar' module
 .sNullStmt 
 .sEnd           // end 'bar' 
 .sEnd           // end 'Test'

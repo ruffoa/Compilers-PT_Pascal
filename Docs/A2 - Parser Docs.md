@@ -224,6 +224,14 @@ ProcedureHeading :
 ```
 
 # Modules
+## `parser.ssl` Changes
+- Update the Block statement to accept modules
+```diff
++       | 'mod':
++           .sModule
++           pIdentifier  .sIdentifier   % module name
++           @Block
+```
 
 # Statement Sequences
 
