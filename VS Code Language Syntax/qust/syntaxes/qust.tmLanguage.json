@@ -45,6 +45,10 @@
 				{
 					"name": "entity.name.function",
 					"match": "([A-Z][A-Za-z. ]*:)"
+				},
+				{
+					"name": "entity.name.type",
+					"match": "(int|bool|str)"
 				}
 			]
 		},
@@ -56,7 +60,7 @@
 				},
 				{
 					"name": "constant.language",
-					"match": "(int|bool|str)"
+					"match": "(false|true)"
 				}
 			]
 		},
