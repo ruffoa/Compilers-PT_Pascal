@@ -211,6 +211,10 @@ Block :
                 pIdentifier  .sIdentifier   % procedure name
                 .sPublic
                 @ProcedureHeading
+            | 'mod':
+                .sModule
+                pIdentifier  .sIdentifier   % module name
+                @Block
             | pIdentifier:
                 @AssignmentOrCallStmt
             | '{':
