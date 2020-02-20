@@ -19,7 +19,6 @@ The test output should be:
 .sIdentifier "bool"
 .sRange
 .sInteger 5
-.sMutable
 .sIdentifier "c"
 .sArray
 .sIdentifier "str"
