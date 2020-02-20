@@ -465,7 +465,12 @@ IfStmt :
         [
             | 'else':
                 .sElse
-                @Block  % call the Block rule to handle the content for the else section of the if statement
+                [
+                    | 'if':         % handle the case of an "else if"
+                        @IfStmt
+                    |*:
+                        @Block          % call the Block rule to handle the content for the else section of the if statement
+                ]
             | *:
         ];
 

@@ -1,0 +1,5 @@
+mod main(output){
+    if a == 1 {
+        ;
+    }
+}

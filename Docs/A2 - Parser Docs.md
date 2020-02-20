@@ -259,9 +259,10 @@ ProcedureHeading :
 
 # Statement Sequences
 
-# Statements
+# If Statement and Else-If clauses
 ## `parser.ssl` Changes
 - Updated the `IfStmt` rule to call the `Block` rule to handle the content of the if and else blocks.
+- Updated the `IfStmt` rule to handle else-if clauses by inserting another choice under the initial 'else' choice. If we encounter another 'if' token then we recurse and call the `IfStmt` rule again to handle the else-if clause as a regular if statement in the else block.
 
 ```diff
     IfStmt :
@@ -274,13 +275,15 @@ ProcedureHeading :
         [
             | 'else':
                 .sElse
--               @Statement
-+               @Block  % call the Block rule to handle the content for the else section of the if statement
++               [
++                   | 'if':         % handle the case of an "else if"
++                       @IfStmt
++                   |*:
++                       @Block      % call the Block rule to handle the content for the else section of the if statement
++               ]
             | *:
         ];
 ```
-
-# Else-If Clauses
 
 # Match Statements
 
