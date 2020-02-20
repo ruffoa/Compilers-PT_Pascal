@@ -277,7 +277,9 @@ ProcedureHeading :
                 .sElse
 +               [
 +                   | 'if':         % handle the case of an "else if"
++                       .sBegin     % Need to emit sBegin token for else block
 +                       @IfStmt
++                       .sEnd       % Need to emit sEnd token for else block
 +                   |*:
 +                       @Block      % call the Block rule to handle the content for the else section of the if statement
 +               ]
