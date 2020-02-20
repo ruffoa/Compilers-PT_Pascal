@@ -220,6 +220,473 @@ File diff
 -------------------------
 end file
 --------------------------------
+Reading file bubblesort.pt
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'nelements'
+ .pEquals
+  .pInteger
+  % Output token text '25'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'maxval'
+ .pEquals
+  .pInteger
+  % Output token text '99'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'list'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'int'
+ .pColon
+  .pIdentifier
+  % Output token text 'nelements'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'current'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'lessthan'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'b'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'current'
+ .pEquals
+  .pIdentifier
+  % Output token text 'i'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'b'
+ .pEquals
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pLess
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'i'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 't'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'current'
+ .pEquals
+  .pIdentifier
+  % Output token text 'j'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 't'
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'j'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 't'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pColon
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pIdentifier
+  % Output token text 'nelements'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'sort'
+ .pLeftParen
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pIdentifier
+  % Output token text 'nelements'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'i'
+ .pGreater
+  .pInteger
+  % Output token text '0'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'j'
+ .pLess
+  .pIdentifier
+  % Output token text 'nelements'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'lt'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'lessthan'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'j'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'lt'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+ .pNot
+  .pIdentifier
+  % Output token text 'lt'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'swap'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'j'
+ .pComma
+  .pIdentifier
+  % Output token text 'j'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'j'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pInteger
+  % Output token text '61'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'i'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'i'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 'j'
+ .pEquals
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pStar
+  .pInteger
+  % Output token text '1271'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'list'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'j'
+ .pPercent
+  .pIdentifier
+  % Output token text 'maxval'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'i'
+ .pDoubleEquals
+  .pIdentifier
+  % Output token text 'nelements'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'current'
+ .pEquals
+  .pInteger
+  % Output token text '0'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'sort'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'show'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
 Reading file boxes.pt
   .pNewLine
   .pNewLine
@@ -872,7 +1339,8 @@ File diff
 -------------------------
 end file
 --------------------------------
-Reading file bubblesort.pt
+Reading file mprimes.pt
+  .pNewLine
   .pNewLine
   .pIdentifier (screened to pMod)
   .pIdentifier (screened to pMain)
@@ -883,66 +1351,77 @@ Reading file bubblesort.pt
  .pLeftBrace
  .pNewLine
  .pNewLine
+  .pNewLine
   .pIdentifier (screened to pConst)
   .pIdentifier
-  % Output token text 'nelements'
+  % Output token text 'maxprimes'
  .pEquals
   .pInteger
-  % Output token text '25'
+  % Output token text '100'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier
+  % Output token text 'maxfactor'
+ .pEquals
+  .pInteger
+  % Output token text '50'
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'prime'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
  .pSemicolon
  .pNewLine
   .pIdentifier (screened to pConst)
   .pIdentifier
-  % Output token text 'maxval'
+  % Output token text 'notprime'
  .pEquals
-  .pInteger
-  % Output token text '99'
+  .pIdentifier
+  % Output token text 'false'
  .pSemicolon
  .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier
+  % Output token text 'flags'
+ .pLeftBrace
  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'list'
+  % Output token text 'flagvector'
  .pColon
  .pLeftBracket
   .pIdentifier
-  % Output token text 'int'
+  % Output token text 'bool'
  .pColon
   .pIdentifier
-  % Output token text 'nelements'
+  % Output token text 'maxprimes'
  .pRightBracket
  .pSemicolon
  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'current'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
  .pNewLine
- .pNewLine
+  .pIdentifier (screened to pPub)
   .pIdentifier (screened to pFn)
   .pIdentifier
-  % Output token text 'lessthan'
+  % Output token text 'flagset'
  .pLeftParen
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'f'
  .pColon
   .pIdentifier
   % Output token text 'int'
  .pComma
   .pIdentifier
-  % Output token text 'j'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'b'
+  % Output token text 'tf'
  .pColon
   .pIdentifier
   % Output token text 'bool'
@@ -950,116 +1429,54 @@ Reading file bubblesort.pt
  .pLeftBrace
  .pNewLine
   .pIdentifier
-  % Output token text 'current'
- .pEquals
-  .pIdentifier
-  % Output token text 'i'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'b'
- .pEquals
- .pLeftParen
-  .pIdentifier
-  % Output token text 'list'
+  % Output token text 'flagvector'
  .pLeftBracket
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'f'
  .pRightBracket
- .pLess
+ .pEquals
   .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pRightParen
+  % Output token text 'tf'
  .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
  .pNewLine
+  .pIdentifier (screened to pPub)
   .pIdentifier (screened to pFn)
   .pIdentifier
-  % Output token text 'swap'
+  % Output token text 'flag'
  .pLeftParen
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'f'
  .pColon
   .pIdentifier
   % Output token text 'int'
  .pComma
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'j'
+  % Output token text 'set'
  .pColon
   .pIdentifier
-  % Output token text 'int'
+  % Output token text 'bool'
  .pRightParen
  .pLeftBrace
  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 't'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'current'
+  % Output token text 'set'
  .pEquals
   .pIdentifier
-  % Output token text 'j'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 't'
- .pEquals
-  .pIdentifier
-  % Output token text 'list'
+  % Output token text 'flagvector'
  .pLeftBracket
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'f'
  .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'j'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 't'
  .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
  .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'show'
- .pLeftParen
- .pRightParen
- .pLeftBrace
- .pNewLine
+  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
@@ -1069,22 +1486,23 @@ Reading file bubblesort.pt
   % Output token text '1'
  .pSemicolon
  .pNewLine
-  .pIdentifier (screened to pLoop)
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
  .pLeftBrace
  .pNewLine
   .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'list'
+  % Output token text 'flagvector'
  .pLeftBracket
   .pIdentifier
   % Output token text 'i'
  .pRightBracket
- .pColon
-  .pInteger
-  % Output token text '4'
- .pRightParen
+ .pEquals
+  .pIdentifier
+  % Output token text 'prime'
  .pSemicolon
  .pNewLine
   .pIdentifier
@@ -1094,13 +1512,261 @@ Reading file bubblesort.pt
   % Output token text '1'
  .pSemicolon
  .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+ .pNewLine
+  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'factor'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
   .pIdentifier (screened to pBreak)
   .pIdentifier (screened to pIf)
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'factor'
  .pGreater
   .pIdentifier
-  % Output token text 'nelements'
+  % Output token text 'maxfactor'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlus
+  .pIdentifier
+  % Output token text 'factor'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pGreater
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagset'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'multiple'
+ .pComma
+  .pIdentifier
+  % Output token text 'notprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pPlusEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlus
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flag'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pGreater
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pRightParen
+ .pDoubleBar
+  .pIdentifier
+  % Output token text 'isprime'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flag'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pEquals
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The primes up to '
+ .pComma
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text ' are:'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pGreater
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flag'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pColon
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'nextfactor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
  .pSemicolon
  .pNewLine
  .pRightBrace
@@ -1113,115 +1779,168 @@ Reading file bubblesort.pt
  .pNewLine
  .pRightBrace
  .pNewLine
- .pNewLine
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'sort'
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file primes.pt
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
  .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
  .pRightParen
  .pLeftBrace
  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
+  .pIdentifier (screened to pConst)
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'maxprimes'
  .pEquals
-  .pIdentifier
-  % Output token text 'nelements'
- .pMinus
   .pInteger
-  % Output token text '1'
+  % Output token text '100'
  .pSemicolon
  .pNewLine
-  .pIdentifier (screened to pWhile)
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pConst)
   .pIdentifier
-  % Output token text 'i'
- .pGreater
-  .pInteger
-  % Output token text '0'
+  % Output token text 'prime'
+ .pEquals
+  .pIdentifier
+  % Output token text 'true'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pConst)
+  .pIdentifier
+  % Output token text 'notprime'
+ .pEquals
+  .pIdentifier
+  % Output token text 'false'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier
+  % Output token text 'flags'
  .pLeftBrace
  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'j'
- .pEquals
-  .pInteger
-  % Output token text '1'
+  % Output token text 'flagvector'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'bool'
+ .pColon
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pRightBracket
  .pSemicolon
  .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'j'
- .pLess
-  .pIdentifier
-  % Output token text 'nelements'
- .pLeftBrace
  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
   .pIdentifier
-  % Output token text 'lt'
+  % Output token text 'flagset'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'f'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier
+  % Output token text 'tf'
  .pColon
   .pIdentifier
   % Output token text 'bool'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'lessthan'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'j'
- .pComma
-  .pIdentifier
-  % Output token text 'j'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'lt'
  .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
- .pNot
-  .pIdentifier
-  % Output token text 'lt'
  .pLeftBrace
  .pNewLine
   .pIdentifier
-  % Output token text 'swap'
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'f'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'tf'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pPub)
+  .pIdentifier (screened to pFn)
+  .pIdentifier
+  % Output token text 'flagget'
  .pLeftParen
   .pIdentifier
-  % Output token text 'j'
+  % Output token text 'f'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
  .pComma
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'j'
- .pPlus
-  .pInteger
-  % Output token text '1'
+  % Output token text 'set'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
  .pRightParen
- .pSemicolon
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'set'
+ .pEquals
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'f'
+ .pRightBracket
  .pNewLine
  .pRightBrace
  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'j'
- .pPlusEquals
+  % Output token text 'i'
+ .pEquals
   .pInteger
   % Output token text '1'
  .pSemicolon
  .pNewLine
- .pRightBrace
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'i'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagvector'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'i'
+ .pRightBracket
+ .pEquals
+  .pIdentifier
+  % Output token text 'prime'
+ .pSemicolon
  .pNewLine
   .pIdentifier
   % Output token text 'i'
- .pMinusEquals
+ .pPlusEquals
   .pInteger
   % Output token text '1'
- .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
@@ -1229,23 +1948,89 @@ Reading file bubblesort.pt
  .pNewLine
  .pNewLine
   .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pInteger
-  % Output token text '61'
+  % Output token text 'isprime'
+ .pColon
+  .pIdentifier
+  % Output token text 'bool'
  .pSemicolon
  .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
  .pNewLine
   .pIdentifier (screened to pLet)
   .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'i'
+  % Output token text 'factor'
  .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'factor'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pLeftBrace
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlus
+  .pIdentifier
+  % Output token text 'factor'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'multiple'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagset'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'multiple'
+ .pComma
+  .pIdentifier
+  % Output token text 'notprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'multiple'
+ .pPlusEquals
+  .pIdentifier
+  % Output token text 'factor'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
   .pInteger
   % Output token text '1'
  .pSemicolon
@@ -1254,79 +2039,649 @@ Reading file bubblesort.pt
  .pLeftBrace
  .pNewLine
   .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
+  % Output token text 'flagget'
+ .pLeftParen
   .pIdentifier
-  % Output token text 'j'
- .pEquals
+  % Output token text 'factor'
+ .pComma
+  .pIdentifier (screened to pMut)
   .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pStar
-  .pInteger
-  % Output token text '1271'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'list'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'j'
- .pPercent
-  .pIdentifier
-  % Output token text 'maxval'
+  % Output token text 'isprime'
+ .pRightParen
  .pSemicolon
  .pNewLine
   .pIdentifier (screened to pBreak)
   .pIdentifier (screened to pIf)
+ .pLeftParen
   .pIdentifier
-  % Output token text 'i'
- .pDoubleEquals
+  % Output token text 'factor'
+ .pGreater
   .pIdentifier
-  % Output token text 'nelements'
+  % Output token text 'maxprimes'
+ .pForwardSlash
+  .pInteger
+  % Output token text '2'
+ .pRightParen
+ .pDoubleBar
+  .pIdentifier
+  % Output token text 'isprime'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The primes up to '
+ .pComma
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pColon
+  .pInteger
+  % Output token text '1'
+ .pComma
+  .pStringLiteral
+  % Output token text ' are:'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pEquals
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pWhile)
+  .pIdentifier
+  % Output token text 'factor'
+ .pLessEqual
+  .pIdentifier
+  % Output token text 'maxprimes'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'flagget'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'isprime'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'factor'
+ .pColon
+  .pInteger
+  % Output token text '4'
+ .pRightParen
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'factor'
+ .pPlusEquals
+  .pInteger
+  % Output token text '1'
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pEndFile
+
+File diff
+-------------------------
+end file
+--------------------------------
+Reading file lunch.pt
+  .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pMod)
+  .pIdentifier (screened to pMain)
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'output'
+ .pRightParen
+ .pLeftBrace
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'animal'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'str'
+ .pColon
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'remark'
+ .pColon
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'str'
+ .pColon
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLet)
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'verse'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pComma
+  .pIdentifier (screened to pMut)
+  .pIdentifier
+  % Output token text 'countdown'
+ .pColon
+  .pIdentifier
+  % Output token text 'int'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'fly'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '2'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'spider'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '3'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'bird'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '4'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'cat'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '5'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'dog'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '6'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'goat'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'cow'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'horse'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'I don't know why she swallowed a fly.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '2'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'That wiggled and jiggled and tickled inside her.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '3'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'How absurd, to swallow a bird.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '4'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'Imagine that, she swallowed a cat.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '5'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'What a hog, to swallow a dog.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '6'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'What a dope, to swallow a goat.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '7'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'I don't know how she swallowed that cow.'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '8'
+ .pRightBracket
+ .pEquals
+  .pStringLiteral
+  % Output token text 'She died of course.'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I Know an Old Lady'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pNewLine
+  .pIdentifier
+  % Output token text 'verse'
+ .pEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'verse'
+ .pEqualGreater
+  .pInteger
+  % Output token text '8'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I know an old lady'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Who swallowed a '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'verse'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'verse'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pNewLine
+  .pIdentifier
+  % Output token text 'countdown'
+ .pEquals
+  .pIdentifier
+  % Output token text 'verse'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier (screened to pLoop)
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier (screened to pBreak)
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'countdown'
+ .pLess
+  .pInteger
+  % Output token text '2'
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'She swallowed the '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'countdown'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text ' to catch the '
+ .pPlus
+  .pIdentifier
+  % Output token text 'animal'
+ .pLeftBracket
+  .pIdentifier
+  % Output token text 'countdown'
+ .pMinus
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pPlus
+  .pStringLiteral
+  % Output token text ','
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'countdown'
+ .pMinusEquals
+  .pInteger
+  % Output token text '1'
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'verse'
+ .pGreater
+  .pInteger
+  % Output token text '1'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pIdentifier
+  % Output token text 'remark'
+ .pLeftBracket
+  .pInteger
+  % Output token text '1'
+ .pRightBracket
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+ .pRightBrace
+ .pNewLine
+ .pNewLine
+  .pIdentifier (screened to pIf)
+  .pIdentifier
+  % Output token text 'verse'
+ .pLess
+  .pInteger
+  % Output token text '8'
+ .pLeftBrace
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Perhaps she'll die.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
  .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
  .pNewLine
   .pIdentifier
-  % Output token text 'current'
- .pEquals
+  % Output token text 'verse'
+ .pPlusEquals
   .pInteger
-  % Output token text '0'
+  % Output token text '1'
  .pSemicolon
+ .pNewLine
+ .pRightBrace
  .pNewLine
  .pNewLine
   .pNewLine
   .pIdentifier
-  % Output token text 'show'
+  % Output token text 'println'
  .pLeftParen
  .pRightParen
  .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'sort'
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'The end.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
  .pLeftParen
  .pRightParen
  .pSemicolon
  .pNewLine
   .pIdentifier
-  % Output token text 'show'
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'Thank you very much, you're too kind.'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'print'
+ .pLeftParen
+  .pStringLiteral
+  % Output token text 'I'll be here until Thursday - try the veal!'
+ .pRightParen
+ .pSemicolon
+  .pIdentifier
+  % Output token text 'println'
+ .pLeftParen
+ .pRightParen
+ .pSemicolon
+ .pNewLine
+  .pIdentifier
+  % Output token text 'println'
  .pLeftParen
  .pRightParen
  .pSemicolon
@@ -2287,1361 +3642,6 @@ Reading file francais.pt
  .pSemicolon
  .pNewLine
  .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file primes.pt
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pEquals
-  .pInteger
-  % Output token text '100'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'prime'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'notprime'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier
-  % Output token text 'flags'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'flagvector'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'bool'
- .pColon
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'tf'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'tf'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'set'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'set'
- .pEquals
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'prime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'factor'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pLeftBrace
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pPlus
-  .pIdentifier
-  % Output token text 'factor'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'multiple'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'multiple'
- .pComma
-  .pIdentifier
-  % Output token text 'notprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pPlusEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pRightParen
- .pDoubleBar
-  .pIdentifier
-  % Output token text 'isprime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The primes up to '
- .pComma
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text ' are:'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'factor'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagget'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'isprime'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'factor'
- .pColon
-  .pInteger
-  % Output token text '4'
- .pRightParen
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file mprimes.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pEquals
-  .pInteger
-  % Output token text '100'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier
-  % Output token text 'maxfactor'
- .pEquals
-  .pInteger
-  % Output token text '50'
- .pForwardSlash
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'prime'
- .pEquals
-  .pIdentifier
-  % Output token text 'true'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pConst)
-  .pIdentifier
-  % Output token text 'notprime'
- .pEquals
-  .pIdentifier
-  % Output token text 'false'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier
-  % Output token text 'flags'
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'flagvector'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'bool'
- .pColon
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier
-  % Output token text 'tf'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'tf'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pPub)
-  .pIdentifier (screened to pFn)
-  .pIdentifier
-  % Output token text 'flag'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'f'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'set'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pRightParen
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'set'
- .pEquals
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'f'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'i'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pWhile)
-  .pIdentifier
-  % Output token text 'i'
- .pLessEqual
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagvector'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'i'
- .pRightBracket
- .pEquals
-  .pIdentifier
-  % Output token text 'prime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'i'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
- .pNewLine
-  .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'factor'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxfactor'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pPlus
-  .pIdentifier
-  % Output token text 'factor'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'multiple'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'flagset'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'multiple'
- .pComma
-  .pIdentifier
-  % Output token text 'notprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'multiple'
- .pPlusEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pEquals
-  .pIdentifier
-  % Output token text 'factor'
- .pPlus
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'flag'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pRightParen
- .pDoubleBar
-  .pIdentifier
-  % Output token text 'isprime'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'flag'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'factor'
- .pEquals
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The primes up to '
- .pComma
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pColon
-  .pInteger
-  % Output token text '1'
- .pComma
-  .pStringLiteral
-  % Output token text ' are:'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pEquals
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pGreater
-  .pIdentifier
-  % Output token text 'maxprimes'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pColon
-  .pIdentifier
-  % Output token text 'bool'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'flag'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'isprime'
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'isprime'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pColon
-  .pInteger
-  % Output token text '4'
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'nextfactor'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pEndFile
-
-File diff
--------------------------
-end file
---------------------------------
-Reading file lunch.pt
-  .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pMod)
-  .pIdentifier (screened to pMain)
- .pLeftParen
-  .pIdentifier
-  % Output token text 'output'
- .pRightParen
- .pLeftBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'animal'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'str'
- .pColon
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'remark'
- .pColon
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'str'
- .pColon
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLet)
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'verse'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pComma
-  .pIdentifier (screened to pMut)
-  .pIdentifier
-  % Output token text 'countdown'
- .pColon
-  .pIdentifier
-  % Output token text 'int'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'fly'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '2'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'spider'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '3'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'bird'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '4'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'cat'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '5'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'dog'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '6'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'goat'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'cow'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'horse'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'I don't know why she swallowed a fly.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '2'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'That wiggled and jiggled and tickled inside her.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '3'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'How absurd, to swallow a bird.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '4'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'Imagine that, she swallowed a cat.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '5'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'What a hog, to swallow a dog.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '6'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'What a dope, to swallow a goat.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '7'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'I don't know how she swallowed that cow.'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '8'
- .pRightBracket
- .pEquals
-  .pStringLiteral
-  % Output token text 'She died of course.'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I Know an Old Lady'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'verse'
- .pEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'verse'
- .pEqualGreater
-  .pInteger
-  % Output token text '8'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I know an old lady'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Who swallowed a '
- .pPlus
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'verse'
- .pRightBracket
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'verse'
- .pRightBracket
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'countdown'
- .pEquals
-  .pIdentifier
-  % Output token text 'verse'
- .pSemicolon
- .pNewLine
-  .pIdentifier (screened to pLoop)
- .pLeftBrace
- .pNewLine
-  .pIdentifier (screened to pBreak)
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'countdown'
- .pLess
-  .pInteger
-  % Output token text '2'
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'She swallowed the '
- .pPlus
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'countdown'
- .pRightBracket
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text ' to catch the '
- .pPlus
-  .pIdentifier
-  % Output token text 'animal'
- .pLeftBracket
-  .pIdentifier
-  % Output token text 'countdown'
- .pMinus
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pPlus
-  .pStringLiteral
-  % Output token text ','
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'countdown'
- .pMinusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'verse'
- .pGreater
-  .pInteger
-  % Output token text '1'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pIdentifier
-  % Output token text 'remark'
- .pLeftBracket
-  .pInteger
-  % Output token text '1'
- .pRightBracket
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier (screened to pIf)
-  .pIdentifier
-  % Output token text 'verse'
- .pLess
-  .pInteger
-  % Output token text '8'
- .pLeftBrace
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Perhaps she'll die.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pIdentifier
-  % Output token text 'verse'
- .pPlusEquals
-  .pInteger
-  % Output token text '1'
- .pSemicolon
- .pNewLine
- .pRightBrace
- .pNewLine
- .pNewLine
-  .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'The end.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'Thank you very much, you're too kind.'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'print'
- .pLeftParen
-  .pStringLiteral
-  % Output token text 'I'll be here until Thursday - try the veal!'
- .pRightParen
- .pSemicolon
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
- .pNewLine
-  .pIdentifier
-  % Output token text 'println'
- .pLeftParen
- .pRightParen
- .pSemicolon
  .pNewLine
  .pRightBrace
  .pNewLine
