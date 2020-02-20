@@ -1,0 +1,85 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SSL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#invalid"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "keyword.operator.ssl",
+				"match": "(\\*:|:|{|}|\\||\\?)"
+			},
+			{
+				"name": "keyword.control.ssl",
+				"match": "(>|(?<!\\w)@\\w+|{|}|[|])"
+			},
+			{
+				"name": "keyword.other.ssl",
+				"match": "(;|(?<!\\w)\\.(p|s)\\w+)"
+			}
+		]},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "([A-Z][A-Za-z. ]*:)"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "entity.name",
+					"match": "([a-z][A-Za-z. ]*:)"
+				},
+				{
+					"name": "entity.name.class",
+					"match": "([a-z][A-Za-z]*)"
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"match": "((?<!\\w)#\\w+)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.ssl",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ssl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.ssl",
+			"match": "%.*"
+		}
+	},
+	"scopeName": "source.ssl"
+}

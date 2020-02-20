@@ -158,7 +158,6 @@ Cleaned up some old code that was no longer used from the `block` statement
 Before:
 ```
 ProcedureHeading :
-ProcedureHeading :
         % Accept zero or more procedure formal parameter declarations.
         [
             | '(':
