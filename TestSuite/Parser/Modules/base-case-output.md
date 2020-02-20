@@ -17,17 +17,25 @@ Test output is:
  .sParmEnd
   % .sNewLine
   .sBegin
+  .sModule
+  .sIdentifier
+   % .sNewLine
+   .sBegin
+   % .sNewLine
+   .sNullStmt
+   % .sNewLine
+   .sEnd
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (5 vs 10)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sModule on line 4 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
