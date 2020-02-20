@@ -405,25 +405,25 @@ Output is:
      .sExpnEnd
      .sThen
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sInteger
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      .sEnd
      .sElse
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sInteger
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       % value emitted 55
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      % value emitted 55
+      .sEnd
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -625,25 +625,25 @@ Output is:
      .sExpnEnd
      .sThen
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sInteger
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      .sEnd
      .sElse
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sInteger
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       % value emitted 55
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      % value emitted 55
+      .sEnd
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -883,7 +883,8 @@ Output is:
           .sDivide
        .sExpnEnd
        .sThen
-        .sNullStmt
+        .sBegin
+        .sEnd
      % value emitted 55
      % value emitted 55
        .sIfStmt
@@ -892,7 +893,8 @@ Output is:
               .sDivide
        .sExpnEnd
        .sThen
-        .sNullStmt
+        .sBegin
+        .sEnd
      % value emitted 55
       .sNullStmt
       .sNullStmt
@@ -1390,25 +1392,25 @@ Output is:
       .sExpnEnd
       .sThen
        % value emitted 55
-        .sBegin
-          .sAssignmentStmt
-          .sIdentifier
-              .sInteger
-          .sExpnEnd
-        % value emitted 55
-         .sNullStmt
-        .sEnd
+       .sBegin
+        .sAssignmentStmt
+        .sIdentifier
+            .sInteger
+        .sExpnEnd
+       % value emitted 55
+       .sNullStmt
+       .sEnd
       .sElse
        % value emitted 55
-        .sBegin
-          .sAssignmentStmt
-          .sIdentifier
-              .sInteger
-          .sExpnEnd
-        % value emitted 55
-         .sNullStmt
-        % value emitted 55
-        .sEnd
+       .sBegin
+        .sAssignmentStmt
+        .sIdentifier
+            .sInteger
+        .sExpnEnd
+       % value emitted 55
+       .sNullStmt
+       % value emitted 55
+       .sEnd
       .sAssignmentStmt
       .sIdentifier
               .sIdentifier
@@ -1512,46 +1514,46 @@ Output is:
      .sExpnEnd
      .sThen
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-         .sSubscript
-             .sInteger
-         .sExpnEnd
-             .sIdentifier
-              .sSubscript
-                  .sInteger
-              .sExpnEnd
-             .sInteger
-           .sAdd
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sInteger
+       .sExpnEnd
+           .sIdentifier
+            .sSubscript
+                .sInteger
+            .sExpnEnd
+           .sInteger
+         .sAdd
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      .sEnd
      .sElse
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-         .sSubscript
-             .sIdentifier
-         .sExpnEnd
-             .sIdentifier
-              .sSubscript
-                  .sIdentifier
-              .sExpnEnd
-             .sIdentifier
-              .sSubscript
-                  .sIdentifier
-                  .sInteger
-                .sSubtract
-              .sExpnEnd
-           .sAdd
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       % value emitted 55
-       .sEnd
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+                .sInteger
+              .sSubtract
+            .sExpnEnd
+         .sAdd
+       .sExpnEnd
+      % value emitted 55
+      .sNullStmt
+      % value emitted 55
+      .sEnd
     % value emitted 55
     % value emitted 55
     % value emitted 55
@@ -1852,18 +1854,18 @@ Output is:
            .sExpnEnd
            .sThen
             % value emitted 55
-             .sBegin
-                .sCallStmt
-                .sIdentifier
-                    .sIdentifier
-                .sExpnEnd
-                .sFieldWidth
-                    .sInteger
-                .sExpnEnd
-                % value emitted 55
-                .sParmEnd
-             % value emitted 55
-             .sEnd
+            .sBegin
+              .sCallStmt
+              .sIdentifier
+                  .sIdentifier
+              .sExpnEnd
+              .sFieldWidth
+                  .sInteger
+              .sExpnEnd
+              % value emitted 55
+              .sParmEnd
+            % value emitted 55
+            .sEnd
           .sNullStmt
          % value emitted 55
           .sNullStmt
@@ -2066,193 +2068,17 @@ Output is:
      .sExpnEnd
      .sThen
       % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sIdentifier
-         .sExpnEnd
-       % value emitted 55
-        .sNullStmt
-       .sEnd
-     .sElse
-      % value emitted 55
-       .sBegin
-         .sAssignmentStmt
-         .sIdentifier
-             .sIdentifier
-         .sExpnEnd
-       % value emitted 55
-         .sLoopStmt
-          % value emitted 55
-           .sBegin
-             .sIfStmt
-                 .sIdentifier
-                 .sIdentifier
-                  .sSubscript
-                      .sIdentifier
-                  .sExpnEnd
-              .sLT
-             .sExpnEnd
-             .sThen
-              % value emitted 55
-               .sBegin
-                 .sIfStmt
-                     .sIdentifier
-                      .sSubscript
-                          .sIdentifier
-                      .sExpnEnd
-                     .sIdentifier
-                  .sEq
-                 .sExpnEnd
-                 .sThen
-                  % value emitted 55
-                   .sBegin
-                     .sAssignmentStmt
-                     .sIdentifier
-                     .sSubscript
-                         .sIdentifier
-                     .sExpnEnd
-                         .sIdentifier
-                     .sExpnEnd
-                   % value emitted 55
-                     .sAssignmentStmt
-                     .sIdentifier
-                         .sIdentifier
-                     .sExpnEnd
-                   % value emitted 55
-                    .sNullStmt
-                   .sEnd
-                 .sElse
-                  % value emitted 55
-                   .sBegin
-                     .sAssignmentStmt
-                     .sIdentifier
-                         .sIdentifier
-                          .sSubscript
-                              .sIdentifier
-                          .sExpnEnd
-                     .sExpnEnd
-                   % value emitted 55
-                    .sNullStmt
-                   % value emitted 55
-                   % value emitted 55
-                   .sEnd
-               .sEnd
-             .sElse
-               .sIfStmt
-                   .sIdentifier
-                   .sIdentifier
-                    .sSubscript
-                        .sIdentifier
-                    .sExpnEnd
-                .sGT
-               .sExpnEnd
-               .sThen
-                % value emitted 55
-                 .sBegin
-                   .sIfStmt
-                       .sIdentifier
-                        .sSubscript
-                            .sIdentifier
-                        .sExpnEnd
-                       .sIdentifier
-                    .sEq
-                   .sExpnEnd
-                   .sThen
-                    % value emitted 55
-                     .sBegin
-                       .sAssignmentStmt
-                       .sIdentifier
-                       .sSubscript
-                           .sIdentifier
-                       .sExpnEnd
-                           .sIdentifier
-                       .sExpnEnd
-                     % value emitted 55
-                       .sAssignmentStmt
-                       .sIdentifier
-                           .sIdentifier
-                       .sExpnEnd
-                     % value emitted 55
-                      .sNullStmt
-                     .sEnd
-                   .sElse
-                    % value emitted 55
-                     .sBegin
-                       .sAssignmentStmt
-                       .sIdentifier
-                           .sIdentifier
-                            .sSubscript
-                                .sIdentifier
-                            .sExpnEnd
-                       .sExpnEnd
-                     % value emitted 55
-                      .sNullStmt
-                     % value emitted 55
-                     .sEnd
-                 % value emitted 55
-                 % value emitted 55
-                 .sEnd
-            .sNullStmt
-           % value emitted 55
-            .sNullStmt
-           % value emitted 55
-           % value emitted 55
-           .sEnd
-             .sIdentifier
-         .sExpnEnd
-       % value emitted 55
-       % value emitted 55
-          .sCallStmt
-          .sIdentifier
-          .sParmEnd
-        .sNullStmt
-       % value emitted 55
-        .sNullStmt
-       % value emitted 55
-       % value emitted 55
-       % value emitted 55
-       .sEnd
-    .sProcedure
-    .sIdentifier
-     .sParmEnd
-      % value emitted 55
       .sBegin
-      .sVar
-      .sIdentifier
-        .sArray
-         .sIdentifier
-        .sRange
-         .sIdentifier
-      .sMutable
-      % value emitted 55
-      .sVar
-      .sIdentifier
-         .sIdentifier
-      .sMutable
-      % value emitted 55
-      .sVar
-      .sIdentifier
-         .sIdentifier
-      .sMutable
-      % value emitted 55
-      .sVar
-      .sIdentifier
-         .sIdentifier
-      .sMutable
-      % value emitted 55
-       .sAssignmentStmt
-       .sIdentifier
-           .sInteger
-       .sExpnEnd
-      % value emitted 55
-      .sNullStmt
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
       % value emitted 55
       .sNullStmt
+      .sEnd
+     .sElse
+      % value emitted 55
+      .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
@@ -2265,16 +2091,25 @@ Output is:
            .sIfStmt
                .sIdentifier
                .sIdentifier
-            .sNE
+                .sSubscript
+                    .sIdentifier
+                .sExpnEnd
+            .sLT
            .sExpnEnd
            .sThen
             % value emitted 55
-             .sBegin
-                .sCallStmt
-                .sIdentifier
-                .sParmEnd
-              .sNullStmt
-             % value emitted 55
+            .sBegin
+             .sIfStmt
+                 .sIdentifier
+                  .sSubscript
+                      .sIdentifier
+                  .sExpnEnd
+                 .sIdentifier
+              .sEq
+             .sExpnEnd
+             .sThen
+              % value emitted 55
+              .sBegin
                .sAssignmentStmt
                .sIdentifier
                .sSubscript
@@ -2282,7 +2117,18 @@ Output is:
                .sExpnEnd
                    .sIdentifier
                .sExpnEnd
-             % value emitted 55
+              % value emitted 55
+              .sNullStmt
+               .sAssignmentStmt
+               .sIdentifier
+                   .sIdentifier
+               .sExpnEnd
+              % value emitted 55
+              .sNullStmt
+              .sEnd
+             .sElse
+              % value emitted 55
+              .sBegin
                .sAssignmentStmt
                .sIdentifier
                    .sIdentifier
@@ -2290,74 +2136,58 @@ Output is:
                         .sIdentifier
                     .sExpnEnd
                .sExpnEnd
-             % value emitted 55
+              % value emitted 55
               .sNullStmt
-             .sEnd
+              % value emitted 55
+              % value emitted 55
+              .sEnd
+            .sEnd
+           .sElse
+            .sBegin
+            .sEnd
+         % value emitted 55
+           .sIfStmt
+               .sIdentifier
+                .sSubscript
+                    .sIdentifier
+                .sExpnEnd
+               .sIdentifier
+            .sEq
+           .sExpnEnd
+           .sThen
+            % value emitted 55
+            .sBegin
+             .sAssignmentStmt
+             .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+            .sNullStmt
+             .sAssignmentStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+            .sNullStmt
+            .sEnd
            .sElse
             % value emitted 55
-             .sBegin
-               .sIfStmt
-                   .sIdentifier
-                   .sInteger
-                .sGT
-               .sExpnEnd
-               .sThen
-                % value emitted 55
-                 .sBegin
-                   .sAssignmentStmt
-                   .sIdentifier
-                       .sIdentifier
-                        .sSubscript
-                            .sIdentifier
-                        .sExpnEnd
-                   .sExpnEnd
-                 % value emitted 55
-                    .sCallStmt
-                    .sIdentifier
-                    .sParmEnd
-                  .sNullStmt
-                 % value emitted 55
-                    .sCallStmt
-                    .sIdentifier
-                        .sIdentifier
-                         .sSubscript
-                             .sIdentifier
-                         .sExpnEnd
-                    .sExpnEnd
-                    .sFieldWidth
-                        .sInteger
-                    .sExpnEnd
-                        .sStringLiteral
-                    .sExpnEnd
-                    .sParmEnd
-                 % value emitted 55
-                   .sAssignmentStmt
-                   .sIdentifier
-                       .sIdentifier
-                        .sSubscript
-                            .sIdentifier
-                        .sExpnEnd
-                   .sExpnEnd
-                 % value emitted 55
-                  .sNullStmt
-                 .sEnd
-               .sElse
-                % value emitted 55
-                 .sBegin
-                   .sAssignmentStmt
-                   .sIdentifier
-                       .sIdentifier
-                   .sExpnEnd
-                 % value emitted 55
-                  .sNullStmt
-                 % value emitted 55
-                 .sEnd
-             % value emitted 55
-             % value emitted 55
-             .sEnd
-          .sNullStmt
+            .sBegin
+             .sAssignmentStmt
+             .sIdentifier
+                 .sIdentifier
+                  .sSubscript
+                      .sIdentifier
+                  .sExpnEnd
+             .sExpnEnd
+            % value emitted 55
+            .sNullStmt
+            % value emitted 55
+            .sEnd
          % value emitted 55
-          .sNullStmt
          % value emitted 55
          .sEnd
            .sIdentifier

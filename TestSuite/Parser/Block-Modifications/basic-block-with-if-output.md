@@ -24,11 +24,11 @@ Test output is:
    .sExpnEnd
    .sThen
     % .sNewLine
-     .sBegin
-      % .sNewLine
-      .sNullStmt
-     % .sNewLine
-     .sEnd
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    % .sNewLine
+    .sEnd
   .sEnd
 
 ```
