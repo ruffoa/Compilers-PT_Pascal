@@ -461,11 +461,11 @@ IfStmt :
         @Expression
         .sExpnEnd
         .sThen
-        @Statement
+        @Block          % call the Block rule to handle the main content of the if statement
         [
             | 'else':
                 .sElse
-                @Statement
+                @Block  % call the Block rule to handle the content for the else section of the if statement
             | *:
         ];
 
