@@ -1,0 +1,13 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sModule        // Test module
+.sIdentifier    // identifier index for 'Test' 
+.sBegin         // begin test module
+.sModule        // bar module
+.sIdentifier    // identifier for 'bar'
+.sNullStmt 
+.sEnd           // end 'bar' 
+.sEnd           // end 'Test'
+.sEnd           // end 'main'
