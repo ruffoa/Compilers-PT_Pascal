@@ -26,7 +26,7 @@
 			"patterns": [
 			{
 				"name": "keyword.operator.ssl",
-				"match": "(\\*:|:|{|}|\\||\\?)"
+				"match": "(\\*:|:|\\||\\?)"
 			},
 			{
 				"name": "keyword.control.ssl",
