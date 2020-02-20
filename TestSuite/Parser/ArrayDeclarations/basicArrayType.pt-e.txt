@@ -1,0 +1,11 @@
+.sProgram
+.sIdentifier    // Identifier for "output"
+.sParmEnd
+.sBegin
+.sType
+.sIdentifier    // Identifier for "abc"
+.sArray
+.sIdentifier    // Identifier for "str"
+.sRange
+.sInteger 20
+.sEnd
