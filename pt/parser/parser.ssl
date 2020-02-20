@@ -315,12 +315,6 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                %[  % ToDo: Implement this properly!
-                    %| '..':
-                    %    .sRange         %% this may be unnecessary
-                    %    @OptionallySignedIntegerConstant
-                %    | *:
-                %]
             | *:
                 @OptionallySignedIntegerConstant
                 % '..'  .sRange
