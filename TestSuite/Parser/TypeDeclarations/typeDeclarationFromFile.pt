@@ -1,0 +1,3 @@
+mod main(output) {
+    type list = file of List;
+}

@@ -299,10 +299,13 @@ TypeDefinitions :
 
 TypeBody :
         [
-            % | 'array':
-            %    .sArray
-            %    '['  @SimpleType  ']'
-            %    'of'  @SimpleType
+            | '[':
+               .sArray
+                @SimpleType
+                ':'
+                .sRange
+                @UnsignedIntegerConstant
+                ']'
             | 'file':
                 .sFile
                 'of'  @SimpleType
@@ -316,12 +319,6 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                %[  % ToDo: Implement this properly!
-                    %| '..':
-                    %    .sRange         %% this may be unnecessary
-                    %    @OptionallySignedIntegerConstant
-                %    | *:
-                %]
             | *:
                 @OptionallySignedIntegerConstant
                 % '..'  .sRange

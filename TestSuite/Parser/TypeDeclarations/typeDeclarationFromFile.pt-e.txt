@@ -1,0 +1,9 @@
+.sProgram
+.sIdentifier    // Identifier for "output"
+.sParmEnd
+.sBegin
+.sType
+.sIdentifier    // Identifier for "list"
+.sFile
+.sIdentifier    // Identifier for "List"
+.sEnd
