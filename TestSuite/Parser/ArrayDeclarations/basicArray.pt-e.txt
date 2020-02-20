@@ -1,0 +1,12 @@
+.sProgram
+.sIdentifier    // Identifier for 'output'
+.sParmEnd
+.sBegin
+.sVar
+.sIdentifier    // Identifier for 'a'
+.sArray
+.sIdentifier    // Identifier for 'int'
+.sRange
+.sInteger 10
+.sMutable
+.sEnd
