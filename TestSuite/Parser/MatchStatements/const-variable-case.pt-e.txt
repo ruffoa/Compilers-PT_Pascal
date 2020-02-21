@@ -9,7 +9,6 @@
 .sExpnEnd       // end the initial value 'i'
 .sConst
 .sIdentifier    // identifier for 'y'
-.sInitialValue
 .sInteger 2     // initial value for y
 .sCaseStmt 
 .sIdentifier    // identifier index for i 
