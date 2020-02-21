@@ -481,6 +481,7 @@ CaseStmt :
         @Expression
         .sExpnEnd
         '{'
+        '|'
         @CaseAlternative
         {[
             | '|':
@@ -490,10 +491,16 @@ CaseStmt :
                 [
                     | '}':
                         >
+                    | '_': 
+                        .sCaseOtherwise
+                        .sLabelEnd
+                        '=>'  @Block
                     | *:
                         @CaseAlternative
                 ]
             | '}':
+                >
+            | *:
                 >
         ]}
         .sCaseEnd;
