@@ -388,11 +388,11 @@ Statement :
                 @CaseStmt
             | 'loop':
                 @RepeatStmt
-            | ';':
-                % consume semicolon and exit
             | *:
                 .sNullStmt
-        ];
+        ]
+        ';'  % consume semicolon and exit
+        ;
 
 AssignmentOrCallStmt :
         [
