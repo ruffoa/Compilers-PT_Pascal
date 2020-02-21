@@ -1,0 +1,1 @@
+This test is to check that multiple statements can be within a case statement
