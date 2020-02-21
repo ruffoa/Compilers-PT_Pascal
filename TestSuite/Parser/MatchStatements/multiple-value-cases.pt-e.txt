@@ -10,12 +10,13 @@
 .sCaseStmt 
 .sIdentifier    // identifier index for i 
 .sExpnEnd 
+.sInteger 10    // case statement match value
+.sInteger 11    // case statement match value
 .sInteger 12    // case statement match value
 .sLabelEnd      // end the case statement 'if' section
 .sBegin         // begin the case statement match block
-.sNullStmt
 .sNullStmt      
-.sEnd           // end the 'if i == 12' block
+.sEnd           // end the 'if i == 10, 11, 12' block
 .sCaseOtherwise // default case statement
 .sBegin  
 .sNullStmt
