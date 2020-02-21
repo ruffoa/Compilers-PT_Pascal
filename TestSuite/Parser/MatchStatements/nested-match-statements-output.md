@@ -7,7 +7,16 @@ mod main (output) {
 
     match i {
         | 12 => {
-                ;
+                let y = 3;
+                
+                match y {
+                    | 3 => {
+                        ;
+                        }
+                    | _ => {
+                        ;
+                    }
+                }
             }
         | _ => {
                 ;
@@ -39,8 +48,34 @@ Test output is:
     .sLabelEnd
      % .sNewLine
      .sBegin
+     .sVar
+     .sIdentifier
+       .sInitialValue
+       .sInteger
+       .sExpnEnd
      % .sNewLine
-     .sNullStmt
+     % .sNewLine
+      .sCaseStmt
+          .sIdentifier
+      .sExpnEnd
+      % .sNewLine
+         .sInteger
+       .sLabelEnd
+        % .sNewLine
+        .sBegin
+        % .sNewLine
+        .sNullStmt
+        % .sNewLine
+        .sEnd
+      .sCaseOtherwise
+       % .sNewLine
+       .sBegin
+       % .sNewLine
+       .sNullStmt
+       % .sNewLine
+       .sEnd
+      % .sNewLine
+      .sCaseEnd
      % .sNewLine
      .sEnd
    .sCaseOtherwise

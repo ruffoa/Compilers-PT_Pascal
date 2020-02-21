@@ -4,8 +4,9 @@ Test Content:
 ```
 mod main (output) {
     let i = 10;
+    let y = 2;
 
-    match i {
+    match (i / y) + 2 {
         | 12 => {
                 ;
             }
@@ -30,9 +31,19 @@ Test output is:
     .sInteger
     .sExpnEnd
   % .sNewLine
+  .sVar
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  % .sNewLine
   % .sNewLine
    .sCaseStmt
-       .sIdentifier
+           .sIdentifier
+           .sIdentifier
+          .sDivide
+       .sInteger
+     .sAdd
    .sExpnEnd
    % .sNewLine
       .sInteger
