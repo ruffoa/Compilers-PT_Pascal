@@ -493,7 +493,6 @@ CaseStmt :
                         >
                     | '_': 
                         .sCaseOtherwise
-                        .sLabelEnd
                         '=>'  @Block
                     | *:
                         @CaseAlternative

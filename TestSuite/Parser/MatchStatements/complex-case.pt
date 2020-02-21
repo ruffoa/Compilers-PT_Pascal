@@ -1,0 +1,13 @@
+mod main (output) {
+    let i = 10;
+    let y = 2;
+
+    match (i / y) + 2 {
+        | 12 => {
+                ;
+            }
+        | _ => {
+                ;
+            }
+    }
+}

@@ -1,0 +1,28 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sVar 
+.sIdentifier    // identifier index for 'i' 
+.sInitialValue
+.sInteger 10    // initial value for i
+.sExpnEnd       // end the initial value 'i'
+.sConst
+.sIdentifier    // identifier for 'y'
+.sInitialValue
+.sInteger 2     // initial value for y
+.sExpnEnd
+.sCaseStmt 
+.sIdentifier    // identifier index for i 
+.sExpnEnd 
+.sIdentifier    // identifier for 'y'
+.sLabelEnd      // end the case statement 'if' section
+.sBegin         // begin the case statement match block
+.sNullStmt      
+.sEnd           // end the 'if i == 12' block
+.sCaseOtherwise // default case statement
+.sBegin  
+.sNullStmt
+.sEnd           // end the default block
+.sCaseEnd       // end the case statement
+.sEnd
