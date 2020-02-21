@@ -15,8 +15,11 @@
 .sExpnEnd
 .sThen
 .sBegin
+.sVar
 .sIdentifier // identifier for z within if
+.sInitialValue
 .sInteger 1  // value for z within if
+.sExpnEnd
 .sEnd
 .sType
 .sIdentifier // identifier for t

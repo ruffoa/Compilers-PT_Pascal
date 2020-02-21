@@ -249,7 +249,7 @@ ProcedureHeading :
 
 # Modules
 ## `parser.ssl` Changes
-- Update the Block statement to accept modules
+- Update the `Block` rule to accept modules
 ```diff
 +       | 'mod':
 +           .sModule
@@ -259,9 +259,33 @@ ProcedureHeading :
 
 # Statement Sequences
 
-# Statements
+# If Statement and Else-If clauses
+## `parser.ssl` Changes
+- Updated the `IfStmt` rule to call the `Block` rule to handle the content of the if and else blocks.
+- Updated the `IfStmt` rule to handle else-if clauses by inserting another choice under the initial 'else' choice. If we encounter another 'if' token then we recurse and call the `IfStmt` rule again to handle the else-if clause as a regular if statement in the else block.
 
-# Else-If Clauses
+```diff
+    IfStmt :
+        .sIfStmt
+        @Expression
+        .sExpnEnd
+        .sThen
+-       @Statement
++       @Block          % call the Block rule to handle the main content of the if statement
+        [
+            | 'else':
+                .sElse
++               [
++                   | 'if':         % handle the case of an "else if"
++                       .sBegin     % Need to emit sBegin token for else block
++                       @IfStmt
++                       .sEnd       % Need to emit sEnd token for else block
++                   |*:
++                       @Block      % call the Block rule to handle the content for the else section of the if statement
++               ]
+            | *:
+        ];
+```
 
 # Match Statements
 

@@ -2,11 +2,16 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    if (1 == 0) {
+mod main(output){
+    if a == 1 {
+        ;
+    } else if b == 1 {
+        ;
+    } else {
         ;
     }
 }
+
 ```
 ------------------------
 Test output is: 
@@ -18,17 +23,38 @@ Test output is:
   % .sNewLine
   .sBegin
    .sIfStmt
-           .sInteger
-           .sInteger
-        .sEq
+       .sIdentifier
+       .sInteger
+    .sEq
    .sExpnEnd
    .sThen
     % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
-    % .sNewLine
     .sEnd
+   .sElse
+   .sBegin
+    .sIfStmt
+        .sIdentifier
+        .sInteger
+     .sEq
+    .sExpnEnd
+    .sThen
+     % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    .sElse
+     % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     % .sNewLine
+     .sEnd
+   .sEnd
+  % .sNewLine
   .sEnd
 
 ```

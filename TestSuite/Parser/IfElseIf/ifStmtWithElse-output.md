@@ -2,8 +2,10 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    if (1 == 0) {
+mod main(output){
+    if a == 1 {
+        ;
+    } else {
         ;
     }
 }
@@ -18,11 +20,17 @@ Test output is:
   % .sNewLine
   .sBegin
    .sIfStmt
-           .sInteger
-           .sInteger
-        .sEq
+       .sIdentifier
+       .sInteger
+    .sEq
    .sExpnEnd
    .sThen
+    % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   .sElse
     % .sNewLine
     .sBegin
     % .sNewLine
