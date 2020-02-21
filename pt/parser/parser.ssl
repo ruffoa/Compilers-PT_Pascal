@@ -166,7 +166,6 @@ Program :
         }
         ')'
         .sParmEnd
-        %';'  
         @Block;
 
 Block :
@@ -390,7 +389,7 @@ Statement :
             | 'loop':
                 @RepeatStmt
             | ';':
-                .sNullStmt
+                % consume semicolon and exit
             | *:
                 .sNullStmt
         ];
