@@ -1,0 +1,12 @@
+mod main (output) {
+    let i = 10;
+
+    match i {
+        | 12 => {
+                ;
+            }
+        | _ => {
+                ;
+            }
+    }
+}
