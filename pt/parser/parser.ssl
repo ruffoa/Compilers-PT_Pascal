@@ -599,6 +599,11 @@ Factor :
             | 'file':
                 .sFile '(' @Expression ')'
                 .sExpnEnd
+                
+            | '?' : 
+                .sLength
+                
+            |@addSubstring
         ];
 
 IdentifierExtension :
