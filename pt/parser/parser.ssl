@@ -405,12 +405,14 @@ AssignmentOrCallStmt :
             | '+=':
                 .sAssignmentStmt
                 .sIdentifier    % identifier accepted in the Statement rule
-                @Term  .sAdd
+                .sIdentifier    % identifier accepted in the Statement rule
+                @Expression  .sAdd
                 .sExpnEnd
             | '-=':
                 .sAssignmentStmt
                 .sIdentifier    % identifier accepted in the Statement rule
-                @Term  .sSubtract
+                .sIdentifier    % identifier accepted in the Statement rule
+                @Expression  .sSubtract
                 .sExpnEnd
             | '[':
                 .sAssignmentStmt
