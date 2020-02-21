@@ -23,22 +23,36 @@ Test output is:
     .sInteger
     .sExpnEnd
   % .sNewLine
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
+   .sAssignmentStmt
+   .sIdentifier
+     .sInteger
+   .sAdd
+   .sExpnEnd
+  % .sNewLine
+  .sNullStmt
+   .sAssignmentStmt
+   .sIdentifier
+     .sInteger
+   .sSubtract
+   .sExpnEnd
+  % .sNewLine
+  .sNullStmt
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (13 vs 22)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sCallStmt !== .sAssignmentStmt on line 9 of base-case.pt
--.sParmEnd !== .sIdentifier on line 11 of base-case.pt
--.sEnd !== .sInteger  1 on line 12 of base-case.pt
+-.sInteger !== .sIdentifier on line 11 of base-case.pt
+-.sAdd !== .sInteger  1 on line 12 of base-case.pt
+-.sExpnEnd !== .sAdd on line 13 of base-case.pt
+-.sNullStmt !== .sExpnEnd on line 14 of base-case.pt
+-.sInteger !== .sIdentifier on line 17 of base-case.pt
+-.sSubtract !== .sInteger  1 on line 18 of base-case.pt
+-.sExpnEnd !== .sSubtract on line 19 of base-case.pt
+-.sNullStmt !== .sExpnEnd on line 20 of base-case.pt
 
 ```
 end file
