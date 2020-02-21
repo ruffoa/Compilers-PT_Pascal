@@ -288,6 +288,29 @@ ProcedureHeading :
 ```
 
 # Match Statements
+## `parser.ssl` Changes
+- Changed the `CaseStmt` function to accept the new syntax
+    - Removed the `of` keyword and replaced it with the new `{` and `|` syntax tokens that preceed the first match case
+    ```diff
+        CaseStmt :
+                .sCaseStmt
+                @Expression
+                .sExpnEnd
+    -            'of'
+    +            '{'
+    +            '|'
+                @CaseAlternative
+    ```
+
+    - Removed the `end` tokens and replaced them with `}` tokens instead
+    - Added in the default case `_` 
+    ```diff
+    +            | '_': 
+    +            .sCaseOtherwise
+    +            '=>'  @Block
+    ```
+    - Added in support for the new `=>` syntax
+    - Called the `@Block` SSL function instead of the `@Statement` function, enabling multiple statements within a `match`
 
 # Loop Statements
 
