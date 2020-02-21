@@ -480,10 +480,10 @@ CaseStmt :
         .sCaseStmt
         @Expression
         .sExpnEnd
-        'of'
+        '{'
         @CaseAlternative
         {[
-            | ';':
+            | '|':
                 % since case alternatives cannot be null, allow
                 % for the common situation of an extra semicolon
                 % at the end of the list of case alternatives.
@@ -505,13 +505,13 @@ CaseAlternative :
         {
             @OptionallySignedIntegerConstant
             [
-                | ',':
+                | '|':
                 | *:
                     >
             ]
         }
         .sLabelEnd
-        ':'  @Statement;
+        '=>'  @Block;
 
 WhileStmt :
         .sWhileStmt
