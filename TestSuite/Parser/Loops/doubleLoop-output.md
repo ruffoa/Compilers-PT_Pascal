@@ -10,7 +10,7 @@ mod main(output) {
             j += 1;
         }
         break if i > 5;
-        i += 1
+        i += 1;
     }
 }
 ```
@@ -69,11 +69,12 @@ Test output is:
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
-         % .sNewLine
          .sInteger
      .sAdd
      .sExpnEnd
+     % .sNewLine
     .sEnd
+   % .sNewLine
   .sEnd
 
 ```
