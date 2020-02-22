@@ -99,7 +99,7 @@
         sElse = 34;
         sWhileStmt = 35;
         sLoopStmt = 36;
-        sLoopBreak = 37;
+        sLoopBreakIf = 37;
         sLoopEnd = 38;
         sEq = 39;
         sNE = 40;

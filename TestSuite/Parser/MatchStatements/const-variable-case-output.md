@@ -23,7 +23,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -42,19 +42,19 @@ Test output is:
    % .sNewLine
       .sIdentifier
     .sLabelEnd
-     % .sNewLine
+    % .sNewLine
      .sBegin
      % .sNewLine
      .sNullStmt
-     % .sNewLine
      .sEnd
-   .sCaseOtherwise
     % .sNewLine
+   .sCaseOtherwise
+   % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
-    % .sNewLine
     .sEnd
+   % .sNewLine
    % .sNewLine
    .sCaseEnd
   .sEnd

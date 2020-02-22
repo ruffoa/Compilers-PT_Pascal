@@ -9,7 +9,12 @@ The following documents all changes made to parser.ssl structured according to t
 
 # Declarations
 ## `parser.ssl` Changes
-- Changed the `let` case statement within the `Block` rule match to be the following
+- Added the `let` case statement within the `Block` rule to handle Qust variable declarations.
+    - Start by entering a loop to allow for multiple declarations in a single statement.
+    - Enter a choice block to allow for the variable to be either mutable of imutable.
+        - output the Identifier
+        - Call the `VariableDeclaration` rule to handle the type and initial values. (Changes outlined below)
+    - Enter another choice block to see if there is another declaration of if this is the end of the statement.
 
 ```diff
     | 'let':
@@ -69,7 +74,7 @@ InitialValue :
         .sExpnEnd;
 ```
 
-- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constrainsts concerning an initial value being mandatory if no type is specified.
+- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constraints concerning an initial value being mandatory if no type is specified.
 
 ```diff
 VariableDeclarations :
@@ -187,7 +192,6 @@ ProcedureHeading :
             | '(':
                 {
                     % formal parameter identifier
-                    % ToDo: Get consts working!
                     [
                         | 'let':
                             pIdentifier  .sIdentifier
@@ -238,7 +242,7 @@ ProcedureHeading :
         }
         ')'
         .sParmEnd
-        @Block;
+        '{' @Block '}';
 ```
 
 - Update the `Statement` function to accept the null statement (`;`)
@@ -254,10 +258,8 @@ ProcedureHeading :
 +       | 'mod':
 +           .sModule
 +           pIdentifier  .sIdentifier   % module name
-+           @Block
++           '{' @Block '}'
 ```
-
-# Statement Sequences
 
 # If Statement and Else-If clauses
 ## `parser.ssl` Changes
@@ -271,7 +273,7 @@ ProcedureHeading :
         .sExpnEnd
         .sThen
 -       @Statement
-+       @Block          % call the Block rule to handle the main content of the if statement
++       '{' @Block '}'          % call the Block rule to handle the main content of the if statement
         [
             | 'else':
                 .sElse
@@ -281,7 +283,7 @@ ProcedureHeading :
 +                       @IfStmt
 +                       .sEnd       % Need to emit sEnd token for else block
 +                   |*:
-+                       @Block      % call the Block rule to handle the content for the else section of the if statement
++                       '{' @Block '}'      % call the Block rule to handle the content for the else section of the if statement
 +               ]
             | *:
         ];
@@ -304,15 +306,50 @@ ProcedureHeading :
 
     - Removed the `end` tokens and replaced them with `}` tokens instead
     - Added in the default case `_` 
+
     ```diff
     +            | '_': 
     +            .sCaseOtherwise
-    +            '=>'  @Block
+    +            '=>'  '{' @Block '}'
     ```
+
     - Added in support for the new `=>` syntax
     - Called the `@Block` SSL function instead of the `@Statement` function, enabling multiple statements within a `match`
 
 # Loop Statements
+## `parser.ssl` Changes
+- Updated the `WhileStmt` rule to call the `Block` rule.
+```diff
+WhileStmt :
+        .sWhileStmt
+        @Expression
+        .sExpnEnd
+-       @Statement
++       '{' @Block '}';
+```
+- Changed the `RepeatStmt` rule to parse Qust Loop statements.
+    - To do so we first call the `Block` rule and then we handle the '`break if expression;`' statement. Followed by another call to the `Block` rule.
+
+```diff
+RepeatStmt :
+        .sLoopStmt
+-       {
+-           @Statement
+-           [
+-               | ';':
+-               | 'until':
+-                   .sRepeatEnd
+-                   >
+-           ]
+-       }
+-       @Expression
+-       .sExpnEnd;
++       '{'
++       @Block
++       pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'
++       @Block 
++       '}';
+```
 
 # Short Form Assignments
 ## `parser.ssl` Changes

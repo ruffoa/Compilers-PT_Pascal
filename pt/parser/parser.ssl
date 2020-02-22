@@ -125,7 +125,7 @@ Output :
         sElse
         sWhileStmt
         sLoopStmt
-        sLoopBreak
+        sLoopBreakIf
         sLoopEnd
         sEq
         sNE
@@ -166,7 +166,7 @@ Program :
         }
         ')'
         .sParmEnd
-        @Block;
+        '{' @Block '}';
 
 Block :
         % Strictly speaking, standard Pascal requires that declarations
@@ -174,7 +174,6 @@ Block :
         % We allow arbitrary intermixing of these instead to preserve
         % programmer sanity.
 
-        '{'
         .sBegin % output a begin at the beginning of a block
         {[
             | 'const':
@@ -213,7 +212,7 @@ Block :
             | 'mod':
                 .sModule
                 pIdentifier  .sIdentifier   % module name
-                @Block
+                '{' @Block '}'
             | pIdentifier:
                 @AssignmentOrCallStmt
             | 'if':
@@ -229,7 +228,6 @@ Block :
             | *:
                 >
         ]}
-        '}'
         .sEnd;  % end the block choice rule with an .sEnd token
 
 ConstantDefinitions :
@@ -238,7 +236,6 @@ ConstantDefinitions :
         '=' @ConstantValue
         {[
             | ',':  % handle multiple declarations per line with a ','
-                % .sConst   % do not output the second const token for now, to keep in line with multi-variable declarations
                 pIdentifier
                 .sIdentifier
                 '=' @ConstantValue
@@ -318,8 +315,6 @@ SimpleType :
                 .sIdentifier
             | *:
                 @OptionallySignedIntegerConstant
-                % '..'  .sRange
-                @OptionallySignedIntegerConstant
         ];
 
 OptionallySignedIntegerConstant :
@@ -372,7 +367,7 @@ ProcedureHeading :
         }
         ')'
         .sParmEnd
-        @Block;
+        '{' @Block '}';
 
 Statement :
         [
@@ -474,7 +469,7 @@ IfStmt :
         @Expression
         .sExpnEnd
         .sThen
-        @Block          % call the Block rule to handle the main content of the if statement
+        '{' @Block '}'         % call the Block rule to handle the main content of the if statement
         [
             | 'else':
                 .sElse
@@ -484,7 +479,7 @@ IfStmt :
                         @IfStmt
                         .sEnd       % Need to emit sEnd token for else block
                     |*:
-                        @Block          % call the Block rule to handle the content for the else section of the if statement
+                        '{' @Block '}'         % call the Block rule to handle the content for the else section of the if statement
                 ]
             | *:
         ];
@@ -506,7 +501,7 @@ CaseStmt :
                         >
                     | '_': 
                         .sCaseOtherwise
-                        '=>'  @Block
+                        '=>'  '{' @Block '}'
                     | *:
                         @CaseAlternative
                 ]
@@ -530,28 +525,22 @@ CaseAlternative :
             ]
         }
         .sLabelEnd
-        '=>'  @Block;
+        '=>' '{' @Block '}';
 
 WhileStmt :
         .sWhileStmt
         @Expression
         .sExpnEnd
-        % 'do' ToDo: FIX ME!
-        @Statement;
+        '{' @Block '}';
 
 RepeatStmt :
         .sLoopStmt
-        {
-            @Statement
-            [
-                | ';':
-                %| 'until':  ToDo: Fix me!
-                %    .sRepeatEnd
-                    >
-            ]
-        }
-        @Expression
-        .sExpnEnd;
+        '{'
+        @Block
+        pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'
+        @Block
+        '}';
+
 
 Expression :
         @SimpleExpression

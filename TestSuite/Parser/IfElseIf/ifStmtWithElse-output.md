@@ -17,7 +17,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
    .sIfStmt
        .sIdentifier
@@ -25,18 +25,18 @@ Test output is:
     .sEq
    .sExpnEnd
    .sThen
-    % .sNewLine
+   % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
     .sEnd
    .sElse
-    % .sNewLine
+   % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
-    % .sNewLine
     .sEnd
+   % .sNewLine
   .sEnd
 
 ```

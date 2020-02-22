@@ -15,7 +15,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sProcedure
   .sIdentifier
@@ -24,12 +24,12 @@ Test output is:
    .sIdentifier
    .sIdentifier
    .sParmEnd
-    % .sNewLine
+   % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
-    % .sNewLine
     .sEnd
+   % .sNewLine
   .sEnd
 
 ```

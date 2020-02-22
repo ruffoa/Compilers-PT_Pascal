@@ -21,7 +21,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -38,7 +38,7 @@ Test output is:
         .sEq
    .sExpnEnd
    .sThen
-    % .sNewLine
+   % .sNewLine
     .sBegin
     .sVar
     .sIdentifier
@@ -46,9 +46,9 @@ Test output is:
       .sInteger
       .sExpnEnd
     % .sNewLine
-    % .sNewLine
-    % .sNewLine
     .sEnd
+   % .sNewLine
+   % .sNewLine
   .sType
    .sIdentifier
      .sIdentifier

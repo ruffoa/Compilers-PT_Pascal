@@ -17,14 +17,14 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sIdentifier
    .sParmEnd
-    % .sNewLine
+   % .sNewLine
     .sBegin
     .sProcedure
     .sIdentifier
@@ -32,14 +32,14 @@ Test output is:
      .sVar
      .sIdentifier
      .sParmEnd
-      % .sNewLine
+     % .sNewLine
       .sBegin
       % .sNewLine
       .sNullStmt
-      % .sNewLine
       .sEnd
-    % .sNewLine
+     % .sNewLine
     .sEnd
+   % .sNewLine
   .sEnd
 
 ```
