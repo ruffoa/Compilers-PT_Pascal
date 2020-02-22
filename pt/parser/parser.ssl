@@ -530,9 +530,10 @@ RepeatStmt :
         .sLoopStmt
         '{'
         @Block
-        pBreak pIf .sLoopBreakIf @Expression ';'
+        pBreak .sLoopBreakIf @Expression .sExpnEnd ';'
         @Block
         '}'
+        ;
 
 
 Expression :
