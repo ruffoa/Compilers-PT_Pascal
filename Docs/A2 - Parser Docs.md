@@ -9,7 +9,12 @@ The following documents all changes made to parser.ssl structured according to t
 
 # Declarations
 ## `parser.ssl` Changes
-- Changed the `let` case statement within the `Block` rule match to be the following
+- Added the `let` case statement within the `Block` rule to handle Qust variable declarations.
+    - Start by entering a loop to allow for multiple declarations in a single statement.
+    - Enter a choice block to allow for the variable to be either mutable of imutable.
+        - output the Identifier
+        - Call the `VariableDeclaration` rule to handle the type and initial values. (Changes outlined below)
+    - Enter another choice block to see if there is another declaration of if this is the end of the statement.
 
 ```diff
     | 'let':
@@ -69,7 +74,7 @@ InitialValue :
         .sExpnEnd;
 ```
 
-- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constrainsts concerning an initial value being mandatory if no type is specified.
+- Changed the `VariableDeclarations` function to handle either a type or an initial value, in any order. And to enforce language constraints concerning an initial value being mandatory if no type is specified.
 
 ```diff
 VariableDeclarations :
@@ -325,7 +330,7 @@ WhileStmt :
 ```
 - Changed the `RepeatStmt` rule to parse Qust Loop statements.
     - To do so we first call the `Block` rule and then we handle the '`break if expression;`' statement. Followed by another call to the `Block` rule.
-    
+
 ```diff
 RepeatStmt :
         .sLoopStmt
