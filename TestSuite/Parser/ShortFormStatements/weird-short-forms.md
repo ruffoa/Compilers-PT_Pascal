@@ -1,0 +1,1 @@
+This is to check that the weird short forms that are (technically) allowed work
