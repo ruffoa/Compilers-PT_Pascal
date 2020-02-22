@@ -1,0 +1,23 @@
+
+Test Content: 
+-------------------------
+```
+mod main(output) {
+    let mut i = 0, mut j = 0;
+    loop {
+        loop {
+            break if j > 5;
+            j += 1;
+        }
+        break if i > 5;
+        i += 1
+    }
+}
+```
+------------------------
+
+Test Errors:
+-------------------------
+```
+scan/parse error, line 10: syntax error at: }
+```
