@@ -41,11 +41,56 @@ Test output is:
   % .sNewLine
   % .sNewLine
    .sCaseStmt
+       .sIdentifier
+   .sExpnEnd
+   % .sNewLine
+      .sInteger
+    .sLabelEnd
+    % .sNewLine
+     .sBegin
+     .sVar
+     .sIdentifier
+       .sInitialValue
+       .sInteger
+       .sExpnEnd
+     % .sNewLine
+     % .sNewLine
+      .sCaseStmt
+          .sIdentifier
+      .sExpnEnd
+      % .sNewLine
+         .sInteger
+       .sLabelEnd
+       % .sNewLine
+        .sBegin
+        % .sNewLine
+        .sNullStmt
+        .sEnd
+       % .sNewLine
+      .sCaseOtherwise
+      % .sNewLine
+       .sBegin
+       % .sNewLine
+       .sNullStmt
+       .sEnd
+      % .sNewLine
+      % .sNewLine
+      .sCaseEnd
+     .sEnd
+    % .sNewLine
+   .sCaseOtherwise
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   % .sNewLine
+   % .sNewLine
+   .sCaseEnd
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (10 vs 40)!  (Newlines are not the issue here!) `nested-match-statements.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

@@ -32,11 +32,30 @@ Test output is:
   % .sNewLine
   % .sNewLine
    .sCaseStmt
+       .sIdentifier
+   .sExpnEnd
+   % .sNewLine
+      .sInteger
+    .sLabelEnd
+    % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    % .sNewLine
+   .sCaseOtherwise
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   % .sNewLine
+   % .sNewLine
+   .sCaseEnd
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (10 vs 23)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

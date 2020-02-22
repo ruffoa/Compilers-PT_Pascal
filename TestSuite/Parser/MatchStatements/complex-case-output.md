@@ -39,11 +39,34 @@ Test output is:
   % .sNewLine
   % .sNewLine
    .sCaseStmt
+           .sIdentifier
+           .sIdentifier
+          .sDivide
+       .sInteger
+     .sAdd
+   .sExpnEnd
+   % .sNewLine
+      .sInteger
+    .sLabelEnd
+    % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    % .sNewLine
+   .sCaseOtherwise
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   % .sNewLine
+   % .sNewLine
+   .sCaseEnd
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (15 vs 32)!  (Newlines are not the issue here!) `complex-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

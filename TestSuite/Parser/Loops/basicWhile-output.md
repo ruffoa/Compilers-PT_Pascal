@@ -26,11 +26,20 @@ Test output is:
   .sMutable
   % .sNewLine
    .sWhileStmt
+       .sIdentifier
+       .sInteger
+    .sLT
+   .sExpnEnd
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (11 vs 19)!  (Newlines are not the issue here!) `basicWhile.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

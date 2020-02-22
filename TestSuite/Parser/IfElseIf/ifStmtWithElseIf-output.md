@@ -23,11 +23,42 @@ Test output is:
  % .sNewLine
   .sBegin
    .sIfStmt
+       .sIdentifier
+       .sInteger
+    .sEq
+   .sExpnEnd
+   .sThen
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   .sElse
+   .sBegin
+    .sIfStmt
+        .sIdentifier
+        .sInteger
+     .sEq
+    .sExpnEnd
+    .sThen
+    % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    .sElse
+    % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    % .sNewLine
+   .sEnd
+  .sEnd
+ % .sNewLine
 
 ```
 ------------------------
-Warning, output length does not match (5 vs 30)!  (Newlines are not the issue here!) `ifStmtWithElseIf.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
