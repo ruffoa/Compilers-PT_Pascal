@@ -13,7 +13,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier

@@ -23,7 +23,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -39,34 +39,11 @@ Test output is:
   % .sNewLine
   % .sNewLine
    .sCaseStmt
-           .sIdentifier
-           .sIdentifier
-          .sDivide
-       .sInteger
-     .sAdd
-   .sExpnEnd
-   % .sNewLine
-      .sInteger
-    .sLabelEnd
-     % .sNewLine
-     .sBegin
-     % .sNewLine
-     .sNullStmt
-     % .sNewLine
-     .sEnd
-   .sCaseOtherwise
-    % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    % .sNewLine
-    .sEnd
-   % .sNewLine
-   .sCaseEnd
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (15 vs 32)!  (Newlines are not the issue here!) `complex-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

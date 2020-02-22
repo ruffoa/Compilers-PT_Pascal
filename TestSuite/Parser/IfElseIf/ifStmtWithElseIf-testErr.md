@@ -2,14 +2,16 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let mut i = 0;
-    loop {
+mod main(output){
+    if a == 1 {
         ;
-        break if i > 5;
+    } else if b == 1 {
+        ;
+    } else {
         ;
     }
 }
+
 ```
 ------------------------
 

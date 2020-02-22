@@ -20,45 +20,14 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
    .sIfStmt
-       .sIdentifier
-       .sInteger
-    .sEq
-   .sExpnEnd
-   .sThen
-    % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    .sEnd
-   .sElse
-   .sBegin
-    .sIfStmt
-        .sIdentifier
-        .sInteger
-     .sEq
-    .sExpnEnd
-    .sThen
-     % .sNewLine
-     .sBegin
-     % .sNewLine
-     .sNullStmt
-     .sEnd
-    .sElse
-     % .sNewLine
-     .sBegin
-     % .sNewLine
-     .sNullStmt
-     % .sNewLine
-     .sEnd
-   .sEnd
-  % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (5 vs 30)!  (Newlines are not the issue here!) `ifStmtWithElseIf.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

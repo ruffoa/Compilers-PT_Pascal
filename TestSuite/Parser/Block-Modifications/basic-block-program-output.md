@@ -21,7 +21,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -33,31 +33,11 @@ Test output is:
    % .sNewLine
    % .sNewLine
    .sIfStmt
-           .sIdentifier
-           .sInteger
-        .sEq
-   .sExpnEnd
-   .sThen
-    % .sNewLine
-    .sBegin
-    .sVar
-    .sIdentifier
-      .sInitialValue
-      .sInteger
-      .sExpnEnd
-    % .sNewLine
-    % .sNewLine
-    % .sNewLine
-    .sEnd
-  .sType
-   .sIdentifier
-     .sIdentifier
-   % .sNewLine
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (11 vs 27)!  (Newlines are not the issue here!) `basic-block-program.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

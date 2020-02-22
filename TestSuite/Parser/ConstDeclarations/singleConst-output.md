@@ -14,14 +14,14 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
    % .sNewLine
-  % .sNewLine
   .sEnd
+ % .sNewLine
 
 ```
 ------------------------

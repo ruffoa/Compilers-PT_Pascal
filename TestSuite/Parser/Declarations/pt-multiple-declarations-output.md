@@ -13,22 +13,17 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
    .sAssignmentStmt
    .sIdentifier
-       .sInteger
-   .sExpnEnd
-  % .sNewLine
-  .sNullStmt
-  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (13 vs 25)!  (Newlines are not the issue here!) `pt-multiple-declarations.pt`
+Warning, output length does not match (9 vs 25)!  (Newlines are not the issue here!) `pt-multiple-declarations.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -38,10 +33,6 @@ File diff
 -.sInteger !== .sInitialValue on line 6 of pt-multiple-declarations.pt
 -.sAssignmentStmt !== .sInteger 1 on line 7 of pt-multiple-declarations.pt
 -.sIdentifier !== .sExpnEnd on line 8 of pt-multiple-declarations.pt
--.sInteger !== .sVar on line 9 of pt-multiple-declarations.pt
--.sExpnEnd !== .sIdentifier on line 10 of pt-multiple-declarations.pt
--.sNullStmt !== .sInitialValue on line 11 of pt-multiple-declarations.pt
--.sEnd !== .sInteger 2 on line 12 of pt-multiple-declarations.pt
 
 ```
 end file

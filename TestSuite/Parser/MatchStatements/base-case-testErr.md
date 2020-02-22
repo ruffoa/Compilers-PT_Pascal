@@ -3,11 +3,15 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let mut i = 0;
-    loop {
-        ;
-        break if i > 5;
-        ;
+    let i = 10;
+
+    match i {
+        | 12 => {
+                ;
+            }
+        | _ => {
+                ;
+            }
     }
 }
 ```

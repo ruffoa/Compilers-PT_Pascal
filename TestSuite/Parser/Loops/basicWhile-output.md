@@ -16,7 +16,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -26,25 +26,18 @@ Test output is:
   .sMutable
   % .sNewLine
    .sWhileStmt
-       .sIdentifier
-       .sInteger
-    .sLT
-   .sExpnEnd
-    % .sNewLine
-     .sBegin
-      % .sNewLine
-      .sNullStmt
-     % .sNewLine
-     .sEnd
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (11 vs 19)!  (Newlines are not the issue here!) `basicWhile.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sExpnEnd !== .ExpnEnd on line 14 of basicWhile.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

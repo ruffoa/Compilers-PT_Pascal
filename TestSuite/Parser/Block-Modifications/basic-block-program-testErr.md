@@ -3,12 +3,15 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let mut i = 0;
-    loop {
-        ;
-        break if i > 5;
-        ;
+    let x: int;
+    const y = 1;
+
+    if (y == 0) {
+        let z = 1;
     }
+
+    type t = int;
+
 }
 ```
 ------------------------

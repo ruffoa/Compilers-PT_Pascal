@@ -23,7 +23,7 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sVar
   .sIdentifier
@@ -33,32 +33,11 @@ Test output is:
   % .sNewLine
   % .sNewLine
    .sCaseStmt
-       .sIdentifier
-   .sExpnEnd
-   % .sNewLine
-      .sInteger
-    .sLabelEnd
-     % .sNewLine
-     .sBegin
-     % .sNewLine
-     .sNullStmt
-     % .sNewLine
-     .sNullStmt
-     % .sNewLine
-     .sEnd
-   .sCaseOtherwise
-    % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    % .sNewLine
-    .sEnd
-   % .sNewLine
-   .sCaseEnd
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (10 vs 24)!  (Newlines are not the issue here!) `multiple-statements-in-match.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

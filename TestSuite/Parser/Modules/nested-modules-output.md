@@ -17,22 +17,22 @@ Test output is:
  .sProgram
  .sIdentifier
  .sParmEnd
-  % .sNewLine
+ % .sNewLine
   .sBegin
   .sModule
   .sIdentifier
-   % .sNewLine
+  % .sNewLine
    .sBegin
    .sModule
    .sIdentifier
-    % .sNewLine
+   % .sNewLine
     .sBegin
     % .sNewLine
     .sNullStmt
-    % .sNewLine
     .sEnd
    % .sNewLine
    .sEnd
+  % .sNewLine
   .sEnd
 
 ```
