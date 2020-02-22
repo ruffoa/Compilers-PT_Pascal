@@ -3,7 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    type x = int; y = int;
+    let i = 1;
+    i += 1;
+    i -= 1;
 }
 ```
 ------------------------
@@ -15,26 +17,37 @@ Test output is:
  .sParmEnd
   % .sNewLine
   .sBegin
-  .sType
-   .sIdentifier
-     .sIdentifier
+  .sVar
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  % .sNewLine
    .sAssignmentStmt
    .sIdentifier
-       .sIdentifier
+   .sIdentifier
+       .sInteger
+   .sAdd
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+   .sIdentifier
+       .sInteger
+   .sSubtract
    .sExpnEnd
    % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (12 vs 11)!  (Newlines are not the issue here!) `pt-multiple-types.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sAssignmentStmt !== .sType on line 7 of pt-multiple-types.pt
--.sExpnEnd !== .sEnd on line 10 of pt-multiple-types.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

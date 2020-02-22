@@ -1,0 +1,5 @@
+mod main (output) {
+    let i = 1;
+    i += 1;
+    i -= 1;
+}
