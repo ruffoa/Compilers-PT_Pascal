@@ -238,7 +238,7 @@ ProcedureHeading :
         }
         ')'
         .sParmEnd
-        @Block;
+        '{' @Block '}';
 ```
 
 - Update the `Statement` function to accept the null statement (`;`)
@@ -254,10 +254,8 @@ ProcedureHeading :
 +       | 'mod':
 +           .sModule
 +           pIdentifier  .sIdentifier   % module name
-+           @Block
++           '{' @Block '}'
 ```
-
-# Statement Sequences
 
 # If Statement and Else-If clauses
 ## `parser.ssl` Changes
@@ -271,7 +269,7 @@ ProcedureHeading :
         .sExpnEnd
         .sThen
 -       @Statement
-+       @Block          % call the Block rule to handle the main content of the if statement
++       '{' @Block '}'          % call the Block rule to handle the main content of the if statement
         [
             | 'else':
                 .sElse
@@ -281,7 +279,7 @@ ProcedureHeading :
 +                       @IfStmt
 +                       .sEnd       % Need to emit sEnd token for else block
 +                   |*:
-+                       @Block      % call the Block rule to handle the content for the else section of the if statement
++                       '{' @Block '}'      % call the Block rule to handle the content for the else section of the if statement
 +               ]
             | *:
         ];
@@ -304,15 +302,50 @@ ProcedureHeading :
 
     - Removed the `end` tokens and replaced them with `}` tokens instead
     - Added in the default case `_` 
+
     ```diff
     +            | '_': 
     +            .sCaseOtherwise
-    +            '=>'  @Block
+    +            '=>'  '{' @Block '}'
     ```
+
     - Added in support for the new `=>` syntax
     - Called the `@Block` SSL function instead of the `@Statement` function, enabling multiple statements within a `match`
 
 # Loop Statements
+## `parser.ssl` Changes
+- Updated the `WhileStmt` rule to call the `Block` rule.
+```diff
+WhileStmt :
+        .sWhileStmt
+        @Expression
+        .sExpnEnd
+-       @Statement
++       '{' @Block '}';
+```
+- Changed the `RepeatStmt` rule to parse Qust Loop statements.
+    - To do so we first call the `Block` rule and then we handle the '`break if expression;`' statement. Followed by another call to the `Block` rule.
+    
+```diff
+RepeatStmt :
+        .sLoopStmt
+-       {
+-           @Statement
+-           [
+-               | ';':
+-               %| 'until':  ToDo: Fix me!
+-               %    .sRepeatEnd
+-                   >
+-           ]
+-       }
+-       @Expression
+-       .sExpnEnd;
++       '{'
++       @Block
++       pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'
++       @Block 
++       '}';
+```
 
 # Short Form Assignments
 

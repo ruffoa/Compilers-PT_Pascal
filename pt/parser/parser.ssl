@@ -523,7 +523,6 @@ WhileStmt :
         .sWhileStmt
         @Expression
         .sExpnEnd
-        % 'do' ToDo: FIX ME!
         '{' @Block '}';
 
 RepeatStmt :
