@@ -6,6 +6,6 @@ mod main(output) {
             j += 1;
         }
         break if i > 5;
-        i += 1
+        i += 1;
     }
 }
