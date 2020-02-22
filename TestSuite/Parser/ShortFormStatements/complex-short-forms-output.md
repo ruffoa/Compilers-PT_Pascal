@@ -58,7 +58,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.sMultiply !== .sMult on line 29 of complex-short-forms.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
