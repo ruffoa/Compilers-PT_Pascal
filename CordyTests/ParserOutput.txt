@@ -1631,6 +1631,8 @@ Output is:
     .sEnd
    .sLoopBreakIf
        .sIdentifier
+       .sInteger
+    .sGT
    .sExpnEnd
    % value emitted 55
     .sBegin
@@ -1908,6 +1910,11 @@ Output is:
         .sEnd
        .sLoopBreakIf
            .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sIdentifier
+        .sEq
        .sExpnEnd
        % value emitted 55
         .sBegin
