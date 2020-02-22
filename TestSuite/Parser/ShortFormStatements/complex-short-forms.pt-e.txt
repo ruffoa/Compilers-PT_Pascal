@@ -27,7 +27,7 @@
 .sInteger       // 2
 .sAdd           // add 2 (j + 2)
 .sInteger 1     // (j + 2) * 1
-.sMult          // (...) * 1
+.sMultiply      // (...) * 1
 .sSubtract 
 .sExpnEnd       // end i -= 1
 .sEnd

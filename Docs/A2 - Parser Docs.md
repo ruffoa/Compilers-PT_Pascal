@@ -315,6 +315,38 @@ ProcedureHeading :
 # Loop Statements
 
 # Short Form Assignments
+## `parser.ssl` Changes
+- Update the `AssignmentOrCallStmt` function to accept both `+=` and `-=` tokens
+```diff
+AssignmentOrCallStmt :
+        [
+            | '=':
+                .sAssignmentStmt
+                .sIdentifier    % identifier accepted in the Statement rule
+                @Expression
+                .sExpnEnd
++            | '+=':
++                .sAssignmentStmt
++                .sIdentifier    % identifier accepted in the Statement rule
++                .sIdentifier    % identifier accepted in the Statement rule
++                @Expression  .sAdd
++                .sExpnEnd
++            | '-=':
++                .sAssignmentStmt
++                .sIdentifier    % identifier accepted in the Statement rule
++                .sIdentifier    % identifier accepted in the Statement rule
++                @Expression  .sSubtract
++                .sExpnEnd
+            | '[':
+                .sAssignmentStmt
+                .sIdentifier
+```
+- Update the `AssignmentOrCallStmt` function to consume the `;` token on exit
+```diff
++        ]
++        ';' % consume semicolon and exit
++        ;
+```
 
 # Strings
 
