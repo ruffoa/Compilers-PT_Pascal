@@ -378,7 +378,6 @@ Statement :
         [
             | pIdentifier:
                 @AssignmentOrCallStmt
-                ';' % consume semicolon and exit
             | '{':
                 @BeginStmt
             | 'if':
@@ -423,7 +422,9 @@ AssignmentOrCallStmt :
                 .sExpnEnd
             | *:
                 @CallStmt
-        ];
+        ]
+        ';' % consume semicolon and exit
+        ;
 
 CallStmt :
         .sCallStmt
