@@ -1,1 +1,1 @@
-This is to check that the weird short forms that are (technically) allowed work
+This is to check that the weird short forms that are (technically) allowed work, at least within the parser
