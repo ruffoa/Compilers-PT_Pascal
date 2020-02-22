@@ -529,33 +529,14 @@ Factor :
                 @Factor
                 .sNot
             | pStringLiteral:
-                @Substring
-            |'?':
-                @QuestionMark
+                .sStringLiteral
             | 'file':
                 .sFile '(' @Expression ')'
                 .sExpnEnd
         ];
         
         
-Substring :
-        [
-                |'/'
-                        .sStringLiteral 
-                        @Expression ':' @Expression
-                        .sSubstring 
-                 |*:
-                        .sStringLiteral
-          ]
-         
-         
- QuestionMark : 
-        [
-                |pStringLiteral
-                        .sLength ..sStringLiteral
-                |*:
-                        .sQuestionMark
-        ]
+
 
 IdentifierExtension :
         % Handle subscripts and function actual parameter lists
