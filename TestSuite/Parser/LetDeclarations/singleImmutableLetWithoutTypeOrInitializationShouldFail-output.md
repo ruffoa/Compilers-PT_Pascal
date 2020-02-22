@@ -18,7 +18,6 @@ Test output is:
   .sVar
   .sIdentifier
        .sIdentifier
-       .sIdentifier
   .sEnd
 
 ```
