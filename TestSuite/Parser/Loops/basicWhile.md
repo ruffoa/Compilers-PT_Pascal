@@ -17,7 +17,7 @@ Test output should be:
 .sIdentifier    // Identifier for 'i'
 .sInteger 5
 .sLT            // Less Than
-.ExpnEnd
+.sExpnEnd
 .sBegin
 .sNullStmt
 .sEnd           // While end
