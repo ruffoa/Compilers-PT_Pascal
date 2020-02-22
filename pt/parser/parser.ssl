@@ -166,7 +166,6 @@ Program :
         }
         ')'
         .sParmEnd
-        %';'
         '{' @Block '}';
 
 Block :
@@ -175,7 +174,6 @@ Block :
         % We allow arbitrary intermixing of these instead to preserve
         % programmer sanity.
 
-        % '{'
         .sBegin % output a begin at the beginning of a block
         {[
             | 'const':
@@ -230,7 +228,6 @@ Block :
             | *:
                 >
         ]}
-        % '}'
         .sEnd;  % end the block choice rule with an .sEnd token
 
 ConstantDefinitions :
@@ -239,7 +236,6 @@ ConstantDefinitions :
         '=' @ConstantValue
         {[
             | ',':  % handle multiple declarations per line with a ','
-                % .sConst   % do not output the second const token for now, to keep in line with multi-variable declarations
                 pIdentifier
                 .sIdentifier
                 '=' @ConstantValue
@@ -318,8 +314,6 @@ SimpleType :
             | pIdentifier:
                 .sIdentifier
             | *:
-                @OptionallySignedIntegerConstant
-                % '..'  .sRange
                 @OptionallySignedIntegerConstant
         ];
 

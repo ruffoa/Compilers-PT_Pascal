@@ -192,7 +192,6 @@ ProcedureHeading :
             | '(':
                 {
                     % formal parameter identifier
-                    % ToDo: Get consts working!
                     [
                         | 'let':
                             pIdentifier  .sIdentifier
@@ -338,8 +337,8 @@ RepeatStmt :
 -           @Statement
 -           [
 -               | ';':
--               %| 'until':  ToDo: Fix me!
--               %    .sRepeatEnd
+-               | 'until':
+-                   .sRepeatEnd
 -                   >
 -           ]
 -       }
