@@ -3,15 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let x: int;
-    const y = 1;
-
-    if (y == 0) {
-        let z = 1;
-    }
-
-    type t = int;
-
+    type x = int; y = int;
 }
 ```
 ------------------------
