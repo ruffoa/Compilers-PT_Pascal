@@ -390,7 +390,7 @@ Statement :
             | 'loop':
                 @RepeatStmt
             | ';':
-                .sNullStmt
+                .sNullStmt  % consume semicolon and output nullStatement token
             | *:
                 .sNullStmt
         ];
@@ -401,6 +401,18 @@ AssignmentOrCallStmt :
                 .sAssignmentStmt
                 .sIdentifier    % identifier accepted in the Statement rule
                 @Expression
+                .sExpnEnd
+            | '+=':
+                .sAssignmentStmt
+                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    % identifier accepted in the Statement rule
+                @Expression  .sAdd
+                .sExpnEnd
+            | '-=':
+                .sAssignmentStmt
+                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    % identifier accepted in the Statement rule
+                @Expression  .sSubtract
                 .sExpnEnd
             | '[':
                 .sAssignmentStmt
@@ -413,7 +425,9 @@ AssignmentOrCallStmt :
                 .sExpnEnd
             | *:
                 @CallStmt
-        ];
+        ]
+        ';' % consume semicolon and exit
+        ;
 
 CallStmt :
         .sCallStmt
