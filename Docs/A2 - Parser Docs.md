@@ -403,3 +403,20 @@ AssignmentOrCallStmt :
 - Updated the match statements to look for `!=` `==` `=` `/` `||` `&&` and `!` instead of the old Pascal syntax
 
 # Other Syntactic Details
+- Updated the callStatement SSL function to require brackets, and handle the `mut` keyword
+```diff
++        '('
+        [
+-            | '(':
++            | ')':
++            | *:
++                {
++                    [
++                        | 'mut': 
++                            .sMutable
++                        | *:                        
++                    ]
++                    @Expression
+...
+-            | *:        % no actual parameters
+```

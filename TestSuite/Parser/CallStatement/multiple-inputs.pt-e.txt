@@ -7,5 +7,6 @@
 .sStringLiteral // "Hello"
 .sExpnEnd       // end "hello" 'expression'
 .sIdentifier    // identifier for 'j'
+.sExpnEnd       // end 'j'
 .sParmEnd 
 .sEnd
