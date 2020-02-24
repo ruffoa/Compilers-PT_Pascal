@@ -3563,14 +3563,13 @@ Output is:
      .sIdentifier
          .sIdentifier
          .sInteger
-        .sDivide
+              .sIdentifier
+             .sLength
+             .sInteger
+           .sSubtract
+        .sSubstring
      .sExpnEnd
-    .sEnd
-   .sLoopBreakIf
-       .sIdentifier
-   .sExpnEnd
-   % value emitted 55
-    .sBegin
+     % value emitted 55
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -3599,13 +3598,296 @@ Output is:
              .sLength
              .sInteger
            .sSubtract
-        .sDivide
+          .sIdentifier
+         .sLength
+        .sSubstring
+         .sStringLiteral
+      .sEq
      .sExpnEnd
      .sThen
+     % value emitted 55
+     % value emitted 55
       .sBegin
+       .sIfStmt
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+           % value emitted 55
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+           % value emitted 55
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sOr
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sStringLiteral
+              .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
+          .sExpnEnd
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sStringLiteral
+              .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
+          .sExpnEnd
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+            .sIdentifier
+           .sLength
+            .sIdentifier
+           .sLength
+          .sSubstring
+           .sStringLiteral
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sStringLiteral
+              .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
+          .sExpnEnd
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sStringLiteral
+              .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
+          .sExpnEnd
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
       .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+               .sIdentifier
+              .sLength
+              .sInteger
+            .sSubtract
+           .sIdentifier
+          .sLength
+         .sSubstring
+          .sStringLiteral
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sStringLiteral
+         .sExpnEnd
+         .sParmEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sParmEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sParmEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sStringLiteral
+         .sExpnEnd
+         .sParmEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sParmEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sParmEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
     .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sStringLiteral
+    .sEq
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
