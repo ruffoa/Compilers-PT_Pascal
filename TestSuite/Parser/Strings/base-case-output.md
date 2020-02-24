@@ -2,8 +2,8 @@
 Test Content: 
 -------------------------
 ```
-mod main(output){
-    let mut v = 5;
+mod main (output) {
+    let x = "hello";
 }
 ```
 ------------------------
@@ -18,9 +18,8 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-        .sInteger
+        .sStringLiteral
     .sExpnEnd
-  .sMutable
   % .sNewLine
   .sEnd
 

@@ -43,7 +43,7 @@ Test output is:
     .sVar
     .sIdentifier
       .sInitialValue
-      .sInteger
+          .sInteger
       .sExpnEnd
     % .sNewLine
     .sEnd

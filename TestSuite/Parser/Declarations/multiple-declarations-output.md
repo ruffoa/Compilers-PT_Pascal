@@ -19,11 +19,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   % .sNewLine
   .sConst

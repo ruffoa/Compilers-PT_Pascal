@@ -28,13 +28,13 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   % .sNewLine
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   % .sNewLine
   % .sNewLine

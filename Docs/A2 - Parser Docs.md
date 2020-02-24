@@ -54,23 +54,11 @@ This is to match the `mut` keyword, as well as allow for multiple declarations w
 ```
 As shown above, the ConstantDefinitions function was updated to handle multiple definitions seperated by a `,`, and only output a single parent `sConst` token while doing so.
 
-- Added an initial value function similar to the existing ConstValue function, in order to nicely handle declaring a variable with an initial value
+- Added an initial value function that calls the `@Expression` function, in order to nicely handle declaring a variable with an initial value expression
 ```
 InitialValue :
         .sInitialValue
-        [
-            | pInteger:
-                .sInteger
-            | pIdentifier:
-                .sIdentifier
-            | '-':
-                @UnsignedIntegerConstant
-                .sNegate
-            | '+':
-                @UnsignedIntegerConstant
-            | pStringLiteral:
-                .sStringLiteral
-        ]
+        @Expression
         .sExpnEnd;
 ```
 
@@ -386,6 +374,26 @@ AssignmentOrCallStmt :
 ```
 
 # Strings
+## `parser.ssl` Changes
+- Modified the `/` choice rule in `@Factor` to accept an optional `:` and a third attribute, in order to implement the substring function
+```diff
+        | '/':
+-            @Factor  .sDivide
++            @Factor
++            [
++                | ':': 
++                    @Factor
++                    .sSubstring
++                | *:
++                    .sDivide 
++            ]
+```
+- Added in the `?` syntax for string length
+```diff
++        | '?':
++            @Factor
++            .sLength
+```
 
 # Operator Syntax
 ## `parser.ssl` Changes

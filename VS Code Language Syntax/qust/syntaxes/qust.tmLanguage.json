@@ -86,8 +86,8 @@
 		},
 		"strings": {
 			"name": "string.quoted.single.qust",
-			"begin": "'",
-			"end": "'",
+			"begin": "\"",
+			"end": "\"",
 			"patterns": [
 				{
 					"name": "constant.character.escape.qust",

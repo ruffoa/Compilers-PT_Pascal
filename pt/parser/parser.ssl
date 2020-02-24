@@ -262,19 +262,7 @@ ConstantValue :
 
 InitialValue :
         .sInitialValue
-        [
-            | pInteger:
-                .sInteger
-            | pIdentifier:
-                .sIdentifier
-            | '-':
-                @UnsignedIntegerConstant
-                .sNegate
-            | '+':
-                @UnsignedIntegerConstant
-            | pStringLiteral:
-                .sStringLiteral
-        ]
+        @Expression
         .sExpnEnd;
 
 UnsignedIntegerConstant :
@@ -586,7 +574,14 @@ Term :
             | '*':
                 @Factor  .sMultiply
             | '/':
-                @Factor  .sDivide
+                @Factor
+                [
+                    | ':': 
+                       @Factor
+                       .sSubstring
+                    | *:
+                        .sDivide 
+                ]
             | '%':
                 @Factor  .sModulus
             | '&&':
@@ -607,6 +602,9 @@ Factor :
             | '!':
                 @Factor
                 .sNot
+            | '?':
+                @Factor
+                .sLength
             | pStringLiteral:
                 .sStringLiteral
             | 'file':

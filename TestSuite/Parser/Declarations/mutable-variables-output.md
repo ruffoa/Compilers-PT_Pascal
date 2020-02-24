@@ -27,7 +27,7 @@ Test output is:
   .sMutable
   .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   .sMutable
   % .sNewLine

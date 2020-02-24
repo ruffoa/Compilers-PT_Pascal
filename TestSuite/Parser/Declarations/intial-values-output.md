@@ -20,7 +20,7 @@ Test output is:
   .sIdentifier
      .sIdentifier
     .sInitialValue
-    .sInteger
+        .sInteger
     .sExpnEnd
   % .sNewLine
   .sConst
