@@ -99,13 +99,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (64 vs 15)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sAssignmentStmt !== .sEnd on line 14 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
