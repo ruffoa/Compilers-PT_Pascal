@@ -43,23 +43,31 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
         .sIdentifier
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    % value emitted 55
@@ -184,11 +192,11 @@ Output is:
     .sIdentifier
         .sIdentifier
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    .sAssignmentStmt
@@ -231,11 +239,11 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -251,11 +259,11 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -406,7 +414,14 @@ Output is:
         .sCallStmt
         .sIdentifier
             .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -427,8 +442,7 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -477,6 +491,13 @@ Output is:
           .sIdentifier
               .sIdentifier
           .sExpnEnd
+              .sIdentifier
+              .sInteger
+            .sAdd
+          .sExpnEnd
+              .sIdentifier
+          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sIfStmt
               .sIdentifier
@@ -489,6 +510,11 @@ Output is:
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
+                .sIdentifier
+                .sInteger
+              .sAdd
+            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -583,18 +609,15 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
@@ -874,6 +897,7 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sLoopStmt
        % value emitted 55
@@ -893,6 +917,7 @@ Output is:
           .sIdentifier
               .sIdentifier
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        % value emitted 55
@@ -1026,8 +1051,17 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+                  .sSubscript
+                      .sIdentifier
+                  .sExpnEnd
+             .sExpnEnd
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -1058,9 +1092,9 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 119: syntax error at: E.O. Thorp
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      .sElse
@@ -1075,8 +1109,9 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       .sElse
@@ -1084,8 +1119,9 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       % value emitted 55
@@ -1122,42 +1158,38 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-      scan/parse error, line 136: syntax error at: New shuffle.
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-      scan/parse error, line 138: syntax error at: Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): 
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -1187,17 +1219,18 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
               .sIdentifier
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sLoopStmt
          % value emitted 55
@@ -1217,18 +1250,18 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-            scan/parse error, line 149: syntax error at: (1..20): 
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -1245,18 +1278,16 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 156: syntax error at: E.O.Thorp plays this time.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -1264,37 +1295,42 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 161: syntax error at: .
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
+          .sExpnEnd
               .sIdentifier
           .sExpnEnd
+          .sFieldWidth
+              .sInteger
+          .sExpnEnd
+              .sStringLiteral
+          .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          % value emitted 55
          .sIfStmt
@@ -1307,12 +1343,12 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          .sElse
@@ -1320,23 +1356,22 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
-            scan/parse error, line 169: syntax error at: .
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -1376,6 +1411,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -1388,18 +1424,16 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 189: syntax error at: New game.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -1419,37 +1453,56 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 194: syntax error at: Too few cards left for another game.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
        .sIfStmt
@@ -1462,23 +1515,22 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 202: syntax error at:  this time.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -1501,13 +1553,12 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-             scan/parse error, line 205: syntax error at: E.O.Thorp does it again.
-                 .sIdentifier
+                 .sStringLiteral
              .sExpnEnd
+             .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
            .sEnd
           .sElse
@@ -1515,18 +1566,16 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
              .sCallStmt
              .sIdentifier
-             scan/parse error, line 208: syntax error at:  must have doctored the shuffle.
-                 .sIdentifier
+                 .sStringLiteral
              .sExpnEnd
+             .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
            .sEnd
           % value emitted 55
@@ -1536,13 +1585,12 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 211: syntax error at: Even shuffle.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         % value emitted 55
@@ -1576,6 +1624,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -1598,6 +1647,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -1634,68 +1684,70 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-      scan/parse error, line 253: syntax error at: .
-          .sIdentifier
-      .sExpnEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -1902,6 +1954,9 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -1914,13 +1969,12 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 311: syntax error at: Dealer goes bust.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -1947,13 +2001,12 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-         scan/parse error, line 315: syntax error at: Dealer calls blackjack.
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -1981,8 +2034,7 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         .sElse
@@ -2007,12 +2059,19 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
        .sIfStmt
@@ -2025,13 +2084,12 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 330: syntax error at: House wins.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sAssignmentStmt
          .sIdentifier
@@ -2053,18 +2111,16 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 334: syntax error at:  wins.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
           .sAssignmentStmt
           .sIdentifier
@@ -2079,13 +2135,12 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 337: syntax error at: Tie game.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         % value emitted 55
@@ -2097,17 +2152,20 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        .sCallStmt
-        .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -2132,8 +2190,7 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      .sElse
@@ -2288,8 +2345,7 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -2317,6 +2373,9 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -2329,18 +2388,16 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 406: syntax error at:  calls blackjack.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -2372,18 +2429,16 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-         scan/parse error, line 412: syntax error at:  goes bust.
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -2416,6 +2471,439 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+           .sParmEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+           .sParmEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+        .sIdentifier
+       .sNot
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+          .sIdentifier
+         .sNot
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
+       .sLoopStmt
+       % value emitted 55
+        .sBegin
+        .sEnd
+       .sLoopBreakIf
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sLoopStmt
+       % value emitted 55
+        .sBegin
+        .sEnd
+       .sLoopBreakIf
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+  .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -2597,6 +3085,7 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -2647,6 +3136,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -3035,6 +3525,11 @@ Output is:
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
+                .sIdentifier
+                .sInteger
+              .sAdd
+            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -3187,69 +3682,67 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-    scan/parse error, line 178: syntax error at: Enter N (number of elements, at most 1000, e.g. 100): 
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-    scan/parse error, line 180: syntax error at: Enter M (number of lookups, e.g. 1000): 
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sIdentifier
-    .sExpnEnd
-    .sCallStmt
-    .sIdentifier
-        .sIdentifier
-    .sExpnEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    scan/parse error, line 182: syntax error at: Enter a prime number (e.g. 13, 19, 51, ...): 
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
-   % value emitted 55
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
-   % value emitted 55
-   % value emitted 55
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
    % value emitted 55
    .sAssignmentStmt
    .sIdentifier
@@ -3284,11 +3777,15 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -3311,28 +3808,39 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
         .sIdentifier
     .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    % value emitted 55
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    .sAssignmentStmt
    .sIdentifier
@@ -3403,11 +3911,15 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -3428,28 +3940,39 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
         .sIdentifier
     .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    % value emitted 55
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    .sAssignmentStmt
    .sIdentifier
@@ -3460,8 +3983,7 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    .sAssignmentStmt
@@ -3489,11 +4011,15 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -3514,12 +4040,24 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
         .sIdentifier
     .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
   .sEnd
@@ -3547,12 +4085,12 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    .sLoopStmt
    % value emitted 55
@@ -3561,16 +4099,21 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
+          .sStringLiteral
+        .sAdd
+          .sIdentifier
+        .sAdd
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    .sLoopBreakIf
@@ -3582,8 +4125,7 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -3621,32 +4163,32 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sAssignmentStmt
@@ -3662,17 +4204,20 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+          .sStringLiteral
+      .sExpnEnd
           .sIdentifier
       .sExpnEnd
+          .sStringLiteral
+      .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -3738,8 +4283,13 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
               .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -3747,40 +4297,51 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
               .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        % value emitted 55
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
        .sIfStmt
@@ -3798,8 +4359,13 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
               .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -3807,40 +4373,51 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
               .sIdentifier
+            .sAdd
+              .sStringLiteral
+            .sAdd
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        % value emitted 55
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
       .sEnd
@@ -3863,17 +4440,16 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         % value emitted 55
        .sEnd
@@ -3882,17 +4458,16 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       % value emitted 55
@@ -3909,8 +4484,7 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -3928,13 +4502,13 @@ Reading file helloworld.pt
   .sBegin
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
@@ -3942,12 +4516,7 @@ Reading file helloworld.pt
 File diff
 -------------------------
  % value emitted 55 !==  % .sNewLine on line 3 of helloworld.pt
-        .sIdentifier !==         .sStringLiteral on line 7 of helloworld.pt
-   % value emitted 55 !==     .sParmEnd on line 9 of helloworld.pt
-    .sCallStmt !==    % .sNewLine on line 10 of helloworld.pt
-    .sIdentifier !==     .sCallStmt on line 11 of helloworld.pt
-        .sIdentifier !==     .sIdentifier on line 12 of helloworld.pt
-    .sExpnEnd !==     .sParmEnd on line 13 of helloworld.pt
+   % value emitted 55 !==    % .sNewLine on line 10 of helloworld.pt
    % value emitted 55 !==    % .sNewLine on line 14 of helloworld.pt
  % value emitted 55 !==  % .sNewLine on line 16 of helloworld.pt
 end file
@@ -4124,12 +4693,12 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    % value emitted 55
@@ -4152,35 +4721,42 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+        .sAdd
+      .sExpnEnd
+      .sParmEnd
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sAssignmentStmt
@@ -4201,17 +4777,32 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+          .sAdd
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
             .sIdentifier
+             .sSubscript
+                 .sIdentifier
+                 .sInteger
+               .sSubtract
+             .sExpnEnd
+          .sAdd
+            .sStringLiteral
+          .sAdd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -4234,11 +4825,14 @@ Output is:
         .sCallStmt
         .sIdentifier
             .sIdentifier
+             .sSubscript
+                 .sInteger
+             .sExpnEnd
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -4253,13 +4847,12 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 56: syntax error at: Perhaps she'll die.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -4277,47 +4870,42 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-    scan/parse error, line 64: syntax error at: The end.
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-    scan/parse error, line 66: syntax error at: Thank you very much, you're too kind.
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
@@ -4453,7 +5041,14 @@ Output is:
          .sCallStmt
          .sIdentifier
              .sIdentifier
+              .sSubscript
+                  .sIdentifier
+              .sExpnEnd
          .sExpnEnd
+         .sFieldWidth
+             .sInteger
+         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -4474,8 +5069,7 @@ Output is:
       % value emitted 55
        .sCallStmt
        .sIdentifier
-           .sIdentifier
-       .sExpnEnd
+       .sParmEnd
       % value emitted 55
      .sEnd
     % value emitted 55
@@ -4596,6 +5190,13 @@ Output is:
           .sIdentifier
               .sIdentifier
           .sExpnEnd
+              .sIdentifier
+              .sInteger
+            .sAdd
+          .sExpnEnd
+              .sIdentifier
+          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sIfStmt
               .sIdentifier
@@ -4608,6 +5209,11 @@ Output is:
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
+                .sIdentifier
+                .sInteger
+              .sAdd
+            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -4635,18 +5241,15 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
@@ -4845,8 +5448,7 @@ Output is:
     % value emitted 55
      .sCallStmt
      .sIdentifier
-         .sIdentifier
-     .sExpnEnd
+     .sParmEnd
     % value emitted 55
    .sEnd
   % value emitted 55
@@ -4945,6 +5547,7 @@ Output is:
          .sIdentifier
              .sIdentifier
          .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sLoopStmt
         % value emitted 55
@@ -4964,6 +5567,7 @@ Output is:
            .sIdentifier
                .sIdentifier
            .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         % value emitted 55
@@ -5113,8 +5717,17 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+             .sIdentifier
+              .sSubscript
+                  .sIdentifier
+                   .sSubscript
+                       .sIdentifier
+                   .sExpnEnd
+              .sExpnEnd
+         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -5253,9 +5866,9 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 145: syntax error at: E.O. Thorp
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      .sElse
@@ -5270,8 +5883,9 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       .sElse
@@ -5279,8 +5893,9 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       % value emitted 55
@@ -5317,42 +5932,38 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-      scan/parse error, line 162: syntax error at: New shuffle.
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-      scan/parse error, line 164: syntax error at: Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): 
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -5382,17 +5993,18 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
               .sIdentifier
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sLoopStmt
          % value emitted 55
@@ -5412,18 +6024,18 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-            scan/parse error, line 175: syntax error at: (1..20): 
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -5440,18 +6052,16 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 182: syntax error at: E.O.Thorp plays this time.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -5459,37 +6069,42 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 187: syntax error at: .
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
+              .sStringLiteral
+          .sExpnEnd
               .sIdentifier
           .sExpnEnd
+          .sFieldWidth
+              .sInteger
+          .sExpnEnd
+              .sStringLiteral
+          .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          % value emitted 55
          .sIfStmt
@@ -5502,12 +6117,12 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          .sElse
@@ -5515,23 +6130,22 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
             .sCallStmt
             .sIdentifier
-            scan/parse error, line 195: syntax error at: .
-                .sIdentifier
+                .sStringLiteral
             .sExpnEnd
+            .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
+            .sParmEnd
            % value emitted 55
           .sEnd
          % value emitted 55
@@ -5570,6 +6184,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -5582,18 +6197,16 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 214: syntax error at: New game.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -5613,37 +6226,56 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 219: syntax error at: Too few cards left for another game.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
        .sIfStmt
@@ -5656,23 +6288,22 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 227: syntax error at:  this time.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
         .sEnd
        .sElse
@@ -5695,13 +6326,12 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-             scan/parse error, line 230: syntax error at: E.O.Thorp does it again.
-                 .sIdentifier
+                 .sStringLiteral
              .sExpnEnd
+             .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
            .sEnd
           .sElse
@@ -5709,18 +6339,16 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
              .sCallStmt
              .sIdentifier
-             scan/parse error, line 233: syntax error at:  must have doctored the shuffle.
-                 .sIdentifier
+                 .sStringLiteral
              .sExpnEnd
+             .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
+             .sParmEnd
             % value emitted 55
            .sEnd
           % value emitted 55
@@ -5730,13 +6358,12 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 236: syntax error at: Even shuffle.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         % value emitted 55
@@ -5770,6 +6397,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -5792,6 +6420,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -5828,69 +6457,71 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
     % value emitted 55
     .sNullStmt
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-      scan/parse error, line 278: syntax error at: .
-          .sIdentifier
+          .sStringLiteral
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -6090,6 +6721,9 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sIfStmt
@@ -6102,13 +6736,12 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-        scan/parse error, line 333: syntax error at: Dealer goes bust.
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -6135,13 +6768,12 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-         scan/parse error, line 337: syntax error at: Dealer calls blackjack.
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -6169,8 +6801,7 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         .sElse
@@ -6195,12 +6826,19 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        % value emitted 55
        .sIfStmt
@@ -6213,13 +6851,12 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 352: syntax error at: House wins.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
          .sAssignmentStmt
          .sIdentifier
@@ -6241,18 +6878,16 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 356: syntax error at:  wins.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
           .sAssignmentStmt
           .sIdentifier
@@ -6267,13 +6902,12 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-           scan/parse error, line 359: syntax error at: Tie game.
-               .sIdentifier
+               .sStringLiteral
            .sExpnEnd
+           .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
+           .sParmEnd
           % value emitted 55
          .sEnd
         % value emitted 55
@@ -6285,17 +6919,20 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
+            .sStringLiteral
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        .sCallStmt
-        .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -6325,8 +6962,7 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       .sElse
@@ -6481,8 +7117,7 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
        .sEnd
       % value emitted 55
@@ -6510,6 +7145,9 @@ Output is:
        .sIdentifier
            .sIdentifier
        .sExpnEnd
+           .sIdentifier
+       .sExpnEnd
+       .sParmEnd
       % value emitted 55
       % value emitted 55
       .sIfStmt
@@ -6522,18 +7160,16 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-         scan/parse error, line 429: syntax error at:  calls blackjack.
-             .sIdentifier
+             .sStringLiteral
          .sExpnEnd
+         .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
+         .sParmEnd
         % value emitted 55
         .sAssignmentStmt
         .sIdentifier
@@ -6565,16 +7201,370 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
+          .sParmEnd
          % value emitted 55
           .sCallStmt
           .sIdentifier
-          scan/parse error, line 435: syntax error at:  goes bust.
-              .sIdentifier
+              .sStringLiteral
           .sExpnEnd
+          .sParmEnd
           .sCallStmt
           .sIdentifier
+          .sParmEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+         .sIfStmt
+             .sIdentifier
+             .sStringLiteral
+          .sEq
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+            .sParmEnd
+           % value emitted 55
+          .sEnd
+         .sElse
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+            .sParmEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+      .sEnd
+      .sIfStmt
+          .sIdentifier
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+         .sParmEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sStringLiteral
+         .sExpnEnd
+             .sIdentifier
+         .sExpnEnd
+         .sFieldWidth
+             .sInteger
+         .sExpnEnd
+             .sStringLiteral
+         .sExpnEnd
+         .sParmEnd
+         .sCallStmt
+         .sIdentifier
+         .sParmEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+         .sParmEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sStringLiteral
+         .sExpnEnd
+         .sParmEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+             .sIdentifier
+         .sExpnEnd
+         .sParmEnd
+         .sCallStmt
+         .sIdentifier
+         .sParmEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+   .sEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+        .sIdentifier
+       .sNot
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+          .sIdentifier
+         .sNot
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 55
+       % value emitted 55
+       .sLoopStmt
+       % value emitted 55
+        .sBegin
+        .sEnd
+       .sLoopBreakIf
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sLoopStmt
+       % value emitted 55
+        .sBegin
+        .sEnd
+       .sLoopBreakIf
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          .sParmEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+  .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -6759,6 +7749,9 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -6789,6 +7782,9 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sLoopStmt
      % value emitted 55
@@ -6815,6 +7811,9 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -6829,12 +7828,19 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
         .sIdentifier
     .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sVar
   .sIdentifier
@@ -6863,6 +7869,9 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+          .sIdentifier
+      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sIfStmt
          .sIdentifier
@@ -6874,6 +7883,10 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -6888,8 +7901,7 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
@@ -7025,12 +8037,15 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sInteger
     .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    .sAssignmentStmt
@@ -7058,6 +8073,7 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -7085,7 +8101,14 @@ Output is:
         .sCallStmt
         .sIdentifier
             .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
         .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
        % value emitted 55
        .sAssignmentStmt
        .sIdentifier
@@ -7098,8 +8121,7 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      % value emitted 55
      .sAssignmentStmt
@@ -7269,10 +8291,10 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sAssignmentStmt
      .sIdentifier
@@ -7659,7 +8681,16 @@ Output is:
             .sCallStmt
             .sIdentifier
                 .sIdentifier
+                 .sSubscript
+                     .sIdentifier
+                 .sExpnEnd
             .sExpnEnd
+            .sFieldWidth
+                .sInteger
+            .sExpnEnd
+                .sStringLiteral
+            .sExpnEnd
+            .sParmEnd
            % value emitted 55
            .sAssignmentStmt
            .sIdentifier
@@ -7693,8 +8724,7 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
+      .sParmEnd
      % value emitted 55
     .sEnd
    % value emitted 55
@@ -7777,13 +8807,13 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
+        .sStringLiteral
     .sExpnEnd
+    .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
    % value emitted 55
    .sLoopStmt
@@ -7793,6 +8823,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sParmEnd
      % value emitted 55
      .sIfStmt
          .sIdentifier
@@ -7806,6 +8837,7 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sParmEnd
        % value emitted 55
       .sEnd
      % value emitted 55
@@ -7823,8 +8855,7 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
+    .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
