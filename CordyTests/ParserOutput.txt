@@ -3595,7 +3595,10 @@ Output is:
      % value emitted 55
      .sIfStmt
          .sIdentifier
-             .sIdentifier
+              .sIdentifier
+             .sLength
+             .sInteger
+           .sSubtract
         .sDivide
      .sExpnEnd
      .sThen
