@@ -262,9 +262,7 @@ ConstantValue :
 
 InitialValue :
         .sInitialValue
-        [
-            @Expression
-        ]
+        @Expression
         .sExpnEnd;
 
 UnsignedIntegerConstant :
