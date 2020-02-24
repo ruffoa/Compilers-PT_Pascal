@@ -607,8 +607,17 @@ Factor :
             | '!':
                 @Factor
                 .sNot
+            | '?':
+                @Factor
+                .sLength
             | pStringLiteral:
                 .sStringLiteral
+                [
+                    | '/': 
+                        @Expression ':' @Expression
+                        .sSubstring
+                    | *:
+                ]
             | 'file':
                 .sFile '(' @Expression ')'
                 .sExpnEnd
