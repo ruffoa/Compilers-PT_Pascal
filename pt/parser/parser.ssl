@@ -417,9 +417,9 @@ CallStmt :
         % accept zero or more actual parameters, but require brackets
         '('
         [
-            ')':
+            | ')':
                 >
-            *:
+            | *:
                 {
                     @Expression
                     .sExpnEnd
