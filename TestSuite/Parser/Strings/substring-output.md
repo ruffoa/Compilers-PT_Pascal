@@ -35,13 +35,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (18 vs 17)!  (Newlines are not the issue here!) `substring.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sExpnEnd !== .sEnd on line 16 of substring.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
