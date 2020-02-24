@@ -2,12 +2,12 @@ mod main (output) {
     let x = 1;
     let y = 0;
 
-    x || y;
-    x % y;
-    y == y;
-    x / y;
-    x != y;
-    x >= y;
-    x <= y;
-    x >= y;
+    x = x || y;
+    x = x % y;
+    x = y == y;
+    x = x / y;
+    x = x != y;
+    x = x >= y;
+    x = x <= y;
+    x = x >= y;
 }
