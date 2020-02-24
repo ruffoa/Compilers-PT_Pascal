@@ -20,27 +20,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sInteger
-   .sAdd
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sInteger
-   .sSubtract
-   .sExpnEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 22)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

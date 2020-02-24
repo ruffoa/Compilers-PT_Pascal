@@ -24,55 +24,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-       .sIdentifier
-    .sGT
-   .sAdd
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-     .sInfixOr
-       .sIdentifier
-     .sOr
-   .sSubtract
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-       .sIdentifier
-    .sEq
-   .sAdd
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-       .sIdentifier
-    .sNE
-   .sSubtract
-   .sExpnEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 46)!  (Newlines are not the issue here!) `weird-short-forms.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

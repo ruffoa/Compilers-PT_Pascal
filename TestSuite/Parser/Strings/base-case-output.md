@@ -18,13 +18,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sStringLiteral
-    .sExpnEnd
-  % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 10)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

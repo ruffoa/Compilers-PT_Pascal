@@ -20,14 +20,6 @@ Test output is:
   .sIdentifier
      .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------

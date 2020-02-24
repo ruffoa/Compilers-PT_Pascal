@@ -21,31 +21,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-   .sAdd
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-       .sIdentifier
-   .sSubtract
-   .sExpnEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 25)!  (Newlines are not the issue here!) `with-variable.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

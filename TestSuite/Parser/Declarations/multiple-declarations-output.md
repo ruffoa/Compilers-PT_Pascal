@@ -19,23 +19,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  .sIdentifier
-    .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 19)!  (Newlines are not the issue here!) `multiple-declarations.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

@@ -21,25 +21,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  .sMutable
-  % .sNewLine
-   .sWhileStmt
-       .sIdentifier
-       .sInteger
-    .sLT
-   .sExpnEnd
-   % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    .sEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 19)!  (Newlines are not the issue here!) `basicWhile.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

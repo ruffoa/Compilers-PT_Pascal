@@ -18,11 +18,6 @@ Test output is:
  % .sNewLine
   .sBegin
    .sWhileStmt
-       .sIdentifier
-   .sExpnEnd
-    .sBegin
-    .sEnd
-  .sEnd
 
 ```
 ------------------------

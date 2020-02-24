@@ -27,12 +27,6 @@ Test output is:
     .sNullStmt
     .sEnd
    .sLoopBreakIf
-       .sIdentifier
-   .sExpnEnd
-   % .sNewLine
-    .sBegin
-    .sEnd
-  .sEnd
 
 ```
 ------------------------

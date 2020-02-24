@@ -21,39 +21,11 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
-    .sInteger
-    .sExpnEnd
-  % .sNewLine
-  .sConst
-   .sIdentifier
-    .sInteger
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-           .sIdentifier
-           .sInteger
-          .sDivide
-       .sInteger
-     .sAdd
-   .sAdd
-   .sExpnEnd
-   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-   .sIdentifier
-           .sIdentifier
-           .sInteger
-         .sAdd
-       .sInteger
-      .sMultiply
-   .sSubtract
-   .sExpnEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (7 vs 33)!  (Newlines are not the issue here!) `complex-short-forms.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

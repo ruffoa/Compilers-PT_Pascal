@@ -20,27 +20,11 @@ Test output is:
  % .sNewLine
   .sBegin
    .sIfStmt
-       .sIdentifier
-       .sInteger
-    .sEq
-   .sExpnEnd
-   .sThen
-   % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    .sEnd
-   .sElse
-   % .sNewLine
-    .sBegin
-    % .sNewLine
-    .sNullStmt
-    .sEnd
-   % .sNewLine
-  .sEnd
 
 ```
 ------------------------
+Warning, output length does not match (5 vs 18)!  (Newlines are not the issue here!) `ifStmtWithElse.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
