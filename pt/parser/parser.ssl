@@ -586,7 +586,14 @@ Term :
             | '*':
                 @Factor  .sMultiply
             | '/':
-                @Factor  .sDivide
+                @Factor
+                [
+                    | ':': 
+                       @Factor
+                       .sSubstring
+                    | *:
+                        .sDivide 
+                ]
             | '%':
                 @Factor  .sModulus
             | '&&':
@@ -612,12 +619,6 @@ Factor :
                 .sLength
             | pStringLiteral:
                 .sStringLiteral
-                [
-                    | '/': 
-                        @Expression ':' @Expression
-                        .sSubstring
-                    | *:
-                ]
             | 'file':
                 .sFile '(' @Expression ')'
                 .sExpnEnd
