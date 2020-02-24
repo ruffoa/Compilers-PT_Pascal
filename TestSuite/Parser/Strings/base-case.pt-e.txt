@@ -1,0 +1,10 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sVar
+.sIdentifier  // 'x'
+.sInitialValue
+.sLiteral "Hi there"  // string value for 'x'
+.sExpnEnd
+.sEnd
