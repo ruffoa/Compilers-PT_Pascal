@@ -420,6 +420,11 @@ CallStmt :
             | ')':
             | *:
                 {
+                    [
+                        | 'mut': 
+                            .sMutable
+                        | *:                        
+                    ]
                     @Expression
                     .sExpnEnd
                     % allow a field width specification to occur in calls

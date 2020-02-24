@@ -2,9 +2,10 @@
 .sIdentifier    // identifier for 'output'
 .sParmEnd
 .sBegin         // start the main function
-.sProcedure  
+.sCallStmt  
 .sIdentifier    // identifier index for 'print' 
 .sStringLiteral // "Hello"
+.sExpnEnd       // end "hello" 'expression'
 .sIdentifier    // identifier for 'j'
 .sParmEnd 
 .sEnd
