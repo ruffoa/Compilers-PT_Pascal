@@ -414,30 +414,32 @@ AssignmentOrCallStmt :
 CallStmt :
         .sCallStmt
         .sIdentifier    % procedure identifier accepted in the Statement rule
-        % accept zero or more actual parameters
-        [
-            | '(':
-                {
-                    @Expression
-                    .sExpnEnd
-                    % allow a field width specification to occur in calls
-                    % to the standard procedures write and writeln
-                    [
-                        | ':':
-                            .sFieldWidth
-                            @Expression
-                            .sExpnEnd
-                        | *:
-                    ]
-                    [
-                        | ',':
-                        | *:
-                            >
-                    ]
-                }
-                ')'
-            | *:        % no actual parameters
-        ]
+        % accept zero or more actual parameters, but require brackets
+        '(':
+            [
+                ')':
+                    >
+                *:
+                    {
+                        @Expression
+                        .sExpnEnd
+                        % allow a field width specification to occur in calls
+                        % to the standard procedures write and writeln
+                        [
+                            | ':':
+                                .sFieldWidth
+                                @Expression
+                                .sExpnEnd
+                            | *:
+                        ]
+                        [
+                            | ',':
+                            | *:
+                                >
+                        ]
+                    }
+                    ')'
+            ]
         .sParmEnd;
 
 BeginStmt :
