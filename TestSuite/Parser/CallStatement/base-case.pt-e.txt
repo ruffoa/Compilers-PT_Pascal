@@ -1,0 +1,8 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin         // begin program
+.sCallStmt      // call println()
+.sIdentifier    // 'println'
+.sParmEnd       // end println parameters
+.sEnd
