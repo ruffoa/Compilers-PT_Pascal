@@ -7,4 +7,9 @@
 .sInitialValue
 .sStringLiteral "Hi there"  // string value for 'x'
 .sExpnEnd
+.sVar
+.sIdentifier  // 'y'
+.sInitialValue
+.sIdentifier  // 'x'
+.sLength      // ? x
 .sEnd
