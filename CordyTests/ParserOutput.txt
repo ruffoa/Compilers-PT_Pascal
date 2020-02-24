@@ -196,8 +196,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -245,8 +243,6 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -267,8 +263,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      .sAssignmentStmt
@@ -448,8 +442,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -503,6 +495,7 @@ Output is:
               .sInteger
             .sAdd
           .sExpnEnd
+          .sMutable
               .sIdentifier
           .sExpnEnd
           .sParmEnd
@@ -617,20 +610,14 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd
@@ -909,7 +896,10 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
+        .sMutable
             .sIdentifier
+        .sExpnEnd
+            .sInteger
         .sExpnEnd
         .sParmEnd
        % value emitted 55
@@ -929,7 +919,10 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+          .sMutable
               .sIdentifier
+          .sExpnEnd
+              .sInteger
           .sExpnEnd
           .sParmEnd
          % value emitted 55
@@ -1172,13 +1165,9 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -1188,14 +1177,10 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -1211,8 +1196,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -1254,8 +1237,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          .sLoopStmt
@@ -1287,8 +1268,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -1306,8 +1285,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -1317,8 +1294,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -1327,8 +1302,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -1339,8 +1312,6 @@ Output is:
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -1350,8 +1321,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -1368,8 +1337,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          % value emitted 55
@@ -1388,8 +1355,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -1404,8 +1369,6 @@ Output is:
            % value emitted 55
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
             .sCallStmt
@@ -1415,8 +1378,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -1455,6 +1416,7 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -1470,8 +1432,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -1481,8 +1441,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -1503,8 +1461,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -1514,8 +1470,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -1533,8 +1487,6 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -1558,8 +1510,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -1579,8 +1529,6 @@ Output is:
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -1590,8 +1538,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -1620,8 +1566,6 @@ Output is:
              .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
            .sEnd
@@ -1630,8 +1574,6 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
              .sCallStmt
@@ -1641,8 +1583,6 @@ Output is:
              .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
            .sEnd
@@ -1658,8 +1598,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -1692,7 +1630,11 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
       .sParmEnd
      % value emitted 55
@@ -1715,7 +1657,11 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
       .sParmEnd
      % value emitted 55
@@ -1754,26 +1700,18 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -1785,8 +1723,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -1799,11 +1735,25 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
       .sCallStmt
       .sIdentifier
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sStringLiteral
+      .sExpnEnd
+      .sParmEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -1813,24 +1763,8 @@ Output is:
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
-          .sIdentifier
-      .sExpnEnd
-      .sParmEnd
-     % value emitted 55
-      .sCallStmt
-      .sIdentifier
-          .sStringLiteral
-      .sExpnEnd
-      .sParmEnd
-      .sCallStmt
-      .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -2038,6 +1972,13 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -2058,8 +1999,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -2092,8 +2031,6 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
         .sAssignmentStmt
@@ -2122,8 +2059,6 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -2161,8 +2096,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -2181,8 +2114,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          .sAssignmentStmt
@@ -2205,8 +2136,6 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
            .sCallStmt
@@ -2216,8 +2145,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
           .sAssignmentStmt
@@ -2238,8 +2165,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -2260,13 +2185,12 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -2292,8 +2216,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -2449,8 +2371,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -2479,6 +2399,13 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -2494,8 +2421,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -2505,8 +2430,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -2539,8 +2462,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
@@ -2550,8 +2471,6 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
         .sAssignmentStmt
@@ -2595,8 +2514,6 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -2613,8 +2530,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -2631,8 +2546,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -2641,8 +2554,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -2655,13 +2566,12 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -2681,14 +2591,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2698,14 +2604,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2715,8 +2617,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2726,8 +2626,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2737,8 +2635,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2748,14 +2644,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2765,8 +2657,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2776,8 +2666,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2787,8 +2675,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2798,14 +2684,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2818,8 +2700,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2829,14 +2709,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -2846,8 +2722,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -2972,6 +2846,7 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+    .sMutable
         .sIdentifier
     .sExpnEnd
     .sParmEnd
@@ -2989,12 +2864,11 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -3012,8 +2886,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -3028,8 +2900,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -3046,8 +2916,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -3055,6 +2923,7 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
@@ -3064,6 +2933,7 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -3077,9 +2947,6 @@ Output is:
 
 --------------------------------
 Reading file cache.pt
-Lengths do not match!  Something went wrong in cache.pt
-Output is: 
--------------------------
  % value emitted 55
  .sProgram
  .sIdentifier
@@ -3251,7 +3118,10 @@ Output is:
       % value emitted 55
         .sCallStmt
         .sIdentifier
+        .sMutable
             .sIdentifier
+        .sExpnEnd
+            .sInteger
         .sExpnEnd
         .sParmEnd
        % value emitted 55
@@ -3302,6 +3172,9 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -3861,8 +3734,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -3878,8 +3749,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -3895,23 +3764,17 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
     .sCallStmt
     .sIdentifier
@@ -3920,8 +3783,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    .sAssignmentStmt
@@ -3955,6 +3816,7 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -3963,6 +3825,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -4005,8 +3868,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -4014,8 +3875,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
     .sCallStmt
     .sIdentifier
@@ -4024,8 +3883,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    .sAssignmentStmt
@@ -4095,6 +3952,7 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -4103,6 +3961,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -4143,8 +4002,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -4152,8 +4009,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
     .sCallStmt
     .sIdentifier
@@ -4162,8 +4017,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    .sAssignmentStmt
@@ -4175,8 +4028,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -4203,6 +4054,7 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -4211,6 +4063,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -4251,16 +4104,789 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
   .sEnd
  % value emitted 55
 
-------------------------
-
+File diff
+-------------------------
+ % value emitted 55 !==  % .sNewLine on line 0 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 5 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 6 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 7 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 8 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 9 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 10 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 11 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 12 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 13 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 14 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 17 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 18 of cache.pt
+  .sMutable !==    .sMutable on line 19 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 20 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 21 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 22 of cache.pt
+  .sMutable !==    .sMutable on line 23 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 24 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 25 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 26 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 28 of cache.pt
+    .sArray !==      .sArray on line 29 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 30 of cache.pt
+    .sRange !==      .sRange on line 31 of cache.pt
+     .sInteger !==       .sInteger on line 32 of cache.pt
+  .sMutable !==    .sMutable on line 33 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 34 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 35 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 36 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 38 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 39 of cache.pt
+  .sMutable !==    .sMutable on line 40 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 41 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 42 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 43 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 45 of cache.pt
+  .sMutable !==    .sMutable on line 49 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 50 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 52 of cache.pt
+  .sMutable !==    .sMutable on line 56 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 57 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 58 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 59 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 61 of cache.pt
+    .sArray !==      .sArray on line 62 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 63 of cache.pt
+    .sRange !==      .sRange on line 64 of cache.pt
+     .sInteger !==       .sInteger on line 65 of cache.pt
+  .sMutable !==    .sMutable on line 66 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 67 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 69 of cache.pt
+    .sArray !==      .sArray on line 70 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 71 of cache.pt
+    .sRange !==      .sRange on line 72 of cache.pt
+     .sInteger !==       .sInteger on line 73 of cache.pt
+  .sMutable !==    .sMutable on line 74 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 75 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 77 of cache.pt
+     .sIdentifier !==       .sIdentifier on line 78 of cache.pt
+  .sMutable !==    .sMutable on line 79 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 80 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 81 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 82 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 83 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 84 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 93 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 94 of cache.pt
+    .sBegin !==    .sBegin on line 95 of cache.pt
+     .sIfStmt !==     .sIfStmt on line 96 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 97 of cache.pt
+         .sInteger !==         .sInteger on line 98 of cache.pt
+      .sEq !==      .sEq on line 99 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 100 of cache.pt
+     .sThen !==     .sThen on line 101 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 102 of cache.pt
+      .sBegin !==      .sBegin on line 103 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 104 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 105 of cache.pt
+           .sInteger !==           .sInteger on line 106 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 107 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 108 of cache.pt
+      .sEnd !==      .sEnd on line 109 of cache.pt
+     .sElse !==     .sElse on line 110 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 111 of cache.pt
+      .sBegin !==      .sBegin on line 112 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 113 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 114 of cache.pt
+           .sInteger !==           .sInteger on line 115 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 116 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 117 of cache.pt
+      .sEnd !==      .sEnd on line 118 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 119 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 120 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 121 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 122 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 123 of cache.pt
+            .sMultiply !==            .sMultiply on line 124 of cache.pt
+         .sInteger !==         .sInteger on line 125 of cache.pt
+        .sModulus !==        .sModulus on line 126 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 127 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 128 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 129 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 130 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 131 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 132 of cache.pt
+            .sModulus !==            .sModulus on line 133 of cache.pt
+         .sInteger !==         .sInteger on line 134 of cache.pt
+       .sAdd !==       .sAdd on line 135 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 136 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 137 of cache.pt
+    .sEnd !==    .sEnd on line 138 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 139 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 140 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 141 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 142 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 143 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 144 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 148 of cache.pt
+    .sBegin !==    .sBegin on line 149 of cache.pt
+    .sVar !==    .sVar on line 150 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 152 of cache.pt
+          .sInteger !==          .sInteger on line 153 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 154 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 156 of cache.pt
+     .sWhileStmt !==     .sWhileStmt on line 157 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 158 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 159 of cache.pt
+      .sLE !==      .sLE on line 160 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 161 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 162 of cache.pt
+      .sBegin !==      .sBegin on line 163 of cache.pt
+      .sVar !==      .sVar on line 164 of cache.pt
+      % value emitted 55 !==       % .sNewLine on line 168 of cache.pt
+        .sCallStmt !==        .sCallStmt on line 169 of cache.pt
+        .sIdentifier !==        .sIdentifier on line 170 of cache.pt
+        .sMutable !==        .sMutable on line 171 of cache.pt
+            .sIdentifier !==            .sIdentifier on line 172 of cache.pt
+        .sExpnEnd !==        .sExpnEnd on line 173 of cache.pt
+            .sInteger !==            .sInteger on line 174 of cache.pt
+        .sExpnEnd !==        .sExpnEnd on line 175 of cache.pt
+        .sParmEnd !==        .sParmEnd on line 176 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 177 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 178 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 179 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 180 of cache.pt
+           .sInteger !==           .sInteger on line 181 of cache.pt
+       .sAdd !==       .sAdd on line 182 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 183 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 184 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 185 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 186 of cache.pt
+       .sSubscript !==       .sSubscript on line 187 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 188 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 189 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 190 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 191 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 192 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 193 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 194 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 195 of cache.pt
+           .sInteger !==           .sInteger on line 196 of cache.pt
+       .sAdd !==       .sAdd on line 197 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 198 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 199 of cache.pt
+      .sEnd !==      .sEnd on line 200 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 201 of cache.pt
+    .sEnd !==    .sEnd on line 202 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 203 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 204 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 205 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 206 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 207 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 208 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 209 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 216 of cache.pt
+    .sBegin !==    .sBegin on line 217 of cache.pt
+    .sVar !==    .sVar on line 218 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 222 of cache.pt
+      .sCallStmt !==      .sCallStmt on line 223 of cache.pt
+      .sIdentifier !==      .sIdentifier on line 224 of cache.pt
+      .sMutable !==      .sMutable on line 225 of cache.pt
+          .sIdentifier !==          .sIdentifier on line 226 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 227 of cache.pt
+          .sIdentifier !==          .sIdentifier on line 228 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 229 of cache.pt
+      .sParmEnd !==      .sParmEnd on line 230 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 231 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 232 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 233 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 234 of cache.pt
+          .sSubscript !==          .sSubscript on line 235 of cache.pt
+              .sIdentifier !==              .sIdentifier on line 236 of cache.pt
+          .sExpnEnd !==          .sExpnEnd on line 237 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 238 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 239 of cache.pt
+    .sEnd !==    .sEnd on line 240 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 241 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 242 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 243 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 244 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 245 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 254 of cache.pt
+    .sBegin !==    .sBegin on line 255 of cache.pt
+    .sVar !==    .sVar on line 256 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 258 of cache.pt
+          .sInteger !==          .sInteger on line 259 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 260 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 262 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 263 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 264 of cache.pt
+         .sInteger !==         .sInteger on line 265 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 266 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 267 of cache.pt
+     .sWhileStmt !==     .sWhileStmt on line 268 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 269 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 270 of cache.pt
+          .sLE !==          .sLE on line 271 of cache.pt
+        .sInfixAnd !==        .sInfixAnd on line 272 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 273 of cache.pt
+             .sInteger !==             .sInteger on line 274 of cache.pt
+          .sEq !==          .sEq on line 275 of cache.pt
+        .sAnd !==        .sAnd on line 276 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 277 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 278 of cache.pt
+      .sBegin !==      .sBegin on line 279 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 280 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 281 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 282 of cache.pt
+           .sInteger !==           .sInteger on line 283 of cache.pt
+       .sAdd !==       .sAdd on line 284 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 285 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 286 of cache.pt
+       .sIfStmt !==       .sIfStmt on line 287 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 288 of cache.pt
+            .sSubscript !==            .sSubscript on line 289 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 290 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 291 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 292 of cache.pt
+        .sEq !==        .sEq on line 293 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 294 of cache.pt
+       .sThen !==       .sThen on line 295 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 296 of cache.pt
+        .sBegin !==        .sBegin on line 297 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 298 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 299 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 300 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 301 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 302 of cache.pt
+        .sEnd !==        .sEnd on line 303 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 304 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 305 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 306 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 307 of cache.pt
+           .sInteger !==           .sInteger on line 308 of cache.pt
+       .sAdd !==       .sAdd on line 309 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 310 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 311 of cache.pt
+      .sEnd !==      .sEnd on line 312 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 313 of cache.pt
+    .sEnd !==    .sEnd on line 314 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 315 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 316 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 317 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 318 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 319 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 320 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 321 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 322 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 323 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 332 of cache.pt
+    .sBegin !==    .sBegin on line 333 of cache.pt
+    .sVar !==    .sVar on line 334 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 336 of cache.pt
+          .sInteger !==          .sInteger on line 337 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 338 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 340 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 341 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 342 of cache.pt
+         .sInteger !==         .sInteger on line 343 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 344 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 345 of cache.pt
+     .sWhileStmt !==     .sWhileStmt on line 346 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 347 of cache.pt
+             .sInteger !==             .sInteger on line 348 of cache.pt
+          .sLE !==          .sLE on line 349 of cache.pt
+        .sInfixAnd !==        .sInfixAnd on line 350 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 351 of cache.pt
+             .sInteger !==             .sInteger on line 352 of cache.pt
+          .sEq !==          .sEq on line 353 of cache.pt
+        .sAnd !==        .sAnd on line 354 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 355 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 356 of cache.pt
+      .sBegin !==      .sBegin on line 357 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 358 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 359 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 360 of cache.pt
+           .sInteger !==           .sInteger on line 361 of cache.pt
+       .sAdd !==       .sAdd on line 362 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 363 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 364 of cache.pt
+       .sIfStmt !==       .sIfStmt on line 365 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 366 of cache.pt
+            .sSubscript !==            .sSubscript on line 367 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 368 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 369 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 370 of cache.pt
+        .sEq !==        .sEq on line 371 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 372 of cache.pt
+       .sThen !==       .sThen on line 373 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 374 of cache.pt
+        .sBegin !==        .sBegin on line 375 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 376 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 377 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 378 of cache.pt
+              .sSubscript !==              .sSubscript on line 379 of cache.pt
+                  .sIdentifier !==                  .sIdentifier on line 380 of cache.pt
+              .sExpnEnd !==              .sExpnEnd on line 381 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 382 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 383 of cache.pt
+        .sEnd !==        .sEnd on line 384 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 385 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 386 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 387 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 388 of cache.pt
+           .sInteger !==           .sInteger on line 389 of cache.pt
+       .sAdd !==       .sAdd on line 390 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 391 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 392 of cache.pt
+      .sEnd !==      .sEnd on line 393 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 394 of cache.pt
+    .sVar !==    .sVar on line 395 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 397 of cache.pt
+          .sInteger !==          .sInteger on line 398 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 399 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 401 of cache.pt
+     .sWhileStmt !==     .sWhileStmt on line 402 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 403 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 404 of cache.pt
+          .sLE !==          .sLE on line 405 of cache.pt
+        .sInfixAnd !==        .sInfixAnd on line 406 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 407 of cache.pt
+             .sInteger !==             .sInteger on line 408 of cache.pt
+          .sEq !==          .sEq on line 409 of cache.pt
+        .sAnd !==        .sAnd on line 410 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 411 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 412 of cache.pt
+      .sBegin !==      .sBegin on line 413 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 414 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 415 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 416 of cache.pt
+           .sInteger !==           .sInteger on line 417 of cache.pt
+       .sAdd !==       .sAdd on line 418 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 419 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 420 of cache.pt
+       .sIfStmt !==       .sIfStmt on line 421 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 422 of cache.pt
+            .sSubscript !==            .sSubscript on line 423 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 424 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 425 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 426 of cache.pt
+        .sEq !==        .sEq on line 427 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 428 of cache.pt
+       .sThen !==       .sThen on line 429 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 430 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 431 of cache.pt
+        .sBegin !==        .sBegin on line 432 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 433 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 434 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 435 of cache.pt
+             .sInteger !==             .sInteger on line 436 of cache.pt
+         .sAdd !==         .sAdd on line 437 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 438 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 439 of cache.pt
+         .sIfStmt !==         .sIfStmt on line 440 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 441 of cache.pt
+             .sInteger !==             .sInteger on line 442 of cache.pt
+          .sGT !==          .sGT on line 443 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 444 of cache.pt
+         .sThen !==         .sThen on line 445 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 446 of cache.pt
+          .sBegin !==          .sBegin on line 447 of cache.pt
+           .sAssignmentStmt !==           .sAssignmentStmt on line 448 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 449 of cache.pt
+               .sInteger !==               .sInteger on line 450 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 451 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 452 of cache.pt
+           .sAssignmentStmt !==           .sAssignmentStmt on line 453 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 454 of cache.pt
+           .sSubscript !==           .sSubscript on line 455 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 456 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 457 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 458 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 459 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 460 of cache.pt
+           .sAssignmentStmt !==           .sAssignmentStmt on line 461 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 462 of cache.pt
+           .sSubscript !==           .sSubscript on line 463 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 464 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 465 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 466 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 467 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 468 of cache.pt
+           .sAssignmentStmt !==           .sAssignmentStmt on line 469 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 470 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 471 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 472 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 473 of cache.pt
+          .sEnd !==          .sEnd on line 474 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 475 of cache.pt
+        .sEnd !==        .sEnd on line 476 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 477 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 478 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 479 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 480 of cache.pt
+           .sInteger !==           .sInteger on line 481 of cache.pt
+       .sAdd !==       .sAdd on line 482 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 483 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 484 of cache.pt
+      .sEnd !==      .sEnd on line 485 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 486 of cache.pt
+    .sEnd !==    .sEnd on line 487 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 488 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 489 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 490 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 491 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 492 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 493 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 494 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 502 of cache.pt
+    .sBegin !==    .sBegin on line 503 of cache.pt
+    .sVar !==    .sVar on line 504 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 506 of cache.pt
+          .sIdentifier !==          .sIdentifier on line 507 of cache.pt
+           .sSubscript !==           .sSubscript on line 508 of cache.pt
+               .sIdentifier !==               .sIdentifier on line 509 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 510 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 511 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 512 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 513 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 514 of cache.pt
+     .sSubscript !==     .sSubscript on line 515 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 516 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 517 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 518 of cache.pt
+          .sSubscript !==          .sSubscript on line 519 of cache.pt
+              .sIdentifier !==              .sIdentifier on line 520 of cache.pt
+          .sExpnEnd !==          .sExpnEnd on line 521 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 522 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 523 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 524 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 525 of cache.pt
+     .sSubscript !==     .sSubscript on line 526 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 527 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 528 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 529 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 530 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 531 of cache.pt
+    .sEnd !==    .sEnd on line 532 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 533 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 534 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 538 of cache.pt
+    .sBegin !==    .sBegin on line 539 of cache.pt
+    .sVar !==    .sVar on line 540 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 542 of cache.pt
+          .sInteger !==          .sInteger on line 543 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 544 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 546 of cache.pt
+    .sVar !==    .sVar on line 547 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 549 of cache.pt
+          .sIdentifier !==          .sIdentifier on line 550 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 551 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 553 of cache.pt
+     .sWhileStmt !==     .sWhileStmt on line 554 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 555 of cache.pt
+             .sInteger !==             .sInteger on line 556 of cache.pt
+          .sGT !==          .sGT on line 557 of cache.pt
+        .sInfixAnd !==        .sInfixAnd on line 558 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 559 of cache.pt
+             .sInteger !==             .sInteger on line 560 of cache.pt
+          .sNE !==          .sNE on line 561 of cache.pt
+        .sAnd !==        .sAnd on line 562 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 563 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 564 of cache.pt
+      .sBegin !==      .sBegin on line 565 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 566 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 567 of cache.pt
+           .sInteger !==           .sInteger on line 568 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 569 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 570 of cache.pt
+      .sVar !==      .sVar on line 571 of cache.pt
+        .sInitialValue !==        .sInitialValue on line 573 of cache.pt
+            .sInteger !==            .sInteger on line 574 of cache.pt
+        .sExpnEnd !==        .sExpnEnd on line 575 of cache.pt
+      % value emitted 55 !==       % .sNewLine on line 577 of cache.pt
+       .sWhileStmt !==       .sWhileStmt on line 578 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 579 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 580 of cache.pt
+        .sLT !==        .sLT on line 581 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 582 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 583 of cache.pt
+        .sBegin !==        .sBegin on line 584 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 585 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 586 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 587 of cache.pt
+             .sInteger !==             .sInteger on line 588 of cache.pt
+         .sAdd !==         .sAdd on line 589 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 590 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 591 of cache.pt
+         .sIfStmt !==         .sIfStmt on line 592 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 593 of cache.pt
+              .sSubscript !==              .sSubscript on line 594 of cache.pt
+                  .sIdentifier !==                  .sIdentifier on line 595 of cache.pt
+              .sExpnEnd !==              .sExpnEnd on line 596 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 597 of cache.pt
+              .sSubscript !==              .sSubscript on line 598 of cache.pt
+                  .sIdentifier !==                  .sIdentifier on line 599 of cache.pt
+                  .sInteger !==                  .sInteger on line 600 of cache.pt
+                .sAdd !==                .sAdd on line 601 of cache.pt
+              .sExpnEnd !==              .sExpnEnd on line 602 of cache.pt
+          .sGT !==          .sGT on line 603 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 604 of cache.pt
+         .sThen !==         .sThen on line 605 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 606 of cache.pt
+          .sBegin !==          .sBegin on line 607 of cache.pt
+           .sAssignmentStmt !==           .sAssignmentStmt on line 608 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 609 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 610 of cache.pt
+               .sInteger !==               .sInteger on line 611 of cache.pt
+           .sAdd !==           .sAdd on line 612 of cache.pt
+           .sExpnEnd !==           .sExpnEnd on line 613 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 614 of cache.pt
+            .sCallStmt !==            .sCallStmt on line 615 of cache.pt
+            .sIdentifier !==            .sIdentifier on line 616 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 617 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 618 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 619 of cache.pt
+                .sInteger !==                .sInteger on line 620 of cache.pt
+              .sAdd !==              .sAdd on line 621 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 622 of cache.pt
+            .sParmEnd !==            .sParmEnd on line 623 of cache.pt
+           % value emitted 55 !==           % .sNewLine on line 624 of cache.pt
+          .sEnd !==          .sEnd on line 625 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 626 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 627 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 628 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 629 of cache.pt
+             .sInteger !==             .sInteger on line 630 of cache.pt
+         .sAdd !==         .sAdd on line 631 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 632 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 633 of cache.pt
+        .sEnd !==        .sEnd on line 634 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 635 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 636 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 637 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 638 of cache.pt
+           .sInteger !==           .sInteger on line 639 of cache.pt
+       .sSubtract !==       .sSubtract on line 640 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 641 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 642 of cache.pt
+      .sEnd !==      .sEnd on line 643 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 644 of cache.pt
+    .sEnd !==    .sEnd on line 645 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 646 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 647 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 648 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 649 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 650 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 651 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 660 of cache.pt
+    .sBegin !==    .sBegin on line 661 of cache.pt
+    .sVar !==    .sVar on line 662 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 664 of cache.pt
+          .sInteger !==          .sInteger on line 665 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 666 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 668 of cache.pt
+    .sVar !==    .sVar on line 669 of cache.pt
+      .sInitialValue !==      .sInitialValue on line 671 of cache.pt
+          .sIdentifier !==          .sIdentifier on line 672 of cache.pt
+      .sExpnEnd !==      .sExpnEnd on line 673 of cache.pt
+    % value emitted 55 !==     % .sNewLine on line 675 of cache.pt
+     .sWhileStmt !==     .sWhileStmt     // while first != last on line 676 of cache.pt
+         .sIdentifier !==         .sIdentifier    // first on line 677 of cache.pt
+         .sIdentifier !==         .sIdentifier    // last on line 678 of cache.pt
+      .sNE !==      .sNE               // != on line 679 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 680 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 681 of cache.pt
+      .sBegin !==      .sBegin on line 682 of cache.pt
+      .sVar !==      .sVar on line 683 of cache.pt
+      .sIdentifier !==       .sIdentifier      // mid on line 684 of cache.pt
+        .sInitialValue !==        .sInitialValue   // mid = (first + last) / 2 on line 685 of cache.pt
+                .sIdentifier !==                .sIdentifier // first on line 686 of cache.pt
+                .sIdentifier !==                .sIdentifier // last on line 687 of cache.pt
+              .sAdd !==              .sAdd          // first + last on line 688 of cache.pt
+            .sInteger !==            .sInteger        // 2 on line 689 of cache.pt
+           .sDivide !==           .sDivide          // (first + last) / 2 on line 690 of cache.pt
+        .sExpnEnd !==        .sExpnEnd on line 691 of cache.pt
+      % value emitted 55 !==       % .sNewLine on line 692 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 693 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 694 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 695 of cache.pt
+           .sInteger !==           .sInteger on line 696 of cache.pt
+       .sAdd !==       .sAdd on line 697 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 698 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 699 of cache.pt
+       .sIfStmt !==       .sIfStmt on line 700 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 701 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 702 of cache.pt
+            .sSubscript !==            .sSubscript on line 703 of cache.pt
+                .sIdentifier !==                .sIdentifier on line 704 of cache.pt
+            .sExpnEnd !==            .sExpnEnd on line 705 of cache.pt
+        .sGT !==        .sGT on line 706 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 707 of cache.pt
+       .sThen !==       .sThen on line 708 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 709 of cache.pt
+        .sBegin !==        .sBegin on line 710 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 711 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 712 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 713 of cache.pt
+             .sInteger !==             .sInteger on line 714 of cache.pt
+           .sAdd !==           .sAdd on line 715 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 716 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 717 of cache.pt
+        .sEnd !==        .sEnd on line 718 of cache.pt
+       .sElse !==       .sElse on line 719 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 720 of cache.pt
+        .sBegin !==        .sBegin on line 721 of cache.pt
+         .sAssignmentStmt !==         .sAssignmentStmt on line 722 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 723 of cache.pt
+             .sIdentifier !==             .sIdentifier on line 724 of cache.pt
+         .sExpnEnd !==         .sExpnEnd on line 725 of cache.pt
+         % value emitted 55 !==         % .sNewLine on line 726 of cache.pt
+        .sEnd !==        .sEnd on line 727 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 728 of cache.pt
+      .sEnd !==      .sEnd on line 729 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 730 of cache.pt
+     .sAssignmentStmt !==     .sAssignmentStmt on line 731 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 732 of cache.pt
+     .sIdentifier !==     .sIdentifier on line 733 of cache.pt
+         .sInteger !==         .sInteger on line 734 of cache.pt
+     .sAdd !==     .sAdd on line 735 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 736 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 737 of cache.pt
+     .sIfStmt !==     .sIfStmt on line 738 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 739 of cache.pt
+          .sSubscript !==          .sSubscript on line 740 of cache.pt
+              .sIdentifier !==              .sIdentifier on line 741 of cache.pt
+          .sExpnEnd !==          .sExpnEnd on line 742 of cache.pt
+         .sIdentifier !==         .sIdentifier on line 743 of cache.pt
+      .sEq !==      .sEq on line 744 of cache.pt
+     .sExpnEnd !==     .sExpnEnd on line 745 of cache.pt
+     .sThen !==     .sThen on line 746 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 747 of cache.pt
+      .sBegin !==      .sBegin on line 748 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 749 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 750 of cache.pt
+           .sIdentifier !==           .sIdentifier on line 751 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 752 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 753 of cache.pt
+      .sEnd !==      .sEnd on line 754 of cache.pt
+     .sElse !==     .sElse on line 755 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 756 of cache.pt
+      .sBegin !==      .sBegin on line 757 of cache.pt
+       .sAssignmentStmt !==       .sAssignmentStmt on line 758 of cache.pt
+       .sIdentifier !==       .sIdentifier on line 759 of cache.pt
+           .sInteger !==           .sInteger on line 760 of cache.pt
+       .sExpnEnd !==       .sExpnEnd on line 761 of cache.pt
+       % value emitted 55 !==       % .sNewLine on line 762 of cache.pt
+      .sEnd !==      .sEnd on line 763 of cache.pt
+     % value emitted 55 !==     % .sNewLine on line 764 of cache.pt
+    .sEnd !==    .sEnd on line 765 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 766 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 767 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 768 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 769 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 770 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 771 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 772 of cache.pt
+   % value emitted 55 !==   % .sNewLine on line 773 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 779 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 788 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 794 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 803 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 809 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 818 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 819 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 823 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 824 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 825 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 837 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 842 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 843 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 845 of cache.pt
+  .sMutable !==    .sMutable on line 849 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 850 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 856 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 859 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 860 of cache.pt
+    .sMutable !==      .sMutable on line 861 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 862 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 863 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 864 of cache.pt
+    .sMutable !==      .sMutable on line 865 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 866 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 873 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 882 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 889 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 891 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 892 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 894 of cache.pt
+  .sMutable !==    .sMutable on line 900 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 901 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 922 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 923 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 924 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 925 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 937 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 942 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 943 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 944 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 949 of cache.pt
+  .sIdentifier !==    .sIdentifier on line 951 of cache.pt
+  .sMutable !==    .sMutable on line 955 of cache.pt
+  % value emitted 55 !==    % .sNewLine on line 956 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 962 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 971 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 978 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 980 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 981 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 986 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 992 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 995 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 996 of cache.pt
+    .sMutable !==      .sMutable on line 997 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 998 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 999 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 1000 of cache.pt
+    .sMutable !==      .sMutable on line 1001 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 1002 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1009 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1018 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1025 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1027 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1028 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1035 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1056 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1057 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1058 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1059 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1071 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1076 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1077 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1078 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1082 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1083 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1088 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1094 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 1097 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 1098 of cache.pt
+    .sMutable !==      .sMutable on line 1099 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 1100 of cache.pt
+    .sIdentifier !==      .sIdentifier on line 1101 of cache.pt
+       .sIdentifier !==         .sIdentifier on line 1102 of cache.pt
+    .sMutable !==      .sMutable on line 1103 of cache.pt
+    % value emitted 55 !==      % .sNewLine on line 1104 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1111 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1120 of cache.pt
+     % value emitted 55 !==      % .sNewLine on line 1127 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1129 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1130 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1137 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1158 of cache.pt
+   % value emitted 55 !==    % .sNewLine on line 1159 of cache.pt
+ % value emitted 55 !==  % .sNewLine on line 1161 of cache.pt
+end file
 --------------------------------
 Reading file double.pt
 Lengths do not match!  Something went wrong in double.pt
@@ -4286,8 +4912,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    .sLoopStmt
@@ -4311,8 +4935,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -4325,8 +4947,6 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -4370,8 +4990,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -4382,8 +5000,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -4394,8 +5010,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -4421,14 +5035,10 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -4522,8 +5132,6 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -4538,8 +5146,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -4553,14 +5159,10 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -4606,8 +5208,6 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -4622,8 +5222,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -4637,14 +5235,10 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -4673,14 +5267,10 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
         % value emitted 55
@@ -4695,14 +5285,10 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
        .sEnd
@@ -4720,8 +5306,6 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -4733,9 +5317,6 @@ Output is:
 
 --------------------------------
 Reading file helloworld.pt
-Lengths do not match!  Something went wrong in helloworld.pt
-Output is: 
--------------------------
  .sProgram
  .sIdentifier
  .sParmEnd
@@ -4749,15 +5330,18 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd
  % value emitted 55
 
-------------------------
-
+File diff
+-------------------------
+ % value emitted 55 !==  % .sNewLine on line 3 of helloworld.pt
+   % value emitted 55 !==    % .sNewLine on line 10 of helloworld.pt
+   % value emitted 55 !==    % .sNewLine on line 14 of helloworld.pt
+ % value emitted 55 !==  % .sNewLine on line 16 of helloworld.pt
+end file
 --------------------------------
 Reading file lunch.pt
 Lengths do not match!  Something went wrong in lunch.pt
@@ -4936,8 +5520,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -4961,8 +5543,6 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -4972,8 +5552,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -4988,8 +5566,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -5002,8 +5578,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -5050,8 +5624,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -5082,8 +5654,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -5104,8 +5674,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -5124,8 +5692,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -5135,14 +5701,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -5152,8 +5714,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -5163,14 +5723,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd
@@ -5335,8 +5891,6 @@ Output is:
       % value emitted 55
        .sCallStmt
        .sIdentifier
-           .sIdentifier
-       .sExpnEnd
        .sParmEnd
       % value emitted 55
      .sEnd
@@ -5462,6 +6016,7 @@ Output is:
               .sInteger
             .sAdd
           .sExpnEnd
+          .sMutable
               .sIdentifier
           .sExpnEnd
           .sParmEnd
@@ -5509,20 +6064,14 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd
@@ -5722,8 +6271,6 @@ Output is:
     % value emitted 55
      .sCallStmt
      .sIdentifier
-         .sIdentifier
-     .sExpnEnd
      .sParmEnd
     % value emitted 55
    .sEnd
@@ -5821,7 +6368,10 @@ Output is:
        % value emitted 55
          .sCallStmt
          .sIdentifier
+         .sMutable
              .sIdentifier
+         .sExpnEnd
+             .sInteger
          .sExpnEnd
          .sParmEnd
         % value emitted 55
@@ -5841,7 +6391,10 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
+           .sMutable
                .sIdentifier
+           .sExpnEnd
+               .sInteger
            .sExpnEnd
            .sParmEnd
           % value emitted 55
@@ -6208,13 +6761,9 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -6224,14 +6773,10 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -6247,8 +6792,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -6290,8 +6833,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          .sLoopStmt
@@ -6323,8 +6864,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -6342,8 +6881,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -6353,8 +6890,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -6363,8 +6898,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -6375,8 +6908,6 @@ Output is:
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -6386,8 +6917,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -6404,8 +6933,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          % value emitted 55
@@ -6424,8 +6951,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -6440,8 +6965,6 @@ Output is:
            % value emitted 55
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
             .sCallStmt
@@ -6451,8 +6974,6 @@ Output is:
             .sParmEnd
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -6490,6 +7011,7 @@ Output is:
     % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -6505,8 +7027,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -6516,8 +7036,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -6538,8 +7056,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -6549,8 +7065,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -6568,8 +7082,6 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
         .sCallStmt
@@ -6593,8 +7105,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -6614,8 +7124,6 @@ Output is:
          % value emitted 55
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -6625,8 +7133,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -6655,8 +7161,6 @@ Output is:
              .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
            .sEnd
@@ -6665,8 +7169,6 @@ Output is:
            .sBegin
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
              .sCallStmt
@@ -6676,8 +7178,6 @@ Output is:
              .sParmEnd
              .sCallStmt
              .sIdentifier
-                 .sIdentifier
-             .sExpnEnd
              .sParmEnd
             % value emitted 55
            .sEnd
@@ -6693,8 +7193,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -6727,7 +7225,11 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
       .sParmEnd
      % value emitted 55
@@ -6750,7 +7252,11 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
       .sParmEnd
      % value emitted 55
@@ -6789,26 +7295,18 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -6820,8 +7318,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -6834,13 +7330,12 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
@@ -6854,6 +7349,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -6865,8 +7361,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -7067,6 +7561,13 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
+          .sIdentifier
+      .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -7087,8 +7588,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        .sAssignmentStmt
@@ -7121,8 +7620,6 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
         .sAssignmentStmt
@@ -7151,8 +7648,6 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -7190,8 +7685,6 @@ Output is:
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -7210,8 +7703,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          .sAssignmentStmt
@@ -7234,8 +7725,6 @@ Output is:
          .sBegin
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
            .sCallStmt
@@ -7245,8 +7734,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
           .sAssignmentStmt
@@ -7267,8 +7754,6 @@ Output is:
            .sParmEnd
            .sCallStmt
            .sIdentifier
-               .sIdentifier
-           .sExpnEnd
            .sParmEnd
           % value emitted 55
          .sEnd
@@ -7289,13 +7774,12 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
       .sEnd
@@ -7326,8 +7810,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
        .sEnd
@@ -7483,8 +7965,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
        .sEnd
@@ -7513,6 +7993,13 @@ Output is:
        .sIdentifier
            .sIdentifier
        .sExpnEnd
+       .sMutable
+           .sIdentifier
+       .sExpnEnd
+       .sMutable
+           .sIdentifier
+       .sExpnEnd
+       .sMutable
            .sIdentifier
        .sExpnEnd
        .sParmEnd
@@ -7528,8 +8015,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
@@ -7539,8 +8024,6 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
         .sAssignmentStmt
@@ -7573,8 +8056,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
           .sCallStmt
@@ -7584,8 +8065,6 @@ Output is:
           .sParmEnd
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
          .sAssignmentStmt
@@ -7629,8 +8108,6 @@ Output is:
           .sBegin
             .sCallStmt
             .sIdentifier
-                .sIdentifier
-            .sExpnEnd
             .sParmEnd
            % value emitted 55
           .sEnd
@@ -7647,8 +8124,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
@@ -7665,8 +8140,6 @@ Output is:
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
        .sEnd
@@ -7675,8 +8148,6 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
          .sCallStmt
@@ -7689,13 +8160,12 @@ Output is:
          .sIdentifier
              .sIdentifier
          .sExpnEnd
+         .sMutable
              .sIdentifier
          .sExpnEnd
          .sParmEnd
          .sCallStmt
          .sIdentifier
-             .sIdentifier
-         .sExpnEnd
          .sParmEnd
         % value emitted 55
        .sEnd
@@ -7716,14 +8186,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7733,14 +8199,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7750,8 +8212,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7761,8 +8221,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7772,8 +8230,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7783,14 +8239,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7800,8 +8252,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7811,8 +8261,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7822,8 +8270,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7833,14 +8279,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7853,8 +8295,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7864,14 +8304,10 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
     .sCallStmt
@@ -7881,8 +8317,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -7895,6 +8329,7 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
+    .sMutable
         .sIdentifier
     .sExpnEnd
     .sParmEnd
@@ -7912,12 +8347,11 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -7935,8 +8369,6 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-            .sIdentifier
-        .sExpnEnd
         .sParmEnd
        % value emitted 55
        % value emitted 55
@@ -7951,8 +8383,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -7969,8 +8399,6 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
-              .sIdentifier
-          .sExpnEnd
           .sParmEnd
          % value emitted 55
         .sEnd
@@ -7978,6 +8406,7 @@ Output is:
        % value emitted 55
         .sCallStmt
         .sIdentifier
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
@@ -7987,6 +8416,7 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -8212,6 +8642,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -8241,6 +8672,7 @@ Output is:
         .sIdentifier
             .sIdentifier
         .sExpnEnd
+        .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
@@ -8270,8 +8702,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sVar
@@ -8301,6 +8731,7 @@ Output is:
       .sIdentifier
           .sIdentifier
       .sExpnEnd
+      .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
@@ -8333,8 +8764,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd
@@ -8479,8 +8908,6 @@ Output is:
     .sParmEnd
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -8557,8 +8984,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      % value emitted 55
@@ -8732,8 +9157,6 @@ Output is:
       .sParmEnd
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
      .sAssignmentStmt
@@ -9164,8 +9587,6 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
-          .sIdentifier
-      .sExpnEnd
       .sParmEnd
      % value emitted 55
     .sEnd
@@ -9255,8 +9676,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
    % value emitted 55
@@ -9299,8 +9718,6 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
-        .sIdentifier
-    .sExpnEnd
     .sParmEnd
    % value emitted 55
   .sEnd

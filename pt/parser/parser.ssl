@@ -414,10 +414,17 @@ AssignmentOrCallStmt :
 CallStmt :
         .sCallStmt
         .sIdentifier    % procedure identifier accepted in the Statement rule
-        % accept zero or more actual parameters
+        % accept zero or more actual parameters, but require brackets
+        '('
         [
-            | '(':
+            | ')':
+            | *:
                 {
+                    [
+                        | 'mut': 
+                            .sMutable
+                        | *:                        
+                    ]
                     @Expression
                     .sExpnEnd
                     % allow a field width specification to occur in calls
@@ -436,7 +443,6 @@ CallStmt :
                     ]
                 }
                 ')'
-            | *:        % no actual parameters
         ]
         .sParmEnd;
 

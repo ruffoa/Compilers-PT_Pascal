@@ -162,57 +162,57 @@
    .sEnd                // end the 'show' function
   % .sNewLine
   % .sNewLine
-  .sProcedure
-  .sIdentifier
+  .sProcedure           // sort function
+  .sIdentifier          // 'sort
    .sParmEnd
   % .sNewLine
    .sBegin
-   .sVar
+   .sVar                // let mut i = nelements - 1
     .sIdentifier
-     .sInitialValue
+     .sInitialValue     // i = nelements - 1
          .sIdentifier
          .sInteger
-       .sSubtract
+       .sSubtract       // nelements - 1
      .sExpnEnd
-    .sMutable
+    .sMutable           // mut keyword for 'i'
     % .sNewLine
-    .sWhileStmt
-        .sIdentifier
-        .sInteger
-     .sGT
-    .sExpnEnd
+    .sWhileStmt         // while i > 0
+        .sIdentifier    // i
+        .sInteger       // 0
+     .sGT               // i > 0 
+    .sExpnEnd           // end while expression
     % .sNewLine
-     .sBegin
-     .sVar
+     .sBegin            // begin while statement
+     .sVar              // let mut j = 1
       .sIdentifier
        .sInitialValue
            .sInteger
        .sExpnEnd
-      .sMutable
+      .sMutable         // j is mutable
       % .sNewLine
-      .sWhileStmt
+      .sWhileStmt       // while j < nelements
           .sIdentifier
           .sIdentifier
-       .sLT
+       .sLT             // j < nelements
       .sExpnEnd
       % .sNewLine
-       .sBegin
-       .sVar
-        .sIdentifier
-           .sIdentifier
-        .sMutable
+       .sBegin          // begin while j < nelements
+       .sVar            // let mut lt: bool
+        .sIdentifier    // lt
+           .sIdentifier // bool
+        .sMutable       // lt is mutable
         % .sNewLine
-         .sCallStmt
-         .sIdentifier
-             .sIdentifier
-         .sExpnEnd
-             .sIdentifier
-             .sInteger
-           .sAdd
-         .sExpnEnd
-         .sMutable
-             .sIdentifier
-         .sExpnEnd
+         .sCallStmt     // call for lessthan function
+         .sIdentifier   // 'lessthan'
+             .sIdentifier   // 'j'
+         .sExpnEnd          // end 'j'
+             .sIdentifier   // 'j'
+             .sInteger      // 1
+           .sAdd            // 'j' + 1
+         .sExpnEnd          // end 'j' + 1
+         .sMutable          // lt is mutable
+             .sIdentifier   // 'lt'
+         .sExpnEnd          // end 'mut lt'
          .sParmEnd
         % .sNewLine
         .sIfStmt
