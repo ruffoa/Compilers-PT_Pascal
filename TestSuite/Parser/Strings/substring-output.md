@@ -19,18 +19,29 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
+        .sStringLiteral
+    .sExpnEnd
+  % .sNewLine
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sIdentifier
+        .sInteger
+        .sInteger
+       .sSubstring
+    .sExpnEnd
+  % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 17)!  (Newlines are not the issue here!) `substring.pt`
+Warning, output length does not match (18 vs 17)!  (Newlines are not the issue here!) `substring.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sExpnEnd !== .sEnd on line 16 of substring.pt
 
 ```
 end file

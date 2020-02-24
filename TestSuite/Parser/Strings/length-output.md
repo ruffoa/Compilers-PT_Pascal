@@ -19,18 +19,27 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
+        .sStringLiteral
+    .sExpnEnd
+  % .sNewLine
+  .sVar
+  .sIdentifier
+    .sInitialValue
+         .sIdentifier
+        .sLength
+    .sExpnEnd
+  % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 15)!  (Newlines are not the issue here!) `length.pt`
+Warning, output length does not match (16 vs 15)!  (Newlines are not the issue here!) `length.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.sExpnEnd !== .sEnd on line 14 of length.pt
 
 ```
 end file

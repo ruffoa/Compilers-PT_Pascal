@@ -28,11 +28,77 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
+        .sInteger
+    .sExpnEnd
+  % .sNewLine
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  % .sNewLine
+  % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+     .sInfixOr
+       .sIdentifier
+     .sOr
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sModulus
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sEq
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sDivide
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sNE
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sGE
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sGE
+   .sExpnEnd
+   % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 64)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

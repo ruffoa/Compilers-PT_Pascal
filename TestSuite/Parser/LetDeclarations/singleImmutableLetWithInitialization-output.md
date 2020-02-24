@@ -19,11 +19,13 @@ Test output is:
   .sIdentifier
      .sIdentifier
     .sInitialValue
+        .sInteger
+    .sExpnEnd
+  % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (8 vs 11)!  (Newlines are not the issue here!) `singleImmutableLetWithInitialization.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

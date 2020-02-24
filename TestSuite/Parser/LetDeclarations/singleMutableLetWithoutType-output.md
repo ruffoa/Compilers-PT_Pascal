@@ -18,11 +18,14 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % .sNewLine
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 11)!  (Newlines are not the issue here!) `singleMutableLetWithoutType.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

@@ -28,11 +28,39 @@ Test output is:
   .sVar
   .sIdentifier
     .sInitialValue
+        .sInteger
+    .sExpnEnd
+  % .sNewLine
+  .sConst
+   .sIdentifier
+    .sInteger
+   % .sNewLine
+   % .sNewLine
+   .sCaseStmt
+       .sIdentifier
+   .sExpnEnd
+   % .sNewLine
+      .sIdentifier
+    .sLabelEnd
+    % .sNewLine
+     .sBegin
+     % .sNewLine
+     .sNullStmt
+     .sEnd
+    % .sNewLine
+   .sCaseOtherwise
+   % .sNewLine
+    .sBegin
+    % .sNewLine
+    .sNullStmt
+    .sEnd
+   % .sNewLine
+   % .sNewLine
+   .sCaseEnd
+  .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 26)!  (Newlines are not the issue here!) `const-variable-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
