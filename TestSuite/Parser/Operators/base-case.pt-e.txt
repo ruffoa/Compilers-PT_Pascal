@@ -1,0 +1,15 @@
+.sProgram
+.sIdentifier // <identifier index for 'output'>
+.sParmEnd
+.sBegin
+.sVar 
+.sIdentifier // identifier index for 'x' 
+.sInitialValue
+.sInteger 1    // initial value for x
+.sExpnEnd      // end the initial value 'expression'
+.sVar 
+.sIdentifier // identifier index for 'y' 
+.sInitialValue
+.sInteger 0    // initial value for y
+.sExpnEnd      // end the initial value 'expression'
+.sEnd

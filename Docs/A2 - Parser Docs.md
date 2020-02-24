@@ -388,5 +388,10 @@ AssignmentOrCallStmt :
 # Strings
 
 # Operator Syntax
+## `parser.ssl` Changes
+- Updated the required token string alternatives to be the new Qust syntax
+- Add in new tokens for pForwardSlash pPercentpDoubleEquals pDoubleAmpersand pDoubleBar pBar pNot
+- Added in the 
+- Updated the match statements to look for `!=` `==` `=` `/` `||` `&&` and `!` instead of the old Pascal syntax
 
 # Other Syntactic Details
