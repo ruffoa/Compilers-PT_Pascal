@@ -263,17 +263,7 @@ ConstantValue :
 InitialValue :
         .sInitialValue
         [
-            | pInteger:
-                .sInteger
-            | pIdentifier:
-                .sIdentifier
-            | '-':
-                @UnsignedIntegerConstant
-                .sNegate
-            | '+':
-                @UnsignedIntegerConstant
-            | pStringLiteral:
-                .sStringLiteral
+            @Expression
         ]
         .sExpnEnd;
 
