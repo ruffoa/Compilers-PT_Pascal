@@ -14,4 +14,5 @@
 .sInteger     // 1
 .sInteger     // 2
 .sSubstring   // x / 1 : 2
+.sExpnEnd     // end y = x / 1 : 2
 .sEnd

@@ -12,4 +12,5 @@
 .sInitialValue
 .sIdentifier  // 'x'
 .sLength      // ? x
+.sExpnEnd     // end y = ? x
 .sEnd
