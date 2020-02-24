@@ -1,15 +1,64 @@
-.sProgram
-.sIdentifier // <identifier index for 'output'>
-.sParmEnd
-.sBegin
-.sVar 
-.sIdentifier // identifier index for 'x' 
-.sInitialValue
-.sInteger 1    // initial value for x
-.sExpnEnd      // end the initial value 'expression'
-.sVar 
-.sIdentifier // identifier index for 'y' 
-.sInitialValue
-.sInteger 0    // initial value for y
-.sExpnEnd      // end the initial value 'expression'
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+  .sBegin
+  .sVar
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+  .sVar
+  .sIdentifier
+    .sInitialValue
+    .sInteger
+    .sExpnEnd
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+     .sInfixOr
+       .sIdentifier
+     .sOr
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sModulus
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sEq
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sDivide
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sNE
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sGE
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+    .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+    .sGE
+   .sExpnEnd
 .sEnd
