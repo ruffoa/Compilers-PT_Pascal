@@ -43,7 +43,231 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sIdentifier
+       .sInteger
+   .sAdd
+   .sExpnEnd
+   .sAssignmentStmt
+   .sIdentifier
+   .sIdentifier
+       .sInteger
+   .sAdd
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sStringLiteral
+   .sExpnEnd
+   .sAssignmentStmt
+   .sIdentifier
+       .sStringLiteral
+   .sExpnEnd
+   .sAssignmentStmt
+   .sIdentifier
+       .sStringLiteral
+   .sExpnEnd
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sMultiply
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+     .sIfStmt
+         .sIdentifier
+         .sIdentifier
+        .sModulus
+         .sInteger
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sStringLiteral
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+         .sInteger
+       .sSubtract
+      .sGE
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -181,12 +405,9 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-      .sEnd
-     .sLoopBreakIf
-         .sIdentifier
-     .sExpnEnd
-     % value emitted 55
-      .sBegin
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
@@ -195,8 +416,188 @@ Output is:
        .sExpnEnd
        % value emitted 55
       .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+      .sEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
     .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+          .sInteger
+        .sSubtract
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sWhileStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+      .sVar
+      .sIdentifier
+        .sInitialValue
+            .sInteger
+        .sExpnEnd
+      .sMutable
+      % value emitted 55
+       .sWhileStmt
+           .sIdentifier
+           .sIdentifier
+        .sLT
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+        .sVar
+        .sIdentifier
+           .sIdentifier
+        .sMutable
+        % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sIfStmt
+              .sIdentifier
+             .sNot
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+               .sInteger
+             .sSubtract
+           .sExpnEnd
+          .sInteger
+         .sMultiply
+      .sExpnEnd
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+         .sIdentifier
+        .sModulus
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sEq
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -471,12 +872,9 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
-      .sEnd
-     .sLoopBreakIf
-         .sIdentifier
-     .sExpnEnd
-     % value emitted 55
-      .sBegin
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
        .sLoopStmt
        % value emitted 55
         .sBegin
@@ -493,10 +891,1531 @@ Output is:
         .sBegin
           .sCallStmt
           .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
         .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sInteger
+         .sAdd
+       .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
       .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
     .sEnd
-  .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+          .sSubscript
+              .sIdentifier
+          .sExpnEnd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+         .sIdentifier
+       .sSubtract
+         .sInteger
+       .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sIfStmt
+         .sIdentifier
+         .sStringLiteral
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 119: syntax error at: E.O. Thorp
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sStringLiteral
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+     .sEnd
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 136: syntax error at: New shuffle.
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 138: syntax error at: Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): 
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sStringLiteral
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+       .sIfStmt
+           .sIdentifier
+           .sStringLiteral
+        .sNE
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sLoopStmt
+         % value emitted 55
+          .sBegin
+          .sEnd
+         .sLoopBreakIf
+                 .sIdentifier
+                 .sInteger
+              .sGT
+            .sInfixAnd
+                 .sIdentifier
+                 .sInteger
+              .sLT
+            .sAnd
+         .sExpnEnd
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+            scan/parse error, line 149: syntax error at: (1..20): 
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sStringLiteral
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 156: syntax error at: E.O.Thorp plays this time.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 161: syntax error at: .
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         % value emitted 55
+         .sIfStmt
+             .sIdentifier
+             .sInteger
+          .sLT
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         .sElse
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+            scan/parse error, line 169: syntax error at: .
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 189: syntax error at: New game.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 194: syntax error at: Too few cards left for another game.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sIdentifier
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 202: syntax error at:  this time.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sIdentifier
+         .sGT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+          .sIfStmt
+              .sIdentifier
+              .sStringLiteral
+           .sEq
+          .sExpnEnd
+          .sThen
+          % value emitted 55
+           .sBegin
+             .sCallStmt
+             .sIdentifier
+             scan/parse error, line 205: syntax error at: E.O.Thorp does it again.
+                 .sIdentifier
+             .sExpnEnd
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+           .sEnd
+          .sElse
+          % value emitted 55
+           .sBegin
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+             .sCallStmt
+             .sIdentifier
+             scan/parse error, line 208: syntax error at:  must have doctored the shuffle.
+                 .sIdentifier
+             .sExpnEnd
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+           .sEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 211: syntax error at: Even shuffle.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 253: syntax error at: .
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   % value emitted 55
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sBegin
+       .sCaseStmt
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+       .sExpnEnd
+       % value emitted 55
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+        .sLabelEnd
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sIdentifier
+               .sSubscript
+                   .sIdentifier
+               .sExpnEnd
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+          .sInteger
+        .sLabelEnd
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sCaseOtherwise
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       % value emitted 55
+       .sCaseEnd
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+             .sIdentifier
+             .sInteger
+          .sLE
+       .sInfixOr
+             .sIdentifier
+             .sInteger
+          .sEq
+       .sOr
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 311: syntax error at: Dealer goes bust.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sInteger
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+         scan/parse error, line 315: syntax error at: Dealer calls blackjack.
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sInteger
+         .sLT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sIdentifier
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 330: syntax error at: House wins.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sIdentifier
+         .sLT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 334: syntax error at:  wins.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 337: syntax error at: Tie game.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sIfStmt
+         .sIdentifier
+         .sIdentifier
+      .sLT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+          .sSubscript
+              .sInteger
+          .sExpnEnd
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+     % value emitted 55
+      .sBegin
+       .sIfStmt
+           .sIdentifier
+           .sInteger
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+             .sInteger
+          .sGT
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+             .sInteger
+          .sGT
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+     % value emitted 55
+      .sBegin
+       .sIfStmt
+               .sIdentifier
+               .sInteger
+            .sGT
+          .sInfixAnd
+               .sIdentifier
+               .sInteger
+            .sLT
+          .sAnd
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+             .sInteger
+          .sGT
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       .sBegin
+        .sIfStmt
+                .sIdentifier
+                .sInteger
+             .sGT
+           .sInfixAnd
+                .sIdentifier
+                .sInteger
+             .sLT
+           .sAnd
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+              .sInteger
+           .sGT
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+              .sInteger
+           .sGT
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sEnd
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+          .sIdentifier
+         .sNot
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 406: syntax error at:  calls blackjack.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sInteger
+       .sGT
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+         scan/parse error, line 412: syntax error at:  goes bust.
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sStringLiteral
+         .sEq
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
 
 ------------------------
 
@@ -676,9 +2595,935 @@ Output is:
       % value emitted 55
         .sCallStmt
         .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
       .sEnd
+     % value emitted 55
     .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+          .sSubscript
+              .sIdentifier
+          .sExpnEnd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sWhileStmt
+             .sIdentifier
+             .sIdentifier
+          .sLE
+        .sInfixAnd
+             .sIdentifier
+             .sInteger
+          .sEq
+        .sAnd
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sIdentifier
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sWhileStmt
+             .sIdentifier
+             .sInteger
+          .sLE
+        .sInfixAnd
+             .sIdentifier
+             .sInteger
+          .sEq
+        .sAnd
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sIdentifier
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+              .sSubscript
+                  .sIdentifier
+              .sExpnEnd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sWhileStmt
+             .sIdentifier
+             .sIdentifier
+          .sLE
+        .sInfixAnd
+             .sIdentifier
+             .sInteger
+          .sEq
+        .sAnd
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+           .sIdentifier
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+         .sIfStmt
+             .sIdentifier
+             .sInteger
+          .sGT
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+           .sAssignmentStmt
+           .sIdentifier
+               .sInteger
+           .sExpnEnd
+           % value emitted 55
+           .sAssignmentStmt
+           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+               .sIdentifier
+           .sExpnEnd
+           % value emitted 55
+           .sAssignmentStmt
+           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+               .sIdentifier
+           .sExpnEnd
+           % value emitted 55
+           .sAssignmentStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+      .sExpnEnd
+    % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+          .sSubscript
+              .sIdentifier
+          .sExpnEnd
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sWhileStmt
+             .sIdentifier
+             .sInteger
+          .sGT
+        .sInfixAnd
+             .sIdentifier
+             .sInteger
+          .sNE
+        .sAnd
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+       % value emitted 55
+      .sVar
+      .sIdentifier
+        .sInitialValue
+            .sInteger
+        .sExpnEnd
+      .sMutable
+      % value emitted 55
+       .sWhileStmt
+           .sIdentifier
+           .sIdentifier
+        .sLT
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+         .sIfStmt
+             .sIdentifier
+              .sSubscript
+                  .sIdentifier
+              .sExpnEnd
+             .sIdentifier
+              .sSubscript
+                  .sIdentifier
+                  .sInteger
+                .sAdd
+              .sExpnEnd
+          .sGT
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+           .sAssignmentStmt
+           .sIdentifier
+           .sIdentifier
+               .sInteger
+           .sAdd
+           .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sWhileStmt
+         .sIdentifier
+         .sIdentifier
+      .sNE
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+      .sVar
+      .sIdentifier
+        .sInitialValue
+                .sIdentifier
+                .sIdentifier
+              .sAdd
+            .sInteger
+           .sDivide
+        .sExpnEnd
+      % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+             .sInteger
+           .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+          .sSubscript
+              .sIdentifier
+          .sExpnEnd
+         .sIdentifier
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sInteger
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    scan/parse error, line 178: syntax error at: Enter N (number of elements, at most 1000, e.g. 100): 
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    scan/parse error, line 180: syntax error at: Enter M (number of lookups, e.g. 1000): 
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    scan/parse error, line 182: syntax error at: Enter a prime number (e.g. 13, 19, 51, ...): 
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sWhileStmt
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sIdentifier
+        .sIdentifier
+       .sDivide
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sWhileStmt
+       .sIdentifier
+       .sInteger
+    .sLE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sWhileStmt
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sDivide
+   .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sWhileStmt
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+       .sIdentifier
+      .sDivide
+   .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -702,7 +3547,48 @@ Output is:
   % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sStringLiteral
+    .sEq
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -735,23 +3621,306 @@ Output is:
     .sBegin
       .sCallStmt
       .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+         .sInteger
+              .sIdentifier
+             .sLength
+             .sInteger
+           .sSubtract
+        .sSubstring
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+              .sIdentifier
+             .sLength
+             .sInteger
+           .sSubtract
+          .sIdentifier
+         .sLength
+        .sSubstring
+         .sStringLiteral
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+     % value emitted 55
+      .sBegin
+       .sIfStmt
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+           % value emitted 55
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+           % value emitted 55
+         .sOr
+         .sInfixOr
+               .sIdentifier
+               .sInteger
+               .sInteger
+              .sSubstring
+               .sStringLiteral
+            .sEq
+         .sOr
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+            .sIdentifier
+           .sLength
+            .sIdentifier
+           .sLength
+          .sSubstring
+           .sStringLiteral
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+               .sIdentifier
+              .sLength
+              .sInteger
+            .sSubtract
+           .sIdentifier
+          .sLength
+         .sSubstring
+          .sStringLiteral
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
     .sEnd
    .sLoopBreakIf
        .sIdentifier
+       .sStringLiteral
+    .sEq
    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
     .sBegin
       .sCallStmt
       .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
     .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
 --------------------------------
 Reading file helloworld.pt
-Lengths do not match!  Something went wrong in helloworld.pt
-Output is: 
--------------------------
  .sProgram
  .sIdentifier
  .sParmEnd
@@ -759,10 +3928,29 @@ Output is:
   .sBegin
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
-------------------------
-
+File diff
+-------------------------
+ % value emitted 55 !==  % .sNewLine on line 3 of helloworld.pt
+        .sIdentifier !==         .sStringLiteral on line 7 of helloworld.pt
+   % value emitted 55 !==     .sParmEnd on line 9 of helloworld.pt
+    .sCallStmt !==    % .sNewLine on line 10 of helloworld.pt
+    .sIdentifier !==     .sCallStmt on line 11 of helloworld.pt
+        .sIdentifier !==     .sIdentifier on line 12 of helloworld.pt
+    .sExpnEnd !==     .sParmEnd on line 13 of helloworld.pt
+   % value emitted 55 !==    % .sNewLine on line 14 of helloworld.pt
+ % value emitted 55 !==  % .sNewLine on line 16 of helloworld.pt
+end file
 --------------------------------
 Reading file lunch.pt
 Lengths do not match!  Something went wrong in lunch.pt
@@ -936,7 +4124,203 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sInteger
+    .sGE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sInteger
+      .sLT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sLT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 56: syntax error at: Perhaps she'll die.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    scan/parse error, line 64: syntax error at: The end.
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    scan/parse error, line 66: syntax error at: Thank you very much, you're too kind.
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -1068,12 +4452,9 @@ Output is:
        .sBegin
          .sCallStmt
          .sIdentifier
-       .sEnd
-      .sLoopBreakIf
-          .sIdentifier
-      .sExpnEnd
-      % value emitted 55
-       .sBegin
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
@@ -1082,9 +4463,193 @@ Output is:
         .sExpnEnd
         % value emitted 55
        .sEnd
+      .sLoopBreakIf
+          .sIdentifier
+          .sIdentifier
+       .sGT
+      .sExpnEnd
+      % value emitted 55
+       .sBegin
+       .sEnd
+      % value emitted 55
+       .sCallStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+      % value emitted 55
      .sEnd
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sInteger
+    .sExpnEnd
+    % value emitted 55
+    % value emitted 55
+   .sVar
+   .sIdentifier
+     .sInitialValue
+         .sInteger
+     .sExpnEnd
+   .sMutable
+   % value emitted 55
+    .sLoopStmt
+    % value emitted 55
+     .sBegin
+      .sAssignmentStmt
+      .sIdentifier
+      .sIdentifier
+          .sInteger
+      .sAdd
+      .sExpnEnd
+      % value emitted 55
+     .sVar
+     .sIdentifier
+       .sInitialValue
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+                .sInteger
+              .sSubtract
+            .sExpnEnd
+           .sInteger
+          .sMultiply
+       .sExpnEnd
+     % value emitted 55
+      .sAssignmentStmt
+      .sIdentifier
+      .sSubscript
+          .sIdentifier
+      .sExpnEnd
+          .sIdentifier
+          .sIdentifier
+         .sModulus
+      .sExpnEnd
+      % value emitted 55
+     .sEnd
+    .sLoopBreakIf
+        .sIdentifier
+        .sIdentifier
+     .sEq
+    .sExpnEnd
+    % value emitted 55
+     .sBegin
+     .sEnd
+    % value emitted 55
    .sEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+          .sInteger
+        .sSubtract
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sInteger
+      .sEq
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+      .sVar
+      .sIdentifier
+        .sInitialValue
+            .sInteger
+        .sExpnEnd
+      .sMutable
+      % value emitted 55
+       .sLoopStmt
+       % value emitted 55
+        .sBegin
+        .sEnd
+       .sLoopBreakIf
+           .sIdentifier
+           .sIdentifier
+        .sEq
+       .sExpnEnd
+       % value emitted 55
+        .sBegin
+        .sVar
+        .sIdentifier
+           .sIdentifier
+        .sMutable
+        % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sIfStmt
+              .sIdentifier
+             .sNot
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -1280,8 +4845,1736 @@ Output is:
     % value emitted 55
      .sCallStmt
      .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+    % value emitted 55
    .sEnd
-  .sEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sModule
+  .sIdentifier
+  % value emitted 55
+   .sBegin
+   .sVar
+   .sIdentifier
+     .sArray
+      .sIdentifier
+     .sRange
+      .sInteger
+   .sMutable
+   % value emitted 55
+   .sVar
+   .sIdentifier
+      .sIdentifier
+   .sMutable
+   % value emitted 55
+   % value emitted 55
+   .sProcedure
+   .sIdentifier
+   .sPublic
+    .sParmEnd
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+     .sBegin
+     .sVar
+     .sIdentifier
+       .sArray
+        .sIdentifier
+       .sRange
+        .sInteger
+     .sMutable
+     % value emitted 55
+     % value emitted 55
+     .sVar
+     .sIdentifier
+       .sInitialValue
+           .sInteger
+       .sExpnEnd
+     .sMutable
+     % value emitted 55
+      .sLoopStmt
+      % value emitted 55
+       .sBegin
+        .sAssignmentStmt
+        .sIdentifier
+        .sSubscript
+            .sIdentifier
+        .sExpnEnd
+            .sInteger
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sLoopBreakIf
+          .sIdentifier
+          .sInteger
+       .sGT
+      .sExpnEnd
+      % value emitted 55
+       .sBegin
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sVar
+     .sIdentifier
+       .sInitialValue
+           .sInteger
+       .sExpnEnd
+     .sMutable
+     % value emitted 55
+      .sLoopStmt
+      % value emitted 55
+       .sBegin
+       .sVar
+       .sIdentifier
+          .sIdentifier
+       .sMutable
+       % value emitted 55
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sLoopStmt
+        % value emitted 55
+         .sBegin
+         .sEnd
+        .sLoopBreakIf
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+            .sInteger
+         .sNE
+        .sExpnEnd
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sSubscript
+            .sIdentifier
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sSubscript
+            .sIdentifier
+        .sExpnEnd
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+            .sInteger
+          .sAdd
+        .sExpnEnd
+        % value emitted 55
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sLoopBreakIf
+          .sIdentifier
+          .sInteger
+       .sGT
+      .sExpnEnd
+      % value emitted 55
+       .sBegin
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+      .sAssignmentStmt
+      .sIdentifier
+          .sInteger
+      .sExpnEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+    % value emitted 55
+   .sProcedure
+   .sIdentifier
+   .sPublic
+    .sIdentifier
+    .sVar
+    .sIdentifier
+    .sParmEnd
+    % value emitted 55
+     .sBegin
+      .sAssignmentStmt
+      .sIdentifier
+      .sIdentifier
+          .sInteger
+      .sAdd
+      .sExpnEnd
+      % value emitted 55
+      .sAssignmentStmt
+      .sIdentifier
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+      .sExpnEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+    % value emitted 55
+   .sProcedure
+   .sIdentifier
+   .sPublic
+    .sIdentifier
+    .sVar
+    .sIdentifier
+    .sParmEnd
+    % value emitted 55
+     .sBegin
+      .sAssignmentStmt
+      .sIdentifier
+          .sInteger
+          .sIdentifier
+        .sSubtract
+          .sInteger
+        .sAdd
+      .sExpnEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+   .sEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sModule
+  .sIdentifier
+  % value emitted 55
+  % value emitted 55
+   .sBegin
+   .sVar
+   .sIdentifier
+     .sArray
+      .sIdentifier
+     .sRange
+      .sInteger
+   .sMutable
+   % value emitted 55
+   % value emitted 55
+   .sProcedure
+   .sIdentifier
+   .sPublic
+    .sIdentifier
+    .sIdentifier
+    .sIdentifier
+    .sVar
+    .sIdentifier
+    .sParmEnd
+    % value emitted 55
+    % value emitted 55
+     .sBegin
+     .sVar
+     .sIdentifier
+       .sInitialValue
+           .sInteger
+       .sExpnEnd
+     .sMutable
+     % value emitted 55
+      .sLoopStmt
+      % value emitted 55
+       .sBegin
+       .sEnd
+      .sLoopBreakIf
+          .sIdentifier
+          .sIdentifier
+       .sGT
+      .sExpnEnd
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    % value emitted 55
+   .sEnd
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sIfStmt
+         .sIdentifier
+         .sStringLiteral
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 145: syntax error at: E.O. Thorp
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sStringLiteral
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+     .sEnd
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 162: syntax error at: New shuffle.
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 164: syntax error at: Choose a player (e for E.O.Thorp, j for Jim, p for Pooja, q to quit): 
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sStringLiteral
+      .sEq
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+       .sIfStmt
+           .sIdentifier
+           .sStringLiteral
+        .sNE
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sLoopStmt
+         % value emitted 55
+          .sBegin
+          .sEnd
+         .sLoopBreakIf
+                 .sIdentifier
+                 .sInteger
+              .sGT
+            .sInfixAnd
+                 .sIdentifier
+                 .sInteger
+              .sLT
+            .sAnd
+         .sExpnEnd
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+            scan/parse error, line 175: syntax error at: (1..20): 
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sStringLiteral
+        .sEq
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 182: syntax error at: E.O.Thorp plays this time.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 187: syntax error at: .
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         % value emitted 55
+         .sIfStmt
+             .sIdentifier
+             .sInteger
+          .sLT
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         .sElse
+         % value emitted 55
+          .sBegin
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+            .sCallStmt
+            .sIdentifier
+            scan/parse error, line 195: syntax error at: .
+                .sIdentifier
+            .sExpnEnd
+            .sCallStmt
+            .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 214: syntax error at: New game.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 219: syntax error at: Too few cards left for another game.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sIdentifier
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 227: syntax error at:  this time.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sIdentifier
+         .sGT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+          .sIfStmt
+              .sIdentifier
+              .sStringLiteral
+           .sEq
+          .sExpnEnd
+          .sThen
+          % value emitted 55
+           .sBegin
+             .sCallStmt
+             .sIdentifier
+             scan/parse error, line 230: syntax error at: E.O.Thorp does it again.
+                 .sIdentifier
+             .sExpnEnd
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+           .sEnd
+          .sElse
+          % value emitted 55
+           .sBegin
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+             .sCallStmt
+             .sIdentifier
+             scan/parse error, line 233: syntax error at:  must have doctored the shuffle.
+                 .sIdentifier
+             .sExpnEnd
+             .sCallStmt
+             .sIdentifier
+                 .sIdentifier
+             .sExpnEnd
+            % value emitted 55
+           .sEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 236: syntax error at: Even shuffle.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+    % value emitted 55
+    .sNullStmt
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+      scan/parse error, line 278: syntax error at: .
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   % value emitted 55
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sInteger
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+      .sBegin
+       .sCaseStmt
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+       .sExpnEnd
+       % value emitted 55
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+          .sInteger
+        .sLabelEnd
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sIdentifier
+               .sSubscript
+                   .sIdentifier
+               .sExpnEnd
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+          .sInteger
+        .sLabelEnd
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sCaseOtherwise
+       % value emitted 55
+       % value emitted 55
+        .sBegin
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       % value emitted 55
+       % value emitted 55
+       % value emitted 55
+       .sCaseEnd
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+             .sIdentifier
+             .sInteger
+          .sLE
+       .sInfixOr
+             .sIdentifier
+             .sInteger
+          .sEq
+       .sOr
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sGT
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+        scan/parse error, line 333: syntax error at: Dealer goes bust.
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     .sElse
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sInteger
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+         scan/parse error, line 337: syntax error at: Dealer calls blackjack.
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sInteger
+         .sLT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       % value emitted 55
+       .sIfStmt
+           .sIdentifier
+           .sIdentifier
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 352: syntax error at: House wins.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+         .sAssignmentStmt
+         .sIdentifier
+         .sIdentifier
+             .sInteger
+         .sAdd
+         .sExpnEnd
+         % value emitted 55
+        .sEnd
+       .sElse
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sIdentifier
+         .sLT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 356: syntax error at:  wins.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+          .sAssignmentStmt
+          .sIdentifier
+          .sIdentifier
+              .sInteger
+          .sAdd
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+         .sBegin
+           .sCallStmt
+           .sIdentifier
+           scan/parse error, line 359: syntax error at: Tie game.
+               .sIdentifier
+           .sExpnEnd
+           .sCallStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+        % value emitted 55
+       .sEnd
+      .sEnd
+     .sElse
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sModule
+  .sIdentifier
+  % value emitted 55
+  % value emitted 55
+   .sBegin
+   .sProcedure
+   .sIdentifier
+    .sParmEnd
+    % value emitted 55
+    % value emitted 55
+     .sBegin
+      .sIfStmt
+          .sIdentifier
+          .sIdentifier
+       .sLT
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+       .sBegin
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+    % value emitted 55
+   .sProcedure
+   .sIdentifier
+    .sIdentifier
+    .sIdentifier
+    .sParmEnd
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+     .sBegin
+     .sVar
+     .sIdentifier
+        .sIdentifier
+     .sMutable
+     % value emitted 55
+      .sAssignmentStmt
+      .sIdentifier
+          .sIdentifier
+           .sSubscript
+               .sInteger
+           .sExpnEnd
+      .sExpnEnd
+      % value emitted 55
+      % value emitted 55
+      .sIfStmt
+          .sIdentifier
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+      % value emitted 55
+       .sBegin
+        .sIfStmt
+            .sIdentifier
+            .sInteger
+         .sGT
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+              .sInteger
+           .sGT
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+              .sInteger
+           .sGT
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      % value emitted 55
+      % value emitted 55
+       .sBegin
+        .sIfStmt
+                .sIdentifier
+                .sInteger
+             .sGT
+           .sInfixAnd
+                .sIdentifier
+                .sInteger
+             .sLT
+           .sAnd
+        .sExpnEnd
+        .sThen
+        % value emitted 55
+        % value emitted 55
+         .sBegin
+          .sAssignmentStmt
+          .sIdentifier
+              .sIdentifier
+              .sInteger
+           .sGT
+          .sExpnEnd
+          % value emitted 55
+         .sEnd
+        .sElse
+        .sBegin
+         .sIfStmt
+                 .sIdentifier
+                 .sInteger
+              .sGT
+            .sInfixAnd
+                 .sIdentifier
+                 .sInteger
+              .sLT
+            .sAnd
+         .sExpnEnd
+         .sThen
+         % value emitted 55
+         % value emitted 55
+          .sBegin
+           .sAssignmentStmt
+           .sIdentifier
+               .sIdentifier
+               .sInteger
+            .sGT
+           .sExpnEnd
+           % value emitted 55
+          .sEnd
+         .sElse
+         % value emitted 55
+         % value emitted 55
+          .sBegin
+           .sAssignmentStmt
+           .sIdentifier
+               .sIdentifier
+               .sInteger
+            .sGT
+           .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
+        .sEnd
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+      .sIfStmt
+           .sIdentifier
+          .sNot
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+       .sEnd
+      % value emitted 55
+      % value emitted 55
+     .sEnd
+    % value emitted 55
+    % value emitted 55
+   .sProcedure
+   .sIdentifier
+   .sPublic
+    .sParmEnd
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+    % value emitted 55
+     .sBegin
+     .sVar
+     .sIdentifier
+        .sIdentifier
+     .sMutable
+     % value emitted 55
+     % value emitted 55
+       .sCallStmt
+       .sIdentifier
+           .sIdentifier
+       .sExpnEnd
+      % value emitted 55
+      % value emitted 55
+      .sIfStmt
+          .sIdentifier
+          .sInteger
+       .sEq
+      .sExpnEnd
+      .sThen
+      % value emitted 55
+       .sBegin
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+         .sCallStmt
+         .sIdentifier
+         scan/parse error, line 429: syntax error at:  calls blackjack.
+             .sIdentifier
+         .sExpnEnd
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        % value emitted 55
+        .sAssignmentStmt
+        .sIdentifier
+        .sIdentifier
+            .sInteger
+        .sAdd
+        .sExpnEnd
+        % value emitted 55
+       .sEnd
+      .sElse
+      .sBegin
+       .sIfStmt
+           .sIdentifier
+           .sInteger
+        .sGT
+       .sExpnEnd
+       .sThen
+       % value emitted 55
+        .sBegin
+          .sCallStmt
+          .sIdentifier
+              .sIdentifier
+          .sExpnEnd
+         % value emitted 55
+          .sCallStmt
+          .sIdentifier
+          scan/parse error, line 435: syntax error at:  goes bust.
+              .sIdentifier
+          .sExpnEnd
+          .sCallStmt
+          .sIdentifier
 
 ------------------------
 
@@ -1464,9 +6757,142 @@ Output is:
       .sBegin
         .sCallStmt
         .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sIdentifier
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
       .sEnd
+     % value emitted 55
+     % value emitted 55
+     % value emitted 55
+    .sVar
+    .sIdentifier
+      .sInitialValue
+          .sIdentifier
+          .sInteger
+        .sAdd
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+             .sIdentifier
+             .sIdentifier
+          .sGT
+       .sInfixOr
+         .sIdentifier
+       .sOr
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
     .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -1599,7 +7025,102 @@ Output is:
    % value emitted 55
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sWhileStmt
+         .sIdentifier
+         .sInteger
+      .sGE
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sWhileStmt
+         .sIdentifier
+         .sIdentifier
+      .sLE
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sInteger
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -1746,8 +7267,24 @@ Output is:
      % value emitted 55
       .sCallStmt
       .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
     .sEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------
 
@@ -2121,24 +7658,175 @@ Output is:
            % value emitted 55
             .sCallStmt
             .sIdentifier
+                .sIdentifier
+            .sExpnEnd
+           % value emitted 55
+           .sAssignmentStmt
+           .sIdentifier
+               .sIdentifier
+                .sSubscript
+                    .sIdentifier
+                .sExpnEnd
+           .sExpnEnd
+           % value emitted 55
           .sEnd
+         .sElse
+         % value emitted 55
+          .sBegin
+           .sAssignmentStmt
+           .sIdentifier
+               .sIdentifier
+           .sExpnEnd
+           % value emitted 55
+          .sEnd
+         % value emitted 55
         .sEnd
+       % value emitted 55
+       % value emitted 55
       .sEnd
      .sLoopBreakIf
          .sIdentifier
      .sExpnEnd
      % value emitted 55
       .sBegin
-       .sAssignmentStmt
+      .sEnd
+     % value emitted 55
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
        .sIdentifier
-           .sIdentifier
-            .sSubscript
-                .sIdentifier
-            .sExpnEnd
-       .sExpnEnd
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sInteger
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % value emitted 55
+   .sAssignmentStmt
+   .sIdentifier
+       .sIdentifier
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+      .sCallStmt
+      .sIdentifier
+          .sIdentifier
+      .sExpnEnd
+     % value emitted 55
+     .sIfStmt
+         .sIdentifier
+         .sInteger
+      .sNE
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
        % value emitted 55
       .sEnd
+     % value emitted 55
     .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sInteger
+    .sEq
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ------------------------

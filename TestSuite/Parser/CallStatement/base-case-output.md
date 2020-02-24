@@ -17,17 +17,21 @@ Test output is:
   .sBegin
     .sCallStmt
     .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+   % .sNewLine
   .sEnd
 
 ```
 ------------------------
-Warning, output length does not match (7 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (9 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sEnd !== .sParmEnd on line 6 of base-case.pt
+-.sIdentifier !== .sParmEnd on line 6 of base-case.pt
+-.sExpnEnd !== .sEnd on line 7 of base-case.pt
 
 ```
 end file
