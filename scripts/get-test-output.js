@@ -48,8 +48,9 @@ async function findAllFilesInDir(dir) {
 
             console.log(file);
             const res = await runFile(file, dir);
+            const testInfo = getTestInfo(file, dir);
             const fileDiff = compareResults(res, file, dir);
-            writeResults(fileDiff, file, dir);
+            writeResults(testInfo + fileDiff, file, dir);
 
             core.endGroup();
         }
@@ -76,6 +77,21 @@ async function runFile(file, dir) {
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
+    }
+}
+
+function getTestInfo(file, dir) {
+    let output = "";
+    
+    try {
+        const testInfoFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}.md`, 'utf-8');
+        output += testInfoFile;
+        output += '\n\n-------------------------\n';
+        return output;
+    } catch(e) {
+        console.error(`Error reading .md file for ${file} `, e);
+        core.setFailed(`Error reading .md file for ${file} ` + e);
+        return "";
     }
 }
 
