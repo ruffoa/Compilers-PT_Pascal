@@ -142,12 +142,12 @@ function compareResults(content, file) {
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim() && testOutput[i].trim() !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()) {
+        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim() && testOutput[i].trim() !== expectedOutput[i].split('//')[0].trim()) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
             // stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
-            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()} on line ${i} of ${file}\n`;
+            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i].split('//')[0].trim()} on line ${i} of ${file}\n`;
         }
     }
 
