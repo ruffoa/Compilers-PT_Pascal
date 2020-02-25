@@ -1,9 +1,7 @@
 
 --------------------------------
 Reading file boxes.pt
-Lengths do not match!  Something went wrong in boxes.pt
-Output is: 
--------------------------
+
 ```
  % value emitted 55
  % value emitted 55
@@ -279,8 +277,18 @@ Output is:
  % value emitted 55
 
 ```
-------------------------
+File diff
+-------------------------
+```
+% .sNewLine !== .sBegin on line 113 of boxes.pt
+.sBegin !== % .sNewLine on line 114 of boxes.pt
+% .sNewLine !== .sBegin on line 209 of boxes.pt
+.sBegin !== % .sNewLine on line 210 of boxes.pt
+% .sNewLine !== .sBegin on line 229 of boxes.pt
+.sBegin !== % .sNewLine on line 230 of boxes.pt
 
+```
+end file
 --------------------------------
 Reading file bubblesort.pt
 Lengths do not match!  Something went wrong in bubblesort.pt
