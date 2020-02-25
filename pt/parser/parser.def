@@ -54,8 +54,9 @@
         pNot = 46;
         pUnderscore = 47;
         pQuestionMark = 48;
-        pEqualGreater = 49;
-        lastSyntaxToken = 49;
+        pGreaterEqual = 49;
+        pEqualGreater = 50;
+        lastSyntaxToken = 50;
 	}
 
         { Output Tokens }
@@ -130,33 +131,34 @@
         { S/SL Rule Table Addresses } {
         Program = 0;
         Block = 34;
-        ConstantDefinitions = 122;
-        TypeDefinitions = 212;
-        VariableDeclarations = 292;
-        ProcedureHeading = 322;
-        AssignmentOrCallStmt = 412;
-        BeginStmt = 496;
-        IfStmt = 522;
-        WhileStmt = 607;
-        CaseStmt = 544;
-        RepeatStmt = 616;
-        ConstantValue = 152;
-        UnsignedIntegerConstant = 192;
-        TypeBody = 242;
-        SimpleType = 258;
-        OptionallySignedIntegerConstant = 272;
-        Statement = 370;
-        Expression = 640;
-        CallStmt = 452;
-        CaseAlternative = 587;
-        SimpleExpression = 694;
-        Term = 747;
-        Factor = 791;
-        IdentifierExtension = 849;
+        ConstantDefinitions = 192;
+        TypeDefinitions = 293;
+        VariableDeclarations = 368;
+        ProcedureHeading = 397;
+        AssignmentOrCallStmt = 496;
+        IfStmt = 651;
+        WhileStmt = 775;
+        CaseStmt = 694;
+        RepeatStmt = 788;
+        ConstantValue = 226;
+        UnsignedIntegerConstant = 273;
+        InitialValue = 266;
+        Expression = 811;
+        TypeBody = 304;
+        SimpleType = 336;
+        OptionallySignedIntegerConstant = 348;
+        Statement = 448;
+        BeginStmt = 625;
+        CallStmt = 570;
+        CaseAlternative = 751;
+        SimpleExpression = 873;
+        Term = 926;
+        Factor = 981;
+        IdentifierExtension = 1047;
         }
 
         { S/SL Table Parameters } {
-        sslTblSize = 879;
+        sslTblSize = 1077;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;
 	}
