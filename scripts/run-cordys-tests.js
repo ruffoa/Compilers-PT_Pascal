@@ -152,11 +152,11 @@ function compareResults(content, file) {
     }
 
     let output = "";
-    if (diffStr === '```') {
+    if (diffStr === '```\n') {
         output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
     } else {
         output += diffStr;
-        output += '\n```';
+        output += '\n```\n';
     }
 
     stream.write(output);
