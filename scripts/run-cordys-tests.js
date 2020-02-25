@@ -44,7 +44,7 @@ function getNewLineNumber() {
 }
 
 // let fileOutput = "";
-const stream = fs.createWriteStream(folderPath + `/${segment}Output.txt`, {flags:'a'});
+const stream = fs.createWriteStream(folderPath + `/${segment}Output.md`, {flags:'a'});
 
 async function findAllFilesInDir() {
     const dirs = fs.readdirSync(folderPath).sort((a,b) => a < b);   // not really needed, but good to make sure!
@@ -128,7 +128,7 @@ function compareResults(content, file) {
         // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
         stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
-        stream.write(`Output is: \n-------------------------\n${content}\n------------------------\n`);
+        stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\m\`\`\`\n------------------------\n`);
 
         return;
     }
@@ -137,7 +137,7 @@ function compareResults(content, file) {
     stream.write("File diff\n-------------------------" + '\n');
 
     const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
-    let diffStr = "";
+    let diffStr = "```";
 
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
@@ -153,12 +153,12 @@ function compareResults(content, file) {
 
     let output = "";
     if (!diffStr) {
-        output += '\n```';
         output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
     } else {
         output += diffStr;
+        output += '\n```';
     }
-    output += '\n```';
+
     stream.write(output);
 
     stream.write("end file");
