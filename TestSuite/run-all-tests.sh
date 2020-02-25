@@ -28,8 +28,12 @@ if [ "$1" != "" ]; then
         do
             echo -e "\n----------------------------\n# Running tests for $file\n\n" | tee -a test_results.md
             cat ${file/pt/md} | tee -a test_results.md
-            echo -e " \n\n----------------------------\n## Expected Test Output\n\n\`\`\`" | tee -a test_results.md
-            cat "$file-e.txt" | tee -a test_results.md
+
+            if [ "$1" != "scanner" ] && [ "$1" != "Scanner" ]; then 
+                echo -e " \n\n----------------------------\n## Expected Test Output\n\n\`\`\`" | tee -a test_results.md
+                cat "$file-e.txt" | tee -a test_results.md
+            fi
+
             echo -e "\n\`\`\`\n\n----------------------------\n## Test Output\n\n\`\`\`" | tee -a test_results.md
             ssltrace "ptc $SEGMENT -L ../pt/lib/pt $file" ../pt/lib/pt/$DEF_FILE -e | tee -a test_results.md
             echo -e "\n\`\`\`\n----------------------------\n" | tee -a test_results.md
