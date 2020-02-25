@@ -10,6 +10,7 @@ const args = (process.argv && process.argv.length >= 2 && process.argv.slice(2))
 
 const segment = (args && args[0]) || "Scanner";
 const folderPath = path.join(__dirname, `../CordyTests`);
+const ptHomePath = path.join(__dirname, `../pt/`);
 
 const phaseMap = {
     'Scanner': '1',
@@ -30,6 +31,17 @@ const outputMap = {
 
 const phaseNum = phaseMap[segment];
 const defName = defMap[segment];
+
+const nLineTokenNumber = getNewLineNumber();
+
+function getNewLineNumber() {
+    const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
+    const newLineTokenDefinition = "sNewLine = ";
+    let newLineToken = parserDefs.substr(parserDefs.indexOf(newLineTokenDefinition) + newLineTokenDefinition.length).trim().split('\n')[0];
+    const nLineNumber = newLineToken.match(/(\d+)/)[0]; 
+    console.log(`NEW LINE Number is: '${nLineNumber}', ${newLineToken.match(/(\d+)/)}`);
+    return nLineNumber;
+}
 
 // let fileOutput = "";
 const stream = fs.createWriteStream(folderPath + `/${segment}Output.txt`, {flags:'a'});
@@ -101,7 +113,14 @@ function compareResults(content, file) {
     }
 
     const expectedOutput = results.split('\n');
-    const testOutput = content.split('\n');
+    let testOutput = content.split('\n');
+    testOutput = testOutput.map((tLine) => {
+        if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
+            tLine = "% .sNewLine";
+        }
+
+        return tLine;
+    });
 
     if (expectedOutput.length !== testOutput.length) {
         console.error("Lengths do not match!  Something went wrong in ", file);
@@ -117,16 +136,30 @@ function compareResults(content, file) {
     stream.write(content + '\n');
     stream.write("File diff\n-------------------------" + '\n');
 
-    for (var i = 0; i < expectedOutput.length; i++) {
+    const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
+    let diffStr = "";
+
+    for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
         if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
-            stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
+            // stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
+            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`;
         }
     }
+
+    let output = "";
+    if (!diffStr) {
+        output += '\n```';
+        output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
+    } else {
+        output += diffStr;
+    }
+    output += '\n```';
+    stream.write(output);
 
     stream.write("end file");
 }
