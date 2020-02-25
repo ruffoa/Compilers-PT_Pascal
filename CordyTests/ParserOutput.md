@@ -4121,9 +4121,9 @@ Reading file cache.pt
 ```
 File diff
 -------------------------
-```
 
-```end file
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file double.pt
 Lengths do not match!  Something went wrong in double.pt
@@ -4581,9 +4581,9 @@ Reading file helloworld.pt
 ```
 File diff
 -------------------------
-```
 
-```end file
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file lunch.pt
 Lengths do not match!  Something went wrong in lunch.pt
@@ -8324,9 +8324,9 @@ Reading file primes.pt
 ```
 File diff
 -------------------------
-```
 
-```end file
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file stars.pt
 Lengths do not match!  Something went wrong in stars.pt
