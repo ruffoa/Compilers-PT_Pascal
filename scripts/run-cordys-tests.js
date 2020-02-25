@@ -128,7 +128,7 @@ function compareResults(content, file) {
         // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
         stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
-        stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\m\`\`\`\n------------------------\n`);
+        stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`);
 
         return;
     }
@@ -142,17 +142,17 @@ function compareResults(content, file) {
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i].trim() !== expectedOutput[i].trim()) {
+        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim() && testOutput[i].trim() !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
             // stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
-            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`;
+            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i].trim()} on line ${i} of ${file}\n`;
         }
     }
 
     let output = "";
-    if (!diffStr) {
+    if (diffStr === '```') {
         output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
     } else {
         output += diffStr;
