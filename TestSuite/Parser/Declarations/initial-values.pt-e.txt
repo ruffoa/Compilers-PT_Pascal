@@ -10,7 +10,5 @@
 .sExpnEnd      // end the initial value 'expression'
 .sConst
 .sIdentifier   // identifier for y
-.sInitialValue
 .sInteger 53   // initial value for y
-.sExpnEnd
 .sEnd
