@@ -1,3 +1,6 @@
+This test is to check that you can have multiple declarations and statements within a block (`{ }`), and that they can be in whatever order 
+
+-------------------------
 
 Test Content: 
 -------------------------

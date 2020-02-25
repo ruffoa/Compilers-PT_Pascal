@@ -1,3 +1,6 @@
+This is to check that the weird short forms that are (technically) allowed work, at least within the parser
+
+-------------------------
 
 Test Content: 
 -------------------------

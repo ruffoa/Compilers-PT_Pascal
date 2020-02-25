@@ -1,3 +1,6 @@
+A basic test to test the public modifier keyword for the function
+
+-------------------------
 
 Test Content: 
 -------------------------

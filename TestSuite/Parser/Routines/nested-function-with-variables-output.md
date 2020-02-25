@@ -1,3 +1,6 @@
+This is to test that nested functions work when they have variables as well
+
+-------------------------
 
 Test Content: 
 -------------------------
