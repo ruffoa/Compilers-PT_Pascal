@@ -142,7 +142,7 @@ function compareResults(content, file) {
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i] !== expectedOutput[i]) {
+        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].trim() && testOutput[i].trim() !== expectedOutput[i].trim()) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
