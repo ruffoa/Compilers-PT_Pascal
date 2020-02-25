@@ -80,6 +80,7 @@ Input :
         pNot                    '!'
         pUnderscore             '_'
         pQuestionMark           '?'
+        pGreaterEqual           '>='
         pEqualGreater           '=>'
         lastSyntaxToken = pEqualGreater;
 
@@ -550,6 +551,8 @@ Expression :
             | '>':
                 @SimpleExpression  .sGT
             | pEqualGreater:
+                @SimpleExpression  .sGE
+            | pGreaterEqual:
                 @SimpleExpression  .sGE
             | *:
         ];
