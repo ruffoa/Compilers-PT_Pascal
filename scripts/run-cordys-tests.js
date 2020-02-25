@@ -133,11 +133,11 @@ function compareResults(content, file) {
         return;
     }
 
-    stream.write(content + '\n');
+    stream.write(`\n\`\`\`\n${content}\n\`\`\`\n`);
     stream.write("File diff\n-------------------------" + '\n');
 
     const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
-    let diffStr = "```";
+    let diffStr = "```\n";
 
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
@@ -147,7 +147,7 @@ function compareResults(content, file) {
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
             // stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
-            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i].trim()} on line ${i} of ${file}\n`;
+            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i]expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()} on line ${i} of ${file}\n`;
         }
     }
 
