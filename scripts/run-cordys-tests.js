@@ -147,7 +147,7 @@ function compareResults(content, file) {
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
             // stream.write(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}\n`);
-            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i]expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()} on line ${i} of ${file}\n`;
+            diffStr += `${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i].trim()} !== ${expectedOutput[i].split('//')[0].trim().split(' ')[0].trim()} on line ${i} of ${file}\n`;
         }
     }
 
