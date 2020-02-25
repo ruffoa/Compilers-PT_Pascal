@@ -1,1 +1,1 @@
-This test makes sure that things break when the function call parenthesis are not present
+This test makes sure that things break when the function call parenthesis are not present.
