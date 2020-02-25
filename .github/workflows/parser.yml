@@ -86,7 +86,7 @@ jobs:
         make
         make
 
-        cd ../scripts
+        cd ../../scripts
         
         npm install
         npm install @actions/core
