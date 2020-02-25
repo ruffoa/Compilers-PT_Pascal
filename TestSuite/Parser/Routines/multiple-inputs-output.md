@@ -1,3 +1,6 @@
+This test makes sure that the Qust parser can handle multiple function inputs
+
+-------------------------
 
 Test Content: 
 -------------------------

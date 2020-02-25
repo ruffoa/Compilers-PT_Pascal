@@ -1,3 +1,6 @@
+This is to test that a `const` identifier is valid as a match case
+
+-------------------------
 
 Test Content: 
 -------------------------

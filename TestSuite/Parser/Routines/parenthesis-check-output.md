@@ -1,3 +1,6 @@
+This test makes sure that things break when the function parenthesis are not present
+
+-------------------------
 
 Test Content: 
 -------------------------

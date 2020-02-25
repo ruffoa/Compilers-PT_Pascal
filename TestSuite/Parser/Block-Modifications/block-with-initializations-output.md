@@ -1,3 +1,6 @@
+This test is to check that you can have multiple declarations within a block (`{ }`), and to test that types, consts and var declarations are all working
+
+-------------------------
 
 Test Content: 
 -------------------------

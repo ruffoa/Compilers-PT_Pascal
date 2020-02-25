@@ -1,3 +1,6 @@
+This test is to check that you can have an if statement within a block (`{ }`), and to test that the code within it is correctly identified and parsed as being part of the if statement
+
+-------------------------
 
 Test Content: 
 -------------------------

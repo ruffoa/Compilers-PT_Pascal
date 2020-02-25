@@ -1,3 +1,6 @@
+This test is to make sure that function parameters without types are not allowed
+
+-------------------------
 
 Test Content: 
 -------------------------
