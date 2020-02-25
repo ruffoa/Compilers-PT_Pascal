@@ -82,8 +82,9 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        make scanner
-        make scanner
+        cd parser
+        make
+        make
 
         cd ../scripts
         
