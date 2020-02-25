@@ -90,7 +90,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/ParserOutput.txt
+        rm -f ../CordyTests/ParserOutput.md
         node ./run-cordys-tests.js Parser
       working-directory: ./pt
     
@@ -100,7 +100,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
         git add TestSuite/\*-testErr.md
-        git add CordyTests/\ParserOutput.txt
+        git add CordyTests/\ParserOutput.md
         git status
         git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
       

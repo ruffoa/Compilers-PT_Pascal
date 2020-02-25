@@ -1,3 +1,6 @@
+This is a test to make sure that the old PT style multiple declarations do not work
+
+-------------------------
 
 Test Content: 
 -------------------------

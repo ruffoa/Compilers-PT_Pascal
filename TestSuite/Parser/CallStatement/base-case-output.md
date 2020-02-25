@@ -1,3 +1,6 @@
+Allows for call statements without parameters
+
+-------------------------
 
 Test Content: 
 -------------------------

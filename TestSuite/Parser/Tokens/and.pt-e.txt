@@ -1,3 +1,0 @@
-.sProgram
-.sIdentifier
-.sEnd

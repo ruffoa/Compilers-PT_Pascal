@@ -5,11 +5,20 @@
 # By the CMPE458 Dream Team - Alex Ruffo, David Findlay
 
 DIR=""
-rm -f test_results.txt
+SEGMENT=""
+DEF_FILE=""
+
+rm -f test_results.md
 
 if [ "$1" != "" ]; then
     if [ "$1" == "scanner" ] || [ "$1" == "Scanner" ]; then 
         DIR="Scanner"
+        SEGMENT="-o1 -t1"
+        DEF_FILE="scan.def"
+    elif [ "$1" == "parser" ] || [ "$1" == "Parser" ]; then 
+        DIR="Parser"
+        SEGMENT="-o2 -t2"
+        DEF_FILE="parser.def"
     else
         echo "Sorry, directory does not exist, or tests have not yet been implemented yet"
     fi
@@ -17,12 +26,20 @@ if [ "$1" != "" ]; then
     if [ "$DIR" != "" ]; then
         for file in $DIR/*/*.pt
         do
-            echo -e "\n----------------------------\nRunning tests for $file" | tee -a test_results.txt
-            ssltrace "ptc -o1 -t1 -L ../pt/lib/pt $file" ../pt/lib/pt/scan.def -e | tee -a test_results.txt
-            echo -e "----------------------------\n" | tee -a test_results.txt
+            echo -e "\n----------------------------\n# Running tests for $file\n\n" | tee -a test_results.md
+            cat ${file/pt/md} | tee -a test_results.md
+
+            if [ "$1" != "scanner" ] && [ "$1" != "Scanner" ]; then 
+                echo -e " \n\n----------------------------\n## Expected Test Output\n\n\`\`\`" | tee -a test_results.md
+                cat "$file-e.txt" | tee -a test_results.md
+            fi
+
+            echo -e "\n\`\`\`\n\n----------------------------\n## Test Output\n\n\`\`\`" | tee -a test_results.md
+            ssltrace "ptc $SEGMENT -L ../pt/lib/pt $file" ../pt/lib/pt/$DEF_FILE -e | tee -a test_results.md
+            echo -e "\n\`\`\`\n----------------------------\n" | tee -a test_results.md
         done
         
-        echo  -e "\n----------------------------\nDone!  The results are also saved to './test_results.txt' for easier reading :)"
+        echo  -e "\n----------------------------\nDone!  The results are also saved to './test_results.md' for easier reading :)"
     fi
 
 else
