@@ -150,8 +150,9 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         pNot = 46;
         pUnderscore = 47;
         pQuestionMark = 48;
-        pEqualGreater = 49;
-        lastSyntaxToken = 49;
+        pGreaterEqual = 49;
+        pEqualGreater = 50;
+        lastSyntaxToken = 50;
 
         { Input/Output Tokens }
 
@@ -168,15 +169,15 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
 
         { S/SL Rule Table Addresses } {
         Scan = 0;
-        Identifier = 288;
-        Comment = 372;
-        AlternateComment = 397;
-        Integer = 305;
-        StringLiteral = 320;
+        Identifier = 296;
+        Comment = 380;
+        AlternateComment = 405;
+        Integer = 313;
+        StringLiteral = 328;
         }
 
         { S/SL Table Parameters }
-        sslTblSize = 434;
+        sslTblSize = 442;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;
 

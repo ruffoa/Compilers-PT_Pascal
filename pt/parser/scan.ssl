@@ -117,6 +117,7 @@ Output :
         pNot
         pUnderscore
         pQuestionMark
+        pGreaterEqual
         pEqualGreater
         lastSyntaxToken = pEqualGreater;
 
@@ -194,8 +195,6 @@ Scan :
                         .pDoubleEquals
                     | '>':
                         .pEqualGreater
-                    | '<':
-                        .pLessEqual
                     | *:
                         .pEquals
                 ]
@@ -225,7 +224,7 @@ Scan :
             | '>': 
                 [
                     | '=':
-                        .pEqualGreater
+                        .pGreaterEqual
                     | *:
                         .pGreater
                 ]
@@ -258,7 +257,6 @@ Scan :
                     | '&':
                         .pDoubleAmpersand
                     | *:                    % if not a double ampersand than it's an illegal syntax token
-                        ?
                         #eIllegalChar
                 ]
             | '*':
