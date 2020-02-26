@@ -182,20 +182,20 @@ Block :
             | 'type':
                 .sType
                 @TypeDefinitions
-            | 'let':
+            | 'let':                                % handle variable declarations
                 .sVar
                 {[
-                    | 'mut': 
+                    | 'mut':                        % mutable variables
                         pIdentifier  .sIdentifier
                         @VariableDeclarations
                         .sMutable
-                    | pIdentifier:
+                    | pIdentifier:                  % immutable variables
                         .sIdentifier
                         @VariableDeclarations
                     | *:
                         >
                 ]
-                [
+                [           % second choice to handle multiple declarations in single statement
                     | ',':  % consume comma and loop again 
                     | ';':  % consume semicolon and exit loop as statement is done
                         >
@@ -260,6 +260,7 @@ ConstantValue :
                 .sStringLiteral
         ];
 
+% Rule to handle the initial value for variable declarations
 InitialValue :
         .sInitialValue
         @Expression
@@ -274,7 +275,6 @@ UnsignedIntegerConstant :
         ];
 
 TypeDefinitions :
-        % Accept one or more named type definitions.
         pIdentifier  .sIdentifier
         '='  @TypeBody  ';'
         ;
@@ -283,10 +283,10 @@ TypeBody :
         [
             | '[':
                .sArray
-                @SimpleType
+                @SimpleType     % handle array type
                 ':'
                 .sRange
-                @UnsignedIntegerConstant
+                @UnsignedIntegerConstant    % handle array range upper limit
                 ']'
             | 'file':
                 .sFile
@@ -319,14 +319,14 @@ OptionallySignedIntegerConstant :
 VariableDeclarations :
         % Accept one or more variable declarations.
         [
-            | ':':
+            | ':':          % variable declares a type
                 @TypeBody
                 [
-                    | '=':
+                    | '=':      % optional initial value
                         @InitialValue
                     | *:
                 ]
-            | '=':
+            | '=':          % if variable does not declare a type it MUST declare an initial value
                 @InitialValue
         ];
 
@@ -336,10 +336,10 @@ ProcedureHeading :
         {
             [
                 % formal parameter identifier
-                | 'mut':
+                | 'mut':                       % mutable parameters - passed by reference
                     pIdentifier  .sIdentifier
                     .sVar
-                | pIdentifier:
+                | pIdentifier:                 % immutable parameters - passed by value
                     .sIdentifier
                 | *: 
                     >
@@ -359,24 +359,24 @@ ProcedureHeading :
 
 AssignmentOrCallStmt :
         [
-            | '=':
+            | '=': 
                 .sAssignmentStmt
-                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    
                 @Expression
                 .sExpnEnd
             | '+=':
                 .sAssignmentStmt
-                .sIdentifier    % identifier accepted in the Statement rule
-                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    
+                .sIdentifier    
                 @Expression  .sAdd
                 .sExpnEnd
             | '-=':
                 .sAssignmentStmt
-                .sIdentifier    % identifier accepted in the Statement rule
-                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    
+                .sIdentifier    
                 @Expression  .sSubtract
                 .sExpnEnd
-            | '[':
+            | '[':                  % handle subscripts
                 .sAssignmentStmt
                 .sIdentifier
                 .sSubscript
@@ -498,9 +498,9 @@ WhileStmt :
 RepeatStmt :
         .sLoopStmt
         '{'
-        @Block
-        pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'
-        @Block
+        @Block      % starting loop block
+        pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'  % handle break if statement
+        @Block      % final loop block
         '}';
 
 
@@ -517,9 +517,7 @@ Expression :
                 @SimpleExpression  .sLE
             | '>':
                 @SimpleExpression  .sGT
-            | pEqualGreater:
-                @SimpleExpression  .sGE
-            | pGreaterEqual:
+            | '>=':            
                 @SimpleExpression  .sGE
             | *:
         ];
