@@ -127,7 +127,6 @@ Output :
         sWhileStmt
         sLoopStmt
         sLoopBreakIf
-        sLoopEnd
         sEq
         sNE
         sLT
@@ -358,26 +357,6 @@ ProcedureHeading :
         .sParmEnd
         '{' @Block '}';
 
-Statement :
-        [
-            | pIdentifier:
-                @AssignmentOrCallStmt
-            | '{':
-                @BeginStmt
-            | 'if':
-                @IfStmt
-            | 'while':
-                @WhileStmt
-            | 'match':
-                @CaseStmt
-            | 'loop':
-                @RepeatStmt
-            | ';':
-                .sNullStmt  % consume semicolon and output nullStatement token
-            | *:
-                .sNullStmt
-        ];
-
 AssignmentOrCallStmt :
         [
             | '=':
@@ -446,18 +425,6 @@ CallStmt :
                 ')'
         ]
         .sParmEnd;
-
-BeginStmt :
-        .sBegin
-        {
-            @Statement
-            [
-                | ';':
-                | '}':
-                    .sEnd
-                    >
-            ]
-        };
 
 IfStmt :
         .sIfStmt
