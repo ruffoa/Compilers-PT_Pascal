@@ -130,7 +130,7 @@ function compareResults(content, file) {
         stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
         stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`);
 
-        return;
+        // return;
     }
 
     stream.write(`\n\`\`\`\n${content}\n\`\`\`\n`);
