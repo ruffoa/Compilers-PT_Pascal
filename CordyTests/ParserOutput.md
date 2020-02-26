@@ -1,7 +1,9 @@
 
 --------------------------------
 Reading file boxes.pt
-
+Lengths do not match!  Something went wrong in boxes.pt
+Output is: 
+-------------------------
 ```
  % value emitted 55
  % value emitted 55
@@ -277,18 +279,8 @@ Reading file boxes.pt
  % value emitted 55
 
 ```
-File diff
--------------------------
-```
-% .sNewLine !== .sBegin on line 113 of boxes.pt
-.sBegin !== % .sNewLine on line 114 of boxes.pt
-% .sNewLine !== .sBegin on line 209 of boxes.pt
-.sBegin !== % .sNewLine on line 210 of boxes.pt
-% .sNewLine !== .sBegin on line 229 of boxes.pt
-.sBegin !== % .sNewLine on line 230 of boxes.pt
+------------------------
 
-```
-end file
 --------------------------------
 Reading file bubblesort.pt
 Lengths do not match!  Something went wrong in bubblesort.pt
@@ -8271,70 +8263,291 @@ Output is:
 
 --------------------------------
 Reading file primes.pt
-
+Lengths do not match!  Something went wrong in primes.pt
+Output is: 
+-------------------------
 ```
+ % value emitted 55
  % value emitted 55
  .sProgram
  .sIdentifier
  .sParmEnd
+ % value emitted 55
+ % value emitted 55
  % value emitted 55
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
    % value emitted 55
-   % value emitted 55
-   % value emitted 55
-  .sConst
-   .sIdentifier
-    .sIdentifier
-   % value emitted 55
-  .sConst
-   .sIdentifier
-    .sIdentifier
-   % value emitted 55
-   % value emitted 55
-  .sModule
+  .sVar
   .sIdentifier
+    .sInitialValue
+        .sInteger
+        .sInteger
+       .sDivide
+    .sExpnEnd
   % value emitted 55
-   .sBegin
-   .sVar
+  % value emitted 55
+  .sConst
    .sIdentifier
-     .sArray
-      .sIdentifier
-     .sRange
-      .sIdentifier
-   .sMutable
+    .sIdentifier
+   % value emitted 55
+  .sConst
+   .sIdentifier
+    .sIdentifier
    % value emitted 55
    % value emitted 55
-   .sProcedure
-   .sIdentifier
-   .sPublic
+  .sVar
+  .sIdentifier
+    .sArray
+     .sIdentifier
+    .sRange
+     .sIdentifier
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+  % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sWhileStmt
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+  % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+         .sIdentifier
+       .sAdd
+     .sExpnEnd
+     % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sIdentifier
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     % value emitted 55
+     % value emitted 55
+    .sVar
     .sIdentifier
+      .sInitialValue
+          .sIdentifier
+          .sInteger
+        .sAdd
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+    .sVar
     .sIdentifier
+       .sIdentifier
+      .sInitialValue
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+      .sExpnEnd
+    .sMutable
+    % value emitted 55
+     .sLoopStmt
+     % value emitted 55
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+             .sIdentifier
+             .sIdentifier
+          .sGT
+       .sInfixOr
+         .sIdentifier
+       .sOr
+     .sExpnEnd
+     % value emitted 55
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 55
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+       .sExpnEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+   % value emitted 55
+   % value emitted 55
+    .sCallStmt
     .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
     .sIdentifier
     .sParmEnd
+   % value emitted 55
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 55
+   .sLoopStmt
+   % value emitted 55
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 55
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+      .sInitialValue
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+      .sExpnEnd
     % value emitted 55
-     .sBegin
-      .sAssignmentStmt
-      .sIdentifier
-      .sSubscript
-          .sIdentifier
-      .sExpnEnd
-          % value emitted 55
-          .sIdentifier
-      .sExpnEnd
-     .sEnd
-   .sEnd
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 55
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 55
+      .sEnd
+     % value emitted 55
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 55
+    .sEnd
+   % value emitted 55
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 55
   .sEnd
+ % value emitted 55
 
 ```
-File diff
--------------------------
+------------------------
 
-Test output matches the expected output! :heavy_check_mark:
-end file
 --------------------------------
 Reading file stars.pt
 Lengths do not match!  Something went wrong in stars.pt
