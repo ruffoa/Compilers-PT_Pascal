@@ -34,14 +34,13 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (14 vs 16)!  (Newlines are not the issue here!) `initial-values.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.sInteger !== .sInitialValue on line 12 of initial-values.pt
--.sEnd !== .sInteger 53 on line 13 of initial-values.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

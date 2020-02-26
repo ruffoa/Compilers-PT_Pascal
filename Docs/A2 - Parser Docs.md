@@ -4,8 +4,210 @@ Alex Ruffo – 10180070, David Findlay – 10187718, Quentin Le Bars - 20194155
 The following documents all changes made to parser.ssl structured according to the sections outlined in the A2 handout.
 
 # Token Definitions
+## `parser.ssl` Changes
+- Update input and output token definitions.
+    - Removed old PT tokens that aren't used anymore
+    - Added new Qust specific tokens.
+
+### Input tokens from the scanner
+```diff
+Input :
+        % Keywords must be first both here and in stdIdentifiers,
+        % and they must appear in the exact same order
+-       pDiv                        'div'
+-       firstKeywordToken = pDiv    
+        pElse                       'else'
++       firstKeywordToken = pElse
+-       pOr                         'or'
+-       pAnd                        'and'
+-       pNot                        'not'
+-       pThen                       'then'
+        pOf                         'of'
+-       pEnd                        'end'
+-       pUntil                      'until'
+-       pDo                         'do'
+-       pArray                      'array'
+        pFile                       'file'
+-       pProgram                    'program'
+        pConst                      'const'
+-       pVar                        'var'
+        pType                       'type'
+-       pProcedure                  'procedure'
+-       pBegin                      'begin'
+        pIf                         'if'
+        pWhile                      'while'
+-       pCase                       'case'
+-       pRepeat                     'repeat'
+-       lastKeywordToken = pRepeat 
++       pPub                        'pub'
++       pMod                        'mod'
++       pMain                       'main'
++       pLet                        'let'
++       pMut                        'mut'
++       pFn                         'fn'
++       pLoop                       'loop'
++       pBreak                      'break'
++       pMatch                      'match'
++       lastKeywordToken = pMatch
+
+        % Scanner tokens -
+        %   These are the tokens actually recognized by the Scanner itself.
+
+        % Compound tokens - 
+        %   These will be sent to the parser with a value or index.
+        pIdentifier 
+        firstCompoundInputToken = pIdentifier
+        pInteger
+        pStringLiteral
+        lastCompoundInputToken = pStringLiteral
+
+        % Non-compound tokens - 
+        %   These tokens simply represent themselves.
+        pNewLine
+        pEndFile
+        pPlus                   '+'
+        pMinus                  '-'
+        pStar                   '*'
+-       pColonEquals            ':='
+-       pDot                    '.'
+        pComma                  ','
+        pSemicolon              ';'
+        pColon                  ':'
+        pEquals                 '='
+-       pNotEqual               '<>'
++       pNotEqual               '!='
+        pLess                   '<'
+        pLessEqual              '<='
+        pGreater                '>'
+        pLeftParen              '('
+        pRightParen             ')'
+        pLeftBracket            '['
+        pRightBracket           ']'
+-       pDotDot                 '..'
++       pLeftBrace              '{'
++       pRightBrace             '}'
++       pPlusEquals             '+='
++       pMinusEquals            '-='
++       pForwardSlash           '/'
++       pPercent                '%'
++       pDoubleEquals           '=='
++       pDoubleAmpersand        '&&'
++       pDoubleBar              '||'
++       pBar                    '|'
++       pNot                    '!'
++       pUnderscore             '_'
++       pQuestionMark           '?'
++       pGreaterEqual           '>='
++       pEqualGreater           '=>'
++       lastSyntaxToken = pEqualGreater;
+```
+
+### Output tokens for the parser
+```diff
+Output :
+        sIdentifier 
+        firstSemanticToken = sIdentifier
+        firstCompoundSemanticToken = sIdentifier
+        sInteger
+        sStringLiteral
+        lastCompoundSemanticToken = sStringLiteral
+
+        sProgram
++       sModule
++       sPublic
+        sParmBegin
+        sParmEnd
+        sConst
+        sType
+        sVar
++       sMutable
++       sInitialValue
+        sProcedure
+        sBegin
+        sEnd
+        sNegate
+        sArray
+        sFile
+        sRange
+        sCaseStmt
++       sCaseOtherwise
+        sCaseEnd
+        sLabelEnd
+        sExpnEnd
+        sNullStmt
+        sAssignmentStmt
+        sSubscript
++       sSubstring
++       sLength
+        sCallStmt
+        sFieldWidth
+        sIfStmt
+        sThen
+        sElse
+        sWhileStmt
+-       sRepeatStmt
+-       sRepeatEnd
++       sLoopStmt
++       sLoopBreakIf
+        sEq
+        sNE
+        sLT
+        sLE
+        sGT
+        sGE
+        sAdd
+        sSubtract
+        sMultiply
+        sDivide
+        sModulus
+        sInfixOr
+        sOr
+        sInfixAnd
+        sAnd
+        sNot
+        sNewLine
+        sEndOfFile
+        lastSemanticToken = sEndOfFile;
+```
 
 # Program
+## `parser.ssl` Changes
+- Remove the initial pIdentifier at the start of the program, this is no longer required with Qust
+- Remove the required `;` before starting the `Block` rule
+  ```diff
+  -        ';'  @Block;
+  +        @Block;
+  ```
+- Update the `Block` rule to output a `.sBegin` token at the start of the block
+- Add in support for `pIdentifier` `{` `if` `while` `match` and `loop` tokens to the block choice rule
+  ```diff
+          {[
+                  ...
+  +            | pIdentifier:
+  +                @AssignmentOrCallStmt
+  +            | '{':
+  +                @BeginStmt
+  +            | 'if':
+  +                @IfStmt
+  +            | 'while':
+  +                @WhileStmt
+  +            | 'match':
+  +                @CaseStmt
+  +            | 'loop':
+  +                @RepeatStmt
+                  | *:
+                  >
+          ]}
+  ```
+
+- Remove the `begin '{' @BeginStmt` match after the block rule
+  ```diff
+  -        % 'begin'
+  -        '{'
+  -        @BeginStmt;
+  +        '}'
+  ```     
+- Add a `.sEnd` token to the end of the block rule
 
 # Declarations
 ## `parser.ssl` Changes
@@ -267,9 +469,9 @@ ProcedureHeading :
                 .sElse
 +               [
 +                   | 'if':         % handle the case of an "else if"
-+                       .sBegin     % Need to emit sBegin token for else block
++                       .sBegin     % emit sBegin token for else block
 +                       @IfStmt
-+                       .sEnd       % Need to emit sEnd token for else block
++                       .sEnd       % emit sEnd token for else block
 +                   |*:
 +                       '{' @Block '}'      % call the Block rule to handle the content for the else section of the if statement
 +               ]
@@ -305,6 +507,8 @@ ProcedureHeading :
     - Called the `@Block` SSL function instead of the `@Statement` function, enabling multiple statements within a `match`
 
 # Loop Statements
+We have chosen to ommit the sLoopEnd token as allowed by Prof. Cordy in one of the Q&A threads. We have chosen to do so in order to avoid having redundant tokens in our parser output stream.
+
 ## `parser.ssl` Changes
 - Updated the `WhileStmt` rule to call the `Block` rule.
 ```diff

@@ -1,1 +1,1 @@
-This is a test to make sure that the old PT style multiple declarations do not work
+This is a test to make sure that the old PT style multiple declarations do not work. Instead it should be treated as a const declaration statement followed by an assignment statement.

@@ -36,9 +36,8 @@
        .sInteger
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
      .sAssignmentStmt
      .sIdentifier
          .sStringLiteral
@@ -64,5 +63,6 @@
      % .sNewLine
     .sEnd
    % .sNewLine
+   .sLoopEnd
   .sEnd
  % .sNewLine

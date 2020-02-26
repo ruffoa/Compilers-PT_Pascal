@@ -4,17 +4,17 @@
  .sParmEnd
  % .sNewLine
  % .sNewLine
-  .sBegin   // begin main procedure
-  .sConst   // nelements declaration
+  .sBegin
+  .sConst
    .sIdentifier
-    .sInteger 25
+    .sInteger
    % .sNewLine
-  .sConst   // maxval declaration
+  .sConst
    .sIdentifier
     .sInteger
    % .sNewLine
    % .sNewLine
-  .sVar     // list declaration
+  .sVar
    .sIdentifier
      .sArray
       .sIdentifier
@@ -22,197 +22,197 @@
       .sIdentifier
    .sMutable
    % .sNewLine
-  .sVar     // current declaration
+  .sVar
    .sIdentifier
       .sIdentifier
    .sMutable
    % .sNewLine
    % .sNewLine
-  .sProcedure   // lessthan function
-  .sIdentifier  // 'lessthan'
-   .sIdentifier // i
-   .sIdentifier // int
-   .sIdentifier // j
-   .sIdentifier // int
-   .sIdentifier // b declaration
-   .sVar        // mut
-   .sIdentifier // bool
-   .sParmEnd
-  % .sNewLine
-   .sBegin      // start lessthan function
-    .sAssignmentStmt    // current = i
-    .sIdentifier        'current'
-        .sIdentifier    'i'
-    .sExpnEnd           // end assignment 
-    % .sNewLine
-    .sAssignmentStmt    // b = (list.....)
-    .sIdentifier        // b
-            .sIdentifier    // list
-             .sSubscript    // [i]
-                 .sIdentifier   // i
-             .sExpnEnd      // end list([i])
-            .sIdentifier    // list
-             .sSubscript    // [j]
-                 .sIdentifier   // j
-             .sExpnEnd      end list([j])
-         .sLT               // <
-    .sExpnEnd               // end b = (list....)
-    % .sNewLine
-   .sEnd        // end lessthan function
-  % .sNewLine
-  % .sNewLine
-  .sProcedure   // swap function
-  .sIdentifier  // 'swap'
-   .sIdentifier // 'i'
-   .sIdentifier // int
-   .sIdentifier // 'j'
-   .sIdentifier // int
-   .sParmEnd    // end function parameters
-  % .sNewLine
-   .sBegin      // start swap function
-   .sVar        // t declaration
-    .sIdentifier    // 't'
-       .sIdentifier // int
-    .sMutable
-    % .sNewLine
-    .sAssignmentStmt    // current = j
-    .sIdentifier        // current
-        .sIdentifier    // j
-    .sExpnEnd           // end assignment
-    % .sNewLine
-    .sAssignmentStmt    // t = list[i]
-    .sIdentifier        // 't'
-        .sIdentifier    // 'list'
-         .sSubscript    // [i]
-             .sIdentifier   // i
-         .sExpnEnd      // list[i]
-    .sExpnEnd           // end t = list[i]
-    % .sNewLine
-    .sAssignmentStmt    // list [i] = list[j]
-    .sIdentifier        // list
-    .sSubscript         // [i]
-        .sIdentifier    // i
-    .sExpnEnd           // end list[i]
-        .sIdentifier    // list [j]
-         .sSubscript    // [j]
-             .sIdentifier   // j
-         .sExpnEnd      // end list[j]
-    .sExpnEnd           // end list [i] = list[j]
-    % .sNewLine
-    .sAssignmentStmt    // list[j] = t
-    .sIdentifier        // list
-    .sSubscript         // [j]
-        .sIdentifier    // j
-    .sExpnEnd           // end list[j]
-        .sIdentifier    // t
-    .sExpnEnd           // end list[j] = t
-    % .sNewLine
-   .sEnd                // end swap function
-  % .sNewLine
-  % .sNewLine
-  .sProcedure           // show function
-  .sIdentifier          // 'show'
-   .sParmEnd            // end empty params section '()'
-  % .sNewLine
-   .sBegin              // begin show function
-   .sVar                // let mut i = 1
-    .sIdentifier        // i
-     .sInitialValue
-         .sInteger      // 1
-     .sExpnEnd          // end initial val exprssion
-    .sMutable
-    % .sNewLine
-    .sLoopStmt          // loop start
-    % .sNewLine
-     .sBegin            // begin loop
-       .sCallStmt       // 'print' call
-       .sIdentifier     // 'print'
-           .sIdentifier // list
-            .sSubscript // [i]
-                .sIdentifier    // i
-            .sExpnEnd   // end list[i]
-       .sExpnEnd        // ??? (no idea what this is for...)
-       .sFieldWidth     // : in list[i]:4
-           .sInteger    // 4
-       .sExpnEnd        // end mini-expression (:4)
-       .sParmEnd        // end function call parameters (list[i]:4)
-      % .sNewLine
-      .sAssignmentStmt  // i += 1 -> i = i + 1
-      .sIdentifier      // i
-      .sIdentifier      // i 
-          .sInteger     // 1
-      .sAdd             // add the two together
-      .sExpnEnd         // end the i += 1 statement
-      % .sNewLine
-     .sEnd              // end the loop
-    .sLoopBreakIf       // end the loop if...
-        .sIdentifier    // 'i'
-        .sIdentifier    // 'nelements'
-     .sGT               // >
-    .sExpnEnd           // end i > nelements
-     .sBegin            // absolutely no idea what this is :(
-     % .sNewLine
-     .sNullStmt         // empty braces....
-     .sEnd              // end odd section?
-    % .sNewLine
-     .sCallStmt         // println call
-     .sIdentifier       // 'println'
-     .sParmEnd          // end function parameters section 
-    % .sNewLine
-   .sEnd                // end the 'show' function
-  % .sNewLine
-  % .sNewLine
-  .sProcedure           // sort function
-  .sIdentifier          // 'sort
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sVar
+   .sIdentifier
    .sParmEnd
   % .sNewLine
    .sBegin
-   .sVar                // let mut i = nelements - 1
+    .sAssignmentStmt
     .sIdentifier
-     .sInitialValue     // i = nelements - 1
+        .sIdentifier
+    .sExpnEnd
+    % .sNewLine
+    .sAssignmentStmt
+    .sIdentifier
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+         .sLT
+    .sExpnEnd
+    % .sNewLine
+   .sEnd
+  % .sNewLine
+  % .sNewLine
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sParmEnd
+  % .sNewLine
+   .sBegin
+   .sVar
+    .sIdentifier
+       .sIdentifier
+    .sMutable
+    % .sNewLine
+    .sAssignmentStmt
+    .sIdentifier
+        .sIdentifier
+    .sExpnEnd
+    % .sNewLine
+    .sAssignmentStmt
+    .sIdentifier
+        .sIdentifier
+         .sSubscript
+             .sIdentifier
+         .sExpnEnd
+    .sExpnEnd
+    % .sNewLine
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+         .sSubscript
+             .sIdentifier
+         .sExpnEnd
+    .sExpnEnd
+    % .sNewLine
+    .sAssignmentStmt
+    .sIdentifier
+    .sSubscript
+        .sIdentifier
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    % .sNewLine
+   .sEnd
+  % .sNewLine
+  % .sNewLine
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+  % .sNewLine
+   .sBegin
+   .sVar
+    .sIdentifier
+     .sInitialValue
+         .sInteger
+     .sExpnEnd
+    .sMutable
+    % .sNewLine
+    .sLoopStmt
+    % .sNewLine
+     .sBegin
+       .sCallStmt
+       .sIdentifier
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+       .sExpnEnd
+       .sFieldWidth
+           .sInteger
+       .sExpnEnd
+       .sParmEnd
+      % .sNewLine
+      .sAssignmentStmt
+      .sIdentifier
+      .sIdentifier
+          .sInteger
+      .sAdd
+      .sExpnEnd
+      % .sNewLine
+     .sEnd
+    .sLoopBreakIf
+        .sIdentifier
+        .sIdentifier
+     .sGT
+    .sExpnEnd
+    % .sNewLine
+     .sBegin
+     .sEnd
+    % .sNewLine
+    .sLoopEnd
+     .sCallStmt
+     .sIdentifier
+     .sParmEnd
+    % .sNewLine
+   .sEnd
+  % .sNewLine
+  % .sNewLine
+  .sProcedure
+  .sIdentifier
+   .sParmEnd
+  % .sNewLine
+   .sBegin
+   .sVar
+    .sIdentifier
+     .sInitialValue
          .sIdentifier
          .sInteger
-       .sSubtract       // nelements - 1
+       .sSubtract
      .sExpnEnd
-    .sMutable           // mut keyword for 'i'
+    .sMutable
     % .sNewLine
-    .sWhileStmt         // while i > 0
-        .sIdentifier    // i
-        .sInteger       // 0
-     .sGT               // i > 0 
-    .sExpnEnd           // end while expression
+    .sWhileStmt
+        .sIdentifier
+        .sInteger
+     .sGT
+    .sExpnEnd
     % .sNewLine
-     .sBegin            // begin while statement
-     .sVar              // let mut j = 1
+     .sBegin
+     .sVar
       .sIdentifier
        .sInitialValue
            .sInteger
        .sExpnEnd
-      .sMutable         // j is mutable
+      .sMutable
       % .sNewLine
-      .sWhileStmt       // while j < nelements
+      .sWhileStmt
           .sIdentifier
           .sIdentifier
-       .sLT             // j < nelements
+       .sLT
       .sExpnEnd
       % .sNewLine
-       .sBegin          // begin while j < nelements
-       .sVar            // let mut lt: bool
-        .sIdentifier    // lt
-           .sIdentifier // bool
-        .sMutable       // lt is mutable
+       .sBegin
+       .sVar
+        .sIdentifier
+           .sIdentifier
+        .sMutable
         % .sNewLine
-         .sCallStmt     // call for lessthan function
-         .sIdentifier   // 'lessthan'
-             .sIdentifier   // 'j'
-         .sExpnEnd          // end 'j'
-             .sIdentifier   // 'j'
-             .sInteger      // 1
-           .sAdd            // 'j' + 1
-         .sExpnEnd          // end 'j' + 1
-         .sMutable          // lt is mutable
-             .sIdentifier   // 'lt'
-         .sExpnEnd          // end 'mut lt'
+         .sCallStmt
+         .sIdentifier
+             .sIdentifier
+         .sExpnEnd
+             .sIdentifier
+             .sInteger
+           .sAdd
+         .sExpnEnd
+         .sMutable
+             .sIdentifier
+         .sExpnEnd
          .sParmEnd
         % .sNewLine
         .sIfStmt
@@ -311,12 +311,12 @@
        .sIdentifier
     .sEq
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
     .sEnd
    % .sNewLine
    % .sNewLine
+   .sLoopEnd
    .sAssignmentStmt
    .sIdentifier
        .sInteger

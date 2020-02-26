@@ -34,7 +34,7 @@ mod main (output) {
     verse = 1;
 
     loop {
-	break if verse => 8;
+	break if verse >= 8;
 	println();
 	print ("I know an old lady"); println();
 	print ("Who swallowed a " + animal [verse]); println();

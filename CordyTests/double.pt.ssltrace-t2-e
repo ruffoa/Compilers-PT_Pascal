@@ -49,14 +49,14 @@
        .sStringLiteral
     .sEq
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
       .sCallStmt
       .sIdentifier
       .sParmEnd
      % .sNewLine
     .sEnd
    % .sNewLine
+   .sLoopEnd
   .sEnd
  % .sNewLine

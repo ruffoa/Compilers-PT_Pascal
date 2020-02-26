@@ -115,12 +115,12 @@
        .sInteger
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
     .sEnd
    % .sNewLine
    % .sNewLine
+   .sLoopEnd
     .sCallStmt
     .sIdentifier
         .sInteger
@@ -223,10 +223,10 @@
        .sInteger
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
     .sEnd
    % .sNewLine
+   .sLoopEnd
   .sEnd
  % .sNewLine

@@ -1,18 +1,17 @@
 
 --------------------------------
 Reading file boxes.pt
-Lengths do not match!  Something went wrong in boxes.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
@@ -24,7 +23,7 @@ Output is:
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
@@ -32,22 +31,22 @@ Output is:
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
   .sIdentifier
      .sIdentifier
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -55,13 +54,13 @@ Output is:
         .sIdentifier
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -69,9 +68,9 @@ Output is:
         .sIdentifier
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sIdentifier
@@ -84,9 +83,9 @@ Output is:
        .sInteger
    .sAdd
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sStringLiteral
@@ -99,16 +98,16 @@ Output is:
    .sIdentifier
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -118,7 +117,7 @@ Output is:
       .sMultiply
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -128,7 +127,7 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -136,24 +135,24 @@ Output is:
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -161,52 +160,52 @@ Output is:
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sStringLiteral
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -214,7 +213,7 @@ Output is:
        .sIdentifier
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -222,9 +221,9 @@ Output is:
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -234,75 +233,77 @@ Output is:
        .sSubtract
       .sGE
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file bubblesort.pt
-Lengths do not match!  Something went wrong in bubblesort.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
+   % value emitted 54
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -310,13 +311,13 @@ Output is:
     .sRange
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -327,13 +328,13 @@ Output is:
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -346,10 +347,10 @@ Output is:
               .sExpnEnd
           .sLT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -357,18 +358,18 @@ Output is:
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -376,7 +377,7 @@ Output is:
               .sIdentifier
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -387,7 +388,7 @@ Output is:
               .sIdentifier
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -395,14 +396,14 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -410,9 +411,9 @@ Output is:
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -425,35 +426,35 @@ Output is:
             .sInteger
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sLoopBreakIf
          .sIdentifier
          .sIdentifier
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -463,13 +464,13 @@ Output is:
         .sSubtract
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sWhileStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sVar
       .sIdentifier
@@ -477,19 +478,19 @@ Output is:
             .sInteger
         .sExpnEnd
       .sMutable
-      % value emitted 55
+      % value emitted 54
        .sWhileStmt
            .sIdentifier
            .sIdentifier
         .sLT
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sVar
         .sIdentifier
            .sIdentifier
         .sMutable
-        % value emitted 55
+        % value emitted 54
           .sCallStmt
           .sIdentifier
               .sIdentifier
@@ -502,13 +503,13 @@ Output is:
               .sIdentifier
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sIfStmt
               .sIdentifier
              .sNot
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
@@ -519,31 +520,31 @@ Output is:
               .sAdd
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -551,17 +552,17 @@ Output is:
    .sExpnEnd
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -569,7 +570,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
@@ -582,7 +583,7 @@ Output is:
           .sInteger
          .sMultiply
       .sExpnEnd
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -592,62 +593,64 @@ Output is:
          .sIdentifier
         .sModulus
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
    .sLoopBreakIf
        .sIdentifier
        .sIdentifier
     .sEq
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file bust.pt
-Lengths do not match!  Something went wrong in bust.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sType
    .sIdentifier
@@ -655,52 +658,42 @@ Output is:
      .sIdentifier
     .sRange
      .sInteger
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  .sVar
-  .sIdentifier
-     .sIdentifier
-  .sMutable
-  .sIdentifier
-     .sIdentifier
-  .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
@@ -708,45 +701,40 @@ Output is:
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  .sVar
-  .sIdentifier
-    .sArray
-     .sIdentifier
-    .sRange
-     .sInteger
-  .sMutable
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -754,9 +742,24 @@ Output is:
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  .sVar
+  .sIdentifier
+     .sIdentifier
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  .sVar
+  .sIdentifier
+    .sArray
+     .sIdentifier
+    .sRange
+     .sInteger
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
@@ -764,9 +767,9 @@ Output is:
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -775,8 +778,8 @@ Output is:
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -784,24 +787,24 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -810,7 +813,7 @@ Output is:
          .sInteger
         .sModulus
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -819,25 +822,25 @@ Output is:
          .sInteger
        .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
       .sArray
@@ -845,25 +848,25 @@ Output is:
       .sRange
        .sInteger
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -872,32 +875,32 @@ Output is:
        .sExpnEnd
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sLoopBreakIf
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -907,9 +910,9 @@ Output is:
             .sInteger
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
@@ -920,7 +923,7 @@ Output is:
            .sInteger
         .sNE
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -930,10 +933,10 @@ Output is:
               .sInteger
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sSubscript
@@ -941,7 +944,7 @@ Output is:
        .sExpnEnd
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sSubscript
@@ -954,41 +957,41 @@ Output is:
            .sInteger
          .sAdd
        .sExpnEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sLoopBreakIf
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -996,7 +999,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -1004,17 +1007,17 @@ Output is:
               .sIdentifier
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -1024,11 +1027,11 @@ Output is:
          .sInteger
        .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -1037,21 +1040,21 @@ Output is:
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -1059,7 +1062,7 @@ Output is:
          .sIdentifier
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -1074,25 +1077,25 @@ Output is:
              .sExpnEnd
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -1100,14 +1103,14 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sStringLiteral
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -1117,64 +1120,64 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
              .sStringLiteral
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
              .sStringLiteral
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -1183,17 +1186,17 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -1202,24 +1205,24 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sStringLiteral
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sIfStmt
            .sIdentifier
@@ -1227,14 +1230,14 @@ Output is:
         .sNE
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sIdentifier
@@ -1243,9 +1246,9 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sLoopStmt
-         % value emitted 55
+         % value emitted 54
           .sBegin
           .sEnd
          .sLoopBreakIf
@@ -1258,14 +1261,14 @@ Output is:
               .sLT
             .sAnd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sIdentifier
@@ -1274,24 +1277,24 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sStringLiteral
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -1300,25 +1303,25 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -1327,7 +1330,7 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -1343,15 +1346,15 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
-         % value emitted 55
+         % value emitted 54
+         % value emitted 54
          .sIfStmt
              .sIdentifier
              .sInteger
           .sLT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
@@ -1361,21 +1364,21 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
          .sElse
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
@@ -1384,61 +1387,61 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -1447,27 +1450,27 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -1476,24 +1479,7 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-            .sStringLiteral
-        .sExpnEnd
-            .sIdentifier
-        .sExpnEnd
-        .sFieldWidth
-            .sInteger
-        .sExpnEnd
-            .sStringLiteral
-        .sExpnEnd
-        .sParmEnd
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-        .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -1505,6 +1491,23 @@ Output is:
         .sExpnEnd
             .sStringLiteral
         .sExpnEnd
+        .sParmEnd
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
         .sFieldWidth
@@ -1516,26 +1519,26 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sIdentifier
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -1544,7 +1547,7 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
        .sBegin
@@ -1554,7 +1557,7 @@ Output is:
          .sGT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
           .sIfStmt
               .sIdentifier
@@ -1562,7 +1565,7 @@ Output is:
            .sEq
           .sExpnEnd
           .sThen
-          % value emitted 55
+          % value emitted 54
            .sBegin
              .sCallStmt
              .sIdentifier
@@ -1572,15 +1575,15 @@ Output is:
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
            .sEnd
           .sElse
-          % value emitted 55
+          % value emitted 54
            .sBegin
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
              .sCallStmt
              .sIdentifier
                  .sStringLiteral
@@ -1589,12 +1592,12 @@ Output is:
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
            .sEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
@@ -1604,27 +1607,27 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
        .sEnd
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -1632,7 +1635,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
@@ -1642,16 +1645,16 @@ Output is:
            .sExpnEnd
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -1659,7 +1662,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
@@ -1669,73 +1672,73 @@ Output is:
            .sExpnEnd
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -1747,13 +1750,13 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -1762,7 +1765,7 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -1771,11 +1774,11 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -1783,7 +1786,7 @@ Output is:
    .sIdentifier
    .sVar
    .sIdentifier
-   % value emitted 55
+   % value emitted 54
    .sIdentifier
    .sVar
    .sIdentifier
@@ -1791,40 +1794,40 @@ Output is:
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -1832,8 +1835,8 @@ Output is:
          .sIdentifier
       .sGT
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sBegin
        .sCaseStmt
            .sIdentifier
@@ -1841,7 +1844,7 @@ Output is:
                 .sIdentifier
             .sExpnEnd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
           .sInteger
           .sInteger
           .sInteger
@@ -1852,8 +1855,8 @@ Output is:
           .sInteger
           .sInteger
         .sLabelEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -1864,13 +1867,13 @@ Output is:
                .sExpnEnd
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
           .sInteger
         .sLabelEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -1878,19 +1881,19 @@ Output is:
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
           .sAssignmentStmt
           .sIdentifier
           .sIdentifier
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sCaseOtherwise
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -1898,11 +1901,11 @@ Output is:
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
+       % value emitted 54
        .sCaseEnd
        .sAssignmentStmt
        .sIdentifier
@@ -1910,12 +1913,12 @@ Output is:
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -1928,7 +1931,7 @@ Output is:
           .sEq
        .sOr
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -1936,43 +1939,43 @@ Output is:
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -1987,15 +1990,15 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -2005,19 +2008,19 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -2027,7 +2030,7 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -2037,22 +2040,22 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sIfStmt
             .sIdentifier
@@ -2060,32 +2063,32 @@ Output is:
          .sLT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
               .sIdentifier
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sEnd
      .sIfStmt
          .sIdentifier
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -2102,15 +2105,15 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sIdentifier
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -2120,14 +2123,14 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
        .sBegin
@@ -2137,12 +2140,12 @@ Output is:
          .sLT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
            .sCallStmt
            .sIdentifier
                .sStringLiteral
@@ -2151,17 +2154,17 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
           .sAssignmentStmt
           .sIdentifier
           .sIdentifier
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
@@ -2171,21 +2174,21 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
        .sEnd
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sStringLiteral
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -2197,19 +2200,19 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -2217,42 +2220,42 @@ Output is:
       .sLT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -2260,14 +2263,14 @@ Output is:
               .sInteger
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
      .sExpnEnd
      .sThen
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sBegin
        .sIfStmt
            .sIdentifier
@@ -2275,8 +2278,8 @@ Output is:
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -2284,11 +2287,11 @@ Output is:
              .sInteger
           .sGT
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -2296,13 +2299,13 @@ Output is:
              .sInteger
           .sGT
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sBegin
        .sIfStmt
                .sIdentifier
@@ -2315,8 +2318,8 @@ Output is:
           .sAnd
        .sExpnEnd
        .sThen
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -2324,7 +2327,7 @@ Output is:
              .sInteger
           .sGT
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
        .sBegin
@@ -2339,8 +2342,8 @@ Output is:
            .sAnd
         .sExpnEnd
         .sThen
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -2348,11 +2351,11 @@ Output is:
               .sInteger
            .sGT
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -2360,46 +2363,46 @@ Output is:
               .sInteger
            .sGT
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
           .sIdentifier
          .sNot
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -2414,20 +2417,20 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -2436,24 +2439,24 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -2463,12 +2466,12 @@ Output is:
        .sGT
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
              .sStringLiteral
@@ -2477,27 +2480,27 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sIfStmt
             .sIdentifier
@@ -2505,38 +2508,38 @@ Output is:
          .sEq
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
                .sIdentifier
            .sExpnEnd
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sEnd
      .sIfStmt
          .sIdentifier
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -2552,21 +2555,21 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -2578,17 +2581,17 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2597,24 +2600,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sStringLiteral
-    .sExpnEnd
-    .sParmEnd
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2623,7 +2613,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2632,7 +2626,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2641,7 +2635,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2650,11 +2644,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2663,7 +2653,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2672,7 +2666,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2681,7 +2675,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2690,23 +2684,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sStringLiteral
-    .sExpnEnd
-        .sStringLiteral
-    .sExpnEnd
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2715,11 +2693,23 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -2728,21 +2718,34 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2750,7 +2753,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2758,7 +2761,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2766,7 +2769,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2774,7 +2777,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2782,7 +2785,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2790,7 +2793,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2798,7 +2801,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2806,7 +2809,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2814,7 +2817,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2822,7 +2825,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2830,7 +2833,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2838,7 +2841,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -2846,142 +2849,146 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sMutable
         .sIdentifier
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
         .sIdentifier
        .sNot
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
           .sIdentifier
          .sNot
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
         .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file cache.pt
 
+Output is: 
 ```
- % value emitted 55
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -2989,32 +2996,32 @@ Reading file cache.pt
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -3022,7 +3029,7 @@ Reading file cache.pt
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -3030,16 +3037,16 @@ Reading file cache.pt
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -3048,8 +3055,8 @@ Reading file cache.pt
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -3057,24 +3064,24 @@ Reading file cache.pt
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -3083,7 +3090,7 @@ Reading file cache.pt
          .sInteger
         .sModulus
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
              .sIdentifier
@@ -3092,18 +3099,18 @@ Reading file cache.pt
          .sInteger
        .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3111,19 +3118,19 @@ Reading file cache.pt
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sWhileStmt
          .sIdentifier
          .sIdentifier
       .sLE
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sVar
       .sIdentifier
          .sIdentifier
       .sMutable
-      % value emitted 55
+      % value emitted 54
         .sCallStmt
         .sIdentifier
         .sMutable
@@ -3132,14 +3139,14 @@ Reading file cache.pt
             .sInteger
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sSubscript
@@ -3147,37 +3154,37 @@ Reading file cache.pt
        .sExpnEnd
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
@@ -3186,7 +3193,7 @@ Reading file cache.pt
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -3194,13 +3201,13 @@ Reading file cache.pt
               .sIdentifier
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -3209,7 +3216,7 @@ Reading file cache.pt
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3217,12 +3224,12 @@ Reading file cache.pt
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sWhileStmt
              .sIdentifier
              .sIdentifier
@@ -3233,7 +3240,7 @@ Reading file cache.pt
           .sEq
         .sAnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -3241,7 +3248,7 @@ Reading file cache.pt
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sIfStmt
            .sIdentifier
             .sSubscript
@@ -3251,34 +3258,34 @@ Reading file cache.pt
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
              .sIdentifier
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -3287,7 +3294,7 @@ Reading file cache.pt
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3295,12 +3302,12 @@ Reading file cache.pt
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sWhileStmt
              .sIdentifier
              .sInteger
@@ -3311,7 +3318,7 @@ Reading file cache.pt
           .sEq
         .sAnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -3319,7 +3326,7 @@ Reading file cache.pt
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sIfStmt
            .sIdentifier
             .sSubscript
@@ -3329,7 +3336,7 @@ Reading file cache.pt
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -3338,25 +3345,25 @@ Reading file cache.pt
                   .sIdentifier
               .sExpnEnd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sWhileStmt
              .sIdentifier
              .sIdentifier
@@ -3367,7 +3374,7 @@ Reading file cache.pt
           .sEq
         .sAnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -3375,7 +3382,7 @@ Reading file cache.pt
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sIfStmt
            .sIdentifier
             .sSubscript
@@ -3385,8 +3392,8 @@ Reading file cache.pt
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -3394,20 +3401,20 @@ Reading file cache.pt
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sIfStmt
              .sIdentifier
              .sInteger
           .sGT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
                .sInteger
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
            .sAssignmentStmt
            .sIdentifier
            .sSubscript
@@ -3415,7 +3422,7 @@ Reading file cache.pt
            .sExpnEnd
                .sIdentifier
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
            .sAssignmentStmt
            .sIdentifier
            .sSubscript
@@ -3423,33 +3430,33 @@ Reading file cache.pt
            .sExpnEnd
                .sIdentifier
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
            .sAssignmentStmt
            .sIdentifier
                .sIdentifier
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -3457,7 +3464,7 @@ Reading file cache.pt
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3467,7 +3474,7 @@ Reading file cache.pt
                .sIdentifier
            .sExpnEnd
       .sExpnEnd
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -3478,7 +3485,7 @@ Reading file cache.pt
               .sIdentifier
           .sExpnEnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -3486,14 +3493,14 @@ Reading file cache.pt
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3501,14 +3508,14 @@ Reading file cache.pt
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
           .sIdentifier
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sWhileStmt
              .sIdentifier
              .sInteger
@@ -3519,26 +3526,26 @@ Reading file cache.pt
           .sNE
         .sAnd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sVar
       .sIdentifier
         .sInitialValue
             .sInteger
         .sExpnEnd
       .sMutable
-      % value emitted 55
+      % value emitted 54
        .sWhileStmt
            .sIdentifier
            .sIdentifier
         .sLT
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -3546,7 +3553,7 @@ Reading file cache.pt
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sIfStmt
              .sIdentifier
               .sSubscript
@@ -3561,7 +3568,7 @@ Reading file cache.pt
           .sGT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
@@ -3569,7 +3576,7 @@ Reading file cache.pt
                .sInteger
            .sAdd
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sIdentifier
@@ -3579,34 +3586,34 @@ Reading file cache.pt
               .sAdd
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -3615,7 +3622,7 @@ Reading file cache.pt
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -3623,20 +3630,20 @@ Reading file cache.pt
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
           .sIdentifier
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sWhileStmt
          .sIdentifier
          .sIdentifier
       .sNE
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sVar
       .sIdentifier
@@ -3647,14 +3654,14 @@ Reading file cache.pt
             .sInteger
            .sDivide
         .sExpnEnd
-      % value emitted 55
+      % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sIdentifier
@@ -3664,7 +3671,7 @@ Reading file cache.pt
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -3672,27 +3679,27 @@ Reading file cache.pt
              .sInteger
            .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
              .sIdentifier
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sIfStmt
          .sIdentifier
           .sSubscript
@@ -3702,39 +3709,39 @@ Reading file cache.pt
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sInteger
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -3743,13 +3750,13 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -3758,13 +3765,13 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -3773,14 +3780,14 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
@@ -3792,43 +3799,43 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
    .sWhileStmt
        .sIdentifier
        .sIdentifier
     .sLE
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -3837,17 +3844,17 @@ Reading file cache.pt
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
@@ -3856,7 +3863,7 @@ Reading file cache.pt
        .sDivide
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -3877,10 +3884,10 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
@@ -3892,32 +3899,32 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
    .sWhileStmt
        .sIdentifier
        .sInteger
     .sLE
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -3926,45 +3933,45 @@ Reading file cache.pt
      .sExpnEnd
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sWhileStmt
        .sIdentifier
        .sIdentifier
     .sLE
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -3973,24 +3980,24 @@ Reading file cache.pt
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sIdentifier
        .sIdentifier
       .sDivide
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4011,10 +4018,10 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
@@ -4026,47 +4033,47 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sWhileStmt
        .sIdentifier
        .sIdentifier
     .sLE
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -4075,24 +4082,24 @@ Reading file cache.pt
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sIdentifier
        .sIdentifier
       .sDivide
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4113,10 +4120,10 @@ Reading file cache.pt
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
 File diff
@@ -4126,23 +4133,22 @@ Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file double.pt
-Lengths do not match!  Something went wrong in double.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4151,16 +4157,16 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -4170,58 +4176,60 @@ Output is:
         .sAdd
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
    .sLoopBreakIf
        .sIdentifier
        .sStringLiteral
     .sEq
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file francais.pt
-Lengths do not match!  Something went wrong in francais.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
@@ -4231,18 +4239,18 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -4251,8 +4259,8 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -4263,7 +4271,7 @@ Output is:
            .sSubtract
         .sSubstring
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -4276,12 +4284,12 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
               .sIdentifier
@@ -4295,8 +4303,8 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sBegin
        .sIfStmt
                .sIdentifier
@@ -4312,7 +4320,7 @@ Output is:
               .sSubstring
                .sStringLiteral
             .sEq
-           % value emitted 55
+           % value emitted 54
          .sOr
          .sInfixOr
                .sIdentifier
@@ -4329,7 +4337,7 @@ Output is:
               .sSubstring
                .sStringLiteral
             .sEq
-           % value emitted 55
+           % value emitted 54
          .sOr
          .sInfixOr
                .sIdentifier
@@ -4341,7 +4349,7 @@ Output is:
          .sOr
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -4352,10 +4360,10 @@ Output is:
             .sAdd
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -4366,28 +4374,15 @@ Output is:
             .sAdd
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-            .sStringLiteral
-            .sIdentifier
-          .sAdd
-            .sStringLiteral
-          .sAdd
-        .sExpnEnd
-        .sParmEnd
-        .sCallStmt
-        .sIdentifier
-        .sParmEnd
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -4400,12 +4395,25 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
             .sIdentifier
@@ -4417,7 +4425,7 @@ Output is:
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -4428,10 +4436,10 @@ Output is:
             .sAdd
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -4442,28 +4450,15 @@ Output is:
             .sAdd
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-            .sStringLiteral
-            .sIdentifier
-          .sAdd
-            .sStringLiteral
-          .sAdd
-        .sExpnEnd
-        .sParmEnd
-        .sCallStmt
-        .sIdentifier
-        .sParmEnd
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -4476,12 +4471,25 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+            .sIdentifier
+          .sAdd
+            .sStringLiteral
+          .sAdd
+        .sExpnEnd
+        .sParmEnd
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 54
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -4498,7 +4506,7 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -4508,15 +4516,15 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -4526,14 +4534,14 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sEnd
     .sEnd
    .sLoopBreakIf
@@ -4541,42 +4549,46 @@ Output is:
        .sStringLiteral
     .sEq
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file helloworld.pt
 
+Output is: 
 ```
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % value emitted 54
   .sBegin
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
 File diff
@@ -4586,18 +4598,17 @@ Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file lunch.pt
-Lengths do not match!  Something went wrong in lunch.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
@@ -4612,8 +4623,8 @@ Output is:
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
@@ -4621,9 +4632,9 @@ Output is:
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4631,7 +4642,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4639,7 +4650,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4647,7 +4658,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4655,7 +4666,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4663,7 +4674,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4671,7 +4682,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4679,7 +4690,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4687,9 +4698,9 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4697,7 +4708,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4705,7 +4716,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4713,7 +4724,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4721,7 +4732,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4729,7 +4740,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4737,7 +4748,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4745,7 +4756,7 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -4753,9 +4764,9 @@ Output is:
    .sExpnEnd
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4764,17 +4775,17 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -4782,12 +4793,12 @@ Output is:
        .sInteger
     .sGE
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -4796,7 +4807,7 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -4810,7 +4821,7 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -4822,15 +4833,15 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -4838,7 +4849,7 @@ Output is:
          .sInteger
       .sLT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -4850,7 +4861,7 @@ Output is:
           .sAdd
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -4868,24 +4879,24 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -4898,17 +4909,17 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sLT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -4918,38 +4929,25 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sStringLiteral
-    .sExpnEnd
-    .sParmEnd
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4958,7 +4956,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -4967,46 +4969,57 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file mbubblesort.pt
-Lengths do not match!  Something went wrong in mbubblesort.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
-  % value emitted 55
+  % value emitted 54
   .sNullStmt
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sBegin
    .sVar
    .sIdentifier
@@ -5015,9 +5028,9 @@ Output is:
      .sRange
       .sIdentifier
    .sMutable
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5029,7 +5042,7 @@ Output is:
     .sVar
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -5043,10 +5056,10 @@ Output is:
                .sExpnEnd
            .sLT
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5055,7 +5068,7 @@ Output is:
     .sIdentifier
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
@@ -5065,7 +5078,7 @@ Output is:
                 .sIdentifier
             .sExpnEnd
        .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sAssignmentStmt
       .sIdentifier
       .sSubscript
@@ -5076,7 +5089,7 @@ Output is:
                .sIdentifier
            .sExpnEnd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
       .sSubscript
@@ -5084,16 +5097,16 @@ Output is:
       .sExpnEnd
           .sIdentifier
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
@@ -5101,9 +5114,9 @@ Output is:
            .sInteger
        .sExpnEnd
      .sMutable
-     % value emitted 55
+     % value emitted 54
       .sLoopStmt
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -5116,32 +5129,32 @@ Output is:
              .sInteger
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sLoopBreakIf
           .sIdentifier
           .sIdentifier
        .sGT
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
        .sBegin
        .sEnd
-      % value emitted 55
+      % value emitted 54
        .sCallStmt
        .sIdentifier
        .sParmEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5149,17 +5162,17 @@ Output is:
     .sExpnEnd
         .sInteger
     .sExpnEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sVar
    .sIdentifier
      .sInitialValue
          .sInteger
      .sExpnEnd
    .sMutable
-   % value emitted 55
+   % value emitted 54
     .sLoopStmt
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -5167,7 +5180,7 @@ Output is:
           .sInteger
       .sAdd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sVar
      .sIdentifier
        .sInitialValue
@@ -5180,7 +5193,7 @@ Output is:
            .sInteger
           .sMultiply
        .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sAssignmentStmt
       .sIdentifier
       .sSubscript
@@ -5190,25 +5203,25 @@ Output is:
           .sIdentifier
          .sModulus
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
     .sLoopBreakIf
         .sIdentifier
         .sIdentifier
      .sEq
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
      .sEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -5218,9 +5231,9 @@ Output is:
         .sSubtract
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -5228,7 +5241,7 @@ Output is:
          .sInteger
       .sEq
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sVar
       .sIdentifier
@@ -5236,9 +5249,9 @@ Output is:
             .sInteger
         .sExpnEnd
       .sMutable
-      % value emitted 55
+      % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
@@ -5246,13 +5259,13 @@ Output is:
            .sIdentifier
         .sEq
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sVar
         .sIdentifier
            .sIdentifier
         .sMutable
-        % value emitted 55
+        % value emitted 54
           .sCallStmt
           .sIdentifier
               .sIdentifier
@@ -5265,13 +5278,13 @@ Output is:
               .sIdentifier
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sIfStmt
               .sIdentifier
              .sNot
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
@@ -5282,68 +5295,70 @@ Output is:
               .sAdd
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file mbust.pt
-Lengths do not match!  Something went wrong in mbust.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sType
    .sIdentifier
@@ -5351,115 +5366,115 @@ Output is:
      .sIdentifier
     .sRange
      .sInteger
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sBegin
    .sVar
    .sIdentifier
       .sIdentifier
    .sMutable
-   % value emitted 55
+   % value emitted 54
    .sVar
    .sIdentifier
       .sIdentifier
    .sMutable
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sProcedure
    .sIdentifier
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
           .sInteger
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
           .sInteger
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5469,7 +5484,7 @@ Output is:
     .sIdentifier
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sIfStmt
           .sIdentifier
@@ -5477,24 +5492,24 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sAssignmentStmt
         .sIdentifier
             .sInteger
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sAssignmentStmt
         .sIdentifier
             .sInteger
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
               .sIdentifier
@@ -5503,7 +5518,7 @@ Output is:
           .sInteger
          .sModulus
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
               .sIdentifier
@@ -5512,22 +5527,22 @@ Output is:
           .sInteger
         .sAdd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sCallStmt
      .sIdentifier
      .sParmEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
+  % value emitted 54
    .sBegin
    .sVar
    .sIdentifier
@@ -5536,22 +5551,22 @@ Output is:
      .sRange
       .sInteger
    .sMutable
-   % value emitted 55
+   % value emitted 54
    .sVar
    .sIdentifier
       .sIdentifier
    .sMutable
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
@@ -5560,17 +5575,17 @@ Output is:
        .sRange
         .sInteger
      .sMutable
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sVar
      .sIdentifier
        .sInitialValue
            .sInteger
        .sExpnEnd
      .sMutable
-     % value emitted 55
+     % value emitted 54
       .sLoopStmt
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sAssignmentStmt
         .sIdentifier
@@ -5579,40 +5594,40 @@ Output is:
         .sExpnEnd
             .sInteger
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sLoopBreakIf
           .sIdentifier
           .sInteger
        .sGT
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
        .sBegin
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sVar
      .sIdentifier
        .sInitialValue
            .sInteger
        .sExpnEnd
      .sMutable
-     % value emitted 55
+     % value emitted 54
       .sLoopStmt
-      % value emitted 55
+      % value emitted 54
        .sBegin
        .sVar
        .sIdentifier
           .sIdentifier
        .sMutable
-       % value emitted 55
+       % value emitted 54
          .sCallStmt
          .sIdentifier
          .sMutable
@@ -5621,9 +5636,9 @@ Output is:
              .sInteger
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sLoopStmt
-        % value emitted 55
+        % value emitted 54
          .sBegin
          .sEnd
         .sLoopBreakIf
@@ -5634,7 +5649,7 @@ Output is:
             .sInteger
          .sNE
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
@@ -5644,10 +5659,10 @@ Output is:
                .sInteger
            .sExpnEnd
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sSubscript
@@ -5655,7 +5670,7 @@ Output is:
         .sExpnEnd
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sSubscript
@@ -5668,34 +5683,34 @@ Output is:
             .sInteger
           .sAdd
         .sExpnEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sLoopBreakIf
           .sIdentifier
           .sInteger
        .sGT
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
        .sBegin
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
           .sInteger
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5703,7 +5718,7 @@ Output is:
     .sVar
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -5711,7 +5726,7 @@ Output is:
           .sInteger
       .sAdd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
           .sIdentifier
@@ -5719,10 +5734,10 @@ Output is:
                .sIdentifier
            .sExpnEnd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5730,7 +5745,7 @@ Output is:
     .sVar
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -5740,17 +5755,17 @@ Output is:
           .sInteger
         .sAdd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sBegin
    .sVar
    .sIdentifier
@@ -5759,8 +5774,8 @@ Output is:
      .sRange
       .sInteger
    .sMutable
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -5770,8 +5785,8 @@ Output is:
     .sVar
     .sIdentifier
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
@@ -5779,9 +5794,9 @@ Output is:
            .sInteger
        .sExpnEnd
      .sMutable
-     % value emitted 55
+     % value emitted 54
       .sLoopStmt
-      % value emitted 55
+      % value emitted 54
        .sBegin
        .sEnd
       .sLoopBreakIf
@@ -5789,7 +5804,7 @@ Output is:
           .sIdentifier
        .sGT
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -5804,20 +5819,20 @@ Output is:
               .sExpnEnd
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5825,7 +5840,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5833,7 +5848,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5841,7 +5856,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5849,7 +5864,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5857,7 +5872,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5865,7 +5880,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5873,7 +5888,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5881,7 +5896,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5889,7 +5904,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5897,7 +5912,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5905,7 +5920,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5913,7 +5928,7 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
     .sAssignmentStmt
     .sIdentifier
     .sSubscript
@@ -5921,16 +5936,16 @@ Output is:
     .sExpnEnd
         .sStringLiteral
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -5938,14 +5953,14 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sStringLiteral
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -5955,64 +5970,64 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
              .sStringLiteral
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
              .sStringLiteral
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -6021,17 +6036,17 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -6040,24 +6055,24 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sStringLiteral
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sIfStmt
            .sIdentifier
@@ -6065,14 +6080,14 @@ Output is:
         .sNE
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sIdentifier
@@ -6081,9 +6096,9 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sLoopStmt
-         % value emitted 55
+         % value emitted 54
           .sBegin
           .sEnd
          .sLoopBreakIf
@@ -6096,14 +6111,14 @@ Output is:
               .sLT
             .sAnd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sIdentifier
@@ -6112,24 +6127,24 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sStringLiteral
         .sEq
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -6138,25 +6153,25 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -6165,7 +6180,7 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -6181,15 +6196,15 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
-         % value emitted 55
+         % value emitted 54
+         % value emitted 54
          .sIfStmt
              .sIdentifier
              .sInteger
           .sLT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
@@ -6199,21 +6214,21 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
          .sElse
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sStringLiteral
@@ -6222,60 +6237,60 @@ Output is:
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -6284,27 +6299,27 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -6313,24 +6328,7 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-            .sStringLiteral
-        .sExpnEnd
-            .sIdentifier
-        .sExpnEnd
-        .sFieldWidth
-            .sInteger
-        .sExpnEnd
-            .sStringLiteral
-        .sExpnEnd
-        .sParmEnd
-       % value emitted 55
-        .sCallStmt
-        .sIdentifier
-        .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sStringLiteral
@@ -6342,6 +6340,23 @@ Output is:
         .sExpnEnd
             .sStringLiteral
         .sExpnEnd
+        .sParmEnd
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+        .sParmEnd
+       % value emitted 54
+        .sCallStmt
+        .sIdentifier
+            .sStringLiteral
+        .sExpnEnd
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+            .sStringLiteral
+        .sExpnEnd
             .sIdentifier
         .sExpnEnd
         .sFieldWidth
@@ -6353,26 +6368,26 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sIdentifier
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
               .sStringLiteral
           .sExpnEnd
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -6381,7 +6396,7 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
        .sBegin
@@ -6391,7 +6406,7 @@ Output is:
          .sGT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
           .sIfStmt
               .sIdentifier
@@ -6399,7 +6414,7 @@ Output is:
            .sEq
           .sExpnEnd
           .sThen
-          % value emitted 55
+          % value emitted 54
            .sBegin
              .sCallStmt
              .sIdentifier
@@ -6409,15 +6424,15 @@ Output is:
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
            .sEnd
           .sElse
-          % value emitted 55
+          % value emitted 54
            .sBegin
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
              .sCallStmt
              .sIdentifier
                  .sStringLiteral
@@ -6426,12 +6441,12 @@ Output is:
              .sCallStmt
              .sIdentifier
              .sParmEnd
-            % value emitted 55
+            % value emitted 54
            .sEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
@@ -6441,27 +6456,27 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
        .sEnd
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -6469,7 +6484,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
@@ -6479,16 +6494,16 @@ Output is:
            .sExpnEnd
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -6496,7 +6511,7 @@ Output is:
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
@@ -6506,73 +6521,73 @@ Output is:
            .sExpnEnd
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -6584,13 +6599,13 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
       .sExpnEnd
       .sParmEnd
-    % value emitted 55
+    % value emitted 54
     .sNullStmt
       .sCallStmt
       .sIdentifier
@@ -6600,7 +6615,7 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sStringLiteral
@@ -6609,11 +6624,11 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
@@ -6621,7 +6636,7 @@ Output is:
    .sIdentifier
    .sVar
    .sIdentifier
-   % value emitted 55
+   % value emitted 54
    .sIdentifier
    .sVar
    .sIdentifier
@@ -6629,33 +6644,33 @@ Output is:
    .sVar
    .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
           .sInteger
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -6663,8 +6678,8 @@ Output is:
          .sIdentifier
       .sGT
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sBegin
        .sCaseStmt
            .sIdentifier
@@ -6672,7 +6687,7 @@ Output is:
                 .sIdentifier
             .sExpnEnd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
           .sInteger
           .sInteger
           .sInteger
@@ -6683,8 +6698,8 @@ Output is:
           .sInteger
           .sInteger
         .sLabelEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -6695,13 +6710,13 @@ Output is:
                .sExpnEnd
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
           .sInteger
         .sLabelEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -6709,19 +6724,19 @@ Output is:
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
           .sAssignmentStmt
           .sIdentifier
           .sIdentifier
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sCaseOtherwise
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -6729,11 +6744,11 @@ Output is:
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
+       % value emitted 54
        .sCaseEnd
        .sAssignmentStmt
        .sIdentifier
@@ -6741,12 +6756,12 @@ Output is:
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -6759,7 +6774,7 @@ Output is:
           .sEq
        .sOr
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -6767,43 +6782,43 @@ Output is:
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -6818,15 +6833,15 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sGT
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -6836,19 +6851,19 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
      .sBegin
@@ -6858,7 +6873,7 @@ Output is:
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
@@ -6868,22 +6883,22 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sIfStmt
             .sIdentifier
@@ -6891,32 +6906,32 @@ Output is:
          .sLT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
               .sIdentifier
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sEnd
      .sIfStmt
          .sIdentifier
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -6933,15 +6948,15 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sIfStmt
            .sIdentifier
            .sIdentifier
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
@@ -6951,14 +6966,14 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
        .sBegin
@@ -6968,12 +6983,12 @@ Output is:
          .sLT
         .sExpnEnd
         .sThen
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
            .sCallStmt
            .sIdentifier
                .sStringLiteral
@@ -6982,17 +6997,17 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
           .sAssignmentStmt
           .sIdentifier
           .sIdentifier
               .sInteger
           .sAdd
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
+        % value emitted 54
          .sBegin
            .sCallStmt
            .sIdentifier
@@ -7002,21 +7017,21 @@ Output is:
            .sCallStmt
            .sIdentifier
            .sParmEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
        .sEnd
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sStringLiteral
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -7028,24 +7043,24 @@ Output is:
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sBegin
    .sProcedure
    .sIdentifier
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sBegin
       .sIfStmt
           .sIdentifier
@@ -7053,42 +7068,42 @@ Output is:
        .sLT
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
     .sIdentifier
     .sIdentifier
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
         .sIdentifier
      .sMutable
-     % value emitted 55
+     % value emitted 54
       .sAssignmentStmt
       .sIdentifier
           .sIdentifier
@@ -7096,14 +7111,14 @@ Output is:
                .sInteger
            .sExpnEnd
       .sExpnEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
       .sIfStmt
           .sIdentifier
       .sExpnEnd
       .sThen
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
        .sBegin
         .sIfStmt
             .sIdentifier
@@ -7111,8 +7126,8 @@ Output is:
          .sGT
         .sExpnEnd
         .sThen
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -7120,11 +7135,11 @@ Output is:
               .sInteger
            .sGT
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -7132,13 +7147,13 @@ Output is:
               .sInteger
            .sGT
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
        .sBegin
         .sIfStmt
                 .sIdentifier
@@ -7151,8 +7166,8 @@ Output is:
            .sAnd
         .sExpnEnd
         .sThen
-        % value emitted 55
-        % value emitted 55
+        % value emitted 54
+        % value emitted 54
          .sBegin
           .sAssignmentStmt
           .sIdentifier
@@ -7160,7 +7175,7 @@ Output is:
               .sInteger
            .sGT
           .sExpnEnd
-          % value emitted 55
+          % value emitted 54
          .sEnd
         .sElse
         .sBegin
@@ -7175,8 +7190,8 @@ Output is:
             .sAnd
          .sExpnEnd
          .sThen
-         % value emitted 55
-         % value emitted 55
+         % value emitted 54
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
@@ -7184,11 +7199,11 @@ Output is:
                .sInteger
             .sGT
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
          .sElse
-         % value emitted 55
-         % value emitted 55
+         % value emitted 54
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
@@ -7196,46 +7211,46 @@ Output is:
                .sInteger
             .sGT
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
       .sIfStmt
            .sIdentifier
           .sNot
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
     .sParmEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
      .sBegin
      .sVar
      .sIdentifier
         .sIdentifier
      .sMutable
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
        .sCallStmt
        .sIdentifier
            .sIdentifier
@@ -7250,20 +7265,20 @@ Output is:
            .sIdentifier
        .sExpnEnd
        .sParmEnd
-      % value emitted 55
-      % value emitted 55
+      % value emitted 54
+      % value emitted 54
       .sIfStmt
           .sIdentifier
           .sInteger
        .sEq
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
              .sStringLiteral
@@ -7272,24 +7287,24 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
         .sAssignmentStmt
         .sIdentifier
         .sIdentifier
             .sInteger
         .sAdd
         .sExpnEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
       .sBegin
@@ -7299,12 +7314,12 @@ Output is:
         .sGT
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
           .sCallStmt
           .sIdentifier
               .sStringLiteral
@@ -7313,27 +7328,27 @@ Output is:
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
              .sIdentifier
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
              .sIdentifier
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sIdentifier
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sIfStmt
              .sIdentifier
@@ -7341,38 +7356,38 @@ Output is:
           .sEq
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
                 .sIdentifier
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
          .sElse
-         % value emitted 55
+         % value emitted 54
           .sBegin
             .sCallStmt
             .sIdentifier
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
       .sEnd
       .sIfStmt
           .sIdentifier
       .sExpnEnd
       .sThen
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
              .sStringLiteral
@@ -7388,21 +7403,21 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
       .sElse
-      % value emitted 55
+      % value emitted 54
        .sBegin
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
              .sStringLiteral
          .sExpnEnd
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
          .sCallStmt
          .sIdentifier
              .sIdentifier
@@ -7414,18 +7429,18 @@ Output is:
          .sCallStmt
          .sIdentifier
          .sParmEnd
-        % value emitted 55
+        % value emitted 54
        .sEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7434,24 +7449,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sStringLiteral
-    .sExpnEnd
-    .sParmEnd
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7460,7 +7462,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7469,7 +7475,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7478,7 +7484,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7487,11 +7493,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7500,7 +7502,11 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7509,7 +7515,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7518,7 +7524,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7527,23 +7533,7 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-        .sStringLiteral
-    .sExpnEnd
-        .sStringLiteral
-    .sExpnEnd
-    .sParmEnd
-   % value emitted 55
-    .sCallStmt
-    .sIdentifier
-    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7552,11 +7542,23 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7565,136 +7567,151 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
     .sCallStmt
     .sIdentifier
     .sMutable
         .sIdentifier
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
         .sIdentifier
        .sNot
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
           .sIdentifier
          .sNot
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
         .sParmEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
        .sLoopBreakIf
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
           .sCallStmt
           .sIdentifier
           .sParmEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
         .sCallStmt
         .sIdentifier
         .sMutable
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sMutable
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file mprimes.pt
-Lengths do not match!  Something went wrong in mprimes.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
@@ -7702,20 +7719,20 @@ Output is:
         .sInteger
        .sDivide
     .sExpnEnd
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
   .sConst
    .sIdentifier
     .sIdentifier
-   % value emitted 55
+   % value emitted 54
   .sConst
    .sIdentifier
     .sIdentifier
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
   .sModule
   .sIdentifier
-  % value emitted 55
+  % value emitted 54
    .sBegin
    .sVar
    .sIdentifier
@@ -7724,8 +7741,8 @@ Output is:
      .sRange
       .sIdentifier
    .sMutable
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -7734,7 +7751,7 @@ Output is:
     .sIdentifier
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -7743,10 +7760,10 @@ Output is:
       .sExpnEnd
           .sIdentifier
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
    .sProcedure
    .sIdentifier
    .sPublic
@@ -7756,7 +7773,7 @@ Output is:
     .sVar
     .sIdentifier
     .sParmEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -7765,24 +7782,24 @@ Output is:
                .sIdentifier
            .sExpnEnd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
+    % value emitted 54
    .sVar
    .sIdentifier
      .sInitialValue
          .sInteger
      .sExpnEnd
    .sMutable
-   % value emitted 55
+   % value emitted 54
     .sWhileStmt
         .sIdentifier
         .sIdentifier
      .sLE
     .sExpnEnd
-    % value emitted 55
+    % value emitted 54
      .sBegin
       .sAssignmentStmt
       .sIdentifier
@@ -7791,40 +7808,40 @@ Output is:
       .sExpnEnd
           .sIdentifier
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
       .sAssignmentStmt
       .sIdentifier
       .sIdentifier
           .sInteger
       .sAdd
       .sExpnEnd
-      % value emitted 55
+      % value emitted 54
      .sEnd
-    % value emitted 55
+    % value emitted 54
    .sEnd
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -7832,9 +7849,9 @@ Output is:
        .sIdentifier
     .sGT
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -7842,9 +7859,9 @@ Output is:
          .sIdentifier
        .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -7852,7 +7869,7 @@ Output is:
          .sIdentifier
       .sGT
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -7861,18 +7878,18 @@ Output is:
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sIdentifier
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
+     % value emitted 54
     .sVar
     .sIdentifier
       .sInitialValue
@@ -7881,12 +7898,12 @@ Output is:
         .sAdd
       .sExpnEnd
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -7895,9 +7912,9 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
      .sLoopBreakIf
@@ -7908,7 +7925,7 @@ Output is:
          .sIdentifier
        .sOr
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -7916,7 +7933,7 @@ Output is:
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -7925,18 +7942,18 @@ Output is:
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -7952,16 +7969,16 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
   .sMutable
-  % value emitted 55
+  % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -7969,13 +7986,13 @@ Output is:
        .sIdentifier
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -7984,12 +8001,12 @@ Output is:
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sIfStmt
          .sIdentifier
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -7999,39 +8016,41 @@ Output is:
             .sInteger
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file pascal.pt
-Lengths do not match!  Something went wrong in pascal.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
@@ -8040,23 +8059,23 @@ Output is:
     .sRange
      .sInteger
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sIfStmt
          .sIdentifier
@@ -8064,7 +8083,7 @@ Output is:
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -8078,10 +8097,10 @@ Output is:
            .sInteger
          .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
@@ -8100,13 +8119,13 @@ Output is:
             .sExpnEnd
          .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
    .sSubscript
@@ -8114,14 +8133,14 @@ Output is:
    .sExpnEnd
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -8130,25 +8149,25 @@ Output is:
      .sExpnEnd
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
    .sLoopBreakIf
        .sIdentifier
        .sInteger
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sInteger
@@ -8160,57 +8179,57 @@ Output is:
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sWhileStmt
          .sIdentifier
          .sInteger
       .sGE
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sSubtract
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sWhileStmt
          .sIdentifier
          .sIdentifier
       .sLE
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
@@ -8223,103 +8242,329 @@ Output is:
             .sInteger
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
            .sInteger
        .sAdd
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
    .sLoopBreakIf
        .sIdentifier
        .sInteger
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file primes.pt
 
+Output is: 
 ```
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-  .sConst
-   .sIdentifier
-    .sIdentifier
-   % value emitted 55
-  .sConst
-   .sIdentifier
-    .sIdentifier
-   % value emitted 55
-   % value emitted 55
-  .sModule
+   % value emitted 54
+  .sVar
   .sIdentifier
-  % value emitted 55
-   .sBegin
-   .sVar
+    .sInitialValue
+        .sInteger
+        .sInteger
+       .sDivide
+    .sExpnEnd
+  % value emitted 54
+  % value emitted 54
+  .sConst
    .sIdentifier
-     .sArray
-      .sIdentifier
-     .sRange
-      .sIdentifier
-   .sMutable
-   % value emitted 55
-   % value emitted 55
-   .sProcedure
+    .sIdentifier
+   % value emitted 54
+  .sConst
    .sIdentifier
-   .sPublic
     .sIdentifier
+   % value emitted 54
+   % value emitted 54
+  .sVar
+  .sIdentifier
+    .sArray
+     .sIdentifier
+    .sRange
+     .sIdentifier
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 54
+   .sWhileStmt
+       .sIdentifier
+       .sIdentifier
+    .sLE
+   .sExpnEnd
+   % value emitted 54
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 54
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 54
+    .sEnd
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 54
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+   .sLoopStmt
+   % value emitted 54
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+         .sIdentifier
+       .sAdd
+     .sExpnEnd
+     % value emitted 54
+     .sLoopStmt
+     % value emitted 54
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+         .sIdentifier
+         .sIdentifier
+      .sGT
+     .sExpnEnd
+     % value emitted 54
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sSubscript
+           .sIdentifier
+       .sExpnEnd
+           .sIdentifier
+       .sExpnEnd
+       % value emitted 54
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sIdentifier
+       .sAdd
+       .sExpnEnd
+       % value emitted 54
+      .sEnd
+     % value emitted 54
+     % value emitted 54
+     % value emitted 54
+    .sVar
     .sIdentifier
+      .sInitialValue
+          .sIdentifier
+          .sInteger
+        .sAdd
+      .sExpnEnd
+    .sMutable
+    % value emitted 54
+    .sVar
     .sIdentifier
+       .sIdentifier
+      .sInitialValue
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+      .sExpnEnd
+    .sMutable
+    % value emitted 54
+     .sLoopStmt
+     % value emitted 54
+      .sBegin
+      .sEnd
+     .sLoopBreakIf
+             .sIdentifier
+             .sIdentifier
+          .sGT
+       .sInfixOr
+         .sIdentifier
+       .sOr
+     .sExpnEnd
+     % value emitted 54
+      .sBegin
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % value emitted 54
+       .sAssignmentStmt
+       .sIdentifier
+           .sIdentifier
+            .sSubscript
+                .sIdentifier
+            .sExpnEnd
+       .sExpnEnd
+       % value emitted 54
+      .sEnd
+     % value emitted 54
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % value emitted 54
+    .sEnd
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+        .sStringLiteral
+    .sExpnEnd
+        .sIdentifier
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+        .sStringLiteral
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
     .sIdentifier
     .sParmEnd
-    % value emitted 55
-     .sBegin
-      .sAssignmentStmt
-      .sIdentifier
-      .sSubscript
+   % value emitted 54
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  .sMutable
+  % value emitted 54
+   .sLoopStmt
+   % value emitted 54
+    .sBegin
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sIdentifier
+    .sGT
+   .sExpnEnd
+   % value emitted 54
+    .sBegin
+    .sVar
+    .sIdentifier
+       .sIdentifier
+      .sInitialValue
           .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
       .sExpnEnd
-          % value emitted 55
-          .sIdentifier
-      .sExpnEnd
-     .sEnd
-   .sEnd
+    % value emitted 54
+     .sIfStmt
+         .sIdentifier
+     .sExpnEnd
+     .sThen
+     % value emitted 54
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
+       % value emitted 54
+      .sEnd
+     % value emitted 54
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % value emitted 54
+    .sEnd
+   % value emitted 54
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % value emitted 54
   .sEnd
+ % value emitted 54
 
 ```
 File diff
@@ -8329,41 +8574,40 @@ Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file stars.pt
-Lengths do not match!  Something went wrong in stars.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sParmEnd
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
   .sBegin
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sStringLiteral
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -8371,7 +8615,7 @@ Output is:
        .sInteger
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -8379,7 +8623,7 @@ Output is:
          .sIdentifier
        .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -8388,73 +8632,60 @@ Output is:
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
 
+Test output matches the expected output! :heavy_check_mark:
+end file
 --------------------------------
 Reading file treesort.pt
-Lengths do not match!  Something went wrong in treesort.pt
+
 Output is: 
--------------------------
 ```
- % value emitted 55
- % value emitted 55
+ % value emitted 54
+ % value emitted 54
  .sProgram
  .sIdentifier
  .sIdentifier
  .sParmEnd
   .sBegin
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sNullStmt
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
+   % value emitted 54
   .sConst
    .sIdentifier
     .sInteger
-   % value emitted 55
+   % value emitted 54
   .sType
    .sIdentifier
      .sIdentifier
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  .sVar
-  .sIdentifier
-    .sArray
-     .sIdentifier
-    .sRange
-     .sIdentifier
-  .sMutable
-  % value emitted 55
-  .sIdentifier
-    .sArray
-     .sIdentifier
-    .sRange
-     .sIdentifier
-  .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
     .sArray
@@ -8462,29 +8693,44 @@ Output is:
     .sRange
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  .sIdentifier
+    .sArray
+     .sIdentifier
+    .sRange
+     .sIdentifier
+  .sMutable
+  % value emitted 54
+  .sVar
+  .sIdentifier
+    .sArray
+     .sIdentifier
+    .sRange
+     .sIdentifier
+  .sMutable
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
   .sProcedure
   .sIdentifier
    .sIdentifier
    .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
-    % value emitted 55
+    % value emitted 54
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -8492,7 +8738,7 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -8500,7 +8746,7 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -8508,32 +8754,32 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sIdentifier
       .sEq
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
      .sElse
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sAssignmentStmt
        .sIdentifier
            .sIdentifier
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
        .sLoopStmt
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sIfStmt
              .sIdentifier
@@ -8544,7 +8790,7 @@ Output is:
           .sLT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
            .sIfStmt
                .sIdentifier
@@ -8555,7 +8801,7 @@ Output is:
             .sEq
            .sExpnEnd
            .sThen
-           % value emitted 55
+           % value emitted 54
             .sBegin
              .sAssignmentStmt
              .sIdentifier
@@ -8564,15 +8810,15 @@ Output is:
              .sExpnEnd
                  .sIdentifier
              .sExpnEnd
-             % value emitted 55
+             % value emitted 54
              .sAssignmentStmt
              .sIdentifier
                  .sIdentifier
              .sExpnEnd
-             % value emitted 55
+             % value emitted 54
             .sEnd
            .sElse
-           % value emitted 55
+           % value emitted 54
             .sBegin
              .sAssignmentStmt
              .sIdentifier
@@ -8581,10 +8827,10 @@ Output is:
                       .sIdentifier
                   .sExpnEnd
              .sExpnEnd
-             % value emitted 55
+             % value emitted 54
             .sEnd
-           % value emitted 55
-           % value emitted 55
+           % value emitted 54
+           % value emitted 54
           .sEnd
          .sElse
          .sBegin
@@ -8597,7 +8843,7 @@ Output is:
            .sGT
           .sExpnEnd
           .sThen
-          % value emitted 55
+          % value emitted 54
            .sBegin
             .sIfStmt
                 .sIdentifier
@@ -8608,7 +8854,7 @@ Output is:
              .sEq
             .sExpnEnd
             .sThen
-            % value emitted 55
+            % value emitted 54
              .sBegin
               .sAssignmentStmt
               .sIdentifier
@@ -8617,15 +8863,15 @@ Output is:
               .sExpnEnd
                   .sIdentifier
               .sExpnEnd
-              % value emitted 55
+              % value emitted 54
               .sAssignmentStmt
               .sIdentifier
                   .sIdentifier
               .sExpnEnd
-              % value emitted 55
+              % value emitted 54
              .sEnd
             .sElse
-            % value emitted 55
+            % value emitted 54
              .sBegin
               .sAssignmentStmt
               .sIdentifier
@@ -8634,12 +8880,12 @@ Output is:
                        .sIdentifier
                    .sExpnEnd
               .sExpnEnd
-              % value emitted 55
+              % value emitted 54
              .sEnd
-            % value emitted 55
+            % value emitted 54
            .sEnd
-          % value emitted 55
-          % value emitted 55
+          % value emitted 54
+          % value emitted 54
          .sEnd
         .sEnd
        .sLoopBreakIf
@@ -8650,29 +8896,29 @@ Output is:
            .sIdentifier
         .sEq
        .sExpnEnd
-       % value emitted 55
+       % value emitted 54
         .sBegin
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
       .sEnd
-     % value emitted 55
-     % value emitted 55
+     % value emitted 54
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sProcedure
   .sIdentifier
    .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sVar
     .sIdentifier
@@ -8681,39 +8927,39 @@ Output is:
       .sRange
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
     .sVar
     .sIdentifier
        .sIdentifier
     .sMutable
-    % value emitted 55
+    % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sLoopStmt
-     % value emitted 55
+     % value emitted 54
       .sBegin
        .sIfStmt
            .sIdentifier
@@ -8721,7 +8967,7 @@ Output is:
         .sNE
        .sExpnEnd
        .sThen
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sAssignmentStmt
          .sIdentifier
@@ -8729,7 +8975,7 @@ Output is:
              .sInteger
          .sAdd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
          .sSubscript
@@ -8737,7 +8983,7 @@ Output is:
          .sExpnEnd
              .sIdentifier
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
          .sAssignmentStmt
          .sIdentifier
              .sIdentifier
@@ -8745,10 +8991,10 @@ Output is:
                   .sIdentifier
               .sExpnEnd
          .sExpnEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
        .sElse
-       % value emitted 55
+       % value emitted 54
         .sBegin
          .sIfStmt
              .sIdentifier
@@ -8756,7 +9002,7 @@ Output is:
           .sGT
          .sExpnEnd
          .sThen
-         % value emitted 55
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
@@ -8765,14 +9011,14 @@ Output is:
                     .sIdentifier
                 .sExpnEnd
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
            .sAssignmentStmt
            .sIdentifier
            .sIdentifier
                .sInteger
            .sSubtract
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
             .sCallStmt
             .sIdentifier
                 .sIdentifier
@@ -8786,7 +9032,7 @@ Output is:
                 .sStringLiteral
             .sExpnEnd
             .sParmEnd
-           % value emitted 55
+           % value emitted 54
            .sAssignmentStmt
            .sIdentifier
                .sIdentifier
@@ -8794,57 +9040,57 @@ Output is:
                     .sIdentifier
                 .sExpnEnd
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
          .sElse
-         % value emitted 55
+         % value emitted 54
           .sBegin
            .sAssignmentStmt
            .sIdentifier
                .sIdentifier
            .sExpnEnd
-           % value emitted 55
+           % value emitted 54
           .sEnd
-         % value emitted 55
+         % value emitted 54
         .sEnd
-       % value emitted 55
-       % value emitted 55
+       % value emitted 54
+       % value emitted 54
       .sEnd
      .sLoopBreakIf
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
       .sBegin
       .sEnd
-     % value emitted 55
+     % value emitted 54
       .sCallStmt
       .sIdentifier
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
+  % value emitted 54
   .sVar
   .sIdentifier
      .sIdentifier
   .sMutable
-  % value emitted 55
-  % value emitted 55
-  % value emitted 55
+  % value emitted 54
+  % value emitted 54
+  % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
    .sLoopBreakIf
@@ -8852,7 +9098,7 @@ Output is:
        .sIdentifier
     .sGT
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
      .sAssignmentStmt
      .sIdentifier
@@ -8861,7 +9107,7 @@ Output is:
      .sExpnEnd
          .sInteger
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -8869,7 +9115,7 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sSubscript
@@ -8877,83 +9123,87 @@ Output is:
      .sExpnEnd
          .sIdentifier
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
      .sAssignmentStmt
      .sIdentifier
      .sIdentifier
          .sInteger
      .sAdd
      .sExpnEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sInteger
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
    .sAssignmentStmt
    .sIdentifier
        .sIdentifier
    .sExpnEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
         .sStringLiteral
     .sExpnEnd
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
    .sLoopStmt
-   % value emitted 55
+   % value emitted 54
     .sBegin
       .sCallStmt
       .sIdentifier
           .sIdentifier
       .sExpnEnd
       .sParmEnd
-     % value emitted 55
+     % value emitted 54
      .sIfStmt
          .sIdentifier
          .sInteger
       .sNE
      .sExpnEnd
      .sThen
-     % value emitted 55
+     % value emitted 54
       .sBegin
         .sCallStmt
         .sIdentifier
             .sIdentifier
         .sExpnEnd
         .sParmEnd
-       % value emitted 55
+       % value emitted 54
       .sEnd
-     % value emitted 55
+     % value emitted 54
     .sEnd
    .sLoopBreakIf
        .sIdentifier
        .sInteger
     .sEq
    .sExpnEnd
-   % value emitted 55
+   % value emitted 54
     .sBegin
     .sEnd
-   % value emitted 55
-   % value emitted 55
-   % value emitted 55
+   % value emitted 54
+   % value emitted 54
+   % value emitted 54
     .sCallStmt
     .sIdentifier
     .sParmEnd
-   % value emitted 55
+   % value emitted 54
   .sEnd
- % value emitted 55
+ % value emitted 54
 
 ```
-------------------------
+File diff
+-------------------------
+
+Test output matches the expected output! :heavy_check_mark:
+end file

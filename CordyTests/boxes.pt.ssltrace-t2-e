@@ -7,24 +7,24 @@
  % .sNewLine
  % .sNewLine
   .sBegin
-  .sVar             // block of vars
-   .sIdentifier     // 'top'
-      .sIdentifier  // 'str'
+  .sVar
+   .sIdentifier
+      .sIdentifier
    .sMutable
-   .sIdentifier     // 'middle'
-      .sIdentifier  // 'str'
+   .sIdentifier
+      .sIdentifier
    .sMutable
-   .sIdentifier     // 'bottom'
-      .sIdentifier  // 'str'
-   .sMutable        // set bottom as mutable
+   .sIdentifier
+      .sIdentifier
+   .sMutable
    % .sNewLine
-  .sVar             // new set of vars
-   .sIdentifier     // 'width'
-      .sIdentifier  // 'int'
-   .sMutable        // set width as mutable
-   .sIdentifier     // 'height'
-      .sIdentifier  // 'int'
-   .sMutable        // set height as mutable
+  .sVar
+   .sIdentifier
+      .sIdentifier
+   .sMutable
+   .sIdentifier
+      .sIdentifier
+   .sMutable
    % .sNewLine
   .sVar
    .sIdentifier
@@ -111,9 +111,8 @@
       .sMultiply
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
      .sIfStmt
          .sIdentifier
          .sIdentifier
@@ -183,6 +182,7 @@
    % .sNewLine
    % .sNewLine
    % .sNewLine
+   .sLoopEnd
     .sCallStmt
     .sIdentifier
         .sIdentifier
@@ -208,9 +208,8 @@
        .sIdentifier
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
     .sVar
      .sIdentifier
       .sInitialValue
@@ -229,9 +228,8 @@
        .sSubtract
       .sGE
      .sExpnEnd
+     % .sNewLine
       .sBegin
-      % .sNewLine
-      .sNullStmt
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -252,6 +250,7 @@
       .sEnd
      % .sNewLine
      % .sNewLine
+     .sLoopEnd
       .sCallStmt
       .sIdentifier
           .sIdentifier
@@ -271,5 +270,6 @@
      % .sNewLine
     .sEnd
    % .sNewLine
+   .sLoopEnd
   .sEnd
  % .sNewLine

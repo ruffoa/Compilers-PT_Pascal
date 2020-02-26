@@ -148,11 +148,10 @@
        .sIdentifier
     .sGT
    .sExpnEnd
+   % .sNewLine
+   % .sNewLine
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    % .sNewLine
-    % .sNewLine
-    .sNullStmt
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -169,9 +168,8 @@
          .sIdentifier
       .sGT
      .sExpnEnd
+     % .sNewLine
       .sBegin
-      % .sNewLine
-      .sNullStmt
         .sCallStmt
         .sIdentifier
             .sIdentifier
@@ -191,6 +189,7 @@
      % .sNewLine
      % .sNewLine
      % .sNewLine
+     .sLoopEnd
     .sVar
      .sIdentifier
       .sInitialValue
@@ -226,9 +225,8 @@
          .sIdentifier
        .sOr
      .sExpnEnd
+     % .sNewLine
       .sBegin
-      % .sNewLine
-      .sNullStmt
        .sAssignmentStmt
        .sIdentifier
        .sIdentifier
@@ -247,6 +245,7 @@
        % .sNewLine
       .sEnd
      % .sNewLine
+     .sLoopEnd
      .sAssignmentStmt
      .sIdentifier
          .sIdentifier
@@ -256,6 +255,7 @@
    % .sNewLine
    % .sNewLine
    % .sNewLine
+   .sLoopEnd
     .sCallStmt
     .sIdentifier
         .sStringLiteral
@@ -288,9 +288,8 @@
        .sIdentifier
     .sGT
    .sExpnEnd
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    .sNullStmt
     .sVar
      .sIdentifier
         .sIdentifier
@@ -331,6 +330,7 @@
      % .sNewLine
     .sEnd
    % .sNewLine
+   .sLoopEnd
     .sCallStmt
     .sIdentifier
     .sParmEnd
