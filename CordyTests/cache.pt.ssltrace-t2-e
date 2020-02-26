@@ -674,21 +674,21 @@
      .sExpnEnd
     .sMutable
     % .sNewLine
-    .sWhileStmt     // while first != last
-        .sIdentifier    // first
-        .sIdentifier    // last
-     .sNE               // !=
+    .sWhileStmt
+        .sIdentifier
+        .sIdentifier
+     .sNE
     .sExpnEnd
     % .sNewLine
      .sBegin
      .sVar
-      .sIdentifier      // mid
-       .sInitialValue   // mid = (first + last) / 2
-               .sIdentifier // first
-               .sIdentifier // last
-             .sAdd          // first + last
-           .sInteger        // 2
-          .sDivide          // (first + last) / 2
+      .sIdentifier
+       .sInitialValue
+               .sIdentifier
+               .sIdentifier
+             .sAdd
+           .sInteger
+          .sDivide
        .sExpnEnd
       % .sNewLine
       .sAssignmentStmt

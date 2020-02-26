@@ -338,15 +338,15 @@
        .sStringLiteral
     .sEq
    .sExpnEnd
+   % .sNewLine
+   % .sNewLine
     .sBegin
-    % .sNewLine
-    % .sNewLine
-    .sNullStmt
       .sCallStmt
       .sIdentifier
       .sParmEnd
      % .sNewLine
     .sEnd
    % .sNewLine
+   .sLoopEnd
   .sEnd
  % .sNewLine
