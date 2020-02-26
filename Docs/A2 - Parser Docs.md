@@ -6,6 +6,43 @@ The following documents all changes made to parser.ssl structured according to t
 # Token Definitions
 
 # Program
+## `parser.ssl` Changes
+- Remove the initial pIdentifier at the start of the program, this is no longer required with Qust
+- Remove the required `;` before starting the `Block` rule
+  ```diff
+  -        ';'  @Block;
+  +        @Block;
+  ```
+- Update the `Block` rule to output a `.sBegin` token at the start of the block
+- Add in support for `pIdentifier` `{` `if` `while` `match` and `loop` tokens to the block choice rule
+  ```diff
+          {[
+                  ...
+  +            | pIdentifier:
+  +                @AssignmentOrCallStmt
+  +            | '{':
+  +                @BeginStmt
+  +            | 'if':
+  +                @IfStmt
+  +            | 'while':
+  +                @WhileStmt
+  +            | 'match':
+  +                @CaseStmt
+  +            | 'loop':
+  +                @RepeatStmt
+                  | *:
+                  >
+          ]}
+  ```
+
+- Remove the `begin '{' @BeginStmt` match after the block rule
+  ```diff
+  -        % 'begin'
+  -        '{'
+  -        @BeginStmt;
+  +        '}'
+  ```     
+- Add a `.sEnd` token to the end of the block rule
 
 # Declarations
 ## `parser.ssl` Changes
