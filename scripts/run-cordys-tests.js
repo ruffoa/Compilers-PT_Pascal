@@ -128,12 +128,12 @@ function compareResults(content, file) {
         // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
         stream.write("Lengths do not match!  Something went wrong in " + file + '\n');
-        stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`);
+        // stream.write(`Output is: \n-------------------------\n\`\`\`\n${content}\n\`\`\`\n------------------------\n`);
 
-        return;
+        // return;
     }
 
-    stream.write(`\n\`\`\`\n${content}\n\`\`\`\n`);
+    stream.write(`\nOutput is: \n\`\`\`\n${content}\n\`\`\`\n`);
     stream.write("File diff\n-------------------------" + '\n');
 
     const smallerOutput = testOutput.length < expectedOutput.length ? testOutput.length : expectedOutput.length;
