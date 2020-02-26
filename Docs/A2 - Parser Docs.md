@@ -305,6 +305,8 @@ ProcedureHeading :
     - Called the `@Block` SSL function instead of the `@Statement` function, enabling multiple statements within a `match`
 
 # Loop Statements
+We have chosen to ommit the sLoopEnd token as allowed by Prof. Cordy in one of the Q&A threads. We have chosen to do so in order to avoid having redundant tokens in our parser output stream.
+
 ## `parser.ssl` Changes
 - Updated the `WhileStmt` rule to call the `Block` rule.
 ```diff
