@@ -112,7 +112,9 @@ function compareResults(content, file) {
         return;
     }
 
-    const expectedOutput = results.split('\n');
+    let expectedOutput = results.split('\n');
+    expectedOutput = expectedOutput.filter((tLine) => tLine.indexOf('.sLoopEnd') < 0);  // get rid of lines with .sLoopEnd in them!
+
     let testOutput = content.split('\n');
     testOutput = testOutput.map((tLine) => {
         if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
