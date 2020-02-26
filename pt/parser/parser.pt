@@ -243,9 +243,10 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         pNot = 46;
         pUnderscore = 47;
         pQuestionMark = 48;
-        pEqualGreater = 49;
-        lastSyntaxToken = 49;
-	}
+        pGreaterEqual = 49;
+        pEqualGreater = 50;
+        lastSyntaxToken = 50;
+	    }
 
         { Output Tokens }
         sIdentifier = 0;
@@ -289,26 +290,25 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         sWhileStmt = 35;
         sLoopStmt = 36;
         sLoopBreakIf = 37;
-        sLoopEnd = 38;
-        sEq = 39;
-        sNE = 40;
-        sLT = 41;
-        sLE = 42;
-        sGT = 43;
-        sGE = 44;
-        sAdd = 45;
-        sSubtract = 46;
-        sMultiply = 47;
-        sDivide = 48;
-        sModulus = 49;
-        sInfixOr = 50;
-        sOr = 51;
-        sInfixAnd = 52;
-        sAnd = 53;
-        sNot = 54;
-        sNewLine = 55;
-        sEndOfFile = 56;
-        lastSemanticToken = 56;
+        sEq = 38;
+        sNE = 39;
+        sLT = 40;
+        sLE = 41;
+        sGT = 42;
+        sGE = 43;
+        sAdd = 44;
+        sSubtract = 45;
+        sMultiply = 46;
+        sDivide = 47;
+        sModulus = 48;
+        sInfixOr = 49;
+        sOr = 50;
+        sInfixAnd = 51;
+        sAnd = 52;
+        sNot = 53;
+        sNewLine = 54;
+        sEndOfFile = 55;
+        lastSemanticToken = 55;
 
         { Input/Output Tokens }
 
@@ -319,36 +319,35 @@ program ScannerParser(output, stdIdentifiers, scanSsl, parseSsl, source, parseSt
         { S/SL Rule Table Addresses } {
         Program = 0;
         Block = 34;
-        ConstantDefinitions = 86;
-        TypeDefinitions = 176;
-        VariableDeclarations = 256;
-        ProcedureHeading = 286;
-        BeginStmt = 460;
-        ConstantValue = 116;
-        UnsignedIntegerConstant = 156;
-        TypeBody = 206;
-        SimpleType = 222;
-        OptionallySignedIntegerConstant = 236;
-        Statement = 334;
-        AssignmentOrCallStmt = 376;
-        IfStmt = 486;
-        WhileStmt = 571;
-        CaseStmt = 508;
-        RepeatStmt = 580;
-        Expression = 604;
-        CallStmt = 416;
-        CaseAlternative = 551;
-        SimpleExpression = 658;
-        Term = 711;
-        Factor = 755;
-        IdentifierExtension = 813;
+        ConstantDefinitions = 192;
+        TypeDefinitions = 293;
+        VariableDeclarations = 368;
+        ProcedureHeading = 397;
+        AssignmentOrCallStmt = 448;
+        IfStmt = 577;
+        WhileStmt = 701;
+        CaseStmt = 620;
+        RepeatStmt = 714;
+        ConstantValue = 226;
+        UnsignedIntegerConstant = 273;
+        InitialValue = 266;
+        Expression = 737;
+        TypeBody = 304;
+        SimpleType = 336;
+        OptionallySignedIntegerConstant = 348;
+        CallStmt = 522;
+        CaseAlternative = 677;
+        SimpleExpression = 799;
+        Term = 852;
+        Factor = 907;
+        IdentifierExtension = 973;
         }
 
         { S/SL Table Parameters } {
-        sslTblSize = 843;
+        sslTblSize = 1003;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;
-	}
+	    }
 
 { ===== End of contents of parser.def }
 
