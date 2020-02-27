@@ -1,0 +1,1 @@
+A test testing the most basic, valid program possible with a function in it.

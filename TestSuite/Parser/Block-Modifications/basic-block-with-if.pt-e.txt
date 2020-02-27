@@ -1,0 +1,14 @@
+.sProgram
+.sIdentifier // identifier for 'output'
+.sParmEnd   // ending the param section for the main program [ (output) in this case]
+.sBegin     // start the main function
+.sIfStmt    // the if statement declaration
+.sInteger 1 // 1 in if statement
+.sInteger 0 // 0 in if statement
+.sEq        // the if statement equation
+.sExpnEnd   // end the if statement expression
+.sThen      // the if statement block
+.sBegin     // begin the if statement block (part which is called if true)
+.sNullStmt  // the null statement represented by the semicolon
+.sEnd       // end the if statement
+.sEnd       // end the program

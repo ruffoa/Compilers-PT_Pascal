@@ -18,31 +18,24 @@ Input :
         % Keywords must be first both here and in stdIdentifiers,
         % and they must appear in the exact same order
 
-        pDiv                    'div'
-        firstKeywordToken = pDiv
-        pMod                    'mod'
-        pOr                     'or'
-        pAnd                    'and'
-        pNot                    'not'
-        pThen                   'then'
-        pElse                   'else'
-        pOf                     'of'
-        pEnd                    'end'
-        pUntil                  'until'
-        pDo                     'do'
-        pArray                  'array'
-        pFile                   'file'
-        pProgram                'program'
-        pConst                  'const'
-        pVar                    'var'
-        pType                   'type'
-        pProcedure              'procedure'
-        pBegin                  'begin'
-        pIf                     'if'
-        pCase                   'case'
-        pWhile                  'while'
-        pRepeat                 'repeat'
-        lastKeywordToken = pRepeat 
+        pElse                       'else'
+        firstKeywordToken = pElse
+        pOf                         'of'
+        pFile                       'file'
+        pConst                      'const'
+        pType                       'type'
+        pIf                         'if'
+        pWhile                      'while'
+        pPub                        'pub'
+        pMod                        'mod'
+        pMain                       'main'
+        pLet                        'let'
+        pMut                        'mut'
+        pFn                         'fn'
+        pLoop                       'loop'
+        pBreak                      'break'
+        pMatch                      'match'
+        lastKeywordToken = pMatch
 
         % Scanner tokens -
         %   These are the tokens actually recognized by the Scanner itself.
@@ -62,23 +55,34 @@ Input :
         pPlus                   '+'
         pMinus                  '-'
         pStar                   '*'
-        pColonEquals            ':='
-        pDot                    '.'
         pComma                  ','
         pSemicolon              ';'
         pColon                  ':'
         pEquals                 '='
-        pNotEqual               '<>'
+        pNotEqual               '!='
         pLess                   '<'
         pLessEqual              '<='
-        pGreaterEqual           '>='
         pGreater                '>'
         pLeftParen              '('
         pRightParen             ')'
         pLeftBracket            '['
         pRightBracket           ']'
-        pDotDot                 '..'
-        lastSyntaxToken = pDotDot;
+        pLeftBrace              '{'
+        pRightBrace             '}'
+        pPlusEquals             '+='
+        pMinusEquals            '-='
+        pForwardSlash           '/'
+        pPercent                '%'
+        pDoubleEquals           '=='
+        pDoubleAmpersand        '&&'
+        pDoubleBar              '||'
+        pBar                    '|'
+        pNot                    '!'
+        pUnderscore             '_'
+        pQuestionMark           '?'
+        pGreaterEqual           '>='
+        pEqualGreater           '=>'
+        lastSyntaxToken = pEqualGreater;
 
 Output :
         sIdentifier 
@@ -89,11 +93,15 @@ Output :
         lastCompoundSemanticToken = sStringLiteral
 
         sProgram
+        sModule
+        sPublic
         sParmBegin
         sParmEnd
         sConst
         sType
         sVar
+        sMutable
+        sInitialValue
         sProcedure
         sBegin
         sEnd
@@ -102,20 +110,23 @@ Output :
         sFile
         sRange
         sCaseStmt
+        sCaseOtherwise
         sCaseEnd
         sLabelEnd
         sExpnEnd
         sNullStmt
         sAssignmentStmt
         sSubscript
+        sSubstring
+        sLength
         sCallStmt
         sFieldWidth
         sIfStmt
         sThen
         sElse
         sWhileStmt
-        sRepeatStmt
-        sRepeatEnd
+        sLoopStmt
+        sLoopBreakIf
         sEq
         sNE
         sLT
@@ -140,9 +151,9 @@ Output :
 rules
 
 Program :
-        'program'  .sProgram
+        'mod' 'main' .sProgram
         % program name
-        pIdentifier
+        % pIdentifier
         % program parameters
         '('
         {
@@ -155,13 +166,15 @@ Program :
         }
         ')'
         .sParmEnd
-        ';'  @Block  '.';
+        '{' @Block '}';
 
 Block :
         % Strictly speaking, standard Pascal requires that declarations
         % appear only in the order consts, types, vars, procedures.
         % We allow arbitrary intermixing of these instead to preserve
         % programmer sanity.
+
+        .sBegin % output a begin at the beginning of a block
         {[
             | 'const':
                 .sConst
@@ -169,29 +182,65 @@ Block :
             | 'type':
                 .sType
                 @TypeDefinitions
-            | 'var':
+            | 'let':                                % handle variable declarations
                 .sVar
-                @VariableDeclarations
-            | 'procedure':
+                {[
+                    | 'mut':                        % mutable variables
+                        pIdentifier  .sIdentifier
+                        @VariableDeclarations
+                        .sMutable
+                    | pIdentifier:                  % immutable variables
+                        .sIdentifier
+                        @VariableDeclarations
+                    | *:
+                        >
+                ]
+                [           % second choice to handle multiple declarations in single statement
+                    | ',':  % consume comma and loop again 
+                    | ';':  % consume semicolon and exit loop as statement is done
+                        >
+                ]}
+            | 'fn':
                 .sProcedure
-                % procedure name
-                pIdentifier  .sIdentifier
+                pIdentifier  .sIdentifier   % procedure name
                 @ProcedureHeading
-                @Block  ';'
+            | 'pub':
+                'fn' .sProcedure
+                pIdentifier  .sIdentifier   % procedure name
+                .sPublic
+                @ProcedureHeading
+            | 'mod':
+                .sModule
+                pIdentifier  .sIdentifier   % module name
+                '{' @Block '}'
+            | pIdentifier:
+                @AssignmentOrCallStmt
+            | 'if':
+                @IfStmt
+            | 'while':
+                @WhileStmt
+            | 'match':
+                @CaseStmt
+            | 'loop':
+                @RepeatStmt
+            | ';':
+                .sNullStmt
             | *:
                 >
         ]}
-        'begin'
-        @BeginStmt;
+        .sEnd;  % end the block choice rule with an .sEnd token
 
 ConstantDefinitions :
         % Accept one or more named constant definitions
         pIdentifier  .sIdentifier
-        '=' @ConstantValue ';'
+        '=' @ConstantValue
         {[
-            | pIdentifier:
+            | ',':  % handle multiple declarations per line with a ','
+                pIdentifier
                 .sIdentifier
-                '=' @ConstantValue ';'
+                '=' @ConstantValue
+            | ';':
+                >   % consume the ';' token and exit loop
             | *:
                 >
         ]};
@@ -211,6 +260,12 @@ ConstantValue :
                 .sStringLiteral
         ];
 
+% Rule to handle the initial value for variable declarations
+InitialValue :
+        .sInitialValue
+        @Expression
+        .sExpnEnd;
+
 UnsignedIntegerConstant :
         [
             | pIdentifier:
@@ -220,23 +275,19 @@ UnsignedIntegerConstant :
         ];
 
 TypeDefinitions :
-        % Accept one or more named type definitions.
         pIdentifier  .sIdentifier
         '='  @TypeBody  ';'
-        {[
-            | pIdentifier:
-                .sIdentifier
-                '='  @TypeBody  ';'
-            | *:
-                >
-        ]};
+        ;
 
 TypeBody :
         [
-            | 'array':
-                .sArray
-                '['  @SimpleType  ']'
-                'of'  @SimpleType
+            | '[':
+               .sArray
+                @SimpleType     % handle array type
+                ':'
+                .sRange
+                @UnsignedIntegerConstant    % handle array range upper limit
+                ']'
             | 'file':
                 .sFile
                 'of'  @SimpleType
@@ -250,15 +301,7 @@ SimpleType :
         [
             | pIdentifier:
                 .sIdentifier
-                [
-                    | '..':
-                        .sRange         %% this may be unnecessary
-                        @OptionallySignedIntegerConstant
-                    | *:
-                ]
             | *:
-                @OptionallySignedIntegerConstant
-                '..'  .sRange
                 @OptionallySignedIntegerConstant
         ];
 
@@ -275,89 +318,93 @@ OptionallySignedIntegerConstant :
 
 VariableDeclarations :
         % Accept one or more variable declarations.
-        pIdentifier  .sIdentifier
-        ':'  @TypeBody  ';'
-        {[
-            | pIdentifier:
-                .sIdentifier
-                ':'  @TypeBody  ';'
-            | *:
-                >
-        ]};
+        [
+            | ':':          % variable declares a type
+                @TypeBody
+                [
+                    | '=':      % optional initial value
+                        @InitialValue
+                    | *:
+                ]
+            | '=':          % if variable does not declare a type it MUST declare an initial value
+                @InitialValue
+        ];
 
 ProcedureHeading :
-        % Accept zero or more procedure formal parameter declarations.
-        [
-            | '(':
-                {
-                    % formal parameter identifier
-                    [
-                        | 'var':
-                            pIdentifier  .sIdentifier
-                            .sVar
-                        | *:
-                            pIdentifier  .sIdentifier
-                    ]
-                    ':'
-                    % type identifier
+        % Accept zero or more procedure formal parameter declarations, but require the brackets
+        '('
+        {
+            [
+                % formal parameter identifier
+                | 'mut':                       % mutable parameters - passed by reference
                     pIdentifier  .sIdentifier
-                    [
-                        | ';':
-                        | *:
-                            >
-                    ]
-                }
-                ')'
-            | *:
-        ]
-        ';'
-        .sParmEnd;
-
-Statement :
-        [
-            | pIdentifier:
-                @AssignmentOrCallStmt
-            | 'begin':
-                @BeginStmt
-            | 'if':
-                @IfStmt
-            | 'while':
-                @WhileStmt
-            | 'case':
-                @CaseStmt
-            | 'repeat':
-                @RepeatStmt
-            | *:
-                .sNullStmt
-        ];
+                    .sVar
+                | pIdentifier:                 % immutable parameters - passed by value
+                    .sIdentifier
+                | *: 
+                    >
+            ]
+            ':'
+            % type identifier
+            pIdentifier  .sIdentifier
+            [
+                | ',':  % consume comma and loop again 
+                | *:
+                    >
+            ]
+        }
+        ')'
+        .sParmEnd
+        '{' @Block '}';
 
 AssignmentOrCallStmt :
         [
-            | ':=':
+            | '=': 
                 .sAssignmentStmt
-                .sIdentifier    % identifier accepted in the Statement rule
+                .sIdentifier    
                 @Expression
                 .sExpnEnd
-            | '[':
+            | '+=':
+                .sAssignmentStmt
+                .sIdentifier    
+                .sIdentifier    
+                @Expression  .sAdd
+                .sExpnEnd
+            | '-=':
+                .sAssignmentStmt
+                .sIdentifier    
+                .sIdentifier    
+                @Expression  .sSubtract
+                .sExpnEnd
+            | '[':                  % handle subscripts
                 .sAssignmentStmt
                 .sIdentifier
                 .sSubscript
                 @Expression
                 .sExpnEnd
-                ']'  ':='
+                ']'  '='
                 @Expression
                 .sExpnEnd
             | *:
                 @CallStmt
-        ];
+        ]
+        ';' % consume semicolon and exit
+        ;
 
 CallStmt :
         .sCallStmt
         .sIdentifier    % procedure identifier accepted in the Statement rule
-        % accept zero or more actual parameters
+        % accept zero or more actual parameters, but require brackets
+        '('
         [
-            | '(':
+            | ')':
+            | *:
                 {
+                    [
+                        | 'mut': 
+                            .sMutable
+                        | *:                        
+                    ]
                     @Expression
                     .sExpnEnd
                     % allow a field width specification to occur in calls
@@ -376,32 +423,26 @@ CallStmt :
                     ]
                 }
                 ')'
-            | *:        % no actual parameters
         ]
         .sParmEnd;
-
-BeginStmt :
-        .sBegin
-        {
-            @Statement
-            [
-                | ';':
-                | 'end':
-                    .sEnd
-                    >
-            ]
-        };
 
 IfStmt :
         .sIfStmt
         @Expression
         .sExpnEnd
-        'then'  .sThen
-        @Statement
+        .sThen
+        '{' @Block '}'         % call the Block rule to handle the main content of the if statement
         [
             | 'else':
                 .sElse
-                @Statement
+                [
+                    | 'if':         % handle the case of an "else if"
+                        .sBegin     % emit sBegin token for else block
+                        @IfStmt
+                        .sEnd       % emit sEnd token for else block
+                    |*:
+                        '{' @Block '}'         % call the Block rule to handle the content for the else section of the if statement
+                ]
             | *:
         ];
 
@@ -409,20 +450,26 @@ CaseStmt :
         .sCaseStmt
         @Expression
         .sExpnEnd
-        'of'
+        '{'
+        '|'
         @CaseAlternative
         {[
-            | ';':
+            | '|':
                 % since case alternatives cannot be null, allow
                 % for the common situation of an extra semicolon
                 % at the end of the list of case alternatives.
                 [
-                    | 'end':
+                    | '}':
                         >
+                    | '_': 
+                        .sCaseOtherwise
+                        '=>'  '{' @Block '}'
                     | *:
                         @CaseAlternative
                 ]
-            | 'end':
+            | '}':
+                >
+            | *:
                 >
         ]}
         .sCaseEnd;
@@ -434,41 +481,35 @@ CaseAlternative :
         {
             @OptionallySignedIntegerConstant
             [
-                | ',':
+                | '|':
                 | *:
                     >
             ]
         }
         .sLabelEnd
-        ':'  @Statement;
+        '=>' '{' @Block '}';
 
 WhileStmt :
         .sWhileStmt
         @Expression
         .sExpnEnd
-        'do'
-        @Statement;
+        '{' @Block '}';
 
 RepeatStmt :
-        .sRepeatStmt
-        {
-            @Statement
-            [
-                | ';':
-                | 'until':
-                    .sRepeatEnd
-                    >
-            ]
-        }
-        @Expression
-        .sExpnEnd;
+        .sLoopStmt
+        '{'
+        @Block      % starting loop block
+        pBreak pIf .sLoopBreakIf @Expression .sExpnEnd ';'  % handle break if statement
+        @Block      % final loop block
+        '}';
+
 
 Expression :
         @SimpleExpression
         [
-            | '=':
+            | '==':
                 @SimpleExpression  .sEq
-            | '<>':
+            | '!=':
                 @SimpleExpression  .sNE
             | '<':
                 @SimpleExpression  .sLT
@@ -476,7 +517,7 @@ Expression :
                 @SimpleExpression  .sLE
             | '>':
                 @SimpleExpression  .sGT
-            | '>=':
+            | '>=':            
                 @SimpleExpression  .sGE
             | *:
         ];
@@ -495,7 +536,7 @@ SimpleExpression :
                 @Term  .sAdd
             | '-':
                 @Term  .sSubtract
-            | 'or':
+            | '||':
                 .sInfixOr  @Term  .sOr
             | *:
                 >
@@ -506,11 +547,18 @@ Term :
         {[
             | '*':
                 @Factor  .sMultiply
-            | 'div':
-                @Factor  .sDivide
-            | 'mod':
+            | '/':
+                @Factor
+                [
+                    | ':': 
+                       @Factor
+                       .sSubstring
+                    | *:
+                        .sDivide 
+                ]
+            | '%':
                 @Factor  .sModulus
-            | 'and':
+            | '&&':
                 .sInfixAnd  @Factor  .sAnd
             | *:
                 >
@@ -525,18 +573,18 @@ Factor :
                 .sInteger
             | '(':
                 @Expression  ')'
-            | 'not':
+            | '!':
                 @Factor
                 .sNot
+            | '?':
+                @Factor
+                .sLength
             | pStringLiteral:
                 .sStringLiteral
             | 'file':
                 .sFile '(' @Expression ')'
                 .sExpnEnd
         ];
-        
-        
-
 
 IdentifierExtension :
         % Handle subscripts and function actual parameter lists

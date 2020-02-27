@@ -1,0 +1,1 @@
+The purpose of this test is to verify that multiple array declarations in a single statement are correctly parsed.

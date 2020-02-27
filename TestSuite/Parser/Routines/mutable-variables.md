@@ -1,0 +1,1 @@
+This test is to make sure that mutable variables work in functions, and are represented with the `var` token

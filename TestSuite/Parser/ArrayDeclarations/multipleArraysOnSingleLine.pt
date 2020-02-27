@@ -1,0 +1,3 @@
+mod main(output) {
+    let mut a : [int:10], b : [bool: 5], mut c : [str:20];
+}

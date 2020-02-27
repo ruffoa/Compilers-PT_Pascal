@@ -92,8 +92,9 @@
         pNot = 46;
         pUnderscore = 47;
         pQuestionMark = 48;
-        pEqualGreater = 49;
-        lastSyntaxToken = 49;
+        pGreaterEqual = 49;
+        pEqualGreater = 50;
+        lastSyntaxToken = 50;
 
         { Input/Output Tokens }
 
@@ -110,14 +111,14 @@
 
         { S/SL Rule Table Addresses } {
         Scan = 0;
-        Identifier = 303;
-        Comment = 387;
-        AlternateComment = 412;
-        Integer = 320;
-        StringLiteral = 335;
+        Identifier = 296;
+        Comment = 380;
+        AlternateComment = 405;
+        Integer = 313;
+        StringLiteral = 328;
         }
 
         { S/SL Table Parameters }
-        sslTblSize = 449;
+        sslTblSize = 442;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;

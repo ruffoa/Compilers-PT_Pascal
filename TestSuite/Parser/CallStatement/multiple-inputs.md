@@ -1,0 +1,1 @@
+This test makes sure that the Qust parser can handle multiple  inputs to a function

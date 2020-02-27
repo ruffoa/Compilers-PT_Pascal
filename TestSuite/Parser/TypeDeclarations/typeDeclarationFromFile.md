@@ -1,0 +1,1 @@
+The purpose of this test is to verify that type declarations from a file type are correctly parsed.

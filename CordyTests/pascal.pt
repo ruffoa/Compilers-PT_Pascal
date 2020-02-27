@@ -27,7 +27,7 @@ mod main (output) {
     loop {
         // calculate a new row 
         col = row;
-        while col => 1 {
+        while col >= 1 {
             addto (col);
             col -= 1;
         }

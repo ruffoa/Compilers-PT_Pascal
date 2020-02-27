@@ -1,0 +1,7 @@
+mod main (output) {
+    mod Test {  
+        mod bar {
+            ;
+        }
+    }
+}

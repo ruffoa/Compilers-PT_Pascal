@@ -1,0 +1,21 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sProcedure  
+.sIdentifier    // identifier index for 'foo' 
+.sIdentifier    // identifier for i
+.sIdentifier    // identifier for int
+.sParmEnd       // end parameters for foo 
+.sBegin         // begin foo
+.sProcedure     // define bar  
+.sIdentifier    // identifier index for 'bar' 
+.sIdentifier    // j declaration
+.sVar           // j is mutuable
+.sIdentifier    // j is int
+.sParmEnd       // end bars parameters
+.sBegin         // begin bar
+.sNullStmt      // the ';' is a valid statement inside a block apparently :P
+.sEnd           // end bar
+.sEnd           // end foo
+.sEnd           // end main

@@ -1,0 +1,9 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sProcedure  
+.sIdentifier    // identifier index for 'test' 
+.sParmEnd 
+.sNullStmt      // Expect something to break here...
+.sEnd

@@ -1,0 +1,25 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sVar
+.sIdentifier    // i
+.sInitialValue
+.sInteger 1     // initial value for x
+.sExpnEnd       // end the initial value 'expression'
+.sConst
+.sIdentifier    // identifier for 'j'
+.sInteger 10    // value of j
+.sAssignmentStmt 
+.sIdentifier    // identifier index for 'i'> 
+.sIdentifier    // <identifier index for 'i'> 
+.sIdentifier    // identifier for j
+.sAdd           // i += j
+.sExpnEnd       // end i += j
+.sAssignmentStmt   // i -= j
+.sIdentifier    // identifier index for 'i'> 
+.sIdentifier    // <identifier index for 'i'> 
+.sIdentifier    // identifier for j
+.sSubtract 
+.sExpnEnd       // end i -= j
+.sEnd

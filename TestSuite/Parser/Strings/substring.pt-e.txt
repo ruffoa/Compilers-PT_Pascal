@@ -1,0 +1,18 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sVar
+.sIdentifier  // 'x'
+.sInitialValue
+.sStringLiteral "Hi there"  // string value for 'x'
+.sExpnEnd
+.sVar
+.sIdentifier  // 'y'
+.sInitialValue
+.sIdentifier  // 'x'
+.sInteger     // 1
+.sInteger     // 2
+.sSubstring   // x / 1 : 2
+.sExpnEnd     // end y = x / 1 : 2
+.sEnd

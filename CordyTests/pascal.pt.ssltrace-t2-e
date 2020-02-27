@@ -1,0 +1,232 @@
+ % .sNewLine
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+ % .sNewLine
+  .sBegin
+  .sVar
+   .sIdentifier
+     .sArray
+      .sIdentifier
+     .sRange
+      .sInteger
+   .sMutable
+   % .sNewLine
+  .sVar
+   .sIdentifier
+      .sIdentifier
+   .sMutable
+   % .sNewLine
+   .sIdentifier
+      .sIdentifier
+   .sMutable
+   % .sNewLine
+   % .sNewLine
+  .sProcedure
+  .sIdentifier
+   .sIdentifier
+   .sIdentifier
+   .sParmEnd
+  % .sNewLine
+   .sBegin
+    .sIfStmt
+        .sIdentifier
+        .sInteger
+     .sEq
+    .sExpnEnd
+    .sThen
+    % .sNewLine
+     .sBegin
+      .sAssignmentStmt
+      .sIdentifier
+      .sSubscript
+          .sInteger
+      .sExpnEnd
+          .sIdentifier
+           .sSubscript
+               .sInteger
+           .sExpnEnd
+          .sInteger
+        .sAdd
+      .sExpnEnd
+      % .sNewLine
+     .sEnd
+    .sElse
+    % .sNewLine
+     .sBegin
+      .sAssignmentStmt
+      .sIdentifier
+      .sSubscript
+          .sIdentifier
+      .sExpnEnd
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+           .sExpnEnd
+          .sIdentifier
+           .sSubscript
+               .sIdentifier
+               .sInteger
+             .sSubtract
+           .sExpnEnd
+        .sAdd
+      .sExpnEnd
+      % .sNewLine
+     .sEnd
+    % .sNewLine
+   .sEnd
+  % .sNewLine
+  % .sNewLine
+  % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+   .sSubscript
+       .sInteger
+   .sExpnEnd
+       .sInteger
+   .sExpnEnd
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % .sNewLine
+   .sLoopStmt
+   % .sNewLine
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sSubscript
+         .sIdentifier
+     .sExpnEnd
+         .sInteger
+     .sExpnEnd
+     % .sNewLine
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % .sNewLine
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sInteger
+    .sGT
+   .sExpnEnd
+   % .sNewLine
+    .sBegin
+    .sEnd
+   % .sNewLine
+   % .sNewLine
+   .sLoopEnd
+    .sCallStmt
+    .sIdentifier
+        .sInteger
+    .sExpnEnd
+    .sFieldWidth
+        .sInteger
+    .sExpnEnd
+    .sParmEnd
+    .sCallStmt
+    .sIdentifier
+    .sParmEnd
+   % .sNewLine
+   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % .sNewLine
+   .sLoopStmt
+   % .sNewLine
+   % .sNewLine
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+         .sIdentifier
+     .sExpnEnd
+     % .sNewLine
+     .sWhileStmt
+         .sIdentifier
+         .sInteger
+      .sGE
+     .sExpnEnd
+     % .sNewLine
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+        .sExpnEnd
+        .sParmEnd
+       % .sNewLine
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sSubtract
+       .sExpnEnd
+       % .sNewLine
+      .sEnd
+     % .sNewLine
+     % .sNewLine
+     % .sNewLine
+     .sAssignmentStmt
+     .sIdentifier
+         .sInteger
+     .sExpnEnd
+     % .sNewLine
+     .sWhileStmt
+         .sIdentifier
+         .sIdentifier
+      .sLE
+     .sExpnEnd
+     % .sNewLine
+      .sBegin
+        .sCallStmt
+        .sIdentifier
+            .sIdentifier
+             .sSubscript
+                 .sIdentifier
+             .sExpnEnd
+        .sExpnEnd
+        .sFieldWidth
+            .sInteger
+        .sExpnEnd
+        .sParmEnd
+       % .sNewLine
+       .sAssignmentStmt
+       .sIdentifier
+       .sIdentifier
+           .sInteger
+       .sAdd
+       .sExpnEnd
+       % .sNewLine
+      .sEnd
+     % .sNewLine
+      .sCallStmt
+      .sIdentifier
+      .sParmEnd
+     % .sNewLine
+     % .sNewLine
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % .sNewLine
+    .sEnd
+   .sLoopBreakIf
+       .sIdentifier
+       .sInteger
+    .sGT
+   .sExpnEnd
+   % .sNewLine
+    .sBegin
+    .sEnd
+   % .sNewLine
+   .sLoopEnd
+  .sEnd
+ % .sNewLine

@@ -1,0 +1,33 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sVar
+.sIdentifier    // i
+.sInitialValue
+.sInteger 1     // initial value for x
+.sExpnEnd       // end the initial value 'expression'
+.sConst
+.sIdentifier    // identifier for 'j'
+.sInteger 10    // value of j
+.sAssignmentStmt 
+.sIdentifier    // identifier index for 'i'> 
+.sIdentifier    // <identifier index for 'i'> 
+.sIdentifier    // identifier for j
+.sInteger       // 2
+.sDivide        // divide (j / 2)
+.sInteger 2     // j / 2) + 2
+.sAdd           // (...) + 2
+.sAdd 
+.sExpnEnd       // end i += (j/2) + 2
+.sAssignmentStmt   // (j + 2) * 1
+.sIdentifier    // identifier index for 'i'> 
+.sIdentifier    // <identifier index for 'i'> 
+.sIdentifier    // identifier for j
+.sInteger       // 2
+.sAdd           // add 2 (j + 2)
+.sInteger 1     // (j + 2) * 1
+.sMultiply      // (...) * 1
+.sSubtract 
+.sExpnEnd       // end i -= 1
+.sEnd

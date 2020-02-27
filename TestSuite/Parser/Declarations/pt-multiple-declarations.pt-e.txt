@@ -1,0 +1,12 @@
+.sProgram
+.sIdentifier
+.sParmEnd
+.sBegin
+.sConst
+.sIdentifier    // Identifier for 'x'
+.sInteger
+.sAssignmentStmt
+.sIdentifier    // Identifier for 'y'
+.sInteger
+.sExpnEnd
+.sEnd

@@ -89,7 +89,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/combinedOutput.txt
+        rm -f ../CordyTests/scannerOutput.txt
         node ./run-cordys-tests.js
       working-directory: ./pt
 
@@ -113,24 +113,24 @@ jobs:
         cat */*.txt
       working-directory: ./pt
     
-    - name: Commit new test results
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add TestSuite/\*-output.txt
-        git add CordyTests/combinedOutput.txt
-        git status
-        git commit -m "Update test suite output files with latest test results" || echo "Test outputs are up to date" 
+    # - name: Commit new test results
+    #   run: |
+    #     git config --local user.email "action@github.com"
+    #     git config --local user.name "GitHub Action"
+    #     git add TestSuite/\*-output.txt
+    #     git add CordyTests/combinedOutput.txt
+    #     git status
+    #     git commit -m "Update Scanner test suite output files with latest test results" || echo "Test outputs are up to date" 
       
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
+    # - name: Extract branch name
+    #   shell: bash
+    #   run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+    #   id: extract_branch
 
-    - name: Push Changes
-      uses: ad-m/github-push-action@v0.5.0
-      with: 
-        branch: ${{ steps.extract_branch.outputs.branch }}
-        github_token: ${{ secrets.GITHUB_TOKEN	}}
+    # - name: Push Changes
+    #   uses: ad-m/github-push-action@v0.5.0
+    #   with: 
+    #     branch: ${{ steps.extract_branch.outputs.branch }}
+    #     github_token: ${{ secrets.GITHUB_TOKEN	}}
 
 

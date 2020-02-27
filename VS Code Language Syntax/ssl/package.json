@@ -1,0 +1,25 @@
+{
+    "name": "ssl",
+    "displayName": "SSL",
+    "description": "SSL Syntax",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ssl",
+            "aliases": ["SSL", "ssl"],
+            "extensions": [".ssl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ssl",
+            "scopeName": "source.ssl",
+            "path": "./syntaxes/ssl.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,14 @@
+.sProgram
+.sIdentifier // identifier for 'output'
+.sParmEnd
+.sBegin  // start the main function
+.sVar 
+.sIdentifier // identifier index for 'x' 
+.sIdentifier // identifier index for 'int' 
+.sInitialValue
+.sInteger 64   // initial value for x
+.sExpnEnd      // end the initial value 'expression'
+.sConst
+.sIdentifier   // identifier for y
+.sInteger 53   // initial value for y
+.sEnd

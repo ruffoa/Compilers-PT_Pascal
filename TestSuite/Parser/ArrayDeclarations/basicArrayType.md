@@ -1,0 +1,1 @@
+The purpose of this test is to verify that new type declarations of arrays are correctly parsed.

@@ -1,0 +1,1 @@
+The purpose of this test is to verify the parsing of an if statement with an else clause.

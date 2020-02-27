@@ -1,0 +1,9 @@
+.sProgram
+.sIdentifier    // identifier for 'output'
+.sParmEnd
+.sBegin         // start the main function
+.sCallStmt  
+.sIdentifier    // identifier index for 'println' 
+.sNullStmt      // expect something to go wrong around here...
+.sParmEnd 
+.sEnd
