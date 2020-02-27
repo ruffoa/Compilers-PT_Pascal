@@ -21,8 +21,6 @@ The following documents all changes made to semantic.ssl structured according to
 
 # Mutable and Immutable Vars
 
-# Increment / Decrement
-
 # String Type
 
 # String Operations
