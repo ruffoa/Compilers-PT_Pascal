@@ -15,8 +15,17 @@ const ptHomePath = path.join(__dirname, `../pt/`);
 
 const getSegment = {
     'Scanner': '-o1 -t1',
-    'Parser': '-o2 -t2'
+    'Parser': '-o2 -t2',
+    'Semantic': '-o3 -t3'
 };
+
+const defMap = {
+    'Scanner': 'scan',
+    'Parser': 'parser',
+    'Semantic': 'semantic'
+};
+
+let passed = true;
 
 const nLineTokenNumber = getNewLineNumber();
 
@@ -37,6 +46,8 @@ async function loopTestDirectories() {
     for (const dir of getDirectories) {
         await findAllFilesInDir(dir);
     }
+
+    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function findAllFilesInDir(dir) {
@@ -59,7 +70,7 @@ async function findAllFilesInDir(dir) {
 
 async function runFile(file, dir) {
     try {
-        const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/parser.def -e`);
+        const output = await exec(`ssltrace "ptc ${getSegment[segment]} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/${defMap[segment]}.def -e`);
         // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
         
@@ -186,6 +197,7 @@ function compareResults(content, file, dir) {
             output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
         } else {
             output += diffStr;
+            passed = false;
         }
         output += '\n```';
 
