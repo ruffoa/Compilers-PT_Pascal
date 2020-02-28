@@ -1,17 +1,17 @@
-   .tLiteralInteger
-   oEmitValue
+   .tLiteralInteger         // a literal integer value
+   oEmitValue               // emit value 2
    % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
+   .tLiteralAddress         // a address value
+   oEmitDataAddress         // address 0 (the starting one!)
+   % value emitted 0        // value of address emmited
+   .tFileDescriptor         // this file?
    .tWriteBegin             // begin main block?
-     .tTrapBegin            
-     .tLiteralAddress
+     .tTrapBegin            // call main function, begin program
+     .tLiteralAddress       // address (0)
      oEmitValue
      % value emitted 0
-     .tVarParm
-     .tParmEnd
+     .tVarParm              // parameters for something
+     .tParmEnd              // end parameters for something?
        .tLiteralString      // "Hello world"
        oEmitValue
        % value emitted 11   // integer value of string reference in memory table? 
@@ -48,4 +48,4 @@
  .tTrapBegin          // begin "end of program" trap
  .tTrap               // hit the end of program trap
  oEmitTrapKind(trHalt)  // halt - end of program
- % value emitted 0
+ % value emitted 0    // exit cleanly with code 0
