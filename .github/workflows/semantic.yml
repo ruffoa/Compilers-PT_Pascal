@@ -76,6 +76,7 @@ jobs:
 
         node ./get-test-output.js Semantic
       working-directory: ./pt
+      id: test_suite
 
     - name: Run Cordy's Tests
       run: |
@@ -93,7 +94,8 @@ jobs:
         rm -f ../CordyTests/SemanticOutput.md
         node ./run-cordys-tests.js Semantic
       working-directory: ./pt
-    
+      id: cordy_tests
+
     - name: Commit new test results
       run: |
         git config --local user.email "action@github.com"
@@ -118,9 +120,20 @@ jobs:
     - name: Tests are valid
       shell: bash
       run: |
-        echo "hello"
-        echo $passed
-        echo "end"
         exit $passed
       env:
         PASSED: ${{ steps.test_tests.outputs.passed }} 
+
+    - name: Our Test Suite Passed
+      shell: bash
+      run: |
+        exit $passed
+      env:
+        PASSED: ${{ steps.test_suite.outputs.passed }} 
+
+    - name: Cordy's Test Suite Passed
+      shell: bash
+      run: |
+        exit $passed
+      env:
+        PASSED: ${{ steps.cordy_tests.outputs.passed }} 

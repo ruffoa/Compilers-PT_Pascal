@@ -36,6 +36,8 @@ const defName = defMap[segment];
 
 const nLineTokenNumber = getNewLineNumber();
 
+let passed = true;
+
 function getNewLineNumber() {
     const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
     const newLineTokenDefinition = "sNewLine = ";
@@ -62,7 +64,9 @@ async function findAllFilesInDir() {
             
             core.endGroup();
         }
-    }          
+    }
+    
+    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function runFile(file) {
@@ -161,6 +165,7 @@ function compareResults(content, file) {
     } else {
         output += diffStr;
         output += '\n```\n';
+        passed = false;
     }
 
     stream.write(output);

@@ -25,6 +25,8 @@ const defMap = {
     'Semantic': 'semantic'
 };
 
+let passed = true;
+
 const nLineTokenNumber = getNewLineNumber();
 
 function getNewLineNumber() {
@@ -44,6 +46,8 @@ async function loopTestDirectories() {
     for (const dir of getDirectories) {
         await findAllFilesInDir(dir);
     }
+
+    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function findAllFilesInDir(dir) {
@@ -193,6 +197,7 @@ function compareResults(content, file, dir) {
             output += `\nTest output matches the expected output! :heavy_check_mark:\n`;
         } else {
             output += diffStr;
+            passed = false;
         }
         output += '\n```';
 
