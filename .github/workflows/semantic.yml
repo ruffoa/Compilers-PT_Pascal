@@ -117,4 +117,6 @@ jobs:
 
     - name: Tests are valid
       shell: bash
-      run: exit ${{ steps.test_tests.outputs.passed }}
+      run: |
+        echo ${{ steps.test_tests.outputs.passed }}
+        exit ${{ steps.test_tests.outputs.passed }}
