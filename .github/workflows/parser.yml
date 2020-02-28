@@ -103,7 +103,7 @@ jobs:
         git add TestSuite/\*-testErr.md
         git add CordyTests/\ParserOutput.md
         git status
-        # git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash

@@ -1409,7 +1409,7 @@ Statement :
                 @WhileStmt
             | sCaseStmt:
                 @CaseStmt
-            | sRepeatStmt:
+            | sLoopStmt:    % Changed sRepearStmt to sLoopStmt
                 @RepeatStmt
             | sNullStmt:
         ];
@@ -1629,8 +1629,8 @@ RepeatStmt :
         .tRepeatBegin
         oFixPushTargetAddress           % top-of-loop branch target
         {[
-            | sRepeatEnd:
-                >
+            % | sRepeatEnd:             % removed for now, as no longer exists - ToDo: Fix me!
+            %     >
             | *:
                 @Statement
         ]}
