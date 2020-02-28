@@ -14,12 +14,14 @@ const ptHomePath = path.join(__dirname, `../pt/`);
 
 const phaseMap = {
     'Scanner': '1',
-    'Parser': '2'
+    'Parser': '2',
+    'Semantic': '3'
 };
 
 const defMap = {
     'Scanner': 'scan',
-    'Parser': 'parser'
+    'Parser': 'parser',
+    'Semantic': 'semantic'
 };
 
 const outputMap = {

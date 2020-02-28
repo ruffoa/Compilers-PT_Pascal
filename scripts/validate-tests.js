@@ -15,7 +15,8 @@ const ptHomePath = path.join(__dirname, `../pt/`);
 
 const getSegment = {
     'Scanner': '-o1 -t1',
-    'Parser': '-o2 -t2'
+    'Parser': '-o2 -t2',
+    'Semantic': '-o3 -t3'
 };
 
 async function loopTestDirectories() {
