@@ -58,6 +58,7 @@ jobs:
         npm install @actions/core
 
         node ./validate-tests.js Semantic
+        continue-on-error: true
 
       working-directory: ./pt
 
@@ -75,6 +76,7 @@ jobs:
         npm install @actions/core
 
         node ./get-test-output.js Semantic
+        continue-on-error: true
 
       working-directory: ./pt
 
@@ -93,6 +95,7 @@ jobs:
 
         rm -f ../CordyTests/SemanticOutput.md
         node ./run-cordys-tests.js Semantic
+        continue-on-error: true
       working-directory: ./pt
     
     - name: Commit new test results

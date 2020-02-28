@@ -83,7 +83,7 @@ function getTestIssues(content, file, dir) {
 
             // console.log(eFile);
             console.log("Warning: no output for " + file + " this is probably fine though if the test file has no errors!");
-            // // core.setFailed("Error, could not read " + eFile);
+            // core.setFailed("Error, could not read " + eFile);
             // output += "Error, " + eFile + '\n';
             // output += '\n```';
 
@@ -94,6 +94,8 @@ function getTestIssues(content, file, dir) {
         output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;   
         
         output += "\nTest Errors:\n-------------------------\n```\n" + content + '```\n';
+        
+        core.setFailed("Errors in test! -> " + eFile);
 
     } catch (e) {
         console.log(e)
