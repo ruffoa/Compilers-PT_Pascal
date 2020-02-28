@@ -494,7 +494,14 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         ReadTextParameterList = 3507;
         ReadBinaryParameterList = 3573;
         ReadText = 3639;
-        
+        ReadBinary = 3668;
+        }
+
+        { S/SL Table Parameters }
+        sslTblSize = 4017;
+        minSslTableValue = -32767;
+        maxSslTableValue = 32767;      
+         
 { ===== End of contents of semantic.def }
 
         { firstFatalErrorCode MUST be bigger than lastSslErrorCode }
