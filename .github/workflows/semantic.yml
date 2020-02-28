@@ -119,8 +119,8 @@ jobs:
       shell: bash
       run: |
         echo "hello"
-        echo $PASSED
+        echo $passed
         echo "end"
-        exit $PASSED
+        exit $passed
       env:
         PASSED: ${{ steps.test_tests.outputs.passed }} 
