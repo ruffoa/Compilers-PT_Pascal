@@ -1629,8 +1629,8 @@ RepeatStmt :
         .tRepeatBegin
         oFixPushTargetAddress           % top-of-loop branch target
         {[
-            % | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
-            %     >
+            | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
+                >
             | *:
                 @Statement
         ]}
