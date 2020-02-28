@@ -19,6 +19,8 @@ const getSegment = {
     'Semantic': '-o3 -t3'
 };
 
+let passed = true;
+
 async function loopTestDirectories() {
     const getDirectories = fs.readdirSync(folderPath, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
@@ -27,6 +29,8 @@ async function loopTestDirectories() {
     for (const dir of getDirectories) {
         await findAllFilesInDir(dir);
     }
+
+    core.exportVariable('passed', passed ? 0 : 1);  // throw an non-zero exit code if it failed!
 }
 
 async function findAllFilesInDir(dir) {
@@ -94,8 +98,8 @@ function getTestIssues(content, file, dir) {
         output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;   
         
         output += "\nTest Errors:\n-------------------------\n```\n" + content + '```\n';
-        
-        core.setFailed("Errors in test! -> " + eFile);
+        passed = false;
+        // core.setFailed("Errors in test! -> " + eFile);
 
     } catch (e) {
         console.log(e)

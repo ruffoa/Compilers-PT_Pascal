@@ -59,8 +59,8 @@ jobs:
 
         node ./validate-tests.js Semantic
         continue-on-error: true
-
       working-directory: ./pt
+      id: test_tests
 
     - name: Build and export the Test Suite Results
       run: |
@@ -118,3 +118,7 @@ jobs:
       with: 
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
+
+    - name: Tests are valid
+      shell: bash
+      run: exit ${{ steps.test_tests.outputs.passed }}
