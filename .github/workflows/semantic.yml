@@ -32,6 +32,16 @@ jobs:
         export PATH=$PATH:~/binaries
       working-directory: ./pt
 
+    # - name: Debug CI Job  # from https://github.com/sdras/awesome-actions
+    #   on: [push]
+    #   jobs:
+    #     build:
+    #       runs-on: ubuntu-latest
+    #       steps:
+    #       - uses: actions/checkout@v1
+    #       - name: Setup tmate session
+    #         uses: mxschmitt/action-tmate@v1
+
     - name: make semantic
       run: |
         export PATH=$PATH:~/binaries
