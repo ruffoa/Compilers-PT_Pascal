@@ -25,11 +25,15 @@ Input :
         lastCompoundSemanticToken = sStringLiteral
 
         sProgram
+        sModule
+        sPublic
         sParmBegin
         sParmEnd
         sConst
         sType
         sVar
+        sMutable
+        sInitialValue
         sProcedure
         sBegin
         sEnd
@@ -38,20 +42,23 @@ Input :
         sFile
         sRange
         sCaseStmt
+        sCaseOtherwise
         sCaseEnd
         sLabelEnd
         sExpnEnd
         sNullStmt
         sAssignmentStmt
         sSubscript
+        sSubstring
+        sLength
         sCallStmt
         sFieldWidth
         sIfStmt
         sThen
         sElse
         sWhileStmt
-        sRepeatStmt
-        sRepeatEnd
+        sLoopStmt
+        sLoopBreakIf
         sEq
         sNE
         sLT
