@@ -110,20 +110,24 @@ Output :
         tFetchInteger
         tFetchChar
         tFetchBoolean
+        tFetchString
         tAssignBegin
         tAssignAddress
         tAssignInteger
         tAssignChar
         tAssignBoolean
+        tAssignString
         tStoreParmAddress
         tStoreParmInteger
         tStoreParmChar
         tStoreParmBoolean
+        tStoreParmString
         tSubscriptBegin
         tSubscriptAddress
         tSubscriptInteger
         tSubscriptChar
         tSubscriptBoolean
+        tSubscriptString
         tArrayDescriptor
         tFileDescriptor
         tIfBegin
@@ -140,6 +144,11 @@ Output :
         tTrapBegin
         tWriteEnd
         tReadEnd
+        tConcatenate
+        tRepeatString
+        tSubstring
+        tLength
+        tStringEqual
 
         % Compound T-codes - T-code operations that take an operand
         tLiteralAddress
@@ -155,8 +164,11 @@ Output :
         tCaseSelect
         tCaseMerge
         tCaseEnd
+        tCaseOtherwise
         tWhileTest
         tWhileEnd
+        tWhilePreBreak
+        tWhileBreakIf
         tRepeatTest
         tSkipProc
         tCallEnd
