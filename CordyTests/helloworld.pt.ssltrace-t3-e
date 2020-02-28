@@ -5,47 +5,47 @@
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-   .tWriteBegin
-     .tTrapBegin
+   .tWriteBegin             // begin main block?
+     .tTrapBegin            
      .tLiteralAddress
      oEmitValue
      % value emitted 0
      .tVarParm
      .tParmEnd
-       .tLiteralString
+       .tLiteralString      // "Hello world"
        oEmitValue
-       % value emitted 11
-       oEmitString
-       % value emitted 72
-       % value emitted 101
-       % value emitted 108
-       % value emitted 108
-       % value emitted 111
-       % value emitted 32
-       % value emitted 119
-       % value emitted 111
-       % value emitted 114
-       % value emitted 108
-       % value emitted 100
-     .tParmEnd
+       % value emitted 11   // integer value of string reference in memory table? 
+       oEmitString          // emit the actual string value
+       % value emitted 72   'h'
+       % value emitted 101  "e"
+       % value emitted 108  "l"
+       % value emitted 108  'l'
+       % value emitted 111  'o'
+       % value emitted 32   ' '
+       % value emitted 119  'w'
+       % value emitted 111  'o'
+       % value emitted 114  'r'
+       % value emitted 108  'l'
+       % value emitted 100  'd'
+     .tParmEnd              // end the string parameters
       .tLiteralInteger
       oEmitValue
       % value emitted 1
-      .tParmEnd
-      .tTrap
-      oEmitTrapKind(trWriteString)
-      % value emitted 109
-    .tWriteEnd
-   .tTrapBegin
-    .tLiteralAddress
-    oEmitValue
+      .tParmEnd             // end the parameters for print()
+      .tTrap                // hit the trap (call the function)
+      oEmitTrapKind(trWriteString)  // of type print()
+      % value emitted 109   // value of function call in table
+    .tWriteEnd        
+   .tTrapBegin        // println() call
+    .tLiteralAddress  // address of println
+    oEmitValue        // no idea at all
     % value emitted 0
-    .tVarParm
-    .tParmEnd
-   .tTrap
-   oEmitTrapKind(trWriteln)
+    .tVarParm         // println() params
+    .tParmEnd         // end params for println()
+   .tTrap             // call the function (I think?)
+   oEmitTrapKind(trWriteln) // reference to println() (I think?)
    % value emitted 6
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
+ .tTrapBegin          // begin "end of program" trap
+ .tTrap               // hit the end of program trap
+ oEmitTrapKind(trHalt)  // halt - end of program
  % value emitted 0
