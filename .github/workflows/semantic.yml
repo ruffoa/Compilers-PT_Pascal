@@ -38,8 +38,6 @@ jobs:
 
         make
         ssl semantic.ssl
-
-        cat semantic.def
       working-directory: ./pt/semantic
     
     - uses: actions/setup-node@v1
