@@ -1,4 +1,4 @@
-name: Parser CI
+name: Semantic CI
 
 on: [push]
 
@@ -32,13 +32,13 @@ jobs:
         export PATH=$PATH:~/binaries
       working-directory: ./pt
 
-    - name: make parser
+    - name: make semantic
       run: |
         export PATH=$PATH:~/binaries
 
         make
-        ssl parser.ssl
-      working-directory: ./pt/parser
+        ssl semantic.ssl
+      working-directory: ./pt/semantic
     
     - uses: actions/setup-node@v1
       with:
@@ -48,7 +48,7 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
+        cd semantic
         make
         make
 
@@ -57,7 +57,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        node ./validate-tests.js Parser
+        node ./validate-tests.js Semantic
 
       working-directory: ./pt
 
@@ -65,7 +65,7 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
+        cd semantic
         make
         make
 
@@ -74,7 +74,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        node ./get-test-output.js Parser
+        node ./get-test-output.js Semantic
 
       working-directory: ./pt
 
@@ -82,7 +82,7 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
+        cd semantic
         make
         make
 
@@ -91,8 +91,8 @@ jobs:
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/ParserOutput.md
-        node ./run-cordys-tests.js Parser
+        rm -f ../CordyTests/SemanticOutput.md
+        node ./run-cordys-tests.js Semantic
       working-directory: ./pt
     
     - name: Commit new test results
@@ -101,9 +101,9 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
         git add TestSuite/\*-testErr.md
-        git add CordyTests/\ParserOutput.md
+        git add CordyTests/\SemanticOutput.md
         git status
-        # git commit -m "Update Parser test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update Semantic test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash
