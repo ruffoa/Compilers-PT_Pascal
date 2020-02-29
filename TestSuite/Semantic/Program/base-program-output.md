@@ -24,17 +24,18 @@ Test output is:
 
 ```
 ------------------------
-Warning, output length does not match (9 vs 5)!  (Newlines are not the issue here!) `base-program.pt`
+Warning, output length does not match (9 vs 8)!  (Newlines are not the issue here!) `base-program.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralInteger !== .sProgram on line 0 of base-program.pt
--oEmitValue !== .sIdentifier on line 1 of base-program.pt
--% value emitted 2 !== .sParmEnd on line 2 of base-program.pt
--.tLiteralAddress !== .sBegin on line 3 of base-program.pt
--oEmitDataAddress !== .sEnd on line 4 of base-program.pt
+-% value emitted 2 !== .tLiteralAddress on line 2 of base-program.pt
+-.tLiteralAddress !== oEmitDataAddress on line 3 of base-program.pt
+-oEmitDataAddress !== .tFileDescriptor on line 4 of base-program.pt
+-% value emitted 0 !== .tTrapBegin on line 5 of base-program.pt
+-.tFileDescriptor !== .tTrap on line 6 of base-program.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitTrapKind(trHalt) on line 7 of base-program.pt
 
 ```
 end file
