@@ -2,6 +2,20 @@ This is the base program, just the minimum required code to have a valid Qust pr
 
 -------------------------
 
+
+Parser Output: 
+-------------------------
+```
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+ % value emitted 54
+  .sBegin
+  .sEnd
+
+```
+------------------------
+
 Test Content: 
 -------------------------
 ```
