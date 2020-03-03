@@ -136,9 +136,10 @@ jobs:
     - name: Tests are valid
       shell: bash
       run: |
-        exit $passed
+        echo $validTests
+        exit $validTests
       env:
-        PASSED: ${{ steps.test_tests.outputs.passed }} 
+        PASSED: ${{ steps.test_tests.outputs.validTests }} 
 
     - name: Our Test Suite Passed
       shell: bash
