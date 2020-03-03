@@ -85,11 +85,7 @@ async function runFile(file, dir) {
             }
         }
 
-        let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
-        res += output.stderr && isRealError || output.stdout;
-        res += `\n\`\`\`\n------------------------\n`;
-        return res;
-
+        return output.stderr && isRealError || output.stdout;
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
@@ -112,8 +108,11 @@ async function runParserOnFile(file, dir) {
                     console.error("ERROR IN FILE " + file + ": ", output.stderr);
                 }
             }
-            return output.stderr && isRealError || output.stdout;
-
+            let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
+            res += output.stderr && isRealError || output.stdout;
+            res += `\n\`\`\`\n------------------------\n`;
+            return res;
+    
         } catch (e) {
             console.error("Bash command failed, aborting! ", e);
             core.setFailed("Bash command failed, aborting" + e.message);
