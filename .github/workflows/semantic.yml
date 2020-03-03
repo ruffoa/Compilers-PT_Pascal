@@ -129,6 +129,16 @@ jobs:
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
 
+    - name: Debug CI Job  # from https://github.com/sdras/awesome-actions
+      on: [push]
+      jobs:
+        build:
+          runs-on: ubuntu-latest
+          steps:
+          - uses: actions/checkout@v1
+          - name: Setup tmate session
+            uses: mxschmitt/action-tmate@v1
+
     - name: Tests are valid
       shell: bash
       run: |
