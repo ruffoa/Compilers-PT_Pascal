@@ -14,16 +14,13 @@ Test output is:
 ```
    .tLiteralInteger
    oEmitValue
-   % value emitted 2
-   .tLiteralAddress
+      .tLiteralAddress
    oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
+      .tFileDescriptor
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
- % value emitted 0
-
+ 
 ```
 ------------------------
 Warning, output length does not match (11 vs 8)!  (Newlines are not the issue here!) `base-program.pt`
