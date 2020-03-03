@@ -152,9 +152,9 @@ function compareResults(content, parserOutput, file, dir) {
         output += 'Test output is: \n-------------------------\n';
         
         if (parserOutput) {
-            output += `| ${segment} | Parser |`;
-            output += `| ---------- | ------ |`;
-            output += `| \`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n | \`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n `;
+            output += `| ${segment} | Parser |\n`;
+            output += `| ---------- | ------ |\n`;
+            output += `| \`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n | \`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n | \n`;
             output += `\n\n`;
         } else {
             output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
