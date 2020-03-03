@@ -26,19 +26,12 @@ Test output is:
  oEmitTrapKind(trHalt)
  % value emitted 0
 
- | 
-Parser Output: 
--------------------------
-```
- .sProgram
+ |  .sProgram
  .sIdentifier
  .sParmEnd
  % .sNewLine
   .sBegin
   .sEnd
-
-```
-------------------------
 
  | 
 
