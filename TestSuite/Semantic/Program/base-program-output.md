@@ -10,11 +10,27 @@ mod main (output) {
 } 
 ```
 ------------------------
+
+```
+
+Parser Output: 
+-------------------------
+```
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+ % .sNewLine
+  .sBegin
+  .sEnd
+
+```
+------------------------
+
+```
 Test output is: 
 -------------------------
-| Semantic | Parser |
-| ---------- | ------ |
-|    .tLiteralInteger
+```
+   .tLiteralInteger
    oEmitValue
    % value emitted 2
    .tLiteralAddress
@@ -26,14 +42,7 @@ Test output is:
  oEmitTrapKind(trHalt)
  % value emitted 0
 
- |  .sProgram
- .sIdentifier
- .sParmEnd
- % .sNewLine
-  .sBegin
-  .sEnd
-
- | 
+```
 
 
 Warning, output length does not match (11 vs 8)!  (Newlines are not the issue here!) `base-program.pt`
