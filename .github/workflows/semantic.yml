@@ -48,7 +48,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
@@ -65,7 +69,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
@@ -82,7 +90,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
