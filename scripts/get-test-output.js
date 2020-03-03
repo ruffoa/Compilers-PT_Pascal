@@ -149,11 +149,11 @@ function compareResults(content, parserOutput, file, dir) {
     if (content) {
         var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
         var regex = new RegExp(findReplaceKey, 'g');
-        output += 'Test output is: \n-------------------------\n';
         
         if (parserOutput) {
-            output += `\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
             output += `\n\`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
+            output += 'Test output is: \n-------------------------\n';
+            output += `\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
             output += `\n\n`;
         } else {
             output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
