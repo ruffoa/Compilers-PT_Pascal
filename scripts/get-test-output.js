@@ -148,6 +148,7 @@ function compareResults(content, parserOutput, file, dir) {
     
     if (content) {
         var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        // var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
         var regex = new RegExp(findReplaceKey, 'g');
         
         if (parserOutput) {
@@ -186,7 +187,7 @@ function compareResults(content, parserOutput, file, dir) {
 
         let testOutput = content.trim().split('\n');
         testOutput = testOutput.map((tLine) => {
-            if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
+            if (tLine.search(/%.+[\n\r]*/) >= 0) {  //using search enables use of regex too look for any commented line. i.e this is more versatile
                 tLine = "% .sNewLine";
             }
 
