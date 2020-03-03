@@ -108,9 +108,9 @@ async function runParserOnFile(file, dir) {
                     console.error("ERROR IN FILE " + file + ": ", output.stderr);
                 }
             }
-            let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
-            res += output.stderr && isRealError || output.stdout;
-            res += `\n\`\`\`\n------------------------\n`;
+            // let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
+            res = output.stderr && isRealError || output.stdout;
+            // res += `\n\`\`\`\n------------------------\n`;
             return res;
     
         } catch (e) {
