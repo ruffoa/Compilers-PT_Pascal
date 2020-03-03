@@ -59,9 +59,10 @@ async function findAllFilesInDir(dir) {
 
             console.log(file);
             const res = await runFile(file, dir);
+            const parserOutput = await runParserOnFile(file, dir);
             const testInfo = getTestInfo(file, dir);
             const fileDiff = compareResults(res, file, dir);
-            writeResults(testInfo + fileDiff, file, dir);
+            writeResults(testInfo + parserOutput + fileDiff, file, dir);
 
             core.endGroup();
         }
@@ -83,7 +84,11 @@ async function runFile(file, dir) {
                 console.error("ERROR IN FILE " + file + ": ", output.stderr);
             }
         }
-        return output.stderr && isRealError || output.stdout;
+
+        let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
+        res += output.stderr && isRealError || output.stdout;
+        res += `\n\`\`\`\n------------------------\n`;
+        return res;
 
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
@@ -91,13 +96,39 @@ async function runFile(file, dir) {
     }
 }
 
+async function runParserOnFile(file, dir) {
+    if (segment.toLowerCase().trim() === 'semantic') {
+        try {
+            const output = await exec(`ssltrace "ptc ${getSegment['parser']} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/${defMap['parser']}.def -e`);
+            // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
+            // console.log(output.stdout, output.stderr || output.stdout);
+            
+            let isRealError = true;
+
+            if (output.stderr) {
+                if (output.stderr.indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
+                    isRealError = false;
+                } else {
+                    console.error("ERROR IN FILE " + file + ": ", output.stderr);
+                }
+            }
+            return output.stderr && isRealError || output.stdout;
+
+        } catch (e) {
+            console.error("Bash command failed, aborting! ", e);
+            core.setFailed("Bash command failed, aborting" + e.message);
+        }
+    }
+}
+
+
 function getTestInfo(file, dir) {
     let output = "";
     
     try {
         const testInfoFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}.md`, 'utf-8');
         output += testInfoFile;
-        output += '\n\n-------------------------\n';
+        output += '\n\n-------------------------\n\n';
         return output;
     } catch(e) {
         console.error(`Error reading .md file for ${file} `, e);
