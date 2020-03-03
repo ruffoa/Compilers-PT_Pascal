@@ -99,7 +99,7 @@ async function runFile(file, dir) {
 async function runParserOnFile(file, dir) {
     if (segment.toLowerCase().trim() === 'semantic') {
         try {
-            const output = await exec(`ssltrace "ptc ${getSegment['parser']} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/${defMap['parser']}.def -e`);
+            const output = await exec(`ssltrace "ptc ${getSegment['Parser']} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/${defMap['Parser']}.def -e`);
             // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
             // console.log(output.stdout, output.stderr || output.stdout);
             
@@ -119,6 +119,8 @@ async function runParserOnFile(file, dir) {
             core.setFailed("Bash command failed, aborting" + e.message);
         }
     }
+
+    return "";
 }
 
 
