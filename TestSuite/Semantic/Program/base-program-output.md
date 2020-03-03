@@ -12,7 +12,9 @@ mod main (output) {
 ------------------------
 Test output is: 
 -------------------------
-| Semantic | Parser || ---------- | ------ || ```
+| Semantic | Parser |
+| ---------- | ------ |
+| ```
    .tLiteralInteger
    oEmitValue
    % value emitted 2
@@ -42,7 +44,8 @@ Parser Output:
 ------------------------
 
 ```
- 
+ | 
+
 
 Warning, output length does not match (11 vs 8)!  (Newlines are not the issue here!) `base-program.pt`
 Showing as much of the diff as possible...
