@@ -151,7 +151,7 @@ function compareResults(content, parserOutput, file, dir) {
         var regex = new RegExp(findReplaceKey, 'g');
         
         if (parserOutput) {
-            output += `\n\`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
+            output += `\n${parserOutput.replace(regex, '% .sNewLine')}\n`;
             output += 'Test output is: \n-------------------------\n';
             output += `\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
             output += `\n\n`;
