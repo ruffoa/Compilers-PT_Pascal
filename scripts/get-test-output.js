@@ -115,10 +115,11 @@ function compareResults(content, file, dir) {
     output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
     
     if (content) {
-        var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        // var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
         var regex = new RegExp(findReplaceKey, 'g');
 
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '')}\n\`\`\`\n------------------------\n`; //replace commented line with nothing
     }
 
     try {
