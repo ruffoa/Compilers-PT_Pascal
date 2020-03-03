@@ -115,11 +115,11 @@ function compareResults(content, file, dir) {
     output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;
     
     if (content) {
-        // var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
-        var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
+        var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
+        // var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
         var regex = new RegExp(findReplaceKey, 'g');
 
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '')}\n\`\`\`\n------------------------\n`; //replace commented line with nothing
+        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`; //replace commented line with nothing
     }
 
     try {
@@ -148,7 +148,7 @@ function compareResults(content, file, dir) {
 
         let testOutput = content.trim().split('\n');
         testOutput = testOutput.map((tLine) => {
-            if (tLine.indexOf(`% value emitted ${nLineTokenNumber}`) >= 0) {
+            if (tLine.search(/%.+[\n\r]*/) >= 0) {  //using search enables use of regex too look for any commented line. i.e this is more versatile
                 tLine = "% .sNewLine";
             }
 
