@@ -2,6 +2,7 @@ This is the base program, just the minimum required code to have a valid Qust pr
 
 -------------------------
 
+
 Test Content: 
 -------------------------
 ```
@@ -9,6 +10,21 @@ mod main (output) {
 } 
 ```
 ------------------------
+
+
+Parser Output: 
+-------------------------
+```
+ .sProgram
+ .sIdentifier
+ .sParmEnd
+ % .sNewLine
+  .sBegin
+  .sEnd
+
+```
+------------------------
+
 Test output is: 
 -------------------------
 ```
@@ -25,7 +41,8 @@ Test output is:
  % value emitted 0
 
 ```
-------------------------
+
+
 
 File diff
 -------------------------

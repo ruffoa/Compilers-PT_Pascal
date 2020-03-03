@@ -47,7 +47,7 @@ async function loopTestDirectories() {
         await findAllFilesInDir(dir);
     }
 
-    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
+    core.exportVariable('ourTests', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function findAllFilesInDir(dir) {
@@ -59,8 +59,9 @@ async function findAllFilesInDir(dir) {
 
             console.log(file);
             const res = await runFile(file, dir);
+            const parserOutput = await runParserOnFile(file, dir);
             const testInfo = getTestInfo(file, dir);
-            const fileDiff = compareResults(res, file, dir);
+            const fileDiff = compareResults(res, parserOutput, file, dir);
             writeResults(testInfo + fileDiff, file, dir);
 
             core.endGroup();
@@ -83,13 +84,44 @@ async function runFile(file, dir) {
                 console.error("ERROR IN FILE " + file + ": ", output.stderr);
             }
         }
-        return output.stderr && isRealError || output.stdout;
 
+        return output.stderr && isRealError || output.stdout;
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
     }
 }
+
+async function runParserOnFile(file, dir) {
+    if (segment.toLowerCase().trim() === 'semantic') {
+        try {
+            const output = await exec(`ssltrace "ptc ${getSegment['Parser']} -L ../pt/lib/pt ${relativeFolderPath}${dir}/${file}" ../pt/lib/pt/${defMap['Parser']}.def -e`);
+            // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
+            // console.log(output.stdout, output.stderr || output.stdout);
+            
+            let isRealError = true;
+
+            if (output.stderr) {
+                if (output.stderr.indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
+                    isRealError = false;
+                } else {
+                    console.error("ERROR IN FILE " + file + ": ", output.stderr);
+                }
+            }
+            let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
+            res += output.stderr && isRealError || output.stdout;
+            res += `\n\`\`\`\n------------------------\n`;
+            return res;
+    
+        } catch (e) {
+            console.error("Bash command failed, aborting! ", e);
+            core.setFailed("Bash command failed, aborting" + e.message);
+        }
+    }
+
+    return "";
+}
+
 
 function getTestInfo(file, dir) {
     let output = "";
@@ -97,7 +129,7 @@ function getTestInfo(file, dir) {
     try {
         const testInfoFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file.substr(0, file.indexOf('.pt'))}.md`, 'utf-8');
         output += testInfoFile;
-        output += '\n\n-------------------------\n';
+        output += '\n\n-------------------------\n\n';
         return output;
     } catch(e) {
         console.error(`Error reading .md file for ${file} `, e);
@@ -106,7 +138,7 @@ function getTestInfo(file, dir) {
     }
 }
 
-function compareResults(content, file, dir) {
+function compareResults(content, parserOutput, file, dir) {
     let output = "";
 
     const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
@@ -118,8 +150,15 @@ function compareResults(content, file, dir) {
         var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
         // var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
         var regex = new RegExp(findReplaceKey, 'g');
-
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`; //replace commented line with nothing
+        
+        if (parserOutput) {
+            output += `\n${parserOutput.replace(regex, '% .sNewLine')}\n`;
+            output += 'Test output is: \n-------------------------\n';
+            output += `\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
+            output += `\n\n`;
+        } else {
+            output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+        }
     }
 
     try {
