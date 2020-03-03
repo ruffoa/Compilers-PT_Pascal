@@ -14,8 +14,7 @@ Test output is:
 -------------------------
 | Semantic | Parser |
 | ---------- | ------ |
-| ```
-   .tLiteralInteger
+|    .tLiteralInteger
    oEmitValue
    % value emitted 2
    .tLiteralAddress
@@ -27,9 +26,7 @@ Test output is:
  oEmitTrapKind(trHalt)
  % value emitted 0
 
-```
- | ```
-
+ | 
 Parser Output: 
 -------------------------
 ```
@@ -43,7 +40,6 @@ Parser Output:
 ```
 ------------------------
 
-```
  | 
 
 
