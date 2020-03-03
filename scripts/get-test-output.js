@@ -108,9 +108,9 @@ async function runParserOnFile(file, dir) {
                     console.error("ERROR IN FILE " + file + ": ", output.stderr);
                 }
             }
-            // let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
-            res = output.stderr && isRealError || output.stdout;
-            // res += `\n\`\`\`\n------------------------\n`;
+            let res = `\nParser Output: \n-------------------------\n\`\`\`\n`;
+            res += output.stderr && isRealError || output.stdout;
+            res += `\n\`\`\`\n------------------------\n`;
             return res;
     
         } catch (e) {
@@ -152,9 +152,8 @@ function compareResults(content, parserOutput, file, dir) {
         output += 'Test output is: \n-------------------------\n';
         
         if (parserOutput) {
-            output += `| ${segment} | Parser |\n`;
-            output += `| ---------- | ------ |\n`;
-            output += `| ${content.replace(regex, '% .sNewLine')}\n | ${parserOutput.replace(regex, '% .sNewLine')}\n | \n`;
+            output += `\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
+            output += `\n\`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n`;
             output += `\n\n`;
         } else {
             output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
