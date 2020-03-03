@@ -154,7 +154,7 @@ function compareResults(content, parserOutput, file, dir) {
         if (parserOutput) {
             output += `| ${segment} | Parser |\n`;
             output += `| ---------- | ------ |\n`;
-            output += `| \`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n | \`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n | \n`;
+            output += `| ${content.replace(regex, '% .sNewLine')}\n | ${parserOutput.replace(regex, '% .sNewLine')}\n | \n`;
             output += `\n\n`;
         } else {
             output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
