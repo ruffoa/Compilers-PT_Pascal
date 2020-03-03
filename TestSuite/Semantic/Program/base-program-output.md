@@ -41,7 +41,8 @@ Test output is:
  % value emitted 0
 
 ```
-------------------------
+
+
 
 File diff
 -------------------------
