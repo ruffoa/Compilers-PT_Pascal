@@ -61,8 +61,8 @@ async function findAllFilesInDir(dir) {
             const res = await runFile(file, dir);
             const parserOutput = await runParserOnFile(file, dir);
             const testInfo = getTestInfo(file, dir);
-            const fileDiff = compareResults(res, file, dir);
-            writeResults(testInfo + parserOutput + fileDiff, file, dir);
+            const fileDiff = compareResults(res, parserOutput, file, dir);
+            writeResults(testInfo + fileDiff, file, dir);
 
             core.endGroup();
         }
@@ -138,7 +138,7 @@ function getTestInfo(file, dir) {
     }
 }
 
-function compareResults(content, file, dir) {
+function compareResults(content, parserOutput, file, dir) {
     let output = "";
 
     const testFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}`, 'utf-8');
@@ -149,8 +149,16 @@ function compareResults(content, file, dir) {
     if (content) {
         var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
         var regex = new RegExp(findReplaceKey, 'g');
-
-        output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+        output += 'Test output is: \n-------------------------\n';
+        
+        if (parserOutput) {
+            output += `| ${segment} | Parser |`;
+            output += `| ---------- | ------ |`;
+            output += `| \`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n | \`\`\`\n${parserOutput.replace(regex, '% .sNewLine')}\n\`\`\`\n `;
+            output += `\n\n`;
+        } else {
+            output += `Test output is: \n-------------------------\n\`\`\`\n${content.replace(regex, '% .sNewLine')}\n\`\`\`\n------------------------\n`;
+        }
     }
 
     try {
