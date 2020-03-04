@@ -66,7 +66,7 @@ async function findAllFilesInDir() {
         }
     }
     
-    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
+    core.exportVariable('cordyTests', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function runFile(file) {

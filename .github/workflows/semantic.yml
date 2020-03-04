@@ -58,7 +58,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
@@ -75,7 +79,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
@@ -92,7 +100,11 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd semantic
+        cd parser
+        make
+        make
+
+        cd ../semantic
         make
         make
 
@@ -127,23 +139,22 @@ jobs:
         branch: ${{ steps.extract_branch.outputs.branch }}
         github_token: ${{ secrets.GITHUB_TOKEN	}}
 
+    # - name: Setup tmate session       # Debugging terminal
+    #   uses: mxschmitt/action-tmate@v1
+
     - name: Tests are valid
       shell: bash
       run: |
-        exit $passed
-      env:
-        PASSED: ${{ steps.test_tests.outputs.passed }} 
+        echo $validTests
+        exit $validTests
 
     - name: Our Test Suite Passed
       shell: bash
       run: |
-        exit $passed
-      env:
-        PASSED: ${{ steps.test_suite.outputs.passed }} 
+        echo $validTests
+        exit $ourTests
 
     - name: Cordy's Test Suite Passed
       shell: bash
       run: |
-        exit $passed
-      env:
-        PASSED: ${{ steps.cordy_tests.outputs.passed }} 
+        exit $cordyTests

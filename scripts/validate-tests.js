@@ -30,7 +30,8 @@ async function loopTestDirectories() {
         await findAllFilesInDir(dir);
     }
 
-    core.exportVariable('passed', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
+    console.log("validTests", passed, ' outputing ', passed ? '0' : '1');
+    core.exportVariable('validTests', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function findAllFilesInDir(dir) {
