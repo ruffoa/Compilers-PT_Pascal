@@ -734,7 +734,9 @@ Program :
                 @ProgramParameter
         ]}
         oCountPop
+        sBegin
         @Block
+        sEnd
         % Check that all file parameters have been declared
         [ oSymbolTblLookupExternal
             | yes:
@@ -804,11 +806,22 @@ Block :
                 @TypeDefinitions
             | sVar:
                 @VariableDeclarations
+            | sAssignmentStmt:
+                @AssignmentStmt
+            | sCallStmt:
+                @CallStmt
+            | sIfStmt:
+                @IfStmt
+            | sWhileStmt:
+                @WhileStmt
+            | sCaseStmt:
+                @CaseStmt
+            % | sLoopStmt:    % TODO: loop statement will use the while rule
+            %     @RepeatStmt
+            | sNullStmt:
             | *:
                 >
-        ]}
-        sBegin
-        @BeginStmt;
+        ]};
 
 ConstantDefinitions :           % Process named constant definitions
         {[
@@ -1407,24 +1420,10 @@ ProcedurePrologue :
         oTypeStkEnterParameterCount     % In procedure's type entry
         oCountPop;
 
-Statement :
-        [
-            | sAssignmentStmt:
-                @AssignmentStmt
-            | sCallStmt:
-                @CallStmt
-            | sBegin:
-                @BeginStmt
-            | sIfStmt:
-                @IfStmt
-            | sWhileStmt:
-                @WhileStmt
-            | sCaseStmt:
-                @CaseStmt
-            | sLoopStmt:    % Changed sRepearStmt to sLoopStmt
-                @RepeatStmt
-            | sNullStmt:
-        ];
+CallBlockWithScope :     %Enters a new scope calls @Block and exits the scope
+        oSymbolTblPushScope 
+        @Block
+        oSymbolTblPopScope;
 
 AssignmentStmt :
         sIdentifier  oSymbolStkPushIdentifier
