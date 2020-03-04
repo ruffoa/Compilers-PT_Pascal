@@ -9,7 +9,6 @@ Test Content:
 mod main (output) {
     const t = 1;
     let a : int = 3;
-    a = 4;
     while(a < 5){
         a += 1;
     }
@@ -37,11 +36,6 @@ Parser Output:
         .sInteger
     .sExpnEnd
   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-       .sInteger
-   .sExpnEnd
-   % .sNewLine
    .sWhileStmt
            .sIdentifier
            .sInteger
