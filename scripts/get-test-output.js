@@ -148,7 +148,6 @@ function compareResults(content, parserOutput, file, dir) {
     
     if (content) {
         var findReplaceKey = `% value emitted ${nLineTokenNumber}`;
-        // var findReplaceKey = `%.+[\n\r]*`;  // need to match for any commented line in the output
         var regex = new RegExp(findReplaceKey, 'g');
         
         if (parserOutput) {
