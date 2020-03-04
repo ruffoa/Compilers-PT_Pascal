@@ -1,4 +1,4 @@
-The purpose of this test is to verify that the semantic analyzer allows both declarations and statements in a block.
+The purpose of this test is to verify that the semantic analyzer allows both declarations and statements in any order within a block.
 
 -------------------------
 
@@ -8,6 +8,11 @@ Test Content:
 ```
 mod main (output) {
     const t = 1;
+    let a = 3;
+    a = 4;
+    while(a < 5){
+        a += 1;
+    }
 }
 ```
 ------------------------
@@ -25,6 +30,33 @@ Parser Output:
    .sIdentifier
     .sInteger
    % .sNewLine
+  .sVar
+  .sIdentifier
+    .sInitialValue
+        .sInteger
+    .sExpnEnd
+  % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % .sNewLine
+   .sWhileStmt
+           .sIdentifier
+           .sInteger
+        .sLT
+   .sExpnEnd
+   % .sNewLine
+    .sBegin
+     .sAssignmentStmt
+     .sIdentifier
+     .sIdentifier
+         .sInteger
+     .sAdd
+     .sExpnEnd
+     % .sNewLine
+    .sEnd
+   % .sNewLine
   .sEnd
 
 ```
@@ -40,10 +72,9 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+     #eSimpleTypeReqd
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
@@ -54,9 +85,9 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.tTrapBegin !==  on line 5 of testBlocksBasic.pt
--.tTrap !== .tTrapBegin on line 6 of testBlocksBasic.pt
--oEmitTrapKind(trHalt) !== .tTrap on line 7 of testBlocksBasic.pt
+-#eSimpleTypeReqd !==  on line 5 of testBlocksBasic.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 6 of testBlocksBasic.pt
+-### Semantic assertion 3 failed: !== .tTrap on line 7 of testBlocksBasic.pt
 
 ```
 end file
