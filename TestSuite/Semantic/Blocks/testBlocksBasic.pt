@@ -5,5 +5,4 @@ mod main (output) {
     while (a < 5){
         a += 1;
     }
-
 }

@@ -1468,7 +1468,7 @@ BeginStmt :
             | sEnd:
                 >
             | *:
-                @Statement
+                @CallBlockWithScope
         ]};
 
 CallStmt :
@@ -1609,7 +1609,7 @@ IfStmt :
         sThen  .tIfThen
         oFixPushForwardBranch
         oEmitNullAddress                % false branch
-        @Statement
+        @CallBlockWithScope
         [
             | sElse:
                 .tIfMerge
@@ -1617,7 +1617,7 @@ IfStmt :
                 oEmitNullAddress                % true branch
                 oFixSwap                % false branch back on top
                 oFixPopForwardBranch
-                @Statement
+                @CallBlockWithScope
             | *:
         ]
         .tIfEnd
@@ -1631,8 +1631,7 @@ WhileStmt :
         oFixPushForwardBranch
         oEmitNullAddress                % exit branch
         oFixSwap                % top-of-loop target back on top
-        @Statement
-        .tWhileEnd
+        @CallBlockWithScope
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
@@ -1643,7 +1642,7 @@ RepeatStmt :
             | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
                 >
             | *:
-                @Statement
+                @CallBlockWithScope
         ]}
         .tRepeatControl
         @BooleanControlExpression
@@ -1731,7 +1730,7 @@ CaseAlternative :
                 ]
                 oValuePop
         ]}
-        @Statement
+        @CallBlockWithScope
         .tCaseMerge
         oFixPushForwardBranch
         oEmitNullAddress                % merge branch at end of statement
