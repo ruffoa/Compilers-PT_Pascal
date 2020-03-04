@@ -1421,8 +1421,10 @@ ProcedurePrologue :
         oCountPop;
 
 CallBlockWithScope :     %Enters a new scope calls @Block and exits the scope
+        sBegin
         oSymbolTblPushScope 
         @Block
+        sEnd
         oSymbolTblPopScope;
 
 AssignmentStmt :
