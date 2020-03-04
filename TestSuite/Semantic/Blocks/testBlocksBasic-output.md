@@ -90,14 +90,29 @@ Test output is:
    .tWhileTest
    oEmitNullAddress
    % value emitted -32767
+       .tAssignBegin
+        .tLiteralAddress
+        oEmitValue
+        % value emitted 4
+          .tLiteralAddress
+          oEmitValue
+          % value emitted 4
+          .tFetchInteger
+         .tLiteralInteger
+         oEmitValue
+         % value emitted 1
+         .tAdd
+       .tAssignInteger
    % value emitted 18
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (22 vs 8)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Warning, output length does not match (33 vs 8)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
 Showing as much of the diff as possible...
 
 File diff
