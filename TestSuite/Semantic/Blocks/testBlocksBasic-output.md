@@ -8,7 +8,7 @@ Test Content:
 ```
 mod main (output) {
     const t = 1;
-    let a = 3;
+    let a : int = 3;
     a = 4;
     while(a < 5){
         a += 1;
@@ -32,6 +32,7 @@ Parser Output:
    % .sNewLine
   .sVar
   .sIdentifier
+     .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
@@ -72,22 +73,20 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (8 vs 9)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Warning, output length does not match (7 vs 9)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eSimpleTypeReqd !==  on line 5 of testBlocksBasic.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 6 of testBlocksBasic.pt
--### Semantic assertion 3 failed: !== .tTrap on line 7 of testBlocksBasic.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !==  on line 5 of testBlocksBasic.pt
+-### Semantic assertion 3 failed: !== .tTrapBegin on line 6 of testBlocksBasic.pt
 
 ```
 end file
