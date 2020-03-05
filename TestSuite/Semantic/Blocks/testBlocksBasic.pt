@@ -1,8 +1,7 @@
 mod main (output) {
-    const t = 1;
+    const zero = 0;
     let a : int; //can't assign an initial value yet (not supported yet)
-    a = 0;
+    a = zero;
     while (a < 5){
         a += 1;
     }
-}

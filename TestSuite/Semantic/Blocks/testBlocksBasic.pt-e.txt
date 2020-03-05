@@ -3,6 +3,9 @@ oEmitValue          //value emitted is 2
 .tLiteralAddress
 oEmitDataAddress    //value emitted is 0
 .tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue          //value emitted 4
 .tTrapBegin
 .tTrap
 oEmitTrapKind(trHalt)   //emits 0
