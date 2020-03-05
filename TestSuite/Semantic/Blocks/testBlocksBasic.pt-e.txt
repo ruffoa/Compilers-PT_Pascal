@@ -1,0 +1,33 @@
+.tLiteralInteger
+oEmitValue          //value emitted is 2
+.tLiteralAddress
+oEmitDataAddress    //value emitted is 0
+.tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue          //value emitted 4
+.tLiteralInteger
+oEmitValue         //value emitted is 1 (from the const)
+.tAssignInteger
+.tWhileBegin
+    .tLiteralAddress
+    oEmitValue      //value emitted 4
+    .tFetchInteger
+    .tLiteralInteger
+    oEmitValue      //value emitted 5
+    .tLT
+.tWhileTest
+    oEmitNullAddress    //value emitted -32767
+    .tAssignBegin
+    .tLiteralAddress
+    oEmitValue          //value emitted 4 (address of 'a' for the assignment)
+    .tLiteralAddress
+    oEmitValue          //value emitted 4 (address of 'a' for the addition)
+    .tFetchInteger
+    .tLiteralInteger
+    oEmitValue          //value emitted 1
+    .tAdd
+    .tAssignInteger     //value emitted after from the branching is 18
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)   //emits 0

@@ -734,7 +734,9 @@ Program :
                 @ProgramParameter
         ]}
         oCountPop
+        sBegin
         @Block
+        sEnd
         % Check that all file parameters have been declared
         [ oSymbolTblLookupExternal
             | yes:
@@ -804,11 +806,22 @@ Block :
                 @TypeDefinitions
             | sVar:
                 @VariableDeclarations
+            | sAssignmentStmt:
+                @AssignmentStmt
+            | sCallStmt:
+                @CallStmt
+            | sIfStmt:
+                @IfStmt
+            | sWhileStmt:
+                @WhileStmt
+            | sCaseStmt:
+                @CaseStmt
+            % | sLoopStmt:    % TODO: loop statement will use the while rule
+            %     @RepeatStmt
+            | sNullStmt:
             | *:
                 >
-        ]}
-        sBegin
-        @BeginStmt;
+        ]};
 
 ConstantDefinitions :           % Process named constant definitions
         {[
@@ -1162,7 +1175,7 @@ VariableDeclarations :
                 % Accepts a type specification and pushes its type to the Type Stack.
                 % Creates type table entries for the type and any new subtypes as necessary.
                 @TypeBody
-        	@EnterVariableAttributes
+        	    @EnterVariableAttributes
 
                 oTypeStkPop
         	oSymbolStkPop
@@ -1407,24 +1420,12 @@ ProcedurePrologue :
         oTypeStkEnterParameterCount     % In procedure's type entry
         oCountPop;
 
-Statement :
-        [
-            | sAssignmentStmt:
-                @AssignmentStmt
-            | sCallStmt:
-                @CallStmt
-            | sBegin:
-                @BeginStmt
-            | sIfStmt:
-                @IfStmt
-            | sWhileStmt:
-                @WhileStmt
-            | sCaseStmt:
-                @CaseStmt
-            | sLoopStmt:    % Changed sRepearStmt to sLoopStmt
-                @RepeatStmt
-            | sNullStmt:
-        ];
+CallBlockWithScope :     %Enters a new scope calls @Block and exits the scope
+        sBegin
+        oSymbolTblPushScope 
+        @Block
+        sEnd
+        oSymbolTblPopScope;
 
 AssignmentStmt :
         sIdentifier  oSymbolStkPushIdentifier
@@ -1469,7 +1470,7 @@ BeginStmt :
             | sEnd:
                 >
             | *:
-                @Statement
+                @CallBlockWithScope
         ]};
 
 CallStmt :
@@ -1610,7 +1611,7 @@ IfStmt :
         sThen  .tIfThen
         oFixPushForwardBranch
         oEmitNullAddress                % false branch
-        @Statement
+        @CallBlockWithScope
         [
             | sElse:
                 .tIfMerge
@@ -1618,7 +1619,7 @@ IfStmt :
                 oEmitNullAddress                % true branch
                 oFixSwap                % false branch back on top
                 oFixPopForwardBranch
-                @Statement
+                @CallBlockWithScope
             | *:
         ]
         .tIfEnd
@@ -1632,8 +1633,7 @@ WhileStmt :
         oFixPushForwardBranch
         oEmitNullAddress                % exit branch
         oFixSwap                % top-of-loop target back on top
-        @Statement
-        .tWhileEnd
+        @CallBlockWithScope
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
@@ -1644,7 +1644,7 @@ RepeatStmt :
             | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
                 >
             | *:
-                @Statement
+                @CallBlockWithScope
         ]}
         .tRepeatControl
         @BooleanControlExpression
@@ -1732,7 +1732,7 @@ CaseAlternative :
                 ]
                 oValuePop
         ]}
-        @Statement
+        @CallBlockWithScope
         .tCaseMerge
         oFixPushForwardBranch
         oEmitNullAddress                % merge branch at end of statement
