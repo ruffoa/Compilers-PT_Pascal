@@ -47,10 +47,13 @@ Block :
 ```
 ### `CallBlockWithScope` rule
 - Replaced the `Statement` rule with the `CallBlockWithScope` rule which simply handles pushing a new scope to the symbol table, calling the `Block` rule and popping the scope from the symbol table once the `Block` rule completes.
+- Also accepts the `sBegin` and `sEnd` tokens.
 ```diff
 +   CallBlockWithScope :
++           sBegin
 +           oSymbolTblPushScope 
 +           @Block
++           sEnd
 +           oSymbolTblPopScope;
 ```
 
