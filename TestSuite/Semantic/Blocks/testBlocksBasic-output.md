@@ -114,16 +114,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (33 vs 34)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--oEmitValue !== .oEmitValue on line 9 of testBlocksBasic.pt
--.tTrapBegin !==  on line 30 of testBlocksBasic.pt
--.tTrap !== .tTrapBegin on line 31 of testBlocksBasic.pt
--oEmitTrapKind(trHalt) !== .tTrap on line 32 of testBlocksBasic.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
