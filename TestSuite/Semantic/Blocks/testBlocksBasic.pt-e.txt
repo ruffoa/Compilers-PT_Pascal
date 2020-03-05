@@ -6,6 +6,8 @@ oEmitDataAddress    //value emitted is 0
 .tAssignBegin
 .tLiteralAddress
 oEmitValue          //value emitted 4
+.tLiteralInteger
+.oEmitValue         //value emitted is 1 (from the const)
 .tAssignInteger
 .tWhileBegin
     .tLiteralAddress
@@ -18,7 +20,9 @@ oEmitValue          //value emitted 4
     oEmitNullAddress    //value emitted -32767
     .tAssignBegin
     .tLiteralAddress
-    oEmitValue          //value emitted 4
+    oEmitValue          //value emitted 4 (address of 'a' for the assignment)
+    .tLiteralAddress
+    oEmitValue          //value emitted 4 (address of 'a' for the addition)
     .tFetchInteger
     .tLiteralInteger
     oEmitValue          //value emitted 1
