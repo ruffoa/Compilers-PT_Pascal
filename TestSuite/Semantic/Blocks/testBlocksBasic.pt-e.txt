@@ -6,6 +6,25 @@ oEmitDataAddress    //value emitted is 0
 .tAssignBegin
 .tLiteralAddress
 oEmitValue          //value emitted 4
+.tAssignInteger
+.tWhileBegin
+    .tLiteralAddress
+    oEmitValue      //value emitted 4
+    .tFetchInteger
+    .tLiteralInteger
+    oEmitValue      //value emitted 5
+    .tLT
+.tWhileTest
+    oEmitNullAddress    //value emitted -32767
+    .tAssignBegin
+    .tLiteralAddress
+    oEmitValue          //value emitted 4
+    .tFetchInteger
+    .tLiteralInteger
+    oEmitValue          //value emitted 1
+    .tAdd
+    .tAssignInteger
+    //value emitted from the branching is 18
 .tTrapBegin
 .tTrap
 oEmitTrapKind(trHalt)   //emits 0
