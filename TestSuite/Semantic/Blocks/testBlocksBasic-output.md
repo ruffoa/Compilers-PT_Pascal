@@ -72,6 +72,7 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+      #eUndefinedIdentifier
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -114,13 +115,40 @@ Test output is:
 ```
 
 
+Warning, output length does not match (34 vs 33)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eUndefinedIdentifier !== .tAssignBegin on line 5 of testBlocksBasic.pt
+-.tAssignBegin !== .tLiteralAddress on line 6 of testBlocksBasic.pt
+-.tLiteralAddress !== oEmitValue on line 7 of testBlocksBasic.pt
+-oEmitValue !== .tLiteralInteger on line 8 of testBlocksBasic.pt
+-.tLiteralInteger !== oEmitValue on line 9 of testBlocksBasic.pt
+-oEmitValue !== .tAssignInteger on line 10 of testBlocksBasic.pt
+-.tAssignInteger !== .tWhileBegin on line 11 of testBlocksBasic.pt
+-.tWhileBegin !== .tLiteralAddress on line 12 of testBlocksBasic.pt
+-.tLiteralAddress !== oEmitValue on line 13 of testBlocksBasic.pt
+-oEmitValue !== .tFetchInteger on line 14 of testBlocksBasic.pt
+-.tFetchInteger !== .tLiteralInteger on line 15 of testBlocksBasic.pt
+-.tLiteralInteger !== oEmitValue on line 16 of testBlocksBasic.pt
+-oEmitValue !== .tLT on line 17 of testBlocksBasic.pt
+-.tLT !== .tWhileTest on line 18 of testBlocksBasic.pt
+-.tWhileTest !== oEmitNullAddress on line 19 of testBlocksBasic.pt
+-oEmitNullAddress !== .tAssignBegin on line 20 of testBlocksBasic.pt
+-.tAssignBegin !== .tLiteralAddress on line 21 of testBlocksBasic.pt
+-.tLiteralAddress !== oEmitValue on line 22 of testBlocksBasic.pt
+-oEmitValue !== .tLiteralAddress on line 23 of testBlocksBasic.pt
+-.tLiteralAddress !== oEmitValue on line 24 of testBlocksBasic.pt
+-oEmitValue !== .tFetchInteger on line 25 of testBlocksBasic.pt
+-.tFetchInteger !== .tLiteralInteger on line 26 of testBlocksBasic.pt
+-.tLiteralInteger !== oEmitValue on line 27 of testBlocksBasic.pt
+-oEmitValue !== .tAdd on line 28 of testBlocksBasic.pt
+-.tAdd !== .tAssignInteger on line 29 of testBlocksBasic.pt
+-.tAssignInteger !== .tTrapBegin on line 30 of testBlocksBasic.pt
+-.tTrapBegin !== .tTrap on line 31 of testBlocksBasic.pt
+-.tTrap !== oEmitTrapKind(trHalt) on line 32 of testBlocksBasic.pt
 
 ```
 end file

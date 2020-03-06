@@ -2,10 +2,12 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) { 
-    let a: [int: 5];
-    a[0] = 1;
-    // const b = a[0];
+mod main (output) {  
+    let c: bool;
+    c = false;
+    let d: int;
+    d = 1;
+    const s = "Hi";
 }
 ```
 ------------------------
@@ -14,5 +16,5 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 2: identifier not declared
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 2
+semantic error, line 4: identifier not declared
 ```

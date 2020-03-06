@@ -53,7 +53,8 @@ Test output is:
    .tLiteralAddress
    oEmitDataAddress
    % value emitted 0
-   .tFileDescriptor     // start
+   .tFileDescriptor
+       #eUndefinedIdentifier
      .tLiteralInteger
      oEmitValue
      % value emitted 0
@@ -68,37 +69,37 @@ Test output is:
      oEmitDataAddress
      % value emitted 8
      .tArrayDescriptor
-    .tAssignBegin         // a[0] = 1
+    .tAssignBegin
      .tLiteralAddress
      oEmitValue
      % value emitted 4
-      .tSubscriptBegin    // [0]
+      .tSubscriptBegin
         .tLiteralInteger
         oEmitValue
         % value emitted 0
-      .tSubscriptInteger  // [] = 0
-      .tLiteralInteger    // 1
+      .tSubscriptInteger
+      .tLiteralInteger
       oEmitValue
       % value emitted 1
-    .tAssignInteger       // a[0] = 1
+    .tAssignInteger
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 2
 
 ```
 
 
-Warning, output length does not match (29 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (30 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralInteger !== .tTrapBegin on line 5 of arrays.pt
--oEmitValue !== .tTrap on line 6 of arrays.pt
--.tLiteralAddress !== oEmitTrapKind(trHalt) on line 7 of arrays.pt
+-#eUndefinedIdentifier !== .tTrapBegin on line 5 of arrays.pt
+-.tLiteralInteger !== .tTrap on line 6 of arrays.pt
+-oEmitValue !== oEmitTrapKind(trHalt) on line 7 of arrays.pt
 
 ```
 end file
