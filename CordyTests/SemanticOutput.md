@@ -45,16 +45,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of bubblesort.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 8 of bubblesort.pt
- !== % value emitted 1 on line 9 of bubblesort.pt
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of bubblesort.pt
+ !== oEmitValue on line 8 of bubblesort.pt
 
 ```
 end file
@@ -78,18 +76,14 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-     #eUndefinedIdentifier
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-#eUndefinedIdentifier !== .tLiteralInteger on line 14 of bust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of bust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of bust.pt
- !== .tLiteralAddress on line 17 of bust.pt
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 14 of bust.pt
+ !== oEmitValue on line 15 of bust.pt
 
 ```
 end file
@@ -313,16 +307,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of lunch.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 8 of lunch.pt
- !== % value emitted 1 on line 9 of lunch.pt
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of lunch.pt
+ !== oEmitValue on line 8 of lunch.pt
 
 ```
 end file
@@ -372,18 +364,14 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-     #eUndefinedIdentifier
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-#eUndefinedIdentifier !== .tLiteralInteger on line 14 of mbust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of mbust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of mbust.pt
- !== .tLiteralAddress on line 17 of mbust.pt
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 14 of mbust.pt
+ !== oEmitValue on line 15 of mbust.pt
 
 ```
 end file
@@ -428,16 +416,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of pascal.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 8 of pascal.pt
- !== % value emitted 1 on line 9 of pascal.pt
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of pascal.pt
+ !== oEmitValue on line 8 of pascal.pt
 
 ```
 end file
