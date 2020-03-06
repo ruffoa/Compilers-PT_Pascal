@@ -1953,9 +1953,11 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                         end;
 
                     oSymbolStkChooseKind:
+                    begin
                         write('symbol stack top: 'symbolStkTop, ' kind ', symbolStkKind[symbolStkTop]);
                         resultValue := symbolStkKind[symbolStkTop];
-
+                    end;
+                    
                     oSymbolStkChooseStandardFile:
                         if symbolStkIdentTblRef[symbolStkTop] = standardInputNameIndex then
                             resultValue := stdInput
