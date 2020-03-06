@@ -1045,8 +1045,8 @@ ComponentType :
                 % Enter it as the component type of the file or array
                 @TypeTblEnterIfNew
                 oTypeStkEnterComponentReference
-                oTypeStkPop;
-        ]
+                oTypeStkPop
+        ];
 
 SimpleType :
         % Accept a simple type and push a Symbol Stack entry for it,
