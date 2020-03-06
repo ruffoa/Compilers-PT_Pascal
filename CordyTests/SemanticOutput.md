@@ -45,7 +45,7 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-      #eIntegerConstReqd
+     #eIntegerConstReqd
       #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
@@ -56,7 +56,7 @@ Output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 25
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -79,7 +79,7 @@ oEmitDataAddress !== .tArrayDescriptor on line 13 of bubblesort.pt
 .tArrayDescriptor !== oEmitValue on line 15 of bubblesort.pt
 .tLiteralInteger !== % value emitted 25 on line 16 of bubblesort.pt
 oEmitValue !== .tLiteralAddress on line 17 of bubblesort.pt
-% value emitted 25 !== oEmitDataAddress on line 18 of bubblesort.pt
+% value emitted 1 !== oEmitDataAddress on line 18 of bubblesort.pt
 .tLiteralAddress !== % value emitted 8 on line 19 of bubblesort.pt
 oEmitDataAddress !== .tArrayDescriptor on line 20 of bubblesort.pt
 % value emitted 8 !== .tSkipProc on line 21 of bubblesort.pt
@@ -110,7 +110,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-      #eIntegerConstReqd
+     #eIntegerConstReqd
       #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
@@ -121,7 +121,7 @@ Output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 7
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 12
@@ -144,7 +144,7 @@ oEmitDataAddress !== .tArrayDescriptor on line 20 of bust.pt
 .tArrayDescriptor !== oEmitValue on line 22 of bust.pt
 .tLiteralInteger !== % value emitted 7 on line 23 of bust.pt
 oEmitValue !== .tLiteralAddress on line 24 of bust.pt
-% value emitted 7 !== oEmitDataAddress on line 25 of bust.pt
+% value emitted 1 !== oEmitDataAddress on line 25 of bust.pt
 .tLiteralAddress !== % value emitted 12 on line 26 of bust.pt
 oEmitDataAddress !== .tArrayDescriptor on line 27 of bust.pt
 % value emitted 12 !== .tLiteralInteger on line 28 of bust.pt
@@ -375,7 +375,7 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-      #eIntegerConstReqd
+     #eIntegerConstReqd
       #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
@@ -386,7 +386,7 @@ Output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 8
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -409,7 +409,7 @@ oEmitDataAddress !== .tArrayDescriptor on line 13 of lunch.pt
 .tArrayDescriptor !== oEmitValue on line 15 of lunch.pt
 .tLiteralInteger !== % value emitted 8 on line 16 of lunch.pt
 oEmitValue !== .tLiteralAddress on line 17 of lunch.pt
-% value emitted 8 !== oEmitDataAddress on line 18 of lunch.pt
+% value emitted 1 !== oEmitDataAddress on line 18 of lunch.pt
 .tLiteralAddress !== % value emitted 8 on line 19 of lunch.pt
 oEmitDataAddress !== .tArrayDescriptor on line 20 of lunch.pt
 % value emitted 8 !== .tLiteralInteger on line 21 of lunch.pt
@@ -466,7 +466,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-      #eIntegerConstReqd
+     #eIntegerConstReqd
       #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
@@ -477,7 +477,7 @@ Output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 7
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 12
@@ -500,7 +500,7 @@ oEmitDataAddress !== .tArrayDescriptor on line 20 of mbust.pt
 .tArrayDescriptor !== oEmitValue on line 22 of mbust.pt
 .tLiteralInteger !== % value emitted 7 on line 23 of mbust.pt
 oEmitValue !== .tLiteralAddress on line 24 of mbust.pt
-% value emitted 7 !== oEmitDataAddress on line 25 of mbust.pt
+% value emitted 1 !== oEmitDataAddress on line 25 of mbust.pt
 .tLiteralAddress !== % value emitted 12 on line 26 of mbust.pt
 oEmitDataAddress !== .tArrayDescriptor on line 27 of mbust.pt
 % value emitted 12 !== .tLiteralInteger on line 28 of mbust.pt
@@ -552,7 +552,7 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-      #eIntegerConstReqd
+     #eIntegerConstReqd
       #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
@@ -563,7 +563,7 @@ Output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 15
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -586,7 +586,7 @@ oEmitDataAddress !== .tArrayDescriptor on line 13 of pascal.pt
 .tArrayDescriptor !== oEmitValue on line 15 of pascal.pt
 .tLiteralInteger !== % value emitted 15 on line 16 of pascal.pt
 oEmitValue !== .tLiteralAddress on line 17 of pascal.pt
-% value emitted 15 !== oEmitDataAddress on line 18 of pascal.pt
+% value emitted 1 !== oEmitDataAddress on line 18 of pascal.pt
 .tLiteralAddress !== % value emitted 8 on line 19 of pascal.pt
 oEmitDataAddress !== .tArrayDescriptor on line 20 of pascal.pt
 % value emitted 8 !== .tSkipProc on line 21 of pascal.pt
