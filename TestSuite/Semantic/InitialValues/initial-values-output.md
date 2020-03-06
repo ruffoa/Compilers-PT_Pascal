@@ -58,9 +58,9 @@ Test output is:
       .tLiteralBoolean
       oEmitValue
       % value emitted 0
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 1
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
