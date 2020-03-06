@@ -16,5 +16,5 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 2: subrange or named type required
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+### Semantic assertion 59 failed: 
 ```
