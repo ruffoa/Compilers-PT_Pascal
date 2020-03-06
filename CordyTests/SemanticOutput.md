@@ -525,6 +525,13 @@ Output is:
    % value emitted 0
    .tFileDescriptor
      #eSimpleTypeReqd
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 50
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 2
+     .tDivide
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -533,9 +540,13 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tAssignBegin on line 7 of mprimes.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 8 of mprimes.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 9 of mprimes.pt
- !== % value emitted 4 on line 10 of mprimes.pt
+.tLiteralInteger !== .tLiteralAddress on line 8 of mprimes.pt
+% value emitted 50 !== % value emitted 4 on line 10 of mprimes.pt
+% value emitted 2 !== % value emitted 50 on line 13 of mprimes.pt
+.tDivide !== .tLiteralInteger on line 14 of mprimes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of mprimes.pt
+### Semantic assertion 3 failed: !== % value emitted 2 on line 16 of mprimes.pt
+ !== .tDivide on line 17 of mprimes.pt
 
 ```
 end file
@@ -611,6 +622,29 @@ Output is:
    % value emitted 0
    .tFileDescriptor
      #eSimpleTypeReqd
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 50
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 2
+     .tDivide
+      #eIntegerConstReqd
+      #eSimpleTypeReqd
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 1
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 8
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 100
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 12
+     .tArrayDescriptor
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -619,9 +653,29 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tAssignBegin on line 7 of primes.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 8 of primes.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 9 of primes.pt
- !== % value emitted 4 on line 10 of primes.pt
+.tLiteralInteger !== .tLiteralAddress on line 8 of primes.pt
+% value emitted 50 !== % value emitted 4 on line 10 of primes.pt
+% value emitted 2 !== % value emitted 50 on line 13 of primes.pt
+.tDivide !== .tLiteralInteger on line 14 of primes.pt
+#eIntegerConstReqd !== oEmitValue on line 15 of primes.pt
+#eSimpleTypeReqd !== % value emitted 2 on line 16 of primes.pt
+.tLiteralInteger !== .tDivide on line 17 of primes.pt
+oEmitValue !== .tAssignInteger on line 18 of primes.pt
+% value emitted 1 !== .tLiteralInteger on line 19 of primes.pt
+.tLiteralAddress !== oEmitValue on line 20 of primes.pt
+oEmitDataAddress !== % value emitted 1 on line 21 of primes.pt
+% value emitted 8 !== .tLiteralAddress on line 22 of primes.pt
+.tArrayDescriptor !== oEmitDataAddress on line 23 of primes.pt
+.tLiteralInteger !== % value emitted 8 on line 24 of primes.pt
+oEmitValue !== .tArrayDescriptor on line 25 of primes.pt
+% value emitted 100 !== .tLiteralInteger on line 26 of primes.pt
+.tLiteralAddress !== oEmitValue on line 27 of primes.pt
+oEmitDataAddress !== % value emitted 100 on line 28 of primes.pt
+% value emitted 12 !== .tLiteralAddress on line 29 of primes.pt
+.tArrayDescriptor !== oEmitDataAddress on line 30 of primes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 12 on line 31 of primes.pt
+### Semantic assertion 3 failed: !== .tArrayDescriptor on line 32 of primes.pt
+ !== .tAssignBegin on line 33 of primes.pt
 
 ```
 end file
