@@ -1013,42 +1013,52 @@ ComponentType :
             | sRange:   % subrange specification
                 oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                 @SubrangeUpperBound        % pushes value on value stack
-            | *:
-        ]
-
-        [ oSymbolStkChooseKind
-            | syType:
-                oTypeStkPushSymbol
-                [ oTypeStkChooseKind
-                    | tpArray, tpFile:
-                        % Component types must be scalar
-                        #eScalarReqd
-                        oSymbolStkPop
-                        oTypeStkPop
-                        @SymbolStkPushDefaultIntegerType
-                        oTypeStkPushSymbol
-                    | *:
-                ]
                 oSymbolStkPop
-            | *:        % type was specified with a subrange
-                oSymbolStkPop
-                oTypeStkPush(tpSubrange)
+                % Enter and check the bounds of the array type
                 oTypeStkEnterBounds
                 [ oTypeStkVerifyBounds
                     | yes:
                     | *:
                         oValuePop
                         @ValuePushValuePlusOne
-                        oTypeStkEnterBounds
+                    oTypeStkEnterBounds
                 ]
-        ]
-        oValuePop       % subrange upper
-        oValuePop       %          lower bound
-        % Enter it as the component type of the file or array
-        @TypeTblEnterIfNew
-        oTypeStkEnterComponentReference
-        oTypeStkPop;
-
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound
+            | *:         
+                [ oSymbolStkChooseKind
+                    | syType:
+                        oTypeStkPushSymbol
+                        [ oTypeStkChooseKind
+                            | tpArray, tpFile:
+                                % Component types must be scalar
+                                #eScalarReqd
+                                oSymbolStkPop
+                                oTypeStkPop
+                                @SymbolStkPushDefaultIntegerType
+                                oTypeStkPushSymbol
+                            | *:
+                        ]
+                        oSymbolStkPop
+                    | *:        % type was specified with a subrange
+                        oSymbolStkPop
+                        oTypeStkPush(tpSubrange)
+                        oTypeStkEnterBounds
+                        [ oTypeStkVerifyBounds
+                            | yes:
+                            | *:
+                                oValuePop
+                                @ValuePushValuePlusOne
+                                oTypeStkEnterBounds
+                        ]
+                ]
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound
+                % Enter it as the component type of the file or array
+                @TypeTblEnterIfNew
+                oTypeStkEnterComponentReference
+                oTypeStkPop
+        ];
 
 SimpleType :
         % Accept a simple type and push a Symbol Stack entry for it,
