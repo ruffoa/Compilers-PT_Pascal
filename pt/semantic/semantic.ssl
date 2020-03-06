@@ -960,12 +960,6 @@ TypeBody :
             | sFile:
                 oTypeStkPush(tpFile)
                 @ComponentType
-            | sInitialValue:
-                @SymbolStkPushDefaultIntegerType
-        		oValuePush(one)
-        		oValuePush(one)
-                @EnterVariableAttributes
-                @Expression
             | *:                
                 @SimpleType     % pushes symbol and two value bounds
         	[ oSymbolStkChooseKind
@@ -1180,8 +1174,17 @@ VariableDeclarations :
 
                 % Accepts a type specification and pushes its type to the Type Stack.
                 % Creates type table entries for the type and any new subtypes as necessary.
-                @TypeBody
-        	    @EnterVariableAttributes
+                [
+                    | sInitialValue:
+                        @SymbolStkPushDefaultIntegerType
+                        oValuePush(one)
+                        oValuePush(one)
+                        @EnterVariableAttributes
+                        @Expression
+                    | *:
+                        @TypeBody
+                        @EnterVariableAttributes
+                ]
 
                 [
                     | sInitialValue: 
