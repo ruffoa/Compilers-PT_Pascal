@@ -15,6 +15,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```

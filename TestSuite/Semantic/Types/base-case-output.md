@@ -68,18 +68,19 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 
 
-Warning, output length does not match (6 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (5 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tAssignBegin on line 5 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

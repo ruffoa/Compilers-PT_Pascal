@@ -19,16 +19,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of boxes.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of boxes.pt
- !== .tLiteralAddress on line 16 of boxes.pt
+ !== .tWriteBegin on line 14 of boxes.pt
 
 ```
 end file
@@ -45,14 +41,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of bubblesort.pt
- !== oEmitValue on line 8 of bubblesort.pt
+ !== .tLiteralInteger on line 7 of bubblesort.pt
 
 ```
 end file
@@ -76,14 +70,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 14 of bust.pt
- !== oEmitValue on line 15 of bust.pt
+ !== .tLiteralInteger on line 14 of bust.pt
 
 ```
 end file
@@ -107,16 +99,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of cache.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of cache.pt
- !== % value emitted 1 on line 16 of cache.pt
+ !== .tLiteralInteger on line 14 of cache.pt
 
 ```
 end file
@@ -140,16 +128,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of double.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of double.pt
- !== .tLiteralAddress on line 16 of double.pt
+ !== .tWriteBegin on line 14 of double.pt
 
 ```
 end file
@@ -173,16 +157,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 14 of francais.pt
-### Semantic assertion 3 failed: !== .tWhilePreBreak on line 15 of francais.pt
- !== .tWriteBegin on line 16 of francais.pt
+ !== .tWhileBegin on line 14 of francais.pt
 
 ```
 end file
@@ -307,14 +287,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of lunch.pt
- !== oEmitValue on line 8 of lunch.pt
+ !== .tLiteralInteger on line 7 of lunch.pt
 
 ```
 end file
@@ -364,14 +342,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 14 of mbust.pt
- !== oEmitValue on line 15 of mbust.pt
+ !== .tLiteralInteger on line 14 of mbust.pt
 
 ```
 end file
@@ -388,18 +364,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     #eSimpleTypeReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-#eSimpleTypeReqd !== .tAssignBegin on line 7 of mprimes.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 8 of mprimes.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 9 of mprimes.pt
- !== % value emitted 4 on line 10 of mprimes.pt
+ !== .tAssignBegin on line 7 of mprimes.pt
 
 ```
 end file
@@ -416,14 +386,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tLiteralInteger on line 7 of pascal.pt
- !== oEmitValue on line 8 of pascal.pt
+ !== .tLiteralInteger on line 7 of pascal.pt
 
 ```
 end file
@@ -440,18 +408,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     #eSimpleTypeReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-#eSimpleTypeReqd !== .tAssignBegin on line 7 of primes.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 8 of primes.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 9 of primes.pt
- !== % value emitted 4 on line 10 of primes.pt
+ !== .tAssignBegin on line 7 of primes.pt
 
 ```
 end file
@@ -468,16 +430,12 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 7 of stars.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 8 of stars.pt
- !== oEmitValue on line 9 of stars.pt
+ !== .tAssignBegin on line 7 of stars.pt
 
 ```
 end file
@@ -501,16 +459,12 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of treesort.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of treesort.pt
- !== % value emitted 1 on line 16 of treesort.pt
+ !== .tLiteralInteger on line 14 of treesort.pt
 
 ```
 end file
