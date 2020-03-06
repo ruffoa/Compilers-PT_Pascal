@@ -89,61 +89,13 @@ Test output is:
      oEmitDataAddress
      % value emitted 8
      .tArrayDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tSubscriptBegin
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tSubscriptInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-    .tAssignInteger
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 16
-       .tLiteralBoolean
-       oEmitValue
-       % value emitted 0
-    .tAssignBoolean
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 17
-      .tSkipString
-      oEmitNullAddress
-      % value emitted -32767
-      .tLiteralString
-      oEmitValue
-      % value emitted 11
-      oEmitString
-      % value emitted 72
-      % value emitted 101
-      % value emitted 108
-      % value emitted 108
-      % value emitted 111
-      % value emitted 32
-      % value emitted 87
-      % value emitted 111
-      % value emitted 114
-      % value emitted 108
-      % value emitted 100
-      .tStringDescriptor
-      % value emitted 48
-     #eTypeMismatch
-    .tAssignChar
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+### Semantic assertion 59 failed: 
 
 ```
 
 
+Warning, output length does not match (17 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
@@ -157,32 +109,7 @@ File diff
 -oEmitValue !== .tAssignBegin on line 12 of base-case.pt
 -oEmitDataAddress !== oEmitValue on line 14 of base-case.pt
 -.tArrayDescriptor !== .tLiteralAddress on line 15 of base-case.pt
--.tAssignBegin !== oEmitValue on line 16 of base-case.pt
--.tLiteralAddress !== .tFetchInteger on line 17 of base-case.pt
--oEmitValue !== .tAssignBegin on line 18 of base-case.pt
--.tSubscriptBegin !== .tLiteralAddress on line 19 of base-case.pt
--.tLiteralInteger !== oEmitValue on line 20 of base-case.pt
--oEmitValue !== .tLiteralBoolean on line 21 of base-case.pt
--.tSubscriptInteger !== oEmitValue on line 22 of base-case.pt
--.tLiteralInteger !== .tAssignBegin on line 23 of base-case.pt
--oEmitValue !== .tLiteralAddress on line 24 of base-case.pt
--.tAssignInteger !== oEmitValue on line 25 of base-case.pt
--.tAssignBegin !== .tLiteralString on line 26 of base-case.pt
--.tLiteralAddress !== .tLiteralString on line 27 of base-case.pt
--.tLiteralBoolean !== % value emitted 11 on line 29 of base-case.pt
--oEmitValue !== oEmitString on line 30 of base-case.pt
--.tAssignBoolean !== % value emitted 72      'h' on line 31 of base-case.pt
--.tAssignBegin !== % value emitted 101     "e" on line 32 of base-case.pt
--.tLiteralAddress !== % value emitted 108     "l" on line 33 of base-case.pt
--oEmitValue !== % value emitted 108     'l' on line 34 of base-case.pt
--.tSkipString !== % value emitted 111     'o' on line 35 of base-case.pt
--oEmitNullAddress !== % value emitted 32      ' ' on line 36 of base-case.pt
--.tLiteralString !== % value emitted 119     'w' on line 37 of base-case.pt
--oEmitValue !== % value emitted 111     'o' on line 38 of base-case.pt
--oEmitString !== % value emitted 114     'r' on line 39 of base-case.pt
--.tStringDescriptor !== % value emitted 108     'l' on line 40 of base-case.pt
--#eTypeMismatch !== % value emitted 100     'd' on line 41 of base-case.pt
--.tAssignChar !== .tParmEnd on line 42 of base-case.pt
+-### Semantic assertion 59 failed: !== oEmitValue on line 16 of base-case.pt
 
 ```
 end file

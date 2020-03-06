@@ -17,5 +17,5 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 2: subrange or named type required
-semantic error, line 7: type clash
+### Semantic assertion 59 failed: 
 ```
