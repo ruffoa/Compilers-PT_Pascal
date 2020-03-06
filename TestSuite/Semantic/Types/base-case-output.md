@@ -11,7 +11,7 @@ mod main (output) {
     c = false;
     let d: int;
     d = 1;
-    const s = "";
+    const s = "Hi";
 }
 ```
 ------------------------
@@ -78,17 +78,24 @@ Test output is:
       oEmitValue
       % value emitted 1
     .tAssignInteger
-    #eNullString
+    .tSkipString
+    oEmitNullAddress
+    % value emitted -32767
+    .tLiteralString
+    oEmitValue
+    % value emitted 2
+    oEmitString
+    % value emitted 72
+    % value emitted 105
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (22 vs 17)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (25 vs 17)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
