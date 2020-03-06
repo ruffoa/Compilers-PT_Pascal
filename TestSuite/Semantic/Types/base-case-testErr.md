@@ -16,6 +16,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 2: subrange or named type required
-### Semantic assertion 59 failed: 
+         1semantic error, line 2: subrange or named type required
+        20         3        21         6         2        22semantic error, line 7: type clash
 ```
