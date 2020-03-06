@@ -1056,19 +1056,19 @@ SimpleType :
                         % type identifier
                         [ oSymbolStkChooseKind
                             | syType:
-        			@ValuePushTypeBounds
+        			            @ValuePushTypeBounds
                             | syUndefined:
                                 #eUndefinedIdentifier
                                 oSymbolStkPop
                                 @SymbolStkPushDefaultIntegerType
-        			oValuePush(one)
-        			oValuePush(one)
+                                oValuePush(one)
+                                oValuePush(one)
                             | *:
                                 #eSimpleTypeReqd
                                 oSymbolStkPop
                                 @SymbolStkPushDefaultIntegerType
-        			oValuePush(one)
-        			oValuePush(one)
+                                oValuePush(one)
+                                oValuePush(one)
                         ]
                 ]
             | sInteger:         % lower bound of subrange specification
@@ -1080,12 +1080,12 @@ SimpleType :
                     | *:
                 ]
                 sRange
-        	@SubrangeUpperBound     % pushes value on value stack
+        	    @SubrangeUpperBound     % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
-        	oValuePush(one)
-        	oValuePush(one)
+                oValuePush(one)
+                oValuePush(one)
         ];
 
 ValuePushTypeBounds :

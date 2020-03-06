@@ -4,5 +4,4 @@ mod main (output) {
     let c: bool;
     c = false;
     let d: str;
-    d = "Hello World";
 }
