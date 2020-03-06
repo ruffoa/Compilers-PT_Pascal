@@ -1047,23 +1047,22 @@ SimpleType :
         % and two entries for its bounds on the Value Stack.
         [
             | sIdentifier:
-                oSymbolStkPushIdentifier
-                [ 
-                    | sRange:   % subrange specification
-                        oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
-                        @SubrangeUpperBound        % pushes value on value stack
-                    | *:        
-                        % type identifier
-                        [ oSymbolStkChooseKind
-                            | syType:
-        			            @ValuePushTypeBounds
-                            | syUndefined:
-                                #eUndefinedIdentifier
-                                oSymbolStkPop
-                                @SymbolStkPushDefaultIntegerType
-                                oValuePush(one)
-                                oValuePush(one)
-                            | *:
+                oSymbolStkPushIdentifier                
+                [ oSymbolStkChooseKind
+                    | syType:
+                        @ValuePushTypeBounds
+                    | syUndefined:
+                        #eUndefinedIdentifier
+                        oSymbolStkPop
+                        @SymbolStkPushDefaultIntegerType
+                        oValuePush(one)
+                        oValuePush(one)
+                    | *:
+                        [
+                            | sRange:   % subrange specification
+                                oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
+                                @SubrangeUpperBound        % pushes value on value stack
+                            | *: 
                                 #eSimpleTypeReqd
                                 oSymbolStkPop
                                 @SymbolStkPushDefaultIntegerType
