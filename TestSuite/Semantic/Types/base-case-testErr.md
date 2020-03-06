@@ -8,7 +8,6 @@ mod main (output) {
     let c: bool;
     c = false;
     let d: str;
-    d = "Hello World";
 }
 ```
 ------------------------
@@ -17,5 +16,4 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 2: subrange or named type required
-semantic error, line 7: type clash
 ```

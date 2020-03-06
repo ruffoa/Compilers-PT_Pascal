@@ -12,7 +12,6 @@ mod main (output) {
     let c: bool;
     c = false;
     let d: str;
-    d = "Hello World";
 }
 ```
 ------------------------
@@ -54,11 +53,6 @@ Parser Output:
   .sIdentifier
      .sIdentifier
   % .sNewLine
-   .sAssignmentStmt
-   .sIdentifier
-       .sStringLiteral
-   .sExpnEnd
-   % .sNewLine
   .sEnd
 
 ```
@@ -110,32 +104,6 @@ Test output is:
        oEmitValue
        % value emitted 0
     .tAssignBoolean
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 17
-      .tSkipString
-      oEmitNullAddress
-      % value emitted -32767
-      .tLiteralString
-      oEmitValue
-      % value emitted 11
-      oEmitString
-      % value emitted 72
-      % value emitted 101
-      % value emitted 108
-      % value emitted 108
-      % value emitted 111
-      % value emitted 32
-      % value emitted 87
-      % value emitted 111
-      % value emitted 114
-      % value emitted 108
-      % value emitted 100
-      .tStringDescriptor
-      % value emitted 48
-     #eTypeMismatch
-    .tAssignChar
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -144,6 +112,8 @@ Test output is:
 ```
 
 
+Warning, output length does not match (35 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
@@ -172,17 +142,9 @@ File diff
 -.tLiteralBoolean !== % value emitted 11 on line 29 of base-case.pt
 -oEmitValue !== oEmitString on line 30 of base-case.pt
 -.tAssignBoolean !== % value emitted 72      'h' on line 31 of base-case.pt
--.tAssignBegin !== % value emitted 101     "e" on line 32 of base-case.pt
--.tLiteralAddress !== % value emitted 108     "l" on line 33 of base-case.pt
--oEmitValue !== % value emitted 108     'l' on line 34 of base-case.pt
--.tSkipString !== % value emitted 111     'o' on line 35 of base-case.pt
--oEmitNullAddress !== % value emitted 32      ' ' on line 36 of base-case.pt
--.tLiteralString !== % value emitted 119     'w' on line 37 of base-case.pt
--oEmitValue !== % value emitted 111     'o' on line 38 of base-case.pt
--oEmitString !== % value emitted 114     'r' on line 39 of base-case.pt
--.tStringDescriptor !== % value emitted 108     'l' on line 40 of base-case.pt
--#eTypeMismatch !== % value emitted 100     'd' on line 41 of base-case.pt
--.tAssignChar !== .tParmEnd on line 42 of base-case.pt
+-.tTrapBegin !== % value emitted 101     "e" on line 32 of base-case.pt
+-.tTrap !== % value emitted 108     "l" on line 33 of base-case.pt
+-oEmitTrapKind(trHalt) !== % value emitted 108     'l' on line 34 of base-case.pt
 
 ```
 end file
