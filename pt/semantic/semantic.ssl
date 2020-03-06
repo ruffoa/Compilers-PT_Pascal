@@ -1005,7 +1005,11 @@ IndexType :
         	oTypeStkEnterBounds
         ]
         oValuePop       % subrange upper
-        oValuePop;      %          lower bound
+        oValuePop      %          lower bound
+
+        @TypeTblEnterIfNew
+        oTypeStkEnterComponentReference
+        oTypeStkPop;
 
 ComponentType :
         % Accept and fill in an  array or file component type
