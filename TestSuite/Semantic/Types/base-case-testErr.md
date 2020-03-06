@@ -16,8 +16,8 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 2: subrange or named type required
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-    (parser output stream does not match expected input stream)
-while processing line          2
-### Semantic assertion 3 failed: 
+semantic error, line 4: subrange or named type required
+semantic error, line 5: type clash
+semantic error, line 6: subrange or named type required
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 ```

@@ -19,6 +19,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -26,9 +27,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of boxes.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of boxes.pt
- !== .tLiteralAddress on line 16 of boxes.pt
+#eSimpleTypeReqd !== .tWriteBegin on line 14 of boxes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 15 of boxes.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 16 of boxes.pt
+ !== oEmitValue on line 17 of boxes.pt
 
 ```
 end file
@@ -109,6 +111,7 @@ Output is:
    % value emitted 4
    .tFileDescriptor
       #eSimpleTypeReqd
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -117,9 +120,10 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tLiteralInteger on line 14 of bust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of bust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of bust.pt
- !== .tLiteralAddress on line 17 of bust.pt
+#eSimpleTypeReqd !== oEmitValue on line 15 of bust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 1 on line 16 of bust.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 17 of bust.pt
+ !== oEmitDataAddress on line 18 of bust.pt
 
 ```
 end file
@@ -143,6 +147,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -150,9 +155,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of cache.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of cache.pt
- !== % value emitted 1 on line 16 of cache.pt
+#eSimpleTypeReqd !== .tLiteralInteger on line 14 of cache.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of cache.pt
+### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of cache.pt
+ !== .tLiteralAddress on line 17 of cache.pt
 
 ```
 end file
@@ -176,6 +182,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -183,9 +190,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of double.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of double.pt
- !== .tLiteralAddress on line 16 of double.pt
+#eSimpleTypeReqd !== .tWriteBegin on line 14 of double.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 15 of double.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 16 of double.pt
+ !== oEmitValue on line 17 of double.pt
 
 ```
 end file
@@ -209,6 +217,7 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -216,9 +225,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 14 of francais.pt
-### Semantic assertion 3 failed: !== .tWhilePreBreak on line 15 of francais.pt
- !== .tWriteBegin on line 16 of francais.pt
+#eSimpleTypeReqd !== .tWhileBegin on line 14 of francais.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhilePreBreak on line 15 of francais.pt
+### Semantic assertion 3 failed: !== .tWriteBegin on line 16 of francais.pt
+ !== .tTrapBegin on line 17 of francais.pt
 
 ```
 end file
@@ -433,6 +443,7 @@ Output is:
    % value emitted 4
    .tFileDescriptor
       #eSimpleTypeReqd
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -441,9 +452,10 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tLiteralInteger on line 14 of mbust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of mbust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of mbust.pt
- !== .tLiteralAddress on line 17 of mbust.pt
+#eSimpleTypeReqd !== oEmitValue on line 15 of mbust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 1 on line 16 of mbust.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 17 of mbust.pt
+ !== oEmitDataAddress on line 18 of mbust.pt
 
 ```
 end file
@@ -572,6 +584,7 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -579,9 +592,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 7 of stars.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 8 of stars.pt
- !== oEmitValue on line 9 of stars.pt
+#eSimpleTypeReqd !== .tAssignBegin on line 7 of stars.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 8 of stars.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 9 of stars.pt
+ !== % value emitted 1028 on line 10 of stars.pt
 
 ```
 end file
@@ -605,6 +619,8 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+     #eSimpleTypeReqd
+     #eSimpleTypeReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -612,9 +628,11 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of treesort.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of treesort.pt
- !== % value emitted 1 on line 16 of treesort.pt
+#eSimpleTypeReqd !== .tLiteralInteger on line 14 of treesort.pt
+#eSimpleTypeReqd !== oEmitValue on line 15 of treesort.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 1 on line 16 of treesort.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 17 of treesort.pt
+ !== oEmitDataAddress on line 18 of treesort.pt
 
 ```
 end file
