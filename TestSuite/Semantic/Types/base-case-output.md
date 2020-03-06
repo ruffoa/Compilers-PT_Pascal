@@ -84,7 +84,7 @@ Test output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 5
+     % value emitted 1
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -105,7 +105,7 @@ Test output is:
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
-     % value emitted 32
+     % value emitted 16
        .tLiteralBoolean
        oEmitValue
        % value emitted 0
@@ -113,7 +113,7 @@ Test output is:
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
-     % value emitted 33
+     % value emitted 17
       .tSkipString
       oEmitNullAddress
       % value emitted -32767
