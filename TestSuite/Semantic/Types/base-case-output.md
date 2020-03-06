@@ -1,4 +1,4 @@
-This is to test that the basic types (but arrays) work in Qust
+This is to test that the basic types (but not arrays) work in Qust
 
 -------------------------
 
@@ -38,6 +38,15 @@ Parser Output:
   .sIdentifier
      .sIdentifier
   % .sNewLine
+   .sAssignmentStmt
+   .sIdentifier
+       .sInteger
+   .sExpnEnd
+   % .sNewLine
+  .sConst
+   .sIdentifier
+    .sStringLiteral
+   % .sNewLine
   .sEnd
 
 ```
@@ -61,25 +70,33 @@ Test output is:
        oEmitValue
        % value emitted 0
     .tAssignBoolean
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 8
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+    #eNullString
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
+### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (14 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (22 vs 17)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralBoolean !== .tLiteralInteger on line 8 of base-case.pt
--.tAssignBoolean !== .tLiteralInteger on line 10 of base-case.pt
--.tTrapBegin !== oEmitValue on line 11 of base-case.pt
--.tTrap !== .tAssignBegin on line 12 of base-case.pt
--oEmitTrapKind(trHalt) !== .tLiteralAddress on line 13 of base-case.pt
+-.tLiteralInteger !== .tTrapBegin on line 14 of base-case.pt
+-oEmitValue !== .tTrap on line 15 of base-case.pt
+-.tAssignInteger !== oEmitTrapKind(trHalt) on line 16 of base-case.pt
 
 ```
 end file
