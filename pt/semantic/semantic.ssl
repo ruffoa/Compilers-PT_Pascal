@@ -1009,31 +1009,38 @@ IndexType :
 ComponentType :
         % Accept and fill in an  array or file component type
         @SimpleType     % pushes symbol and two value bounds
-        [ oSymbolStkChooseKind
-            | syType:
-                oTypeStkPushSymbol
-                [ oTypeStkChooseKind
-                    | tpArray, tpFile:
-                        % Component types must be scalar
-                        #eScalarReqd
-                        oSymbolStkPop
-                        oTypeStkPop
-                        @SymbolStkPushDefaultIntegerType
+        [
+            | sRange:   % subrange specification
+                oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
+                @SubrangeUpperBound        % pushes value on value stack
+            | *:
+                [ oSymbolStkChooseKind
+                    | syType:
                         oTypeStkPushSymbol
-                    | *:
-                ]
-                oSymbolStkPop
-            | *:        % type was specified with a subrange
-                oSymbolStkPop
-                oTypeStkPush(tpSubrange)
-                oTypeStkEnterBounds
-                [ oTypeStkVerifyBounds
-                    | yes:
-                    | *:
-                        oValuePop
-                        @ValuePushValuePlusOne
+                        [ oTypeStkChooseKind
+                            | tpArray, tpFile:
+                                % Component types must be scalar
+                                #eScalarReqd
+                                oSymbolStkPop
+                                oTypeStkPop
+                                @SymbolStkPushDefaultIntegerType
+                                oTypeStkPushSymbol
+                            | *:
+                        ]
+                        oSymbolStkPop
+                    | *:        % type was specified with a subrange
+                        oSymbolStkPop
+                        oTypeStkPush(tpSubrange)
                         oTypeStkEnterBounds
+                        [ oTypeStkVerifyBounds
+                            | yes:
+                            | *:
+                                oValuePop
+                                @ValuePushValuePlusOne
+                                oTypeStkEnterBounds
+                        ]
                 ]
+
         ]
         oValuePop       % subrange upper
         oValuePop       %          lower bound
@@ -1059,20 +1066,12 @@ SimpleType :
                         oValuePush(one)
                         oValuePush(one)
                     | *:
-                ]
-
-                [
-                    | sRange:   % subrange specification
-                        oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
-                        @SubrangeUpperBound        % pushes value on value stack
-                    | *: 
                         #eSimpleTypeReqd
                         oSymbolStkPop
                         @SymbolStkPushDefaultIntegerType
                         oValuePush(one)
                         oValuePush(one)
                 ]
-
             | sInteger:         % lower bound of subrange specification
                 oValuePushInteger
                 oSymbolStkPush(syConstant)
