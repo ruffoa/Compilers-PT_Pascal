@@ -54,18 +54,19 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 
 
-Warning, output length does not match (6 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (5 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tTrapBegin on line 5 of arrays.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
