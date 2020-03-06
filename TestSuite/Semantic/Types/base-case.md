@@ -1,1 +1,1 @@
-This is to test that the basic types work in Qust
+This is to test that the basic types (but arrays) work in Qust
