@@ -85,7 +85,7 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-Value Stack2         2         2### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 
 ```
 
