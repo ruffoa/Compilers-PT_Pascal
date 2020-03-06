@@ -83,37 +83,12 @@ Test output is:
      oEmitDataAddress
      % value emitted 8
      .tArrayDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tSubscriptBegin
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tSubscriptInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-    .tAssignInteger
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 16
-       .tLiteralBoolean
-       oEmitValue
-       % value emitted 0
-    .tAssignBoolean
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+### Semantic assertion 59 failed: 
 
 ```
 
 
-Warning, output length does not match (36 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (17 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -128,25 +103,7 @@ File diff
 -oEmitValue !== .tAssignBegin on line 12 of base-case.pt
 -oEmitDataAddress !== oEmitValue on line 14 of base-case.pt
 -.tArrayDescriptor !== .tLiteralAddress on line 15 of base-case.pt
--.tAssignBegin !== oEmitValue on line 16 of base-case.pt
--.tLiteralAddress !== .tFetchInteger on line 17 of base-case.pt
--oEmitValue !== .tAssignBegin on line 18 of base-case.pt
--.tSubscriptBegin !== .tLiteralAddress on line 19 of base-case.pt
--.tLiteralInteger !== oEmitValue on line 20 of base-case.pt
--oEmitValue !== .tLiteralBoolean on line 21 of base-case.pt
--.tSubscriptInteger !== oEmitValue on line 22 of base-case.pt
--.tLiteralInteger !== .tAssignBegin on line 23 of base-case.pt
--oEmitValue !== .tLiteralAddress on line 24 of base-case.pt
--.tAssignInteger !== oEmitValue on line 25 of base-case.pt
--.tAssignBegin !== .tLiteralString on line 26 of base-case.pt
--.tLiteralAddress !== .tLiteralString on line 27 of base-case.pt
--.tLiteralBoolean !== % value emitted 11 on line 29 of base-case.pt
--oEmitValue !== oEmitString on line 30 of base-case.pt
--.tAssignBoolean !== % value emitted 72      'h' on line 31 of base-case.pt
--.tTrapBegin !== % value emitted 101     "e" on line 32 of base-case.pt
--.tTrap !== % value emitted 108     "l" on line 33 of base-case.pt
--oEmitTrapKind(trHalt) !== % value emitted 108     'l' on line 34 of base-case.pt
--### Semantic assertion 53 failed: value stack not empty at end of semantic phase !== % value emitted 111     'o' on line 35 of base-case.pt
+-### Semantic assertion 59 failed: !== oEmitValue on line 16 of base-case.pt
 
 ```
 end file
