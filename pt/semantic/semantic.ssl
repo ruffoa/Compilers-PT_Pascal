@@ -992,7 +992,7 @@ TypeTblEnterIfNew:
 
 IndexType :
         % Accept and fill in index bounds of array type stack entry
-        @SimpleType     % pushes symbol and two value bounds
+        % @SimpleType     % pushes symbol and two value bounds
         oSymbolStkPop
         % Enter and check the bounds of the array type
         oTypeStkEnterBounds
@@ -1047,6 +1047,7 @@ ComponentType :
                 oTypeStkEnterComponentReference
                 oTypeStkPop
         ];
+
 SimpleType :
         % Accept a simple type and push a Symbol Stack entry for it,
         % and two entries for its bounds on the Value Stack.
