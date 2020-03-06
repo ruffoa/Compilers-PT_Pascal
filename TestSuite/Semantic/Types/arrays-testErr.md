@@ -13,6 +13,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 2: identifier not declared
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 2
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
+
 ```

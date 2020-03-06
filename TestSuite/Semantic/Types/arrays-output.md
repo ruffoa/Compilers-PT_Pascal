@@ -54,52 +54,18 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-       #eUndefinedIdentifier
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 0
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 0
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tSubscriptBegin
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tSubscriptInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-    .tAssignInteger
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 2
+### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
 
 ```
 
 
-Warning, output length does not match (30 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (6 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eUndefinedIdentifier !== .tTrapBegin on line 5 of arrays.pt
--.tLiteralInteger !== .tTrap on line 6 of arrays.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of arrays.pt
+-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tTrapBegin on line 5 of arrays.pt
 
 ```
 end file
