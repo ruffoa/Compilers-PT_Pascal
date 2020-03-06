@@ -4,7 +4,7 @@
    .tLiteralAddress
    oEmitDataAddress
    % value emitted 0
-   .tFileDescriptor
+   .tFileDescriptor     // 'output'
      .tLiteralInteger
      oEmitValue
      % value emitted 1
@@ -14,7 +14,7 @@
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 15
+     % value emitted 15   // pascal: [int:15]
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -27,40 +27,40 @@
      % value emitted 80
      .tStoreParmInteger
      .tParmEnd
-     .tIfBegin
+     .tIfBegin                // if index == 1
          .tLiteralAddress
          oEmitValue
          % value emitted 80
          .tFetchInteger
         .tLiteralInteger
         oEmitValue
-        % value emitted 1
-        .tEQ
-     .tIfThen
+        % value emitted 1     // '1'
+        .tEQ                  // ==
+     .tIfThen                 // start if block {
      oEmitNullAddress
      % value emitted -32767
-         .tAssignBegin
-          .tLiteralAddress
+         .tAssignBegin        // pascal [1] = pascal [1] + 1;
+          .tLiteralAddress    // address of 'pascal'
           oEmitValue
           % value emitted 4
-           .tSubscriptBegin
-             .tLiteralInteger
+           .tSubscriptBegin   // subscripted to...
+             .tLiteralInteger // [1]
              oEmitValue
              % value emitted 1
-           .tSubscriptInteger
-            .tLiteralAddress
+           .tSubscriptInteger // get address of the subscript
+            .tLiteralAddress  // [1] = 4 in this case (b/c ints)
             oEmitValue
             % value emitted 4
-             .tSubscriptBegin
+             .tSubscriptBegin // pascal[1]
                .tLiteralInteger
-               oEmitValue
+               oEmitValue     // [1]
                % value emitted 1
              .tSubscriptInteger
-            .tFetchInteger
+            .tFetchInteger    // fetch value stored at pascal[1]
            .tLiteralInteger
-           oEmitValue
+           oEmitValue         // '1'
            % value emitted 1
-           .tAdd
+           .tAdd              // add 1 to pascal[1]
          .tAssignInteger
      .tIfMerge
      oEmitNullAddress
