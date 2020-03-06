@@ -956,7 +956,7 @@ TypeBody :
             | sArray:
                 oTypeStkPush(tpArray)
                 @ComponentType
-                % @IndexType
+                @IndexType
             | sFile:
                 oTypeStkPush(tpFile)
                 @ComponentType
@@ -1012,9 +1012,9 @@ ComponentType :
         @SimpleType     % pushes symbol and two value bounds
         [
             | sRange:   % subrange specification
+                oTypeStkPush(tpInteger)
                 oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                 @SubrangeUpperBound        % pushes value on value stack
-                @IndexType
             | *:         
                 [ oSymbolStkChooseKind
                     | syType:
