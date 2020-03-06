@@ -2,7 +2,7 @@
 oEmitValue              //value emitted is 2
 .tLiteralAddress    
 oEmitDataAddress        //value emitted is 0
-.tFileDescriptor    
+.tFileDescriptor        // 'output'
 .tAssignBegin           // begin assignment for 'a'
 .tLiteralAddress        // address of 'a'
 oEmitValue              // emit value of address of 'a'

@@ -955,7 +955,7 @@ TypeBody :
         [
             | sArray:
                 oTypeStkPush(tpArray)
-                @SimpleType
+                @ComponentType
                 @IndexType
             | sFile:
                 oTypeStkPush(tpFile)
@@ -1050,29 +1050,6 @@ SimpleType :
                 oSymbolStkPushIdentifier
                 [ 
                     | sRange:   % subrange specification
-                        % [ oSymbolStkChooseKind
-                        %     | syConstant:       
-                        %         oTypeStkPushSymbol
-                        %         [ oTypeStkChooseKind
-                        %             | tpInteger:        
-                        %                 oValuePushSymbol
-                        %             | *:
-                        %                 #eIntegerConstReqd
-                        %                 oValuePush(one)
-                        %         ]
-                        %         [
-                        %             | sNegate:
-                        %                 oValueNegate
-                        %             | *:
-                        %         ]
-                        %         oTypeStkPop
-                        %     | syUndefined:
-                        %         #eUndefinedIdentifier
-                        %         oValuePush(one)
-                        %     | *:
-                        %         #eIntegerConstReqd
-                        %         oValuePush(one)
-                        % ]
                         oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                         @SubrangeUpperBound        % pushes value on value stack
                     | *:        
