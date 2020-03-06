@@ -2545,6 +2545,8 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                 { The Symbol Stack, Type Stack, Symbol and Type Display, Count Stack, Value Stack, 
                   Fix Address Stack, Case Stack and Case Display must be empty. }
                 begin
+                    write('Value Stack', valueStackTop : 1);
+
                     Assert(symbolStkTop = 0, assert49);
                     Assert(typeStkTop = 0, assert50);
                     Assert(lexicLevelStackTop = 0, assert51);
