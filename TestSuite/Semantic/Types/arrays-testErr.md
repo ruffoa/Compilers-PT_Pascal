@@ -13,5 +13,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+Value Stack2### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 ```

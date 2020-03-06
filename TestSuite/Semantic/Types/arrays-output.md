@@ -1,4 +1,4 @@
-
+This is to check that Qust array declarations work properly
 
 -------------------------
 
@@ -85,7 +85,7 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
+Value Stack2### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 
 ```
 
