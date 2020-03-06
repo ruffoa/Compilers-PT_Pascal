@@ -9,7 +9,9 @@ Test Content:
 mod main (output) {  
     let c: bool;
     c = false;
-    let d: str;
+    let d: int;
+    d = 1;
+    const s = "";
 }
 ```
 ------------------------

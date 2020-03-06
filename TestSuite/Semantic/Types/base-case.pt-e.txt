@@ -3,44 +3,15 @@ oEmitValue              //value emitted is 2
 .tLiteralAddress    
 oEmitDataAddress        //value emitted is 0
 .tFileDescriptor        // 'output'
-.tAssignBegin           // begin assignment for 'a'
-.tLiteralAddress        // address of 'a'
-oEmitValue              // emit value of address of 'a'
-.tLiteralInteger        // integer value of '1' - lower bound of array init
-oEmitValue              // value '1'
-.tLiteralInteger        // integer value of '5' - upper bound
-oEmitValue              // value '5'
-.tAssignBegin           // begin assignment for 'b'
-.tLiteralAddress        // address of 'b'
-oEmitValue              // emit value of address of 'b'
-.tLiteralAddress        // address of 'a'[0]
-oEmitValue              // emit the address of a[0]
-.tFetchInteger          // fetch the integer stored at the memory address of a[0]
 .tAssignBegin           // begin assignment for 'c'
 .tLiteralAddress        // address of 'c'
 oEmitValue              // emit value of address of 'c'
 .tLiteralBoolean        // 'false'
 oEmitValue              // 'false'
+.tAssignBoolean         // assign c = false
 .tAssignBegin           // begin assignment for 'd'
 .tLiteralAddress        // address of 'd'
 oEmitValue              // emit value of address of 'd'
-.tLiteralString         // 'Hello World'
-.tLiteralString         // "Hello world"
-oEmitValue  
-% value emitted 11      // integer value of string reference in memory table? 
-oEmitString             // emit the actual string value
-% value emitted 72      'h'
-% value emitted 101     "e"
-% value emitted 108     "l"
-% value emitted 108     'l'
-% value emitted 111     'o'
-% value emitted 32      ' '
-% value emitted 119     'w'
-% value emitted 111     'o'
-% value emitted 114     'r'
-% value emitted 108     'l'
-% value emitted 100     'd'
-.tParmEnd               // end the string parameters
 .tTrapBegin             // begin end of program trap
 .tTrap                  // end the program
 oEmitTrapKind(trHalt)   // emits 0
