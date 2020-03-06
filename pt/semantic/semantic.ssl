@@ -964,6 +964,8 @@ TypeBody :
                 @SymbolStkPushDefaultIntegerType
         		oValuePush(one)
         		oValuePush(one)
+                @EnterVariableAttributes
+                @Expression
             | *:                
                 @SimpleType     % pushes symbol and two value bounds
         	[ oSymbolStkChooseKind
