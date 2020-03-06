@@ -1355,7 +1355,6 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                     symbolStkTop := symbolStkTop + 1;
                     { The last compound token accepted must have been the identifier 
                       that we're pushing now. }
-                      write(compoundTokenValue);
                     symbolStkIdentTblRef[symbolStkTop] := compoundTokenValue;
                     symbolStkSymbolTblRef[symbolStkTop] := symbolRef;
                     symbolStkKind[symbolStkTop] := symbolTblKind[symbolRef];
