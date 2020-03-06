@@ -960,6 +960,10 @@ TypeBody :
             | sFile:
                 oTypeStkPush(tpFile)
                 @ComponentType
+            | sInitialValue:
+                @SymbolStkPushDefaultIntegerType
+        		oValuePush(one)
+        		oValuePush(one)
             | *:                
                 @SimpleType     % pushes symbol and two value bounds
         	[ oSymbolStkChooseKind
