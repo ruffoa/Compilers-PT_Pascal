@@ -1017,8 +1017,19 @@ ComponentType :
         [
             | sRange:   % subrange specification
                 %% Handle the array type declaration here...
+                oSymbolStkPop
+                oTypeStkPush(tpSubrange)
+                oTypeStkEnterBounds
+                [ oTypeStkVerifyBounds
+                    | yes:
+                    | *:
+                        oValuePop
+                        @ValuePushValuePlusOne
+                        oTypeStkEnterBounds
+                ]
                 oValuePop       % subrange upper
                 oValuePop       %          lower bound
+
                 oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                 @SubrangeUpperBound        % pushes value on value stack
             | *:         
