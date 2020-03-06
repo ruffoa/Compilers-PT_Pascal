@@ -955,7 +955,7 @@ TypeBody :
         [
             | sArray:
                 oTypeStkPush(tpArray)
-                @ComponentType
+                @SimpleType
                 @IndexType
             | sFile:
                 oTypeStkPush(tpFile)
