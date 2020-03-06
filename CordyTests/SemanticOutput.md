@@ -109,20 +109,6 @@ Output is:
    % value emitted 4
    .tFileDescriptor
       #eSimpleTypeReqd
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -131,23 +117,9 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tLiteralInteger on line 14 of bust.pt
-.tLiteralInteger !== oEmitValue on line 15 of bust.pt
-oEmitValue !== % value emitted 1 on line 16 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 17 of bust.pt
-.tLiteralAddress !== oEmitDataAddress on line 18 of bust.pt
-oEmitDataAddress !== % value emitted 8 on line 19 of bust.pt
-% value emitted 8 !== .tArrayDescriptor on line 20 of bust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 21 of bust.pt
-.tLiteralInteger !== oEmitValue on line 22 of bust.pt
-oEmitValue !== % value emitted 7 on line 23 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 24 of bust.pt
-.tLiteralAddress !== oEmitDataAddress on line 25 of bust.pt
-oEmitDataAddress !== % value emitted 12 on line 26 of bust.pt
-% value emitted 12 !== .tArrayDescriptor on line 27 of bust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 28 of bust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 29 of bust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 30 of bust.pt
- !== .tLiteralAddress on line 31 of bust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of bust.pt
+### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of bust.pt
+ !== .tLiteralAddress on line 17 of bust.pt
 
 ```
 end file
@@ -461,20 +433,6 @@ Output is:
    % value emitted 4
    .tFileDescriptor
       #eSimpleTypeReqd
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -483,23 +441,9 @@ File diff
 -------------------------
 ```
 #eSimpleTypeReqd !== .tLiteralInteger on line 14 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 15 of mbust.pt
-oEmitValue !== % value emitted 1 on line 16 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 17 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 18 of mbust.pt
-oEmitDataAddress !== % value emitted 8 on line 19 of mbust.pt
-% value emitted 8 !== .tArrayDescriptor on line 20 of mbust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 21 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 22 of mbust.pt
-oEmitValue !== % value emitted 7 on line 23 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 24 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 25 of mbust.pt
-oEmitDataAddress !== % value emitted 12 on line 26 of mbust.pt
-% value emitted 12 !== .tArrayDescriptor on line 27 of mbust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 28 of mbust.pt
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 29 of mbust.pt
-### Semantic assertion 3 failed: !== % value emitted 1 on line 30 of mbust.pt
- !== .tLiteralAddress on line 31 of mbust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of mbust.pt
+### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of mbust.pt
+ !== .tLiteralAddress on line 17 of mbust.pt
 
 ```
 end file
