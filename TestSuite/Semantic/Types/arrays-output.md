@@ -54,18 +54,51 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 0
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 0
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 8
+     .tArrayDescriptor
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tSubscriptBegin
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 0
+      .tSubscriptInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (6 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (29 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic assertion 11 failed: less than two types in type stack in oTypeStkEnterComponentReference !== .tTrapBegin on line 5 of arrays.pt
+-.tLiteralInteger !== .tTrapBegin on line 5 of arrays.pt
+-oEmitValue !== .tTrap on line 6 of arrays.pt
+-.tLiteralAddress !== oEmitTrapKind(trHalt) on line 7 of arrays.pt
 
 ```
 end file
