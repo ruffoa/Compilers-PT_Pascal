@@ -68,7 +68,6 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-      #eSimpleTypeReqd
      .tLiteralInteger
      oEmitValue
      % value emitted 1
@@ -78,7 +77,7 @@ Test output is:
      .tArrayDescriptor
      .tLiteralInteger
      oEmitValue
-     % value emitted 1
+     % value emitted 5
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8
@@ -88,22 +87,21 @@ Test output is:
 ```
 
 
-Warning, output length does not match (17 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (16 vs 46)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eSimpleTypeReqd !== .tAssignBegin on line 5 of base-case.pt
--.tLiteralInteger !== .tLiteralAddress on line 6 of base-case.pt
--.tLiteralAddress !== .tLiteralInteger on line 8 of base-case.pt
--oEmitDataAddress !== oEmitValue on line 9 of base-case.pt
--.tArrayDescriptor !== .tLiteralInteger on line 10 of base-case.pt
--.tLiteralInteger !== oEmitValue on line 11 of base-case.pt
--oEmitValue !== .tAssignBegin on line 12 of base-case.pt
--oEmitDataAddress !== oEmitValue on line 14 of base-case.pt
--.tArrayDescriptor !== .tLiteralAddress on line 15 of base-case.pt
--### Semantic assertion 59 failed: !== oEmitValue on line 16 of base-case.pt
+-.tLiteralInteger !== .tAssignBegin on line 5 of base-case.pt
+-oEmitValue !== .tLiteralAddress on line 6 of base-case.pt
+-.tLiteralAddress !== oEmitValue on line 7 of base-case.pt
+-oEmitDataAddress !== .tLiteralInteger on line 8 of base-case.pt
+-.tArrayDescriptor !== oEmitValue on line 9 of base-case.pt
+-.tLiteralAddress !== .tAssignBegin on line 12 of base-case.pt
+-oEmitDataAddress !== .tLiteralAddress on line 13 of base-case.pt
+-.tArrayDescriptor !== oEmitValue on line 14 of base-case.pt
+-### Semantic assertion 59 failed: !== .tLiteralAddress on line 15 of base-case.pt
 
 ```
 end file

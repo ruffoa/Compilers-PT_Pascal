@@ -15,6 +15,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 2: subrange or named type required
 ### Semantic assertion 59 failed: 
 ```
