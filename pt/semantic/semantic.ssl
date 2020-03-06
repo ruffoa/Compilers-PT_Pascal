@@ -1016,6 +1016,12 @@ ComponentType :
         @SimpleType     % pushes symbol and two value bounds
         [
             | sRange:   % subrange specification
+                %% Handle the array type declaration here...
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound
+                @TypeTblEnterIfNew
+                oTypeStkEnterComponentReference
+                oTypeStkPop
                 oTypeStkPush(tpInteger)
                 oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                 @SubrangeUpperBound        % pushes value on value stack
@@ -1102,7 +1108,6 @@ ValuePushTypeBounds :
         	oValuePushTypeStkLowerBound
         	oValuePushTypeStkUpperBound
             | *:
-            #eUndefinedIdentifier
         	oValuePush(one)
         	@ValuePushValuePlusOne
         ]
@@ -1163,7 +1168,7 @@ VariableDeclarations :
         	    @EnterVariableAttributes
 
                 oTypeStkPop
-        	oSymbolStkPop
+        	    oSymbolStkPop
             | *:
                 >
         ]};
