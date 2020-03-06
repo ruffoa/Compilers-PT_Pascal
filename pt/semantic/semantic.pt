@@ -2546,6 +2546,12 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                   Fix Address Stack, Case Stack and Case Display must be empty. }
                 begin
                     write('Value Stack', valueStackTop : 1);
+                    i := 1;
+                    
+                    while i <= valueStackTop do
+                    begin
+                        write(valueStack[valueStackTop]);
+                    end;
 
                     Assert(symbolStkTop = 0, assert49);
                     Assert(typeStkTop = 0, assert50);
