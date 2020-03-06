@@ -13,7 +13,8 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 3: subrange or named type required
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
-### Semantic assertion 50 failed: type stack not empty at end of semantic phase
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+    (parser output stream does not match expected input stream)
+while processing line          3
+### Semantic assertion 3 failed: 
 ```

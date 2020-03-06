@@ -58,21 +58,13 @@ Test output is:
       .tLiteralBoolean
       oEmitValue
       % value emitted 0
-     #eSimpleTypeReqd
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
-### Semantic assertion 50 failed: type stack not empty at end of semantic phase
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (15 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
+Warning, output length does not match (9 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -80,7 +72,7 @@ File diff
 ```diff
 -.tLiteralBoolean !== .tTrapBegin on line 5 of initial-values.pt
 -oEmitValue !== .tTrap on line 6 of initial-values.pt
--#eSimpleTypeReqd !== oEmitTrapKind(trHalt) on line 7 of initial-values.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitTrapKind(trHalt) on line 7 of initial-values.pt
 
 ```
 end file
