@@ -1102,6 +1102,7 @@ ValuePushTypeBounds :
         	oValuePushTypeStkLowerBound
         	oValuePushTypeStkUpperBound
             | *:
+            #eUndefinedIdentifier
         	oValuePush(one)
         	@ValuePushValuePlusOne
         ]

@@ -53,7 +53,7 @@ Test output is:
    .tLiteralAddress
    oEmitDataAddress
    % value emitted 0
-   .tFileDescriptor
+   .tFileDescriptor     // start
      .tLiteralInteger
      oEmitValue
      % value emitted 0
@@ -68,19 +68,19 @@ Test output is:
      oEmitDataAddress
      % value emitted 8
      .tArrayDescriptor
-    .tAssignBegin
+    .tAssignBegin         // a[0] = 1
      .tLiteralAddress
      oEmitValue
      % value emitted 4
-      .tSubscriptBegin
+      .tSubscriptBegin    // [0]
         .tLiteralInteger
         oEmitValue
         % value emitted 0
-      .tSubscriptInteger
-      .tLiteralInteger
+      .tSubscriptInteger  // [] = 0
+      .tLiteralInteger    // 1
       oEmitValue
       % value emitted 1
-    .tAssignInteger
+    .tAssignInteger       // a[0] = 1
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
