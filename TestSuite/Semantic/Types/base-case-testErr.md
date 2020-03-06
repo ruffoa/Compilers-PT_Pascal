@@ -15,5 +15,10 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-### Semantic assertion 59 failed: 
+semantic error, line 3: identifier not declared
+semantic error, line 3: identifier not declared
+semantic error, line 3: array variable required
+### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
+### Semantic assertion 50 failed: type stack not empty at end of semantic phase
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 ```

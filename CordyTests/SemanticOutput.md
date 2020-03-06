@@ -45,28 +45,16 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 25
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic assertion 59 failed: 
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 59 failed: !== .tSkipProc on line 21 of bubblesort.pt
- !== oEmitNullAddress on line 22 of bubblesort.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of bubblesort.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 8 of bubblesort.pt
+ !== % value emitted 1 on line 9 of bubblesort.pt
 
 ```
 end file
@@ -325,28 +313,16 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 8
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic assertion 59 failed: 
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 59 failed: !== .tLiteralInteger on line 21 of lunch.pt
- !== oEmitValue on line 22 of lunch.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of lunch.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 8 of lunch.pt
+ !== % value emitted 1 on line 9 of lunch.pt
 
 ```
 end file
@@ -452,28 +428,16 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 15
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic assertion 59 failed: 
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 59 failed: !== .tSkipProc on line 21 of pascal.pt
- !== oEmitNullAddress on line 22 of pascal.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of pascal.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 8 of pascal.pt
+ !== % value emitted 1 on line 9 of pascal.pt
 
 ```
 end file
