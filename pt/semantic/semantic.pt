@@ -2551,7 +2551,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                     while i <= valueStackTop do
                     begin
                         write(valueStack[valueStackTop]);
-                        i = i + 1;
+                        i := i + 1;
                     end;
 
                     Assert(symbolStkTop = 0, assert49);
