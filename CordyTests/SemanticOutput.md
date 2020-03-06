@@ -90,28 +90,18 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 7
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
-### Semantic assertion 59 failed: 
+     #eUndefinedIdentifier
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 59 failed: !== .tLiteralInteger on line 28 of bust.pt
- !== oEmitValue on line 29 of bust.pt
+#eUndefinedIdentifier !== .tLiteralInteger on line 14 of bust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of bust.pt
+### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of bust.pt
+ !== .tLiteralAddress on line 17 of bust.pt
 
 ```
 end file
@@ -406,28 +396,18 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 7
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
-### Semantic assertion 59 failed: 
+     #eUndefinedIdentifier
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
-### Semantic assertion 59 failed: !== .tLiteralInteger on line 28 of mbust.pt
- !== oEmitValue on line 29 of mbust.pt
+#eUndefinedIdentifier !== .tLiteralInteger on line 14 of mbust.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 15 of mbust.pt
+### Semantic assertion 3 failed: !== % value emitted 1 on line 16 of mbust.pt
+ !== .tLiteralAddress on line 17 of mbust.pt
 
 ```
 end file
