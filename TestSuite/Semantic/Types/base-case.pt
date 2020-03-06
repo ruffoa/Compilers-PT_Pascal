@@ -4,5 +4,6 @@ mod main (output) {
     const b = a[0];
     let c: bool;
     c = false;
-    let d: str = "Hello World";
+    let d: str;
+    d = "Hello World";
 } 
