@@ -994,6 +994,7 @@ IndexType :
         % Accept and fill in index bounds of array type stack entry
         % @SimpleType     % pushes symbol and two value bounds
 
+        % oSymbolStkPop
         % Enter and check the bounds of the array type
         oTypeStkEnterBounds
         [ oTypeStkVerifyBounds
@@ -1005,14 +1006,12 @@ IndexType :
         ]
         oValuePop       % subrange upper
         oValuePop;      %          lower bound
-        oSymbolStkPop
 
 ComponentType :
         % Accept and fill in an  array or file component type
         @SimpleType     % pushes symbol and two value bounds
         [
             | sRange:   % subrange specification
-                oTypeStkPush(tpInteger)
                 oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
                 @SubrangeUpperBound        % pushes value on value stack
             | *:         
