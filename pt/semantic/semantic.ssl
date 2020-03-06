@@ -1177,8 +1177,13 @@ VariableDeclarations :
                 @TypeBody
         	    @EnterVariableAttributes
 
+                [
+                    | sInitialValue: 
+                        @Expression
+                    | *:
+                ]
                 oTypeStkPop
-        	oSymbolStkPop
+        	    oSymbolStkPop
             | *:
                 >
         ]};
