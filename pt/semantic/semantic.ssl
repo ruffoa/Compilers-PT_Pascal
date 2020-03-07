@@ -1076,29 +1076,8 @@ SimpleType :
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
             | sRange:   % subrange specification
-                [ oSymbolStkChooseKind
-                    | syConstant:       
-                        oTypeStkPushSymbol
-                        [ oTypeStkChooseKind
-                            | tpInteger:        
-                                oValuePushSymbol
-                            | *:
-                                #eIntegerConstReqd
-                                oValuePush(one)
-                        ]
-                        [
-                            | sNegate:
-                                oValueNegate
-                            | *:
-                        ]
-                        oTypeStkPop
-                    | syUndefined:
-                        #eUndefinedIdentifier
-                        oValuePush(one)
-                    | *:
-                        #eIntegerConstReqd
-                        oValuePush(one)
-                ]
+                oTypeStkPush(tpSubrange)
+                oValuePush(one)
                 @SubrangeUpperBound        % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
