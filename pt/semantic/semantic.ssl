@@ -1198,13 +1198,13 @@ VariableDeclarations :
                         oSymbolStkPop
                         @TypeTblEnterIfNew
                         @EnterVariableAttributes
-                        @Expression
+                        @Assignment
                     | *:
                         @TypeBody
                         @EnterVariableAttributes
                         [
                             | sInitialValue: 
-                                @Expression
+                                @Assignment
                             | *:
                         ]
                 ]
