@@ -1047,8 +1047,8 @@ SimpleType :
         % and two entries for its bounds on the Value Stack.
         [
             | sIdentifier:
-                oSymbolStkPushIdentifier          
-
+                oSymbolStkPushIdentifier
+                % type identifier
                 [ oSymbolStkChooseKind
                     | syType:
                         @ValuePushTypeBounds
@@ -1075,22 +1075,36 @@ SimpleType :
                 ]
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
-            | sRange: 
-                %% Handle the array type declaration here...
+            | sRange:   % subrange specification
                 [ oSymbolStkChooseKind
                     | syConstant:       
                         oTypeStkPushSymbol
-                        oValuePush(one)
+                        [ oTypeStkChooseKind
+                            | tpInteger:        
+                                oValuePushSymbol
+                            | *:
+                                #eIntegerConstReqd
+                                oValuePush(one)
+                        ]
+                        [
+                            | sNegate:
+                                oValueNegate
+                            | *:
+                        ]
                         oTypeStkPop
+                    | syUndefined:
+                        #eUndefinedIdentifier
+                        oValuePush(one)
                     | *:
+                        #eIntegerConstReqd
                         oValuePush(one)
                 ]
                 @SubrangeUpperBound        % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
-                oValuePush(one)
-                oValuePush(one)
+        	oValuePush(one)
+        	oValuePush(one)
         ];
 
 ValuePushTypeBounds :
