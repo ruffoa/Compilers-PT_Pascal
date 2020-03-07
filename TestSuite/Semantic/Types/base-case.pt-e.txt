@@ -12,12 +12,9 @@ oEmitValue              // 'false'
 .tAssignBegin           // begin assignment for 'd'
 .tLiteralAddress        // address of 'd'
 oEmitValue              // emit value of address of 'd'
-.tAssignBegin           // begin assignment of 'd = 1'
-.tLiteralAddress        // address of 'd'
-oEmitValue
 .tLiteralInteger        // '1'
 oEmitValue
-.tAssignInteger         // d = 1
+.tAssignInteger         // assign d = 1
 .tSkipString            // ????? - added in this as it was in the output, and idk what it does, but string are still WIP, so ¯\_(ツ)_/¯
 oEmitNullAddress        // ?????
 .tLiteralString         // s = "Hi"
