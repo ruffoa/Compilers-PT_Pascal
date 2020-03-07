@@ -55,31 +55,39 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-      .tLiteralBoolean
-      oEmitValue
-      % value emitted 0
-     .tLiteralInteger
+    .tAssignBegin
+     .tLiteralAddress
      oEmitValue
-     % value emitted 1
+     % value emitted 4
+       .tLiteralBoolean
+       oEmitValue
+       % value emitted 0
+    .tAssignBoolean
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 8
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
-### Semantic assertion 50 failed: type stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (14 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
+Warning, output length does not match (20 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralBoolean !== .tTrapBegin on line 5 of initial-values.pt
--oEmitValue !== .tTrap on line 6 of initial-values.pt
--.tLiteralInteger !== oEmitTrapKind(trHalt) on line 7 of initial-values.pt
+-.tAssignBegin !== .tTrapBegin on line 5 of initial-values.pt
+-.tLiteralAddress !== .tTrap on line 6 of initial-values.pt
+-oEmitValue !== oEmitTrapKind(trHalt) on line 7 of initial-values.pt
 
 ```
 end file
