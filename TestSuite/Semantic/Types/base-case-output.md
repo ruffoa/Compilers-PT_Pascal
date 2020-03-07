@@ -91,11 +91,12 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 4
 
 ```
 
 
-Warning, output length does not match (25 vs 28)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (26 vs 28)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -112,6 +113,7 @@ File diff
 -.tTrapBegin !== .tLiteralString on line 22 of base-case.pt
 -.tTrap !== oEmitValue on line 23 of base-case.pt
 -oEmitTrapKind(trHalt) !== oEmitString on line 24 of base-case.pt
+-### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 4 !== .tTrapBegin on line 25 of base-case.pt
 
 ```
 end file
