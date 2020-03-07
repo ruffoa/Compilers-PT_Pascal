@@ -83,7 +83,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--oEmitValue !== .oEmitValue on line 9 of initial-values.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
