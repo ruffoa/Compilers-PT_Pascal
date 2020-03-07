@@ -1005,7 +1005,7 @@ IndexType :
         ]
         oValuePop       % subrange upper
         oValuePop       %          lower bound
-        oTypeStkPop
+        oTypeStkPop;
 
 ComponentType :
         % Accept and fill in an  array or file component type
