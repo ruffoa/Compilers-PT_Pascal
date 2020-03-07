@@ -964,17 +964,17 @@ TypeBody :
                 @SimpleType     % pushes symbol and two value bounds
                 [ oSymbolStkChooseKind
                     | syType:
-                    oTypeStkPushSymbol
+                        oTypeStkPushSymbol
                     | *:        
-                    oTypeStkPush(tpSubrange)
-                    oTypeStkEnterBounds
-                    [ oTypeStkVerifyBounds
-                        | yes:
-                        | *:
-                        oValuePop
-                        @ValuePushValuePlusOne
+                        oTypeStkPush(tpSubrange)
                         oTypeStkEnterBounds
-                    ]
+                        [ oTypeStkVerifyBounds
+                            | yes:
+                            | *:
+                            oValuePop
+                            @ValuePushValuePlusOne
+                            oTypeStkEnterBounds
+                        ]
                 ]
                 oValuePop       % subrange upper
                 oValuePop       %          lower bound-----
@@ -1103,10 +1103,6 @@ SimpleType :
                 ]
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
-            | sInitialValue:
-                @SymbolStkPushDefaultIntegerType
-                oValuePush(one)
-                oValuePush(one)
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
@@ -1178,12 +1174,26 @@ VariableDeclarations :
 
                 % Accepts a type specification and pushes its type to the Type Stack.
                 % Creates type table entries for the type and any new subtypes as necessary.
-                @TypeBody
-                @EnterVariableAttributes
                 [
-                    | sInitialValue: 
+                    | sInitialValue:
+                        @SymbolStkPushDefaultIntegerType
+                        oValuePush(one)
+                        oValuePush(one)
+                        oTypeStkPushSymbol
+                        oValuePop       % subrange upper
+                        oValuePop       %          lower bound-----
+                        % oSymbolStkPop
+                        @TypeTblEnterIfNew
+                        @EnterVariableAttributes
                         @Expression
                     | *:
+                        @TypeBody
+                        @EnterVariableAttributes
+                        [
+                            | sInitialValue: 
+                                @Expression
+                            | *:
+                        ]
                 ]
 
                 oTypeStkPop
