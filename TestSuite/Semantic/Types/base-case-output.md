@@ -96,15 +96,15 @@ Test output is:
 ```
 
 
-Warning, output length does not match (26 vs 25)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (26 vs 20)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tSkipString !== .tTrapBegin on line 17 of base-case.pt
+-oEmitNullAddress !== .tTrap on line 18 of base-case.pt
+-.tLiteralString !== oEmitTrapKind(trHalt) on line 19 of base-case.pt
 
 ```
 end file
