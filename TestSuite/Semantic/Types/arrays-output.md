@@ -54,19 +54,18 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+      #eUndefinedIdentifier
 
 ```
 
 
-Warning, output length does not match (5 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (6 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eUndefinedIdentifier !== .tTrapBegin on line 5 of arrays.pt
 
 ```
 end file

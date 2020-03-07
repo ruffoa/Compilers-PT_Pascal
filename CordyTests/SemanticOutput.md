@@ -45,12 +45,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+      #eUndefinedIdentifier
 
 ```
 File diff
 -------------------------
 ```
- !== .tLiteralInteger on line 7 of bubblesort.pt
+#eUndefinedIdentifier !== .tLiteralInteger on line 7 of bubblesort.pt
+ !== oEmitValue on line 8 of bubblesort.pt
 
 ```
 end file
@@ -74,12 +76,14 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+      #eIntegerConstReqd
 
 ```
 File diff
 -------------------------
 ```
- !== .tLiteralInteger on line 14 of bust.pt
+#eIntegerConstReqd !== .tLiteralInteger on line 14 of bust.pt
+ !== oEmitValue on line 15 of bust.pt
 
 ```
 end file
@@ -303,12 +307,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+      #eUndefinedIdentifier
 
 ```
 File diff
 -------------------------
 ```
- !== .tLiteralInteger on line 7 of lunch.pt
+#eUndefinedIdentifier !== .tLiteralInteger on line 7 of lunch.pt
+ !== oEmitValue on line 8 of lunch.pt
 
 ```
 end file
@@ -358,12 +364,14 @@ Output is:
    oEmitDataAddress
    % value emitted 4
    .tFileDescriptor
+      #eIntegerConstReqd
 
 ```
 File diff
 -------------------------
 ```
- !== .tLiteralInteger on line 14 of mbust.pt
+#eIntegerConstReqd !== .tLiteralInteger on line 14 of mbust.pt
+ !== oEmitValue on line 15 of mbust.pt
 
 ```
 end file
@@ -408,12 +416,14 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+      #eUndefinedIdentifier
 
 ```
 File diff
 -------------------------
 ```
- !== .tLiteralInteger on line 7 of pascal.pt
+#eUndefinedIdentifier !== .tLiteralInteger on line 7 of pascal.pt
+ !== oEmitValue on line 8 of pascal.pt
 
 ```
 end file

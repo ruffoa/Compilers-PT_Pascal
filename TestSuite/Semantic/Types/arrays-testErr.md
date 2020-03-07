@@ -13,5 +13,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
+semantic error, line 2: identifier not declared
 
 ```
