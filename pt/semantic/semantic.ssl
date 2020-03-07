@@ -1076,7 +1076,7 @@ SimpleType :
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
             | sRange:   % subrange specification
-                oTypeStkPush(tpSubrange)
+                oTypeStkPush(tpInteger)
                 oValuePush(one)
                 @SubrangeUpperBound        % pushes value on value stack
             | *:
