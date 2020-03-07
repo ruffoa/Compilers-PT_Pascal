@@ -7,7 +7,6 @@ mod main (output) {
     c = false;
     let d: int;
     d = 1;
-    const s = "Hi";
 }
 ```
 ------------------------

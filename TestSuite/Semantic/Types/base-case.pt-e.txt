@@ -15,11 +15,6 @@ oEmitValue              // emit value of address of 'd'
 .tLiteralInteger        // '1'
 oEmitValue
 .tAssignInteger         // assign d = 1
-.tSkipString            // ????? - added in this as it was in the output, and idk what it does, but string are still WIP, so ¯\_(ツ)_/¯
-oEmitNullAddress        // ?????
-.tLiteralString         // s = "Hi"
-oEmitValue              // emit the hardcoded string value
-oEmitString             // literal string "Hi"
 .tTrapBegin             // begin end of program trap
 .tTrap                  // end the program
 oEmitTrapKind(trHalt)   // emits 0
