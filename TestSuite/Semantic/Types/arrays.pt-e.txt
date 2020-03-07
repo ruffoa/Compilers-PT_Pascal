@@ -3,6 +3,20 @@ oEmitValue              // value emitted is 2
 .tLiteralAddress
 oEmitDataAddress        // value emitted is 0
 .tFileDescriptor        // File for main program
+.tLiteralInteger        // '1' is faked for the array range lower bound
+.tLiteralInteger        // '5' -> upper bound
+.tLiteralAddress        // address of 'a'
+oEmitDataAddress
+.tArrayDescriptor       // a
+.tAssignBegin           // begin assignment of a[0] = 1;
+.tLiteralAddress        // address of a[0]
+oEmitValue
+.tSubscriptBegin        // [0]
+.tLiteralInteger        // '0'
+.tSubscriptInteger      // [0]
+.tLiteralInteger        // = 1
+oEmitValue
+.tAssignInteger         // a[0] = 1
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0

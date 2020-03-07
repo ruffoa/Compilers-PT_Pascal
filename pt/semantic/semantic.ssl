@@ -1004,8 +1004,7 @@ IndexType :
         	oTypeStkEnterBounds
         ]
         oValuePop       % subrange upper
-        oValuePop       %          lower bound
-        oTypeStkPop;
+        oValuePop;      %          lower bound
 
 ComponentType :
         % Accept and fill in an  array or file component type
@@ -1040,7 +1039,8 @@ ComponentType :
         oValuePop       %          lower bound
         % Enter it as the component type of the file or array
         @TypeTblEnterIfNew
-        oTypeStkEnterComponentReference;
+        oTypeStkEnterComponentReference
+        oTypeStkPop;
 
 SimpleType :
         % Accept a simple type and push a Symbol Stack entry for it,
