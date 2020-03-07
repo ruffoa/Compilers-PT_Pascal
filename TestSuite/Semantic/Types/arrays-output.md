@@ -54,48 +54,22 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 5
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tSubscriptBegin
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tSubscriptInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-    .tAssignInteger
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+      #eIntegerConstReqd
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
 
+Warning, output length does not match (8 vs 28)!  (Newlines are not the issue here!) `arrays.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eIntegerConstReqd !== .tLiteralInteger on line 5 of arrays.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== oEmitValue on line 6 of arrays.pt
+-### Semantic assertion 3 failed: !== .tLiteralAddress on line 7 of arrays.pt
 
 ```
 end file

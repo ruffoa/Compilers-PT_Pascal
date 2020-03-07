@@ -110,10 +110,13 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
+### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 2
 
 ```
 
 
+Warning, output length does not match (34 vs 33)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
