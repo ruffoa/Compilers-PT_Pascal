@@ -992,8 +992,7 @@ TypeTblEnterIfNew:
 
 IndexType :
         % Accept and fill in index bounds of array type stack entry
-        % @SimpleType     % pushes symbol and two value bounds
-
+        @SimpleType     % pushes symbol and two value bounds
         oSymbolStkPop
         % Enter and check the bounds of the array type
         oTypeStkEnterBounds
@@ -1005,18 +1004,26 @@ IndexType :
         	oTypeStkEnterBounds
         ]
         oValuePop       % subrange upper
-        oValuePop       %          lower bound
-
-        @TypeTblEnterIfNew
-        oTypeStkEnterComponentReference
-        oTypeStkPop;
+        oValuePop;      %          lower bound
 
 ComponentType :
         % Accept and fill in an  array or file component type
         @SimpleType     % pushes symbol and two value bounds
-        [
-            | sRange:   % subrange specification
-                %% Handle the array type declaration here...
+        [ oSymbolStkChooseKind
+            | syType:
+                oTypeStkPushSymbol
+                [ oTypeStkChooseKind
+                    | tpArray, tpFile:
+                        % Component types must be scalar
+                        #eScalarReqd
+                        oSymbolStkPop
+                        oTypeStkPop
+                        @SymbolStkPushDefaultIntegerType
+                        oTypeStkPushSymbol
+                    | *:
+                ]
+                oSymbolStkPop
+            | *:        % type was specified with a subrange
                 oSymbolStkPop
                 oTypeStkPush(tpSubrange)
                 oTypeStkEnterBounds
@@ -1027,45 +1034,13 @@ ComponentType :
                         @ValuePushValuePlusOne
                         oTypeStkEnterBounds
                 ]
-                oValuePop       % subrange upper
-                oValuePop       %          lower bound
-
-                oValuePush(one)            % push the initial value of 1 onto the stack for array init statements
-                @SubrangeUpperBound        % pushes value on value stack
-            | *:         
-                [ oSymbolStkChooseKind
-                    | syType:
-                        oTypeStkPushSymbol
-                        [ oTypeStkChooseKind
-                            | tpArray, tpFile:
-                                % Component types must be scalar
-                                #eScalarReqd
-                                oSymbolStkPop
-                                oTypeStkPop
-                                @SymbolStkPushDefaultIntegerType
-                                oTypeStkPushSymbol
-                            | *:
-                        ]
-                        oSymbolStkPop
-                    | *:        % type was specified with a subrange
-                        oSymbolStkPop
-                        oTypeStkPush(tpSubrange)
-                        oTypeStkEnterBounds
-                        [ oTypeStkVerifyBounds
-                            | yes:
-                            | *:
-                                oValuePop
-                                @ValuePushValuePlusOne
-                                oTypeStkEnterBounds
-                        ]
-                ]
-                oValuePop       % subrange upper
-                oValuePop       %          lower bound
-                % Enter it as the component type of the file or array
-                @TypeTblEnterIfNew
-                oTypeStkEnterComponentReference
-                oTypeStkPop
-        ];
+        ]
+        oValuePop       % subrange upper
+        oValuePop       %          lower bound
+        % Enter it as the component type of the file or array
+        @TypeTblEnterIfNew
+        oTypeStkEnterComponentReference
+        oTypeStkPop;
 
 SimpleType :
         % Accept a simple type and push a Symbol Stack entry for it,
@@ -1100,6 +1075,17 @@ SimpleType :
                 ]
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
+            | sRange: 
+                %% Handle the array type declaration here...
+                [ oSymbolStkChooseKind
+                    | syConstant:       
+                        oTypeStkPushSymbol
+                        oValuePush(one)
+                        oTypeStkPop
+                    | *:
+                        oValuePush(one)
+                ]
+                @SubrangeUpperBound        % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
