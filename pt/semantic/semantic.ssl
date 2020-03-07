@@ -962,23 +962,23 @@ TypeBody :
                 @ComponentType
             | *:                
                 @SimpleType     % pushes symbol and two value bounds
-        	[ oSymbolStkChooseKind
-        	    | syType:
-        		oTypeStkPushSymbol
-        	    | *:        
-        		oTypeStkPush(tpSubrange)
-        		oTypeStkEnterBounds
-        		[ oTypeStkVerifyBounds
-        		    | yes:
-        		    | *:
-        			oValuePop
-        			@ValuePushValuePlusOne
-        			oTypeStkEnterBounds
-        		]
-        	]
-        	oValuePop       % subrange upper
-        	oValuePop       %          lower bound-----
-        	oSymbolStkPop
+                [ oSymbolStkChooseKind
+                    | syType:
+                        oTypeStkPushSymbol
+                    | *:        
+                        oTypeStkPush(tpSubrange)
+                        oTypeStkEnterBounds
+                        [ oTypeStkVerifyBounds
+                            | yes:
+                            | *:
+                            oValuePop
+                            @ValuePushValuePlusOne
+                            oTypeStkEnterBounds
+                        ]
+                ]
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound-----
+                oSymbolStkPop
         ]
         % If it's a new type, enter it in the Type Table
         @TypeTblEnterIfNew;
@@ -1078,19 +1078,19 @@ SimpleType :
                         % type identifier
                         [ oSymbolStkChooseKind
                             | syType:
-        			@ValuePushTypeBounds
+        			            @ValuePushTypeBounds
                             | syUndefined:
                                 #eUndefinedIdentifier
                                 oSymbolStkPop
                                 @SymbolStkPushDefaultIntegerType
-        			oValuePush(one)
-        			oValuePush(one)
+                                oValuePush(one)
+                                oValuePush(one)
                             | *:
                                 #eSimpleTypeReqd
                                 oSymbolStkPop
                                 @SymbolStkPushDefaultIntegerType
-        			oValuePush(one)
-        			oValuePush(one)
+                                oValuePush(one)
+                                oValuePush(one)
                         ]
                 ]
             | sInteger:         % lower bound of subrange specification
@@ -1102,12 +1102,12 @@ SimpleType :
                     | *:
                 ]
                 sRange
-        	@SubrangeUpperBound     % pushes value on value stack
+        	    @SubrangeUpperBound     % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
-        	oValuePush(one)
-        	oValuePush(one)
+                oValuePush(one)
+                oValuePush(one)
         ];
 
 ValuePushTypeBounds :
@@ -1174,11 +1174,30 @@ VariableDeclarations :
 
                 % Accepts a type specification and pushes its type to the Type Stack.
                 % Creates type table entries for the type and any new subtypes as necessary.
-                @TypeBody
-        	    @EnterVariableAttributes
+                [
+                    | sInitialValue:
+                        @SymbolStkPushDefaultIntegerType
+                        oValuePush(one)
+                        oValuePush(one)
+                        oTypeStkPushSymbol
+                        oValuePop       % subrange upper
+                        oValuePop       %          lower bound-----
+                        oSymbolStkPop
+                        @TypeTblEnterIfNew
+                        @EnterVariableAttributes
+                        @Assignment
+                    | *:
+                        @TypeBody
+                        @EnterVariableAttributes
+                        [
+                            | sInitialValue: 
+                                @Assignment
+                            | *:
+                        ]
+                ]
 
                 oTypeStkPop
-        	oSymbolStkPop
+        	    oSymbolStkPop
             | *:
                 >
         ]};
