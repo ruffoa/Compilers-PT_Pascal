@@ -524,12 +524,16 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
- !== .tAssignBegin on line 7 of mprimes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 7 of mprimes.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 8 of mprimes.pt
+ !== oEmitValue on line 9 of mprimes.pt
 
 ```
 end file
@@ -604,12 +608,16 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 File diff
 -------------------------
 ```
- !== .tAssignBegin on line 7 of primes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 7 of primes.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 8 of primes.pt
+ !== oEmitValue on line 9 of primes.pt
 
 ```
 end file
