@@ -79,15 +79,11 @@ Test output is:
 ```
 
 
-Warning, output length does not match (20 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of initial-values.pt
--.tLiteralAddress !== .tTrap on line 6 of initial-values.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of initial-values.pt
+-oEmitValue !== .oEmitValue on line 9 of initial-values.pt
 
 ```
 end file
