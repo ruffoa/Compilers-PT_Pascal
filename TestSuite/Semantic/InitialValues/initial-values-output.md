@@ -67,12 +67,11 @@ Test output is:
  % value emitted 0
 ### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
 ### Semantic assertion 50 failed: type stack not empty at end of semantic phase
-### Semantic assertion 53 failed: value stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (15 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
+Warning, output length does not match (14 vs 8)!  (Newlines are not the issue here!) `initial-values.pt`
 Showing as much of the diff as possible...
 
 File diff
