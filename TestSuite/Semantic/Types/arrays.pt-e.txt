@@ -4,6 +4,7 @@ oEmitValue              // value emitted is 2
 oEmitDataAddress        // value emitted is 0
 .tFileDescriptor        // File for main program
 .tLiteralInteger        // '1' is faked for the array range lower bound
+oEmitValue
 .tLiteralAddress        // address of 'a'
 oEmitDataAddress
 .tArrayDescriptor
@@ -17,6 +18,7 @@ oEmitDataAddress
 oEmitValue
 .tSubscriptBegin        // [0]
 .tLiteralInteger        // '0'
+oEmitValue
 .tSubscriptInteger      // [0]
 .tLiteralInteger        // = 1
 oEmitValue
