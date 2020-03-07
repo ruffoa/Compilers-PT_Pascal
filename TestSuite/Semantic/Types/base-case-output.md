@@ -96,24 +96,15 @@ Test output is:
 ```
 
 
-Warning, output length does not match (26 vs 28)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (26 vs 25)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralInteger !== .tAssignBegin on line 14 of base-case.pt
--oEmitValue !== .tLiteralAddress on line 15 of base-case.pt
--.tAssignInteger !== oEmitValue on line 16 of base-case.pt
--.tSkipString !== .tLiteralInteger on line 17 of base-case.pt
--oEmitNullAddress !== oEmitValue on line 18 of base-case.pt
--.tLiteralString !== .tAssignInteger on line 19 of base-case.pt
--oEmitValue !== .tSkipString on line 20 of base-case.pt
--oEmitString !== oEmitNullAddress on line 21 of base-case.pt
--.tTrapBegin !== .tLiteralString on line 22 of base-case.pt
--.tTrap !== oEmitValue on line 23 of base-case.pt
--oEmitTrapKind(trHalt) !== oEmitString on line 24 of base-case.pt
--### Semantic assertion 53 failed: value stack not empty at end of semantic phase, size: 4 !== .tTrapBegin on line 25 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
