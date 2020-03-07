@@ -7,7 +7,7 @@ oEmitDataAddress        // value emitted is 0
 .tLiteralAddress        // address of x
 oEmitValue              // emits address of x
 .tLiteralBoolean        // x = false
-.oEmitValue             // false
+oEmitValue             // false
 .tAssignBoolean         // assign x = false
 .tAssignBegin           // begin y = 1
 .tLiteralAddress        // addr of y
