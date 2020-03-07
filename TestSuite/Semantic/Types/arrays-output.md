@@ -54,19 +54,50 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 0
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 0
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 8
+     .tArrayDescriptor
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tSubscriptBegin
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 0
+      .tSubscriptInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (5 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (28 vs 8)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tLiteralInteger !== .tTrapBegin on line 5 of arrays.pt
+-oEmitValue !== .tTrap on line 6 of arrays.pt
+-.tLiteralAddress !== oEmitTrapKind(trHalt) on line 7 of arrays.pt
 
 ```
 end file
