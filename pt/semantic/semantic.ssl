@@ -1179,20 +1179,7 @@ VariableDeclarations :
                         @SymbolStkPushDefaultIntegerType
                         oValuePush(one)
                         oValuePush(one)
-                        [ oSymbolStkChooseKind
-                            | syType:
-                                oTypeStkPushSymbol
-                            | *:        
-                                oTypeStkPush(tpSubrange)
-                                oTypeStkEnterBounds
-                                [ oTypeStkVerifyBounds
-                                    | yes:
-                                    | *:
-                                    oValuePop
-                                    @ValuePushValuePlusOne
-                                    oTypeStkEnterBounds
-                                ]
-                        ]
+                        oTypeStkPushSymbol
                         oValuePop       % subrange upper
                         oValuePop       %          lower bound-----
                         oSymbolStkPop
