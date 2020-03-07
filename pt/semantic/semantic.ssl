@@ -962,23 +962,23 @@ TypeBody :
                 @ComponentType
             | *:                
                 @SimpleType     % pushes symbol and two value bounds
-        	[ oSymbolStkChooseKind
-        	    | syType:
-        		oTypeStkPushSymbol
-        	    | *:        
-        		oTypeStkPush(tpSubrange)
-        		oTypeStkEnterBounds
-        		[ oTypeStkVerifyBounds
-        		    | yes:
-        		    | *:
-        			oValuePop
-        			@ValuePushValuePlusOne
-        			oTypeStkEnterBounds
-        		]
-        	]
-        	oValuePop       % subrange upper
-        	oValuePop       %          lower bound-----
-        	oSymbolStkPop
+                [ oSymbolStkChooseKind
+                    | syType:
+                    oTypeStkPushSymbol
+                    | *:        
+                    oTypeStkPush(tpSubrange)
+                    oTypeStkEnterBounds
+                    [ oTypeStkVerifyBounds
+                        | yes:
+                        | *:
+                        oValuePop
+                        @ValuePushValuePlusOne
+                        oTypeStkEnterBounds
+                    ]
+                ]
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound-----
+                oSymbolStkPop
         ]
         % If it's a new type, enter it in the Type Table
         @TypeTblEnterIfNew;
@@ -1078,7 +1078,7 @@ SimpleType :
                         % type identifier
                         [ oSymbolStkChooseKind
                             | syType:
-        			@ValuePushTypeBounds
+        			            @ValuePushTypeBounds
                             | syUndefined:
                                 #eUndefinedIdentifier
                                 oSymbolStkPop
@@ -1103,6 +1103,10 @@ SimpleType :
                 ]
                 sRange
         	    @SubrangeUpperBound     % pushes value on value stack
+            | sInitialValue:
+                @SymbolStkPushDefaultIntegerType
+                oValuePush(one)
+                oValuePush(one)
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
@@ -1174,22 +1178,12 @@ VariableDeclarations :
 
                 % Accepts a type specification and pushes its type to the Type Stack.
                 % Creates type table entries for the type and any new subtypes as necessary.
+                @TypeBody
+                @EnterVariableAttributes
                 [
-                    | sInitialValue:
-                        @SymbolStkPushDefaultIntegerType
-                        % oValuePush(one)
-                        % oValuePush(one)
-                        @EnterVariableAttributes
+                    | sInitialValue: 
                         @Expression
                     | *:
-                        @TypeBody
-                        @EnterVariableAttributes
-                        [
-                            | sInitialValue: 
-                                @Expression
-                            | *:
-                        ]
-
                 ]
 
                 oTypeStkPop
