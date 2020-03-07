@@ -1067,12 +1067,13 @@ SimpleType :
                 ]
             | sRange:   % subrange specification
                 oValuePush(one)
+                oSymbolStkPush(syConstant)
                 @SubrangeUpperBound        % pushes value on value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
-        	oValuePush(one)
-        	oValuePush(one)
+                oValuePush(one)
+                oValuePush(one)
         ];
 
 ValuePushTypeBounds :
