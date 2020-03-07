@@ -1182,7 +1182,8 @@ VariableDeclarations :
                         oTypeStkPushSymbol
                         oValuePop       % subrange upper
                         oValuePop       %          lower bound-----
-                        % oSymbolStkPop
+                        oSymbolStkPop
+                        oTypeStkPop
                         @TypeTblEnterIfNew
                         @EnterVariableAttributes
                         @Expression
