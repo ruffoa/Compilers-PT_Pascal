@@ -17,6 +17,7 @@ oEmitValue
 .tAssignInteger         // end j = 0
 .tWhileBegin            // loop start
 .tWhilePreBreak         // loop contents before break statement
+oEmitNullAddress
 .tAssignBegin           // j -= 1;
 .tLiteralAddress
 oEmitValue
