@@ -1048,7 +1048,6 @@ SimpleType :
         [
             | sIdentifier:
                 oSymbolStkPushIdentifier
-<<<<<<< HEAD
                 % type identifier
                 [ oSymbolStkChooseKind
                     | syType:
@@ -1059,59 +1058,6 @@ SimpleType :
                         @SymbolStkPushDefaultIntegerType
                         oValuePush(one)
                         oValuePush(one)
-=======
-                [ 
-                    | sRange:   % subrange specification
-                        [ oSymbolStkChooseKind
-                            | syConstant:       
-                                oTypeStkPushSymbol
-                                [ oTypeStkChooseKind
-                                    | tpInteger:        
-                                        oValuePushSymbol
-                                    | *:
-                                        #eIntegerConstReqd
-                                        oValuePush(one)
-                                ]
-                                [
-                                    | sNegate:
-                                        oValueNegate
-                                    | *:
-                                ]
-                                oTypeStkPop
-                            | syUndefined:
-                                #eUndefinedIdentifier
-                                oValuePush(one)
-                            | *:
-                                #eIntegerConstReqd
-                                oValuePush(one)
-                        ]
-                        @SubrangeUpperBound        % pushes value on value stack
-                    | *:        
-                        % type identifier
-                        [ oSymbolStkChooseKind
-                            | syType:
-        			            @ValuePushTypeBounds
-                            | syUndefined:
-                                #eUndefinedIdentifier
-                                oSymbolStkPop
-                                @SymbolStkPushDefaultIntegerType
-                                oValuePush(one)
-                                oValuePush(one)
-                            | *:
-                                #eSimpleTypeReqd
-                                oSymbolStkPop
-                                @SymbolStkPushDefaultIntegerType
-                                oValuePush(one)
-                                oValuePush(one)
-                        ]
-                ]
-            | sInteger:         % lower bound of subrange specification
-                oValuePushInteger
-                oSymbolStkPush(syConstant)
-                [
-                    | sNegate:
-                        oValueNegate
->>>>>>> 8931b25b85a78df380921b165f0cef3e3949e873
                     | *:
                         #eSimpleTypeReqd
                         oSymbolStkPop
@@ -1119,15 +1065,10 @@ SimpleType :
                         oValuePush(one)
                         oValuePush(one)
                 ]
-<<<<<<< HEAD
             | sRange:   % subrange specification
                 oValuePush(one)
                 oSymbolStkPush(syConstant)
                 @SubrangeUpperBound        % pushes value on value stack
-=======
-                sRange
-        	    @SubrangeUpperBound     % pushes value on value stack
->>>>>>> 8931b25b85a78df380921b165f0cef3e3949e873
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
