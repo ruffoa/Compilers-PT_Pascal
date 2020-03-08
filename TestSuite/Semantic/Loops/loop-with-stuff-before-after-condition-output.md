@@ -145,6 +145,7 @@ Test output is:
         .tAdd
       .tAssignInteger
    % value emitted 27
+   .tWhileEnd
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -153,6 +154,8 @@ Test output is:
 ```
 
 
+Warning, output length does not match (53 vs 52)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
@@ -187,6 +190,9 @@ File diff
 -oEmitValue !== .tAdd on line 46 of loop-with-stuff-before-after-condition.pt
 -.tAdd !== .tAssignInteger on line 47 of loop-with-stuff-before-after-condition.pt
 -.tAssignInteger !== .tWhileEnd on line 48 of loop-with-stuff-before-after-condition.pt
+-.tWhileEnd !== .tTrapBegin on line 49 of loop-with-stuff-before-after-condition.pt
+-.tTrapBegin !== .tTrap on line 50 of loop-with-stuff-before-after-condition.pt
+-.tTrap !== oEmitTrapKind(trHalt) on line 51 of loop-with-stuff-before-after-condition.pt
 
 ```
 end file
