@@ -1604,7 +1604,7 @@ IfStmt :
                 oEmitNullAddress                % true branch
                 oFixSwap                % false branch back on top
                 oFixPopForwardBranch
-                @oSymbolTblPushScope
+                @CallBlockWithScope
             | *:
         ]
         .tIfEnd
