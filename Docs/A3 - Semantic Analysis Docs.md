@@ -150,10 +150,67 @@ Program :
 - Swap the order of `@IndexType` and `@ComponentType` in the `TypeBody` SSL rule
 
 # Initial Values
+- Modify the `VariableDeclarations` routine to check for the existance of the `sInitialValue` token and call the `Assignment` routine if it does.  Also modify to allow for not having a type, and assigning `int` as the type if one is not provided
 
+```diff
+-        @TypeBody
+-        @EnterVariableAttributes
++        [
++            | sInitialValue:
++                @SymbolStkPushDefaultIntegerType
++                oValuePush(one)
++                oValuePush(one)
++                oTypeStkPushSymbol
++                oValuePop       % subrange upper
++                oValuePop       %          lower bound-----
++                oSymbolStkPop
++                @TypeTblEnterIfNew
++                @EnterVariableAttributes
++                @Assignment
++            | *:
++                @TypeBody
++                @EnterVariableAttributes
++                [
++                    | sInitialValue: 
++                        @Assignment
++                    | *:
++                ]
++        ]
+```
 # Modules
 
 # Loop Statement
+- Add in the `LoopStmt` routine, based off of the `WhileStmt` routine
+    - Replace call to `CallBlockWithScope` for manually creating a single scope for then entire loop statement
+    - Call `@Block` for the individual components of the loop
+    - Add in support for `sLoopBreakIf` and output the correct tokens
+```diff
+LoopStmt :
++        .tWhileBegin
++        .tWhilePreBreak
++        oFixPushTargetAddress           % top-of-loop branch target
++        .tRepeatControl
++        oFixPushForwardBranch
++        oEmitNullAddress                % exit branch
++        oFixSwap                % top-of-loop target back on top
++        sBegin
++        oSymbolTblPushScope 
++        @Block
++        sEnd
++        sLoopBreakIf
++        .tWhileBreakIf
++        @BooleanControlExpression
++        .tNot
++        .tWhileTest
++        sBegin
++        @Block
++        sEnd
++        oSymbolTblPopScope
++        oFixPopTargetAddress
++        oFixPopForwardBranch;
+```
+
+- Remove the `RepeatStmt` routine
 
 # Match Satement and Default
 

@@ -1643,7 +1643,8 @@ LoopStmt :
         sEnd
         oSymbolTblPopScope
         oFixPopTargetAddress
-        oFixPopForwardBranch;
+        oFixPopForwardBranch
+        .tWhileEnd;
 
 % RepeatStmt :
 %         .tRepeatBegin

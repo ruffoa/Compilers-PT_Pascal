@@ -11,6 +11,7 @@ oEmitValue
 .tAssignInteger         // end i = 0
 .tWhileBegin            // loop start
 .tWhilePreBreak         // loop contents before break statement
+oEmitNullAddress        // null statement
 .tWhileBreakIf          // loop break conditions - i >= 5
 .tLiteralAddress        // address of i
 oEmitValue
