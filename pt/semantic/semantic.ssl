@@ -215,6 +215,7 @@ Error :
         eInvalidExpn
         eInputNotVisible
         eOutputNotVisible
+        eDefaultCaseStmtReqd
         eFieldWidth
         eTextFileVarReqd
         eWriteExpn
@@ -1646,6 +1647,11 @@ CaseStmt :
         oEmitNullAddress                % address of case branch table
         {[
             | sCaseEnd:
+                #eDefaultCaseStmtReqd
+                >
+            | sCaseOtherwise:
+                @CaseDefault
+                sCaseEnd
                 >
             | *:
                 @CaseAlternative
@@ -1663,6 +1669,20 @@ CaseStmt :
         ]}
         oCasePopDisplay
         oCountPop;
+
+CaseDefault: 
+        {[
+            | sLabelEnd:
+                >
+            | '_':
+                .tCaseOtherwise
+        ]}
+        @CallBlockWithScope
+        .tCaseMerge
+        oFixPushForwardBranch
+        oEmitNullAddress                % merge branch at end of statement
+        oFixSwap                        % keep case select branch on top
+        oCountIncrement;
 
 CaseAlternative :
         % A case alternative is a series of integer
