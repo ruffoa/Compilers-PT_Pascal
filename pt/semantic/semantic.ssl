@@ -1626,20 +1626,21 @@ LoopStmt :
         .tWhileBegin
         .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
+        oFixPushForwardBranch
+        oEmitNullAddress                % exit branch
+        oFixSwap                % top-of-loop target back on top
         sBegin
         oSymbolTblPushScope 
         @Block
         sEnd
         .tWhileBreakIf
         @BooleanControlExpression
+        .tNot
         .tWhileTest
-        oFixPushForwardBranch
-        oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
         sBegin
         @Block
-        oSymbolTblPopScope
         sEnd
+        oSymbolTblPopScope
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
