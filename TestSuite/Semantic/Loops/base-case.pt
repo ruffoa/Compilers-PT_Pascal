@@ -2,7 +2,7 @@ mod main (output) {
     let i = 0;
 
     loop {
-        break if i == 5;
+        break if i >= 5;
 
         i += 1;
     }

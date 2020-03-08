@@ -1633,6 +1633,7 @@ LoopStmt :
         oSymbolTblPushScope 
         @Block
         sEnd
+        sLoopBreakIf
         .tWhileBreakIf
         @BooleanControlExpression
         .tNot
