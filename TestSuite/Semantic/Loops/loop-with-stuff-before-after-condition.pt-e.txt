@@ -1,0 +1,33 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+.tWhileBegin            // loop start
+.tWhilePreBreak         // loop contents before break statement
+.tAssignBegin           // j -= 1;
+.tLiteralAddress
+oEmitValue
+.tLiteralAddress
+oEmitValue
+.tFetchInteger
+.tLiteralInteger
+oEmitValue
+.tSubtract
+.tAssignInteger         // end assignment of j -= 1 
+.tWhileBreakIf          // loop break conditions
+.tWhileTest             // loop contents after break statement
+.tAssignBegin           // i += 1;
+.tLiteralAddress
+oEmitValue
+.tLiteralAddress
+oEmitValue
+.tFetchInteger
+.tLiteralInteger
+oEmitValue
+.tAdd
+.tAssignInteger         // end assignment of i += 1
+.tWhileEnd              // end loop
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0
