@@ -816,8 +816,8 @@ Block :
                 @WhileStmt
             | sCaseStmt:
                 @CaseStmt
-            % | sLoopStmt:    % TODO: loop statement will use the while rule
-            %     @RepeatStmt
+            | sLoopStmt:
+                @LoopStmt
             | sNullStmt:
             | *:
                 >
@@ -1604,7 +1604,7 @@ IfStmt :
                 oEmitNullAddress                % true branch
                 oFixSwap                % false branch back on top
                 oFixPopForwardBranch
-                @CallBlockWithScope
+                @oSymbolTblPushScope
             | *:
         ]
         .tIfEnd
@@ -1622,19 +1622,40 @@ WhileStmt :
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
-RepeatStmt :
-        .tRepeatBegin
+LoopStmt :
+        .tWhileBegin
+        .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
-        {[
-            | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
-                >
-            | *:
-                @CallBlockWithScope
-        ]}
-        .tRepeatControl
+        sBegin
+        oSymbolTblPushScope 
+        @Block
+        sEnd
+        .tWhileBreakIf
         @BooleanControlExpression
-        .tRepeatTest
-        oFixPopTargetAddress;
+        .tWhileTest
+        oFixPushForwardBranch
+        oEmitNullAddress                % exit branch
+        oFixSwap                % top-of-loop target back on top
+        sBegin
+        @Block
+        oSymbolTblPopScope
+        sEnd
+        oFixPopTargetAddress
+        oFixPopForwardBranch;
+
+% RepeatStmt :
+%         .tRepeatBegin
+%         oFixPushTargetAddress           % top-of-loop branch target
+%         {[
+%             | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
+%                 >
+%             | *:
+%                 @CallBlockWithScope
+%         ]}
+%         .tRepeatControl
+%         @BooleanControlExpression
+%         .tRepeatTest
+%         oFixPopTargetAddress;
 
 CaseStmt :
         .tCaseBegin
