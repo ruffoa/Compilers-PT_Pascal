@@ -1647,16 +1647,21 @@ CaseStmt :
         oEmitNullAddress                % address of case branch table
         {[
             | sCaseEnd:
-                #eDefaultCaseStmtReqd
+                .tCaseEnd
+                @EmitCaseBranchTabl
                 >
             | sCaseOtherwise:
+                .tCaseEnd
+                @EmitCaseBranchTabl
                 @CaseDefault
                 sCaseEnd
                 >
             | *:
                 @CaseAlternative
         ]}
-        .tCaseEnd
+        ;
+
+EmitCaseBranchTabl :
         oFixPopForwardBranch
         oEmitCaseBranchTable
         % emit merge branches for case alternatives
