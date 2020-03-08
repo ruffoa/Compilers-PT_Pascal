@@ -1671,12 +1671,7 @@ CaseStmt :
         oCountPop;
 
 CaseDefault: 
-        {[
-            | sLabelEnd:
-                >
-            | '_':
-                .tCaseOtherwise
-        ]}
+        .tCaseOtherwise
         @CallBlockWithScope
         .tCaseMerge
         oFixPushForwardBranch
