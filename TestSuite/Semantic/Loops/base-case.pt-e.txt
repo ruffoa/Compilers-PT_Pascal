@@ -3,9 +3,22 @@ oEmitValue              // value emitted is 2
 .tLiteralAddress
 oEmitDataAddress        // value emitted is 0
 .tFileDescriptor        // File for main program
+.tAssignBegin           // assign i = 0
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end i = 0
 .tWhileBegin            // loop start
 .tWhilePreBreak         // loop contents before break statement
-.tWhileBreakIf          // loop break conditions
+.tWhileBreakIf          // loop break conditions - i >= 5
+.tLiteralAddress        // address of i
+oEmitValue
+.tFetchInteger          // get the value of i
+.tLiteralInteger        // '5'
+oEmitValue
+.tGE                    // i >= 5
+.tNot                   // not sure why syntax calls for a not here, but okay
 .tWhileTest             // loop contents after break statement
 .tAssignBegin           // i += 1;
 .tLiteralAddress
