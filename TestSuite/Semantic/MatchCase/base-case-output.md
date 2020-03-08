@@ -106,6 +106,11 @@ Test output is:
     .tCaseMerge
     oEmitNullAddress
     % value emitted -32767
+   .tCaseEnd
+    oEmitCaseBranchTable
+    % value emitted 12
+    % value emitted 12
+    % value emitted 23
     .tCaseOtherwise
         .tAssignBegin
          .tLiteralAddress
@@ -118,28 +123,18 @@ Test output is:
     .tCaseMerge
     oEmitNullAddress
     % value emitted -32767
-   .tCaseEnd
-   oEmitCaseBranchTable
-   % value emitted 12
-   % value emitted 12
-   % value emitted 23
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+### Semantic assertion 35 failed: less than two entries in fix stack in oFixSwap
 
 ```
 
 
-Warning, output length does not match (39 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (37 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of base-case.pt
--.tLiteralAddress !== .tTrap on line 6 of base-case.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of base-case.pt
+-### Semantic assertion 35 failed: less than two entries in fix stack in oFixSwap !== .tTrapBegin on line 36 of base-case.pt
 
 ```
 end file
