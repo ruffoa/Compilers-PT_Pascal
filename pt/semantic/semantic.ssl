@@ -1679,10 +1679,7 @@ CaseDefault:
         .tCaseOtherwise
         @CallBlockWithScope
         .tCaseMerge
-        oFixPushForwardBranch
-        oEmitNullAddress                % merge branch at end of statement
-        oFixSwap                        % keep case select branch on top
-        oCountIncrement;
+        oEmitNullAddress;                % merge branch at end of statement
 
 CaseAlternative :
         % A case alternative is a series of integer
