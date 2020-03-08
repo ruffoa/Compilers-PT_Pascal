@@ -123,18 +123,21 @@ Test output is:
     .tCaseMerge
     oEmitNullAddress
     % value emitted -32767
-### Semantic assertion 35 failed: less than two entries in fix stack in oFixSwap
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (37 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic assertion 35 failed: less than two entries in fix stack in oFixSwap !== .tTrapBegin on line 36 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
