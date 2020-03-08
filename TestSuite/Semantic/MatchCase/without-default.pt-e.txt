@@ -1,0 +1,30 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+.tAssignBegin           // let i = 10
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end let i = 10
+.tCaseBegin
+.tLiteralAddress        // address of 'i'
+oEmitValue
+.tFetchInteger          // fetch value of 'i'
+.tCaseSelect            // select case on value of 'i'
+oEmitNullAddress        // idk why this is here..... null stmt?
+.tAssignBegin           // i = 12 case
+.tLiteralAddress        // address of 'i'
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // assign i = 0
+.tCaseMerge             // end case statement
+oEmitNullAddress        // idk why this is here..... null stmt?
+.tCaseEnd               // end the case statement
+oEmitCaseBranchTable    // branch address table
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0
