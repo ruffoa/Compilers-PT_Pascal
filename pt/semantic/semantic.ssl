@@ -1646,20 +1646,6 @@ LoopStmt :
         oFixPopForwardBranch
         .tWhileEnd;
 
-% RepeatStmt :
-%         .tRepeatBegin
-%         oFixPushTargetAddress           % top-of-loop branch target
-%         {[
-%             | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
-%                 >
-%             | *:
-%                 @CallBlockWithScope
-%         ]}
-%         .tRepeatControl
-%         @BooleanControlExpression
-%         .tRepeatTest
-%         oFixPopTargetAddress;
-
 CaseStmt :
         .tCaseBegin
         @CaseSelectorExpression
