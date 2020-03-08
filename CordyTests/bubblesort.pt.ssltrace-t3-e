@@ -4,17 +4,17 @@
    .tLiteralAddress
    oEmitDataAddress
    % value emitted 0
-   .tFileDescriptor
+   .tFileDescriptor     // file for bubblesort.pt
      .tLiteralInteger
      oEmitValue
      % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 25
+     .tLiteralAddress   // address of 'nelements'
+     oEmitDataAddress   // emit data address
+     % value emitted 4  // address of 'nelements'
+     .tArrayDescriptor  // ???
+     .tLiteralInteger   // initialized value for nelements
+     oEmitValue         // emit the initial value of nelements
+     % value emitted 25 // printed out 25
      .tLiteralAddress
      oEmitDataAddress
      % value emitted 8

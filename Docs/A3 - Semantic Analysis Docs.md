@@ -80,6 +80,74 @@ Program :
 
 
 # Types
+- Remove the handling of `sRange` with the `sIdentifier` choice from the `SimpleType` rule
+    - Clean up the rule
+```diff
+        [
+            | sIdentifier:
+                oSymbolStkPushIdentifier
+-                [ 
+-                    | sRange:   % subrange specification
+-                        [ oSymbolStkChooseKind
+-                            | syConstant:       
+-                                oTypeStkPushSymbol
+-                                [ oTypeStkChooseKind
+-                                    | tpInteger:        
+-                                        oValuePushSymbol
+-                                    | *:
+-                                        #eIntegerConstReqd
+-                                        oValuePush(one)
+-                                ]
+-                                [
+-                                    | sNegate:
+-                                        oValueNegate
+-                                    | *:
+-                                ]
+-                                oTypeStkPop
+-                            | syUndefined:
+-                                #eUndefinedIdentifier
+-                                oValuePush(one)
+-                            | *:
+-                                #eIntegerConstReqd
+-                                oValuePush(one)
+-                        ]
+-                        @SubrangeUpperBound        % pushes value on value stack
+-                    | *:        
+                        % type identifier
+                        [ oSymbolStkChooseKind
+                            | syType:
+        			@ValuePushTypeBounds
+                            | syUndefined:
+                                #eUndefinedIdentifier
+                                oSymbolStkPop
+                                @SymbolStkPushDefaultIntegerType
+        			oValuePush(one)
+        			oValuePush(one)
+                            | *:
+                                #eSimpleTypeReqd
+                                oSymbolStkPop
+                                @SymbolStkPushDefaultIntegerType
+        			oValuePush(one)
+        			oValuePush(one)
+                        ]
+-                ]
+            | sInteger:         % lower bound of subrange specification
+                oValuePushInteger
+                oSymbolStkPush(syConstant)
+                [
+                    | sNegate:
+                        oValueNegate
+
+```
+- Add checking for `sRange` in the main choice block of the `SimpleType` rule
+```diff
++            | sRange:   % subrange specification
++                oValuePush(one)
++                oSymbolStkPush(syConstant)
++                @SubrangeUpperBound        % pushes value on value stack
+```
+
+- Swap the order of `@IndexType` and `@ComponentType` in the `TypeBody` SSL rule
 
 # Initial Values
 

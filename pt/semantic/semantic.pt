@@ -906,7 +906,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                         assert52:
                             write ('count stack not empty at end of semantic phase');
                         assert53:
-                            write ('value stack not empty at end of semantic phase');
+                            write ('value stack not empty at end of semantic phase, size: ', valueStackTop :1);
                         assert54:
                             write ('fix stack not empty at end of semantic phase');
                         assert55:
