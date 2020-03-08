@@ -153,24 +153,10 @@ Test output is:
 ```
 
 
-Warning, output length does not match (52 vs 33)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tWhileBegin on line 5 of loop-with-stuff-before-after-condition.pt
--.tLiteralAddress !== .tWhilePreBreak on line 6 of loop-with-stuff-before-after-condition.pt
--oEmitValue !== .tAssignBegin on line 7 of loop-with-stuff-before-after-condition.pt
--.tLiteralInteger !== .tLiteralAddress on line 8 of loop-with-stuff-before-after-condition.pt
--.tAssignInteger !== .tLiteralAddress on line 10 of loop-with-stuff-before-after-condition.pt
--.tAssignBegin !== oEmitValue on line 11 of loop-with-stuff-before-after-condition.pt
--.tLiteralAddress !== .tFetchInteger on line 12 of loop-with-stuff-before-after-condition.pt
--oEmitValue !== .tLiteralInteger on line 13 of loop-with-stuff-before-after-condition.pt
--.tLiteralInteger !== oEmitValue on line 14 of loop-with-stuff-before-after-condition.pt
--oEmitValue !== .tSubtract on line 15 of loop-with-stuff-before-after-condition.pt
--.tWhileBegin !== .tWhileBreakIf on line 17 of loop-with-stuff-before-after-condition.pt
--.tWhilePreBreak !== .tWhileTest on line 18 of loop-with-stuff-before-after-condition.pt
 -oEmitNullAddress !== .tAssignBegin on line 19 of loop-with-stuff-before-after-condition.pt
 -.tAssignBegin !== .tLiteralAddress on line 20 of loop-with-stuff-before-after-condition.pt
 -.tLiteralAddress !== oEmitValue on line 21 of loop-with-stuff-before-after-condition.pt
@@ -179,12 +165,28 @@ File diff
 -oEmitValue !== .tFetchInteger on line 24 of loop-with-stuff-before-after-condition.pt
 -.tFetchInteger !== .tLiteralInteger on line 25 of loop-with-stuff-before-after-condition.pt
 -.tLiteralInteger !== oEmitValue on line 26 of loop-with-stuff-before-after-condition.pt
--oEmitValue !== .tAdd on line 27 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tSubtract on line 27 of loop-with-stuff-before-after-condition.pt
 -.tSubtract !== .tAssignInteger on line 28 of loop-with-stuff-before-after-condition.pt
--.tAssignInteger !== .tWhileEnd on line 29 of loop-with-stuff-before-after-condition.pt
--.tWhileBreakIf !== .tTrapBegin on line 30 of loop-with-stuff-before-after-condition.pt
--.tLiteralAddress !== .tTrap on line 31 of loop-with-stuff-before-after-condition.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 32 of loop-with-stuff-before-after-condition.pt
+-.tAssignInteger !== .tWhileBreakIf on line 29 of loop-with-stuff-before-after-condition.pt
+-.tWhileBreakIf !== .tLiteralAddress on line 30 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== oEmitValue on line 31 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tFetchInteger on line 32 of loop-with-stuff-before-after-condition.pt
+-.tFetchInteger !== .tLiteralInteger on line 33 of loop-with-stuff-before-after-condition.pt
+-.tLiteralInteger !== oEmitValue on line 34 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tEQ on line 35 of loop-with-stuff-before-after-condition.pt
+-.tEQ !== .tNot on line 36 of loop-with-stuff-before-after-condition.pt
+-.tNot !== .tWhileTest on line 37 of loop-with-stuff-before-after-condition.pt
+-.tWhileTest !== .tAssignBegin on line 38 of loop-with-stuff-before-after-condition.pt
+-.tAssignBegin !== .tLiteralAddress on line 39 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== oEmitValue on line 40 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralAddress on line 41 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== oEmitValue on line 42 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tFetchInteger on line 43 of loop-with-stuff-before-after-condition.pt
+-.tFetchInteger !== .tLiteralInteger on line 44 of loop-with-stuff-before-after-condition.pt
+-.tLiteralInteger !== oEmitValue on line 45 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tAdd on line 46 of loop-with-stuff-before-after-condition.pt
+-.tAdd !== .tAssignInteger on line 47 of loop-with-stuff-before-after-condition.pt
+-.tAssignInteger !== .tWhileEnd on line 48 of loop-with-stuff-before-after-condition.pt
 
 ```
 end file
