@@ -148,14 +148,14 @@
         OptionallySignedIntegerConstant = 348;
         CallStmt = 522;
         CaseAlternative = 677;
-        SimpleExpression = 791;
-        Term = 844;
-        Factor = 899;
-        IdentifierExtension = 965;
+        SimpleExpression = 799;
+        Term = 852;
+        Factor = 907;
+        IdentifierExtension = 973;
         }
 
         { S/SL Table Parameters } {
-        sslTblSize = 995;
+        sslTblSize = 1003;
         minSslTableValue = -32767;
         maxSslTableValue = 32767;
 	}

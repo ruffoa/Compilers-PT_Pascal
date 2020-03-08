@@ -215,7 +215,6 @@ Error :
         eInvalidExpn
         eInputNotVisible
         eOutputNotVisible
-        eDefaultCaseStmtReqd
         eFieldWidth
         eTextFileVarReqd
         eWriteExpn
