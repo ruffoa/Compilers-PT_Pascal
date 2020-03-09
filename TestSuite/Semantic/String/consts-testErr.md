@@ -11,5 +11,5 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-
+### Semantic assertion 26 failed: null type table ref in oSymbolStkEnterTypeReference
 ```

@@ -40,19 +40,18 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+### Semantic assertion 26 failed: null type table ref in oSymbolStkEnterTypeReference
 
 ```
 
 
-Warning, output length does not match (5 vs 15)!  (Newlines are not the issue here!) `consts.pt`
+Warning, output length does not match (6 vs 15)!  (Newlines are not the issue here!) `consts.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-### Semantic assertion 26 failed: null type table ref in oSymbolStkEnterTypeReference !== .tAssignBegin on line 5 of consts.pt
 
 ```
 end file
