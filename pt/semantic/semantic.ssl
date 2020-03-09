@@ -1795,40 +1795,19 @@ Operand :
                 oEmitValue
                 oValuePop
             | sStringLiteral:
-                oValuePush(one) % implicit lower bound of string index type
                 oValuePushStringLength
                 [ oValueChoose
                     | zero:
                         #eNullString
                         oSymbolStkPush(syExpression)
                         oTypeStkPush(tpString)
-                    | one:
+                    | *:
                         oSymbolStkPush(syExpression)
                         oTypeStkPush(tpString)
                         .tLiteralString
-                        oEmitString
-                    | *:
-                        oSymbolStkPush(syExpression)
-                        % branch around string since
-                        % it is stored in the code area
-                        .tSkipString
-                        oFixPushForwardBranch
-                        oEmitNullAddress
-                        .tLiteralString
                         oEmitValue      % string length
-                        oFixPushTargetAddress
-                        oFixSwap                % Forward branch back on top
-                        oEmitString
-                        oFixPopForwardBranch
-                        % Descriptor points to the
-                        % first character of the string
-                        .tStringDescriptor
-                        oFixPopTargetAddress
-                        oTypeStkPush(tpPackedArray)
-                        oTypeStkEnterBounds
-                        oTypeStkLinkToStandardComponentType(stdString)
+                        oEmitString     % string value
                 ]
-                oValuePop
                 oValuePop
             | sFile:
                 @Expression
