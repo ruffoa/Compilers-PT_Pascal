@@ -882,9 +882,9 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkEnterValue
                 oValuePop
             | sStringLiteral:
-                % oSymbolStkSetKind(syVariable)
-                % oSymbolStkPush(syType)
-                % oSymbolStkLinkToStandardType(stdString) %% set as stdString
+                oSymbolStkSetKind(syVariable)
+                oSymbolStkPush(syType)
+                oSymbolStkLinkToStandardType(stdString) %% set as stdString
 
                 % oAllocateAlignOnWord        %% allocate the "variable"
                 % oSymbolStkEnterDataAddress
