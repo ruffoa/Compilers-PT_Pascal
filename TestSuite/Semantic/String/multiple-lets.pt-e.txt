@@ -1,0 +1,24 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+.tAssignBegin           // begin assignment of a
+.tLiteralAddress        // address of a
+oEmitValue              // emits address of a
+.tLiteralString         // length 11, "Hello World"
+oEmitValue              // 11
+oEmitString             // "Hello World"
+.tAssignString
+.tAssignBegin           // begin assignment of b
+.tLiteralAddress        // address of b
+oEmitValue              // emits address of b
+.tFetchAddress          // address of a
+oEmitDataAddress        // address of a
+.tFetchString           // fetch string from a - length 11, "Hello World"
+oEmitValue              // 11
+oEmitString             // "Hello World"
+.tAssignString
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0
