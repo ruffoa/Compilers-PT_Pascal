@@ -883,10 +883,41 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
             | sStringLiteral:
                 oSymbolStkSetKind(syVariable)
-                @TypeBody
+                @ValuePushTypeBounds
+                oTypeStkPushSymbol
+                oValuePop       % subrange upper
+                oValuePop       %          lower bound-----
+                oSymbolStkPop
+                @TypeTblEnterIfNew
+
+                % oValuePushStringLength
+                % [ oValueChoose
+                %     | zero:
+                %         #eNullString
+                %         @SymbolStkPushDefaultStringConstant
+                %     | one:
+                %         oSymbolStkLinkToStandardType(stdString)
+                %         oSymbolStkEnterStringValue
+                %     | *:
+                %         .tLiteralString
+                %         oEmitValue      % string length
+                %         % The string "address" is the location (offset)
+                %         % of the first character of the string
+                %         oEmitString
+                %         oFixPopForwardBranch
+                %         oTypeStkPush(tpPackedArray)     % means literal string
+                %         oTypeStkEnterBounds
+                %         oTypeStkLinkToStandardComponentType(stdString)
+                %         oTypeTblEnter
+                %         oSymbolStkEnterTypeReference
+                %         oTypeStkPop
+                % ]
+                % oValuePop       % Upper bound
+
                 @EnterVariableAttributes
                 @Assignment
-                oSymbolStkSetKind(syConstant)
+                oTypeStkPop
+        	    oSymbolStkPop
         ]
         oSymbolTblEnter
         oSymbolStkPop;          % name being defined
