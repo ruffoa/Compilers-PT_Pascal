@@ -890,8 +890,8 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
 
-                % oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
-                % oSymbolTblEnter
+                oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
+                oSymbolTblEnter
                 .tAssignBegin
                 .tLiteralAddress
                 oValuePushSymbol
