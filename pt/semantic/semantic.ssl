@@ -897,7 +897,7 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
                 oSymbolTblEnter
 
-                .tAssignBegin
+                .tAssignBegin           %% perform the assignment
                 .tLiteralAddress
                 oValuePushSymbol
                 oEmitValue
@@ -920,30 +920,6 @@ ConstantValue :         % An identifier token has just been accepted
                 .tAssignString
                 oSymbolStkPop  oTypeStkPop      % Expression
                 oTypeStkPop
-
-                % oValuePushStringLength
-                % [ oValueChoose
-                %     | zero:
-                %         #eNullString
-                %         @SymbolStkPushDefaultStringConstant
-                %     | one:
-                %         oSymbolStkLinkToStandardType(stdString)
-                %         oSymbolStkEnterStringValue
-                %     | *:
-                %         .tLiteralString
-                %         oEmitValue      % string length
-                %         % The string "address" is the location (offset)
-                %         % of the first character of the string
-                %         oEmitString
-                %         oFixPopForwardBranch
-                %         oTypeStkPush(tpPackedArray)     % means literal string
-                %         oTypeStkEnterBounds
-                %         oTypeStkLinkToStandardComponentType(stdString)
-                %         oTypeTblEnter
-                %         oSymbolStkEnterTypeReference
-                %         oTypeStkPop
-                % ]
-                % oValuePop       % Upper bound
 
                 oSymbolStkSetKind(syConstant)   %% set back to a constant
                 oTypeStkPop
