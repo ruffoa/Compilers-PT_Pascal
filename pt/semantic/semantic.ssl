@@ -946,7 +946,7 @@ ConstantValue :         % An identifier token has just been accepted
                 % oValuePop       % Upper bound
 
                 % oSymbolStkSetKind(syConstant)   %% set back to a constant
-                % oTypeStkPop
+                oTypeStkPop
         	    oSymbolStkPop
         ]
         oSymbolTblEnter
