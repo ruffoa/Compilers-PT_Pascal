@@ -21,6 +21,12 @@ oEmitValue
 .tGE                    // i >= 5
 .tNot                   // not sure why syntax calls for a not here, but okay
 .tWhileTest             // loop contents after break statement
+.tAssignBegin           // j = 0
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end j = 0
 .tWhileBegin            // inner loop start
 .tWhilePreBreak         // loop contents before break statement
 oEmitNullAddress        // null statement
