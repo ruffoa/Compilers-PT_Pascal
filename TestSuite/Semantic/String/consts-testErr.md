@@ -4,7 +4,6 @@ Test Content:
 ```
 mod main (output) { 
     const a = "Hello World";
-    let b: str = a;
 }
 ```
 ------------------------
