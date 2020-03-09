@@ -883,7 +883,10 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
             | sStringLiteral:
                 oSymbolStkSetKind(syVariable)
-                @ValuePushTypeBounds
+                oSymbolStkPush(syType)
+                oSymbolStkLinkToStandardType(stdString)
+                oValuePush(one)
+                oValuePushStringLength
                 oTypeStkPushSymbol
                 oValuePop       % subrange upper
                 oValuePop       %          lower bound-----
