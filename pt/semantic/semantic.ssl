@@ -892,6 +892,10 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop       %          lower bound-----
                 oSymbolStkPop
                 @TypeTblEnterIfNew
+                oSymbolStkEnterDataAddress
+                oAllocateVariable
+                oSymbolStkEnterTypeReference
+                % oSymbolTblEnter
 
                 % oValuePushStringLength
                 % [ oValueChoose
@@ -917,8 +921,8 @@ ConstantValue :         % An identifier token has just been accepted
                 % ]
                 % oValuePop       % Upper bound
 
-                @EnterVariableAttributes
                 @Assignment
+                oSymbolStkSetKind(syConstant)
                 oTypeStkPop
         	    oSymbolStkPop
         ]
