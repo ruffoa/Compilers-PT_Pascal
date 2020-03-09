@@ -886,8 +886,10 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkPush(syType)
                 oSymbolStkLinkToStandardType(stdString) %% set as stdString
 
-                oTypeStkPush(tpString)      %% push string type to type stack
+                oTypeStkPushSymbol
+                % oTypeStkPush(tpString)      %% push string type to type stack
                 oTypeStkLinkToStandardComponentType(stdString)
+                @TypeTblEnterIfNew
                 oAllocateAlignOnWord        %% allocate the "variable"
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
