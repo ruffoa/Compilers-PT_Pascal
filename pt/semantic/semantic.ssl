@@ -1646,11 +1646,21 @@ CaseStmt :
         oEmitNullAddress                % address of case branch table
         {[
             | sCaseEnd:
+                .tCaseEnd
+                @EmitCaseBranchTabl
+                >
+            | sCaseOtherwise:
+                .tCaseEnd
+                @EmitCaseBranchTabl
+                @CaseDefault
+                sCaseEnd
                 >
             | *:
                 @CaseAlternative
         ]}
-        .tCaseEnd
+        ;
+
+EmitCaseBranchTabl :
         oFixPopForwardBranch
         oEmitCaseBranchTable
         % emit merge branches for case alternatives
@@ -1663,6 +1673,12 @@ CaseStmt :
         ]}
         oCasePopDisplay
         oCountPop;
+
+CaseDefault: 
+        .tCaseOtherwise
+        @CallBlockWithScope
+        .tCaseMerge
+        oEmitNullAddress;                % merge branch at end of statement
 
 CaseAlternative :
         % A case alternative is a series of integer

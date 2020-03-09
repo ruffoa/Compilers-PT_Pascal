@@ -2458,7 +2458,7 @@
      .tWhileTest
      oEmitNullAddress
      % value emitted -32767
-        .tCaseBegin
+        .tCaseBegin                       // begin match hand[i]
             .tLiteralAddress
             oEmitValue
             % value emitted 14808
@@ -2544,7 +2544,7 @@
         % value emitted 2314
         % value emitted 2314
         % value emitted 2314
-         .tCaseOtherwise
+         .tCaseOtherwise                // default case
              .tAssignBegin
               .tLiteralAddress
               oEmitValue
@@ -2560,7 +2560,7 @@
                % value emitted 10
                .tAdd
              .tAssignInteger
-         .tCaseMerge
+         .tCaseMerge                    // end defualt case
          oEmitNullAddress
          % value emitted -32767
          .tAssignBegin

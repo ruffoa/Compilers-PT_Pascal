@@ -25,6 +25,8 @@ oEmitDataAddress        // value emitted is 0
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0`;
 
+    private readonly defaultReadme = (folderName: string) => `This is to test that Qust ${folderName} work correctly`;
+
     constructor(
         private workspaceRoot: string,
         private window: VSCodeWindow
@@ -87,11 +89,12 @@ oEmitTrapKind(trHalt)   // emits 0`;
                 fs.mkdirSync(fileInfo.path);
             }
 
-
+            const directoryName = fileInfo.path.split(/\\|\//);
+            
             this.testFiles.forEach((extension: string) => {
                 const filename = `${fileInfo.name}${extension}`;
                 const fullpath = path.join(fileInfo.path, filename);
-                const defaultFile = extension === '.pt' ? this.baseProgram : extension === '.pt-e.txt' ? this.baseSemanticTokens : '';
+                const defaultFile = extension === '.pt' ? this.baseProgram : extension === '.pt-e.txt' ? this.baseSemanticTokens : this.defaultReadme(directoryName[directoryName.length - 1]);
                 fs.writeFileSync(fullpath, defaultFile);
             });
         } catch (err) {

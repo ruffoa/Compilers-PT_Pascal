@@ -156,7 +156,50 @@ Program :
 # Loop Statement
 
 # Match Satement and Default
+- Modify `CaseStmt` to handle the `sCaseOtherwise` token
+    - Refactor `CaseStmt` to do this nicely by adding a new routine called `EmitCaseBranchTabl`
+    - Add in a `CaseDefault` routine to handle the default case (just to make things a tad easier to read!)
 
+```diff
+        ...
+        | sCaseEnd:
++            .tCaseEnd
++            @EmitCaseBranchTabl
++            >
++        | sCaseOtherwise:
++            .tCaseEnd
++            @EmitCaseBranchTabl
++            @CaseDefault
++            sCaseEnd
+            >
+        | *:
+            @CaseAlternative
+        ...
+```
+
+```
+EmitCaseBranchTabl :
+        oFixPopForwardBranch
+        oEmitCaseBranchTable
+        % emit merge branches for case alternatives
+        {[ oCountChoose         % number of case alternatives
+            | zero:
+                >
+            | *:
+                oFixPopForwardBranch
+                oCountDecrement
+        ]}
+        oCasePopDisplay
+        oCountPop;
+```
+
+```
+CaseDefault: 
+        .tCaseOtherwise
+        @CallBlockWithScope
+        .tCaseMerge
+        oEmitNullAddress;                % merge branch at end of statement
+```
 # Else If Clause
 
 # Mutable and Immutable Vars
