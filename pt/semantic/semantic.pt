@@ -217,73 +217,68 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         tVarParm = 21;
         tFetchAddress = 22;
         tFetchInteger = 23;
-        tFetchChar = 24;
+        tFetchString = 24;
         tFetchBoolean = 25;
-        tFetchString = 26;
-        tAssignBegin = 27;
-        tAssignAddress = 28;
-        tAssignInteger = 29;
-        tAssignChar = 30;
-        tAssignBoolean = 31;
-        tAssignString = 32;
-        tStoreParmAddress = 33;
-        tStoreParmInteger = 34;
-        tStoreParmChar = 35;
-        tStoreParmBoolean = 36;
-        tStoreParmString = 37;
-        tSubscriptBegin = 38;
-        tSubscriptAddress = 39;
-        tSubscriptInteger = 40;
-        tSubscriptChar = 41;
-        tSubscriptBoolean = 42;
-        tSubscriptString = 43;
-        tArrayDescriptor = 44;
-        tFileDescriptor = 45;
-        tIfBegin = 46;
-        tIfEnd = 47;
-        tCaseBegin = 48;
-        tWhileBegin = 49;
-        tRepeatBegin = 50;
-        tRepeatControl = 51;
-        tCallBegin = 52;
-        tParmEnd = 53;
-        tProcedureEnd = 54;
-        tWriteBegin = 55;
-        tReadBegin = 56;
-        tTrapBegin = 57;
-        tWriteEnd = 58;
-        tReadEnd = 59;
-        tConcatenate = 60;
-        tRepeatString = 61;
-        tSubstring = 62;
-        tLength = 63;
-        tStringEqual = 64;
-        tLiteralAddress = 65;
-        firstCompoundTcode = 65;
-        tLiteralInteger = 66;
-        tLiteralChar = 67;
-        tLiteralBoolean = 68;
-        tLiteralString = 69;
-        tStringDescriptor = 70;
-        tSkipString = 71;
-        tIfThen = 72;
-        tIfMerge = 73;
-        tCaseSelect = 74;
-        tCaseMerge = 75;
-        tCaseEnd = 76;
-        tCaseOtherwise = 77;
-        tWhileTest = 78;
-        tWhileEnd = 79;
-        tWhilePreBreak = 80;
-        tWhileBreakIf = 81;
-        tRepeatTest = 82;
-        tSkipProc = 83;
-        tCallEnd = 84;
-        tLineNumber = 85;
-        tTrap = 86;
-        lastCompoundTcode = 86;
-        tEndOfFile = 87;
-        lastTcode = 87;
+        tAssignBegin = 26;
+        tAssignAddress = 27;
+        tAssignInteger = 28;
+        tAssignBoolean = 29;
+        tAssignString = 30;
+        tStoreParmAddress = 31;
+        tStoreParmInteger = 32;
+        tStoreParmBoolean = 33;
+        tStoreParmString = 34;
+        tSubscriptBegin = 35;
+        tSubscriptAddress = 36;
+        tSubscriptInteger = 37;
+        tSubscriptBoolean = 38;
+        tSubscriptString = 39;
+        tArrayDescriptor = 40;
+        tFileDescriptor = 41;
+        tIfBegin = 42;
+        tIfEnd = 43;
+        tCaseBegin = 44;
+        tWhileBegin = 45;
+        tRepeatBegin = 46;
+        tRepeatControl = 47;
+        tCallBegin = 48;
+        tParmEnd = 49;
+        tProcedureEnd = 50;
+        tWriteBegin = 51;
+        tReadBegin = 52;
+        tTrapBegin = 53;
+        tWriteEnd = 54;
+        tReadEnd = 55;
+        tConcatenate = 56;
+        tRepeatString = 57;
+        tSubstring = 58;
+        tLength = 59;
+        tStringEqual = 60;
+        tLiteralAddress = 61;
+        firstCompoundTcode = 61;
+        tLiteralInteger = 62;
+        tLiteralBoolean = 63;
+        tLiteralString = 64;
+        tStringDescriptor = 65;
+        tSkipString = 66;
+        tIfThen = 67;
+        tIfMerge = 68;
+        tCaseSelect = 69;
+        tCaseMerge = 70;
+        tCaseEnd = 71;
+        tCaseOtherwise = 72;
+        tWhileTest = 73;
+        tWhileEnd = 74;
+        tWhilePreBreak = 75;
+        tWhileBreakIf = 76;
+        tRepeatTest = 77;
+        tSkipProc = 78;
+        tCallEnd = 79;
+        tLineNumber = 80;
+        tTrap = 81;
+        lastCompoundTcode = 81;
+        tEndOfFile = 82;
+        lastTcode = 82;
 
         { Input/Output Tokens }
 
@@ -313,7 +308,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         eTypeIdentifierReqd = 31;
         eIntegerExpnReqd = 32;
         eBooleanExpnReqd = 33;
-        eCharExpnReqd = 34;
+        eStringExpnReqd = 34;
         eArrayVarReqd = 35;
         eVariableReqd = 36;
         eDuplicateLabel = 37;
@@ -344,7 +339,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         firstPredeclaredId = 1;
         firstPredeclaredType = 1;
         pidInteger = 1;
-        pidChar = 2;
+        pidString = 2;
         pidBoolean = 3;
         pidText = 4;
         lastPredeclaredType = 4;
@@ -368,7 +363,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         lastSpecialId = 19;
         { Type 16 }
         stdInteger = 0;
-        stdChar = 1;
+        stdString = 1;
         stdBoolean = 2;
         stdText = 3;
         { Type 17 }
@@ -400,7 +395,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         stdNull = 2;
         { Type 20 }
         tpInteger = 0;
-        tpChar = 1;
+        tpString = 1;
         tpBoolean = 2;
         tpSubrange = 3;
         tpArray = 4;
@@ -415,92 +410,93 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         trReadln = 4;
         trWrite = 5;
         trWriteln = 6;
-        trWriteString = 7;
-        trWriteInteger = 8;
-        trWriteChar = 9;
-        trReadInteger = 10;
-        trReadChar = 11;
-        trAssign = 12;
+        trWriteInteger = 7;
+        trWriteString = 8;
+        trReadInteger = 9;
+        trReadString = 10;
+        trAssign = 11;
 
         { S/SL Rule Table Addresses } {
         Program = 0;
-        ProgramParameter = 41;
-        Block = 101;
-        AllocateVar = 768;
-        ProcedureDefinition = 846;
-        ConstantDefinitions = 137;
-        TypeDefinitions = 305;
-        VariableDeclarations = 691;
-        BeginStmt = 1190;
-        ConstantValue = 151;
-        SymbolStkPushDefaultIntegerConstant = 3934;
-        SymbolStkPushDefaultCharConstant = 3946;
-        TypeBody = 343;
-        IndexType = 409;
-        ComponentType = 428;
-        SimpleType = 481;
-        ValuePushValuePlusOne = 3925;
-        TypeTblEnterIfNew = 399;
-        SymbolStkPushDefaultIntegerType = 3958;
-        SubrangeUpperBound = 629;
-        ValuePushTypeBounds = 611;
-        EnterVariableAttributes = 722;
-        ProcedureHeading = 899;
-        ProcedureParameterType = 945;
-        ProcedurePrologue = 1003;
-        CountPushCopy = 3930;
-        Statement = 1071;
-        AssignmentStmt = 1125;
-        CallStmt = 1204;
-        IfStmt = 1443;
-        WhileStmt = 1474;
-        CaseStmt = 1515;
-        RepeatStmt = 1491;
-        Assignment = 1132;
-        Variable = 2233;
-        Expression = 1665;
-        CompareAndSwapTypes = 2007;
-        OpenProcedure = 2633;
-        AssignProcedure = 2664;
-        WriteProcedure = 2781;
-        WritelnProcedure = 3319;
-        ReadProcedure = 3377;
-        ReadlnProcedure = 3739;
-        ActualParameters = 1337;
-        FlushActuals = 3998;
-        VarActual = 1405;
-        BooleanControlExpression = 3910;
-        CaseSelectorExpression = 3893;
-        CaseAlternative = 1561;
-        Operand = 1693;
-        UnaryOperator = 1830;
-        BinaryOperator = 1862;
-        FlushExpn = 3977;
-        ConstantOperand = 2344;
-        VariableOperand = 2383;
-        FunctionOperand = 2410;
-        SymbolStkPushDefaultIntegerVariable = 3965;
-        FileOperand = 2608;
-        CompareOperandAndResultTypes = 2107;
-        CompareEqualityOperandTypes = 2168;
-        CompareRelationalOperandTypes = 2118;
-        VariableExtension = 2275;
-        StandardFunctionActual = 2513;
-        FileVariable = 3797;
-        WriteText = 3111;
-        WriteBinary = 3235;
-        WriteStandardExpnList = 3044;
-        TextFileVariable = 3838;
-        ReadTextParameterList = 3507;
-        ReadBinaryParameterList = 3573;
-        ReadText = 3639;
-        ReadBinary = 3668;
+        ProgramParameter = 45;
+        Block = 105;
+        AllocateVar = 779;
+        ProcedureDefinition = 857;
+        ConstantDefinitions = 177;
+        TypeDefinitions = 345;
+        VariableDeclarations = 668;
+        AssignmentStmt = 1091;
+        CallStmt = 1170;
+        IfStmt = 1409;
+        WhileStmt = 1440;
+        CaseStmt = 1492;
+        LoopStmt = 1455;
+        ConstantValue = 191;
+        SymbolStkPushDefaultIntegerConstant = 3936;
+        SymbolStkPushDefaultStringConstant = 3948;
+        TypeBody = 383;
+        ComponentType = 468;
+        IndexType = 449;
+        SimpleType = 521;
+        ValuePushValuePlusOne = 3927;
+        TypeTblEnterIfNew = 439;
+        SymbolStkPushDefaultIntegerType = 3960;
+        ValuePushTypeBounds = 588;
+        SubrangeUpperBound = 606;
+        EnterVariableAttributes = 733;
+        Assignment = 1098;
+        ProcedureHeading = 910;
+        ProcedureParameterType = 956;
+        ProcedurePrologue = 1014;
+        CountPushCopy = 3932;
+        CallBlockWithScope = 1082;
+        Variable = 2235;
+        Expression = 1667;
+        CompareAndSwapTypes = 2009;
+        BeginStmt = 1156;
+        OpenProcedure = 2635;
+        AssignProcedure = 2666;
+        WriteProcedure = 2783;
+        WritelnProcedure = 3321;
+        ReadProcedure = 3379;
+        ReadlnProcedure = 3741;
+        ActualParameters = 1303;
+        FlushActuals = 4000;
+        VarActual = 1371;
+        BooleanControlExpression = 3912;
+        CaseSelectorExpression = 3895;
+        EmitCaseBranchTabl = 1536;
+        CaseDefault = 1555;
+        CaseAlternative = 1563;
+        Operand = 1695;
+        UnaryOperator = 1832;
+        BinaryOperator = 1864;
+        FlushExpn = 3979;
+        ConstantOperand = 2346;
+        VariableOperand = 2385;
+        FunctionOperand = 2412;
+        SymbolStkPushDefaultIntegerVariable = 3967;
+        FileOperand = 2610;
+        CompareOperandAndResultTypes = 2109;
+        CompareEqualityOperandTypes = 2170;
+        CompareRelationalOperandTypes = 2120;
+        VariableExtension = 2277;
+        StandardFunctionActual = 2515;
+        FileVariable = 3799;
+        WriteText = 3113;
+        WriteBinary = 3237;
+        WriteStandardExpnList = 3046;
+        TextFileVariable = 3840;
+        ReadTextParameterList = 3509;
+        ReadBinaryParameterList = 3575;
+        ReadText = 3641;
+        ReadBinary = 3670;
         }
 
         { S/SL Table Parameters }
-        sslTblSize = 4017;
+        sslTblSize = 4019;
         minSslTableValue = -32767;
-        maxSslTableValue = 32767;      
+        maxSslTableValue = 32767;
          
 { ===== End of contents of semantic.def }
 
@@ -789,12 +785,12 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
 
         { Predefined type table entries }
         standardIntegerTypeRef: TypeTblReference;
-        standardCharTypeRef:    TypeTblReference;
+        standardStringTypeRef:    TypeTblReference;
         standardBooleanTypeRef: TypeTblReference;
         standardTextTypeRef:    TypeTblReference;
         
         { UNIX argument file names }
-        {NsemanticSsl, NparseStream, Ntemp, NtCode, Noptions: array [1 .. 50] of char;}
+        {NsemanticSsl, NparseStream, Ntemp, NtCode, Noptions: array [1 .. 50] of String;}
 
 
     procedure Assert (assertion: Boolean; number: integer);
@@ -1009,14 +1005,14 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
             symbolTblTypeTblLink[pidInteger] := pidInteger;
             typeTblKind[pidInteger] := tpInteger;
             { This index is used by the semantic mechanisms to link to predefined type integer; 
-              similarly for char, Boolean and text. }
+              similarly for String, Boolean and text. }
             standardIntegerTypeRef := pidInteger;
 
-            { char }
-            symbolTblKind[pidChar] := syType;
-            symbolTblTypeTblLink[pidChar] := pidChar;
-            typeTblKind[pidChar] := tpChar;
-            standardCharTypeRef := pidChar;
+            { String }
+            symbolTblKind[pidString] := syType;
+            symbolTblTypeTblLink[pidString] := pidString;
+            typeTblKind[pidString] := tpString;
+            standardStringTypeRef := pidString;
 
             { Boolean }
             symbolTblKind[pidBoolean] := syType;
@@ -1024,11 +1020,11 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
             typeTblKind[pidBoolean] := tpBoolean;
             standardBooleanTypeRef := pidBoolean;
 
-            { text (i.e. file of char) }
+            { text (i.e. file of String) }
             symbolTblKind[pidText] := syType;
             symbolTblTypeTblLink[pidText] := pidText;
             typeTblKind[pidText] := tpFile;
-            typeTblComponentLink[pidText] := standardCharTypeRef;
+            typeTblComponentLink[pidText] := standardStringTypeRef;
             standardTextTypeRef := pidText;
 
             { true (1) }
@@ -1163,8 +1159,8 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                     write('integer type expression required');
                 eBooleanExpnReqd:
                     write('Boolean type expression required');
-                eCharExpnReqd:
-                    write('char type expression required');
+                eStringExpnReqd:
+                    write('String type expression required');
                 eArrayVarReqd:
                     write('array variable required');
                 eVariableReqd:
@@ -1915,8 +1911,8 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                         case parameterValue of
                             stdInteger:
                                 symbolStkTypeTblLink[symbolStkTop] := standardIntegerTypeRef;
-                            stdChar:
-                                symbolStkTypeTblLink[symbolStkTop] := standardCharTypeRef;
+                            stdString:
+                                symbolStkTypeTblLink[symbolStkTop] := standardStringTypeRef;
                             stdBoolean:
                                 symbolStkTypeTblLink[symbolStkTop] := standardBooleanTypeRef;
                             stdText:
@@ -2059,8 +2055,8 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                             case parameterValue of
                                 stdInteger:
                                     typeStkComponentLink[typeStkTop] := standardIntegerTypeRef;
-                                stdChar:
-                                    typeStkComponentLink[typeStkTop] := standardCharTypeRef;
+                                stdString:
+                                    typeStkComponentLink[typeStkTop] := standardStringTypeRef;
                                 stdBoolean:
                                     typeStkComponentLink[typeStkTop] := standardBooleanTypeRef;
                             end
@@ -2357,7 +2353,7 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                         case typeStkKind[typeStkTop] of
                             tpInteger, tpSubrange:
                                 dataAreaEnd := dataAreaEnd + wordSize;
-                            tpChar, tpBoolean:
+                            tpString, tpBoolean:
                                 dataAreaEnd := dataAreaEnd + byteSize;
                             tpArray, tpPackedArray:
                                 begin
