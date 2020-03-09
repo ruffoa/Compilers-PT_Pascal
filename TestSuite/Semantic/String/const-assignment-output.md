@@ -1,4 +1,4 @@
-This is to test that Qust const strings work, and that the output should be the exact same as a equivalent let declaration
+This is to test that Qust const strings work, and that they are properly inserted into the symbol table
 
 -------------------------
 
@@ -8,6 +8,7 @@ Test Content:
 ```
 mod main (output) { 
     const a = "Hello World";
+    let b: str = a;
 }
 ```
 ------------------------
@@ -25,6 +26,13 @@ Parser Output:
    .sIdentifier
     .sStringLiteral
    % .sNewLine
+  .sVar
+  .sIdentifier
+     .sIdentifier
+    .sInitialValue
+        .sIdentifier
+    .sExpnEnd
+  % .sNewLine
   .sEnd
 
 ```
@@ -60,23 +68,28 @@ Test output is:
     % value emitted 108
     % value emitted 100
     .tAssignString
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 1028
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 0
+### Semantic pass S/SL program failure:  Semantic choice failed
+### Semantic assertion 4 failed: 
 
 ```
 
 
-Warning, output length does not match (15 vs 22)!  (Newlines are not the issue here!) `consts.pt`
+Warning, output length does not match (19 vs 8)!  (Newlines are not the issue here!) `const-assignment.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tTrapBegin !== .tAssignBegin on line 12 of consts.pt
--.tTrap !== .tLiteralAddress on line 13 of consts.pt
--oEmitTrapKind(trHalt) !== oEmitValue on line 14 of consts.pt
+-.tAssignBegin !== .tTrapBegin on line 5 of const-assignment.pt
+-.tLiteralAddress !== .tTrap on line 6 of const-assignment.pt
+-oEmitValue !== oEmitTrapKind(trHalt) on line 7 of const-assignment.pt
 
 ```
 end file
