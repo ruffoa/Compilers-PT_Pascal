@@ -71,16 +71,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (15 vs 13)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--oEmitValue !== .tAssignString on line 9 of base-case.pt
--oEmitString !== .tTrapBegin on line 10 of base-case.pt
--.tAssignString !== .tTrap on line 11 of base-case.pt
--.tTrapBegin !== oEmitTrapKind(trHalt) on line 12 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
