@@ -191,7 +191,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.tGT !== .tGE on line 38 of nested-loops.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
