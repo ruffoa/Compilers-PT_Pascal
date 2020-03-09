@@ -12,5 +12,8 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-
+### Semantic pass S/SL program failure:  Semantic choice failed
+while processing line          3
+Table index 2096;  Operation 11;  Argument 1
+### Semantic assertion 4 failed: 
 ```

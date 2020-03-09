@@ -40,12 +40,34 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+    .tAssignBegin
+    .tLiteralAddress
+    oEmitValue
+    % value emitted 4
+    .tLiteralString
+    oEmitValue
+    % value emitted 11
+    oEmitString
+    % value emitted 72
+    % value emitted 101
+    % value emitted 108
+    % value emitted 108
+    % value emitted 111
+    % value emitted 32
+    % value emitted 87
+    % value emitted 111
+    % value emitted 114
+    % value emitted 108
+    % value emitted 100
+    .tAssignString
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (5 vs 15)!  (Newlines are not the issue here!) `consts.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
