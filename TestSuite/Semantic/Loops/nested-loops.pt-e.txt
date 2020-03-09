@@ -1,0 +1,66 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+.tAssignBegin           // assign i = 0
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end i = 0
+.tWhileBegin            // loop start
+.tWhilePreBreak         // loop contents before break statement
+oEmitNullAddress        // null statement
+.tWhileBreakIf          // loop break conditions - i >= 5
+.tLiteralAddress        // address of i
+oEmitValue
+.tFetchInteger          // get the value of i
+.tLiteralInteger        // '5'
+oEmitValue
+.tGE                    // i >= 5
+.tNot                   // not sure why syntax calls for a not here, but okay
+.tWhileTest             // loop contents after break statement
+.tAssignBegin           // j = 0
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end j = 0
+.tWhileBegin            // inner loop start
+.tWhilePreBreak         // loop contents before break statement
+oEmitNullAddress        // null statement
+.tWhileBreakIf          // loop break conditions - j >= 5
+.tLiteralAddress        // address of j
+oEmitValue
+.tFetchInteger          // get the value of j
+.tLiteralInteger        // '5'
+oEmitValue
+.tGT                    // j >= 5
+.tNot                   // not sure why syntax calls for a not here, but okay
+.tWhileTest             // loop contents after break statement
+.tAssignBegin           // j += 1;
+.tLiteralAddress
+oEmitValue
+.tLiteralAddress
+oEmitValue
+.tFetchInteger
+.tLiteralInteger
+oEmitValue
+.tAdd
+.tAssignInteger         // end assignment of j += 1
+.tWhileEnd              // end inner loop
+.tAssignBegin           // i += 1;
+.tLiteralAddress
+oEmitValue
+.tLiteralAddress
+oEmitValue
+.tFetchInteger
+.tLiteralInteger
+oEmitValue
+.tAdd
+.tAssignInteger         // end assignment of i += 1
+.tWhileEnd              // end loop
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0

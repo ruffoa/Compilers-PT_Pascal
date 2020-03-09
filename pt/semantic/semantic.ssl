@@ -816,8 +816,8 @@ Block :
                 @WhileStmt
             | sCaseStmt:
                 @CaseStmt
-            % | sLoopStmt:    % TODO: loop statement will use the while rule
-            %     @RepeatStmt
+            | sLoopStmt:
+                @LoopStmt
             | sNullStmt:
             | *:
                 >
@@ -1622,19 +1622,29 @@ WhileStmt :
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
-RepeatStmt :
-        .tRepeatBegin
+LoopStmt :
+        .tWhileBegin
+        .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
-        {[
-            | sLoopBreakIf:             % changed sRepeatEnd to sLoopBreakIf to get it to build
-                >
-            | *:
-                @CallBlockWithScope
-        ]}
-        .tRepeatControl
+        oFixPushForwardBranch
+        oEmitNullAddress                % exit branch
+        oFixSwap                % top-of-loop target back on top
+        sBegin
+        oSymbolTblPushScope 
+        @Block
+        sEnd
+        sLoopBreakIf
+        .tWhileBreakIf
         @BooleanControlExpression
-        .tRepeatTest
-        oFixPopTargetAddress;
+        .tNot
+        .tWhileTest
+        sBegin
+        @Block
+        sEnd
+        oSymbolTblPopScope
+        oFixPopTargetAddress
+        oFixPopForwardBranch
+        .tWhileEnd;
 
 CaseStmt :
         .tCaseBegin
