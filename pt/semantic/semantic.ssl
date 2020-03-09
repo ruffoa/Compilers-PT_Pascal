@@ -903,7 +903,6 @@ ConstantValue :         % An identifier token has just been accepted
                 oEmitValue
                 oValuePop
                 oTypeStkPushSymbol
-                .tFetchAddress
                 oValuePushStringLength
                 [ oValueChoose
                     | zero:
@@ -921,7 +920,7 @@ ConstantValue :         % An identifier token has just been accepted
                 .tAssignString
                 oSymbolStkPop  oTypeStkPop      % Expression
                 oTypeStkPop
-                
+
                 % oValuePushStringLength
                 % [ oValueChoose
                 %     | zero:
