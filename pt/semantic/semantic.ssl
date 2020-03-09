@@ -110,22 +110,18 @@ Output :
         tFetchInteger
         tFetchString
         tFetchBoolean
-        tFetchString
         tAssignBegin
         tAssignAddress
         tAssignInteger
-        tAssignString
         tAssignBoolean
         tAssignString
         tStoreParmAddress
         tStoreParmInteger
-        tStoreParmString
         tStoreParmBoolean
         tStoreParmString
         tSubscriptBegin
         tSubscriptAddress
         tSubscriptInteger
-        tSubscriptString
         tSubscriptBoolean
         tSubscriptString
         tArrayDescriptor
@@ -154,7 +150,6 @@ Output :
         tLiteralAddress
         firstCompoundTcode = tLiteralAddress
         tLiteralInteger
-        tLiteralString
         tLiteralBoolean
         tLiteralString
         tStringDescriptor
@@ -540,12 +535,11 @@ type TrapKind :
         trReadln = 4
         trWrite = 5
         trWriteln = 6
-        trWriteString = 7
-        trWriteInteger = 8
-        trWriteString = 9
-        trReadInteger = 10
-        trReadString = 11
-        trAssign = 12;
+        trWriteInteger = 7
+        trWriteString = 8
+        trReadInteger = 9
+        trReadString = 10
+        trAssign = 11;
 
 mechanism Emit :
     % Emit writes to the output "t-code" stream (the code area),
