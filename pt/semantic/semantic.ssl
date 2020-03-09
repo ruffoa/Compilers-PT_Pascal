@@ -885,16 +885,19 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkSetKind(syVariable)
                 oSymbolStkPush(syType)
                 oSymbolStkLinkToStandardType(stdString)
-                oAllocateAlignOnWord
+
+                oAllocateAlignOnWord        %% allocate the "variable"
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
-                oSymbolStkEnterTypeReference
-                oSymbolTblEnter
+
+                % oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
+                % oSymbolTblEnter
                 .tAssignBegin
                 .tLiteralAddress
                 oValuePushSymbol
                 oEmitValue
                 oValuePop
+                .tFetchAddress
                 oTypeStkPushSymbol
                 oValuePushStringLength
                 [ oValueChoose
@@ -949,7 +952,7 @@ ConstantValue :         % An identifier token has just been accepted
                 % ]
                 % oValuePop       % Upper bound
 
-                oSymbolStkSetKind(syConstant)
+                oSymbolStkSetKind(syConstant)   %% set back to a constant
                 oTypeStkPop
         	    oSymbolStkPop
         ]
