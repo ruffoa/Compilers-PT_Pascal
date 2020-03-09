@@ -279,6 +279,7 @@
         ten = 10;
         byteSize = 1;
         wordSize = 4;
+        stringSize = 1024;
         { Type 14 }
         no = 0;
         yes = 1;
