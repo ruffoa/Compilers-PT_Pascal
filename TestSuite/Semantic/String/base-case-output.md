@@ -47,9 +47,6 @@ Test output is:
      .tLiteralAddress
      oEmitValue
      % value emitted 4
-      .tSkipString
-      oEmitNullAddress
-      % value emitted -32767
       .tLiteralString
       oEmitValue
       % value emitted 11
@@ -65,9 +62,6 @@ Test output is:
       % value emitted 114
       % value emitted 108
       % value emitted 100
-      .tStringDescriptor
-      % value emitted 16
-     #eTypeMismatch
     .tAssignString
  .tTrapBegin
  .tTrap
@@ -77,17 +71,16 @@ Test output is:
 ```
 
 
-Warning, output length does not match (19 vs 13)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (15 vs 13)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tSkipString !== .tLiteralString 11 "Hello World" on line 8 of base-case.pt
--oEmitNullAddress !== .tAssignString on line 9 of base-case.pt
--.tLiteralString !== .tTrapBegin on line 10 of base-case.pt
--oEmitValue !== .tTrap on line 11 of base-case.pt
--oEmitString !== oEmitTrapKind(trHalt) on line 12 of base-case.pt
+-oEmitValue !== .tAssignString on line 9 of base-case.pt
+-oEmitString !== .tTrapBegin on line 10 of base-case.pt
+-.tAssignString !== .tTrap on line 11 of base-case.pt
+-.tTrapBegin !== oEmitTrapKind(trHalt) on line 12 of base-case.pt
 
 ```
 end file

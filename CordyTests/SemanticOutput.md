@@ -220,7 +220,6 @@ File diff
 end file
 --------------------------------
 Reading file helloworld.pt
-Lengths do not match!  Something went wrong in helloworld.pt
 
 Output is: 
 ```
@@ -238,9 +237,6 @@ Output is:
      % value emitted 0
      .tVarParm
      .tParmEnd
-       .tSkipString
-       oEmitNullAddress
-       % value emitted -32767
        .tLiteralString
        oEmitValue
        % value emitted 11
@@ -256,12 +252,10 @@ Output is:
        % value emitted 114
        % value emitted 108
        % value emitted 100
-       .tStringDescriptor
-       % value emitted 19
      .tParmEnd
       .tLiteralInteger
       oEmitValue
-      % value emitted -11
+      % value emitted 1
       .tParmEnd
       .tTrap
       oEmitTrapKind(trWriteString)
@@ -285,44 +279,18 @@ Output is:
 File diff
 -------------------------
 ```
-.tSkipString !== .tLiteralString on line 14 of helloworld.pt
-oEmitNullAddress !== oEmitValue on line 15 of helloworld.pt
-% value emitted -32767 !== % value emitted 11 on line 16 of helloworld.pt
-.tLiteralString !== oEmitString on line 17 of helloworld.pt
-oEmitValue !== % value emitted 72   'h' on line 18 of helloworld.pt
-% value emitted 11 !== % value emitted 101  "e" on line 19 of helloworld.pt
-oEmitString !== % value emitted 108  "l" on line 20 of helloworld.pt
-% value emitted 72 !== % value emitted 108  'l' on line 21 of helloworld.pt
-% value emitted 101 !== % value emitted 111  'o' on line 22 of helloworld.pt
-% value emitted 108 !== % value emitted 32   ' ' on line 23 of helloworld.pt
-% value emitted 108 !== % value emitted 119  'w' on line 24 of helloworld.pt
+% value emitted 72 !== % value emitted 72   'h' on line 18 of helloworld.pt
+% value emitted 101 !== % value emitted 101  "e" on line 19 of helloworld.pt
+% value emitted 108 !== % value emitted 108  "l" on line 20 of helloworld.pt
+% value emitted 108 !== % value emitted 108  'l' on line 21 of helloworld.pt
+% value emitted 111 !== % value emitted 111  'o' on line 22 of helloworld.pt
+% value emitted 32 !== % value emitted 32   ' ' on line 23 of helloworld.pt
+% value emitted 119 !== % value emitted 119  'w' on line 24 of helloworld.pt
 % value emitted 111 !== % value emitted 111  'o' on line 25 of helloworld.pt
-% value emitted 32 !== % value emitted 114  'r' on line 26 of helloworld.pt
-% value emitted 119 !== % value emitted 108  'l' on line 27 of helloworld.pt
-% value emitted 111 !== % value emitted 100  'd' on line 28 of helloworld.pt
-% value emitted 114 !== .tParmEnd on line 29 of helloworld.pt
-% value emitted 108 !== .tLiteralInteger on line 30 of helloworld.pt
-% value emitted 100 !== oEmitValue on line 31 of helloworld.pt
-.tStringDescriptor !== % value emitted 1 on line 32 of helloworld.pt
-% value emitted 19 !== .tParmEnd on line 33 of helloworld.pt
-.tParmEnd !== .tTrap on line 34 of helloworld.pt
-.tLiteralInteger !== oEmitTrapKind(trWriteString) on line 35 of helloworld.pt
-oEmitValue !== % value emitted 109 on line 36 of helloworld.pt
-% value emitted -11 !== .tWriteEnd on line 37 of helloworld.pt
-.tParmEnd !== .tTrapBegin on line 38 of helloworld.pt
-.tTrap !== .tLiteralAddress on line 39 of helloworld.pt
-oEmitTrapKind(trWriteString) !== oEmitValue on line 40 of helloworld.pt
-% value emitted 8 !== % value emitted 0 on line 41 of helloworld.pt
-.tWriteEnd !== .tVarParm on line 42 of helloworld.pt
-.tTrapBegin !== .tParmEnd on line 43 of helloworld.pt
-.tLiteralAddress !== .tTrap on line 44 of helloworld.pt
-oEmitValue !== oEmitTrapKind(trWriteln) on line 45 of helloworld.pt
-% value emitted 0 !== % value emitted 6 on line 46 of helloworld.pt
-.tVarParm !== .tTrapBegin on line 47 of helloworld.pt
-.tParmEnd !== .tTrap on line 48 of helloworld.pt
-.tTrap !== oEmitTrapKind(trHalt) on line 49 of helloworld.pt
-oEmitTrapKind(trWriteln) !== % value emitted 0 on line 50 of helloworld.pt
-% value emitted 6 !==  on line 51 of helloworld.pt
+% value emitted 114 !== % value emitted 114  'r' on line 26 of helloworld.pt
+% value emitted 108 !== % value emitted 108  'l' on line 27 of helloworld.pt
+% value emitted 100 !== % value emitted 100  'd' on line 28 of helloworld.pt
+% value emitted 8 !== % value emitted 109 on line 36 of helloworld.pt
 
 ```
 end file
