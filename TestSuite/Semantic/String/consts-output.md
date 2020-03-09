@@ -44,7 +44,6 @@ Test output is:
     .tLiteralAddress
     oEmitValue
     % value emitted 4
-    .tFetchAddress
     .tLiteralString
     oEmitValue
     % value emitted 11
@@ -69,19 +68,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (16 vs 15)!  (Newlines are not the issue here!) `consts.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tFetchAddress !== .tLiteralString on line 8 of consts.pt
--.tLiteralString !== oEmitValue on line 9 of consts.pt
--oEmitValue !== oEmitString on line 10 of consts.pt
--oEmitString !== .tAssignString on line 11 of consts.pt
--.tAssignString !== .tTrapBegin on line 12 of consts.pt
--.tTrapBegin !== .tTrap on line 13 of consts.pt
--.tTrap !== oEmitTrapKind(trHalt) on line 14 of consts.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
