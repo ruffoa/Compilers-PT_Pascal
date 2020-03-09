@@ -885,6 +885,7 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkSetKind(syVariable)
                 oSymbolStkPush(syType)
                 oSymbolStkLinkToStandardType(stdString)
+                oAllocateAlignOnWord
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
                 oSymbolStkEnterTypeReference
