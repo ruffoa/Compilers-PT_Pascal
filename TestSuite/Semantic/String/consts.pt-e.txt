@@ -10,6 +10,13 @@ oEmitValue              // emits address of a
 oEmitValue              // 11
 oEmitString             // "Hello World"
 .tAssignString
+.tAssignBegin           // begin assignment of b
+.tLiteralAddress        // address of b
+oEmitValue              // emits address of b
+.tLiteralString         // length 11, "Hello World"
+oEmitValue              // 11
+oEmitString             // "Hello World"
+.tAssignString
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0
