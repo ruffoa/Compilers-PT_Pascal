@@ -885,16 +885,22 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkSetKind(syVariable)
                 oSymbolStkPush(syType)
                 oSymbolStkLinkToStandardType(stdString)
-                oValuePush(one)
-                oValuePushStringLength
-                oTypeStkPushSymbol
-                oValuePop       % subrange upper
-                oValuePop       %          lower bound-----
-                oSymbolStkPop
-                @TypeTblEnterIfNew
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
                 oSymbolStkEnterTypeReference
+                oSymbolTblEnter
+                % .tAssignBegin
+
+                % oValuePush(one)
+                % oValuePushStringLength
+                % oTypeStkPushSymbol
+                % oValuePop       % subrange upper
+                % oValuePop       %          lower bound-----
+                % oSymbolStkPop
+                % @TypeTblEnterIfNew
+                % oSymbolStkEnterDataAddress
+                % oAllocateVariable
+                % oSymbolStkEnterTypeReference
                 % oSymbolTblEnter
 
                 % oValuePushStringLength
