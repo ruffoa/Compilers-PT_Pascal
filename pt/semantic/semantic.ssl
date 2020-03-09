@@ -882,37 +882,11 @@ ConstantValue :         % An identifier token has just been accepted
                 oSymbolStkEnterValue
                 oValuePop
             | sStringLiteral:
-                oValuePush(one) % implicit lower bound of string index type
-                oValuePushStringLength
-                [ oValueChoose
-                    | zero:
-                        #eNullString
-                        @SymbolStkPushDefaultStringConstant
-                    | one:
-                        oSymbolStkLinkToStandardType(stdString)
-                        oSymbolStkEnterStringValue
-                    | *:
-                        % Emit a branch around the string since
-                        % it is stored in the code area
-                        .tSkipString
-                        oFixPushForwardBranch
-                        oEmitNullAddress
-                        .tLiteralString
-                        oEmitValue      % string length
-                        % The string "address" is the location (offset)
-                        % of the first character of the string
-                        oSymbolStkEnterCodeAddress
-                        oEmitString
-                        oFixPopForwardBranch
-                        oTypeStkPush(tpPackedArray)     % means literal string
-                        oTypeStkEnterBounds
-                        oTypeStkLinkToStandardComponentType(stdString)
-                        oTypeTblEnter
-                        oSymbolStkEnterTypeReference
-                        oTypeStkPop
-                ]
-                oValuePop       % Upper bound
-                oValuePop       % Lower bound
+                oSymbolStkSetKind(syVariable)
+                @TypeBody
+                @EnterVariableAttributes
+                @Assignment
+                oSymbolStkSetKind(syConstant)
         ]
         oSymbolTblEnter
         oSymbolStkPop;          % name being defined
