@@ -36,7 +36,7 @@ oEmitValue
 .tFetchInteger          // get the value of j
 .tLiteralInteger        // '5'
 oEmitValue
-.tGE                    // j >= 5
+.tGT                    // j >= 5
 .tNot                   // not sure why syntax calls for a not here, but okay
 .tWhileTest             // loop contents after break statement
 .tAssignBegin           // j += 1;
