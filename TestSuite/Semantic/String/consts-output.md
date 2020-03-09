@@ -44,12 +44,11 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (9 vs 15)!  (Newlines are not the issue here!) `consts.pt`
+Warning, output length does not match (8 vs 15)!  (Newlines are not the issue here!) `consts.pt`
 Showing as much of the diff as possible...
 
 File diff
@@ -58,7 +57,6 @@ File diff
 -.tTrapBegin !== .tAssignBegin on line 5 of consts.pt
 -.tTrap !== .tLiteralAddress on line 6 of consts.pt
 -oEmitTrapKind(trHalt) !== oEmitValue on line 7 of consts.pt
--### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase !== .tLiteralString on line 8 of consts.pt
 
 ```
 end file
