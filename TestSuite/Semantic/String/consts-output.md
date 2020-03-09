@@ -40,18 +40,25 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-### Semantic assertion 26 failed: null type table ref in oSymbolStkEnterTypeReference
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
+### Semantic assertion 50 failed: type stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (6 vs 15)!  (Newlines are not the issue here!) `consts.pt`
+Warning, output length does not match (9 vs 15)!  (Newlines are not the issue here!) `consts.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic assertion 26 failed: null type table ref in oSymbolStkEnterTypeReference !== .tAssignBegin on line 5 of consts.pt
+-.tTrapBegin !== .tAssignBegin on line 5 of consts.pt
+-.tTrap !== .tLiteralAddress on line 6 of consts.pt
+-oEmitTrapKind(trHalt) !== oEmitValue on line 7 of consts.pt
+-### Semantic assertion 50 failed: type stack not empty at end of semantic phase !== .tLiteralString on line 8 of consts.pt
 
 ```
 end file
