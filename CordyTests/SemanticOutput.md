@@ -265,7 +265,7 @@ Output is:
       .tParmEnd
       .tTrap
       oEmitTrapKind(trWriteString)
-      % value emitted 7
+      % value emitted 9
     .tWriteEnd
    .tTrapBegin
     .tLiteralAddress
@@ -312,7 +312,7 @@ oEmitValue !== % value emitted 109 on line 36 of helloworld.pt
 .tParmEnd !== .tTrapBegin on line 38 of helloworld.pt
 .tTrap !== .tLiteralAddress on line 39 of helloworld.pt
 oEmitTrapKind(trWriteString) !== oEmitValue on line 40 of helloworld.pt
-% value emitted 7 !== % value emitted 0 on line 41 of helloworld.pt
+% value emitted 9 !== % value emitted 0 on line 41 of helloworld.pt
 .tWriteEnd !== .tVarParm on line 42 of helloworld.pt
 .tTrapBegin !== .tParmEnd on line 43 of helloworld.pt
 .tLiteralAddress !== .tTrap on line 44 of helloworld.pt
