@@ -884,21 +884,21 @@ ConstantValue :         % An identifier token has just been accepted
             | sStringLiteral:
                 oSymbolStkSetKind(syVariable)
                 oSymbolStkPush(syType)
-                oSymbolStkLinkToStandardType(stdString)
+                oSymbolStkLinkToStandardType(stdString) %% set as stdString
 
                 oAllocateAlignOnWord        %% allocate the "variable"
                 oSymbolStkEnterDataAddress
                 oAllocateVariable
 
-                oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
-                oSymbolTblEnter
+                % oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
+                % oSymbolTblEnter
                 .tAssignBegin
                 .tLiteralAddress
                 oValuePushSymbol
                 oEmitValue
                 oValuePop
-                .tFetchAddress
                 oTypeStkPushSymbol
+                .tFetchAddress
                 oValuePushStringLength
                 [ oValueChoose
                     | zero:
@@ -915,18 +915,6 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
                 .tAssignString
                 oSymbolStkPop  oTypeStkPop      % Expression
-
-                % oValuePush(one)
-                % oValuePushStringLength
-                % oTypeStkPushSymbol
-                % oValuePop       % subrange upper
-                % oValuePop       %          lower bound-----
-                % oSymbolStkPop
-                % @TypeTblEnterIfNew
-                % oSymbolStkEnterDataAddress
-                % oAllocateVariable
-                % oSymbolStkEnterTypeReference
-                % oSymbolTblEnter
 
                 % oValuePushStringLength
                 % [ oValueChoose
