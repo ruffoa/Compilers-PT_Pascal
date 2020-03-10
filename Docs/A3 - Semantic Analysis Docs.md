@@ -262,5 +262,122 @@ CaseDefault:
 # Mutable and Immutable Vars
 
 # String Type
+## `Semantic.ssl` Changes
+- Change all `Char` to `String`
+- Add in `stringSize` to `Integer`
+- Add in new String T-code operations
+- Update the `ConstantValue` routine to handle Qust string constants as a psudo-variable
+```
+    ...
+    | sStringLiteral:
+        oSymbolStkSetKind(syVariable)
+        oSymbolStkLinkToStandardType(stdString) %% set as stdString
+
+        oTypeStkPushSymbol
+        oTypeStkLinkToStandardComponentType(stdString)
+        @TypeTblEnterIfNew
+        oAllocateAlignOnWord        %% allocate the "variable"
+        oSymbolStkEnterDataAddress
+        oAllocateVariable
+
+        oSymbolStkEnterTypeReference    %% generate equivalent t-code for an assignment
+        oSymbolTblEnter
+
+        .tAssignBegin           %% perform the assignment
+        .tLiteralAddress
+        oValuePushSymbol
+        oEmitValue
+        oValuePop
+        oTypeStkPushSymbol
+        oValuePushStringLength
+        [ oValueChoose
+            | zero:
+                #eNullString
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+            | *:
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+                .tLiteralString
+                oEmitValue      % string length
+                oEmitString     % string value
+        ]
+        oValuePop
+        .tAssignString
+        oSymbolStkPop  oTypeStkPop      % Expression
+        oTypeStkPop
+
+        oSymbolStkSetKind(syConstant)   %% set back to a constant
+        oTypeStkPop
+]
+    ...
+```
+
+- Update `Operand` to take a string literal with the new output token stream, in order to make strings a "first class" data type
+```diff
+        | sStringLiteral:
+-            oValuePush(one) % implicit lower bound of string index type
+            oValuePushStringLength
+            [ oValueChoose
+                | zero:
+                    #eNullString
+                    oSymbolStkPush(syExpression)
+-                    oTypeStkPush(tpChar)
+-                | one:
+-                    oSymbolStkPush(syExpression)
+-                    oTypeStkPush(tpChar)
+-                    .tLiteralChar
+-                    oEmitString
++                    oTypeStkPush(tpString)
+                | *:
+                    oSymbolStkPush(syExpression)
+-                    % branch around string since
+-                    % it is stored in the code area
+-                    .tSkipString
+-                    oFixPushForwardBranch
+-                    oEmitNullAddress
++                    oTypeStkPush(tpString)
+                    .tLiteralString
+                    oEmitValue      % string length
+-                    oFixPushTargetAddress
+-                    oFixSwap                % Forward branch back on top
+-                    oEmitString
+-                    oFixPopForwardBranch
+-                    % Descriptor points to the
+-                    % first character of the string
+-                    .tStringDescriptor
+-                    oFixPopTargetAddress
+-                    oTypeStkPush(tpPackedArray)
+-                    oTypeStkEnterBounds
+-                    oTypeStkLinkToStandardComponentType(stdChar)
++                    oEmitString     % string value
+            ]
+-            oValuePop
+            oValuePop
+        ...
+```
+
+## `Semantic.pt` Changes
+- Update definitions from SSL
+- Change (almost) all `char` to `string`
+- Change text to use `standardStringTypeRef` instead of `standardCharTypeRef`
+- Add in `tpString` into case within `oAllocateVariable`
+```diff
+        ...
+            dataAreaEnd := dataAreaEnd + byteSize;
++        tpString:
++            dataAreaEnd := dataAreaEnd + stringSize;
+        tpArray, tpPackedArray:
+        ...
+```
+- Add in if check for string array sizing
+```diff
+            ...
+                size := size * wordSize;
++            if (kind = tpString) then
++                size := size * stringSize;
+            ...
+```
+
 
 # String Operations
