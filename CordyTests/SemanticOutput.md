@@ -279,8 +279,6 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 101 !== % value emitted 101  "e" on line 19 of helloworld.pt
-% value emitted 108 !== % value emitted 108  "l" on line 20 of helloworld.pt
 % value emitted 8 !== % value emitted 109 on line 36 of helloworld.pt
 
 ```
