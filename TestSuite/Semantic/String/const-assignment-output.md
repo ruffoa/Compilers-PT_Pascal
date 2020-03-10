@@ -72,23 +72,29 @@ Test output is:
      .tLiteralAddress
      oEmitValue
      % value emitted 1028
-       .tLiteralAddress
+       .tLiteralString
        oEmitValue
-       % value emitted 0
-### Semantic pass S/SL program failure:  Semantic choice failed
-### Semantic assertion 4 failed: 
+       % value emitted 4
+    .tAssignString
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (19 vs 24)!  (Newlines are not the issue here!) `const-assignment.pt`
+Warning, output length does not match (21 vs 24)!  (Newlines are not the issue here!) `const-assignment.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  Semantic choice failed !== .tLiteralString on line 17 of const-assignment.pt
--### Semantic assertion 4 failed: !== oEmitValue on line 18 of const-assignment.pt
+-.tLiteralString !== .tLiteralAddress on line 15 of const-assignment.pt
+-.tAssignString !== .tLiteralString on line 17 of const-assignment.pt
+-.tTrapBegin !== oEmitValue on line 18 of const-assignment.pt
+-.tTrap !== oEmitString on line 19 of const-assignment.pt
+-oEmitTrapKind(trHalt) !== .tAssignString on line 20 of const-assignment.pt
 
 ```
 end file
