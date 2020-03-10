@@ -84,17 +84,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (21 vs 24)!  (Newlines are not the issue here!) `const-assignment.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tLiteralString !== .tLiteralAddress on line 15 of const-assignment.pt
--.tAssignString !== .tLiteralString on line 17 of const-assignment.pt
--.tTrapBegin !== oEmitValue on line 18 of const-assignment.pt
--.tTrap !== oEmitString on line 19 of const-assignment.pt
--oEmitTrapKind(trHalt) !== .tAssignString on line 20 of const-assignment.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
