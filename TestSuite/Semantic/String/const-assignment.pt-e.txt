@@ -13,11 +13,8 @@ oEmitString             // "Hello World"
 .tAssignBegin           // begin assignment of b - bcts as a let declaration
 .tLiteralAddress        // address of b
 oEmitValue              // emits address of b - should be 4 + 1024
-.tLiteralAddress        // address of b
-oEmitValue              // emits address of a - should be 4
 .tLiteralString         // length 11, "Hello World"
-oEmitValue              // 11
-oEmitString             // "Hello World"
+oEmitValue              // address of a
 .tAssignString
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
