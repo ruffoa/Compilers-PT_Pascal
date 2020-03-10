@@ -92,7 +92,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--oEmitValue !== oEmitDataAddress on line 16 of multiple-lets.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
