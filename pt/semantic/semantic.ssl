@@ -883,7 +883,7 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
             | sStringLiteral:
                 oSymbolStkSetKind(syVariable)
-                oSymbolStkPush(syType)
+                % oSymbolStkPush(syType)
                 oSymbolStkLinkToStandardType(stdString) %% set as stdString
 
                 oTypeStkPushSymbol
@@ -922,7 +922,7 @@ ConstantValue :         % An identifier token has just been accepted
 
                 oSymbolStkSetKind(syConstant)   %% set back to a constant
                 oTypeStkPop
-        	    oSymbolStkPop
+        	    % oSymbolStkPop
         ]
         oSymbolTblEnter
         oSymbolStkPop;          % name being defined

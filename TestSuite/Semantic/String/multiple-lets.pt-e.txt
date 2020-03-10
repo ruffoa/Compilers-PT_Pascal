@@ -13,11 +13,9 @@ oEmitString             // "Hello World"
 .tAssignBegin           // begin assignment of b
 .tLiteralAddress        // address of b
 oEmitValue              // emits address of b
-.tFetchAddress          // address of a
+.tLiteralAddress        // address of a
 oEmitDataAddress        // address of a
 .tFetchString           // fetch string from a - length 11, "Hello World"
-oEmitValue              // 11
-oEmitString             // "Hello World"
 .tAssignString
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
