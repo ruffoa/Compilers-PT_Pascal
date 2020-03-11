@@ -305,6 +305,16 @@ mechanism SymbolTable :
         % Return true if any external names (program parameters)
         % have not yet been declared.
 
+    oSymbolTblStripScope
+        % Looks through the top scope and set's the symbol's identifier index
+        % to the one at the next lower lexical level for all symbols 
+        % that are not marked as public.
+    
+    oSymbolTblMergeScope
+        % merges the top two scopes by decrementing the lexical level but not
+        % changing the symbol table top. Effectively puts all symbols from the top scope
+        % into the enclosing scope.
+
 
 % Symbol Stack types and mechanism
 

@@ -57,77 +57,79 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
         oSymbolTblPushScope = 16;
         oSymbolTblPopScope = 17;
         oSymbolTblLookupExternal = 18; { >>14 }
-        oSymbolStkPush = 19; { (17) }
-        oSymbolStkPushIdentifier = 20;
-        oSymbolStkPushLocalIdentifier = 21;
-        oSymbolStkPushStandardVariable = 22; { (19) }
-        oSymbolStkPushFormalParameter = 23;
-        oSymbolStkSetKind = 24; { (17) }
-        oSymbolStkLinkToStandardType = 25; { (16) }
-        oSymbolStkEnterValue = 26;
-        oSymbolStkEnterStringValue = 27;
-        oSymbolStkEnterCodeAddress = 28;
-        oSymbolStkEnterDataAddress = 29;
-        oSymbolStkEnterTypeReference = 30;
-        oSymbolStkChooseKind = 31; { >>17 }
-        oSymbolStkChooseStandardFile = 32; { >>19 }
-        oSymbolStkChooseStandardRoutine = 33; { >>18 }
-        oSymbolStkPop = 34;
-        oTypeTblEnter = 35;
-        oTypeTblUpdate = 36;
-        oTypeStkPush = 37; { (20) }
-        oTypeStkPushSymbol = 38;
-        oTypeStkPushComponent = 39;
-        oTypeStkSetKind = 40; { (20) }
-        oTypeStkSetRecursionFlag = 41; { (14) }
-        oTypeStkChooseRecursionFlag = 42; { >>14 }
-        oTypeStkLinkToStandardComponentType = 43; { (16) }
-        oTypeStkEnterBounds = 44;
-        oTypeStkVerifyBounds = 45; { >>14 }
-        oTypeStkEnterParameterCount = 46;
-        oTypeStkCompareParameterCount = 47; { >>14 }
-        oTypeStkEnterComponentReference = 48;
-        oTypeStkChooseKind = 49; { >>20 }
-        oTypeStkChooseTypeReference = 50; { >>14 }
-        oTypeStkCompareNames = 51; { >>14 }
-        oTypeStkSwap = 52;
-        oTypeStkPop = 53;
-        oEmitNullAddress = 54;
-        oEmitValue = 55;
-        oEmitString = 56;
-        oEmitDataAddress = 57;
-        oEmitTrapKind = 58; { (21) }
-        oEmitCaseBranchTable = 59;
-        oAllocateAlignOnWord = 60;
-        oAllocateVariable = 61;
-        oAllocateVarParameter = 62;
-        oAllocateDescriptor = 63;
-        oValuePush = 64; { (13) }
-        oValuePushInteger = 65;
-        oValuePushStringLength = 66;
-        oValuePushSymbol = 67;
-        oValuePushCount = 68;
-        oValuePushTypeStkLowerBound = 69;
-        oValuePushTypeStkUpperBound = 70;
-        oValueNegate = 71;
-        oValueChoose = 72; { >>13 }
-        oValuePop = 73;
-        oCasePushDisplay = 74;
-        oCasePopDisplay = 75;
-        oCaseLookupLabel = 76; { >>14 }
-        oCasePushLabel = 77;
-        oCountPush = 78; { (13) }
-        oCountPushValue = 79;
-        oCountPop = 80;
-        oCountIncrement = 81;
-        oCountDecrement = 82;
-        oCountChoose = 83; { >>13 }
-        oFixPushForwardBranch = 84;
-        oFixPopForwardBranch = 85;
-        oFixPushTargetAddress = 86;
-        oFixPopTargetAddress = 87;
-        oFixPopAndEnterValue = 88;
-        oFixSwap = 89;
+        oSymbolTblStripScope = 19;
+        oSymbolTblMergeScope = 20
+        oSymbolStkPush = 21; { (17) }
+        oSymbolStkPushIdentifier = 22;
+        oSymbolStkPushLocalIdentifier = 23;
+        oSymbolStkPushStandardVariable = 24; { (19) }
+        oSymbolStkPushFormalParameter = 25;
+        oSymbolStkSetKind = 26; { (17) }
+        oSymbolStkLinkToStandardType = 27; { (16) }
+        oSymbolStkEnterValue = 28;
+        oSymbolStkEnterStringValue = 29;
+        oSymbolStkEnterCodeAddress = 30;
+        oSymbolStkEnterDataAddress = 31;
+        oSymbolStkEnterTypeReference = 32;
+        oSymbolStkChooseKind = 33; { >>17 }
+        oSymbolStkChooseStandardFile = 34; { >>19 }
+        oSymbolStkChooseStandardRoutine = 35; { >>18 }
+        oSymbolStkPop = 36;
+        oTypeTblEnter = 37;
+        oTypeTblUpdate = 38;
+        oTypeStkPush = 39; { (20) }
+        oTypeStkPushSymbol = 40;
+        oTypeStkPushComponent = 41;
+        oTypeStkSetKind = 42; { (20) }
+        oTypeStkSetRecursionFlag = 43; { (14) }
+        oTypeStkChooseRecursionFlag = 44; { >>14 }
+        oTypeStkLinkToStandardComponentType = 45; { (16) }
+        oTypeStkEnterBounds = 46;
+        oTypeStkVerifyBounds = 47; { >>14 }
+        oTypeStkEnterParameterCount = 48;
+        oTypeStkCompareParameterCount = 49; { >>14 }
+        oTypeStkEnterComponentReference = 50;
+        oTypeStkChooseKind = 51; { >>20 }
+        oTypeStkChooseTypeReference = 52; { >>14 }
+        oTypeStkCompareNames = 53; { >>14 }
+        oTypeStkSwap = 54;
+        oTypeStkPop = 55
+        oEmitNullAddress = 56;
+        oEmitValue = 57;
+        oEmitString = 58;
+        oEmitDataAddress = 59;
+        oEmitTrapKind = 60; { (21) }
+        oEmitCaseBranchTable = 61;
+        oAllocateAlignOnWord = 62;
+        oAllocateVariable = 63;
+        oAllocateVarParameter = 64;
+        oAllocateDescriptor = 65;
+        oValuePush = 66; { (13) }
+        oValuePushInteger = 67;
+        oValuePushStringLength = 68;
+        oValuePushSymbol = 69;
+        oValuePushCount = 70;
+        oValuePushTypeStkLowerBound = 71;
+        oValuePushTypeStkUpperBound = 72;
+        oValueNegate = 73;
+        oValueChoose = 74; { >>13 }
+        oValuePop = 75;
+        oCasePushDisplay = 76;
+        oCasePopDisplay = 77;
+        oCaseLookupLabel = 78; { >>14 }
+        oCasePushLabel = 79;
+        oCountPush = 80; { (13) }
+        oCountPushValue = 81;
+        oCountPop = 82;
+        oCountIncrement = 83;
+        oCountDecrement = 84;
+        oCountChoose = 85; { >>13 }
+        oFixPushForwardBranch = 86;
+        oFixPopForwardBranch = 87;
+        oFixPushTargetAddress = 88;
+        oFixPopTargetAddress = 89;
+        oFixPopAndEnterValue = 90;
+        oFixSwap = 91;
 
         { Input Tokens }
         sIdentifier = 0;
@@ -1810,6 +1812,46 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                                             i := symbolTblTop   { exit }
                                         end
                                 end
+                        end;
+                    
+                    oSymbolTblStripScope:
+                        { Looks through the top scope and sets all non-public 
+                          symbols' ident ref to the one at the next lower lexical level. }
+                        begin
+                        
+                            Assert((lexicLevelStackTop >= 1), assert31);
+                            i := symbolTblTop;
+
+                            while i > symbolTblDisplay[lexicLevelStackTop] do
+                                begin
+                                    { Check if the symbol is public, 
+                                    if not then change it's identSymbolTblRef. }
+                                    if symbolTblKind[i] <> syPublicProcedure then
+                                        begin
+                                            link := symbolTblIdentLink[i];
+
+                                        if link <> null then
+                                            { This is not a dummy identifier generated by 
+                                            the parser's syntax error recovery procedure. }
+                                            begin
+                                                while link > 0 do
+                                                    link := symbolTblIdentLink[link];
+                                                identSymbolTblRef[-link] := symbolTblIdentLink[i];
+                                            end;
+                                        end;
+                                    i := i - 1
+                                end;
+
+                        end;
+                    
+                    oSymbolTblMergeScope:
+                    { Decrement the lexicalLevel to effectively merge 
+                      the top two scopes in the symbol table. }
+                        begin
+
+                            Assert((lexicLevelStackTop >= 1), assert31);
+                            lexicLevelStackTop := lexicLevelStackTop - 1;
+
                         end;
 
 
