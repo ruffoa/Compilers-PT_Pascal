@@ -807,6 +807,8 @@ Block :
         {[
             | sProcedure:
                 @ProcedureDefinition
+            | sModule:
+                @ModuleDefinition
             | sConst:
                 @ConstantDefinitions
             | sType:
@@ -1275,6 +1277,38 @@ AllocateVar :
         ];
 
 ModuleDefinition:
+        sIdentifier oSymbolStkPushLocalIdentifier       % module name
+        [   oSymbolStkChooseKind
+            | syUndefined:
+            | *:
+                #eMultiplyDefined
+                % identifier already in use
+        ]
+
+        oFixPushForwardBranch       % branch around module body
+        oEmitNullAddress
+
+        oSymbolStkSetKind(syModule)
+        oSymbolStkEnterCodeAddress
+        oTypeStkPush(tpNull)
+        oTypeStkSetRecursionFlag(yes)
+        oTypeTblEnter
+        oSymbolStkEnterTypeReference
+        oSymbolTblEnter
+
+        oSymbolTblPushScope         % module scope
+
+        @Block
+
+        oSymbolTblUpdate
+        oSymbolStkPop
+        oTypeStkSetRecursionFlag(no)
+        oTypeTblUpdate
+        oTypeStkPop
+        oSymbolTblStripScope
+        oSymbolTblMergeScope
+        
+        oFixPopForwardBranch        % Fix branch around module
         ;
 
 ProcedureDefinition :
