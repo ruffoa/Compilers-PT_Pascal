@@ -796,10 +796,6 @@ Block :
 
         {[
             | sProcedure:
-                oTypeStkPush(syProcedure)       %store procedure type on type stack to be recalled in definition
-                @ProcedureDefinition
-            | sPublic:
-                oTypeStkPush(syPublicProcedure) %store procedure type on type stack to be recalled in definition
                 @ProcedureDefinition
             | sConst:
                 @ConstantDefinitions
@@ -1288,17 +1284,13 @@ ProcedureDefinition :
         oFixPushForwardBranch
         oEmitNullAddress
 
-        [ oTypeStkChooseKind    % Recall if procedure is public or not
-            | syProcedure:
-                oSymbolStkSetKind(syProcedure)
-            | syPublicProcedure:
+        [
+            | sPublic:
                 oSymbolStkSetKind(syPublicProcedure)
             | *:
-                #eTypeMismatch
-                % Invalid procedure type, something went wrong.
+                oSymbolStkSetKind(syProcedure)
         ]
-        oTypeStkPop             % Pop procedure type from type stack
-
+        
         oSymbolStkEnterCodeAddress
         oTypeStkPush(tpNull)
         oTypeStkSetRecursionFlag(yes)
