@@ -1,0 +1,11 @@
+mod main (output) {
+    let v = 5;
+
+    mod first {
+        let a = 1;
+
+        mod second {
+            let b = 10;
+        }
+    }
+}
