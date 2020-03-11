@@ -314,9 +314,11 @@ type SymbolKind :
         syVariable
         syVarParameter
         syProcedure
+        syPublicProcedure   % Symbol kind for public procedured (pub fn) within a module
         syFunction
         syExternal
         syExpression
+        syModule            % Symbol kind for the module name
         syUndefined;
 
 type StdRoutine :
@@ -794,6 +796,10 @@ Block :
 
         {[
             | sProcedure:
+                oTypeStkPush(syProcedure)       %store procedure type on type stack to be recalled in definition
+                @ProcedureDefinition
+            | sPublic:
+                oTypeStkPush(syPublicProcedure) %store procedure type on type stack to be recalled in definition
                 @ProcedureDefinition
             | sConst:
                 @ConstantDefinitions
@@ -1262,6 +1268,9 @@ AllocateVar :
                 ]
         ];
 
+ModuleDefinition:
+        ;
+
 ProcedureDefinition :
         sIdentifier  oSymbolStkPushLocalIdentifier      % procedure name
         [ oSymbolStkChooseKind
@@ -1279,7 +1288,17 @@ ProcedureDefinition :
         oFixPushForwardBranch
         oEmitNullAddress
 
-        oSymbolStkSetKind(syProcedure)
+        [ oTypeStkChooseKind    % Recall if procedure is public or not
+            | syProcedure:
+                oSymbolStkSetKind(syProcedure)
+            | syPublicProcedure:
+                oSymbolStkSetKind(syPublicProcedure)
+            | *:
+                #eTypeMismatch
+                % Invalid procedure type, something went wrong.
+        ]
+        oTypeStkPop             % Pop procedure type from type stack
+
         oSymbolStkEnterCodeAddress
         oTypeStkPush(tpNull)
         oTypeStkSetRecursionFlag(yes)
@@ -1469,7 +1488,7 @@ CallStmt :
             | *:
         ]
         [ oSymbolStkChooseKind
-            | syProcedure:
+            | syProcedure, syPublicProcedure:
                 [ oSymbolStkChooseStandardRoutine
                     | rtReset:
                         .tTrapBegin
