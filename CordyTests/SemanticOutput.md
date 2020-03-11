@@ -336,16 +336,22 @@ Output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
+   oEmitNullAddress
+   % value emitted -32767
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 7 of mbubblesort.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 8 of mbubblesort.pt
- !== % value emitted 1 on line 9 of mbubblesort.pt
+oEmitNullAddress !== .tLiteralInteger on line 7 of mbubblesort.pt
+% value emitted -32767 !== oEmitValue on line 8 of mbubblesort.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 1 on line 9 of mbubblesort.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 10 of mbubblesort.pt
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction) !== oEmitDataAddress on line 11 of mbubblesort.pt
+ !== % value emitted 4 on line 12 of mbubblesort.pt
 
 ```
 end file
@@ -421,16 +427,22 @@ Output is:
       % value emitted 2
       .tDivide
     .tAssignInteger
+   oEmitNullAddress
+   % value emitted -32767
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 19 of mprimes.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 20 of mprimes.pt
- !== % value emitted 1 on line 21 of mprimes.pt
+oEmitNullAddress !== .tLiteralInteger on line 19 of mprimes.pt
+% value emitted -32767 !== oEmitValue on line 20 of mprimes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== % value emitted 1 on line 21 of mprimes.pt
+### Semantic assertion 3 failed: !== .tLiteralAddress on line 22 of mprimes.pt
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction) !== oEmitDataAddress on line 23 of mprimes.pt
+ !== % value emitted 8 on line 24 of mprimes.pt
 
 ```
 end file

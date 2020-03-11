@@ -84,8 +84,11 @@ Test output is:
       oEmitValue
       % value emitted 5
     .tAssignInteger
+   oEmitNullAddress
+   % value emitted -32767
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 
