@@ -79,12 +79,11 @@ Test output is:
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 49 failed: symbol stack not empty at end of semantic phase
 
 ```
 
 
-Warning, output length does not match (21 vs 5)!  (Newlines are not the issue here!) `testStringSubstringOperation.pt`
+Warning, output length does not match (20 vs 5)!  (Newlines are not the issue here!) `testStringSubstringOperation.pt`
 Showing as much of the diff as possible...
 
 File diff
