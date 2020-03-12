@@ -7,11 +7,11 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = False;
+    let a : bool = false;
 
     mod one {
         pub fn test() {
-            a = True;       // a should be visible
+            a = true;       // a should be visible
         }
     }
 
