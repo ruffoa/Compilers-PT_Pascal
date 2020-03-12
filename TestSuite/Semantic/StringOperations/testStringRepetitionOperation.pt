@@ -1,5 +1,5 @@
 mod main (output) {
-    let a : str = "Hello"
+    let a : str = "Hello";
 
     a = a * 4;
 }
