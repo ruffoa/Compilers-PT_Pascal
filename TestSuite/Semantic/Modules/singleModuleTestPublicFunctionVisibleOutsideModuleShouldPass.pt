@@ -1,0 +1,11 @@
+mod main (output) {
+    let a : bool = false;
+
+    mod one {
+        pub fn test() {
+            a = true;       // a should be visible
+        }
+    }
+
+    test();
+}
