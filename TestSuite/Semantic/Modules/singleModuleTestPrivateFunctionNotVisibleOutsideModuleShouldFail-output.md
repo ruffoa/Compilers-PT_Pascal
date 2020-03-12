@@ -107,6 +107,19 @@ Test output is:
        oEmitValue
        % value emitted 0
     .tAssignBoolean
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+      .tAssignInteger
+     .tSkipProc
+     oEmitNullAddress
+     % value emitted -32767
+       .tParmEnd
+     .tProcedureEnd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 

@@ -77,8 +77,26 @@ Test output is:
       oEmitValue
       % value emitted 1
     .tAssignInteger
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+         .tFetchInteger
+      .tAssignInteger
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 12
+      #eUndefinedIdentifier
+      #eExpnOperandReqd
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
