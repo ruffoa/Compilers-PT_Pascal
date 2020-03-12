@@ -1,0 +1,1 @@
+The purpose of this test is to test that the string substring operation works.

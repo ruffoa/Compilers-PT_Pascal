@@ -1,0 +1,6 @@
+mod main (output) {
+    let a : str = "Hello";
+    let b : bool = false;
+
+    b = a == "Hello";
+}
