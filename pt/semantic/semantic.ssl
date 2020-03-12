@@ -1294,9 +1294,9 @@ ModuleDefinition:
         oSymbolTblEnter
 
         oSymbolTblPushScope         % module scope
-
-        @Block
-
+        
+        sBegin @Block sEnd
+        
         oSymbolTblUpdate
         oSymbolStkPop
         oTypeStkSetRecursionFlag(no)
