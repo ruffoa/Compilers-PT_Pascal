@@ -11,7 +11,9 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: install 32bit libs
-      run: sudo apt-get install gcc-multilib lib32z1-dev
+      run: |
+      sudo apt-get update
+      sudo apt-get install gcc-multilib lib32z1-dev
     
     - name: setup files
       run: |
