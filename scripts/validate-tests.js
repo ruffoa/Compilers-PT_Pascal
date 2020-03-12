@@ -100,7 +100,7 @@ function getTestIssues(content, file, dir) {
         
         output += "\nTest Errors:\n-------------------------\n```\n" + content + '```\n';
 
-        if (!file.toLower().contains('pt-') && !file.toLower().contains('ShouldFail')) {
+        if (!file.toLowerCase().contains('pt-') && !file.toLowerCase().contains('ShouldFail')) {
             passed = false;
         }
 
