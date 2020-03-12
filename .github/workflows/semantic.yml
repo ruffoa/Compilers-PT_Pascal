@@ -12,8 +12,8 @@ jobs:
 
     - name: install 32bit libs
       run: |
-      sudo apt-get update
-      sudo apt-get install gcc-multilib lib32z1-dev
+        sudo apt-get update
+        sudo apt-get install gcc-multilib lib32z1-dev
     
     - name: setup files
       run: |
