@@ -1285,9 +1285,6 @@ ModuleDefinition:
                 % identifier already in use
         ]
 
-        oFixPushForwardBranch       % branch around module body
-        oEmitNullAddress
-
         oSymbolStkSetKind(syModule)
         oSymbolStkEnterCodeAddress
         oTypeStkPush(tpNull)
@@ -1305,10 +1302,8 @@ ModuleDefinition:
         oTypeStkSetRecursionFlag(no)
         oTypeTblUpdate
         oTypeStkPop
-        oSymbolTblStripScope
-        oSymbolTblMergeScope
-        
-        oFixPopForwardBranch        % Fix branch around module
+        oSymbolTblStripScope        % strip module scope of non-public elements
+        oSymbolTblMergeScope        % merge module scope with enclosing scope
         ;
 
 ProcedureDefinition :
