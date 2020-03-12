@@ -537,9 +537,9 @@ type TrapKind :
         trWrite = 5
         trWriteln = 6
         trWriteInteger = 7
-        trWriteString = 8
+        trWriteString = 109
         trReadInteger = 9
-        trReadString = 10
+        trReadString = 108
         trAssign = 11;
 
 mechanism Emit :
@@ -1835,6 +1835,11 @@ UnaryOperator :
                 oTypeStkPush(tpBoolean) % result type
                 @CompareAndSwapTypes
                 oTypeStkPop
+            | sLength:
+                .tLength
+                oTypeStkPush(tpInteger) % result type
+                @CompareAndSwapTypes
+                oTypeStkPop
             | *:
                 >>
         ]
@@ -1847,8 +1852,15 @@ BinaryOperator :
         % but that would probably be less efficient on average.
         [
             | sAdd:
-                .tAdd
-                oTypeStkPush(tpInteger) % result type
+                @CompareAndSwapTypes
+                [ oTypeStkChooseKind
+                    | tpString:
+                        .tConcatenate
+                        oTypeStkPush(tpString)      % push result type
+                    | tpInteger:
+                        .tAdd
+                        oTypeStkPush(tpInteger)     % push result type
+                ]
                 @CompareOperandAndResultTypes
             | sSubtract:
                 .tSubtract
@@ -1867,10 +1879,21 @@ BinaryOperator :
                 oTypeStkPush(tpBoolean)
                 @CompareOperandAndResultTypes
             | sEq:
-                .tEQ
+                [ oTypeStkChooseKind
+                    | tpString:
+                        .tStringEqual
+                    | *:
+                        .tEQ
+                ]
                 @CompareEqualityOperandTypes
             | sNE:
-                .tNE
+                [ oTypeStkChooseKind
+                    | tpString:
+                        .tStringEqual
+                        .tNot
+                    | *:
+                        .tNE
+                ]
                 @CompareEqualityOperandTypes
             | sGT:
                 .tGT
@@ -1885,13 +1908,41 @@ BinaryOperator :
                 .tLE
                 @CompareRelationalOperandTypes
             | sMultiply:
-                .tMultiply
-                oTypeStkPush(tpInteger)
-                @CompareOperandAndResultTypes
+                oTypeStkSwap                % swap operand types so that first operand is top
+                [ oTypeStkChooseKind        % check type of first operand
+                    | tpInteger:
+                        .tMultiply
+                        oTypeStkPush(tpInteger)         % push result type
+                        @CompareOperandAndResultTypes
+                    | tpString:
+                        .tRepeatString
+                        oTypeStkSwap                    % swap again so integer is top
+                        oTypeStkPop                     % pop integer type so we are left with string type which is the result type
+                        oSymbolStkPop
+                        oSymbolStkSetKind(syExpression)
+                ]
             | sDivide:
                 .tDivide
                 oTypeStkPush(tpInteger)
                 @CompareOperandAndResultTypes
+            | sSubstring:
+                .tSubstring
+                [ oTypeStkChooseKind 
+                    | tpInteger:
+                        @CompareAndSwapTypes        % top two operands should be integers for substring range
+                        oTypeStkPop                 % pop both integer types off type stack
+                        oTypeStkPop
+                    | *:
+                        #eTypeMismatch
+                ]
+                
+                [ oTypeStkChooseKind        % check that final operand is a string type 
+                    | tpString:
+                        oSymbolStkPop
+                        oSymbolStkSetKind(syExpression)
+                    |*:
+                        #eTypeMismatch
+                ]
             | sModulus:
                 .tModulus
                 oTypeStkPush(tpInteger)
@@ -1977,13 +2028,6 @@ CompareRelationalOperandTypes :
                 oTypeStkPop
                 [ oTypeStkChooseKind
                     | tpInteger, tpSubrange:
-                    | *:
-                        #eOperandOperatorTypeMismatch
-                ]
-            | tpString:
-                oTypeStkPop
-                [ oTypeStkChooseKind
-                    | tpString:
                     | *:
                         #eOperandOperatorTypeMismatch
                 ]
