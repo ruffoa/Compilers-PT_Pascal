@@ -76,8 +76,6 @@ Test output is:
 ```
 
 
-Warning, output length does not match (18 vs 5)!  (Newlines are not the issue here!) `testStringRepetitionOperation.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

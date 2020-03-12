@@ -87,8 +87,6 @@ Test output is:
 ```
 
 
-Warning, output length does not match (19 vs 5)!  (Newlines are not the issue here!) `testStringEqualityOperation.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------

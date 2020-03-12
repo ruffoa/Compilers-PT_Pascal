@@ -83,8 +83,6 @@ Test output is:
 ```
 
 
-Warning, output length does not match (20 vs 5)!  (Newlines are not the issue here!) `testStringSubstringOperation.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
