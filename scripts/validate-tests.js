@@ -99,7 +99,11 @@ function getTestIssues(content, file, dir) {
         output += `\nTest Content: \n-------------------------\n\`\`\`\n${testFile}\n\`\`\`\n------------------------\n`;   
         
         output += "\nTest Errors:\n-------------------------\n```\n" + content + '```\n';
-        passed = false;
+
+        if (!file.toLower().contains('pt-') && !file.toLower().contains('ShouldFail')) {
+            passed = false;
+        }
+
         // core.setFailed("Errors in test! -> " + eFile);
 
     } catch (e) {
