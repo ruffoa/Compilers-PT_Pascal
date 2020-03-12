@@ -1,0 +1,5 @@
+.tLiteralInteger
+oEmitValue          //value emitted is 2
+.tLiteralAddress
+oEmitDataAddress    //value emitted is 0
+.tFileDescriptor
