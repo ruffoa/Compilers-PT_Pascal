@@ -1,5 +1,18 @@
 .tLiteralInteger
-oEmitValue          //value emitted is 2
+oEmitValue              // value emitted 2
 .tLiteralAddress
-oEmitDataAddress    //value emitted is 0
+oEmitDataAddress        // value emitted 0
 .tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue              // value emitted 4
+.tLiteralString
+oEmitValue              // String length is 5
+oEmitString             // "Hello"
+.tLiteralInteger
+oEmitValue              // Number of repetitions is 4
+.tRepeatString
+.tAssignString          // assign repeated string to a
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)

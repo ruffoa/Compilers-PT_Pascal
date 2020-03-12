@@ -1,5 +1,20 @@
 .tLiteralInteger
-oEmitValue          //value emitted is 2
+oEmitValue              // value emitted 2
 .tLiteralAddress
-oEmitDataAddress    //value emitted is 0
+oEmitDataAddress        // value emitted 0
 .tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue              // value emitted 4
+.tLiteralString
+oEmitValue              // String length is 13
+oEmitString             // "Hello, World!"
+.tLiteralInteger
+oEmitValue              // starting index = 1
+.tLiteralInteger
+oEmitValue              // ending index = 5
+.tSubstring
+.tAssignString          // assign resulting string to b
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)
