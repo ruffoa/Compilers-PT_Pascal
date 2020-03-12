@@ -1889,8 +1889,8 @@ UnaryOperator :
             | sLength:
                 .tLength
                 oTypeStkPush(tpInteger) % result type
-                @CompareAndSwapTypes
-                oTypeStkPop
+                oTypeStkSwap            % swap tpString to top of stack
+                oTypeStkPop             % pop tpString from type stack leaving result type
             | *:
                 >>
         ]
