@@ -1,1 +1,0 @@
-The purpose of this test is to verify that a single module nested within the main module can correctly declare typed vars.

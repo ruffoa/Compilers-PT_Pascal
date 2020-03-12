@@ -1,1 +1,0 @@
-The purpose of this test is to verify that more than on nested module can still correctly declare untyped vars with initial values.

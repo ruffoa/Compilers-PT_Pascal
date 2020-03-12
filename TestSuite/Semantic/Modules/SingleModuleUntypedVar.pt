@@ -1,8 +1,0 @@
-mod main (output) {
-    let v = 5;
-
-    mod single {
-        const a = 5;
-        let b = 1;
-    }
-}
