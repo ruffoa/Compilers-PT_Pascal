@@ -259,7 +259,7 @@ Output is:
       .tParmEnd
       .tTrap
       oEmitTrapKind(trWriteString)
-      % value emitted 8
+      % value emitted 109
     .tWriteEnd
    .tTrapBegin
     .tLiteralAddress
@@ -278,10 +278,8 @@ Output is:
 ```
 File diff
 -------------------------
-```
-% value emitted 8 !== % value emitted 109 on line 36 of helloworld.pt
 
-```
+Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file lunch.pt
