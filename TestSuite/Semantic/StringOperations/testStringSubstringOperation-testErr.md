@@ -3,9 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str = "Hello, World!";
-
-    let b : str = a / 0 : 5;
+    let b : str = "Hello, World!" / 1 : 5;
 }
 ```
 ------------------------

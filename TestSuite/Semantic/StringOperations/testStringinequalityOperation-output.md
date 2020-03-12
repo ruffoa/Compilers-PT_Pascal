@@ -7,10 +7,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str = "Hello";
-    let b : bool = false;
+    let b : bool;
 
-    b = a != "Test";
+    b = "Hello" != "Test";
 }
 ```
 ------------------------
@@ -27,21 +26,11 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
-    .sInitialValue
-        .sStringLiteral
-    .sExpnEnd
-  % .sNewLine
-  .sVar
-  .sIdentifier
-     .sIdentifier
-    .sInitialValue
-        .sIdentifier
-    .sExpnEnd
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier
-       .sIdentifier
+       .sStringLiteral
        .sStringLiteral
     .sNE
    .sExpnEnd
@@ -74,23 +63,6 @@ Test output is:
       % value emitted 108
       % value emitted 108
       % value emitted 111
-    .tAssignString
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 1028
-       .tLiteralBoolean
-       oEmitValue
-       % value emitted 0
-    .tAssignBoolean
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 1028
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchString
       .tLiteralString
       oEmitValue
       % value emitted 4
@@ -110,7 +82,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (33 vs 5)!  (Newlines are not the issue here!) `testStringinequalityOperation.pt`
+Warning, output length does not match (20 vs 5)!  (Newlines are not the issue here!) `testStringinequalityOperation.pt`
 Showing as much of the diff as possible...
 
 File diff

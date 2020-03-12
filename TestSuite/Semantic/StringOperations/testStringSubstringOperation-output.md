@@ -7,9 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str = "Hello, World!";
-
-    let b : str = a / 0 : 5;
+    let b : str = "Hello, World!" / 1 : 5;
 }
 ```
 ------------------------
@@ -28,14 +26,6 @@ Parser Output:
      .sIdentifier
     .sInitialValue
         .sStringLiteral
-    .sExpnEnd
-  % .sNewLine
-  % .sNewLine
-  .sVar
-  .sIdentifier
-     .sIdentifier
-    .sInitialValue
-        .sIdentifier
         .sInteger
         .sInteger
        .sSubstring
@@ -77,18 +67,9 @@ Test output is:
       % value emitted 108
       % value emitted 100
       % value emitted 33
-    .tAssignString
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 1028
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchString
       .tLiteralInteger
       oEmitValue
-      % value emitted 0
+      % value emitted 1
       .tLiteralInteger
       oEmitValue
       % value emitted 5
@@ -103,7 +84,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (28 vs 5)!  (Newlines are not the issue here!) `testStringSubstringOperation.pt`
+Warning, output length does not match (21 vs 5)!  (Newlines are not the issue here!) `testStringSubstringOperation.pt`
 Showing as much of the diff as possible...
 
 File diff

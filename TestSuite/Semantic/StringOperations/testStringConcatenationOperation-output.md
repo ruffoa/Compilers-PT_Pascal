@@ -7,9 +7,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str = "Hello, ";
+    let a : str;
 
-    a = a + "World!";
+    a = "Hello, " + "World!";
 }
 ```
 ------------------------
@@ -26,14 +26,11 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
-    .sInitialValue
-        .sStringLiteral
-    .sExpnEnd
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier
-       .sIdentifier
+       .sStringLiteral
        .sStringLiteral
      .sAdd
    .sExpnEnd
@@ -68,15 +65,6 @@ Test output is:
       % value emitted 111
       % value emitted 44
       % value emitted 32
-    .tAssignString
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchString
       .tLiteralString
       oEmitValue
       % value emitted 6
@@ -97,7 +85,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (26 vs 5)!  (Newlines are not the issue here!) `testStringConcatenationOperation.pt`
+Warning, output length does not match (19 vs 5)!  (Newlines are not the issue here!) `testStringConcatenationOperation.pt`
 Showing as much of the diff as possible...
 
 File diff

@@ -4,7 +4,7 @@ Test Content:
 ```
 mod main (output) {
     let a : str = "Hello, World!";
-
+    
     let b = ?a;
 }
 ```

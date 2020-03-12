@@ -7,9 +7,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str = "Hello";
+    let a : str;
 
-    a = a * 4;
+    a = "Hello" * 4;
 }
 ```
 ------------------------
@@ -26,14 +26,11 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
-    .sInitialValue
-        .sStringLiteral
-    .sExpnEnd
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier
-       .sIdentifier
+       .sStringLiteral
        .sInteger
       .sMultiply
    .sExpnEnd
@@ -66,15 +63,6 @@ Test output is:
       % value emitted 108
       % value emitted 108
       % value emitted 111
-    .tAssignString
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchString
       .tLiteralInteger
       oEmitValue
       % value emitted 4
@@ -88,7 +76,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (25 vs 5)!  (Newlines are not the issue here!) `testStringRepetitionOperation.pt`
+Warning, output length does not match (18 vs 5)!  (Newlines are not the issue here!) `testStringRepetitionOperation.pt`
 Showing as much of the diff as possible...
 
 File diff
