@@ -1339,7 +1339,8 @@ ProcedureDefinition :
         oSymbolTblPushScope     % procedure scope
 
         @ProcedureHeading
-        @Block
+        
+        sBegin @Block sEnd
 
         oSymbolTblUpdate
         oSymbolStkPop
