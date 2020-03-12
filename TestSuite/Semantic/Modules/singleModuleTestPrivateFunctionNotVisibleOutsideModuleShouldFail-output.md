@@ -119,9 +119,38 @@ Test output is:
      oEmitNullAddress
      % value emitted -32767
        .tParmEnd
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+           .tLiteralBoolean
+           oEmitValue
+           % value emitted 1
+        .tAssignBoolean
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 8
+           .tLiteralAddress
+           oEmitValue
+           % value emitted 8
+           .tFetchInteger
+          .tLiteralInteger
+          oEmitValue
+          % value emitted 1
+          .tAdd
+        .tAssignInteger
      .tProcedureEnd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+     .tCallBegin
+     .tCallEnd
+     oEmitValue
+     % value emitted 27
+   #eUndefinedIdentifier
+   #eProcedureReqd
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
