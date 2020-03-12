@@ -1978,17 +1978,18 @@ BinaryOperator :
                 @CompareOperandAndResultTypes
             | sSubstring:
                 .tSubstring
-                [ oTypeStkChooseKind 
+                [ oTypeStkChooseKind                % top two operands should be integers for substring range
                     | tpInteger:
-                        @CompareAndSwapTypes        % top two operands should be integers for substring range
+                        @CompareAndSwapTypes        % check that top two entries are tpInteger        
                         oTypeStkPop                 % pop both integer types off type stack
                         oTypeStkPop
                     | *:
                         #eTypeMismatch
                 ]
                 
-                [ oTypeStkChooseKind        % check that final operand is a string type 
+                [ oTypeStkChooseKind                % check that final operand is a string type 
                     | tpString:
+                        oSymbolStkPop               % pop both integer operand entries from symbol stack
                         oSymbolStkPop
                         oSymbolStkSetKind(syExpression)
                     |*:
@@ -1999,7 +2000,7 @@ BinaryOperator :
                 oTypeStkPush(tpInteger)
                 @CompareOperandAndResultTypes
             | *:
-        	>>
+        	    >>
         ]
         % If an operator is present the result is an expression
         oSymbolStkSetKind(syExpression);
