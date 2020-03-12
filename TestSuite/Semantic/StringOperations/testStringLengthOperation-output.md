@@ -84,7 +84,6 @@ Test output is:
        % value emitted 4
        .tFetchString
       .tLength
-       #eTypeMismatch
     .tAssignInteger
  .tTrapBegin
  .tTrap
@@ -94,7 +93,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (24 vs 5)!  (Newlines are not the issue here!) `testStringLengthOperation.pt`
+Warning, output length does not match (23 vs 5)!  (Newlines are not the issue here!) `testStringLengthOperation.pt`
 Showing as much of the diff as possible...
 
 File diff
