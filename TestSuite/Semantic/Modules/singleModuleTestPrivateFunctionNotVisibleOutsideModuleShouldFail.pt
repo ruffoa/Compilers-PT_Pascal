@@ -1,5 +1,5 @@
 mod main (output) {
-    let a : bool = false;
+    let mut a : bool = false;
 
     mod one {
         let mut b = 1;

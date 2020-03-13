@@ -1,0 +1,10 @@
+mod main (output) { 
+    let mut i = 1;
+    let j = 0;
+
+    mod foo(a, b) {
+        a += 1;
+    }
+
+    foo(i,j);
+}

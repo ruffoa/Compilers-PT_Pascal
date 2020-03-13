@@ -3,6 +3,27 @@ oEmitValue              // value emitted is 2
 .tLiteralAddress
 oEmitDataAddress        // value emitted is 0
 .tFileDescriptor        // File for main program
+.tAssignBegin           // assign i = 1
+.tLiteralAddress
+oEmitValue
+% value emitted 4
+.tLiteralInteger
+oEmitValue
+% value emitted 1
+.tAssignInteger         // end assign i = 1
+.tAssignBegin           // assign i += 1
+.tLiteralAddress
+oEmitValue
+% value emitted 4
+.tLiteralAddress
+oEmitValue
+% value emitted 4
+.tFetchInteger
+.tLiteralInteger
+oEmitValue
+% value emitted 1
+.tAdd
+.tAssignInteger         // end assign i += 1
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0
