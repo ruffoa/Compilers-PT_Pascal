@@ -10,7 +10,7 @@ mod main (output) {
     let a : bool = false;
 
     mod one {
-        let b = 1;
+        let mut b = 1;
 
         fn test(){
             a = true;
@@ -51,6 +51,7 @@ Parser Output:
      .sInitialValue
          .sInteger
      .sExpnEnd
+   .sMutable
    % .sNewLine
    % .sNewLine
    .sProcedure
@@ -115,11 +116,6 @@ Test output is:
         oEmitValue
         % value emitted 1
       .tAssignInteger
-     .tSkipProc
-     oEmitNullAddress
-     % value emitted -32767
-       .tParmEnd
-       #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 

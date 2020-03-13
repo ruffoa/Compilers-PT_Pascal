@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = false;
+    let mut a : bool = false;
 
     mod one {
         pub fn test() {

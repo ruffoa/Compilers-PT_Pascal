@@ -7,9 +7,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {  
-    let c: bool;
+    let mut c: bool;
     c = false;
-    let d: int;
+    let mut d: int;
     d = 1;
 }
 ```
@@ -27,6 +27,7 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier
@@ -36,6 +37,7 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier

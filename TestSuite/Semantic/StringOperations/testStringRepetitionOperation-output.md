@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str;
+    let mut a : str;
 
     a = "Hello" * 4;
 }
@@ -26,6 +26,7 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt

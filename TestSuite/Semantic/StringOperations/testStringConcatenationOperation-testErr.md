@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : str;
+    let mut a : str;
 
     a = "Hello, " + "World!";
 }

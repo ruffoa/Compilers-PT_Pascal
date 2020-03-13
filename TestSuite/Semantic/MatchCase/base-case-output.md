@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let i = 10;
+    let mut i = 10;
 
     match i {
         | 12 => {
@@ -35,6 +35,7 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sCaseStmt
@@ -87,30 +88,20 @@ Test output is:
       oEmitValue
       % value emitted 10
     .tAssignInteger
-   .tCaseBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchInteger
-   .tCaseSelect
-   oEmitNullAddress
-   % value emitted -32767
-       #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (20 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (13 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 17 of base-case.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 18 of base-case.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 19 of base-case.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tCaseBegin on line 11 of base-case.pt
+-### Semantic assertion 3 failed: !== .tLiteralAddress on line 12 of base-case.pt
 
 ```
 end file

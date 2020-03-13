@@ -7,8 +7,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) { 
-    let i = 0;
-    let j = 0;
+    let mut i = 0;
+    let mut j = 0;
 
     loop {
         j -= 1;
@@ -35,12 +35,14 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sLoopStmt
@@ -95,34 +97,20 @@ Test output is:
       oEmitValue
       % value emitted 0
     .tAssignInteger
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 8
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 0
-    .tAssignInteger
-   .tWhileBegin
-   .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
-     #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (23 vs 53)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
+Warning, output length does not match (13 vs 53)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 20 of loop-with-stuff-before-after-condition.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 21 of loop-with-stuff-before-after-condition.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 22 of loop-with-stuff-before-after-condition.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 11 of loop-with-stuff-before-after-condition.pt
+-### Semantic assertion 3 failed: !== .tLiteralAddress on line 12 of loop-with-stuff-before-after-condition.pt
 
 ```
 end file

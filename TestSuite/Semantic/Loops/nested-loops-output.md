@@ -7,11 +7,11 @@ Test Content:
 -------------------------
 ```
 mod main (output) { 
-    let i = 0;
+    let mut i = 0;
 
     loop {
         break if i >= 5;
-        let j = 0;
+        let mut j = 0;
 
         loop {
             break if j > 5;
@@ -38,6 +38,7 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sLoopStmt
@@ -56,6 +57,7 @@ Parser Output:
       .sInitialValue
           .sInteger
       .sExpnEnd
+    .sMutable
     % .sNewLine
     % .sNewLine
      .sLoopStmt
@@ -111,60 +113,20 @@ Test output is:
       oEmitValue
       % value emitted 0
     .tAssignInteger
-   .tWhileBegin
-   .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
-   .tWhileBreakIf
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 5
-      .tGE
-   .tNot
-   .tWhileTest
-      .tAssignBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 8
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tAssignInteger
-     .tWhileBegin
-     .tWhilePreBreak
-     oEmitNullAddress
-     % value emitted -32767
-     .tWhileBreakIf
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 8
-         .tFetchInteger
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 5
-        .tGT
-     .tNot
-     .tWhileTest
-       #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (44 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
+Warning, output length does not match (13 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 41 of nested-loops.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 42 of nested-loops.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 43 of nested-loops.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 11 of nested-loops.pt
+-### Semantic assertion 3 failed: !== .tWhilePreBreak on line 12 of nested-loops.pt
 
 ```
 end file

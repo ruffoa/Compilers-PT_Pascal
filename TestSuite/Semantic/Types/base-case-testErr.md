@@ -3,9 +3,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {  
-    let c: bool;
+    let mut c: bool;
     c = false;
-    let d: int;
+    let mut d: int;
     d = 1;
 }
 ```
