@@ -1183,6 +1183,7 @@ VariableDeclarations :
                         [
                             | sMutable:
                                 oSymbolStkSetKind(syMutableVariable)
+                            | *:
                         ]
                 ]
 
