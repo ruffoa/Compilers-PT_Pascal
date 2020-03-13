@@ -5,30 +5,16 @@ Lengths do not match!  Something went wrong in boxes.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of boxes.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of boxes.pt
- !== .tLiteralAddress on line 16 of boxes.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of boxes.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of boxes.pt
+ !== % value emitted 1 on line 2 of boxes.pt
 
 ```
 end file
@@ -38,37 +24,16 @@ Lengths do not match!  Something went wrong in bubblesort.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 25
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tSkipProc on line 21 of bubblesort.pt
-### Semantic assertion 3 failed: !== oEmitNullAddress on line 22 of bubblesort.pt
- !== % value emitted -32767 on line 23 of bubblesort.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of bubblesort.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of bubblesort.pt
+ !== % value emitted 2 on line 2 of bubblesort.pt
 
 ```
 end file
@@ -78,44 +43,16 @@ Lengths do not match!  Something went wrong in bust.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 7
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 28 of bust.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 29 of bust.pt
- !== % value emitted 1 on line 30 of bust.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of bust.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of bust.pt
+ !== % value emitted 1 on line 2 of bust.pt
 
 ```
 end file
@@ -125,30 +62,16 @@ Lengths do not match!  Something went wrong in cache.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of cache.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of cache.pt
- !== % value emitted 1 on line 16 of cache.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of cache.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of cache.pt
+ !== % value emitted 1 on line 2 of cache.pt
 
 ```
 end file
@@ -158,30 +81,16 @@ Lengths do not match!  Something went wrong in double.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWriteBegin on line 14 of double.pt
-### Semantic assertion 3 failed: !== .tTrapBegin on line 15 of double.pt
- !== .tLiteralAddress on line 16 of double.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of double.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of double.pt
+ !== % value emitted 1 on line 2 of double.pt
 
 ```
 end file
@@ -191,95 +100,37 @@ Lengths do not match!  Something went wrong in francais.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 14 of francais.pt
-### Semantic assertion 3 failed: !== .tWhilePreBreak on line 15 of francais.pt
- !== .tWriteBegin on line 16 of francais.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of francais.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of francais.pt
+ !== % value emitted 1 on line 2 of francais.pt
 
 ```
 end file
 --------------------------------
 Reading file helloworld.pt
+Lengths do not match!  Something went wrong in helloworld.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tWriteBegin
-     .tTrapBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 0
-     .tVarParm
-     .tParmEnd
-       .tLiteralString
-       oEmitValue
-       % value emitted 11
-       oEmitString
-       % value emitted 72
-       % value emitted 101
-       % value emitted 108
-       % value emitted 108
-       % value emitted 111
-       % value emitted 32
-       % value emitted 119
-       % value emitted 111
-       % value emitted 114
-       % value emitted 108
-       % value emitted 100
-     .tParmEnd
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-      .tParmEnd
-      .tTrap
-      oEmitTrapKind(trWriteString)
-      % value emitted 109
-    .tWriteEnd
-   .tTrapBegin
-    .tLiteralAddress
-    oEmitValue
-    % value emitted 0
-    .tVarParm
-    .tParmEnd
-   .tTrap
-   oEmitTrapKind(trWriteln)
-   % value emitted 6
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
+```
+#eDuplicateName !== .tLiteralInteger on line 0 of helloworld.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of helloworld.pt
+ !== % value emitted 2 on line 2 of helloworld.pt
 
-Test output matches the expected output! :heavy_check_mark:
+```
 end file
 --------------------------------
 Reading file lunch.pt
@@ -287,37 +138,16 @@ Lengths do not match!  Something went wrong in lunch.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 8
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 21 of lunch.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 22 of lunch.pt
- !== % value emitted 1 on line 23 of lunch.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of lunch.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of lunch.pt
+ !== % value emitted 2 on line 2 of lunch.pt
 
 ```
 end file
@@ -327,37 +157,16 @@ Lengths do not match!  Something went wrong in mbubblesort.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-       .tLiteralInteger
-       oEmitValue
-       % value emitted 1
-       .tLiteralAddress
-       oEmitDataAddress
-       % value emitted 4
-       .tArrayDescriptor
-       .tLiteralInteger
-       oEmitValue
-       % value emitted 25
-       .tLiteralAddress
-       oEmitDataAddress
-       % value emitted 8
-       .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tSkipProc on line 21 of mbubblesort.pt
-### Semantic assertion 3 failed: !== oEmitNullAddress on line 22 of mbubblesort.pt
- !== % value emitted -32767 on line 23 of mbubblesort.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of mbubblesort.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of mbubblesort.pt
+ !== % value emitted 2 on line 2 of mbubblesort.pt
 
 ```
 end file
@@ -367,44 +176,16 @@ Lengths do not match!  Something went wrong in mbust.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 7
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 28 of mbust.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 29 of mbust.pt
- !== % value emitted 1 on line 30 of mbust.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of mbust.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of mbust.pt
+ !== % value emitted 1 on line 2 of mbust.pt
 
 ```
 end file
@@ -414,49 +195,16 @@ Lengths do not match!  Something went wrong in mprimes.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 50
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 2
-      .tDivide
-    .tAssignInteger
-       .tLiteralInteger
-       oEmitValue
-       % value emitted 1
-       .tLiteralAddress
-       oEmitDataAddress
-       % value emitted 8
-       .tArrayDescriptor
-       .tLiteralInteger
-       oEmitValue
-       % value emitted 100
-       .tLiteralAddress
-       oEmitDataAddress
-       % value emitted 12
-       .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tSkipProc on line 33 of mprimes.pt
-### Semantic assertion 3 failed: !== oEmitNullAddress on line 34 of mprimes.pt
- !== % value emitted -32767 on line 35 of mprimes.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of mprimes.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of mprimes.pt
+ !== % value emitted 2 on line 2 of mprimes.pt
 
 ```
 end file
@@ -466,37 +214,16 @@ Lengths do not match!  Something went wrong in pascal.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 4
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 15
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tSkipProc on line 21 of pascal.pt
-### Semantic assertion 3 failed: !== oEmitNullAddress on line 22 of pascal.pt
- !== % value emitted -32767 on line 23 of pascal.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of pascal.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of pascal.pt
+ !== % value emitted 2 on line 2 of pascal.pt
 
 ```
 end file
@@ -506,49 +233,16 @@ Lengths do not match!  Something went wrong in primes.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 50
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 2
-      .tDivide
-    .tAssignInteger
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 1
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 8
-     .tArrayDescriptor
-     .tLiteralInteger
-     oEmitValue
-     % value emitted 100
-     .tLiteralAddress
-     oEmitDataAddress
-     % value emitted 12
-     .tArrayDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 33 of primes.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 34 of primes.pt
- !== oEmitValue on line 35 of primes.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of primes.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of primes.pt
+ !== % value emitted 2 on line 2 of primes.pt
 
 ```
 end file
@@ -558,23 +252,16 @@ Lengths do not match!  Something went wrong in stars.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 7 of stars.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 8 of stars.pt
- !== oEmitValue on line 9 of stars.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of stars.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of stars.pt
+ !== % value emitted 2 on line 2 of stars.pt
 
 ```
 end file
@@ -584,30 +271,16 @@ Lengths do not match!  Something went wrong in treesort.pt
 
 Output is: 
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 1
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 4
-   .tFileDescriptor
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralInteger on line 14 of treesort.pt
-### Semantic assertion 3 failed: !== oEmitValue on line 15 of treesort.pt
- !== % value emitted 1 on line 16 of treesort.pt
+#eDuplicateName !== .tLiteralInteger on line 0 of treesort.pt
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of treesort.pt
+ !== % value emitted 1 on line 2 of treesort.pt
 
 ```
 end file

@@ -2,14 +2,11 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let a : int = 1;
-
-    mod one {
-        let b = a;
-    }
-
-    let c = b;  // this line shoud be illegal as b should not be visible outside of the module
+mod main (output) {  
+    let c: bool;
+    c = false;
+    let d: int;
+    d = 1;
 }
 ```
 ------------------------

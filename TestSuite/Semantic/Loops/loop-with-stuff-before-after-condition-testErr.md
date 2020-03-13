@@ -2,14 +2,17 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let a : int = 1;
+mod main (output) { 
+    let i = 0;
+    let j = 0;
 
-    mod one {
-        let b = a;
+    loop {
+        j -= 1;
+        
+        break if i == 5;
+
+        i += 1;
     }
-
-    let c = b;  // this line shoud be illegal as b should not be visible outside of the module
 }
 ```
 ------------------------

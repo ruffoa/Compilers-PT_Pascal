@@ -3,21 +3,14 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = false;
-
-    mod one {
-        let b = 1;
-
-        fn test(){
-            a = true;
-            b += 1;
-        }
-
-        test();     //this is valid
+    const ONE = 1;
+    let a : int; //can't assign an initial value yet (not supported yet)
+    a = ONE;
+    while (a < 5){
+        a += 1;
     }
-
-    test();         //this is invalid as test() should not be visible
 }
+
 ```
 ------------------------
 
