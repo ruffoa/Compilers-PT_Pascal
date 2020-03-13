@@ -59,13 +59,14 @@ Test output is:
       oEmitValue
       % value emitted 1
     .tAssignInteger
+   #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (13 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (14 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff

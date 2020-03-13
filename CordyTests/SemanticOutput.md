@@ -420,6 +420,67 @@ Output is:
       oEmitValue
       % value emitted 13277
     .tAssignInteger
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4032
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 17
+    .tAssignInteger
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 1
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4036
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 10
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4040
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 1
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4084
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 10
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4088
+     .tArrayDescriptor
+   .tSkipProc
+   oEmitNullAddress
+   % value emitted -32767
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4140
+     .tStoreParmInteger
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4136
+     .tStoreParmAddress
+     .tParmEnd
+     .tIfBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4032
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 17
+        .tEQ
+     .tIfThen
+     oEmitNullAddress
+     % value emitted -32767
+        #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -427,9 +488,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tAssignBegin on line 36 of cache.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 37 of cache.pt
- !== oEmitValue on line 38 of cache.pt
+#eMutableVarReqd !== .tAssignBegin on line 96 of cache.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 97 of cache.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 98 of cache.pt
+ !== % value emitted 4032 on line 99 of cache.pt
 
 ```
 end file
@@ -1533,6 +1595,19 @@ Output is:
       oEmitValue
       % value emitted 1
     .tAssignInteger
+   .tWhileBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 116
+       .tFetchInteger
+       .tLiteralInteger
+       oEmitValue
+       % value emitted 100
+      .tLE
+   .tWhileTest
+   oEmitNullAddress
+   % value emitted -32767
+      #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
@@ -1540,9 +1615,10 @@ Output is:
 File diff
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 41 of primes.pt
-### Semantic assertion 3 failed: !== .tLiteralAddress on line 42 of primes.pt
- !== oEmitValue on line 43 of primes.pt
+#eMutableVarReqd !== .tAssignBegin on line 53 of primes.pt
+### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 54 of primes.pt
+### Semantic assertion 3 failed: !== oEmitValue on line 55 of primes.pt
+ !== % value emitted 8 on line 56 of primes.pt
 
 ```
 end file

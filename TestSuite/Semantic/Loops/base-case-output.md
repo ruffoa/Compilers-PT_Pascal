@@ -79,20 +79,37 @@ Test output is:
       oEmitValue
       % value emitted 0
     .tAssignInteger
+   .tWhileBegin
+   .tWhilePreBreak
+   oEmitNullAddress
+   % value emitted -32767
+   .tWhileBreakIf
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 5
+      .tGE
+   .tNot
+   .tWhileTest
+     #eMutableVarReqd
 ### Semantic pass S/SL program failure:  syntax error in semantic token stream
 ### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (13 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (26 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tWhileBegin on line 11 of base-case.pt
--### Semantic assertion 3 failed: !== .tWhilePreBreak on line 12 of base-case.pt
+-#eMutableVarReqd !== .tAssignBegin on line 23 of base-case.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 24 of base-case.pt
+-### Semantic assertion 3 failed: !== oEmitValue on line 25 of base-case.pt
 
 ```
 end file
