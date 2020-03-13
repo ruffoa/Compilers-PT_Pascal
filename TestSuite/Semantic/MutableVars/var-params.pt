@@ -2,7 +2,7 @@ mod main (output) {
     let mut i = 1;
     let j = 0;
 
-    mod foo(var a, b) {
+    fn foo(var a, b) {
         a += 1;
     }
 
