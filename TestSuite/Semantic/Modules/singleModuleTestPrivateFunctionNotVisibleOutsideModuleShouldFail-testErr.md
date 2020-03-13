@@ -3,7 +3,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = false;
+    let mut a : bool = false;
 
     mod one {
         let mut b = 1;
@@ -24,9 +24,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 8: mutable variable required for assignment
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-    (parser output stream does not match expected input stream)
-while processing line          8
-### Semantic assertion 3 failed: 
+semantic error, line 15: identifier not declared
+semantic error, line 15: procedure name required
 ```

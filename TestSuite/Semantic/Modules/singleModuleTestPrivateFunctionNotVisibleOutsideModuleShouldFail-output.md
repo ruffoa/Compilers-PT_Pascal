@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = false;
+    let mut a : bool = false;
 
     mod one {
         let mut b = 1;
@@ -40,6 +40,7 @@ Parser Output:
     .sInitialValue
         .sIdentifier
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
   .sModule
@@ -120,9 +121,38 @@ Test output is:
      oEmitNullAddress
      % value emitted -32767
        .tParmEnd
-       #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+           .tLiteralBoolean
+           oEmitValue
+           % value emitted 1
+        .tAssignBoolean
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 8
+           .tLiteralAddress
+           oEmitValue
+           % value emitted 8
+           .tFetchInteger
+          .tLiteralInteger
+          oEmitValue
+          % value emitted 1
+          .tAdd
+        .tAssignInteger
+     .tProcedureEnd
+     .tCallBegin
+     .tCallEnd
+     oEmitValue
+     % value emitted 27
+   #eUndefinedIdentifier
+   #eProcedureReqd
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 

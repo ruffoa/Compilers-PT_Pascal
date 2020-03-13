@@ -53,13 +53,14 @@ Test output is:
 ```
 
 
+Warning, output length does not match (8 vs 9)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tTrapBegin on line 5 of const-assignment-shouldFail.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrap on line 6 of const-assignment-shouldFail.pt
--### Semantic assertion 3 failed: !== oEmitTrapKind(trHalt) on line 7 of const-assignment-shouldFail.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 6 of const-assignment-shouldFail.pt
+-### Semantic assertion 3 failed: !== .tTrap on line 7 of const-assignment-shouldFail.pt
 
 ```
 end file
