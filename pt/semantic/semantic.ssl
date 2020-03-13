@@ -1185,6 +1185,7 @@ VariableDeclarations :
                 [
                     | sMutable:
                         oSymbolStkSetKind(syMutableVariable)
+                        oSymbolTblUpdate
                     | *:
                 ]
 
