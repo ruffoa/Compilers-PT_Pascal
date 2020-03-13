@@ -1640,7 +1640,7 @@ VarActual :
         [
             | sIdentifier:
                 oSymbolStkPushIdentifier
-                [   oTypeStkChooseKind
+                [   oSymbolStkChooseKind
                     | syMutableVariable:
                         @Variable
                         .tVarParm
