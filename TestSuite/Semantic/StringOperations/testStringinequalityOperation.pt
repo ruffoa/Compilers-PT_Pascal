@@ -1,0 +1,5 @@
+mod main (output) {
+    let b : bool;
+
+    b = "Hello" != "Test";
+}

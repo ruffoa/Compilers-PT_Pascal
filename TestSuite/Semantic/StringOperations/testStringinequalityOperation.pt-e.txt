@@ -1,0 +1,20 @@
+.tLiteralInteger
+oEmitValue                  // value emitted 2
+.tLiteralAddress
+oEmitDataAddress            // value emitted 0
+.tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue                  // value emitted 4
+.tLiteralString
+oEmitValue                  // String length is  5
+oEmitString                 // "Hello"
+.tLiteralString
+oEmitValue                  // String length is 4
+oEmitString                 // "Test"
+.tStringEqual               
+.tNot
+.tAssignBoolean             // Assign result to b
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)

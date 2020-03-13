@@ -1,0 +1,5 @@
+mod main (output) {
+    let a : str;
+
+    a = "Hello" * 4;
+}

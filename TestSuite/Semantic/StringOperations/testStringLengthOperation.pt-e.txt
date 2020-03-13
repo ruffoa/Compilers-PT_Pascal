@@ -1,0 +1,23 @@
+.tLiteralInteger
+oEmitValue                  // value emitted 2
+.tLiteralAddress
+oEmitDataAddress            // value emitted 0
+.tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue                  // value emitted 4
+.tLiteralString
+oEmitValue                  // String length is 13
+oEmitString                 // "Hello, World!"
+.tAssignString
+.tAssignBegin
+.tLiteralAddress
+oEmitValue                  // value emitted 1028
+.tLiteralAddress            // address of a
+oEmitValue                  // value emitted 4
+.tFetchString
+.tLength
+.tAssignInteger             // assign result to b
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)
