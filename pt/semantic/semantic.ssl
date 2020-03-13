@@ -204,6 +204,8 @@ Error :
         eStringExpnReqd
         eArrayVarReqd
         eVariableReqd
+        eMutableVarReqd
+        eMutableVarParam
         eDuplicateLabel
         eExpnOperandReqd
         eTypeMismatch
@@ -1473,7 +1475,13 @@ CallBlockWithScope :     %Enters a new scope calls @Block and exits the scope
 
 AssignmentStmt :
         sIdentifier  oSymbolStkPushIdentifier
-        @Assignment
+        [ oSymbolStkChooseKind
+            | syMutableVariable:
+                @Assignment
+            | *:
+                #eMutableVarReqd
+        ]
+
         oSymbolStkPop;
 
 Assignment :
@@ -1600,9 +1608,14 @@ ActualParameters :
                 % or a variable parameter
                 [ oSymbolStkChooseKind
                     | syVariable:
-                        % value parameter, actual should be an expression
-                        @Expression
-                        @CompareAndSwapTypes
+                        [
+                            | sMutable:
+                                #eMutableVarParam
+                            | *:
+                                % value parameter, actual should be an expression
+                                @Expression
+                                @CompareAndSwapTypes
+                        ]
                     | syVarParameter:
                         @VarActual
                 ]
@@ -1627,21 +1640,26 @@ VarActual :
         [
             | sIdentifier:
                 oSymbolStkPushIdentifier
-                @Variable
-                .tVarParm
-                [ oTypeStkCompareNames
-                    | yes:
+                [   oTypeStkChooseKind
+                    | syMutableVariable:
+                        @Variable
+                        .tVarParm
+                        [ oTypeStkCompareNames
+                            | yes:
+                            | *:
+                                #eParameterTypeMismatch
+                        ]
+                        % The actual parameter expression
+                        % should consist of a single variable
+                        [
+                            | sExpnEnd:
+                            | *:
+                                #eParameterTypeMismatch
+                                % Flush the rest of the expression
+                                @Expression
+                        ]
                     | *:
-                        #eParameterTypeMismatch
-                ]
-                % The actual parameter expression
-                % should consist of a single variable
-                [
-                    | sExpnEnd:
-                    | *:
-                        #eParameterTypeMismatch
-                        % Flush the rest of the expression
-                        @Expression
+                        #eMutableVarReqd
                 ]
             | *:
                 #eParameterTypeMismatch
