@@ -1,0 +1,1 @@
+This is to test that non-mutable let assignment should fail

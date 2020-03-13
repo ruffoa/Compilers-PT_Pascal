@@ -1,0 +1,8 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0
