@@ -92,65 +92,8 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-       .tLiteralBoolean
-       oEmitValue
-       % value emitted 0
-    .tAssignBoolean
-      .tAssignBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 8
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 1
-      .tAssignInteger
-     .tSkipProc
-     oEmitNullAddress
-     % value emitted -32767
-       .tParmEnd
-        .tAssignBegin
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 4
-           .tLiteralBoolean
-           oEmitValue
-           % value emitted 1
-        .tAssignBoolean
-        .tAssignBegin
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 8
-           .tLiteralAddress
-           oEmitValue
-           % value emitted 8
-           .tFetchInteger
-          .tLiteralInteger
-          oEmitValue
-          % value emitted 1
-          .tAdd
-        .tAssignInteger
-     .tProcedureEnd
-     .tCallBegin
-     .tCallEnd
-     oEmitValue
-     % value emitted 27
-   #eUndefinedIdentifier
-   #eProcedureReqd
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 

@@ -65,62 +65,20 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-       .tLiteralInteger
-       oEmitValue
-       % value emitted 1
-    .tAssignInteger
-   .tWhileBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 5
-      .tLT
-   .tWhileTest
-   oEmitNullAddress
-   % value emitted -32767
-       .tAssignBegin
-        .tLiteralAddress
-        oEmitValue
-        % value emitted 4
-          .tLiteralAddress
-          oEmitValue
-          % value emitted 4
-          .tFetchInteger
-         .tLiteralInteger
-         oEmitValue
-         % value emitted 1
-         .tAdd
-       .tAssignInteger
-   % value emitted 18
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 
 
+Warning, output length does not match (2 vs 33)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eDuplicateName !== .tLiteralInteger on line 0 of testBlocksBasic.pt
+-### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of testBlocksBasic.pt
 
 ```
 end file

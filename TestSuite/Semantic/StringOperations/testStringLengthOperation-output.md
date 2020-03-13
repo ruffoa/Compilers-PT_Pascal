@@ -46,60 +46,20 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tLiteralString
-      oEmitValue
-      % value emitted 13
-      oEmitString
-      % value emitted 72
-      % value emitted 101
-      % value emitted 108
-      % value emitted 108
-      % value emitted 111
-      % value emitted 44
-      % value emitted 32
-      % value emitted 87
-      % value emitted 111
-      % value emitted 114
-      % value emitted 108
-      % value emitted 100
-      % value emitted 33
-    .tAssignString
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 1028
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchString
-      .tLength
-    .tAssignInteger
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 
 
+Warning, output length does not match (2 vs 23)!  (Newlines are not the issue here!) `testStringLengthOperation.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eDuplicateName !== .tLiteralInteger on line 0 of testStringLengthOperation.pt
+-### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of testStringLengthOperation.pt
 
 ```
 end file

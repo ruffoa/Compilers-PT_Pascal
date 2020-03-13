@@ -44,36 +44,20 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 1
-    .tAssignInteger
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 
 
-Warning, output length does not match (13 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (2 vs 8)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of base-case.pt
--.tLiteralAddress !== .tTrap on line 6 of base-case.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of base-case.pt
+-#eDuplicateName !== .tLiteralInteger on line 0 of base-case.pt
+-### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of base-case.pt
 
 ```
 end file

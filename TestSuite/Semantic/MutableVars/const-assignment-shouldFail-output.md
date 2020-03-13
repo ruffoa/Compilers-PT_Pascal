@@ -1,4 +1,4 @@
-
+This is to test that const assignment does not work
 
 -------------------------
 
@@ -39,36 +39,20 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     #eVariableReqd
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 2
-    .tAssignInteger
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 
 
-Warning, output length does not match (13 vs 8)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
+Warning, output length does not match (2 vs 8)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of const-assignment-shouldFail.pt
--#eVariableReqd !== .tTrap on line 6 of const-assignment-shouldFail.pt
--.tLiteralInteger !== oEmitTrapKind(trHalt) on line 7 of const-assignment-shouldFail.pt
+-#eDuplicateName !== .tLiteralInteger on line 0 of const-assignment-shouldFail.pt
+-### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of const-assignment-shouldFail.pt
 
 ```
 end file

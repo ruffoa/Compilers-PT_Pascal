@@ -96,104 +96,20 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-   .tLiteralInteger
-   oEmitValue
-   % value emitted 2
-   .tLiteralAddress
-   oEmitDataAddress
-   % value emitted 0
-   .tFileDescriptor
-    .tAssignBegin
-     .tLiteralAddress
-     oEmitValue
-     % value emitted 4
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 0
-    .tAssignInteger
-   .tWhileBegin
-   .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
-   .tWhileBreakIf
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchInteger
-      .tLiteralInteger
-      oEmitValue
-      % value emitted 5
-      .tGE
-   .tNot
-   .tWhileTest
-      .tAssignBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 8
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 0
-      .tAssignInteger
-     .tWhileBegin
-     .tWhilePreBreak
-     oEmitNullAddress
-     % value emitted -32767
-     .tWhileBreakIf
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 8
-         .tFetchInteger
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 5
-        .tGT
-     .tNot
-     .tWhileTest
-        .tAssignBegin
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 8
-           .tLiteralAddress
-           oEmitValue
-           % value emitted 8
-           .tFetchInteger
-          .tLiteralInteger
-          oEmitValue
-          % value emitted 1
-          .tAdd
-        .tAssignInteger
-     % value emitted 43
-     .tWhileEnd
-      .tAssignBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 4
-         .tFetchInteger
-        .tLiteralInteger
-        oEmitValue
-        % value emitted 1
-        .tAdd
-      .tAssignInteger
-   % value emitted 19
-   .tWhileEnd
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
+  #eDuplicateName
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 
 ```
 
 
+Warning, output length does not match (2 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-#eDuplicateName !== .tLiteralInteger on line 0 of nested-loops.pt
+-### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of nested-loops.pt
 
 ```
 end file

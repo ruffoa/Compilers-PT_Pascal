@@ -12,8 +12,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-    (parser output stream does not match expected input stream)
-while processing line          2
-### Semantic assertion 3 failed: 
+semantic error, line 1: identifier repeated in list
+### Semantic assertion 17 failed: empty type stack in oTypeStkPop
 ```

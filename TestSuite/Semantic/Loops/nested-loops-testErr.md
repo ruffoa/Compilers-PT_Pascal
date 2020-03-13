@@ -2,21 +2,20 @@
 Test Content: 
 -------------------------
 ```
-mod main (output) {
-    let a : bool = false;
+mod main (output) { 
+    let i = 0;
 
-    mod one {
-        let b = 1;
+    loop {
+        break if i >= 5;
+        let j = 0;
 
-        fn test(){
-            a = true;
-            b += 1;
+        loop {
+            break if j > 5;
+            j += 1;
         }
-
-        test();     //this is valid
+        
+        i += 1;
     }
-
-    test();         //this is invalid as test() should not be visible
 }
 ```
 ------------------------
