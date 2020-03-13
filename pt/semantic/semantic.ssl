@@ -206,6 +206,7 @@ Error :
         eVariableReqd
         eMutableVarReqd
         eMutableVarParam
+        eMutableVarParamReqd
         eDuplicateLabel
         eExpnOperandReqd
         eTypeMismatch
@@ -1620,7 +1621,12 @@ ActualParameters :
                                 @CompareAndSwapTypes
                         ]
                     | syVarParameter:
-                        @VarActual
+                        [
+                            | sMutable:
+                                @VarActual
+                            | *:
+                                #eMutableVarParamReqd
+                        ]
                 ]
                 oSymbolStkPop  oTypeStkPop      % actual
                 oSymbolStkPop  oTypeStkPop      % formal
