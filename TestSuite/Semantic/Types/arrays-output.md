@@ -7,9 +7,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) { 
-    let a: [int: 5];
+    let mut a: [int: 5];
     a[0] = 1;
-    // const b = a[0];
 }
 ```
 ------------------------
@@ -29,6 +28,7 @@ Parser Output:
      .sIdentifier
     .sRange
      .sInteger
+  .sMutable
   % .sNewLine
    .sAssignmentStmt
    .sIdentifier
@@ -37,7 +37,6 @@ Parser Output:
    .sExpnEnd
        .sInteger
    .sExpnEnd
-   % .sNewLine
    % .sNewLine
   .sEnd
 

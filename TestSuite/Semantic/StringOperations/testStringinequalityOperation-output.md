@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let b : bool;
+    let mut b : bool;
 
     b = "Hello" != "Test";
 }
@@ -26,6 +26,7 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt
