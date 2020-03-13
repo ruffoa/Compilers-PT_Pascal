@@ -1180,11 +1180,12 @@ VariableDeclarations :
                                 @Assignment
                             | *:
                         ]
-                        [
-                            | sMutable:
-                                oSymbolStkSetKind(syMutableVariable)
-                            | *:
-                        ]
+                ]
+
+                [
+                    | sMutable:
+                        oSymbolStkSetKind(syMutableVariable)
+                    | *:
                 ]
 
                 oTypeStkPop
