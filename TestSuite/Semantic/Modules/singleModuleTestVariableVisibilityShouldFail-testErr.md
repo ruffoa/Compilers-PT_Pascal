@@ -17,6 +17,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 1: identifier repeated in list
-### Semantic assertion 17 failed: empty type stack in oTypeStkPop
+semantic error, line 8: identifier not declared
+semantic error, line 8: expression operand required
 ```

@@ -96,20 +96,75 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-  #eDuplicateName
-### Semantic assertion 17 failed: empty type stack in oTypeStkPop
+   .tLiteralInteger
+   oEmitValue
+   % value emitted 2
+   .tLiteralAddress
+   oEmitDataAddress
+   % value emitted 0
+   .tFileDescriptor
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 0
+    .tAssignInteger
+   .tWhileBegin
+   .tWhilePreBreak
+   oEmitNullAddress
+   % value emitted -32767
+   .tWhileBreakIf
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 5
+      .tGE
+   .tNot
+   .tWhileTest
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 0
+      .tAssignInteger
+     .tWhileBegin
+     .tWhilePreBreak
+     oEmitNullAddress
+     % value emitted -32767
+     .tWhileBreakIf
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 8
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 5
+        .tGT
+     .tNot
+     .tWhileTest
+       #eMutableVarReqd
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (2 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
+Warning, output length does not match (44 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eDuplicateName !== .tLiteralInteger on line 0 of nested-loops.pt
--### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of nested-loops.pt
+-#eMutableVarReqd !== .tAssignBegin on line 41 of nested-loops.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 42 of nested-loops.pt
+-### Semantic assertion 3 failed: !== oEmitValue on line 43 of nested-loops.pt
 
 ```
 end file

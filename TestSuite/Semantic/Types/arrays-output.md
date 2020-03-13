@@ -47,20 +47,43 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-  #eDuplicateName
-### Semantic assertion 17 failed: empty type stack in oTypeStkPop
+   .tLiteralInteger
+   oEmitValue
+   % value emitted 2
+   .tLiteralAddress
+   oEmitDataAddress
+   % value emitted 0
+   .tFileDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 1
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 4
+     .tArrayDescriptor
+     .tLiteralInteger
+     oEmitValue
+     % value emitted 5
+     .tLiteralAddress
+     oEmitDataAddress
+     % value emitted 8
+     .tArrayDescriptor
+   #eMutableVarReqd
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (2 vs 28)!  (Newlines are not the issue here!) `arrays.pt`
+Warning, output length does not match (18 vs 28)!  (Newlines are not the issue here!) `arrays.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eDuplicateName !== .tLiteralInteger on line 0 of arrays.pt
--### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of arrays.pt
+-#eMutableVarReqd !== .tAssignBegin on line 15 of arrays.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 16 of arrays.pt
+-### Semantic assertion 3 failed: !== oEmitValue on line 17 of arrays.pt
 
 ```
 end file

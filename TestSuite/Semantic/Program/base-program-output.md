@@ -28,20 +28,28 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-  #eDuplicateName
-### Semantic assertion 17 failed: empty type stack in oTypeStkPop
+   .tLiteralInteger
+   oEmitValue
+   % value emitted 2
+   .tLiteralAddress
+   oEmitDataAddress
+   % value emitted 0
+   .tFileDescriptor
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (2 vs 8)!  (Newlines are not the issue here!) `base-program.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eDuplicateName !== .tLiteralInteger on line 0 of base-program.pt
--### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of base-program.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

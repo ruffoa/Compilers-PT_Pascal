@@ -63,20 +63,52 @@ Parser Output:
 Test output is: 
 -------------------------
 ```
-  #eDuplicateName
-### Semantic assertion 17 failed: empty type stack in oTypeStkPop
+   .tLiteralInteger
+   oEmitValue
+   % value emitted 2
+   .tLiteralAddress
+   oEmitDataAddress
+   % value emitted 0
+   .tFileDescriptor
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 0
+    .tAssignInteger
+   .tWhileBegin
+   .tWhilePreBreak
+   oEmitNullAddress
+   % value emitted -32767
+   .tWhileBreakIf
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 5
+      .tGE
+   .tNot
+   .tWhileTest
+     #eMutableVarReqd
+### Semantic pass S/SL program failure:  syntax error in semantic token stream
+### Semantic assertion 3 failed: 
 
 ```
 
 
-Warning, output length does not match (2 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
+Warning, output length does not match (26 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eDuplicateName !== .tLiteralInteger on line 0 of base-case.pt
--### Semantic assertion 17 failed: empty type stack in oTypeStkPop !== oEmitValue on line 1 of base-case.pt
+-#eMutableVarReqd !== .tAssignBegin on line 23 of base-case.pt
+-### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 24 of base-case.pt
+-### Semantic assertion 3 failed: !== oEmitValue on line 25 of base-case.pt
 
 ```
 end file
