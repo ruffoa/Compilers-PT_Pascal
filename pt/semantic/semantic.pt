@@ -1179,6 +1179,8 @@ program SemanticAnalysis (output, semanticSsl, parseStream, temp, tCode, options
                     write('mutable variable required for assignment');
                 eMutableVarParam:
                     write('unexpected mutable keyword in variable parameters');
+                eMutableVarParamReqd:
+                    write('exprected mutable host variable for parameter');
                 eDuplicateLabel:
                     write('duplicate case label value');
                 eExpnOperandReqd:

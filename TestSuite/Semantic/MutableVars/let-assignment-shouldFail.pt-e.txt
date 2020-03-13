@@ -6,10 +6,8 @@ oEmitDataAddress        // value emitted is 0
 .tAssignBegin           // begin assignment of i = 0
 .tLiteralAddress
 oEmitValue
-% value emitted 4
 .tLiteralInteger
 oEmitValue
-% value emitted 0
 .tAssignInteger         // assign i = 0
 #eMutableVarReqd        // try to assign i = 1 -> error
 .tTrapBegin             // begin end of main program
