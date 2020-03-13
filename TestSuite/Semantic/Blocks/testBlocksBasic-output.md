@@ -73,22 +73,55 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-   #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+       .tLiteralInteger
+       oEmitValue
+       % value emitted 1
+    .tAssignInteger
+   .tWhileBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 5
+      .tLT
+   .tWhileTest
+   oEmitNullAddress
+   % value emitted -32767
+       .tAssignBegin
+        .tLiteralAddress
+        oEmitValue
+        % value emitted 4
+          .tLiteralAddress
+          oEmitValue
+          % value emitted 4
+          .tFetchInteger
+         .tLiteralInteger
+         oEmitValue
+         % value emitted 1
+         .tAdd
+       .tAssignInteger
+   % value emitted 18
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (8 vs 33)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 5 of testBlocksBasic.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 6 of testBlocksBasic.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 7 of testBlocksBasic.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

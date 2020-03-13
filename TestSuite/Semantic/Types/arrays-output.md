@@ -67,22 +67,34 @@ Test output is:
      oEmitDataAddress
      % value emitted 8
      .tArrayDescriptor
-   #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tSubscriptBegin
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 0
+      .tSubscriptInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (18 vs 28)!  (Newlines are not the issue here!) `arrays.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 15 of arrays.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 16 of arrays.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 17 of arrays.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

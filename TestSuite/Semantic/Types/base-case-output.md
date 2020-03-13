@@ -59,22 +59,37 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-   #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+       .tLiteralBoolean
+       oEmitValue
+       % value emitted 0
+    .tAssignBoolean
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 8
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (8 vs 20)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 5 of base-case.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 6 of base-case.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 7 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

@@ -51,22 +51,48 @@ Test output is:
    oEmitDataAddress
    % value emitted 0
    .tFileDescriptor
-   #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tLiteralString
+      oEmitValue
+      % value emitted 7
+      oEmitString
+      % value emitted 72
+      % value emitted 101
+      % value emitted 108
+      % value emitted 108
+      % value emitted 111
+      % value emitted 44
+      % value emitted 32
+      .tLiteralString
+      oEmitValue
+      % value emitted 6
+      oEmitString
+      % value emitted 87
+      % value emitted 111
+      % value emitted 114
+      % value emitted 108
+      % value emitted 100
+      % value emitted 33
+      .tConcatenate
+    .tAssignString
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (8 vs 19)!  (Newlines are not the issue here!) `testStringConcatenationOperation.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 5 of testStringConcatenationOperation.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 6 of testStringConcatenationOperation.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 7 of testStringConcatenationOperation.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

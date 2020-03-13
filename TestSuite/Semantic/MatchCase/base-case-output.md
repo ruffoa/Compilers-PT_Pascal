@@ -96,22 +96,49 @@ Test output is:
    .tCaseSelect
    oEmitNullAddress
    % value emitted -32767
-       #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+          .tLiteralInteger
+          oEmitValue
+          % value emitted 0
+        .tAssignInteger
+    .tCaseMerge
+    oEmitNullAddress
+    % value emitted -32767
+   .tCaseEnd
+    oEmitCaseBranchTable
+    % value emitted 12
+    % value emitted 12
+    % value emitted 23
+    .tCaseOtherwise
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+          .tLiteralInteger
+          oEmitValue
+          % value emitted 1
+        .tAssignInteger
+    .tCaseMerge
+    oEmitNullAddress
+    % value emitted -32767
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (20 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 17 of base-case.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 18 of base-case.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 19 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

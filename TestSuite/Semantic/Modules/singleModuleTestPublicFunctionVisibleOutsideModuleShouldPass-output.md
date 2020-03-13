@@ -89,9 +89,23 @@ Test output is:
      oEmitNullAddress
      % value emitted -32767
        .tParmEnd
-       #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+           .tLiteralBoolean
+           oEmitValue
+           % value emitted 1
+        .tAssignBoolean
+     .tProcedureEnd
+   .tCallBegin
+   .tCallEnd
+   oEmitValue
+   % value emitted 19
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 

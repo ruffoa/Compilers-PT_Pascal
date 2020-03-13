@@ -109,22 +109,60 @@ Test output is:
    .tWhilePreBreak
    oEmitNullAddress
    % value emitted -32767
-     #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 8
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+        .tSubtract
+      .tAssignInteger
+   .tWhileBreakIf
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 5
+      .tEQ
+   .tNot
+   .tWhileTest
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+        .tAdd
+      .tAssignInteger
+   % value emitted 27
+   .tWhileEnd
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (23 vs 53)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 20 of loop-with-stuff-before-after-condition.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 21 of loop-with-stuff-before-after-condition.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 22 of loop-with-stuff-before-after-condition.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

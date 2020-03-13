@@ -151,22 +151,51 @@ Test output is:
         .tGT
      .tNot
      .tWhileTest
-       #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+        .tAssignBegin
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 8
+           .tLiteralAddress
+           oEmitValue
+           % value emitted 8
+           .tFetchInteger
+          .tLiteralInteger
+          oEmitValue
+          % value emitted 1
+          .tAdd
+        .tAssignInteger
+     % value emitted 43
+     .tWhileEnd
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 4
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+        .tAdd
+      .tAssignInteger
+   % value emitted 19
+   .tWhileEnd
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (44 vs 66)!  (Newlines are not the issue here!) `nested-loops.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--#eMutableVarReqd !== .tAssignBegin on line 41 of nested-loops.pt
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tLiteralAddress on line 42 of nested-loops.pt
--### Semantic assertion 3 failed: !== oEmitValue on line 43 of nested-loops.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
