@@ -14,7 +14,7 @@ mod main (output) {
         a += 1;
     }
 
-    foo(i,j);
+    foo(mut i, j);
 }
 ```
 ------------------------
@@ -63,6 +63,7 @@ Parser Output:
    % .sNewLine
     .sCallStmt
     .sIdentifier
+    .sMutable
         .sIdentifier
     .sExpnEnd
         .sIdentifier

@@ -10,7 +10,7 @@ mod main (output) {
         b += 1;
     }
 
-    foo(i,j);
+    foo(i, mut j);
 }
 ```
 ------------------------
