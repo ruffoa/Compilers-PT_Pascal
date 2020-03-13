@@ -1661,6 +1661,8 @@ VarActual :
                         ]
                     | *:
                         #eMutableVarReqd
+                        % Flush the rest of the expression
+                        @Expression
                 ]
             | *:
                 #eParameterTypeMismatch
