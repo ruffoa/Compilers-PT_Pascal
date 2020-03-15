@@ -148,8 +148,6 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.tStoreParmAddress !== .tStoreParmInteger on line 21 of var-params-shouldFail.pt
--.tStoreParmInteger !== .tStoreParmAddress on line 24 of var-params-shouldFail.pt
 -.tFetchInteger !== .tVarParm on line 42 of var-params-shouldFail.pt
 -.tParmEnd !== .tCallEnd on line 45 of var-params-shouldFail.pt
 

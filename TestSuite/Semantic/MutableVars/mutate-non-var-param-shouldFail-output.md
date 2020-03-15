@@ -151,15 +151,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (53 vs 54)!  (Newlines are not the issue here!) `mutate-non-var-param-shouldFail.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tTrapBegin !== % value emitted 27 on line 50 of mutate-non-var-param-shouldFail.pt
--.tTrap !== .tTrapBegin on line 51 of mutate-non-var-param-shouldFail.pt
--oEmitTrapKind(trHalt) !== .tTrap on line 52 of mutate-non-var-param-shouldFail.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
