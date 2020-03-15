@@ -152,15 +152,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (53 vs 8)!  (Newlines are not the issue here!) `var-params.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of var-params.pt
--.tLiteralAddress !== .tTrap on line 6 of var-params.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of var-params.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

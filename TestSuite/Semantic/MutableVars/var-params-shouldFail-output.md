@@ -142,15 +142,16 @@ Test output is:
 ```
 
 
-Warning, output length does not match (46 vs 8)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
+Warning, output length does not match (46 vs 50)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 5 of var-params-shouldFail.pt
--.tLiteralAddress !== .tTrap on line 6 of var-params-shouldFail.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 7 of var-params-shouldFail.pt
+-.tStoreParmAddress !== .tStoreParmInteger on line 21 of var-params-shouldFail.pt
+-.tStoreParmInteger !== .tStoreParmAddress on line 24 of var-params-shouldFail.pt
+-.tFetchInteger !== .tVarParm on line 42 of var-params-shouldFail.pt
+-.tParmEnd !== .tCallEnd on line 45 of var-params-shouldFail.pt
 
 ```
 end file
