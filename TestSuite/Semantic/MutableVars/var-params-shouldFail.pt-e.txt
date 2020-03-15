@@ -3,6 +3,48 @@ oEmitValue              // value emitted is 2
 .tLiteralAddress
 oEmitDataAddress        // value emitted is 0
 .tFileDescriptor        // File for main program
+.tAssignBegin           // i = 1
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end i = 1
+.tAssignBegin           // j = 0;
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end j = 0
+.tSkipProc              // start foo declaration
+oEmitNullAddress
+.tLiteralAddress        // b: int - stack is last -> first!
+oEmitValue
+.tStoreParmInteger      // store integer value of b
+.tLiteralAddress        // a declaration
+oEmitValue
+.tStoreParmAddress      // store address of passed variable
+.tParmEnd               // end parameters of foo
+.tAssignBegin           // a += 1
+.tLiteralAddress        // address of 'a'
+oEmitValue
+.tFetchAddress
+.tLiteralAddress
+oEmitValue
+.tFetchAddress          // fetch address of 'i' passed to a
+.tFetchInteger          // fetch value of 'i'
+.tLiteralInteger        // 1
+oEmitValue
+.tAdd                   // add 1 to value of 'i'
+.tAssignInteger
+.tProcedureEnd          // end foo
+.tCallBegin             // call foo
+.tLiteralAddress        // address pf 'i'
+oEmitValue
+.tVarParm
+.tParmEnd               // end param i
+#eMutableVarReqd        // wanted a mutable variable, but j is immutable!
+.tCallEnd               // end call to foo
+oEmitValue
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0
