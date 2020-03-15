@@ -115,13 +115,45 @@ Test output is:
      .tStoreParmAddress
      .tParmEnd
      #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 12
+       .tFetchAddress
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 12
+         .tFetchAddress
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+        .tAdd
+      .tAssignInteger
+   .tProcedureEnd
+   .tCallBegin
+      .tLiteralAddress
+      oEmitValue
+      % value emitted 4
+     .tVarParm
+    .tParmEnd
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+       .tFetchInteger
+    .tParmEnd
+   .tCallEnd
+   oEmitValue
+   % value emitted 27
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (29 vs 8)!  (Newlines are not the issue here!) `var-params.pt`
+Warning, output length does not match (54 vs 8)!  (Newlines are not the issue here!) `var-params.pt`
 Showing as much of the diff as possible...
 
 File diff

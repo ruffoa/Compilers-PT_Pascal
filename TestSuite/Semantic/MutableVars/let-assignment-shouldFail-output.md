@@ -57,20 +57,31 @@ Test output is:
       % value emitted 0
     .tAssignInteger
    #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 4
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (14 vs 15)!  (Newlines are not the issue here!) `let-assignment-shouldFail.pt`
+Warning, output length does not match (21 vs 15)!  (Newlines are not the issue here!) `let-assignment-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 12 of let-assignment-shouldFail.pt
--### Semantic assertion 3 failed: !== .tTrap on line 13 of let-assignment-shouldFail.pt
+-.tAssignBegin !== .tTrapBegin on line 12 of let-assignment-shouldFail.pt
+-.tLiteralAddress !== .tTrap on line 13 of let-assignment-shouldFail.pt
+-oEmitValue !== oEmitTrapKind(trHalt) on line 14 of let-assignment-shouldFail.pt
 
 ```
 end file

@@ -47,20 +47,29 @@ Test output is:
    % value emitted 0
    .tFileDescriptor
    #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+    .tAssignBegin
+     #eVariableReqd
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 2
+    .tAssignInteger
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (8 vs 9)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
+Warning, output length does not match (14 vs 9)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  syntax error in semantic token stream !== .tTrapBegin on line 6 of const-assignment-shouldFail.pt
--### Semantic assertion 3 failed: !== .tTrap on line 7 of const-assignment-shouldFail.pt
+-.tAssignBegin !== .tTrapBegin on line 6 of const-assignment-shouldFail.pt
+-#eVariableReqd !== .tTrap on line 7 of const-assignment-shouldFail.pt
+-.tLiteralInteger !== oEmitTrapKind(trHalt) on line 8 of const-assignment-shouldFail.pt
 
 ```
 end file

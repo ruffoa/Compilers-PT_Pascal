@@ -114,13 +114,44 @@ Test output is:
      .tStoreParmInteger
      .tParmEnd
      #eMutableVarReqd
-### Semantic pass S/SL program failure:  syntax error in semantic token stream
-### Semantic assertion 3 failed: 
+      .tAssignBegin
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 12
+         .tLiteralAddress
+         oEmitValue
+         % value emitted 12
+         .tFetchInteger
+        .tLiteralInteger
+        oEmitValue
+        % value emitted 1
+        .tAdd
+      .tAssignInteger
+   .tProcedureEnd
+   .tCallBegin
+    #eMutableVarParam
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchInteger
+    .tParmEnd
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 8
+       .tFetchInteger
+    .tParmEnd
+   .tCallEnd
+   oEmitValue
+   % value emitted 27
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (29 vs 8)!  (Newlines are not the issue here!) `mutate-non-var-param-shouldFail.pt`
+Warning, output length does not match (53 vs 8)!  (Newlines are not the issue here!) `mutate-non-var-param-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
