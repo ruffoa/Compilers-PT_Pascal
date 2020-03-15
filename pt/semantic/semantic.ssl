@@ -1484,6 +1484,7 @@ AssignmentStmt :
                 @Assignment
             | *:
                 #eMutableVarReqd
+                @Assignment     %% flush the assignment statement
         ]
 
         oSymbolStkPop;
