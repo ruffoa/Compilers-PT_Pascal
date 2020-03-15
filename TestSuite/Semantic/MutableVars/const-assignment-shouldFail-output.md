@@ -61,15 +61,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (14 vs 9)!  (Newlines are not the issue here!) `const-assignment-shouldFail.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 6 of const-assignment-shouldFail.pt
--#eVariableReqd !== .tTrap on line 7 of const-assignment-shouldFail.pt
--.tLiteralInteger !== oEmitTrapKind(trHalt) on line 8 of const-assignment-shouldFail.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

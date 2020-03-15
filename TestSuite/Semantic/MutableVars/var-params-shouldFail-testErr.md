@@ -19,5 +19,5 @@ Test Errors:
 -------------------------
 ```
 semantic error, line 9: mutable variable required for assignment
-
+semantic error, line 9: too many actual parameters supplied
 ```

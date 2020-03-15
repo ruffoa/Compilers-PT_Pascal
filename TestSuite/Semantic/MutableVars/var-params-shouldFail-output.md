@@ -137,19 +137,32 @@ Test output is:
        .tFetchInteger
     .tParmEnd
      #eMutableVarReqd
+      .tLiteralAddress
+      oEmitValue
+      % value emitted 8
     .tParmEnd
+    #eExtraActuals
+   .tCallEnd
+   oEmitValue
+   % value emitted 27
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (46 vs 50)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
+Warning, output length does not match (54 vs 50)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tFetchInteger !== .tVarParm on line 42 of var-params-shouldFail.pt
--.tParmEnd !== .tCallEnd on line 45 of var-params-shouldFail.pt
+-.tLiteralAddress !== .tCallEnd on line 45 of var-params-shouldFail.pt
+-.tParmEnd !== .tTrapBegin on line 47 of var-params-shouldFail.pt
+-#eExtraActuals !== .tTrap on line 48 of var-params-shouldFail.pt
+-.tCallEnd !== oEmitTrapKind(trHalt) on line 49 of var-params-shouldFail.pt
 
 ```
 end file

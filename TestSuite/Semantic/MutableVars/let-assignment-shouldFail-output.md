@@ -73,15 +73,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (21 vs 15)!  (Newlines are not the issue here!) `let-assignment-shouldFail.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tAssignBegin !== .tTrapBegin on line 12 of let-assignment-shouldFail.pt
--.tLiteralAddress !== .tTrap on line 13 of let-assignment-shouldFail.pt
--oEmitValue !== oEmitTrapKind(trHalt) on line 14 of let-assignment-shouldFail.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
