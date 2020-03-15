@@ -114,7 +114,6 @@ Test output is:
      % value emitted 12
      .tStoreParmInteger
      .tParmEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -143,7 +142,7 @@ Test output is:
 ```
 
 
-Warning, output length does not match (47 vs 8)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
+Warning, output length does not match (46 vs 8)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
 Showing as much of the diff as possible...
 
 File diff

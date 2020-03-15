@@ -939,7 +939,6 @@ Output is:
          % value emitted 116
          .tFetchInteger
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -1369,421 +1368,132 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 46 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 47 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 48 of bubblesort.pt
-oEmitValue !== % value emitted 124 on line 49 of bubblesort.pt
-% value emitted 124 !== .tFetchAddress on line 50 of bubblesort.pt
-.tFetchAddress !== .tLiteralAddress on line 51 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 52 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 53 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 54 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 55 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 56 of bubblesort.pt
-oEmitValue !== % value emitted 116 on line 57 of bubblesort.pt
-% value emitted 116 !== .tFetchInteger on line 58 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 59 of bubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 60 of bubblesort.pt
-.tFetchInteger !== .tLiteralAddress on line 61 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 62 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 63 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 64 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 65 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 66 of bubblesort.pt
-oEmitValue !== % value emitted 120 on line 67 of bubblesort.pt
-% value emitted 120 !== .tFetchInteger on line 68 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 69 of bubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 70 of bubblesort.pt
-.tFetchInteger !== .tLT on line 71 of bubblesort.pt
-.tLT !== .tAssignBoolean on line 72 of bubblesort.pt
-.tAssignBoolean !== .tProcedureEnd on line 73 of bubblesort.pt
-.tProcedureEnd !== .tSkipProc on line 74 of bubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 75 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 76 of bubblesort.pt
-% value emitted -32767 !== .tLiteralAddress on line 77 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 78 of bubblesort.pt
-oEmitValue !== % value emitted 132 on line 79 of bubblesort.pt
-% value emitted 132 !== .tStoreParmInteger on line 80 of bubblesort.pt
-.tStoreParmInteger !== .tLiteralAddress on line 81 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 82 of bubblesort.pt
-oEmitValue !== % value emitted 128 on line 83 of bubblesort.pt
-% value emitted 128 !== .tStoreParmInteger on line 84 of bubblesort.pt
-.tStoreParmInteger !== .tParmEnd on line 85 of bubblesort.pt
-.tParmEnd !== .tAssignBegin on line 86 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 87 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 88 of bubblesort.pt
-oEmitValue !== % value emitted 112 on line 89 of bubblesort.pt
-% value emitted 112 !== .tLiteralAddress on line 90 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 91 of bubblesort.pt
-oEmitValue !== % value emitted 132 on line 92 of bubblesort.pt
-% value emitted 132 !== .tFetchInteger on line 93 of bubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 94 of bubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 95 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 96 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 97 of bubblesort.pt
-oEmitValue !== % value emitted 136 on line 98 of bubblesort.pt
-% value emitted 136 !== .tLiteralAddress on line 99 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 100 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 101 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 102 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 103 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 104 of bubblesort.pt
-oEmitValue !== % value emitted 128 on line 105 of bubblesort.pt
-% value emitted 128 !== .tFetchInteger on line 106 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 107 of bubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 108 of bubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 109 of bubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 110 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 111 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 112 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 113 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 114 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 115 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 116 of bubblesort.pt
-oEmitValue !== % value emitted 128 on line 117 of bubblesort.pt
-% value emitted 128 !== .tFetchInteger on line 118 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 119 of bubblesort.pt
-.tSubscriptInteger !== .tLiteralAddress on line 120 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 121 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 122 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 123 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 124 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 125 of bubblesort.pt
-oEmitValue !== % value emitted 132 on line 126 of bubblesort.pt
-% value emitted 132 !== .tFetchInteger on line 127 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 128 of bubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 129 of bubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 130 of bubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 131 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 132 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 133 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 134 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 135 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 136 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 137 of bubblesort.pt
-oEmitValue !== % value emitted 132 on line 138 of bubblesort.pt
-% value emitted 132 !== .tFetchInteger on line 139 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 140 of bubblesort.pt
-.tSubscriptInteger !== .tLiteralAddress on line 141 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 142 of bubblesort.pt
-oEmitValue !== % value emitted 136 on line 143 of bubblesort.pt
-% value emitted 136 !== .tFetchInteger on line 144 of bubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 145 of bubblesort.pt
-.tAssignInteger !== .tProcedureEnd on line 146 of bubblesort.pt
-.tProcedureEnd !== .tSkipProc on line 147 of bubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 148 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 149 of bubblesort.pt
-% value emitted -32767 !== .tParmEnd on line 150 of bubblesort.pt
-.tParmEnd !== .tAssignBegin on line 151 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 152 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 153 of bubblesort.pt
-oEmitValue !== % value emitted 140 on line 154 of bubblesort.pt
-% value emitted 140 !== .tLiteralInteger on line 155 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 156 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 157 of bubblesort.pt
-% value emitted 1 !== .tAssignInteger on line 158 of bubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 159 of bubblesort.pt
-.tWhileBegin !== .tWhilePreBreak on line 160 of bubblesort.pt
-.tWhilePreBreak !== .tWriteBegin on line 161 of bubblesort.pt
-oEmitNullAddress !== .tTrapBegin on line 162 of bubblesort.pt
-% value emitted -32767 !== .tLiteralAddress on line 163 of bubblesort.pt
-.tWriteBegin !== oEmitValue on line 164 of bubblesort.pt
-.tTrapBegin !== % value emitted 0 on line 165 of bubblesort.pt
-.tLiteralAddress !== .tVarParm on line 166 of bubblesort.pt
-oEmitValue !== .tParmEnd on line 167 of bubblesort.pt
-% value emitted 0 !== .tLiteralAddress on line 168 of bubblesort.pt
-.tVarParm !== oEmitValue on line 169 of bubblesort.pt
-.tParmEnd !== % value emitted 4 on line 170 of bubblesort.pt
-.tLiteralAddress !== .tSubscriptBegin on line 171 of bubblesort.pt
-oEmitValue !== .tLiteralAddress on line 172 of bubblesort.pt
-% value emitted 4 !== oEmitValue on line 173 of bubblesort.pt
-.tSubscriptBegin !== % value emitted 140 on line 174 of bubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 175 of bubblesort.pt
-oEmitValue !== .tSubscriptInteger on line 176 of bubblesort.pt
-% value emitted 140 !== .tFetchInteger on line 177 of bubblesort.pt
-.tFetchInteger !== .tParmEnd on line 178 of bubblesort.pt
-.tSubscriptInteger !== .tLiteralInteger on line 179 of bubblesort.pt
-.tFetchInteger !== oEmitValue on line 180 of bubblesort.pt
-.tParmEnd !== % value emitted 4 on line 181 of bubblesort.pt
-.tLiteralInteger !== .tParmEnd on line 182 of bubblesort.pt
-oEmitValue !== .tTrap on line 183 of bubblesort.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 184 of bubblesort.pt
-.tParmEnd !== % value emitted 8 on line 185 of bubblesort.pt
-.tTrap !== .tWriteEnd on line 186 of bubblesort.pt
-oEmitTrapKind(trWriteInteger) !== .tAssignBegin on line 187 of bubblesort.pt
-% value emitted 7 !== .tLiteralAddress on line 188 of bubblesort.pt
-.tWriteEnd !== oEmitValue on line 189 of bubblesort.pt
-.tAssignBegin !== % value emitted 140 on line 190 of bubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 194 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 195 of bubblesort.pt
-% value emitted 140 !== oEmitValue on line 196 of bubblesort.pt
-.tFetchInteger !== % value emitted 1 on line 197 of bubblesort.pt
-.tLiteralInteger !== .tAdd on line 198 of bubblesort.pt
-oEmitValue !== .tAssignInteger on line 199 of bubblesort.pt
-% value emitted 1 !== .tWhileBreakIf on line 200 of bubblesort.pt
-.tAdd !== .tLiteralAddress on line 201 of bubblesort.pt
-.tAssignInteger !== oEmitValue on line 202 of bubblesort.pt
-.tWhileBreakIf !== % value emitted 140 on line 203 of bubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 204 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 205 of bubblesort.pt
-% value emitted 140 !== oEmitValue on line 206 of bubblesort.pt
-.tFetchInteger !== % value emitted 25 on line 207 of bubblesort.pt
-.tLiteralInteger !== .tGT on line 208 of bubblesort.pt
-oEmitValue !== .tNot on line 209 of bubblesort.pt
-% value emitted 25 !== .tWhileTest on line 210 of bubblesort.pt
-.tGT !== oEmitNullAddress on line 211 of bubblesort.pt
-.tNot !== % value emitted -32767 on line 212 of bubblesort.pt
-.tWhileTest !== .tWhileEnd on line 213 of bubblesort.pt
-% value emitted 156 !== % value emitted 155 on line 214 of bubblesort.pt
-.tWhileEnd !== .tTrapBegin on line 215 of bubblesort.pt
-.tTrapBegin !== .tLiteralAddress on line 216 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 217 of bubblesort.pt
-oEmitValue !== % value emitted 0 on line 218 of bubblesort.pt
-% value emitted 0 !== .tVarParm on line 219 of bubblesort.pt
-.tVarParm !== .tParmEnd on line 220 of bubblesort.pt
-.tParmEnd !== .tTrap on line 221 of bubblesort.pt
-.tTrap !== oEmitTrapKind(trWriteln) on line 222 of bubblesort.pt
-oEmitTrapKind(trWriteln) !== % value emitted 6 on line 223 of bubblesort.pt
-% value emitted 6 !== .tProcedureEnd on line 224 of bubblesort.pt
-.tProcedureEnd !== .tSkipProc on line 225 of bubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 226 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 227 of bubblesort.pt
-% value emitted -32767 !== .tParmEnd on line 228 of bubblesort.pt
-.tParmEnd !== .tAssignBegin on line 229 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 230 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 231 of bubblesort.pt
-oEmitValue !== % value emitted 144 on line 232 of bubblesort.pt
-% value emitted 144 !== .tLiteralInteger on line 233 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 234 of bubblesort.pt
-oEmitValue !== % value emitted 25 on line 235 of bubblesort.pt
-% value emitted 25 !== .tLiteralInteger on line 236 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 237 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 238 of bubblesort.pt
-% value emitted 1 !== .tSubtract on line 239 of bubblesort.pt
-.tSubtract !== .tAssignInteger on line 240 of bubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 241 of bubblesort.pt
-.tWhileBegin !== .tLiteralAddress on line 242 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 243 of bubblesort.pt
-oEmitValue !== % value emitted 144 on line 244 of bubblesort.pt
-% value emitted 144 !== .tFetchInteger on line 245 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 246 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 247 of bubblesort.pt
-oEmitValue !== % value emitted 0 on line 248 of bubblesort.pt
-% value emitted 0 !== .tGT on line 249 of bubblesort.pt
-.tGT !== .tWhileTest on line 250 of bubblesort.pt
-.tWhileTest !== oEmitNullAddress on line 251 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 252 of bubblesort.pt
-% value emitted -32767 !== .tAssignBegin on line 253 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 254 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 255 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 256 of bubblesort.pt
-% value emitted 148 !== .tLiteralInteger on line 257 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 258 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 259 of bubblesort.pt
-% value emitted 1 !== .tAssignInteger on line 260 of bubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 261 of bubblesort.pt
-.tWhileBegin !== .tLiteralAddress on line 262 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 263 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 264 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 265 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 266 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 267 of bubblesort.pt
-oEmitValue !== % value emitted 25 on line 268 of bubblesort.pt
-% value emitted 25 !== .tLT on line 269 of bubblesort.pt
-.tLT !== .tWhileTest on line 270 of bubblesort.pt
-.tWhileTest !== oEmitNullAddress on line 271 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 272 of bubblesort.pt
-% value emitted -32767 !== .tCallBegin on line 273 of bubblesort.pt
-.tCallBegin !== .tLiteralAddress on line 274 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 275 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 276 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 277 of bubblesort.pt
-.tFetchInteger !== .tParmEnd on line 278 of bubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 279 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 280 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 281 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 282 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 283 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 284 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 285 of bubblesort.pt
-% value emitted 1 !== .tAdd on line 286 of bubblesort.pt
-.tAdd !== .tParmEnd on line 287 of bubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 288 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 289 of bubblesort.pt
-oEmitValue !== % value emitted 152 on line 290 of bubblesort.pt
-% value emitted 152 !== .tVarParm on line 291 of bubblesort.pt
-.tVarParm !== .tParmEnd on line 292 of bubblesort.pt
-.tParmEnd !== .tCallEnd on line 293 of bubblesort.pt
-.tCallEnd !== oEmitValue on line 294 of bubblesort.pt
-oEmitValue !== % value emitted 23 on line 295 of bubblesort.pt
-% value emitted 23 !== .tIfBegin on line 296 of bubblesort.pt
-.tIfBegin !== .tLiteralAddress on line 297 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 298 of bubblesort.pt
-oEmitValue !== % value emitted 152 on line 299 of bubblesort.pt
-% value emitted 152 !== .tFetchBoolean on line 300 of bubblesort.pt
-.tFetchBoolean !== .tNot on line 301 of bubblesort.pt
-.tNot !== .tIfThen on line 302 of bubblesort.pt
-.tIfThen !== oEmitNullAddress on line 303 of bubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 304 of bubblesort.pt
-% value emitted -32767 !== .tCallBegin on line 305 of bubblesort.pt
-.tCallBegin !== .tLiteralAddress on line 306 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 307 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 308 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 309 of bubblesort.pt
-.tFetchInteger !== .tParmEnd on line 310 of bubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 311 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 312 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 313 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 314 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 315 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 316 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 317 of bubblesort.pt
-% value emitted 1 !== .tAdd on line 318 of bubblesort.pt
-.tAdd !== .tParmEnd on line 319 of bubblesort.pt
-.tParmEnd !== .tCallEnd on line 320 of bubblesort.pt
-.tCallEnd !== oEmitValue on line 321 of bubblesort.pt
-oEmitValue !== % value emitted 73 on line 322 of bubblesort.pt
-% value emitted 73 !== .tIfEnd on line 323 of bubblesort.pt
-.tIfEnd !== .tAssignBegin on line 324 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 325 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 326 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 327 of bubblesort.pt
-% value emitted 148 !== .tLiteralAddress on line 328 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 329 of bubblesort.pt
-oEmitValue !== % value emitted 148 on line 330 of bubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 331 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 332 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 333 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 334 of bubblesort.pt
-% value emitted 1 !== .tAdd on line 335 of bubblesort.pt
-.tAdd !== .tAssignInteger on line 336 of bubblesort.pt
-.tAssignInteger !== .tWhileEnd on line 337 of bubblesort.pt
-% value emitted 257 !== % value emitted 255 on line 338 of bubblesort.pt
-% value emitted 238 !== .tWhileEnd on line 352 of bubblesort.pt
-.tProcedureEnd !== % value emitted 236 on line 353 of bubblesort.pt
-.tAssignBegin !== .tProcedureEnd on line 354 of bubblesort.pt
-.tLiteralAddress !== .tAssignBegin on line 355 of bubblesort.pt
-oEmitValue !== .tLiteralAddress on line 356 of bubblesort.pt
-% value emitted 4 !== oEmitValue on line 357 of bubblesort.pt
-.tSubscriptBegin !== % value emitted 4 on line 358 of bubblesort.pt
-.tLiteralInteger !== .tSubscriptBegin on line 359 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 360 of bubblesort.pt
-% value emitted 1 !== oEmitValue on line 361 of bubblesort.pt
-.tSubscriptInteger !== % value emitted 1 on line 362 of bubblesort.pt
-.tLiteralInteger !== .tSubscriptInteger on line 363 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 364 of bubblesort.pt
-% value emitted 61 !== oEmitValue on line 365 of bubblesort.pt
-.tAssignInteger !== % value emitted 61 on line 366 of bubblesort.pt
-.tAssignBegin !== .tAssignInteger on line 367 of bubblesort.pt
-.tLiteralAddress !== .tAssignBegin on line 368 of bubblesort.pt
-oEmitValue !== .tLiteralAddress on line 369 of bubblesort.pt
-% value emitted 156 !== oEmitValue on line 370 of bubblesort.pt
-.tLiteralInteger !== % value emitted 156 on line 371 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 372 of bubblesort.pt
-% value emitted 1 !== oEmitValue on line 373 of bubblesort.pt
-.tAssignInteger !== % value emitted 1 on line 374 of bubblesort.pt
-.tWhileBegin !== .tAssignInteger on line 375 of bubblesort.pt
-.tWhilePreBreak !== .tWhileBegin on line 376 of bubblesort.pt
-oEmitNullAddress !== .tWhilePreBreak on line 377 of bubblesort.pt
-% value emitted -32767 !== .tAssignBegin on line 378 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 379 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 380 of bubblesort.pt
-oEmitValue !== % value emitted 156 on line 381 of bubblesort.pt
-% value emitted 156 !== .tLiteralAddress on line 382 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 383 of bubblesort.pt
-oEmitValue !== % value emitted 156 on line 384 of bubblesort.pt
-% value emitted 156 !== .tFetchInteger on line 385 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 386 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 387 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 388 of bubblesort.pt
-% value emitted 1 !== .tAdd on line 389 of bubblesort.pt
-.tAdd !== .tAssignInteger on line 390 of bubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 391 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 392 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 393 of bubblesort.pt
-oEmitValue !== % value emitted 160 on line 394 of bubblesort.pt
-% value emitted 160 !== .tLiteralAddress on line 395 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 396 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 397 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 398 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 399 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 400 of bubblesort.pt
-oEmitValue !== % value emitted 156 on line 401 of bubblesort.pt
-% value emitted 156 !== .tFetchInteger on line 402 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 403 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 404 of bubblesort.pt
-oEmitValue !== % value emitted 1 on line 405 of bubblesort.pt
-% value emitted 1 !== .tSubtract on line 406 of bubblesort.pt
-.tSubtract !== .tSubscriptInteger on line 407 of bubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 408 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 409 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 410 of bubblesort.pt
-oEmitValue !== % value emitted 1271 on line 411 of bubblesort.pt
-% value emitted 1271 !== .tMultiply on line 412 of bubblesort.pt
-.tMultiply !== .tAssignInteger on line 413 of bubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 414 of bubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 415 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 416 of bubblesort.pt
-oEmitValue !== % value emitted 4 on line 417 of bubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 418 of bubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 419 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 420 of bubblesort.pt
-oEmitValue !== % value emitted 156 on line 421 of bubblesort.pt
-% value emitted 156 !== .tFetchInteger on line 422 of bubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 423 of bubblesort.pt
-.tSubscriptInteger !== .tLiteralAddress on line 424 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 425 of bubblesort.pt
-oEmitValue !== % value emitted 160 on line 426 of bubblesort.pt
-% value emitted 160 !== .tFetchInteger on line 427 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 428 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 429 of bubblesort.pt
-oEmitValue !== % value emitted 99 on line 430 of bubblesort.pt
-% value emitted 99 !== .tModulus on line 431 of bubblesort.pt
-.tModulus !== .tAssignInteger on line 432 of bubblesort.pt
-.tAssignInteger !== .tWhileBreakIf on line 433 of bubblesort.pt
-.tWhileBreakIf !== .tLiteralAddress on line 434 of bubblesort.pt
-.tLiteralAddress !== oEmitValue on line 435 of bubblesort.pt
-oEmitValue !== % value emitted 156 on line 436 of bubblesort.pt
-% value emitted 156 !== .tFetchInteger on line 437 of bubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 438 of bubblesort.pt
-.tLiteralInteger !== oEmitValue on line 439 of bubblesort.pt
-oEmitValue !== % value emitted 25 on line 440 of bubblesort.pt
-% value emitted 25 !== .tEQ on line 441 of bubblesort.pt
-.tEQ !== .tNot on line 442 of bubblesort.pt
-.tNot !== .tWhileTest on line 443 of bubblesort.pt
-.tWhileTest !== oEmitNullAddress on line 444 of bubblesort.pt
-% value emitted 370 !== % value emitted -32767 on line 445 of bubblesort.pt
-.tAssignBegin !== % value emitted 369 on line 447 of bubblesort.pt
-.tLiteralAddress !== .tAssignBegin on line 448 of bubblesort.pt
-oEmitValue !== .tLiteralAddress on line 449 of bubblesort.pt
-% value emitted 112 !== oEmitValue on line 450 of bubblesort.pt
-.tLiteralInteger !== % value emitted 112 on line 451 of bubblesort.pt
-oEmitValue !== .tLiteralInteger on line 452 of bubblesort.pt
-% value emitted 0 !== oEmitValue on line 453 of bubblesort.pt
-.tAssignInteger !== % value emitted 0 on line 454 of bubblesort.pt
-.tCallBegin !== .tAssignInteger on line 455 of bubblesort.pt
-.tCallEnd !== .tCallBegin on line 456 of bubblesort.pt
-oEmitValue !== .tCallEnd on line 457 of bubblesort.pt
-% value emitted 143 !== oEmitValue on line 458 of bubblesort.pt
-.tCallBegin !== % value emitted 143 on line 459 of bubblesort.pt
-.tCallEnd !== .tCallBegin on line 460 of bubblesort.pt
-oEmitValue !== .tCallEnd on line 461 of bubblesort.pt
-% value emitted 223 !== oEmitValue on line 462 of bubblesort.pt
-.tCallBegin !== % value emitted 221 on line 463 of bubblesort.pt
-.tCallEnd !== .tCallBegin on line 464 of bubblesort.pt
-oEmitValue !== .tCallEnd on line 465 of bubblesort.pt
-% value emitted 143 !== oEmitValue on line 466 of bubblesort.pt
-.tTrapBegin !== % value emitted 143 on line 467 of bubblesort.pt
-.tTrap !== .tTrapBegin on line 468 of bubblesort.pt
-oEmitTrapKind(trHalt) !== .tTrap on line 469 of bubblesort.pt
-% value emitted 0 !== oEmitTrapKind(trHalt) on line 470 of bubblesort.pt
- !== % value emitted 0 on line 471 of bubblesort.pt
+oEmitNullAddress !== .tWriteBegin on line 161 of bubblesort.pt
+% value emitted -32767 !== .tTrapBegin on line 162 of bubblesort.pt
+.tWriteBegin !== .tLiteralAddress on line 163 of bubblesort.pt
+.tTrapBegin !== oEmitValue on line 164 of bubblesort.pt
+.tLiteralAddress !== % value emitted 0 on line 165 of bubblesort.pt
+oEmitValue !== .tVarParm on line 166 of bubblesort.pt
+% value emitted 0 !== .tParmEnd on line 167 of bubblesort.pt
+.tVarParm !== .tLiteralAddress on line 168 of bubblesort.pt
+.tParmEnd !== oEmitValue on line 169 of bubblesort.pt
+.tLiteralAddress !== % value emitted 4 on line 170 of bubblesort.pt
+oEmitValue !== .tSubscriptBegin on line 171 of bubblesort.pt
+% value emitted 4 !== .tLiteralAddress on line 172 of bubblesort.pt
+.tSubscriptBegin !== oEmitValue on line 173 of bubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 174 of bubblesort.pt
+oEmitValue !== .tFetchInteger on line 175 of bubblesort.pt
+% value emitted 140 !== .tSubscriptInteger on line 176 of bubblesort.pt
+.tSubscriptInteger !== .tParmEnd on line 178 of bubblesort.pt
+.tFetchInteger !== .tLiteralInteger on line 179 of bubblesort.pt
+.tParmEnd !== oEmitValue on line 180 of bubblesort.pt
+.tLiteralInteger !== % value emitted 4 on line 181 of bubblesort.pt
+oEmitValue !== .tParmEnd on line 182 of bubblesort.pt
+% value emitted 4 !== .tTrap on line 183 of bubblesort.pt
+.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 184 of bubblesort.pt
+.tTrap !== % value emitted 8 on line 185 of bubblesort.pt
+oEmitTrapKind(trWriteInteger) !== .tWriteEnd on line 186 of bubblesort.pt
+% value emitted 7 !== .tAssignBegin on line 187 of bubblesort.pt
+.tWriteEnd !== .tLiteralAddress on line 188 of bubblesort.pt
+.tAssignBegin !== oEmitValue on line 189 of bubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 190 of bubblesort.pt
+oEmitValue !== .tLiteralAddress on line 191 of bubblesort.pt
+% value emitted 140 !== oEmitValue on line 192 of bubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 193 of bubblesort.pt
+oEmitValue !== .tFetchInteger on line 194 of bubblesort.pt
+% value emitted 140 !== .tLiteralInteger on line 195 of bubblesort.pt
+.tFetchInteger !== oEmitValue on line 196 of bubblesort.pt
+.tLiteralInteger !== % value emitted 1 on line 197 of bubblesort.pt
+oEmitValue !== .tAdd on line 198 of bubblesort.pt
+% value emitted 1 !== .tAssignInteger on line 199 of bubblesort.pt
+.tAdd !== .tWhileBreakIf on line 200 of bubblesort.pt
+.tAssignInteger !== .tLiteralAddress on line 201 of bubblesort.pt
+.tWhileBreakIf !== oEmitValue on line 202 of bubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 203 of bubblesort.pt
+oEmitValue !== .tFetchInteger on line 204 of bubblesort.pt
+% value emitted 140 !== .tLiteralInteger on line 205 of bubblesort.pt
+.tFetchInteger !== oEmitValue on line 206 of bubblesort.pt
+.tLiteralInteger !== % value emitted 25 on line 207 of bubblesort.pt
+oEmitValue !== .tGT on line 208 of bubblesort.pt
+% value emitted 25 !== .tNot on line 209 of bubblesort.pt
+.tGT !== .tWhileTest on line 210 of bubblesort.pt
+.tNot !== oEmitNullAddress on line 211 of bubblesort.pt
+.tWhileTest !== % value emitted -32767 on line 212 of bubblesort.pt
+% value emitted 156 !== .tWhileEnd on line 213 of bubblesort.pt
+.tWhileEnd !== % value emitted 155 on line 214 of bubblesort.pt
+% value emitted 257 !== .tWhileEnd on line 337 of bubblesort.pt
+.tAssignBegin !== % value emitted 255 on line 338 of bubblesort.pt
+.tLiteralAddress !== .tAssignBegin on line 339 of bubblesort.pt
+oEmitValue !== .tLiteralAddress on line 340 of bubblesort.pt
+% value emitted 144 !== oEmitValue on line 341 of bubblesort.pt
+.tLiteralAddress !== % value emitted 144 on line 342 of bubblesort.pt
+oEmitValue !== .tLiteralAddress on line 343 of bubblesort.pt
+% value emitted 144 !== oEmitValue on line 344 of bubblesort.pt
+.tFetchInteger !== % value emitted 144 on line 345 of bubblesort.pt
+.tLiteralInteger !== .tFetchInteger on line 346 of bubblesort.pt
+oEmitValue !== .tLiteralInteger on line 347 of bubblesort.pt
+% value emitted 1 !== oEmitValue on line 348 of bubblesort.pt
+.tSubtract !== % value emitted 1 on line 349 of bubblesort.pt
+.tAssignInteger !== .tSubtract on line 350 of bubblesort.pt
+% value emitted 238 !== .tAssignInteger on line 351 of bubblesort.pt
+.tProcedureEnd !== .tWhileEnd on line 352 of bubblesort.pt
+.tAssignBegin !== % value emitted 236 on line 353 of bubblesort.pt
+.tLiteralAddress !== .tProcedureEnd on line 354 of bubblesort.pt
+oEmitValue !== .tAssignBegin on line 355 of bubblesort.pt
+% value emitted 4 !== .tLiteralAddress on line 356 of bubblesort.pt
+.tSubscriptBegin !== oEmitValue on line 357 of bubblesort.pt
+.tLiteralInteger !== % value emitted 4 on line 358 of bubblesort.pt
+oEmitValue !== .tSubscriptBegin on line 359 of bubblesort.pt
+% value emitted 1 !== .tLiteralInteger on line 360 of bubblesort.pt
+.tSubscriptInteger !== oEmitValue on line 361 of bubblesort.pt
+.tLiteralInteger !== % value emitted 1 on line 362 of bubblesort.pt
+oEmitValue !== .tSubscriptInteger on line 363 of bubblesort.pt
+% value emitted 61 !== .tLiteralInteger on line 364 of bubblesort.pt
+.tAssignInteger !== oEmitValue on line 365 of bubblesort.pt
+.tAssignBegin !== % value emitted 61 on line 366 of bubblesort.pt
+.tLiteralAddress !== .tAssignInteger on line 367 of bubblesort.pt
+oEmitValue !== .tAssignBegin on line 368 of bubblesort.pt
+% value emitted 156 !== .tLiteralAddress on line 369 of bubblesort.pt
+.tLiteralInteger !== oEmitValue on line 370 of bubblesort.pt
+oEmitValue !== % value emitted 156 on line 371 of bubblesort.pt
+% value emitted 1 !== .tLiteralInteger on line 372 of bubblesort.pt
+.tAssignInteger !== oEmitValue on line 373 of bubblesort.pt
+.tWhileBegin !== % value emitted 1 on line 374 of bubblesort.pt
+.tWhilePreBreak !== .tAssignInteger on line 375 of bubblesort.pt
+oEmitNullAddress !== .tWhileBegin on line 376 of bubblesort.pt
+% value emitted -32767 !== .tWhilePreBreak on line 377 of bubblesort.pt
+% value emitted 370 !== oEmitNullAddress on line 444 of bubblesort.pt
+.tWhileEnd !== % value emitted -32767 on line 445 of bubblesort.pt
+.tAssignBegin !== .tWhileEnd on line 446 of bubblesort.pt
+.tLiteralAddress !== % value emitted 369 on line 447 of bubblesort.pt
+oEmitValue !== .tAssignBegin on line 448 of bubblesort.pt
+% value emitted 112 !== .tLiteralAddress on line 449 of bubblesort.pt
+.tLiteralInteger !== oEmitValue on line 450 of bubblesort.pt
+oEmitValue !== % value emitted 112 on line 451 of bubblesort.pt
+% value emitted 0 !== .tLiteralInteger on line 452 of bubblesort.pt
+.tAssignInteger !== oEmitValue on line 453 of bubblesort.pt
+.tCallBegin !== % value emitted 0 on line 454 of bubblesort.pt
+.tCallEnd !== .tAssignInteger on line 455 of bubblesort.pt
+oEmitValue !== .tCallBegin on line 456 of bubblesort.pt
+% value emitted 143 !== .tCallEnd on line 457 of bubblesort.pt
+.tCallBegin !== oEmitValue on line 458 of bubblesort.pt
+.tCallEnd !== % value emitted 143 on line 459 of bubblesort.pt
+oEmitValue !== .tCallBegin on line 460 of bubblesort.pt
+% value emitted 223 !== .tCallEnd on line 461 of bubblesort.pt
+.tCallBegin !== oEmitValue on line 462 of bubblesort.pt
+.tCallEnd !== % value emitted 221 on line 463 of bubblesort.pt
+oEmitValue !== .tCallBegin on line 464 of bubblesort.pt
+% value emitted 143 !== .tCallEnd on line 465 of bubblesort.pt
+.tTrapBegin !== oEmitValue on line 466 of bubblesort.pt
+.tTrap !== % value emitted 143 on line 467 of bubblesort.pt
+oEmitTrapKind(trHalt) !== .tTrapBegin on line 468 of bubblesort.pt
+% value emitted 0 !== .tTrap on line 469 of bubblesort.pt
+ !== oEmitTrapKind(trHalt) on line 470 of bubblesort.pt
 
 ```
 end file
 --------------------------------
 Reading file bust.pt
-Lengths do not match!  Something went wrong in bust.pt
 
 Output is: 
 ```
@@ -1919,7 +1629,6 @@ Output is:
         % value emitted 10000
         .tModulus
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -2167,7 +1876,6 @@ Output is:
         % value emitted 1
         .tAdd
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -2193,7 +1901,6 @@ Output is:
      % value emitted 14776
      .tStoreParmAddress
      .tParmEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -2665,7 +2372,6 @@ Output is:
      .tIfThen
      oEmitNullAddress
      % value emitted -32767
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -3214,7 +2920,6 @@ Output is:
               % value emitted 6
            .tIfEnd
         .tIfEnd
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -3315,7 +3020,6 @@ Output is:
            % value emitted 1
            .tAdd
          .tAssignInteger
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -3888,7 +3592,6 @@ Output is:
               % value emitted 6
            .tIfEnd
         .tIfEnd
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -4213,7 +3916,6 @@ Output is:
      % value emitted 14804
      .tStoreParmInteger
      .tParmEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -4270,7 +3972,6 @@ Output is:
        .tCaseSelect
        oEmitNullAddress
        % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -4297,7 +3998,6 @@ Output is:
         .tCaseMerge
         oEmitNullAddress
         % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -4344,7 +4044,6 @@ Output is:
         % value emitted 2324
         % value emitted 2324
         .tCaseOtherwise
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -4404,7 +4103,6 @@ Output is:
         .tOr
      .tNot
      .tWhileTest
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -4435,7 +4133,6 @@ Output is:
         .tAssignInteger
      % value emitted 2433
      .tWhileEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -7165,5028 +6862,348 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 132 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 133 of bust.pt
-.tLiteralAddress !== oEmitValue on line 134 of bust.pt
-oEmitValue !== % value emitted 14692 on line 135 of bust.pt
-% value emitted 14692 !== .tFetchAddress on line 136 of bust.pt
-.tFetchAddress !== .tLiteralAddress on line 137 of bust.pt
-.tLiteralAddress !== oEmitValue on line 138 of bust.pt
-oEmitValue !== % value emitted 14684 on line 139 of bust.pt
-% value emitted 14684 !== .tFetchInteger on line 140 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 141 of bust.pt
-.tLiteralAddress !== oEmitValue on line 142 of bust.pt
-oEmitValue !== % value emitted 14696 on line 143 of bust.pt
-% value emitted 14696 !== .tFetchInteger on line 144 of bust.pt
-.tFetchInteger !== .tModulus on line 145 of bust.pt
-.tModulus !== .tLiteralInteger on line 146 of bust.pt
-.tLiteralInteger !== oEmitValue on line 147 of bust.pt
-oEmitValue !== % value emitted 1 on line 148 of bust.pt
-% value emitted 1 !== .tAdd on line 149 of bust.pt
-.tAdd !== .tAssignInteger on line 150 of bust.pt
-.tAssignInteger !== .tProcedureEnd on line 151 of bust.pt
-.tProcedureEnd !== .tSkipProc on line 152 of bust.pt
-.tSkipProc !== oEmitNullAddress on line 153 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 154 of bust.pt
-% value emitted -32767 !== .tParmEnd on line 155 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 156 of bust.pt
-.tLiteralInteger !== oEmitValue on line 157 of bust.pt
-oEmitValue !== % value emitted 1 on line 158 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 159 of bust.pt
-.tLiteralAddress !== oEmitDataAddress on line 160 of bust.pt
-oEmitDataAddress !== % value emitted 14704 on line 161 of bust.pt
-% value emitted 14704 !== .tArrayDescriptor on line 162 of bust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 163 of bust.pt
-.tLiteralInteger !== oEmitValue on line 164 of bust.pt
-oEmitValue !== % value emitted 13 on line 165 of bust.pt
-% value emitted 13 !== .tLiteralAddress on line 166 of bust.pt
-.tLiteralAddress !== oEmitDataAddress on line 167 of bust.pt
-oEmitDataAddress !== % value emitted 14708 on line 168 of bust.pt
-% value emitted 14708 !== .tArrayDescriptor on line 169 of bust.pt
-.tArrayDescriptor !== .tAssignBegin on line 170 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 171 of bust.pt
-.tLiteralAddress !== oEmitValue on line 172 of bust.pt
-oEmitValue !== % value emitted 14764 on line 173 of bust.pt
-% value emitted 14764 !== .tLiteralInteger on line 174 of bust.pt
-.tLiteralInteger !== oEmitValue on line 175 of bust.pt
-oEmitValue !== % value emitted 1 on line 176 of bust.pt
-% value emitted 1 !== .tAssignInteger on line 177 of bust.pt
-.tAssignInteger !== .tWhileBegin on line 178 of bust.pt
-.tWhileBegin !== .tWhilePreBreak on line 179 of bust.pt
-.tWhilePreBreak !== .tAssignBegin on line 180 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 181 of bust.pt
-% value emitted -32767 !== oEmitValue on line 182 of bust.pt
-.tAssignBegin !== % value emitted 14704 on line 183 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 184 of bust.pt
-oEmitValue !== .tLiteralAddress on line 185 of bust.pt
-% value emitted 14704 !== oEmitValue on line 186 of bust.pt
-.tSubscriptBegin !== % value emitted 14764 on line 187 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 188 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 189 of bust.pt
-% value emitted 14764 !== .tLiteralInteger on line 190 of bust.pt
-.tFetchInteger !== oEmitValue on line 191 of bust.pt
-.tSubscriptInteger !== % value emitted 0 on line 192 of bust.pt
-.tLiteralInteger !== .tAssignInteger on line 193 of bust.pt
-oEmitValue !== .tAssignBegin on line 194 of bust.pt
-% value emitted 0 !== .tLiteralAddress on line 195 of bust.pt
-.tAssignInteger !== oEmitValue on line 196 of bust.pt
-.tAssignBegin !== % value emitted 14764 on line 197 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 201 of bust.pt
-oEmitValue !== .tLiteralInteger on line 202 of bust.pt
-% value emitted 14764 !== oEmitValue on line 203 of bust.pt
-.tFetchInteger !== % value emitted 1 on line 204 of bust.pt
-.tLiteralInteger !== .tAdd on line 205 of bust.pt
-oEmitValue !== .tAssignInteger on line 206 of bust.pt
-% value emitted 1 !== .tWhileBreakIf on line 207 of bust.pt
-.tAdd !== .tLiteralAddress on line 208 of bust.pt
-.tAssignInteger !== oEmitValue on line 209 of bust.pt
-.tWhileBreakIf !== % value emitted 14764 on line 210 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 211 of bust.pt
-oEmitValue !== .tLiteralInteger on line 212 of bust.pt
-% value emitted 14764 !== oEmitValue on line 213 of bust.pt
-.tFetchInteger !== % value emitted 13 on line 214 of bust.pt
-.tLiteralInteger !== .tGT on line 215 of bust.pt
-oEmitValue !== .tNot on line 216 of bust.pt
-% value emitted 13 !== .tWhileTest on line 217 of bust.pt
-.tGT !== oEmitNullAddress on line 218 of bust.pt
-.tNot !== % value emitted -32767 on line 219 of bust.pt
-.tWhileTest !== .tWhileEnd on line 220 of bust.pt
-% value emitted 170 !== % value emitted 169 on line 221 of bust.pt
-.tWhileEnd !== .tAssignBegin on line 222 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 223 of bust.pt
-.tLiteralAddress !== oEmitValue on line 224 of bust.pt
-oEmitValue !== % value emitted 14768 on line 225 of bust.pt
-% value emitted 14768 !== .tLiteralInteger on line 226 of bust.pt
-.tLiteralInteger !== oEmitValue on line 227 of bust.pt
-oEmitValue !== % value emitted 1 on line 228 of bust.pt
-% value emitted 1 !== .tAssignInteger on line 229 of bust.pt
-.tAssignInteger !== .tWhileBegin on line 230 of bust.pt
-.tWhileBegin !== .tWhilePreBreak on line 231 of bust.pt
-.tWhilePreBreak !== .tCallBegin on line 232 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 233 of bust.pt
-% value emitted -32767 !== oEmitValue on line 234 of bust.pt
-.tCallBegin !== % value emitted 14700 on line 235 of bust.pt
-.tLiteralAddress !== .tVarParm on line 236 of bust.pt
-oEmitValue !== .tParmEnd on line 237 of bust.pt
-% value emitted 14700 !== .tLiteralInteger on line 238 of bust.pt
-.tVarParm !== oEmitValue on line 239 of bust.pt
-.tParmEnd !== % value emitted 13 on line 240 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 241 of bust.pt
-oEmitValue !== .tCallEnd on line 242 of bust.pt
-% value emitted 13 !== oEmitValue on line 243 of bust.pt
-.tParmEnd !== % value emitted 64 on line 244 of bust.pt
-.tCallEnd !== .tWhileBegin on line 245 of bust.pt
-oEmitValue !== .tWhilePreBreak on line 246 of bust.pt
-% value emitted 64 !== .tWhileBreakIf on line 247 of bust.pt
-.tWhileBegin !== .tLiteralAddress on line 248 of bust.pt
-.tWhilePreBreak !== oEmitValue on line 249 of bust.pt
-oEmitNullAddress !== % value emitted 14704 on line 250 of bust.pt
-% value emitted -32767 !== .tSubscriptBegin on line 251 of bust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 252 of bust.pt
-.tLiteralAddress !== oEmitValue on line 253 of bust.pt
-oEmitValue !== % value emitted 14700 on line 254 of bust.pt
-% value emitted 14704 !== .tFetchInteger on line 255 of bust.pt
-.tSubscriptBegin !== .tSubscriptInteger on line 256 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 257 of bust.pt
-oEmitValue !== .tLiteralInteger on line 258 of bust.pt
-% value emitted 14700 !== oEmitValue on line 259 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 260 of bust.pt
-.tSubscriptInteger !== .tNE on line 261 of bust.pt
-.tFetchInteger !== .tNot on line 262 of bust.pt
-.tLiteralInteger !== .tWhileTest on line 263 of bust.pt
-oEmitValue !== oEmitNullAddress on line 264 of bust.pt
-% value emitted 4 !== % value emitted -32767 on line 265 of bust.pt
-.tNE !== .tCallBegin on line 266 of bust.pt
-.tNot !== .tLiteralAddress on line 267 of bust.pt
-.tWhileTest !== oEmitValue on line 268 of bust.pt
-.tCallBegin !== % value emitted 14700 on line 269 of bust.pt
-.tLiteralAddress !== .tVarParm on line 270 of bust.pt
-oEmitValue !== .tParmEnd on line 271 of bust.pt
-% value emitted 14700 !== .tLiteralInteger on line 272 of bust.pt
-.tVarParm !== oEmitValue on line 273 of bust.pt
-.tParmEnd !== % value emitted 13 on line 274 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 275 of bust.pt
-oEmitValue !== .tCallEnd on line 276 of bust.pt
-% value emitted 13 !== oEmitValue on line 277 of bust.pt
-.tParmEnd !== % value emitted 64 on line 278 of bust.pt
-.tCallEnd !== .tWhileEnd on line 279 of bust.pt
-oEmitValue !== % value emitted 236 on line 280 of bust.pt
-% value emitted 64 !== .tAssignBegin on line 281 of bust.pt
-% value emitted 240 !== .tLiteralAddress on line 282 of bust.pt
-.tWhileEnd !== oEmitValue on line 283 of bust.pt
-.tAssignBegin !== % value emitted 1144 on line 284 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 285 of bust.pt
-oEmitValue !== .tLiteralAddress on line 286 of bust.pt
-% value emitted 1144 !== oEmitValue on line 287 of bust.pt
-.tSubscriptBegin !== % value emitted 14768 on line 288 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 289 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 290 of bust.pt
-% value emitted 14768 !== .tLiteralAddress on line 291 of bust.pt
-.tFetchInteger !== oEmitValue on line 292 of bust.pt
-.tSubscriptInteger !== % value emitted 14700 on line 293 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 294 of bust.pt
-oEmitValue !== .tAssignInteger on line 295 of bust.pt
-% value emitted 14700 !== .tAssignBegin on line 296 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 297 of bust.pt
-.tAssignInteger !== oEmitValue on line 298 of bust.pt
-.tAssignBegin !== % value emitted 14704 on line 299 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 300 of bust.pt
-oEmitValue !== .tLiteralAddress on line 301 of bust.pt
-% value emitted 14704 !== oEmitValue on line 302 of bust.pt
-.tSubscriptBegin !== % value emitted 14700 on line 303 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 304 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 305 of bust.pt
-% value emitted 14700 !== .tLiteralAddress on line 306 of bust.pt
-.tFetchInteger !== oEmitValue on line 307 of bust.pt
-.tSubscriptInteger !== % value emitted 14704 on line 308 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 309 of bust.pt
-oEmitValue !== .tLiteralAddress on line 310 of bust.pt
-% value emitted 14704 !== oEmitValue on line 311 of bust.pt
-.tSubscriptBegin !== % value emitted 14700 on line 312 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 313 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 314 of bust.pt
-% value emitted 14700 !== .tFetchInteger on line 315 of bust.pt
-.tFetchInteger !== .tLiteralInteger on line 316 of bust.pt
-.tSubscriptInteger !== oEmitValue on line 317 of bust.pt
-.tFetchInteger !== % value emitted 1 on line 318 of bust.pt
-.tLiteralInteger !== .tAdd on line 319 of bust.pt
-oEmitValue !== .tAssignInteger on line 320 of bust.pt
-% value emitted 1 !== .tAssignBegin on line 321 of bust.pt
-.tAdd !== .tLiteralAddress on line 322 of bust.pt
-.tAssignInteger !== oEmitValue on line 323 of bust.pt
-.tAssignBegin !== % value emitted 14768 on line 324 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 328 of bust.pt
-oEmitValue !== .tLiteralInteger on line 329 of bust.pt
-% value emitted 14768 !== oEmitValue on line 330 of bust.pt
-.tFetchInteger !== % value emitted 1 on line 331 of bust.pt
-.tLiteralInteger !== .tAdd on line 332 of bust.pt
-oEmitValue !== .tAssignInteger on line 333 of bust.pt
-% value emitted 1 !== .tWhileBreakIf on line 334 of bust.pt
-.tAdd !== .tLiteralAddress on line 335 of bust.pt
-.tAssignInteger !== oEmitValue on line 336 of bust.pt
-.tWhileBreakIf !== % value emitted 14768 on line 337 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 338 of bust.pt
-oEmitValue !== .tLiteralInteger on line 339 of bust.pt
-% value emitted 14768 !== oEmitValue on line 340 of bust.pt
-.tFetchInteger !== % value emitted 52 on line 341 of bust.pt
-.tLiteralInteger !== .tGT on line 342 of bust.pt
-oEmitValue !== .tNot on line 343 of bust.pt
-% value emitted 52 !== .tWhileTest on line 344 of bust.pt
-.tGT !== oEmitNullAddress on line 345 of bust.pt
-.tNot !== % value emitted -32767 on line 346 of bust.pt
-.tWhileTest !== .tWhileEnd on line 347 of bust.pt
-% value emitted 223 !== % value emitted 220 on line 348 of bust.pt
-.tWhileEnd !== .tAssignBegin on line 349 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 350 of bust.pt
-.tLiteralAddress !== oEmitValue on line 351 of bust.pt
-oEmitValue !== % value emitted 1360 on line 352 of bust.pt
-% value emitted 1360 !== .tLiteralInteger on line 353 of bust.pt
-.tLiteralInteger !== oEmitValue on line 354 of bust.pt
-oEmitValue !== % value emitted 0 on line 355 of bust.pt
-% value emitted 0 !== .tAssignInteger on line 356 of bust.pt
-.tAssignInteger !== .tProcedureEnd on line 357 of bust.pt
-.tProcedureEnd !== .tSkipProc on line 358 of bust.pt
-.tSkipProc !== oEmitNullAddress on line 359 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 360 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 361 of bust.pt
-.tLiteralAddress !== oEmitValue on line 362 of bust.pt
-oEmitValue !== % value emitted 14772 on line 363 of bust.pt
-% value emitted 14772 !== .tStoreParmAddress on line 364 of bust.pt
-.tStoreParmAddress !== .tParmEnd on line 365 of bust.pt
-.tParmEnd !== .tAssignBegin on line 366 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 367 of bust.pt
-.tLiteralAddress !== oEmitValue on line 368 of bust.pt
-oEmitValue !== % value emitted 1360 on line 369 of bust.pt
-% value emitted 1360 !== .tLiteralAddress on line 370 of bust.pt
-.tLiteralAddress !== oEmitValue on line 371 of bust.pt
-oEmitValue !== % value emitted 1360 on line 372 of bust.pt
-% value emitted 1360 !== .tFetchInteger on line 373 of bust.pt
-.tFetchInteger !== .tLiteralInteger on line 374 of bust.pt
-.tLiteralInteger !== oEmitValue on line 375 of bust.pt
-oEmitValue !== % value emitted 1 on line 376 of bust.pt
-% value emitted 1 !== .tAdd on line 377 of bust.pt
-.tAdd !== .tAssignInteger on line 378 of bust.pt
-.tAssignInteger !== .tAssignBegin on line 379 of bust.pt
-#eMutableVarReqd !== .tLiteralAddress on line 380 of bust.pt
-.tAssignBegin !== oEmitValue on line 381 of bust.pt
-.tLiteralAddress !== % value emitted 14772 on line 382 of bust.pt
-oEmitValue !== .tFetchAddress on line 383 of bust.pt
-% value emitted 14772 !== .tLiteralAddress on line 384 of bust.pt
-.tFetchAddress !== oEmitValue on line 385 of bust.pt
-.tLiteralAddress !== % value emitted 1144 on line 386 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 387 of bust.pt
-% value emitted 1144 !== .tLiteralAddress on line 388 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 389 of bust.pt
-.tLiteralAddress !== % value emitted 1360 on line 390 of bust.pt
-oEmitValue !== .tFetchInteger on line 391 of bust.pt
-% value emitted 1360 !== .tSubscriptInteger on line 392 of bust.pt
-.tSubscriptInteger !== .tAssignInteger on line 394 of bust.pt
-.tFetchInteger !== .tProcedureEnd on line 395 of bust.pt
-.tAssignInteger !== .tSkipProc on line 396 of bust.pt
-.tProcedureEnd !== oEmitNullAddress on line 397 of bust.pt
-.tSkipProc !== % value emitted -32767 on line 398 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 399 of bust.pt
-% value emitted -32767 !== oEmitValue on line 400 of bust.pt
-.tLiteralAddress !== % value emitted 14776 on line 401 of bust.pt
-oEmitValue !== .tStoreParmAddress on line 402 of bust.pt
-% value emitted 14776 !== .tParmEnd on line 403 of bust.pt
-.tStoreParmAddress !== .tAssignBegin on line 404 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 405 of bust.pt
-#eMutableVarReqd !== oEmitValue on line 406 of bust.pt
-.tAssignBegin !== % value emitted 14776 on line 407 of bust.pt
-.tLiteralAddress !== .tFetchAddress on line 408 of bust.pt
-oEmitValue !== .tLiteralInteger on line 409 of bust.pt
-% value emitted 14776 !== oEmitValue on line 410 of bust.pt
-.tFetchAddress !== % value emitted 52 on line 411 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 412 of bust.pt
-% value emitted 52 !== % value emitted 1360 on line 414 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 415 of bust.pt
-oEmitValue !== .tSubtract on line 416 of bust.pt
-% value emitted 1360 !== .tLiteralInteger on line 417 of bust.pt
-.tFetchInteger !== oEmitValue on line 418 of bust.pt
-.tSubtract !== % value emitted 1 on line 419 of bust.pt
-.tLiteralInteger !== .tAdd on line 420 of bust.pt
-oEmitValue !== .tAssignInteger on line 421 of bust.pt
-% value emitted 1 !== .tProcedureEnd on line 422 of bust.pt
-.tAdd !== .tSkipProc on line 423 of bust.pt
-.tAssignInteger !== oEmitNullAddress on line 424 of bust.pt
-.tProcedureEnd !== % value emitted -32767 on line 425 of bust.pt
-.tSkipProc !== .tLiteralAddress on line 426 of bust.pt
-oEmitNullAddress !== oEmitValue on line 427 of bust.pt
-% value emitted -32767 !== % value emitted 14784 on line 428 of bust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 429 of bust.pt
-oEmitValue !== .tLiteralAddress on line 430 of bust.pt
-% value emitted 14784 !== oEmitValue on line 431 of bust.pt
-.tStoreParmAddress !== % value emitted 14780 on line 432 of bust.pt
-.tLiteralAddress !== .tStoreParmInteger on line 433 of bust.pt
-oEmitValue !== .tParmEnd on line 434 of bust.pt
-% value emitted 14780 !== .tAssignBegin on line 435 of bust.pt
-.tStoreParmInteger !== .tLiteralAddress on line 436 of bust.pt
-.tParmEnd !== oEmitValue on line 437 of bust.pt
-.tAssignBegin !== % value emitted 14788 on line 438 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 439 of bust.pt
-% value emitted 14788 !== % value emitted 1 on line 441 of bust.pt
-.tLiteralInteger !== .tAssignInteger on line 442 of bust.pt
-oEmitValue !== .tWhileBegin on line 443 of bust.pt
-% value emitted 1 !== .tWhilePreBreak on line 444 of bust.pt
-.tAssignInteger !== .tWhileBreakIf on line 445 of bust.pt
-.tWhileBegin !== .tLiteralAddress on line 446 of bust.pt
-.tWhilePreBreak !== oEmitValue on line 447 of bust.pt
-oEmitNullAddress !== % value emitted 14788 on line 448 of bust.pt
-% value emitted -32767 !== .tFetchInteger on line 449 of bust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 450 of bust.pt
-.tLiteralAddress !== oEmitValue on line 451 of bust.pt
-oEmitValue !== % value emitted 14780 on line 452 of bust.pt
-% value emitted 14788 !== .tFetchInteger on line 453 of bust.pt
-.tFetchInteger !== .tGT on line 454 of bust.pt
-.tLiteralAddress !== .tNot on line 455 of bust.pt
-oEmitValue !== .tWhileTest on line 456 of bust.pt
-% value emitted 14780 !== oEmitNullAddress on line 457 of bust.pt
-.tFetchInteger !== % value emitted -32767 on line 458 of bust.pt
-.tGT !== .tWriteBegin on line 459 of bust.pt
-.tNot !== .tTrapBegin on line 460 of bust.pt
-.tWhileTest !== .tLiteralAddress on line 461 of bust.pt
-.tWriteBegin !== oEmitValue on line 462 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 463 of bust.pt
-.tLiteralAddress !== .tVarParm on line 464 of bust.pt
-oEmitValue !== .tParmEnd on line 465 of bust.pt
-% value emitted 4 !== .tLiteralString on line 466 of bust.pt
-.tVarParm !== oEmitValue on line 467 of bust.pt
-.tParmEnd !== % value emitted 1 on line 468 of bust.pt
-.tLiteralString !== oEmitString on line 469 of bust.pt
-oEmitValue !== % value emitted 32 on line 470 of bust.pt
-% value emitted 1 !== .tParmEnd on line 471 of bust.pt
-oEmitString !== .tLiteralInteger on line 472 of bust.pt
-% value emitted 32 !== oEmitValue on line 473 of bust.pt
-.tParmEnd !== % value emitted 1 on line 474 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 475 of bust.pt
-oEmitValue !== .tTrap on line 476 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 477 of bust.pt
-.tParmEnd !== % value emitted 109 on line 478 of bust.pt
-.tTrap !== .tTrapBegin on line 479 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 480 of bust.pt
-% value emitted 109 !== oEmitValue on line 481 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 482 of bust.pt
-.tLiteralAddress !== .tVarParm on line 483 of bust.pt
-oEmitValue !== .tParmEnd on line 484 of bust.pt
-% value emitted 4 !== .tLiteralAddress on line 485 of bust.pt
-.tVarParm !== oEmitValue on line 486 of bust.pt
-.tParmEnd !== % value emitted 1364 on line 487 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 488 of bust.pt
-oEmitValue !== .tLiteralAddress on line 489 of bust.pt
-% value emitted 1364 !== oEmitValue on line 490 of bust.pt
-.tSubscriptBegin !== % value emitted 14784 on line 491 of bust.pt
-.tLiteralAddress !== .tFetchAddress on line 492 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 493 of bust.pt
-% value emitted 14784 !== .tLiteralAddress on line 494 of bust.pt
-.tFetchAddress !== oEmitValue on line 495 of bust.pt
-.tSubscriptBegin !== % value emitted 14788 on line 496 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 497 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 498 of bust.pt
-% value emitted 14788 !== .tFetchInteger on line 499 of bust.pt
-.tFetchInteger !== .tSubscriptString on line 500 of bust.pt
-.tSubscriptInteger !== .tFetchString on line 501 of bust.pt
-.tFetchInteger !== .tParmEnd on line 502 of bust.pt
-.tSubscriptString !== .tLiteralInteger on line 503 of bust.pt
-.tFetchString !== oEmitValue on line 504 of bust.pt
-.tParmEnd !== % value emitted 1 on line 505 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 506 of bust.pt
-oEmitValue !== .tTrap on line 507 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 508 of bust.pt
-.tParmEnd !== % value emitted 109 on line 509 of bust.pt
-.tTrap !== .tWriteEnd on line 510 of bust.pt
-oEmitTrapKind(trWriteString) !== .tAssignBegin on line 511 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 512 of bust.pt
-.tWriteEnd !== oEmitValue on line 513 of bust.pt
-.tAssignBegin !== % value emitted 14788 on line 514 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 518 of bust.pt
-oEmitValue !== .tLiteralInteger on line 519 of bust.pt
-% value emitted 14788 !== oEmitValue on line 520 of bust.pt
-.tFetchInteger !== % value emitted 1 on line 521 of bust.pt
-.tLiteralInteger !== .tAdd on line 522 of bust.pt
-oEmitValue !== .tAssignInteger on line 523 of bust.pt
-% value emitted 1 !== .tWhileEnd on line 524 of bust.pt
-.tAdd !== % value emitted 428 on line 525 of bust.pt
-.tAssignInteger !== .tProcedureEnd on line 526 of bust.pt
-% value emitted 435 !== .tSkipProc on line 527 of bust.pt
-.tWhileEnd !== oEmitNullAddress on line 528 of bust.pt
-.tProcedureEnd !== % value emitted -32767 on line 529 of bust.pt
-.tSkipProc !== .tParmEnd on line 530 of bust.pt
-oEmitNullAddress !== .tIfBegin on line 531 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 532 of bust.pt
-.tParmEnd !== oEmitValue on line 533 of bust.pt
-.tIfBegin !== % value emitted 110 on line 534 of bust.pt
-.tLiteralAddress !== .tFetchString on line 535 of bust.pt
-oEmitValue !== .tLiteralString on line 536 of bust.pt
-% value emitted 110 !== oEmitValue on line 537 of bust.pt
-.tFetchString !== % value emitted 1 on line 538 of bust.pt
-.tLiteralString !== oEmitString on line 539 of bust.pt
-oEmitValue !== % value emitted 101 on line 540 of bust.pt
-% value emitted 1 !== .tStringEqual on line 541 of bust.pt
-oEmitString !== .tIfThen on line 542 of bust.pt
-% value emitted 101 !== oEmitNullAddress on line 543 of bust.pt
-.tStringEqual !== % value emitted -32767 on line 544 of bust.pt
-.tIfThen !== .tWriteBegin on line 545 of bust.pt
-oEmitNullAddress !== .tTrapBegin on line 546 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 547 of bust.pt
-.tWriteBegin !== oEmitValue on line 548 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 549 of bust.pt
-.tLiteralAddress !== .tVarParm on line 550 of bust.pt
-oEmitValue !== .tParmEnd on line 551 of bust.pt
-% value emitted 4 !== .tLiteralString on line 552 of bust.pt
-.tVarParm !== oEmitValue on line 553 of bust.pt
-.tParmEnd !== % value emitted 10 on line 554 of bust.pt
-.tLiteralString !== oEmitString on line 555 of bust.pt
-oEmitValue !== % value emitted 69 on line 556 of bust.pt
-% value emitted 10 !== % value emitted 46 on line 557 of bust.pt
-oEmitString !== % value emitted 79 on line 558 of bust.pt
-% value emitted 69 !== % value emitted 46 on line 559 of bust.pt
-% value emitted 46 !== % value emitted 32 on line 560 of bust.pt
-% value emitted 79 !== % value emitted 84 on line 561 of bust.pt
-% value emitted 46 !== % value emitted 104 on line 562 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 563 of bust.pt
-% value emitted 84 !== % value emitted 114 on line 564 of bust.pt
-% value emitted 104 !== % value emitted 112 on line 565 of bust.pt
-% value emitted 111 !== .tParmEnd on line 566 of bust.pt
-% value emitted 114 !== .tLiteralInteger on line 567 of bust.pt
-% value emitted 112 !== oEmitValue on line 568 of bust.pt
-.tParmEnd !== % value emitted 1 on line 569 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 570 of bust.pt
-oEmitValue !== .tTrap on line 571 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 572 of bust.pt
-.tParmEnd !== % value emitted 109 on line 573 of bust.pt
-.tTrap !== .tWriteEnd on line 574 of bust.pt
-oEmitTrapKind(trWriteString) !== .tIfMerge on line 575 of bust.pt
-% value emitted 109 !== oEmitNullAddress on line 576 of bust.pt
-.tWriteEnd !== % value emitted -32767 on line 577 of bust.pt
-.tIfMerge !== .tIfBegin on line 578 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 579 of bust.pt
-% value emitted -32767 !== oEmitValue on line 580 of bust.pt
-.tIfBegin !== % value emitted 110 on line 581 of bust.pt
-.tLiteralAddress !== .tFetchString on line 582 of bust.pt
-oEmitValue !== .tLiteralString on line 583 of bust.pt
-% value emitted 110 !== oEmitValue on line 584 of bust.pt
-.tFetchString !== % value emitted 1 on line 585 of bust.pt
-.tLiteralString !== oEmitString on line 586 of bust.pt
-oEmitValue !== % value emitted 106 on line 587 of bust.pt
-% value emitted 1 !== .tStringEqual on line 588 of bust.pt
-oEmitString !== .tIfThen on line 589 of bust.pt
-% value emitted 106 !== oEmitNullAddress on line 590 of bust.pt
-.tStringEqual !== % value emitted -32767 on line 591 of bust.pt
-.tIfThen !== .tWriteBegin on line 592 of bust.pt
-oEmitNullAddress !== .tTrapBegin on line 593 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 594 of bust.pt
-.tWriteBegin !== oEmitValue on line 595 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 596 of bust.pt
-.tLiteralAddress !== .tVarParm on line 597 of bust.pt
-oEmitValue !== .tParmEnd on line 598 of bust.pt
-% value emitted 4 !== .tLiteralString on line 599 of bust.pt
-.tVarParm !== oEmitValue on line 600 of bust.pt
-.tParmEnd !== % value emitted 3 on line 601 of bust.pt
-.tLiteralString !== oEmitString on line 602 of bust.pt
-oEmitValue !== % value emitted 74 on line 603 of bust.pt
-% value emitted 3 !== % value emitted 105 on line 604 of bust.pt
-oEmitString !== % value emitted 109 on line 605 of bust.pt
-% value emitted 74 !== .tParmEnd on line 606 of bust.pt
-% value emitted 105 !== .tLiteralInteger on line 607 of bust.pt
-% value emitted 109 !== oEmitValue on line 608 of bust.pt
-.tParmEnd !== % value emitted 1 on line 609 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 610 of bust.pt
-oEmitValue !== .tTrap on line 611 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 612 of bust.pt
-.tParmEnd !== % value emitted 109 on line 613 of bust.pt
-.tTrap !== .tWriteEnd on line 614 of bust.pt
-oEmitTrapKind(trWriteString) !== .tIfMerge on line 615 of bust.pt
-% value emitted 109 !== oEmitNullAddress on line 616 of bust.pt
-.tWriteEnd !== % value emitted -32767 on line 617 of bust.pt
-.tIfMerge !== .tWriteBegin on line 618 of bust.pt
-oEmitNullAddress !== .tTrapBegin on line 619 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 620 of bust.pt
-.tWriteBegin !== oEmitValue on line 621 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 622 of bust.pt
-.tLiteralAddress !== .tVarParm on line 623 of bust.pt
-oEmitValue !== .tParmEnd on line 624 of bust.pt
-% value emitted 4 !== .tLiteralString on line 625 of bust.pt
-.tVarParm !== oEmitValue on line 626 of bust.pt
-.tParmEnd !== % value emitted 5 on line 627 of bust.pt
-.tLiteralString !== oEmitString on line 628 of bust.pt
-oEmitValue !== % value emitted 80 on line 629 of bust.pt
-% value emitted 5 !== % value emitted 111 on line 630 of bust.pt
-oEmitString !== % value emitted 111 on line 631 of bust.pt
-% value emitted 80 !== % value emitted 106 on line 632 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 633 of bust.pt
-% value emitted 111 !== .tParmEnd on line 634 of bust.pt
-% value emitted 106 !== .tLiteralInteger on line 635 of bust.pt
-% value emitted 97 !== oEmitValue on line 636 of bust.pt
-.tParmEnd !== % value emitted 1 on line 637 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 638 of bust.pt
-oEmitValue !== .tTrap on line 639 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 640 of bust.pt
-.tParmEnd !== % value emitted 109 on line 641 of bust.pt
-.tTrap !== .tWriteEnd on line 642 of bust.pt
-oEmitTrapKind(trWriteString) !== .tIfEnd on line 643 of bust.pt
-% value emitted 109 !== .tIfEnd on line 644 of bust.pt
-.tWriteEnd !== .tProcedureEnd on line 645 of bust.pt
-.tIfEnd !== .tSkipProc on line 646 of bust.pt
-.tIfEnd !== oEmitNullAddress on line 647 of bust.pt
-.tProcedureEnd !== % value emitted -32767 on line 648 of bust.pt
-.tSkipProc !== .tLiteralAddress on line 649 of bust.pt
-oEmitNullAddress !== oEmitValue on line 650 of bust.pt
-% value emitted -32767 !== % value emitted 14792 on line 651 of bust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 652 of bust.pt
-oEmitValue !== .tParmEnd on line 653 of bust.pt
-% value emitted 14792 !== .tAssignBegin on line 654 of bust.pt
-.tStoreParmAddress !== .tLiteralAddress on line 655 of bust.pt
-.tParmEnd !== oEmitValue on line 656 of bust.pt
-.tAssignBegin !== % value emitted 88 on line 657 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 658 of bust.pt
-% value emitted 88 !== % value emitted 0 on line 660 of bust.pt
-.tLiteralInteger !== .tAssignInteger on line 661 of bust.pt
-oEmitValue !== .tAssignBegin on line 662 of bust.pt
-% value emitted 0 !== .tLiteralAddress on line 663 of bust.pt
-.tAssignInteger !== oEmitValue on line 664 of bust.pt
-.tAssignBegin !== % value emitted 92 on line 665 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 666 of bust.pt
-% value emitted 92 !== % value emitted 0 on line 668 of bust.pt
-.tLiteralInteger !== .tAssignInteger on line 669 of bust.pt
-oEmitValue !== .tAssignBegin on line 670 of bust.pt
-% value emitted 0 !== .tLiteralAddress on line 671 of bust.pt
-.tAssignInteger !== oEmitValue on line 672 of bust.pt
-.tAssignBegin !== % value emitted 96 on line 673 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 674 of bust.pt
-% value emitted 96 !== % value emitted 0 on line 676 of bust.pt
-.tLiteralInteger !== .tAssignInteger on line 677 of bust.pt
-oEmitValue !== .tTrapBegin on line 678 of bust.pt
-% value emitted 0 !== .tLiteralAddress on line 679 of bust.pt
-.tAssignInteger !== oEmitValue on line 680 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 681 of bust.pt
-.tLiteralAddress !== .tVarParm on line 682 of bust.pt
-oEmitValue !== .tParmEnd on line 683 of bust.pt
-% value emitted 4 !== .tTrap on line 684 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 685 of bust.pt
-.tParmEnd !== % value emitted 6 on line 686 of bust.pt
-.tTrap !== .tTrapBegin on line 687 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 688 of bust.pt
-% value emitted 6 !== oEmitValue on line 689 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 690 of bust.pt
-.tLiteralAddress !== .tVarParm on line 691 of bust.pt
-oEmitValue !== .tParmEnd on line 692 of bust.pt
-% value emitted 4 !== .tTrap on line 693 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 694 of bust.pt
-.tParmEnd !== % value emitted 6 on line 695 of bust.pt
-.tTrap !== .tWriteBegin on line 696 of bust.pt
-oEmitTrapKind(trWriteln) !== .tTrapBegin on line 697 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 698 of bust.pt
-.tWriteBegin !== oEmitValue on line 699 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 700 of bust.pt
-.tLiteralAddress !== .tVarParm on line 701 of bust.pt
-oEmitValue !== .tParmEnd on line 702 of bust.pt
-% value emitted 4 !== .tLiteralString on line 703 of bust.pt
-.tVarParm !== oEmitValue on line 704 of bust.pt
-.tParmEnd !== % value emitted 12 on line 705 of bust.pt
-.tLiteralString !== oEmitString on line 706 of bust.pt
-oEmitValue !== % value emitted 78 on line 707 of bust.pt
-% value emitted 12 !== % value emitted 101 on line 708 of bust.pt
-oEmitString !== % value emitted 119 on line 709 of bust.pt
-% value emitted 78 !== % value emitted 32 on line 710 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 711 of bust.pt
-% value emitted 119 !== % value emitted 104 on line 712 of bust.pt
-% value emitted 32 !== % value emitted 117 on line 713 of bust.pt
-% value emitted 115 !== % value emitted 102 on line 714 of bust.pt
-% value emitted 104 !== % value emitted 102 on line 715 of bust.pt
-% value emitted 117 !== % value emitted 108 on line 716 of bust.pt
-% value emitted 102 !== % value emitted 101 on line 717 of bust.pt
-% value emitted 102 !== % value emitted 46 on line 718 of bust.pt
-% value emitted 108 !== .tParmEnd on line 719 of bust.pt
-% value emitted 101 !== .tLiteralInteger on line 720 of bust.pt
-% value emitted 46 !== oEmitValue on line 721 of bust.pt
-.tParmEnd !== % value emitted 1 on line 722 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 723 of bust.pt
-oEmitValue !== .tTrap on line 724 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 725 of bust.pt
-.tParmEnd !== % value emitted 109 on line 726 of bust.pt
-.tTrap !== .tWriteEnd on line 727 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 728 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 729 of bust.pt
-.tWriteEnd !== oEmitValue on line 730 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 731 of bust.pt
-.tLiteralAddress !== .tVarParm on line 732 of bust.pt
-oEmitValue !== .tParmEnd on line 733 of bust.pt
-% value emitted 4 !== .tTrap on line 734 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 735 of bust.pt
-.tParmEnd !== % value emitted 6 on line 736 of bust.pt
-.tTrap !== .tTrapBegin on line 737 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 738 of bust.pt
-% value emitted 6 !== oEmitValue on line 739 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 740 of bust.pt
-.tLiteralAddress !== .tVarParm on line 741 of bust.pt
-oEmitValue !== .tParmEnd on line 742 of bust.pt
-% value emitted 4 !== .tTrap on line 743 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 744 of bust.pt
-.tParmEnd !== % value emitted 6 on line 745 of bust.pt
-.tTrap !== .tWriteBegin on line 746 of bust.pt
-oEmitTrapKind(trWriteln) !== .tTrapBegin on line 747 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 748 of bust.pt
-.tWriteBegin !== oEmitValue on line 749 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 750 of bust.pt
-.tLiteralAddress !== .tVarParm on line 751 of bust.pt
-oEmitValue !== .tParmEnd on line 752 of bust.pt
-% value emitted 4 !== .tLiteralString on line 753 of bust.pt
-.tVarParm !== oEmitValue on line 754 of bust.pt
-.tParmEnd !== % value emitted 70 on line 755 of bust.pt
-.tLiteralString !== oEmitString on line 756 of bust.pt
-oEmitValue !== % value emitted 67 on line 757 of bust.pt
-% value emitted 70 !== % value emitted 104 on line 758 of bust.pt
-oEmitString !== % value emitted 111 on line 759 of bust.pt
-% value emitted 67 !== % value emitted 111 on line 760 of bust.pt
-% value emitted 104 !== % value emitted 115 on line 761 of bust.pt
-% value emitted 111 !== % value emitted 101 on line 762 of bust.pt
-% value emitted 111 !== % value emitted 32 on line 763 of bust.pt
-% value emitted 115 !== % value emitted 97 on line 764 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 765 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 766 of bust.pt
-% value emitted 97 !== % value emitted 108 on line 767 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 768 of bust.pt
-% value emitted 112 !== % value emitted 121 on line 769 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 770 of bust.pt
-% value emitted 97 !== % value emitted 114 on line 771 of bust.pt
-% value emitted 121 !== % value emitted 32 on line 772 of bust.pt
-% value emitted 101 !== % value emitted 40 on line 773 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 774 of bust.pt
-% value emitted 40 !== % value emitted 102 on line 776 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 777 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 778 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 779 of bust.pt
-% value emitted 111 !== % value emitted 69 on line 780 of bust.pt
-% value emitted 114 !== % value emitted 46 on line 781 of bust.pt
-% value emitted 32 !== % value emitted 79 on line 782 of bust.pt
-% value emitted 69 !== % value emitted 46 on line 783 of bust.pt
-% value emitted 46 !== % value emitted 84 on line 784 of bust.pt
-% value emitted 79 !== % value emitted 104 on line 785 of bust.pt
-% value emitted 46 !== % value emitted 111 on line 786 of bust.pt
-% value emitted 84 !== % value emitted 114 on line 787 of bust.pt
-% value emitted 104 !== % value emitted 112 on line 788 of bust.pt
-% value emitted 111 !== % value emitted 44 on line 789 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 790 of bust.pt
-% value emitted 112 !== % value emitted 106 on line 791 of bust.pt
-% value emitted 44 !== % value emitted 32 on line 792 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 793 of bust.pt
-% value emitted 106 !== % value emitted 111 on line 794 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 795 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 796 of bust.pt
-% value emitted 111 !== % value emitted 74 on line 797 of bust.pt
-% value emitted 114 !== % value emitted 105 on line 798 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 799 of bust.pt
-% value emitted 74 !== % value emitted 44 on line 800 of bust.pt
-% value emitted 105 !== % value emitted 32 on line 801 of bust.pt
-% value emitted 109 !== % value emitted 112 on line 802 of bust.pt
-% value emitted 44 !== % value emitted 32 on line 803 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 804 of bust.pt
-% value emitted 112 !== % value emitted 111 on line 805 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 806 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 807 of bust.pt
-% value emitted 111 !== % value emitted 80 on line 808 of bust.pt
-% value emitted 114 !== % value emitted 111 on line 809 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 810 of bust.pt
-% value emitted 80 !== % value emitted 106 on line 811 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 812 of bust.pt
-% value emitted 111 !== % value emitted 44 on line 813 of bust.pt
-% value emitted 106 !== % value emitted 32 on line 814 of bust.pt
-% value emitted 97 !== % value emitted 113 on line 815 of bust.pt
-% value emitted 44 !== % value emitted 32 on line 816 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 817 of bust.pt
-% value emitted 113 !== % value emitted 111 on line 818 of bust.pt
-% value emitted 116 !== % value emitted 113 on line 820 of bust.pt
-% value emitted 111 !== % value emitted 117 on line 821 of bust.pt
-% value emitted 32 !== % value emitted 105 on line 822 of bust.pt
-% value emitted 113 !== % value emitted 116 on line 823 of bust.pt
-% value emitted 117 !== % value emitted 41 on line 824 of bust.pt
-% value emitted 105 !== % value emitted 58 on line 825 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 826 of bust.pt
-% value emitted 41 !== .tParmEnd on line 827 of bust.pt
-% value emitted 58 !== .tLiteralInteger on line 828 of bust.pt
-% value emitted 32 !== oEmitValue on line 829 of bust.pt
-.tParmEnd !== % value emitted 1 on line 830 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 831 of bust.pt
-oEmitValue !== .tTrap on line 832 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 833 of bust.pt
-.tParmEnd !== % value emitted 109 on line 834 of bust.pt
-.tTrap !== .tWriteEnd on line 835 of bust.pt
-oEmitTrapKind(trWriteString) !== .tReadBegin on line 836 of bust.pt
-% value emitted 109 !== .tTrapBegin on line 837 of bust.pt
-.tWriteEnd !== .tLiteralAddress on line 838 of bust.pt
-.tReadBegin !== oEmitValue on line 839 of bust.pt
-.tTrapBegin !== % value emitted 0 on line 840 of bust.pt
-.tLiteralAddress !== .tVarParm on line 841 of bust.pt
-oEmitValue !== .tParmEnd on line 842 of bust.pt
-% value emitted 0 !== .tLiteralAddress on line 843 of bust.pt
-.tVarParm !== oEmitValue on line 844 of bust.pt
-.tParmEnd !== % value emitted 110 on line 845 of bust.pt
-.tLiteralAddress !== .tVarParm on line 846 of bust.pt
-oEmitValue !== .tParmEnd on line 847 of bust.pt
-% value emitted 110 !== .tTrap on line 848 of bust.pt
-.tVarParm !== oEmitTrapKind(trReadString) on line 849 of bust.pt
-.tParmEnd !== % value emitted 108 on line 850 of bust.pt
-.tTrap !== .tReadEnd on line 851 of bust.pt
-oEmitTrapKind(trReadString) !== .tTrapBegin on line 852 of bust.pt
-% value emitted 108 !== .tLiteralAddress on line 853 of bust.pt
-.tReadEnd !== oEmitValue on line 854 of bust.pt
-.tTrapBegin !== % value emitted 0 on line 855 of bust.pt
-.tLiteralAddress !== .tVarParm on line 856 of bust.pt
-oEmitValue !== .tParmEnd on line 857 of bust.pt
-% value emitted 0 !== .tTrap on line 858 of bust.pt
-.tVarParm !== oEmitTrapKind(trReadln) on line 859 of bust.pt
-.tParmEnd !== % value emitted 4 on line 860 of bust.pt
-.tTrap !== .tIfBegin on line 861 of bust.pt
-oEmitTrapKind(trReadln) !== .tLiteralAddress on line 862 of bust.pt
-% value emitted 4 !== oEmitValue on line 863 of bust.pt
-.tIfBegin !== % value emitted 110 on line 864 of bust.pt
-.tLiteralAddress !== .tFetchString on line 865 of bust.pt
-oEmitValue !== .tLiteralString on line 866 of bust.pt
-% value emitted 110 !== oEmitValue on line 867 of bust.pt
-.tFetchString !== % value emitted 1 on line 868 of bust.pt
-.tLiteralString !== oEmitString on line 869 of bust.pt
-oEmitValue !== % value emitted 113 on line 870 of bust.pt
-% value emitted 1 !== .tStringEqual on line 871 of bust.pt
-oEmitString !== .tIfThen on line 872 of bust.pt
-% value emitted 113 !== oEmitNullAddress on line 873 of bust.pt
-.tStringEqual !== % value emitted -32767 on line 874 of bust.pt
-.tIfThen !== .tAssignBegin on line 875 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 876 of bust.pt
-% value emitted -32767 !== oEmitValue on line 877 of bust.pt
-#eMutableVarReqd !== % value emitted 14792 on line 878 of bust.pt
-.tAssignBegin !== .tFetchAddress on line 879 of bust.pt
-.tLiteralAddress !== .tLiteralBoolean on line 880 of bust.pt
-% value emitted 14792 !== % value emitted 0 on line 882 of bust.pt
-.tFetchAddress !== .tAssignBoolean on line 883 of bust.pt
-.tLiteralBoolean !== .tIfMerge on line 884 of bust.pt
-oEmitValue !== oEmitNullAddress on line 885 of bust.pt
-% value emitted 0 !== % value emitted -32767 on line 886 of bust.pt
-.tAssignBoolean !== .tIfBegin on line 887 of bust.pt
-.tIfMerge !== .tLiteralAddress on line 888 of bust.pt
-oEmitNullAddress !== oEmitValue on line 889 of bust.pt
-% value emitted -32767 !== % value emitted 110 on line 890 of bust.pt
-.tIfBegin !== .tFetchString on line 891 of bust.pt
-.tLiteralAddress !== .tLiteralString on line 892 of bust.pt
-% value emitted 110 !== % value emitted 1 on line 894 of bust.pt
-.tFetchString !== oEmitString on line 895 of bust.pt
-.tLiteralString !== % value emitted 101 on line 896 of bust.pt
-oEmitValue !== .tStringEqual on line 897 of bust.pt
-% value emitted 1 !== .tNot on line 898 of bust.pt
-oEmitString !== .tIfThen on line 899 of bust.pt
-% value emitted 101 !== oEmitNullAddress on line 900 of bust.pt
-.tStringEqual !== % value emitted -32767 on line 901 of bust.pt
-.tNot !== .tWriteBegin on line 902 of bust.pt
-.tIfThen !== .tTrapBegin on line 903 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 904 of bust.pt
-% value emitted -32767 !== oEmitValue on line 905 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 906 of bust.pt
-.tTrapBegin !== .tVarParm on line 907 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 908 of bust.pt
-oEmitValue !== .tLiteralString on line 909 of bust.pt
-% value emitted 4 !== oEmitValue on line 910 of bust.pt
-.tVarParm !== % value emitted 25 on line 911 of bust.pt
-.tParmEnd !== oEmitString on line 912 of bust.pt
-.tLiteralString !== % value emitted 87 on line 913 of bust.pt
-oEmitValue !== % value emitted 104 on line 914 of bust.pt
-% value emitted 25 !== % value emitted 97 on line 915 of bust.pt
-oEmitString !== % value emitted 116 on line 916 of bust.pt
-% value emitted 87 !== % value emitted 32 on line 917 of bust.pt
-% value emitted 104 !== % value emitted 100 on line 918 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 919 of bust.pt
-% value emitted 116 !== % value emitted 101 on line 920 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 921 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 922 of bust.pt
-% value emitted 111 !== % value emitted 115 on line 923 of bust.pt
-% value emitted 101 !== % value emitted 47 on line 924 of bust.pt
-% value emitted 115 !== % value emitted 104 on line 925 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 926 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 927 of bust.pt
-% value emitted 47 !== % value emitted 115 on line 928 of bust.pt
-% value emitted 104 !== % value emitted 116 on line 929 of bust.pt
-% value emitted 101 !== % value emitted 97 on line 930 of bust.pt
-% value emitted 32 !== % value emitted 110 on line 931 of bust.pt
-% value emitted 115 !== % value emitted 100 on line 932 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 933 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 934 of bust.pt
-% value emitted 100 !== % value emitted 63 on line 936 of bust.pt
-% value emitted 111 !== .tParmEnd on line 938 of bust.pt
-% value emitted 110 !== .tLiteralInteger on line 939 of bust.pt
-% value emitted 63 !== oEmitValue on line 940 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 941 of bust.pt
-.tLiteralInteger !== .tTrap on line 943 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 944 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 945 of bust.pt
-.tParmEnd !== .tWriteEnd on line 946 of bust.pt
-.tTrap !== .tReadBegin on line 947 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 948 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 949 of bust.pt
-.tWriteEnd !== oEmitValue on line 950 of bust.pt
-.tReadBegin !== % value emitted 0 on line 951 of bust.pt
-.tTrapBegin !== .tVarParm on line 952 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 953 of bust.pt
-oEmitValue !== .tLiteralAddress on line 954 of bust.pt
-% value emitted 0 !== oEmitValue on line 955 of bust.pt
-.tVarParm !== % value emitted 1136 on line 956 of bust.pt
-.tParmEnd !== .tVarParm on line 957 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 958 of bust.pt
-oEmitValue !== .tTrap on line 959 of bust.pt
-% value emitted 1136 !== oEmitTrapKind(trReadInteger) on line 960 of bust.pt
-.tVarParm !== % value emitted 10 on line 961 of bust.pt
-.tParmEnd !== .tReadEnd on line 962 of bust.pt
-.tTrap !== .tTrapBegin on line 963 of bust.pt
-oEmitTrapKind(trReadInteger) !== .tLiteralAddress on line 964 of bust.pt
-% value emitted 9 !== oEmitValue on line 965 of bust.pt
-.tReadEnd !== % value emitted 0 on line 966 of bust.pt
-.tTrapBegin !== .tVarParm on line 967 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 968 of bust.pt
-oEmitValue !== .tTrap on line 969 of bust.pt
-% value emitted 0 !== oEmitTrapKind(trReadln) on line 970 of bust.pt
-.tVarParm !== % value emitted 4 on line 971 of bust.pt
-.tParmEnd !== .tWhileBegin on line 972 of bust.pt
-.tTrap !== .tWhilePreBreak on line 973 of bust.pt
-oEmitTrapKind(trReadln) !== .tWhileBreakIf on line 974 of bust.pt
-% value emitted 4 !== .tLiteralAddress on line 975 of bust.pt
-.tWhileBegin !== oEmitValue on line 976 of bust.pt
-.tWhilePreBreak !== % value emitted 1136 on line 977 of bust.pt
-oEmitNullAddress !== .tFetchInteger on line 978 of bust.pt
-% value emitted -32767 !== .tLiteralInteger on line 979 of bust.pt
-.tWhileBreakIf !== oEmitValue on line 980 of bust.pt
-.tLiteralAddress !== % value emitted 0 on line 981 of bust.pt
+oEmitNullAddress !== .tAssignBegin on line 180 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 181 of bust.pt
+.tAssignBegin !== oEmitValue on line 182 of bust.pt
+.tLiteralAddress !== % value emitted 14704 on line 183 of bust.pt
+oEmitValue !== .tSubscriptBegin on line 184 of bust.pt
+% value emitted 14704 !== .tLiteralAddress on line 185 of bust.pt
+.tSubscriptBegin !== oEmitValue on line 186 of bust.pt
+.tLiteralAddress !== % value emitted 14764 on line 187 of bust.pt
+oEmitValue !== .tFetchInteger on line 188 of bust.pt
+% value emitted 14764 !== .tSubscriptInteger on line 189 of bust.pt
+.tFetchInteger !== .tLiteralInteger on line 190 of bust.pt
+.tSubscriptInteger !== oEmitValue on line 191 of bust.pt
+.tLiteralInteger !== % value emitted 0 on line 192 of bust.pt
+oEmitValue !== .tAssignInteger on line 193 of bust.pt
+% value emitted 0 !== .tAssignBegin on line 194 of bust.pt
+.tAssignInteger !== .tLiteralAddress on line 195 of bust.pt
+.tAssignBegin !== oEmitValue on line 196 of bust.pt
+.tLiteralAddress !== % value emitted 14764 on line 197 of bust.pt
+oEmitValue !== .tLiteralAddress on line 198 of bust.pt
+% value emitted 14764 !== oEmitValue on line 199 of bust.pt
+.tLiteralAddress !== % value emitted 14764 on line 200 of bust.pt
+oEmitValue !== .tFetchInteger on line 201 of bust.pt
+% value emitted 14764 !== .tLiteralInteger on line 202 of bust.pt
+.tFetchInteger !== oEmitValue on line 203 of bust.pt
+.tLiteralInteger !== % value emitted 1 on line 204 of bust.pt
+oEmitValue !== .tAdd on line 205 of bust.pt
+% value emitted 1 !== .tAssignInteger on line 206 of bust.pt
+.tAdd !== .tWhileBreakIf on line 207 of bust.pt
+.tAssignInteger !== .tLiteralAddress on line 208 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 209 of bust.pt
+.tLiteralAddress !== % value emitted 14764 on line 210 of bust.pt
+oEmitValue !== .tFetchInteger on line 211 of bust.pt
+% value emitted 14764 !== .tLiteralInteger on line 212 of bust.pt
+.tFetchInteger !== oEmitValue on line 213 of bust.pt
+.tLiteralInteger !== % value emitted 13 on line 214 of bust.pt
+oEmitValue !== .tGT on line 215 of bust.pt
+% value emitted 13 !== .tNot on line 216 of bust.pt
+.tGT !== .tWhileTest on line 217 of bust.pt
+.tNot !== oEmitNullAddress on line 218 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 219 of bust.pt
+% value emitted 170 !== .tWhileEnd on line 220 of bust.pt
+.tWhileEnd !== % value emitted 169 on line 221 of bust.pt
+oEmitNullAddress !== .tCallBegin on line 232 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 233 of bust.pt
+.tCallBegin !== oEmitValue on line 234 of bust.pt
+.tLiteralAddress !== % value emitted 14700 on line 235 of bust.pt
+oEmitValue !== .tVarParm on line 236 of bust.pt
+% value emitted 14700 !== .tParmEnd on line 237 of bust.pt
+.tVarParm !== .tLiteralInteger on line 238 of bust.pt
+.tParmEnd !== oEmitValue on line 239 of bust.pt
+.tLiteralInteger !== % value emitted 13 on line 240 of bust.pt
+oEmitValue !== .tParmEnd on line 241 of bust.pt
+% value emitted 13 !== .tCallEnd on line 242 of bust.pt
+.tParmEnd !== oEmitValue on line 243 of bust.pt
+.tCallEnd !== % value emitted 64 on line 244 of bust.pt
+oEmitValue !== .tWhileBegin on line 245 of bust.pt
+% value emitted 64 !== .tWhilePreBreak on line 246 of bust.pt
+.tWhileBegin !== .tWhileBreakIf on line 247 of bust.pt
+.tWhilePreBreak !== .tLiteralAddress on line 248 of bust.pt
+oEmitNullAddress !== oEmitValue on line 249 of bust.pt
+% value emitted -32767 !== % value emitted 14704 on line 250 of bust.pt
+.tWhileBreakIf !== .tSubscriptBegin on line 251 of bust.pt
+% value emitted 14704 !== % value emitted 14700 on line 254 of bust.pt
+.tSubscriptBegin !== .tFetchInteger on line 255 of bust.pt
+.tLiteralAddress !== .tSubscriptInteger on line 256 of bust.pt
+oEmitValue !== .tFetchInteger on line 257 of bust.pt
+% value emitted 14700 !== .tLiteralInteger on line 258 of bust.pt
+.tFetchInteger !== oEmitValue on line 259 of bust.pt
+.tSubscriptInteger !== % value emitted 4 on line 260 of bust.pt
+.tFetchInteger !== .tNE on line 261 of bust.pt
+.tLiteralInteger !== .tNot on line 262 of bust.pt
+oEmitValue !== .tWhileTest on line 263 of bust.pt
+% value emitted 4 !== oEmitNullAddress on line 264 of bust.pt
+.tNE !== % value emitted -32767 on line 265 of bust.pt
+.tNot !== .tCallBegin on line 266 of bust.pt
+.tWhileTest !== .tLiteralAddress on line 267 of bust.pt
+.tCallBegin !== oEmitValue on line 268 of bust.pt
+.tLiteralAddress !== % value emitted 14700 on line 269 of bust.pt
+oEmitValue !== .tVarParm on line 270 of bust.pt
+% value emitted 14700 !== .tParmEnd on line 271 of bust.pt
+.tVarParm !== .tLiteralInteger on line 272 of bust.pt
+.tParmEnd !== oEmitValue on line 273 of bust.pt
+.tLiteralInteger !== % value emitted 13 on line 274 of bust.pt
+oEmitValue !== .tParmEnd on line 275 of bust.pt
+% value emitted 13 !== .tCallEnd on line 276 of bust.pt
+.tParmEnd !== oEmitValue on line 277 of bust.pt
+.tCallEnd !== % value emitted 64 on line 278 of bust.pt
+oEmitValue !== .tWhileEnd on line 279 of bust.pt
+% value emitted 64 !== % value emitted 236 on line 280 of bust.pt
+% value emitted 240 !== .tAssignBegin on line 281 of bust.pt
+.tWhileEnd !== .tLiteralAddress on line 282 of bust.pt
+.tAssignBegin !== oEmitValue on line 283 of bust.pt
+.tLiteralAddress !== % value emitted 1144 on line 284 of bust.pt
+oEmitValue !== .tSubscriptBegin on line 285 of bust.pt
+% value emitted 1144 !== .tLiteralAddress on line 286 of bust.pt
+.tSubscriptBegin !== oEmitValue on line 287 of bust.pt
+.tLiteralAddress !== % value emitted 14768 on line 288 of bust.pt
+oEmitValue !== .tFetchInteger on line 289 of bust.pt
+% value emitted 14768 !== .tSubscriptInteger on line 290 of bust.pt
+.tFetchInteger !== .tLiteralAddress on line 291 of bust.pt
+.tSubscriptInteger !== oEmitValue on line 292 of bust.pt
+.tLiteralAddress !== % value emitted 14700 on line 293 of bust.pt
+oEmitValue !== .tFetchInteger on line 294 of bust.pt
+% value emitted 14700 !== .tAssignInteger on line 295 of bust.pt
+.tFetchInteger !== .tAssignBegin on line 296 of bust.pt
+.tAssignInteger !== .tLiteralAddress on line 297 of bust.pt
+.tAssignBegin !== oEmitValue on line 298 of bust.pt
+.tLiteralAddress !== % value emitted 14704 on line 299 of bust.pt
+oEmitValue !== .tSubscriptBegin on line 300 of bust.pt
+% value emitted 14704 !== .tLiteralAddress on line 301 of bust.pt
+.tSubscriptBegin !== oEmitValue on line 302 of bust.pt
+.tLiteralAddress !== % value emitted 14700 on line 303 of bust.pt
+oEmitValue !== .tFetchInteger on line 304 of bust.pt
+% value emitted 14700 !== .tSubscriptInteger on line 305 of bust.pt
+.tFetchInteger !== .tLiteralAddress on line 306 of bust.pt
+.tSubscriptInteger !== oEmitValue on line 307 of bust.pt
+.tLiteralAddress !== % value emitted 14704 on line 308 of bust.pt
+oEmitValue !== .tSubscriptBegin on line 309 of bust.pt
+% value emitted 14704 !== .tLiteralAddress on line 310 of bust.pt
+.tSubscriptBegin !== oEmitValue on line 311 of bust.pt
+.tLiteralAddress !== % value emitted 14700 on line 312 of bust.pt
+oEmitValue !== .tFetchInteger on line 313 of bust.pt
+% value emitted 14700 !== .tSubscriptInteger on line 314 of bust.pt
+.tSubscriptInteger !== .tLiteralInteger on line 316 of bust.pt
+.tFetchInteger !== oEmitValue on line 317 of bust.pt
+.tLiteralInteger !== % value emitted 1 on line 318 of bust.pt
+oEmitValue !== .tAdd on line 319 of bust.pt
+% value emitted 1 !== .tAssignInteger on line 320 of bust.pt
+.tAdd !== .tAssignBegin on line 321 of bust.pt
+.tAssignInteger !== .tLiteralAddress on line 322 of bust.pt
+.tAssignBegin !== oEmitValue on line 323 of bust.pt
+.tLiteralAddress !== % value emitted 14768 on line 324 of bust.pt
+oEmitValue !== .tLiteralAddress on line 325 of bust.pt
+% value emitted 14768 !== oEmitValue on line 326 of bust.pt
+.tLiteralAddress !== % value emitted 14768 on line 327 of bust.pt
+oEmitValue !== .tFetchInteger on line 328 of bust.pt
+% value emitted 14768 !== .tLiteralInteger on line 329 of bust.pt
+.tFetchInteger !== oEmitValue on line 330 of bust.pt
+.tLiteralInteger !== % value emitted 1 on line 331 of bust.pt
+oEmitValue !== .tAdd on line 332 of bust.pt
+% value emitted 1 !== .tAssignInteger on line 333 of bust.pt
+.tAdd !== .tWhileBreakIf on line 334 of bust.pt
+.tAssignInteger !== .tLiteralAddress on line 335 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 336 of bust.pt
+.tLiteralAddress !== % value emitted 14768 on line 337 of bust.pt
+oEmitValue !== .tFetchInteger on line 338 of bust.pt
+% value emitted 14768 !== .tLiteralInteger on line 339 of bust.pt
+.tFetchInteger !== oEmitValue on line 340 of bust.pt
+.tLiteralInteger !== % value emitted 52 on line 341 of bust.pt
+oEmitValue !== .tGT on line 342 of bust.pt
+% value emitted 52 !== .tNot on line 343 of bust.pt
+.tGT !== .tWhileTest on line 344 of bust.pt
+.tNot !== oEmitNullAddress on line 345 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 346 of bust.pt
+% value emitted 223 !== .tWhileEnd on line 347 of bust.pt
+.tWhileEnd !== % value emitted 220 on line 348 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 445 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 446 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 447 of bust.pt
+.tLiteralAddress !== % value emitted 14788 on line 448 of bust.pt
+oEmitValue !== .tFetchInteger on line 449 of bust.pt
+% value emitted 14788 !== .tLiteralAddress on line 450 of bust.pt
+.tFetchInteger !== oEmitValue on line 451 of bust.pt
+.tLiteralAddress !== % value emitted 14780 on line 452 of bust.pt
+oEmitValue !== .tFetchInteger on line 453 of bust.pt
+% value emitted 14780 !== .tGT on line 454 of bust.pt
+.tFetchInteger !== .tNot on line 455 of bust.pt
+.tGT !== .tWhileTest on line 456 of bust.pt
+.tNot !== oEmitNullAddress on line 457 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 458 of bust.pt
+% value emitted 435 !== .tWhileEnd on line 524 of bust.pt
+.tWhileEnd !== % value emitted 428 on line 525 of bust.pt
+% value emitted 9 !== % value emitted 10 on line 961 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 974 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 975 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 976 of bust.pt
+.tLiteralAddress !== % value emitted 1136 on line 977 of bust.pt
+oEmitValue !== .tFetchInteger on line 978 of bust.pt
+% value emitted 1136 !== .tLiteralInteger on line 979 of bust.pt
+.tFetchInteger !== oEmitValue on line 980 of bust.pt
+.tLiteralInteger !== % value emitted 0 on line 981 of bust.pt
 oEmitValue !== .tGT on line 982 of bust.pt
-% value emitted 1136 !== .tInfixAnd on line 983 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 984 of bust.pt
-.tLiteralInteger !== oEmitValue on line 985 of bust.pt
-oEmitValue !== % value emitted 1136 on line 986 of bust.pt
-% value emitted 0 !== .tFetchInteger on line 987 of bust.pt
-.tGT !== .tLiteralInteger on line 988 of bust.pt
-.tInfixAnd !== oEmitValue on line 989 of bust.pt
-.tLiteralAddress !== % value emitted 21 on line 990 of bust.pt
+% value emitted 0 !== .tInfixAnd on line 983 of bust.pt
+.tGT !== .tLiteralAddress on line 984 of bust.pt
+.tInfixAnd !== oEmitValue on line 985 of bust.pt
+.tLiteralAddress !== % value emitted 1136 on line 986 of bust.pt
+oEmitValue !== .tFetchInteger on line 987 of bust.pt
+% value emitted 1136 !== .tLiteralInteger on line 988 of bust.pt
+.tFetchInteger !== oEmitValue on line 989 of bust.pt
+.tLiteralInteger !== % value emitted 21 on line 990 of bust.pt
 oEmitValue !== .tLT on line 991 of bust.pt
-% value emitted 1136 !== .tAnd on line 992 of bust.pt
-.tFetchInteger !== .tNot on line 993 of bust.pt
-.tLiteralInteger !== .tWhileTest on line 994 of bust.pt
-oEmitValue !== oEmitNullAddress on line 995 of bust.pt
-% value emitted 21 !== % value emitted -32767 on line 996 of bust.pt
-.tLT !== .tWriteBegin on line 997 of bust.pt
-.tAnd !== .tTrapBegin on line 998 of bust.pt
-.tNot !== .tLiteralAddress on line 999 of bust.pt
-.tWhileTest !== oEmitValue on line 1000 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1001 of bust.pt
-.tTrapBegin !== .tVarParm on line 1002 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1003 of bust.pt
-oEmitValue !== .tLiteralString on line 1004 of bust.pt
-% value emitted 4 !== oEmitValue on line 1005 of bust.pt
-.tVarParm !== % value emitted 9 on line 1006 of bust.pt
-.tParmEnd !== oEmitString on line 1007 of bust.pt
-.tLiteralString !== % value emitted 40 on line 1008 of bust.pt
-oEmitValue !== % value emitted 49 on line 1009 of bust.pt
-% value emitted 9 !== % value emitted 46 on line 1010 of bust.pt
-oEmitString !== % value emitted 46 on line 1011 of bust.pt
-% value emitted 40 !== % value emitted 50 on line 1012 of bust.pt
-% value emitted 49 !== % value emitted 48 on line 1013 of bust.pt
-% value emitted 46 !== % value emitted 41 on line 1014 of bust.pt
-% value emitted 46 !== % value emitted 58 on line 1015 of bust.pt
-% value emitted 50 !== % value emitted 32 on line 1016 of bust.pt
-% value emitted 48 !== .tParmEnd on line 1017 of bust.pt
-% value emitted 41 !== .tLiteralInteger on line 1018 of bust.pt
-% value emitted 58 !== oEmitValue on line 1019 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 1020 of bust.pt
-.tLiteralInteger !== .tTrap on line 1022 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1023 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1024 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1025 of bust.pt
-.tTrap !== .tReadBegin on line 1026 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 1027 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 1028 of bust.pt
-.tWriteEnd !== oEmitValue on line 1029 of bust.pt
-.tReadBegin !== % value emitted 0 on line 1030 of bust.pt
-.tTrapBegin !== .tVarParm on line 1031 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1032 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1033 of bust.pt
-% value emitted 0 !== oEmitValue on line 1034 of bust.pt
-.tVarParm !== % value emitted 1136 on line 1035 of bust.pt
-.tParmEnd !== .tVarParm on line 1036 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1037 of bust.pt
-oEmitValue !== .tTrap on line 1038 of bust.pt
-% value emitted 1136 !== oEmitTrapKind(trReadInteger) on line 1039 of bust.pt
-.tVarParm !== % value emitted 10 on line 1040 of bust.pt
-.tParmEnd !== .tReadEnd on line 1041 of bust.pt
-.tTrap !== .tTrapBegin on line 1042 of bust.pt
-oEmitTrapKind(trReadInteger) !== .tLiteralAddress on line 1043 of bust.pt
-% value emitted 9 !== oEmitValue on line 1044 of bust.pt
-.tReadEnd !== % value emitted 0 on line 1045 of bust.pt
-.tTrapBegin !== .tVarParm on line 1046 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1047 of bust.pt
-oEmitValue !== .tTrap on line 1048 of bust.pt
-% value emitted 0 !== oEmitTrapKind(trReadln) on line 1049 of bust.pt
-.tVarParm !== % value emitted 4 on line 1050 of bust.pt
-.tParmEnd !== .tWhileEnd on line 1051 of bust.pt
-.tTrap !== % value emitted 920 on line 1052 of bust.pt
-oEmitTrapKind(trReadln) !== .tIfEnd on line 1053 of bust.pt
-% value emitted 4 !== .tIfBegin on line 1054 of bust.pt
-% value emitted 929 !== .tLiteralAddress on line 1055 of bust.pt
-.tWhileEnd !== oEmitValue on line 1056 of bust.pt
-.tIfEnd !== % value emitted 110 on line 1057 of bust.pt
-.tIfBegin !== .tFetchString on line 1058 of bust.pt
-.tLiteralAddress !== .tLiteralString on line 1059 of bust.pt
-% value emitted 110 !== % value emitted 1 on line 1061 of bust.pt
-.tFetchString !== oEmitString on line 1062 of bust.pt
-.tLiteralString !== % value emitted 101 on line 1063 of bust.pt
-oEmitValue !== .tStringEqual on line 1064 of bust.pt
-% value emitted 1 !== .tIfThen on line 1065 of bust.pt
-oEmitString !== oEmitNullAddress on line 1066 of bust.pt
-% value emitted 101 !== % value emitted -32767 on line 1067 of bust.pt
-.tStringEqual !== .tTrapBegin on line 1068 of bust.pt
-.tIfThen !== .tLiteralAddress on line 1069 of bust.pt
-oEmitNullAddress !== oEmitValue on line 1070 of bust.pt
-% value emitted -32767 !== % value emitted 4 on line 1071 of bust.pt
-.tTrapBegin !== .tVarParm on line 1072 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1073 of bust.pt
-oEmitValue !== .tTrap on line 1074 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1075 of bust.pt
-.tVarParm !== % value emitted 6 on line 1076 of bust.pt
-.tParmEnd !== .tWriteBegin on line 1077 of bust.pt
-.tTrap !== .tTrapBegin on line 1078 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1079 of bust.pt
-% value emitted 6 !== oEmitValue on line 1080 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1081 of bust.pt
-.tTrapBegin !== .tVarParm on line 1082 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1083 of bust.pt
-oEmitValue !== .tLiteralString on line 1084 of bust.pt
-% value emitted 4 !== oEmitValue on line 1085 of bust.pt
-.tVarParm !== % value emitted 26 on line 1086 of bust.pt
-.tParmEnd !== oEmitString on line 1087 of bust.pt
-.tLiteralString !== % value emitted 69 on line 1088 of bust.pt
-oEmitValue !== % value emitted 46 on line 1089 of bust.pt
-% value emitted 26 !== % value emitted 79 on line 1090 of bust.pt
-oEmitString !== % value emitted 46 on line 1091 of bust.pt
-% value emitted 69 !== % value emitted 84 on line 1092 of bust.pt
-% value emitted 46 !== % value emitted 104 on line 1093 of bust.pt
-% value emitted 79 !== % value emitted 111 on line 1094 of bust.pt
-% value emitted 46 !== % value emitted 114 on line 1095 of bust.pt
-% value emitted 84 !== % value emitted 112 on line 1096 of bust.pt
-% value emitted 104 !== % value emitted 32 on line 1097 of bust.pt
-% value emitted 111 !== % value emitted 112 on line 1098 of bust.pt
-% value emitted 114 !== % value emitted 108 on line 1099 of bust.pt
-% value emitted 112 !== % value emitted 97 on line 1100 of bust.pt
-% value emitted 32 !== % value emitted 121 on line 1101 of bust.pt
-% value emitted 112 !== % value emitted 115 on line 1102 of bust.pt
-% value emitted 108 !== % value emitted 32 on line 1103 of bust.pt
-% value emitted 97 !== % value emitted 116 on line 1104 of bust.pt
-% value emitted 121 !== % value emitted 104 on line 1105 of bust.pt
-% value emitted 115 !== % value emitted 105 on line 1106 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 1107 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 1108 of bust.pt
-% value emitted 104 !== % value emitted 116 on line 1109 of bust.pt
-% value emitted 115 !== % value emitted 109 on line 1111 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 1112 of bust.pt
-% value emitted 116 !== % value emitted 46 on line 1113 of bust.pt
-% value emitted 105 !== .tParmEnd on line 1114 of bust.pt
-% value emitted 109 !== .tLiteralInteger on line 1115 of bust.pt
-% value emitted 101 !== oEmitValue on line 1116 of bust.pt
-% value emitted 46 !== % value emitted 1 on line 1117 of bust.pt
-.tLiteralInteger !== .tTrap on line 1119 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1120 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1121 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1122 of bust.pt
-.tTrap !== .tTrapBegin on line 1123 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1124 of bust.pt
-% value emitted 109 !== oEmitValue on line 1125 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 1126 of bust.pt
-.tTrapBegin !== .tVarParm on line 1127 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1128 of bust.pt
-oEmitValue !== .tTrap on line 1129 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1130 of bust.pt
-.tVarParm !== % value emitted 6 on line 1131 of bust.pt
-.tParmEnd !== .tIfMerge on line 1132 of bust.pt
-.tTrap !== oEmitNullAddress on line 1133 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted -32767 on line 1134 of bust.pt
-% value emitted 6 !== .tTrapBegin on line 1135 of bust.pt
-.tIfMerge !== .tLiteralAddress on line 1136 of bust.pt
-oEmitNullAddress !== oEmitValue on line 1137 of bust.pt
-% value emitted -32767 !== % value emitted 4 on line 1138 of bust.pt
-.tTrapBegin !== .tVarParm on line 1139 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1140 of bust.pt
-oEmitValue !== .tTrap on line 1141 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1142 of bust.pt
-.tVarParm !== % value emitted 6 on line 1143 of bust.pt
-.tParmEnd !== .tWriteBegin on line 1144 of bust.pt
-.tTrap !== .tTrapBegin on line 1145 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1146 of bust.pt
-% value emitted 6 !== oEmitValue on line 1147 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1148 of bust.pt
-.tTrapBegin !== .tVarParm on line 1149 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1150 of bust.pt
-oEmitValue !== .tLiteralString on line 1151 of bust.pt
-% value emitted 4 !== oEmitValue on line 1152 of bust.pt
-.tVarParm !== % value emitted 15 on line 1153 of bust.pt
-.tParmEnd !== oEmitString on line 1154 of bust.pt
-.tLiteralString !== % value emitted 78 on line 1155 of bust.pt
-oEmitValue !== % value emitted 101 on line 1156 of bust.pt
-% value emitted 15 !== % value emitted 120 on line 1157 of bust.pt
-oEmitString !== % value emitted 116 on line 1158 of bust.pt
-% value emitted 78 !== % value emitted 32 on line 1159 of bust.pt
-% value emitted 101 !== % value emitted 112 on line 1160 of bust.pt
-% value emitted 120 !== % value emitted 108 on line 1161 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 1162 of bust.pt
-% value emitted 32 !== % value emitted 121 on line 1163 of bust.pt
-% value emitted 112 !== % value emitted 101 on line 1164 of bust.pt
-% value emitted 108 !== % value emitted 114 on line 1165 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 1166 of bust.pt
-% value emitted 121 !== % value emitted 105 on line 1167 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 1168 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 1169 of bust.pt
-% value emitted 32 !== .tParmEnd on line 1170 of bust.pt
-% value emitted 105 !== .tLiteralInteger on line 1171 of bust.pt
-% value emitted 115 !== oEmitValue on line 1172 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 1173 of bust.pt
-.tLiteralInteger !== .tTrap on line 1175 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1176 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1177 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1178 of bust.pt
-.tTrap !== .tCallBegin on line 1179 of bust.pt
-oEmitTrapKind(trWriteString) !== .tCallEnd on line 1180 of bust.pt
-% value emitted 109 !== oEmitValue on line 1181 of bust.pt
-.tWriteEnd !== % value emitted 506 on line 1182 of bust.pt
-.tCallBegin !== .tWriteBegin on line 1183 of bust.pt
-.tCallEnd !== .tTrapBegin on line 1184 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1185 of bust.pt
-% value emitted 514 !== oEmitValue on line 1186 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1187 of bust.pt
-.tTrapBegin !== .tVarParm on line 1188 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1189 of bust.pt
-oEmitValue !== .tLiteralString on line 1190 of bust.pt
-% value emitted 4 !== oEmitValue on line 1191 of bust.pt
-.tVarParm !== % value emitted 1 on line 1192 of bust.pt
-.tParmEnd !== oEmitString on line 1193 of bust.pt
-.tLiteralString !== % value emitted 46 on line 1194 of bust.pt
-oEmitValue !== .tParmEnd on line 1195 of bust.pt
-% value emitted 1 !== .tLiteralInteger on line 1196 of bust.pt
-oEmitString !== oEmitValue on line 1197 of bust.pt
-% value emitted 46 !== % value emitted 1 on line 1198 of bust.pt
-.tLiteralInteger !== .tTrap on line 1200 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1201 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1202 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1203 of bust.pt
-.tTrap !== .tTrapBegin on line 1204 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1205 of bust.pt
-% value emitted 109 !== oEmitValue on line 1206 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 1207 of bust.pt
-.tTrapBegin !== .tVarParm on line 1208 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1209 of bust.pt
-oEmitValue !== .tTrap on line 1210 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1211 of bust.pt
-.tVarParm !== % value emitted 6 on line 1212 of bust.pt
-.tParmEnd !== .tWriteBegin on line 1213 of bust.pt
-.tTrap !== .tTrapBegin on line 1214 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1215 of bust.pt
-% value emitted 6 !== oEmitValue on line 1216 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1217 of bust.pt
-.tTrapBegin !== .tVarParm on line 1218 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1219 of bust.pt
-oEmitValue !== .tLiteralString on line 1220 of bust.pt
-% value emitted 4 !== oEmitValue on line 1221 of bust.pt
-.tVarParm !== % value emitted 14 on line 1222 of bust.pt
-.tParmEnd !== oEmitString on line 1223 of bust.pt
-.tLiteralString !== % value emitted 83 on line 1224 of bust.pt
-oEmitValue !== % value emitted 47 on line 1225 of bust.pt
-% value emitted 14 !== % value emitted 104 on line 1226 of bust.pt
-oEmitString !== % value emitted 101 on line 1227 of bust.pt
-% value emitted 83 !== % value emitted 32 on line 1228 of bust.pt
-% value emitted 47 !== % value emitted 115 on line 1229 of bust.pt
-% value emitted 104 !== % value emitted 116 on line 1230 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 1231 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 1232 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 1234 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 1235 of bust.pt
-% value emitted 112 !== % value emitted 116 on line 1236 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 1237 of bust.pt
-% value emitted 32 !== .tParmEnd on line 1238 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 1239 of bust.pt
-% value emitted 116 !== oEmitValue on line 1240 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 1241 of bust.pt
-.tLiteralInteger !== .tTrap on line 1243 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1244 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1245 of bust.pt
-.tParmEnd !== .tTrapBegin on line 1246 of bust.pt
-.tTrap !== .tLiteralAddress on line 1247 of bust.pt
-oEmitTrapKind(trWriteString) !== oEmitValue on line 1248 of bust.pt
-% value emitted 109 !== % value emitted 4 on line 1249 of bust.pt
-.tTrapBegin !== .tVarParm on line 1250 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1251 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1252 of bust.pt
-% value emitted 4 !== oEmitValue on line 1253 of bust.pt
-.tVarParm !== % value emitted 1136 on line 1254 of bust.pt
-.tParmEnd !== .tFetchInteger on line 1255 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1256 of bust.pt
-oEmitValue !== .tLiteralInteger on line 1257 of bust.pt
-% value emitted 1136 !== oEmitValue on line 1258 of bust.pt
-.tFetchInteger !== % value emitted 1 on line 1259 of bust.pt
-.tLiteralInteger !== .tTrap on line 1261 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteInteger) on line 1262 of bust.pt
-% value emitted 1 !== % value emitted 8 on line 1263 of bust.pt
-.tParmEnd !== .tTrapBegin on line 1264 of bust.pt
-.tTrap !== .tLiteralAddress on line 1265 of bust.pt
-oEmitTrapKind(trWriteInteger) !== oEmitValue on line 1266 of bust.pt
-% value emitted 7 !== % value emitted 4 on line 1267 of bust.pt
-.tTrapBegin !== .tVarParm on line 1268 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1269 of bust.pt
-oEmitValue !== .tLiteralString on line 1270 of bust.pt
-% value emitted 4 !== oEmitValue on line 1271 of bust.pt
-.tVarParm !== % value emitted 1 on line 1272 of bust.pt
-.tParmEnd !== oEmitString on line 1273 of bust.pt
-.tLiteralString !== % value emitted 46 on line 1274 of bust.pt
-oEmitValue !== .tParmEnd on line 1275 of bust.pt
-% value emitted 1 !== .tLiteralInteger on line 1276 of bust.pt
-oEmitString !== oEmitValue on line 1277 of bust.pt
-% value emitted 46 !== % value emitted 1 on line 1278 of bust.pt
-.tLiteralInteger !== .tTrap on line 1280 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1281 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1282 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1283 of bust.pt
-.tTrap !== .tTrapBegin on line 1284 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1285 of bust.pt
-% value emitted 109 !== oEmitValue on line 1286 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 1287 of bust.pt
-.tTrapBegin !== .tVarParm on line 1288 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1289 of bust.pt
-oEmitValue !== .tTrap on line 1290 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1291 of bust.pt
-.tVarParm !== % value emitted 6 on line 1292 of bust.pt
-.tParmEnd !== .tIfBegin on line 1293 of bust.pt
-.tTrap !== .tLiteralAddress on line 1294 of bust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 1295 of bust.pt
-% value emitted 6 !== % value emitted 1136 on line 1296 of bust.pt
-.tIfBegin !== .tFetchInteger on line 1297 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 1298 of bust.pt
-% value emitted 1136 !== % value emitted 15 on line 1300 of bust.pt
-.tFetchInteger !== .tLT on line 1301 of bust.pt
-.tLiteralInteger !== .tIfThen on line 1302 of bust.pt
-oEmitValue !== oEmitNullAddress on line 1303 of bust.pt
-% value emitted 15 !== % value emitted -32767 on line 1304 of bust.pt
-.tLT !== .tWriteBegin on line 1305 of bust.pt
-.tIfThen !== .tTrapBegin on line 1306 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1307 of bust.pt
-% value emitted -32767 !== oEmitValue on line 1308 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1309 of bust.pt
-.tTrapBegin !== .tVarParm on line 1310 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1311 of bust.pt
-oEmitValue !== .tLiteralString on line 1312 of bust.pt
-% value emitted 4 !== oEmitValue on line 1313 of bust.pt
-.tVarParm !== % value emitted 19 on line 1314 of bust.pt
-.tParmEnd !== oEmitString on line 1315 of bust.pt
-.tLiteralString !== % value emitted 40 on line 1316 of bust.pt
-oEmitValue !== % value emitted 87 on line 1317 of bust.pt
-% value emitted 19 !== % value emitted 104 on line 1318 of bust.pt
-oEmitString !== % value emitted 97 on line 1319 of bust.pt
-% value emitted 40 !== % value emitted 116 on line 1320 of bust.pt
-% value emitted 87 !== % value emitted 32 on line 1321 of bust.pt
-% value emitted 104 !== % value emitted 97 on line 1322 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 1323 of bust.pt
-% value emitted 116 !== % value emitted 104 on line 1324 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 1325 of bust.pt
-% value emitted 97 !== % value emitted 109 on line 1326 of bust.pt
-% value emitted 32 !== % value emitted 98 on line 1327 of bust.pt
-% value emitted 104 !== % value emitted 117 on line 1328 of bust.pt
-% value emitted 97 !== % value emitted 114 on line 1329 of bust.pt
-% value emitted 109 !== % value emitted 103 on line 1330 of bust.pt
-% value emitted 98 !== % value emitted 101 on line 1331 of bust.pt
-% value emitted 117 !== % value emitted 114 on line 1332 of bust.pt
-% value emitted 114 !== % value emitted 33 on line 1333 of bust.pt
-% value emitted 103 !== % value emitted 41 on line 1334 of bust.pt
-% value emitted 101 !== .tParmEnd on line 1335 of bust.pt
-% value emitted 114 !== .tLiteralInteger on line 1336 of bust.pt
-% value emitted 33 !== oEmitValue on line 1337 of bust.pt
-% value emitted 41 !== % value emitted 1 on line 1338 of bust.pt
-.tLiteralInteger !== .tTrap on line 1340 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1341 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1342 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1343 of bust.pt
-.tTrap !== .tTrapBegin on line 1344 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1345 of bust.pt
-% value emitted 109 !== oEmitValue on line 1346 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 1347 of bust.pt
-.tTrapBegin !== .tVarParm on line 1348 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1349 of bust.pt
-oEmitValue !== .tTrap on line 1350 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1351 of bust.pt
-.tVarParm !== % value emitted 6 on line 1352 of bust.pt
-.tParmEnd !== .tIfMerge on line 1353 of bust.pt
-.tTrap !== oEmitNullAddress on line 1354 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted -32767 on line 1355 of bust.pt
-% value emitted 6 !== .tWriteBegin on line 1356 of bust.pt
-.tIfMerge !== .tTrapBegin on line 1357 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1358 of bust.pt
-% value emitted -32767 !== oEmitValue on line 1359 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1360 of bust.pt
-.tTrapBegin !== .tVarParm on line 1361 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1362 of bust.pt
-oEmitValue !== .tLiteralString on line 1363 of bust.pt
-% value emitted 4 !== oEmitValue on line 1364 of bust.pt
-.tVarParm !== % value emitted 11 on line 1365 of bust.pt
-.tParmEnd !== oEmitString on line 1366 of bust.pt
-.tLiteralString !== % value emitted 71 on line 1367 of bust.pt
-oEmitValue !== % value emitted 111 on line 1368 of bust.pt
-% value emitted 11 !== % value emitted 111 on line 1369 of bust.pt
-oEmitString !== % value emitted 100 on line 1370 of bust.pt
-% value emitted 71 !== % value emitted 32 on line 1371 of bust.pt
-% value emitted 111 !== % value emitted 108 on line 1372 of bust.pt
-% value emitted 111 !== % value emitted 117 on line 1373 of bust.pt
-% value emitted 100 !== % value emitted 99 on line 1374 of bust.pt
-% value emitted 32 !== % value emitted 107 on line 1375 of bust.pt
-% value emitted 108 !== % value emitted 44 on line 1376 of bust.pt
-% value emitted 117 !== % value emitted 32 on line 1377 of bust.pt
-% value emitted 99 !== .tParmEnd on line 1378 of bust.pt
-% value emitted 107 !== .tLiteralInteger on line 1379 of bust.pt
-% value emitted 44 !== oEmitValue on line 1380 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 1381 of bust.pt
-.tLiteralInteger !== .tTrap on line 1383 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1384 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1385 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1386 of bust.pt
-.tTrap !== .tCallBegin on line 1387 of bust.pt
-oEmitTrapKind(trWriteString) !== .tCallEnd on line 1388 of bust.pt
-% value emitted 109 !== oEmitValue on line 1389 of bust.pt
-.tWriteEnd !== % value emitted 506 on line 1390 of bust.pt
-.tCallBegin !== .tWriteBegin on line 1391 of bust.pt
-.tCallEnd !== .tTrapBegin on line 1392 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1393 of bust.pt
-% value emitted 514 !== oEmitValue on line 1394 of bust.pt
-.tWriteBegin !== % value emitted 4 on line 1395 of bust.pt
-.tTrapBegin !== .tVarParm on line 1396 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1397 of bust.pt
-oEmitValue !== .tLiteralString on line 1398 of bust.pt
-% value emitted 4 !== oEmitValue on line 1399 of bust.pt
-.tVarParm !== % value emitted 1 on line 1400 of bust.pt
-.tParmEnd !== oEmitString on line 1401 of bust.pt
-.tLiteralString !== % value emitted 46 on line 1402 of bust.pt
-oEmitValue !== .tParmEnd on line 1403 of bust.pt
-% value emitted 1 !== .tLiteralInteger on line 1404 of bust.pt
-oEmitString !== oEmitValue on line 1405 of bust.pt
-% value emitted 46 !== % value emitted 1 on line 1406 of bust.pt
-.tLiteralInteger !== .tTrap on line 1408 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1409 of bust.pt
-% value emitted 1 !== % value emitted 109 on line 1410 of bust.pt
-.tParmEnd !== .tWriteEnd on line 1411 of bust.pt
-.tTrap !== .tTrapBegin on line 1412 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1413 of bust.pt
-% value emitted 109 !== oEmitValue on line 1414 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 1415 of bust.pt
-.tTrapBegin !== .tVarParm on line 1416 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 1417 of bust.pt
-oEmitValue !== .tTrap on line 1418 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1419 of bust.pt
-.tVarParm !== % value emitted 6 on line 1420 of bust.pt
-.tParmEnd !== .tIfEnd on line 1421 of bust.pt
-.tTrap !== .tIfEnd on line 1422 of bust.pt
-oEmitTrapKind(trWriteln) !== .tAssignBegin on line 1423 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 1424 of bust.pt
-.tIfEnd !== oEmitValue on line 1425 of bust.pt
-.tIfEnd !== % value emitted 14792 on line 1426 of bust.pt
-#eMutableVarReqd !== .tFetchAddress on line 1427 of bust.pt
-.tAssignBegin !== .tLiteralBoolean on line 1428 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1429 of bust.pt
-oEmitValue !== % value emitted 1 on line 1430 of bust.pt
-% value emitted 14792 !== .tAssignBoolean on line 1431 of bust.pt
-.tFetchAddress !== .tIfEnd on line 1432 of bust.pt
-.tLiteralBoolean !== .tProcedureEnd on line 1433 of bust.pt
-oEmitValue !== .tSkipProc on line 1434 of bust.pt
-% value emitted 1 !== oEmitNullAddress on line 1435 of bust.pt
-.tAssignBoolean !== % value emitted -32767 on line 1436 of bust.pt
-.tIfEnd !== .tLiteralAddress on line 1437 of bust.pt
-.tProcedureEnd !== oEmitValue on line 1438 of bust.pt
-.tSkipProc !== % value emitted 14796 on line 1439 of bust.pt
-oEmitNullAddress !== .tStoreParmAddress on line 1440 of bust.pt
-% value emitted -32767 !== .tParmEnd on line 1441 of bust.pt
-.tLiteralAddress !== .tCallBegin on line 1442 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1443 of bust.pt
-% value emitted 14796 !== oEmitValue on line 1444 of bust.pt
-.tStoreParmAddress !== % value emitted 14800 on line 1445 of bust.pt
-.tParmEnd !== .tVarParm on line 1446 of bust.pt
-.tCallBegin !== .tParmEnd on line 1447 of bust.pt
-.tLiteralAddress !== .tCallEnd on line 1448 of bust.pt
-% value emitted 14800 !== % value emitted 383 on line 1450 of bust.pt
-.tVarParm !== .tIfBegin on line 1451 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1452 of bust.pt
-.tCallEnd !== oEmitValue on line 1453 of bust.pt
-oEmitValue !== % value emitted 14800 on line 1454 of bust.pt
-% value emitted 389 !== .tFetchInteger on line 1455 of bust.pt
-.tIfBegin !== .tLiteralInteger on line 1456 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1457 of bust.pt
-oEmitValue !== % value emitted 10 on line 1458 of bust.pt
-% value emitted 14800 !== .tGT on line 1459 of bust.pt
-.tFetchInteger !== .tIfThen on line 1460 of bust.pt
-.tLiteralInteger !== oEmitNullAddress on line 1461 of bust.pt
-oEmitValue !== % value emitted -32767 on line 1462 of bust.pt
-% value emitted 10 !== .tTrapBegin on line 1463 of bust.pt
-.tGT !== .tLiteralAddress on line 1464 of bust.pt
-.tIfThen !== oEmitValue on line 1465 of bust.pt
-oEmitNullAddress !== % value emitted 4 on line 1466 of bust.pt
-% value emitted -32767 !== .tVarParm on line 1467 of bust.pt
-.tTrapBegin !== .tParmEnd on line 1468 of bust.pt
-.tLiteralAddress !== .tTrap on line 1469 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteln) on line 1470 of bust.pt
-% value emitted 4 !== % value emitted 6 on line 1471 of bust.pt
-.tVarParm !== .tWriteBegin on line 1472 of bust.pt
-.tParmEnd !== .tTrapBegin on line 1473 of bust.pt
-.tTrap !== .tLiteralAddress on line 1474 of bust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 1475 of bust.pt
-% value emitted 6 !== % value emitted 4 on line 1476 of bust.pt
-.tWriteBegin !== .tVarParm on line 1477 of bust.pt
-.tTrapBegin !== .tParmEnd on line 1478 of bust.pt
-.tLiteralAddress !== .tLiteralString on line 1479 of bust.pt
-% value emitted 4 !== % value emitted 9 on line 1481 of bust.pt
-.tVarParm !== oEmitString on line 1482 of bust.pt
-.tParmEnd !== % value emitted 78 on line 1483 of bust.pt
-.tLiteralString !== % value emitted 101 on line 1484 of bust.pt
-oEmitValue !== % value emitted 119 on line 1485 of bust.pt
-% value emitted 9 !== % value emitted 32 on line 1486 of bust.pt
-oEmitString !== % value emitted 103 on line 1487 of bust.pt
-% value emitted 78 !== % value emitted 97 on line 1488 of bust.pt
-% value emitted 101 !== % value emitted 109 on line 1489 of bust.pt
-% value emitted 119 !== % value emitted 101 on line 1490 of bust.pt
-% value emitted 32 !== % value emitted 46 on line 1491 of bust.pt
-% value emitted 103 !== .tParmEnd on line 1492 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 1493 of bust.pt
-% value emitted 109 !== oEmitValue on line 1494 of bust.pt
-% value emitted 101 !== % value emitted 1 on line 1495 of bust.pt
-% value emitted 46 !== .tParmEnd on line 1496 of bust.pt
-.tParmEnd !== .tTrap on line 1497 of bust.pt
-.tLiteralInteger !== oEmitTrapKind(trWriteString) on line 1498 of bust.pt
-oEmitValue !== % value emitted 109 on line 1499 of bust.pt
-% value emitted 1 !== .tWriteEnd on line 1500 of bust.pt
-.tParmEnd !== .tTrapBegin on line 1501 of bust.pt
-.tTrap !== .tLiteralAddress on line 1502 of bust.pt
-oEmitTrapKind(trWriteString) !== oEmitValue on line 1503 of bust.pt
-% value emitted 109 !== % value emitted 4 on line 1504 of bust.pt
-.tWriteEnd !== .tVarParm on line 1505 of bust.pt
-.tTrapBegin !== .tParmEnd on line 1506 of bust.pt
-.tLiteralAddress !== .tTrap on line 1507 of bust.pt
-oEmitValue !== oEmitTrapKind(trWriteln) on line 1508 of bust.pt
-% value emitted 4 !== % value emitted 6 on line 1509 of bust.pt
-.tVarParm !== .tAssignBegin on line 1510 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1511 of bust.pt
-.tTrap !== oEmitValue on line 1512 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 88 on line 1513 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 1514 of bust.pt
-.tAssignBegin !== oEmitValue on line 1515 of bust.pt
-.tLiteralAddress !== % value emitted 88 on line 1516 of bust.pt
-oEmitValue !== .tFetchInteger on line 1517 of bust.pt
-% value emitted 88 !== .tLiteralInteger on line 1518 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1519 of bust.pt
-oEmitValue !== % value emitted 1 on line 1520 of bust.pt
-% value emitted 88 !== .tAdd on line 1521 of bust.pt
-.tFetchInteger !== .tAssignInteger on line 1522 of bust.pt
-.tLiteralInteger !== .tAssignBegin on line 1523 of bust.pt
-oEmitValue !== .tLiteralAddress on line 1524 of bust.pt
-% value emitted 1 !== oEmitValue on line 1525 of bust.pt
-.tAdd !== % value emitted 14796 on line 1526 of bust.pt
-.tAssignInteger !== .tFetchAddress on line 1527 of bust.pt
-#eMutableVarReqd !== .tLiteralBoolean on line 1528 of bust.pt
-.tAssignBegin !== oEmitValue on line 1529 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 1530 of bust.pt
-oEmitValue !== .tAssignBoolean on line 1531 of bust.pt
-% value emitted 14796 !== .tIfMerge on line 1532 of bust.pt
-.tFetchAddress !== oEmitNullAddress on line 1533 of bust.pt
-.tLiteralBoolean !== % value emitted -32767 on line 1534 of bust.pt
-oEmitValue !== .tTrapBegin on line 1535 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1536 of bust.pt
-.tAssignBoolean !== oEmitValue on line 1537 of bust.pt
-.tIfMerge !== % value emitted 4 on line 1538 of bust.pt
-oEmitNullAddress !== .tVarParm on line 1539 of bust.pt
-% value emitted -32767 !== .tParmEnd on line 1540 of bust.pt
-.tTrapBegin !== .tTrap on line 1541 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1542 of bust.pt
-oEmitValue !== % value emitted 6 on line 1543 of bust.pt
-% value emitted 4 !== .tWriteBegin on line 1544 of bust.pt
-.tVarParm !== .tTrapBegin on line 1545 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1546 of bust.pt
-.tTrap !== oEmitValue on line 1547 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 1548 of bust.pt
-% value emitted 6 !== .tVarParm on line 1549 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1550 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1551 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1552 of bust.pt
-oEmitValue !== % value emitted 36 on line 1553 of bust.pt
-% value emitted 4 !== oEmitString on line 1554 of bust.pt
-.tVarParm !== % value emitted 84 on line 1555 of bust.pt
-.tParmEnd !== % value emitted 111 on line 1556 of bust.pt
-.tLiteralString !== % value emitted 111 on line 1557 of bust.pt
-oEmitValue !== % value emitted 32 on line 1558 of bust.pt
-% value emitted 36 !== % value emitted 102 on line 1559 of bust.pt
-oEmitString !== % value emitted 101 on line 1560 of bust.pt
-% value emitted 84 !== % value emitted 119 on line 1561 of bust.pt
-% value emitted 111 !== % value emitted 32 on line 1562 of bust.pt
-% value emitted 111 !== % value emitted 99 on line 1563 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 1564 of bust.pt
-% value emitted 102 !== % value emitted 114 on line 1565 of bust.pt
-% value emitted 101 !== % value emitted 100 on line 1566 of bust.pt
-% value emitted 119 !== % value emitted 115 on line 1567 of bust.pt
-% value emitted 99 !== % value emitted 108 on line 1569 of bust.pt
-% value emitted 97 !== % value emitted 101 on line 1570 of bust.pt
-% value emitted 114 !== % value emitted 102 on line 1571 of bust.pt
-% value emitted 100 !== % value emitted 116 on line 1572 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 1573 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 1574 of bust.pt
-% value emitted 108 !== % value emitted 111 on line 1575 of bust.pt
-% value emitted 101 !== % value emitted 114 on line 1576 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 1577 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 1578 of bust.pt
-% value emitted 32 !== % value emitted 110 on line 1579 of bust.pt
-% value emitted 102 !== % value emitted 111 on line 1580 of bust.pt
-% value emitted 111 !== % value emitted 116 on line 1581 of bust.pt
-% value emitted 114 !== % value emitted 104 on line 1582 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 1583 of bust.pt
-% value emitted 97 !== % value emitted 114 on line 1584 of bust.pt
-% value emitted 110 !== % value emitted 32 on line 1585 of bust.pt
-% value emitted 111 !== % value emitted 103 on line 1586 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 1587 of bust.pt
-% value emitted 104 !== % value emitted 109 on line 1588 of bust.pt
-% value emitted 114 !== % value emitted 46 on line 1590 of bust.pt
-% value emitted 32 !== .tParmEnd on line 1591 of bust.pt
-% value emitted 103 !== .tLiteralInteger on line 1592 of bust.pt
-% value emitted 97 !== oEmitValue on line 1593 of bust.pt
-% value emitted 109 !== % value emitted 1 on line 1594 of bust.pt
-% value emitted 101 !== .tParmEnd on line 1595 of bust.pt
-% value emitted 46 !== .tTrap on line 1596 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1597 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1598 of bust.pt
-oEmitValue !== .tWriteEnd on line 1599 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 1600 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1601 of bust.pt
-.tTrap !== oEmitValue on line 1602 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 1603 of bust.pt
-% value emitted 109 !== .tVarParm on line 1604 of bust.pt
-.tWriteEnd !== .tParmEnd on line 1605 of bust.pt
-.tTrapBegin !== .tTrap on line 1606 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1607 of bust.pt
-oEmitValue !== % value emitted 6 on line 1608 of bust.pt
-% value emitted 4 !== .tWriteBegin on line 1609 of bust.pt
-.tVarParm !== .tTrapBegin on line 1610 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1611 of bust.pt
-.tTrap !== oEmitValue on line 1612 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 1613 of bust.pt
-% value emitted 6 !== .tVarParm on line 1614 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1615 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1616 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1617 of bust.pt
-oEmitValue !== % value emitted 3 on line 1618 of bust.pt
-% value emitted 4 !== oEmitString on line 1619 of bust.pt
-.tVarParm !== % value emitted 79 on line 1620 of bust.pt
-.tParmEnd !== % value emitted 102 on line 1621 of bust.pt
-.tLiteralString !== % value emitted 32 on line 1622 of bust.pt
-oEmitValue !== .tParmEnd on line 1623 of bust.pt
-% value emitted 3 !== .tLiteralInteger on line 1624 of bust.pt
-oEmitString !== oEmitValue on line 1625 of bust.pt
-% value emitted 79 !== % value emitted 1 on line 1626 of bust.pt
-% value emitted 102 !== .tParmEnd on line 1627 of bust.pt
-% value emitted 32 !== .tTrap on line 1628 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1629 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1630 of bust.pt
-oEmitValue !== .tTrapBegin on line 1631 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1632 of bust.pt
-.tParmEnd !== oEmitValue on line 1633 of bust.pt
-.tTrap !== % value emitted 4 on line 1634 of bust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1635 of bust.pt
-% value emitted 109 !== .tParmEnd on line 1636 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 1637 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1638 of bust.pt
-oEmitValue !== % value emitted 88 on line 1639 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 1640 of bust.pt
-.tVarParm !== .tParmEnd on line 1641 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 1642 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1643 of bust.pt
-oEmitValue !== % value emitted 1 on line 1644 of bust.pt
-% value emitted 88 !== .tParmEnd on line 1645 of bust.pt
-.tFetchInteger !== .tTrap on line 1646 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1647 of bust.pt
-.tLiteralInteger !== % value emitted 8 on line 1648 of bust.pt
-oEmitValue !== .tTrapBegin on line 1649 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1650 of bust.pt
-.tParmEnd !== oEmitValue on line 1651 of bust.pt
-.tTrap !== % value emitted 4 on line 1652 of bust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1653 of bust.pt
-% value emitted 7 !== .tParmEnd on line 1654 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1655 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1656 of bust.pt
-oEmitValue !== % value emitted 8 on line 1657 of bust.pt
-% value emitted 4 !== oEmitString on line 1658 of bust.pt
-.tVarParm !== % value emitted 32 on line 1659 of bust.pt
-.tParmEnd !== % value emitted 103 on line 1660 of bust.pt
-.tLiteralString !== % value emitted 97 on line 1661 of bust.pt
-oEmitValue !== % value emitted 109 on line 1662 of bust.pt
-% value emitted 8 !== % value emitted 101 on line 1663 of bust.pt
-oEmitString !== % value emitted 115 on line 1664 of bust.pt
-% value emitted 32 !== % value emitted 44 on line 1665 of bust.pt
-% value emitted 103 !== % value emitted 32 on line 1666 of bust.pt
-% value emitted 97 !== .tParmEnd on line 1667 of bust.pt
-% value emitted 109 !== .tLiteralInteger on line 1668 of bust.pt
-% value emitted 101 !== oEmitValue on line 1669 of bust.pt
-% value emitted 115 !== % value emitted 1 on line 1670 of bust.pt
-% value emitted 44 !== .tParmEnd on line 1671 of bust.pt
-% value emitted 32 !== .tTrap on line 1672 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1673 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1674 of bust.pt
-oEmitValue !== .tWriteEnd on line 1675 of bust.pt
-% value emitted 1 !== .tCallBegin on line 1676 of bust.pt
-.tParmEnd !== .tCallEnd on line 1677 of bust.pt
-.tTrap !== oEmitValue on line 1678 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 506 on line 1679 of bust.pt
-% value emitted 109 !== .tWriteBegin on line 1680 of bust.pt
-.tWriteEnd !== .tTrapBegin on line 1681 of bust.pt
-.tCallBegin !== .tLiteralAddress on line 1682 of bust.pt
-.tCallEnd !== oEmitValue on line 1683 of bust.pt
-oEmitValue !== % value emitted 4 on line 1684 of bust.pt
-% value emitted 514 !== .tVarParm on line 1685 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1686 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1687 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1688 of bust.pt
-oEmitValue !== % value emitted 5 on line 1689 of bust.pt
-% value emitted 4 !== oEmitString on line 1690 of bust.pt
-.tVarParm !== % value emitted 32 on line 1691 of bust.pt
-.tParmEnd !== % value emitted 119 on line 1692 of bust.pt
-.tLiteralString !== % value emitted 111 on line 1693 of bust.pt
-oEmitValue !== % value emitted 110 on line 1694 of bust.pt
-% value emitted 5 !== % value emitted 32 on line 1695 of bust.pt
-oEmitString !== .tParmEnd on line 1696 of bust.pt
-% value emitted 32 !== .tLiteralInteger on line 1697 of bust.pt
-% value emitted 119 !== oEmitValue on line 1698 of bust.pt
-% value emitted 111 !== % value emitted 1 on line 1699 of bust.pt
-% value emitted 110 !== .tParmEnd on line 1700 of bust.pt
-% value emitted 32 !== .tTrap on line 1701 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1702 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1703 of bust.pt
-oEmitValue !== .tTrapBegin on line 1704 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1705 of bust.pt
-.tParmEnd !== oEmitValue on line 1706 of bust.pt
-.tTrap !== % value emitted 4 on line 1707 of bust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1708 of bust.pt
-% value emitted 109 !== .tParmEnd on line 1709 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 1710 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1711 of bust.pt
-oEmitValue !== % value emitted 92 on line 1712 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 1713 of bust.pt
-.tVarParm !== .tParmEnd on line 1714 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 1715 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1716 of bust.pt
-oEmitValue !== % value emitted 1 on line 1717 of bust.pt
-% value emitted 92 !== .tParmEnd on line 1718 of bust.pt
-.tFetchInteger !== .tTrap on line 1719 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1720 of bust.pt
-.tLiteralInteger !== % value emitted 8 on line 1721 of bust.pt
-oEmitValue !== .tTrapBegin on line 1722 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1723 of bust.pt
-.tParmEnd !== oEmitValue on line 1724 of bust.pt
-.tTrap !== % value emitted 4 on line 1725 of bust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1726 of bust.pt
-% value emitted 7 !== .tParmEnd on line 1727 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1728 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1729 of bust.pt
-oEmitValue !== % value emitted 13 on line 1730 of bust.pt
-% value emitted 4 !== oEmitString on line 1731 of bust.pt
-.tVarParm !== % value emitted 44 on line 1732 of bust.pt
-.tParmEnd !== % value emitted 32 on line 1733 of bust.pt
-.tLiteralString !== % value emitted 100 on line 1734 of bust.pt
-oEmitValue !== % value emitted 101 on line 1735 of bust.pt
-% value emitted 13 !== % value emitted 97 on line 1736 of bust.pt
-oEmitString !== % value emitted 108 on line 1737 of bust.pt
-% value emitted 44 !== % value emitted 101 on line 1738 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 1739 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 1740 of bust.pt
-% value emitted 101 !== % value emitted 119 on line 1741 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 1742 of bust.pt
-% value emitted 108 !== % value emitted 110 on line 1743 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 1744 of bust.pt
-% value emitted 114 !== .tParmEnd on line 1745 of bust.pt
-% value emitted 32 !== .tLiteralInteger on line 1746 of bust.pt
-% value emitted 119 !== oEmitValue on line 1747 of bust.pt
-% value emitted 111 !== % value emitted 1 on line 1748 of bust.pt
-% value emitted 110 !== .tParmEnd on line 1749 of bust.pt
-% value emitted 32 !== .tTrap on line 1750 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1751 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1752 of bust.pt
-oEmitValue !== .tTrapBegin on line 1753 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1754 of bust.pt
-.tParmEnd !== oEmitValue on line 1755 of bust.pt
-.tTrap !== % value emitted 4 on line 1756 of bust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1757 of bust.pt
-% value emitted 109 !== .tParmEnd on line 1758 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 1759 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1760 of bust.pt
-oEmitValue !== % value emitted 96 on line 1761 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 1762 of bust.pt
-.tVarParm !== .tParmEnd on line 1763 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 1764 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1765 of bust.pt
-oEmitValue !== % value emitted 1 on line 1766 of bust.pt
-% value emitted 96 !== .tParmEnd on line 1767 of bust.pt
-.tFetchInteger !== .tTrap on line 1768 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1769 of bust.pt
-.tLiteralInteger !== % value emitted 8 on line 1770 of bust.pt
-oEmitValue !== .tTrapBegin on line 1771 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 1772 of bust.pt
-.tParmEnd !== oEmitValue on line 1773 of bust.pt
-.tTrap !== % value emitted 4 on line 1774 of bust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1775 of bust.pt
-% value emitted 7 !== .tParmEnd on line 1776 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1777 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1778 of bust.pt
-oEmitValue !== % value emitted 1 on line 1779 of bust.pt
-% value emitted 4 !== oEmitString on line 1780 of bust.pt
-.tVarParm !== % value emitted 46 on line 1781 of bust.pt
-.tLiteralString !== .tLiteralInteger on line 1783 of bust.pt
-oEmitString !== .tParmEnd on line 1786 of bust.pt
-% value emitted 46 !== .tTrap on line 1787 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1788 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1789 of bust.pt
-oEmitValue !== .tWriteEnd on line 1790 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 1791 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1792 of bust.pt
-.tTrap !== oEmitValue on line 1793 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 1794 of bust.pt
-% value emitted 109 !== .tVarParm on line 1795 of bust.pt
-.tWriteEnd !== .tParmEnd on line 1796 of bust.pt
-.tTrapBegin !== .tTrap on line 1797 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1798 of bust.pt
-oEmitValue !== % value emitted 6 on line 1799 of bust.pt
-% value emitted 4 !== .tIfBegin on line 1800 of bust.pt
-.tVarParm !== .tLiteralAddress on line 1801 of bust.pt
-.tParmEnd !== oEmitValue on line 1802 of bust.pt
-.tTrap !== % value emitted 96 on line 1803 of bust.pt
-oEmitTrapKind(trWriteln) !== .tFetchInteger on line 1804 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 1805 of bust.pt
-.tIfBegin !== oEmitValue on line 1806 of bust.pt
-.tLiteralAddress !== % value emitted 92 on line 1807 of bust.pt
-oEmitValue !== .tFetchInteger on line 1808 of bust.pt
-% value emitted 96 !== .tGT on line 1809 of bust.pt
-.tFetchInteger !== .tIfThen on line 1810 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 1811 of bust.pt
-oEmitValue !== % value emitted -32767 on line 1812 of bust.pt
-% value emitted 92 !== .tWriteBegin on line 1813 of bust.pt
-.tFetchInteger !== .tTrapBegin on line 1814 of bust.pt
-.tGT !== .tLiteralAddress on line 1815 of bust.pt
-.tIfThen !== oEmitValue on line 1816 of bust.pt
-oEmitNullAddress !== % value emitted 4 on line 1817 of bust.pt
-% value emitted -32767 !== .tVarParm on line 1818 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1819 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1820 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1821 of bust.pt
-oEmitValue !== % value emitted 19 on line 1822 of bust.pt
-% value emitted 4 !== oEmitString on line 1823 of bust.pt
-.tVarParm !== % value emitted 72 on line 1824 of bust.pt
-.tParmEnd !== % value emitted 111 on line 1825 of bust.pt
-.tLiteralString !== % value emitted 117 on line 1826 of bust.pt
-oEmitValue !== % value emitted 115 on line 1827 of bust.pt
-% value emitted 19 !== % value emitted 101 on line 1828 of bust.pt
-oEmitString !== % value emitted 32 on line 1829 of bust.pt
-% value emitted 72 !== % value emitted 99 on line 1830 of bust.pt
-% value emitted 111 !== % value emitted 108 on line 1831 of bust.pt
-% value emitted 117 !== % value emitted 101 on line 1832 of bust.pt
-% value emitted 115 !== % value emitted 97 on line 1833 of bust.pt
-% value emitted 101 !== % value emitted 110 on line 1834 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 1835 of bust.pt
-% value emitted 99 !== % value emitted 32 on line 1836 of bust.pt
-% value emitted 108 !== % value emitted 117 on line 1837 of bust.pt
-% value emitted 101 !== % value emitted 112 on line 1838 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 1839 of bust.pt
-% value emitted 110 !== % value emitted 111 on line 1840 of bust.pt
-% value emitted 115 !== % value emitted 110 on line 1841 of bust.pt
-% value emitted 117 !== .tParmEnd on line 1843 of bust.pt
-% value emitted 112 !== .tLiteralInteger on line 1844 of bust.pt
-% value emitted 32 !== oEmitValue on line 1845 of bust.pt
-% value emitted 111 !== % value emitted 1 on line 1846 of bust.pt
-% value emitted 110 !== .tParmEnd on line 1847 of bust.pt
-% value emitted 32 !== .tTrap on line 1848 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1849 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1850 of bust.pt
-oEmitValue !== .tWriteEnd on line 1851 of bust.pt
-% value emitted 1 !== .tCallBegin on line 1852 of bust.pt
-.tParmEnd !== .tCallEnd on line 1853 of bust.pt
-.tTrap !== oEmitValue on line 1854 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 506 on line 1855 of bust.pt
-% value emitted 109 !== .tWriteBegin on line 1856 of bust.pt
-.tWriteEnd !== .tTrapBegin on line 1857 of bust.pt
-.tCallBegin !== .tLiteralAddress on line 1858 of bust.pt
-.tCallEnd !== oEmitValue on line 1859 of bust.pt
-oEmitValue !== % value emitted 4 on line 1860 of bust.pt
-% value emitted 514 !== .tVarParm on line 1861 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1862 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1863 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1864 of bust.pt
-oEmitValue !== % value emitted 11 on line 1865 of bust.pt
-% value emitted 4 !== oEmitString on line 1866 of bust.pt
-.tVarParm !== % value emitted 32 on line 1867 of bust.pt
-.tParmEnd !== % value emitted 116 on line 1868 of bust.pt
-.tLiteralString !== % value emitted 104 on line 1869 of bust.pt
-oEmitValue !== % value emitted 105 on line 1870 of bust.pt
-% value emitted 11 !== % value emitted 115 on line 1871 of bust.pt
-oEmitString !== % value emitted 32 on line 1872 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 1873 of bust.pt
-% value emitted 116 !== % value emitted 105 on line 1874 of bust.pt
-% value emitted 104 !== % value emitted 109 on line 1875 of bust.pt
-% value emitted 105 !== % value emitted 101 on line 1876 of bust.pt
-% value emitted 115 !== % value emitted 46 on line 1877 of bust.pt
-% value emitted 32 !== .tParmEnd on line 1878 of bust.pt
-% value emitted 116 !== .tLiteralInteger on line 1879 of bust.pt
-% value emitted 105 !== oEmitValue on line 1880 of bust.pt
-% value emitted 109 !== % value emitted 1 on line 1881 of bust.pt
-% value emitted 101 !== .tParmEnd on line 1882 of bust.pt
-% value emitted 46 !== .tTrap on line 1883 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1884 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1885 of bust.pt
-oEmitValue !== .tWriteEnd on line 1886 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 1887 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1888 of bust.pt
-.tTrap !== oEmitValue on line 1889 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 1890 of bust.pt
-% value emitted 109 !== .tVarParm on line 1891 of bust.pt
-.tWriteEnd !== .tParmEnd on line 1892 of bust.pt
-.tTrapBegin !== .tTrap on line 1893 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1894 of bust.pt
-oEmitValue !== % value emitted 6 on line 1895 of bust.pt
-% value emitted 4 !== .tIfMerge on line 1896 of bust.pt
-.tVarParm !== oEmitNullAddress on line 1897 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 1898 of bust.pt
-.tTrap !== .tIfBegin on line 1899 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1900 of bust.pt
-% value emitted 6 !== oEmitValue on line 1901 of bust.pt
-.tIfMerge !== % value emitted 92 on line 1902 of bust.pt
-oEmitNullAddress !== .tFetchInteger on line 1903 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 1904 of bust.pt
-.tIfBegin !== oEmitValue on line 1905 of bust.pt
-.tLiteralAddress !== % value emitted 96 on line 1906 of bust.pt
-oEmitValue !== .tFetchInteger on line 1907 of bust.pt
-% value emitted 92 !== .tGT on line 1908 of bust.pt
-.tFetchInteger !== .tIfThen on line 1909 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 1910 of bust.pt
-oEmitValue !== % value emitted -32767 on line 1911 of bust.pt
-% value emitted 96 !== .tIfBegin on line 1912 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 1913 of bust.pt
-.tGT !== oEmitValue on line 1914 of bust.pt
-.tIfThen !== % value emitted 110 on line 1915 of bust.pt
-oEmitNullAddress !== .tFetchString on line 1916 of bust.pt
-% value emitted -32767 !== .tLiteralString on line 1917 of bust.pt
-.tIfBegin !== oEmitValue on line 1918 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 1919 of bust.pt
-oEmitValue !== oEmitString on line 1920 of bust.pt
-% value emitted 110 !== % value emitted 101 on line 1921 of bust.pt
-.tFetchString !== .tStringEqual on line 1922 of bust.pt
-.tLiteralString !== .tIfThen on line 1923 of bust.pt
-oEmitValue !== oEmitNullAddress on line 1924 of bust.pt
-% value emitted 1 !== % value emitted -32767 on line 1925 of bust.pt
-oEmitString !== .tWriteBegin on line 1926 of bust.pt
-% value emitted 101 !== .tTrapBegin on line 1927 of bust.pt
-.tStringEqual !== .tLiteralAddress on line 1928 of bust.pt
-.tIfThen !== oEmitValue on line 1929 of bust.pt
-oEmitNullAddress !== % value emitted 4 on line 1930 of bust.pt
-% value emitted -32767 !== .tVarParm on line 1931 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1932 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1933 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1934 of bust.pt
-oEmitValue !== % value emitted 24 on line 1935 of bust.pt
-% value emitted 4 !== oEmitString on line 1936 of bust.pt
-.tVarParm !== % value emitted 69 on line 1937 of bust.pt
-.tParmEnd !== % value emitted 46 on line 1938 of bust.pt
-.tLiteralString !== % value emitted 79 on line 1939 of bust.pt
-oEmitValue !== % value emitted 46 on line 1940 of bust.pt
-% value emitted 24 !== % value emitted 84 on line 1941 of bust.pt
-oEmitString !== % value emitted 104 on line 1942 of bust.pt
-% value emitted 69 !== % value emitted 111 on line 1943 of bust.pt
-% value emitted 46 !== % value emitted 114 on line 1944 of bust.pt
-% value emitted 79 !== % value emitted 112 on line 1945 of bust.pt
-% value emitted 46 !== % value emitted 32 on line 1946 of bust.pt
-% value emitted 84 !== % value emitted 100 on line 1947 of bust.pt
-% value emitted 104 !== % value emitted 111 on line 1948 of bust.pt
-% value emitted 111 !== % value emitted 101 on line 1949 of bust.pt
-% value emitted 114 !== % value emitted 115 on line 1950 of bust.pt
-% value emitted 112 !== % value emitted 32 on line 1951 of bust.pt
-% value emitted 32 !== % value emitted 105 on line 1952 of bust.pt
-% value emitted 100 !== % value emitted 116 on line 1953 of bust.pt
-% value emitted 111 !== % value emitted 32 on line 1954 of bust.pt
-% value emitted 101 !== % value emitted 97 on line 1955 of bust.pt
-% value emitted 115 !== % value emitted 103 on line 1956 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 1957 of bust.pt
-% value emitted 116 !== % value emitted 110 on line 1959 of bust.pt
-% value emitted 32 !== % value emitted 46 on line 1960 of bust.pt
-% value emitted 97 !== .tParmEnd on line 1961 of bust.pt
-% value emitted 103 !== .tLiteralInteger on line 1962 of bust.pt
-% value emitted 97 !== oEmitValue on line 1963 of bust.pt
-% value emitted 105 !== % value emitted 1 on line 1964 of bust.pt
-% value emitted 110 !== .tParmEnd on line 1965 of bust.pt
-% value emitted 46 !== .tTrap on line 1966 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1967 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 1968 of bust.pt
-oEmitValue !== .tWriteEnd on line 1969 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 1970 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 1971 of bust.pt
-.tTrap !== oEmitValue on line 1972 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 1973 of bust.pt
-% value emitted 109 !== .tVarParm on line 1974 of bust.pt
-.tWriteEnd !== .tParmEnd on line 1975 of bust.pt
-.tTrapBegin !== .tTrap on line 1976 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1977 of bust.pt
-oEmitValue !== % value emitted 6 on line 1978 of bust.pt
-% value emitted 4 !== .tIfMerge on line 1979 of bust.pt
-.tVarParm !== oEmitNullAddress on line 1980 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 1981 of bust.pt
-.tTrap !== .tCallBegin on line 1982 of bust.pt
-oEmitTrapKind(trWriteln) !== .tCallEnd on line 1983 of bust.pt
-% value emitted 6 !== oEmitValue on line 1984 of bust.pt
-.tIfMerge !== % value emitted 506 on line 1985 of bust.pt
-oEmitNullAddress !== .tWriteBegin on line 1986 of bust.pt
-% value emitted -32767 !== .tTrapBegin on line 1987 of bust.pt
-.tCallBegin !== .tLiteralAddress on line 1988 of bust.pt
-.tCallEnd !== oEmitValue on line 1989 of bust.pt
-oEmitValue !== % value emitted 4 on line 1990 of bust.pt
-% value emitted 514 !== .tVarParm on line 1991 of bust.pt
-.tWriteBegin !== .tParmEnd on line 1992 of bust.pt
-.tTrapBegin !== .tLiteralString on line 1993 of bust.pt
-.tLiteralAddress !== oEmitValue on line 1994 of bust.pt
-oEmitValue !== % value emitted 32 on line 1995 of bust.pt
-% value emitted 4 !== oEmitString on line 1996 of bust.pt
-.tVarParm !== % value emitted 32 on line 1997 of bust.pt
-.tParmEnd !== % value emitted 109 on line 1998 of bust.pt
-.tLiteralString !== % value emitted 117 on line 1999 of bust.pt
-oEmitValue !== % value emitted 115 on line 2000 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 2001 of bust.pt
-oEmitString !== % value emitted 32 on line 2002 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 2003 of bust.pt
-% value emitted 109 !== % value emitted 97 on line 2004 of bust.pt
-% value emitted 117 !== % value emitted 118 on line 2005 of bust.pt
-% value emitted 115 !== % value emitted 101 on line 2006 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 2007 of bust.pt
-% value emitted 32 !== % value emitted 100 on line 2008 of bust.pt
-% value emitted 104 !== % value emitted 111 on line 2009 of bust.pt
-% value emitted 97 !== % value emitted 99 on line 2010 of bust.pt
-% value emitted 118 !== % value emitted 116 on line 2011 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 2012 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 2013 of bust.pt
-% value emitted 100 !== % value emitted 101 on line 2014 of bust.pt
-% value emitted 111 !== % value emitted 100 on line 2015 of bust.pt
-% value emitted 99 !== % value emitted 32 on line 2016 of bust.pt
-% value emitted 111 !== % value emitted 104 on line 2018 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 2019 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 2020 of bust.pt
-% value emitted 100 !== % value emitted 115 on line 2021 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 2022 of bust.pt
-% value emitted 116 !== % value emitted 117 on line 2023 of bust.pt
-% value emitted 104 !== % value emitted 102 on line 2024 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 2025 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 2026 of bust.pt
-% value emitted 115 !== % value emitted 101 on line 2027 of bust.pt
-% value emitted 104 !== % value emitted 46 on line 2028 of bust.pt
-% value emitted 117 !== .tParmEnd on line 2029 of bust.pt
-% value emitted 102 !== .tLiteralInteger on line 2030 of bust.pt
-% value emitted 102 !== oEmitValue on line 2031 of bust.pt
-% value emitted 108 !== % value emitted 1 on line 2032 of bust.pt
-% value emitted 101 !== .tParmEnd on line 2033 of bust.pt
-% value emitted 46 !== .tTrap on line 2034 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2035 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 2036 of bust.pt
-oEmitValue !== .tWriteEnd on line 2037 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 2038 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 2039 of bust.pt
-.tTrap !== oEmitValue on line 2040 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2041 of bust.pt
-% value emitted 109 !== .tVarParm on line 2042 of bust.pt
-.tWriteEnd !== .tParmEnd on line 2043 of bust.pt
-.tTrapBegin !== .tTrap on line 2044 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2045 of bust.pt
-oEmitValue !== % value emitted 6 on line 2046 of bust.pt
-% value emitted 4 !== .tIfEnd on line 2047 of bust.pt
-.tVarParm !== .tIfMerge on line 2048 of bust.pt
-.tParmEnd !== oEmitNullAddress on line 2049 of bust.pt
-.tTrap !== % value emitted -32767 on line 2050 of bust.pt
-oEmitTrapKind(trWriteln) !== .tWriteBegin on line 2051 of bust.pt
-% value emitted 6 !== .tTrapBegin on line 2052 of bust.pt
-.tIfEnd !== .tLiteralAddress on line 2053 of bust.pt
-.tIfMerge !== oEmitValue on line 2054 of bust.pt
-oEmitNullAddress !== % value emitted 4 on line 2055 of bust.pt
-% value emitted -32767 !== .tVarParm on line 2056 of bust.pt
-.tWriteBegin !== .tParmEnd on line 2057 of bust.pt
-.tTrapBegin !== .tLiteralString on line 2058 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2059 of bust.pt
-oEmitValue !== % value emitted 13 on line 2060 of bust.pt
-% value emitted 4 !== oEmitString on line 2061 of bust.pt
-.tVarParm !== % value emitted 69 on line 2062 of bust.pt
-.tParmEnd !== % value emitted 118 on line 2063 of bust.pt
-.tLiteralString !== % value emitted 101 on line 2064 of bust.pt
-oEmitValue !== % value emitted 110 on line 2065 of bust.pt
-% value emitted 13 !== % value emitted 32 on line 2066 of bust.pt
-oEmitString !== % value emitted 115 on line 2067 of bust.pt
-% value emitted 69 !== % value emitted 104 on line 2068 of bust.pt
-% value emitted 118 !== % value emitted 117 on line 2069 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 2070 of bust.pt
-% value emitted 110 !== % value emitted 102 on line 2071 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 2072 of bust.pt
-% value emitted 115 !== % value emitted 101 on line 2073 of bust.pt
-% value emitted 104 !== % value emitted 46 on line 2074 of bust.pt
-% value emitted 117 !== .tParmEnd on line 2075 of bust.pt
-% value emitted 102 !== .tLiteralInteger on line 2076 of bust.pt
-% value emitted 102 !== oEmitValue on line 2077 of bust.pt
-% value emitted 108 !== % value emitted 1 on line 2078 of bust.pt
-% value emitted 101 !== .tParmEnd on line 2079 of bust.pt
-% value emitted 46 !== .tTrap on line 2080 of bust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2081 of bust.pt
-.tLiteralInteger !== % value emitted 109 on line 2082 of bust.pt
-oEmitValue !== .tWriteEnd on line 2083 of bust.pt
-% value emitted 1 !== .tTrapBegin on line 2084 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 2085 of bust.pt
-.tTrap !== oEmitValue on line 2086 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2087 of bust.pt
-% value emitted 109 !== .tVarParm on line 2088 of bust.pt
-.tWriteEnd !== .tParmEnd on line 2089 of bust.pt
-.tTrapBegin !== .tTrap on line 2090 of bust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2091 of bust.pt
-oEmitValue !== % value emitted 6 on line 2092 of bust.pt
-% value emitted 4 !== .tIfEnd on line 2093 of bust.pt
-.tVarParm !== .tIfEnd on line 2094 of bust.pt
-.tParmEnd !== .tAssignBegin on line 2095 of bust.pt
-.tTrap !== .tLiteralAddress on line 2096 of bust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 2097 of bust.pt
-% value emitted 6 !== % value emitted 14796 on line 2098 of bust.pt
-.tIfEnd !== .tFetchAddress on line 2099 of bust.pt
-.tIfEnd !== .tLiteralBoolean on line 2100 of bust.pt
-#eMutableVarReqd !== oEmitValue on line 2101 of bust.pt
-.tAssignBegin !== % value emitted 0 on line 2102 of bust.pt
-.tLiteralAddress !== .tAssignBoolean on line 2103 of bust.pt
-oEmitValue !== .tIfEnd on line 2104 of bust.pt
-% value emitted 14796 !== .tProcedureEnd on line 2105 of bust.pt
-.tFetchAddress !== .tSkipProc on line 2106 of bust.pt
-.tLiteralBoolean !== oEmitNullAddress on line 2107 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2108 of bust.pt
-% value emitted 0 !== .tParmEnd on line 2109 of bust.pt
-.tAssignBoolean !== .tAssignBegin on line 2110 of bust.pt
-.tIfEnd !== .tLiteralAddress on line 2111 of bust.pt
-.tProcedureEnd !== oEmitValue on line 2112 of bust.pt
-.tSkipProc !== % value emitted 80 on line 2113 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2114 of bust.pt
-% value emitted -32767 !== oEmitValue on line 2115 of bust.pt
-.tParmEnd !== % value emitted 80 on line 2116 of bust.pt
-.tAssignBegin !== .tFetchInteger on line 2117 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2118 of bust.pt
-% value emitted 80 !== % value emitted 1 on line 2120 of bust.pt
-.tLiteralAddress !== .tAdd on line 2121 of bust.pt
-oEmitValue !== .tAssignInteger on line 2122 of bust.pt
-% value emitted 80 !== .tCallBegin on line 2123 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 2124 of bust.pt
-.tLiteralInteger !== oEmitValue on line 2125 of bust.pt
-oEmitValue !== % value emitted 8 on line 2126 of bust.pt
-% value emitted 1 !== .tSubscriptBegin on line 2127 of bust.pt
-.tAdd !== .tLiteralAddress on line 2128 of bust.pt
-.tAssignInteger !== oEmitValue on line 2129 of bust.pt
-.tCallBegin !== % value emitted 80 on line 2130 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 2131 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 2132 of bust.pt
-% value emitted 8 !== .tVarParm on line 2133 of bust.pt
-.tSubscriptBegin !== .tParmEnd on line 2134 of bust.pt
-.tLiteralAddress !== .tCallEnd on line 2135 of bust.pt
-% value emitted 80 !== % value emitted 345 on line 2137 of bust.pt
-.tFetchInteger !== .tProcedureEnd on line 2138 of bust.pt
-.tSubscriptInteger !== .tSkipProc on line 2139 of bust.pt
-.tVarParm !== oEmitNullAddress on line 2140 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 2141 of bust.pt
-.tCallEnd !== .tParmEnd on line 2142 of bust.pt
-oEmitValue !== .tAssignBegin on line 2143 of bust.pt
-% value emitted 351 !== .tLiteralAddress on line 2144 of bust.pt
-.tProcedureEnd !== oEmitValue on line 2145 of bust.pt
-.tSkipProc !== % value emitted 84 on line 2146 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2147 of bust.pt
-% value emitted -32767 !== oEmitValue on line 2148 of bust.pt
-.tParmEnd !== % value emitted 84 on line 2149 of bust.pt
-.tAssignBegin !== .tFetchInteger on line 2150 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2151 of bust.pt
-% value emitted 84 !== % value emitted 1 on line 2153 of bust.pt
-.tLiteralAddress !== .tAdd on line 2154 of bust.pt
-oEmitValue !== .tAssignInteger on line 2155 of bust.pt
-% value emitted 84 !== .tCallBegin on line 2156 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 2157 of bust.pt
-.tLiteralInteger !== oEmitValue on line 2158 of bust.pt
-oEmitValue !== % value emitted 44 on line 2159 of bust.pt
-% value emitted 1 !== .tSubscriptBegin on line 2160 of bust.pt
-.tAdd !== .tLiteralAddress on line 2161 of bust.pt
-.tAssignInteger !== oEmitValue on line 2162 of bust.pt
-.tCallBegin !== % value emitted 84 on line 2163 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 2164 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 2165 of bust.pt
-% value emitted 44 !== .tVarParm on line 2166 of bust.pt
-.tSubscriptBegin !== .tParmEnd on line 2167 of bust.pt
-.tLiteralAddress !== .tCallEnd on line 2168 of bust.pt
-% value emitted 84 !== % value emitted 345 on line 2170 of bust.pt
-.tFetchInteger !== .tProcedureEnd on line 2171 of bust.pt
-.tSubscriptInteger !== .tSkipProc on line 2172 of bust.pt
-.tVarParm !== oEmitNullAddress on line 2173 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 2174 of bust.pt
-.tCallEnd !== .tParmEnd on line 2175 of bust.pt
-oEmitValue !== .tAssignBegin on line 2176 of bust.pt
-% value emitted 351 !== .tLiteralAddress on line 2177 of bust.pt
-.tProcedureEnd !== oEmitValue on line 2178 of bust.pt
-.tSkipProc !== % value emitted 109 on line 2179 of bust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 2180 of bust.pt
-% value emitted -32767 !== oEmitValue on line 2181 of bust.pt
-.tParmEnd !== % value emitted 0 on line 2182 of bust.pt
-.tAssignBegin !== .tAssignBoolean on line 2183 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2184 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2185 of bust.pt
-% value emitted 109 !== oEmitValue on line 2186 of bust.pt
-.tLiteralBoolean !== % value emitted 108 on line 2187 of bust.pt
-oEmitValue !== .tLiteralBoolean on line 2188 of bust.pt
-% value emitted 0 !== oEmitValue on line 2189 of bust.pt
-.tAssignBoolean !== % value emitted 0 on line 2190 of bust.pt
-.tAssignBegin !== .tAssignBoolean on line 2191 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2192 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2193 of bust.pt
-% value emitted 108 !== oEmitValue on line 2194 of bust.pt
-.tLiteralBoolean !== % value emitted 80 on line 2195 of bust.pt
-oEmitValue !== .tLiteralInteger on line 2196 of bust.pt
-% value emitted 0 !== oEmitValue on line 2197 of bust.pt
-.tAssignBoolean !== % value emitted 0 on line 2198 of bust.pt
-.tAssignBegin !== .tAssignInteger on line 2199 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2200 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2201 of bust.pt
-% value emitted 80 !== oEmitValue on line 2202 of bust.pt
-.tLiteralInteger !== % value emitted 84 on line 2203 of bust.pt
-oEmitValue !== .tLiteralInteger on line 2204 of bust.pt
-% value emitted 0 !== oEmitValue on line 2205 of bust.pt
-.tAssignInteger !== % value emitted 0 on line 2206 of bust.pt
-.tAssignBegin !== .tAssignInteger on line 2207 of bust.pt
-.tLiteralAddress !== .tCallBegin on line 2208 of bust.pt
-oEmitValue !== .tCallEnd on line 2209 of bust.pt
-% value emitted 84 !== oEmitValue on line 2210 of bust.pt
-.tLiteralInteger !== % value emitted 1958 on line 2211 of bust.pt
-oEmitValue !== .tCallBegin on line 2212 of bust.pt
-% value emitted 0 !== .tCallEnd on line 2213 of bust.pt
-.tAssignInteger !== oEmitValue on line 2214 of bust.pt
-.tCallBegin !== % value emitted 1992 on line 2215 of bust.pt
-.tCallEnd !== .tCallBegin on line 2216 of bust.pt
-oEmitValue !== .tCallEnd on line 2217 of bust.pt
-% value emitted 1968 !== oEmitValue on line 2218 of bust.pt
-.tCallBegin !== % value emitted 1958 on line 2219 of bust.pt
-.tCallEnd !== .tCallBegin on line 2220 of bust.pt
-oEmitValue !== .tCallEnd on line 2221 of bust.pt
-% value emitted 2002 !== oEmitValue on line 2222 of bust.pt
-.tCallBegin !== % value emitted 1992 on line 2223 of bust.pt
-.tCallEnd !== .tWriteBegin on line 2224 of bust.pt
-oEmitValue !== .tTrapBegin on line 2225 of bust.pt
-% value emitted 1968 !== .tLiteralAddress on line 2226 of bust.pt
-.tCallBegin !== oEmitValue on line 2227 of bust.pt
-.tCallEnd !== % value emitted 4 on line 2228 of bust.pt
-oEmitValue !== .tVarParm on line 2229 of bust.pt
-% value emitted 2002 !== .tParmEnd on line 2230 of bust.pt
-.tWriteBegin !== .tLiteralString on line 2231 of bust.pt
-.tTrapBegin !== oEmitValue on line 2232 of bust.pt
-.tLiteralAddress !== % value emitted 23 on line 2233 of bust.pt
-oEmitValue !== oEmitString on line 2234 of bust.pt
-% value emitted 4 !== % value emitted 84 on line 2235 of bust.pt
-.tVarParm !== % value emitted 104 on line 2236 of bust.pt
-.tParmEnd !== % value emitted 101 on line 2237 of bust.pt
-.tLiteralString !== % value emitted 32 on line 2238 of bust.pt
-oEmitValue !== % value emitted 105 on line 2239 of bust.pt
-% value emitted 23 !== % value emitted 110 on line 2240 of bust.pt
-oEmitString !== % value emitted 105 on line 2241 of bust.pt
-% value emitted 84 !== % value emitted 116 on line 2242 of bust.pt
-% value emitted 104 !== % value emitted 105 on line 2243 of bust.pt
-% value emitted 101 !== % value emitted 97 on line 2244 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 2245 of bust.pt
-% value emitted 105 !== % value emitted 32 on line 2246 of bust.pt
-% value emitted 110 !== % value emitted 100 on line 2247 of bust.pt
-% value emitted 105 !== % value emitted 101 on line 2248 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 2249 of bust.pt
-% value emitted 105 !== % value emitted 108 on line 2250 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 2251 of bust.pt
-% value emitted 108 !== % value emitted 103 on line 2252 of bust.pt
-% value emitted 32 !== % value emitted 105 on line 2253 of bust.pt
-% value emitted 100 !== % value emitted 118 on line 2254 of bust.pt
-% value emitted 97 !== % value emitted 115 on line 2256 of bust.pt
-% value emitted 108 !== % value emitted 32 on line 2257 of bust.pt
-% value emitted 32 !== .tParmEnd on line 2258 of bust.pt
-% value emitted 103 !== .tLiteralInteger on line 2259 of bust.pt
-% value emitted 105 !== oEmitValue on line 2260 of bust.pt
-% value emitted 118 !== % value emitted 1 on line 2261 of bust.pt
-% value emitted 101 !== .tParmEnd on line 2262 of bust.pt
-% value emitted 115 !== .tTrap on line 2263 of bust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 2264 of bust.pt
-.tParmEnd !== % value emitted 109 on line 2265 of bust.pt
-.tLiteralInteger !== .tWriteEnd on line 2266 of bust.pt
-oEmitValue !== .tCallBegin on line 2267 of bust.pt
-% value emitted 1 !== .tCallEnd on line 2268 of bust.pt
-.tParmEnd !== oEmitValue on line 2269 of bust.pt
-.tTrap !== % value emitted 506 on line 2270 of bust.pt
-oEmitTrapKind(trWriteString) !== .tWriteBegin on line 2271 of bust.pt
-% value emitted 109 !== .tTrapBegin on line 2272 of bust.pt
-.tWriteEnd !== .tLiteralAddress on line 2273 of bust.pt
-.tCallBegin !== oEmitValue on line 2274 of bust.pt
-.tCallEnd !== % value emitted 4 on line 2275 of bust.pt
-oEmitValue !== .tVarParm on line 2276 of bust.pt
-% value emitted 514 !== .tParmEnd on line 2277 of bust.pt
-.tWriteBegin !== .tLiteralString on line 2278 of bust.pt
-.tTrapBegin !== oEmitValue on line 2279 of bust.pt
-.tLiteralAddress !== % value emitted 2 on line 2280 of bust.pt
-oEmitValue !== oEmitString on line 2281 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 2282 of bust.pt
-.tVarParm !== % value emitted 58 on line 2283 of bust.pt
-.tLiteralString !== .tLiteralInteger on line 2285 of bust.pt
-% value emitted 2 !== % value emitted 1 on line 2287 of bust.pt
-oEmitString !== .tParmEnd on line 2288 of bust.pt
-% value emitted 32 !== .tTrap on line 2289 of bust.pt
-% value emitted 58 !== oEmitTrapKind(trWriteString) on line 2290 of bust.pt
-.tParmEnd !== % value emitted 109 on line 2291 of bust.pt
-.tLiteralInteger !== .tWriteEnd on line 2292 of bust.pt
-oEmitValue !== .tCallBegin on line 2293 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 2294 of bust.pt
-.tParmEnd !== oEmitValue on line 2295 of bust.pt
-.tTrap !== % value emitted 80 on line 2296 of bust.pt
-oEmitTrapKind(trWriteString) !== .tFetchInteger on line 2297 of bust.pt
-% value emitted 109 !== .tParmEnd on line 2298 of bust.pt
-.tWriteEnd !== .tLiteralAddress on line 2299 of bust.pt
-.tCallBegin !== oEmitValue on line 2300 of bust.pt
-.tLiteralAddress !== % value emitted 8 on line 2301 of bust.pt
-oEmitValue !== .tVarParm on line 2302 of bust.pt
-% value emitted 80 !== .tParmEnd on line 2303 of bust.pt
-.tFetchInteger !== .tCallEnd on line 2304 of bust.pt
-.tParmEnd !== oEmitValue on line 2305 of bust.pt
-.tLiteralAddress !== % value emitted 410 on line 2306 of bust.pt
-oEmitValue !== .tTrapBegin on line 2307 of bust.pt
-% value emitted 8 !== .tLiteralAddress on line 2308 of bust.pt
-.tVarParm !== oEmitValue on line 2309 of bust.pt
-.tParmEnd !== % value emitted 4 on line 2310 of bust.pt
-.tCallEnd !== .tVarParm on line 2311 of bust.pt
-oEmitValue !== .tParmEnd on line 2312 of bust.pt
-% value emitted 416 !== .tTrap on line 2313 of bust.pt
-.tTrapBegin !== oEmitTrapKind(trWriteln) on line 2314 of bust.pt
-.tLiteralAddress !== % value emitted 6 on line 2315 of bust.pt
-oEmitValue !== .tWriteBegin on line 2316 of bust.pt
-% value emitted 4 !== .tTrapBegin on line 2317 of bust.pt
-.tVarParm !== .tLiteralAddress on line 2318 of bust.pt
-.tParmEnd !== oEmitValue on line 2319 of bust.pt
-.tTrap !== % value emitted 4 on line 2320 of bust.pt
-oEmitTrapKind(trWriteln) !== .tVarParm on line 2321 of bust.pt
-% value emitted 6 !== .tParmEnd on line 2322 of bust.pt
-.tWriteBegin !== .tLiteralString on line 2323 of bust.pt
-.tTrapBegin !== oEmitValue on line 2324 of bust.pt
-.tLiteralAddress !== % value emitted 18 on line 2325 of bust.pt
-oEmitValue !== oEmitString on line 2326 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 2327 of bust.pt
-.tVarParm !== % value emitted 32 on line 2328 of bust.pt
-.tParmEnd !== % value emitted 97 on line 2329 of bust.pt
-.tLiteralString !== % value emitted 110 on line 2330 of bust.pt
-oEmitValue !== % value emitted 100 on line 2331 of bust.pt
-% value emitted 18 !== % value emitted 32 on line 2332 of bust.pt
-oEmitString !== % value emitted 116 on line 2333 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 2334 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 2335 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 2336 of bust.pt
-% value emitted 110 !== % value emitted 100 on line 2337 of bust.pt
-% value emitted 100 !== % value emitted 101 on line 2338 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 2339 of bust.pt
-% value emitted 116 !== % value emitted 108 on line 2340 of bust.pt
-% value emitted 104 !== % value emitted 101 on line 2341 of bust.pt
-% value emitted 101 !== % value emitted 114 on line 2342 of bust.pt
-% value emitted 100 !== % value emitted 58 on line 2344 of bust.pt
-% value emitted 101 !== .tParmEnd on line 2345 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 2346 of bust.pt
-% value emitted 108 !== oEmitValue on line 2347 of bust.pt
-% value emitted 101 !== % value emitted 1 on line 2348 of bust.pt
-% value emitted 114 !== .tParmEnd on line 2349 of bust.pt
-% value emitted 32 !== .tTrap on line 2350 of bust.pt
-% value emitted 58 !== oEmitTrapKind(trWriteString) on line 2351 of bust.pt
-.tParmEnd !== % value emitted 109 on line 2352 of bust.pt
-.tLiteralInteger !== .tWriteEnd on line 2353 of bust.pt
-oEmitValue !== .tCallBegin on line 2354 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 2355 of bust.pt
-.tParmEnd !== oEmitValue on line 2356 of bust.pt
-.tTrap !== % value emitted 84 on line 2357 of bust.pt
-oEmitTrapKind(trWriteString) !== .tFetchInteger on line 2358 of bust.pt
-% value emitted 109 !== .tParmEnd on line 2359 of bust.pt
-.tWriteEnd !== .tLiteralAddress on line 2360 of bust.pt
-.tCallBegin !== oEmitValue on line 2361 of bust.pt
-.tLiteralAddress !== % value emitted 44 on line 2362 of bust.pt
-oEmitValue !== .tVarParm on line 2363 of bust.pt
-% value emitted 84 !== .tParmEnd on line 2364 of bust.pt
-.tFetchInteger !== .tCallEnd on line 2365 of bust.pt
-.tParmEnd !== oEmitValue on line 2366 of bust.pt
-.tLiteralAddress !== % value emitted 410 on line 2367 of bust.pt
-oEmitValue !== .tWriteBegin on line 2368 of bust.pt
-% value emitted 44 !== .tTrapBegin on line 2369 of bust.pt
-.tVarParm !== .tLiteralAddress on line 2370 of bust.pt
-.tParmEnd !== oEmitValue on line 2371 of bust.pt
-.tCallEnd !== % value emitted 4 on line 2372 of bust.pt
-oEmitValue !== .tVarParm on line 2373 of bust.pt
-% value emitted 416 !== .tParmEnd on line 2374 of bust.pt
-.tWriteBegin !== .tLiteralString on line 2375 of bust.pt
-.tTrapBegin !== oEmitValue on line 2376 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 2377 of bust.pt
-oEmitValue !== oEmitString on line 2378 of bust.pt
-% value emitted 4 !== % value emitted 46 on line 2379 of bust.pt
-.tVarParm !== .tParmEnd on line 2380 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 2381 of bust.pt
-.tLiteralString !== oEmitValue on line 2382 of bust.pt
-oEmitValue !== % value emitted 1 on line 2383 of bust.pt
-% value emitted 1 !== .tParmEnd on line 2384 of bust.pt
-oEmitString !== .tTrap on line 2385 of bust.pt
-% value emitted 46 !== oEmitTrapKind(trWriteString) on line 2386 of bust.pt
-.tParmEnd !== % value emitted 109 on line 2387 of bust.pt
-.tLiteralInteger !== .tWriteEnd on line 2388 of bust.pt
-oEmitValue !== .tTrapBegin on line 2389 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 2390 of bust.pt
-.tParmEnd !== oEmitValue on line 2391 of bust.pt
-.tTrap !== % value emitted 4 on line 2392 of bust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 2393 of bust.pt
-% value emitted 109 !== .tParmEnd on line 2394 of bust.pt
-.tWriteEnd !== .tTrap on line 2395 of bust.pt
-.tTrapBegin !== oEmitTrapKind(trWriteln) on line 2396 of bust.pt
-.tLiteralAddress !== % value emitted 6 on line 2397 of bust.pt
-oEmitValue !== .tProcedureEnd on line 2398 of bust.pt
-% value emitted 4 !== .tSkipProc on line 2399 of bust.pt
-.tVarParm !== oEmitNullAddress on line 2400 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 2401 of bust.pt
-.tTrap !== .tLiteralAddress on line 2402 of bust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 2403 of bust.pt
-% value emitted 6 !== % value emitted 14816 on line 2404 of bust.pt
-.tProcedureEnd !== .tStoreParmAddress on line 2405 of bust.pt
-.tSkipProc !== .tLiteralAddress on line 2406 of bust.pt
-oEmitNullAddress !== oEmitValue on line 2407 of bust.pt
-% value emitted -32767 !== % value emitted 14812 on line 2408 of bust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 2409 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2410 of bust.pt
-% value emitted 14816 !== oEmitValue on line 2411 of bust.pt
-.tStoreParmAddress !== % value emitted 14808 on line 2412 of bust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 2413 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2414 of bust.pt
-% value emitted 14812 !== oEmitValue on line 2415 of bust.pt
-.tStoreParmAddress !== % value emitted 14804 on line 2416 of bust.pt
-.tLiteralAddress !== .tStoreParmInteger on line 2417 of bust.pt
-oEmitValue !== .tParmEnd on line 2418 of bust.pt
-% value emitted 14808 !== .tAssignBegin on line 2419 of bust.pt
-.tStoreParmAddress !== .tLiteralAddress on line 2420 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2421 of bust.pt
-oEmitValue !== % value emitted 14816 on line 2422 of bust.pt
-% value emitted 14804 !== .tFetchAddress on line 2423 of bust.pt
-.tStoreParmInteger !== .tLiteralInteger on line 2424 of bust.pt
-.tParmEnd !== oEmitValue on line 2425 of bust.pt
-#eMutableVarReqd !== % value emitted 0 on line 2426 of bust.pt
-.tAssignBegin !== .tAssignInteger on line 2427 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2428 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2429 of bust.pt
-% value emitted 14816 !== oEmitValue on line 2430 of bust.pt
-.tFetchAddress !== % value emitted 14820 on line 2431 of bust.pt
-% value emitted 14820 !== % value emitted 14824 on line 2439 of bust.pt
-% value emitted 0 !== % value emitted 1 on line 2442 of bust.pt
-.tAssignBegin !== .tWhileBegin on line 2444 of bust.pt
-.tLiteralAddress !== .tWhilePreBreak on line 2445 of bust.pt
-oEmitValue !== .tWhileBreakIf on line 2446 of bust.pt
-% value emitted 14824 !== .tLiteralAddress on line 2447 of bust.pt
-.tLiteralInteger !== oEmitValue on line 2448 of bust.pt
-oEmitValue !== % value emitted 14824 on line 2449 of bust.pt
-% value emitted 1 !== .tFetchInteger on line 2450 of bust.pt
-.tAssignInteger !== .tLiteralAddress on line 2451 of bust.pt
-.tWhileBegin !== oEmitValue on line 2452 of bust.pt
-.tWhilePreBreak !== % value emitted 14804 on line 2453 of bust.pt
-oEmitNullAddress !== .tFetchInteger on line 2454 of bust.pt
-% value emitted -32767 !== .tGT on line 2455 of bust.pt
-.tWhileBreakIf !== .tNot on line 2456 of bust.pt
-.tLiteralAddress !== .tWhileTest on line 2457 of bust.pt
-oEmitValue !== oEmitNullAddress on line 2458 of bust.pt
-% value emitted 14824 !== % value emitted -32767 on line 2459 of bust.pt
-.tFetchInteger !== .tCaseBegin on line 2460 of bust.pt
-% value emitted 14804 !== % value emitted 14808 on line 2463 of bust.pt
-.tFetchInteger !== .tFetchAddress on line 2464 of bust.pt
-.tGT !== .tSubscriptBegin on line 2465 of bust.pt
-.tNot !== .tLiteralAddress on line 2466 of bust.pt
-.tWhileTest !== oEmitValue on line 2467 of bust.pt
-.tCaseBegin !== % value emitted 14824 on line 2468 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 2469 of bust.pt
-oEmitValue !== .tSubscriptInteger on line 2470 of bust.pt
-% value emitted 14808 !== .tFetchInteger on line 2471 of bust.pt
-.tFetchAddress !== .tCaseSelect on line 2472 of bust.pt
-.tSubscriptBegin !== oEmitNullAddress on line 2473 of bust.pt
-.tLiteralAddress !== % value emitted -32767 on line 2474 of bust.pt
-oEmitValue !== .tAssignBegin on line 2475 of bust.pt
-% value emitted 14824 !== .tLiteralAddress on line 2476 of bust.pt
-.tFetchInteger !== oEmitValue on line 2477 of bust.pt
-.tSubscriptInteger !== % value emitted 14816 on line 2478 of bust.pt
-.tFetchInteger !== .tFetchAddress on line 2479 of bust.pt
-.tCaseSelect !== .tLiteralAddress on line 2480 of bust.pt
-oEmitNullAddress !== oEmitValue on line 2481 of bust.pt
-% value emitted -32767 !== % value emitted 14816 on line 2482 of bust.pt
-#eMutableVarReqd !== .tFetchAddress on line 2483 of bust.pt
-.tAssignBegin !== .tFetchInteger on line 2484 of bust.pt
-% value emitted 14816 !== % value emitted 14808 on line 2487 of bust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 2489 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2490 of bust.pt
-% value emitted 14816 !== oEmitValue on line 2491 of bust.pt
-.tFetchAddress !== % value emitted 14824 on line 2492 of bust.pt
-.tLiteralAddress !== .tSubscriptInteger on line 2494 of bust.pt
-oEmitValue !== .tFetchInteger on line 2495 of bust.pt
-% value emitted 14808 !== .tAdd on line 2496 of bust.pt
-.tFetchAddress !== .tAssignInteger on line 2497 of bust.pt
-.tSubscriptBegin !== .tCaseMerge on line 2498 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2499 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2500 of bust.pt
-% value emitted 14824 !== .tAssignBegin on line 2501 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 2502 of bust.pt
-.tSubscriptInteger !== oEmitValue on line 2503 of bust.pt
-.tFetchInteger !== % value emitted 14816 on line 2504 of bust.pt
-.tAdd !== .tFetchAddress on line 2505 of bust.pt
-.tAssignInteger !== .tLiteralAddress on line 2506 of bust.pt
-.tCaseMerge !== oEmitValue on line 2507 of bust.pt
-oEmitNullAddress !== % value emitted 14816 on line 2508 of bust.pt
-% value emitted -32767 !== .tFetchAddress on line 2509 of bust.pt
-#eMutableVarReqd !== .tFetchInteger on line 2510 of bust.pt
-.tAssignBegin !== .tLiteralInteger on line 2511 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2512 of bust.pt
-oEmitValue !== % value emitted 11 on line 2513 of bust.pt
-% value emitted 14816 !== .tAdd on line 2514 of bust.pt
-.tFetchAddress !== .tAssignInteger on line 2515 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2516 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2517 of bust.pt
-% value emitted 14816 !== oEmitValue on line 2518 of bust.pt
-.tFetchAddress !== % value emitted 14820 on line 2519 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 2520 of bust.pt
-.tLiteralInteger !== oEmitValue on line 2521 of bust.pt
-oEmitValue !== % value emitted 14820 on line 2522 of bust.pt
-% value emitted 11 !== .tFetchInteger on line 2523 of bust.pt
-.tAdd !== .tLiteralInteger on line 2524 of bust.pt
-.tAssignInteger !== oEmitValue on line 2525 of bust.pt
-.tAssignBegin !== % value emitted 1 on line 2526 of bust.pt
-.tLiteralAddress !== .tAdd on line 2527 of bust.pt
-oEmitValue !== .tAssignInteger on line 2528 of bust.pt
-% value emitted 14820 !== .tCaseMerge on line 2529 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2530 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2531 of bust.pt
-% value emitted 14820 !== .tCaseEnd on line 2532 of bust.pt
-.tFetchInteger !== oEmitCaseBranchTable on line 2533 of bust.pt
-.tLiteralInteger !== % value emitted 1 on line 2534 of bust.pt
-oEmitValue !== % value emitted 10 on line 2535 of bust.pt
-% value emitted 1 !== % value emitted 2339 on line 2536 of bust.pt
-.tAdd !== % value emitted 2314 on line 2537 of bust.pt
-.tAssignInteger !== % value emitted 2314 on line 2538 of bust.pt
-.tCaseMerge !== % value emitted 2314 on line 2539 of bust.pt
-oEmitNullAddress !== % value emitted 2314 on line 2540 of bust.pt
-% value emitted -32767 !== % value emitted 2314 on line 2541 of bust.pt
-.tCaseEnd !== % value emitted 2314 on line 2542 of bust.pt
-oEmitCaseBranchTable !== % value emitted 2314 on line 2543 of bust.pt
-% value emitted 1 !== % value emitted 2314 on line 2544 of bust.pt
-% value emitted 10 !== % value emitted 2314 on line 2545 of bust.pt
-% value emitted 2349 !== .tCaseOtherwise on line 2546 of bust.pt
-% value emitted 2324 !== .tAssignBegin on line 2547 of bust.pt
-% value emitted 2324 !== .tLiteralAddress on line 2548 of bust.pt
-% value emitted 2324 !== oEmitValue on line 2549 of bust.pt
-% value emitted 2324 !== % value emitted 14816 on line 2550 of bust.pt
-% value emitted 2324 !== .tFetchAddress on line 2551 of bust.pt
-% value emitted 2324 !== .tLiteralAddress on line 2552 of bust.pt
-% value emitted 2324 !== oEmitValue on line 2553 of bust.pt
-% value emitted 2324 !== % value emitted 14816 on line 2554 of bust.pt
-% value emitted 2324 !== .tFetchAddress on line 2555 of bust.pt
-.tCaseOtherwise !== .tFetchInteger on line 2556 of bust.pt
-#eMutableVarReqd !== .tLiteralInteger on line 2557 of bust.pt
-.tAssignBegin !== oEmitValue on line 2558 of bust.pt
-.tLiteralAddress !== % value emitted 10 on line 2559 of bust.pt
-oEmitValue !== .tAdd on line 2560 of bust.pt
-% value emitted 14816 !== .tAssignInteger on line 2561 of bust.pt
-.tFetchAddress !== .tCaseMerge on line 2562 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2563 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2564 of bust.pt
-% value emitted 14816 !== .tAssignBegin on line 2565 of bust.pt
-.tFetchAddress !== .tLiteralAddress on line 2566 of bust.pt
-.tFetchInteger !== oEmitValue on line 2567 of bust.pt
-.tLiteralInteger !== % value emitted 14824 on line 2568 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2569 of bust.pt
-% value emitted 10 !== oEmitValue on line 2570 of bust.pt
-.tAdd !== % value emitted 14824 on line 2571 of bust.pt
-.tAssignInteger !== .tFetchInteger on line 2572 of bust.pt
-.tCaseMerge !== .tLiteralInteger on line 2573 of bust.pt
-oEmitNullAddress !== oEmitValue on line 2574 of bust.pt
-% value emitted -32767 !== % value emitted 1 on line 2575 of bust.pt
-.tAssignBegin !== .tAdd on line 2576 of bust.pt
-.tLiteralAddress !== .tAssignInteger on line 2577 of bust.pt
-oEmitValue !== .tWhileEnd on line 2578 of bust.pt
-% value emitted 14824 !== % value emitted 2286 on line 2579 of bust.pt
-.tLiteralAddress !== .tWhileBegin on line 2580 of bust.pt
-oEmitValue !== .tWhilePreBreak on line 2581 of bust.pt
-% value emitted 14824 !== .tWhileBreakIf on line 2582 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 2583 of bust.pt
-.tLiteralInteger !== oEmitValue on line 2584 of bust.pt
-oEmitValue !== % value emitted 14816 on line 2585 of bust.pt
-% value emitted 1 !== .tFetchAddress on line 2586 of bust.pt
-.tAdd !== .tFetchInteger on line 2587 of bust.pt
-.tAssignInteger !== .tLiteralInteger on line 2588 of bust.pt
-% value emitted 2297 !== oEmitValue on line 2589 of bust.pt
-.tWhileEnd !== % value emitted 21 on line 2590 of bust.pt
-.tWhileBegin !== .tLE on line 2591 of bust.pt
-.tWhilePreBreak !== .tInfixOr on line 2592 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2593 of bust.pt
-% value emitted -32767 !== oEmitValue on line 2594 of bust.pt
-.tWhileBreakIf !== % value emitted 14820 on line 2595 of bust.pt
-.tLiteralAddress !== .tFetchInteger on line 2596 of bust.pt
-oEmitValue !== .tLiteralInteger on line 2597 of bust.pt
-% value emitted 14816 !== oEmitValue on line 2598 of bust.pt
-.tFetchAddress !== % value emitted 0 on line 2599 of bust.pt
-.tFetchInteger !== .tEQ on line 2600 of bust.pt
-.tLiteralInteger !== .tOr on line 2601 of bust.pt
-oEmitValue !== .tNot on line 2602 of bust.pt
-% value emitted 21 !== .tWhileTest on line 2603 of bust.pt
-.tLE !== oEmitNullAddress on line 2604 of bust.pt
-.tInfixOr !== % value emitted -32767 on line 2605 of bust.pt
-.tLiteralAddress !== .tAssignBegin on line 2606 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2607 of bust.pt
-% value emitted 14820 !== oEmitValue on line 2608 of bust.pt
-.tFetchInteger !== % value emitted 14816 on line 2609 of bust.pt
-.tLiteralInteger !== .tFetchAddress on line 2610 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2611 of bust.pt
-% value emitted 0 !== oEmitValue on line 2612 of bust.pt
-.tEQ !== % value emitted 14816 on line 2613 of bust.pt
-.tOr !== .tFetchAddress on line 2614 of bust.pt
-.tNot !== .tFetchInteger on line 2615 of bust.pt
-.tWhileTest !== .tLiteralInteger on line 2616 of bust.pt
-#eMutableVarReqd !== oEmitValue on line 2617 of bust.pt
-.tAssignBegin !== % value emitted 10 on line 2618 of bust.pt
-.tLiteralAddress !== .tSubtract on line 2619 of bust.pt
-oEmitValue !== .tAssignInteger on line 2620 of bust.pt
-% value emitted 14816 !== .tAssignBegin on line 2621 of bust.pt
-.tFetchAddress !== .tLiteralAddress on line 2622 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2623 of bust.pt
-oEmitValue !== % value emitted 14820 on line 2624 of bust.pt
-% value emitted 14816 !== .tLiteralAddress on line 2625 of bust.pt
-.tFetchAddress !== oEmitValue on line 2626 of bust.pt
-.tFetchInteger !== % value emitted 14820 on line 2627 of bust.pt
-.tLiteralInteger !== .tFetchInteger on line 2628 of bust.pt
-oEmitValue !== .tLiteralInteger on line 2629 of bust.pt
-% value emitted 10 !== oEmitValue on line 2630 of bust.pt
-.tSubtract !== % value emitted 1 on line 2631 of bust.pt
-.tAssignInteger !== .tSubtract on line 2632 of bust.pt
-.tAssignBegin !== .tAssignInteger on line 2633 of bust.pt
-.tLiteralAddress !== .tWhileEnd on line 2634 of bust.pt
-oEmitValue !== % value emitted 2420 on line 2635 of bust.pt
-% value emitted 14820 !== .tAssignBegin on line 2636 of bust.pt
-% value emitted 14820 !== % value emitted 14812 on line 2639 of bust.pt
-.tFetchInteger !== .tFetchAddress on line 2640 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 2641 of bust.pt
-% value emitted 1 !== % value emitted 14820 on line 2643 of bust.pt
-.tSubtract !== .tFetchInteger on line 2644 of bust.pt
-.tAssignInteger !== .tLiteralInteger on line 2645 of bust.pt
-% value emitted 2433 !== oEmitValue on line 2646 of bust.pt
-.tWhileEnd !== % value emitted 0 on line 2647 of bust.pt
-#eMutableVarReqd !== .tGT on line 2648 of bust.pt
-.tAssignBegin !== .tAssignBoolean on line 2649 of bust.pt
-.tLiteralAddress !== .tProcedureEnd on line 2650 of bust.pt
-oEmitValue !== .tSkipProc on line 2651 of bust.pt
-% value emitted 14812 !== oEmitNullAddress on line 2652 of bust.pt
-.tFetchAddress !== % value emitted -32767 on line 2653 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 2654 of bust.pt
-oEmitValue !== .tCallBegin on line 2655 of bust.pt
-% value emitted 14820 !== .tLiteralAddress on line 2656 of bust.pt
-.tFetchInteger !== oEmitValue on line 2657 of bust.pt
-.tLiteralInteger !== % value emitted 84 on line 2658 of bust.pt
-oEmitValue !== .tFetchInteger on line 2659 of bust.pt
-% value emitted 0 !== .tParmEnd on line 2660 of bust.pt
-.tGT !== .tLiteralAddress on line 2661 of bust.pt
-.tAssignBoolean !== oEmitValue on line 2662 of bust.pt
-.tProcedureEnd !== % value emitted 44 on line 2663 of bust.pt
-.tSkipProc !== .tVarParm on line 2664 of bust.pt
-oEmitNullAddress !== .tParmEnd on line 2665 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 2666 of bust.pt
-.tParmEnd !== oEmitValue on line 2667 of bust.pt
-.tCallBegin !== % value emitted 14828 on line 2668 of bust.pt
-.tLiteralAddress !== .tVarParm on line 2669 of bust.pt
-oEmitValue !== .tParmEnd on line 2670 of bust.pt
-% value emitted 84 !== .tLiteralAddress on line 2671 of bust.pt
-.tFetchInteger !== oEmitValue on line 2672 of bust.pt
-.tParmEnd !== % value emitted 100 on line 2673 of bust.pt
-.tLiteralAddress !== .tVarParm on line 2674 of bust.pt
-oEmitValue !== .tParmEnd on line 2675 of bust.pt
-% value emitted 44 !== .tCallEnd on line 2676 of bust.pt
-.tVarParm !== oEmitValue on line 2677 of bust.pt
-.tParmEnd !== % value emitted 2243 on line 2678 of bust.pt
-.tLiteralAddress !== .tIfBegin on line 2679 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2680 of bust.pt
-% value emitted 14828 !== oEmitValue on line 2681 of bust.pt
-.tVarParm !== % value emitted 100 on line 2682 of bust.pt
-.tParmEnd !== .tFetchInteger on line 2683 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2684 of bust.pt
-% value emitted 100 !== % value emitted 21 on line 2686 of bust.pt
-.tVarParm !== .tGT on line 2687 of bust.pt
-.tParmEnd !== .tIfThen on line 2688 of bust.pt
-.tCallEnd !== oEmitNullAddress on line 2689 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2690 of bust.pt
-% value emitted 2253 !== .tWriteBegin on line 2691 of bust.pt
-.tIfBegin !== .tTrapBegin on line 2692 of bust.pt
-% value emitted 100 !== % value emitted 4 on line 2695 of bust.pt
-.tFetchInteger !== .tVarParm on line 2696 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 2697 of bust.pt
-oEmitValue !== .tLiteralString on line 2698 of bust.pt
-% value emitted 21 !== oEmitValue on line 2699 of bust.pt
-.tGT !== % value emitted 17 on line 2700 of bust.pt
-.tIfThen !== oEmitString on line 2701 of bust.pt
-oEmitNullAddress !== % value emitted 68 on line 2702 of bust.pt
-% value emitted -32767 !== % value emitted 101 on line 2703 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 2704 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 2705 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 2706 of bust.pt
-oEmitValue !== % value emitted 114 on line 2707 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 2708 of bust.pt
-.tVarParm !== % value emitted 103 on line 2709 of bust.pt
-.tParmEnd !== % value emitted 111 on line 2710 of bust.pt
-.tLiteralString !== % value emitted 101 on line 2711 of bust.pt
-oEmitValue !== % value emitted 115 on line 2712 of bust.pt
-% value emitted 17 !== % value emitted 32 on line 2713 of bust.pt
-oEmitString !== % value emitted 98 on line 2714 of bust.pt
-% value emitted 68 !== % value emitted 117 on line 2715 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 2716 of bust.pt
-% value emitted 97 !== % value emitted 116 on line 2717 of bust.pt
-% value emitted 108 !== % value emitted 46 on line 2718 of bust.pt
-% value emitted 101 !== .tParmEnd on line 2719 of bust.pt
-% value emitted 114 !== .tLiteralInteger on line 2720 of bust.pt
-% value emitted 32 !== oEmitValue on line 2721 of bust.pt
-% value emitted 103 !== % value emitted 1 on line 2722 of bust.pt
-% value emitted 111 !== .tParmEnd on line 2723 of bust.pt
-% value emitted 101 !== .tTrap on line 2724 of bust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 2725 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 2726 of bust.pt
-% value emitted 98 !== .tWriteEnd on line 2727 of bust.pt
-% value emitted 117 !== .tTrapBegin on line 2728 of bust.pt
-% value emitted 115 !== .tLiteralAddress on line 2729 of bust.pt
-% value emitted 116 !== oEmitValue on line 2730 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 2731 of bust.pt
-.tParmEnd !== .tVarParm on line 2732 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 2733 of bust.pt
-oEmitValue !== .tTrap on line 2734 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 2735 of bust.pt
-.tParmEnd !== % value emitted 6 on line 2736 of bust.pt
-.tTrap !== .tAssignBegin on line 2737 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 2738 of bust.pt
-% value emitted 109 !== oEmitValue on line 2739 of bust.pt
-.tWriteEnd !== % value emitted 108 on line 2740 of bust.pt
-.tTrapBegin !== .tLiteralBoolean on line 2741 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2742 of bust.pt
-oEmitValue !== % value emitted 1 on line 2743 of bust.pt
-% value emitted 4 !== .tAssignBoolean on line 2744 of bust.pt
-.tVarParm !== .tAssignBegin on line 2745 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 2746 of bust.pt
-.tTrap !== oEmitValue on line 2747 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 92 on line 2748 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 2749 of bust.pt
-.tAssignBegin !== oEmitValue on line 2750 of bust.pt
-.tLiteralAddress !== % value emitted 92 on line 2751 of bust.pt
-oEmitValue !== .tFetchInteger on line 2752 of bust.pt
-% value emitted 108 !== .tLiteralInteger on line 2753 of bust.pt
-.tLiteralBoolean !== oEmitValue on line 2754 of bust.pt
-oEmitValue !== % value emitted 1 on line 2755 of bust.pt
-% value emitted 1 !== .tAdd on line 2756 of bust.pt
-.tAssignBoolean !== .tAssignInteger on line 2757 of bust.pt
-.tAssignBegin !== .tIfMerge on line 2758 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2759 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2760 of bust.pt
-% value emitted 92 !== .tIfBegin on line 2761 of bust.pt
-% value emitted 92 !== % value emitted 100 on line 2764 of bust.pt
-% value emitted 1 !== % value emitted 21 on line 2768 of bust.pt
-.tAdd !== .tEQ on line 2769 of bust.pt
-.tAssignInteger !== .tIfThen on line 2770 of bust.pt
-.tIfMerge !== oEmitNullAddress on line 2771 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 2772 of bust.pt
-% value emitted -32767 !== .tWriteBegin on line 2773 of bust.pt
-.tIfBegin !== .tTrapBegin on line 2774 of bust.pt
-% value emitted 100 !== % value emitted 4 on line 2777 of bust.pt
-.tFetchInteger !== .tVarParm on line 2778 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 2779 of bust.pt
-oEmitValue !== .tLiteralString on line 2780 of bust.pt
-% value emitted 21 !== oEmitValue on line 2781 of bust.pt
-.tEQ !== % value emitted 23 on line 2782 of bust.pt
-.tIfThen !== oEmitString on line 2783 of bust.pt
-oEmitNullAddress !== % value emitted 68 on line 2784 of bust.pt
-% value emitted -32767 !== % value emitted 101 on line 2785 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 2786 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 2787 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 2788 of bust.pt
-oEmitValue !== % value emitted 114 on line 2789 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 2790 of bust.pt
-.tVarParm !== % value emitted 99 on line 2791 of bust.pt
-.tParmEnd !== % value emitted 97 on line 2792 of bust.pt
-.tLiteralString !== % value emitted 108 on line 2793 of bust.pt
-oEmitValue !== % value emitted 108 on line 2794 of bust.pt
-% value emitted 23 !== % value emitted 115 on line 2795 of bust.pt
-oEmitString !== % value emitted 32 on line 2796 of bust.pt
-% value emitted 68 !== % value emitted 98 on line 2797 of bust.pt
-% value emitted 101 !== % value emitted 108 on line 2798 of bust.pt
-% value emitted 108 !== % value emitted 99 on line 2800 of bust.pt
-% value emitted 101 !== % value emitted 107 on line 2801 of bust.pt
-% value emitted 114 !== % value emitted 106 on line 2802 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 2803 of bust.pt
-% value emitted 97 !== % value emitted 107 on line 2805 of bust.pt
-% value emitted 108 !== % value emitted 46 on line 2806 of bust.pt
-% value emitted 108 !== .tParmEnd on line 2807 of bust.pt
-% value emitted 115 !== .tLiteralInteger on line 2808 of bust.pt
-% value emitted 32 !== oEmitValue on line 2809 of bust.pt
-% value emitted 98 !== % value emitted 1 on line 2810 of bust.pt
-% value emitted 108 !== .tParmEnd on line 2811 of bust.pt
-% value emitted 97 !== .tTrap on line 2812 of bust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 2813 of bust.pt
-% value emitted 107 !== % value emitted 109 on line 2814 of bust.pt
-% value emitted 106 !== .tWriteEnd on line 2815 of bust.pt
-% value emitted 97 !== .tTrapBegin on line 2816 of bust.pt
-% value emitted 99 !== .tLiteralAddress on line 2817 of bust.pt
-% value emitted 107 !== oEmitValue on line 2818 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 2819 of bust.pt
-.tParmEnd !== .tVarParm on line 2820 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 2821 of bust.pt
-oEmitValue !== .tTrap on line 2822 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 2823 of bust.pt
-.tParmEnd !== % value emitted 6 on line 2824 of bust.pt
-.tTrap !== .tAssignBegin on line 2825 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 2826 of bust.pt
-% value emitted 109 !== oEmitValue on line 2827 of bust.pt
-.tWriteEnd !== % value emitted 108 on line 2828 of bust.pt
-.tTrapBegin !== .tLiteralBoolean on line 2829 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2830 of bust.pt
-oEmitValue !== % value emitted 1 on line 2831 of bust.pt
-% value emitted 4 !== .tAssignBoolean on line 2832 of bust.pt
-.tVarParm !== .tAssignBegin on line 2833 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 2834 of bust.pt
-.tTrap !== oEmitValue on line 2835 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 96 on line 2836 of bust.pt
-% value emitted 6 !== .tLiteralAddress on line 2837 of bust.pt
-.tAssignBegin !== oEmitValue on line 2838 of bust.pt
-.tLiteralAddress !== % value emitted 96 on line 2839 of bust.pt
-oEmitValue !== .tFetchInteger on line 2840 of bust.pt
-% value emitted 108 !== .tLiteralInteger on line 2841 of bust.pt
-.tLiteralBoolean !== oEmitValue on line 2842 of bust.pt
-oEmitValue !== % value emitted 1 on line 2843 of bust.pt
-% value emitted 1 !== .tAdd on line 2844 of bust.pt
-.tAssignBoolean !== .tAssignInteger on line 2845 of bust.pt
-.tAssignBegin !== .tIfMerge on line 2846 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2847 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2848 of bust.pt
-% value emitted 96 !== .tIfBegin on line 2849 of bust.pt
-% value emitted 96 !== % value emitted 100 on line 2852 of bust.pt
-% value emitted 1 !== % value emitted 17 on line 2856 of bust.pt
-.tAdd !== .tLT on line 2857 of bust.pt
-.tAssignInteger !== .tIfThen on line 2858 of bust.pt
-.tIfMerge !== oEmitNullAddress on line 2859 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 2860 of bust.pt
-% value emitted -32767 !== .tCallBegin on line 2861 of bust.pt
-.tIfBegin !== .tCallEnd on line 2862 of bust.pt
-.tLiteralAddress !== oEmitValue on line 2863 of bust.pt
-oEmitValue !== % value emitted 1992 on line 2864 of bust.pt
-% value emitted 100 !== .tIfMerge on line 2865 of bust.pt
-.tFetchInteger !== oEmitNullAddress on line 2866 of bust.pt
-.tLiteralInteger !== % value emitted -32767 on line 2867 of bust.pt
-oEmitValue !== .tAssignBegin on line 2868 of bust.pt
-% value emitted 17 !== .tLiteralAddress on line 2869 of bust.pt
-.tLT !== oEmitValue on line 2870 of bust.pt
-.tIfThen !== % value emitted 108 on line 2871 of bust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 2872 of bust.pt
-% value emitted -32767 !== oEmitValue on line 2873 of bust.pt
-.tCallBegin !== % value emitted 1 on line 2874 of bust.pt
-.tCallEnd !== .tAssignBoolean on line 2875 of bust.pt
-oEmitValue !== .tIfEnd on line 2876 of bust.pt
-% value emitted 2002 !== .tIfEnd on line 2877 of bust.pt
-.tIfMerge !== .tIfEnd on line 2878 of bust.pt
-oEmitNullAddress !== .tIfBegin on line 2879 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 2880 of bust.pt
-.tAssignBegin !== oEmitValue on line 2881 of bust.pt
-.tLiteralAddress !== % value emitted 108 on line 2882 of bust.pt
-oEmitValue !== .tFetchBoolean on line 2883 of bust.pt
-% value emitted 108 !== .tIfThen on line 2884 of bust.pt
-.tLiteralBoolean !== oEmitNullAddress on line 2885 of bust.pt
-oEmitValue !== % value emitted -32767 on line 2886 of bust.pt
-% value emitted 1 !== .tWriteBegin on line 2887 of bust.pt
-.tAssignBoolean !== .tTrapBegin on line 2888 of bust.pt
-.tIfEnd !== .tLiteralAddress on line 2889 of bust.pt
-.tIfEnd !== oEmitValue on line 2890 of bust.pt
-.tIfEnd !== % value emitted 4 on line 2891 of bust.pt
-.tIfBegin !== .tVarParm on line 2892 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 2893 of bust.pt
-oEmitValue !== .tLiteralString on line 2894 of bust.pt
-% value emitted 108 !== oEmitValue on line 2895 of bust.pt
-.tFetchBoolean !== % value emitted 19 on line 2896 of bust.pt
-.tIfThen !== oEmitString on line 2897 of bust.pt
-oEmitNullAddress !== % value emitted 68 on line 2898 of bust.pt
-% value emitted -32767 !== % value emitted 101 on line 2899 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 2900 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 2901 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 2902 of bust.pt
-oEmitValue !== % value emitted 114 on line 2903 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 2904 of bust.pt
-.tVarParm !== % value emitted 115 on line 2905 of bust.pt
-.tParmEnd !== % value emitted 116 on line 2906 of bust.pt
-.tLiteralString !== % value emitted 97 on line 2907 of bust.pt
-oEmitValue !== % value emitted 110 on line 2908 of bust.pt
-% value emitted 19 !== % value emitted 100 on line 2909 of bust.pt
-oEmitString !== % value emitted 115 on line 2910 of bust.pt
-% value emitted 68 !== % value emitted 32 on line 2911 of bust.pt
-% value emitted 101 !== % value emitted 119 on line 2912 of bust.pt
-% value emitted 97 !== % value emitted 105 on line 2913 of bust.pt
-% value emitted 108 !== % value emitted 116 on line 2914 of bust.pt
-% value emitted 101 !== % value emitted 104 on line 2915 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 2916 of bust.pt
-% value emitted 32 !== .tParmEnd on line 2917 of bust.pt
-% value emitted 115 !== .tLiteralInteger on line 2918 of bust.pt
-% value emitted 116 !== oEmitValue on line 2919 of bust.pt
-% value emitted 97 !== % value emitted 1 on line 2920 of bust.pt
-% value emitted 110 !== .tParmEnd on line 2921 of bust.pt
-% value emitted 100 !== .tTrap on line 2922 of bust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 2923 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 2924 of bust.pt
-% value emitted 119 !== .tTrapBegin on line 2925 of bust.pt
-% value emitted 105 !== .tLiteralAddress on line 2926 of bust.pt
-% value emitted 116 !== oEmitValue on line 2927 of bust.pt
-% value emitted 104 !== % value emitted 4 on line 2928 of bust.pt
-% value emitted 32 !== .tVarParm on line 2929 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 2931 of bust.pt
-% value emitted 1 !== % value emitted 100 on line 2933 of bust.pt
-.tParmEnd !== .tFetchInteger on line 2934 of bust.pt
-.tTrap !== .tParmEnd on line 2935 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralInteger on line 2936 of bust.pt
-% value emitted 109 !== oEmitValue on line 2937 of bust.pt
-.tTrapBegin !== % value emitted 1 on line 2938 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 2939 of bust.pt
-oEmitValue !== .tTrap on line 2940 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 2941 of bust.pt
-.tVarParm !== % value emitted 8 on line 2942 of bust.pt
-.tParmEnd !== .tTrapBegin on line 2943 of bust.pt
-% value emitted 100 !== % value emitted 4 on line 2946 of bust.pt
-.tFetchInteger !== .tVarParm on line 2947 of bust.pt
-.tLiteralInteger !== .tLiteralString on line 2949 of bust.pt
-.tParmEnd !== oEmitString on line 2952 of bust.pt
-.tTrap !== % value emitted 46 on line 2953 of bust.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 2954 of bust.pt
-% value emitted 7 !== .tLiteralInteger on line 2955 of bust.pt
-.tTrapBegin !== oEmitValue on line 2956 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 2957 of bust.pt
-oEmitValue !== .tParmEnd on line 2958 of bust.pt
-% value emitted 4 !== .tTrap on line 2959 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteString) on line 2960 of bust.pt
-.tParmEnd !== % value emitted 109 on line 2961 of bust.pt
-.tLiteralString !== .tWriteEnd on line 2962 of bust.pt
-oEmitValue !== .tTrapBegin on line 2963 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 2964 of bust.pt
-oEmitString !== oEmitValue on line 2965 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 2966 of bust.pt
-.tParmEnd !== .tVarParm on line 2967 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 2968 of bust.pt
-oEmitValue !== .tTrap on line 2969 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 2970 of bust.pt
-.tParmEnd !== % value emitted 6 on line 2971 of bust.pt
-.tTrap !== .tIfBegin on line 2972 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 2973 of bust.pt
-% value emitted 109 !== oEmitValue on line 2974 of bust.pt
-.tWriteEnd !== % value emitted 100 on line 2975 of bust.pt
-.tTrapBegin !== .tFetchInteger on line 2976 of bust.pt
-% value emitted 4 !== % value emitted 104 on line 2979 of bust.pt
-.tVarParm !== .tFetchInteger on line 2980 of bust.pt
-.tParmEnd !== .tGT on line 2981 of bust.pt
-.tTrap !== .tIfThen on line 2982 of bust.pt
-oEmitTrapKind(trWriteln) !== oEmitNullAddress on line 2983 of bust.pt
-% value emitted 6 !== % value emitted -32767 on line 2984 of bust.pt
-.tIfBegin !== .tWriteBegin on line 2985 of bust.pt
-.tLiteralAddress !== .tTrapBegin on line 2986 of bust.pt
-oEmitValue !== .tLiteralAddress on line 2987 of bust.pt
-% value emitted 100 !== oEmitValue on line 2988 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 2989 of bust.pt
-.tLiteralAddress !== .tVarParm on line 2990 of bust.pt
-oEmitValue !== .tParmEnd on line 2991 of bust.pt
-% value emitted 104 !== .tLiteralString on line 2992 of bust.pt
-.tFetchInteger !== oEmitValue on line 2993 of bust.pt
-.tGT !== % value emitted 11 on line 2994 of bust.pt
-.tIfThen !== oEmitString on line 2995 of bust.pt
-oEmitNullAddress !== % value emitted 72 on line 2996 of bust.pt
-% value emitted -32767 !== % value emitted 111 on line 2997 of bust.pt
-.tWriteBegin !== % value emitted 117 on line 2998 of bust.pt
-.tTrapBegin !== % value emitted 115 on line 2999 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 3000 of bust.pt
-oEmitValue !== % value emitted 32 on line 3001 of bust.pt
-% value emitted 4 !== % value emitted 119 on line 3002 of bust.pt
-.tVarParm !== % value emitted 105 on line 3003 of bust.pt
-.tParmEnd !== % value emitted 110 on line 3004 of bust.pt
-.tLiteralString !== % value emitted 115 on line 3005 of bust.pt
-oEmitValue !== % value emitted 46 on line 3006 of bust.pt
-% value emitted 11 !== .tParmEnd on line 3007 of bust.pt
-oEmitString !== .tLiteralInteger on line 3008 of bust.pt
-% value emitted 72 !== oEmitValue on line 3009 of bust.pt
-% value emitted 111 !== % value emitted 1 on line 3010 of bust.pt
-% value emitted 117 !== .tParmEnd on line 3011 of bust.pt
-% value emitted 115 !== .tTrap on line 3012 of bust.pt
-% value emitted 101 !== oEmitTrapKind(trWriteString) on line 3013 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3014 of bust.pt
-% value emitted 119 !== .tWriteEnd on line 3015 of bust.pt
-% value emitted 105 !== .tTrapBegin on line 3016 of bust.pt
-% value emitted 110 !== .tLiteralAddress on line 3017 of bust.pt
-% value emitted 115 !== oEmitValue on line 3018 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3019 of bust.pt
-.tParmEnd !== .tVarParm on line 3020 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3021 of bust.pt
-oEmitValue !== .tTrap on line 3022 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3023 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3024 of bust.pt
-.tTrap !== .tAssignBegin on line 3025 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3026 of bust.pt
-% value emitted 109 !== oEmitValue on line 3027 of bust.pt
-.tWriteEnd !== % value emitted 96 on line 3028 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 3029 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3030 of bust.pt
-oEmitValue !== % value emitted 96 on line 3031 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 3032 of bust.pt
-.tVarParm !== .tLiteralInteger on line 3033 of bust.pt
-.tParmEnd !== oEmitValue on line 3034 of bust.pt
-.tTrap !== % value emitted 1 on line 3035 of bust.pt
-oEmitTrapKind(trWriteln) !== .tAdd on line 3036 of bust.pt
-% value emitted 6 !== .tAssignInteger on line 3037 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3038 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3039 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3040 of bust.pt
-% value emitted 96 !== .tIfBegin on line 3041 of bust.pt
-% value emitted 96 !== % value emitted 100 on line 3044 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3046 of bust.pt
-% value emitted 1 !== % value emitted 104 on line 3048 of bust.pt
-.tAdd !== .tFetchInteger on line 3049 of bust.pt
-.tAssignInteger !== .tLT on line 3050 of bust.pt
-.tIfMerge !== .tIfThen on line 3051 of bust.pt
-.tIfBegin !== .tCallBegin on line 3054 of bust.pt
-.tLiteralAddress !== .tCallEnd on line 3055 of bust.pt
-% value emitted 100 !== % value emitted 506 on line 3057 of bust.pt
-.tFetchInteger !== .tWriteBegin on line 3058 of bust.pt
-.tLiteralAddress !== .tTrapBegin on line 3059 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3060 of bust.pt
-% value emitted 104 !== oEmitValue on line 3061 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 3062 of bust.pt
-.tLT !== .tVarParm on line 3063 of bust.pt
-.tIfThen !== .tParmEnd on line 3064 of bust.pt
-oEmitNullAddress !== .tLiteralString on line 3065 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3066 of bust.pt
-.tCallBegin !== % value emitted 6 on line 3067 of bust.pt
-.tCallEnd !== oEmitString on line 3068 of bust.pt
-oEmitValue !== % value emitted 32 on line 3069 of bust.pt
-% value emitted 514 !== % value emitted 119 on line 3070 of bust.pt
-.tWriteBegin !== % value emitted 105 on line 3071 of bust.pt
-.tTrapBegin !== % value emitted 110 on line 3072 of bust.pt
-.tLiteralAddress !== % value emitted 115 on line 3073 of bust.pt
-oEmitValue !== % value emitted 46 on line 3074 of bust.pt
-% value emitted 4 !== .tParmEnd on line 3075 of bust.pt
-.tVarParm !== .tLiteralInteger on line 3076 of bust.pt
-.tParmEnd !== oEmitValue on line 3077 of bust.pt
-.tLiteralString !== % value emitted 1 on line 3078 of bust.pt
-oEmitValue !== .tParmEnd on line 3079 of bust.pt
-% value emitted 6 !== .tTrap on line 3080 of bust.pt
-oEmitString !== oEmitTrapKind(trWriteString) on line 3081 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3082 of bust.pt
-% value emitted 119 !== .tWriteEnd on line 3083 of bust.pt
-% value emitted 105 !== .tTrapBegin on line 3084 of bust.pt
-% value emitted 110 !== .tLiteralAddress on line 3085 of bust.pt
-% value emitted 115 !== oEmitValue on line 3086 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3087 of bust.pt
-.tParmEnd !== .tVarParm on line 3088 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3089 of bust.pt
-oEmitValue !== .tTrap on line 3090 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3091 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3092 of bust.pt
-.tTrap !== .tAssignBegin on line 3093 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3094 of bust.pt
-% value emitted 109 !== oEmitValue on line 3095 of bust.pt
-.tWriteEnd !== % value emitted 92 on line 3096 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 3097 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3098 of bust.pt
-oEmitValue !== % value emitted 92 on line 3099 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 3100 of bust.pt
-.tVarParm !== .tLiteralInteger on line 3101 of bust.pt
-.tParmEnd !== oEmitValue on line 3102 of bust.pt
-.tTrap !== % value emitted 1 on line 3103 of bust.pt
-oEmitTrapKind(trWriteln) !== .tAdd on line 3104 of bust.pt
-% value emitted 6 !== .tAssignInteger on line 3105 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3106 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3107 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3108 of bust.pt
-% value emitted 92 !== .tWriteBegin on line 3109 of bust.pt
-.tLiteralAddress !== .tTrapBegin on line 3110 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3111 of bust.pt
-% value emitted 92 !== oEmitValue on line 3112 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 3113 of bust.pt
-.tLiteralInteger !== .tVarParm on line 3114 of bust.pt
-oEmitValue !== .tParmEnd on line 3115 of bust.pt
-% value emitted 1 !== .tLiteralString on line 3116 of bust.pt
-.tAdd !== oEmitValue on line 3117 of bust.pt
-.tAssignInteger !== % value emitted 9 on line 3118 of bust.pt
-.tIfMerge !== oEmitString on line 3119 of bust.pt
-oEmitNullAddress !== % value emitted 84 on line 3120 of bust.pt
-% value emitted -32767 !== % value emitted 105 on line 3121 of bust.pt
-.tWriteBegin !== % value emitted 101 on line 3122 of bust.pt
-.tTrapBegin !== % value emitted 32 on line 3123 of bust.pt
-.tLiteralAddress !== % value emitted 103 on line 3124 of bust.pt
-oEmitValue !== % value emitted 97 on line 3125 of bust.pt
-% value emitted 4 !== % value emitted 109 on line 3126 of bust.pt
-.tVarParm !== % value emitted 101 on line 3127 of bust.pt
-.tParmEnd !== % value emitted 46 on line 3128 of bust.pt
-.tLiteralString !== .tParmEnd on line 3129 of bust.pt
-oEmitValue !== .tLiteralInteger on line 3130 of bust.pt
-% value emitted 9 !== oEmitValue on line 3131 of bust.pt
-oEmitString !== % value emitted 1 on line 3132 of bust.pt
-% value emitted 84 !== .tParmEnd on line 3133 of bust.pt
-% value emitted 105 !== .tTrap on line 3134 of bust.pt
-% value emitted 101 !== oEmitTrapKind(trWriteString) on line 3135 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3136 of bust.pt
-% value emitted 103 !== .tWriteEnd on line 3137 of bust.pt
-% value emitted 97 !== .tTrapBegin on line 3138 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 3139 of bust.pt
-% value emitted 101 !== oEmitValue on line 3140 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3141 of bust.pt
-.tParmEnd !== .tVarParm on line 3142 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3143 of bust.pt
-oEmitValue !== .tTrap on line 3144 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3145 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3146 of bust.pt
-.tTrap !== .tIfEnd on line 3147 of bust.pt
-oEmitTrapKind(trWriteString) !== .tIfEnd on line 3148 of bust.pt
-% value emitted 109 !== .tIfMerge on line 3149 of bust.pt
-.tWriteEnd !== oEmitNullAddress on line 3150 of bust.pt
-.tTrapBegin !== % value emitted -32767 on line 3151 of bust.pt
-.tLiteralAddress !== .tWriteBegin on line 3152 of bust.pt
-oEmitValue !== .tTrapBegin on line 3153 of bust.pt
-% value emitted 4 !== .tLiteralAddress on line 3154 of bust.pt
-.tVarParm !== oEmitValue on line 3155 of bust.pt
-.tParmEnd !== % value emitted 4 on line 3156 of bust.pt
-.tTrap !== .tVarParm on line 3157 of bust.pt
-oEmitTrapKind(trWriteln) !== .tParmEnd on line 3158 of bust.pt
-% value emitted 6 !== .tLiteralString on line 3159 of bust.pt
-.tIfEnd !== oEmitValue on line 3160 of bust.pt
-.tIfEnd !== % value emitted 32 on line 3161 of bust.pt
-.tIfMerge !== oEmitString on line 3162 of bust.pt
-oEmitNullAddress !== % value emitted 68 on line 3163 of bust.pt
-% value emitted -32767 !== % value emitted 101 on line 3164 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 3165 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 3166 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 3167 of bust.pt
-oEmitValue !== % value emitted 114 on line 3168 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 3169 of bust.pt
-.tVarParm !== % value emitted 116 on line 3170 of bust.pt
-.tParmEnd !== % value emitted 97 on line 3171 of bust.pt
-.tLiteralString !== % value emitted 107 on line 3172 of bust.pt
-oEmitValue !== % value emitted 101 on line 3173 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 3174 of bust.pt
-oEmitString !== % value emitted 32 on line 3175 of bust.pt
-% value emitted 68 !== % value emitted 97 on line 3176 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 3177 of bust.pt
-% value emitted 97 !== % value emitted 99 on line 3178 of bust.pt
-% value emitted 108 !== % value emitted 97 on line 3179 of bust.pt
-% value emitted 101 !== % value emitted 114 on line 3180 of bust.pt
-% value emitted 114 !== % value emitted 100 on line 3181 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 3183 of bust.pt
-% value emitted 97 !== % value emitted 110 on line 3184 of bust.pt
-% value emitted 107 !== % value emitted 100 on line 3185 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 3186 of bust.pt
-% value emitted 115 !== % value emitted 110 on line 3187 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 3188 of bust.pt
-% value emitted 97 !== % value emitted 119 on line 3189 of bust.pt
-% value emitted 99 !== % value emitted 104 on line 3191 of bust.pt
-% value emitted 114 !== % value emitted 115 on line 3193 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 3194 of bust.pt
-% value emitted 32 !== .tParmEnd on line 3195 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 3196 of bust.pt
-% value emitted 110 !== oEmitValue on line 3197 of bust.pt
-% value emitted 100 !== % value emitted 1 on line 3198 of bust.pt
-% value emitted 32 !== .tParmEnd on line 3199 of bust.pt
-% value emitted 110 !== .tTrap on line 3200 of bust.pt
-% value emitted 111 !== oEmitTrapKind(trWriteString) on line 3201 of bust.pt
-% value emitted 119 !== % value emitted 109 on line 3202 of bust.pt
-% value emitted 32 !== .tWriteEnd on line 3203 of bust.pt
-% value emitted 104 !== .tCallBegin on line 3204 of bust.pt
-% value emitted 97 !== .tLiteralAddress on line 3205 of bust.pt
-% value emitted 115 !== oEmitValue on line 3206 of bust.pt
-% value emitted 32 !== % value emitted 84 on line 3207 of bust.pt
-.tParmEnd !== .tFetchInteger on line 3208 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3209 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3210 of bust.pt
-% value emitted 1 !== oEmitValue on line 3211 of bust.pt
-.tParmEnd !== % value emitted 44 on line 3212 of bust.pt
-.tTrap !== .tVarParm on line 3213 of bust.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 3214 of bust.pt
-% value emitted 109 !== .tCallEnd on line 3215 of bust.pt
-.tWriteEnd !== oEmitValue on line 3216 of bust.pt
-.tCallBegin !== % value emitted 410 on line 3217 of bust.pt
-.tLiteralAddress !== .tTrapBegin on line 3218 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3219 of bust.pt
-% value emitted 84 !== oEmitValue on line 3220 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 3221 of bust.pt
-.tParmEnd !== .tVarParm on line 3222 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 3223 of bust.pt
-oEmitValue !== .tTrap on line 3224 of bust.pt
-% value emitted 44 !== oEmitTrapKind(trWriteln) on line 3225 of bust.pt
-.tVarParm !== % value emitted 6 on line 3226 of bust.pt
-.tParmEnd !== .tIfEnd on line 3227 of bust.pt
-.tCallEnd !== .tProcedureEnd on line 3228 of bust.pt
-oEmitValue !== .tSkipProc on line 3229 of bust.pt
-% value emitted 416 !== oEmitNullAddress on line 3230 of bust.pt
-.tTrapBegin !== % value emitted -32767 on line 3231 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 3232 of bust.pt
-oEmitValue !== .tIfBegin on line 3233 of bust.pt
-% value emitted 4 !== .tLiteralAddress on line 3234 of bust.pt
-.tVarParm !== oEmitValue on line 3235 of bust.pt
-.tParmEnd !== % value emitted 104 on line 3236 of bust.pt
-.tTrap !== .tFetchInteger on line 3237 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 3238 of bust.pt
-% value emitted 6 !== oEmitValue on line 3239 of bust.pt
-.tIfEnd !== % value emitted 1136 on line 3240 of bust.pt
-.tProcedureEnd !== .tFetchInteger on line 3241 of bust.pt
-.tSkipProc !== .tLT on line 3242 of bust.pt
-oEmitNullAddress !== .tIfThen on line 3243 of bust.pt
-% value emitted -32767 !== oEmitNullAddress on line 3244 of bust.pt
-.tParmEnd !== % value emitted -32767 on line 3245 of bust.pt
-.tIfBegin !== .tCallBegin on line 3246 of bust.pt
-.tLiteralAddress !== .tCallEnd on line 3247 of bust.pt
-% value emitted 104 !== % value emitted 1958 on line 3249 of bust.pt
-.tFetchInteger !== .tIfMerge on line 3250 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3251 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3252 of bust.pt
-% value emitted 1136 !== .tAssignBegin on line 3253 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 3254 of bust.pt
-.tLT !== oEmitValue on line 3255 of bust.pt
-.tIfThen !== % value emitted 109 on line 3256 of bust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 3257 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3258 of bust.pt
-.tCallBegin !== % value emitted 1 on line 3259 of bust.pt
-.tCallEnd !== .tAssignBoolean on line 3260 of bust.pt
-oEmitValue !== .tIfEnd on line 3261 of bust.pt
-% value emitted 1968 !== .tProcedureEnd on line 3262 of bust.pt
-.tIfMerge !== .tSkipProc on line 3263 of bust.pt
-.tAssignBegin !== .tLiteralAddress on line 3266 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3267 of bust.pt
-oEmitValue !== % value emitted 14829 on line 3268 of bust.pt
-% value emitted 109 !== .tStoreParmBoolean on line 3269 of bust.pt
-.tLiteralBoolean !== .tParmEnd on line 3270 of bust.pt
-oEmitValue !== .tAssignBegin on line 3271 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 3272 of bust.pt
-.tAssignBoolean !== oEmitValue on line 3273 of bust.pt
-.tIfEnd !== % value emitted 14832 on line 3274 of bust.pt
-.tProcedureEnd !== .tLiteralAddress on line 3275 of bust.pt
-.tSkipProc !== oEmitValue on line 3276 of bust.pt
-oEmitNullAddress !== % value emitted 44 on line 3277 of bust.pt
-% value emitted -32767 !== .tSubscriptBegin on line 3278 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3279 of bust.pt
-% value emitted 14829 !== % value emitted 1 on line 3281 of bust.pt
-.tStoreParmBoolean !== .tSubscriptInteger on line 3282 of bust.pt
-.tParmEnd !== .tFetchInteger on line 3283 of bust.pt
-.tAssignBegin !== .tAssignInteger on line 3284 of bust.pt
-.tLiteralAddress !== .tIfBegin on line 3285 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3286 of bust.pt
-% value emitted 14832 !== oEmitValue on line 3287 of bust.pt
-.tLiteralAddress !== % value emitted 14829 on line 3288 of bust.pt
-oEmitValue !== .tFetchBoolean on line 3289 of bust.pt
-% value emitted 44 !== .tIfThen on line 3290 of bust.pt
-.tSubscriptBegin !== oEmitNullAddress on line 3291 of bust.pt
-.tLiteralInteger !== % value emitted -32767 on line 3292 of bust.pt
-oEmitValue !== .tIfBegin on line 3293 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 3294 of bust.pt
-.tSubscriptInteger !== oEmitValue on line 3295 of bust.pt
-.tFetchInteger !== % value emitted 14832 on line 3296 of bust.pt
-.tAssignInteger !== .tFetchInteger on line 3297 of bust.pt
-.tIfBegin !== .tLiteralInteger on line 3298 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3299 of bust.pt
-oEmitValue !== % value emitted 8 on line 3300 of bust.pt
-% value emitted 14829 !== .tGT on line 3301 of bust.pt
-.tFetchBoolean !== .tIfThen on line 3302 of bust.pt
-.tIfThen !== oEmitNullAddress on line 3303 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3304 of bust.pt
-% value emitted -32767 !== .tAssignBegin on line 3305 of bust.pt
-.tIfBegin !== .tLiteralAddress on line 3306 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3307 of bust.pt
-oEmitValue !== % value emitted 109 on line 3308 of bust.pt
-% value emitted 14832 !== .tLiteralAddress on line 3309 of bust.pt
-.tFetchInteger !== oEmitValue on line 3310 of bust.pt
-.tLiteralInteger !== % value emitted 104 on line 3311 of bust.pt
-oEmitValue !== .tFetchInteger on line 3312 of bust.pt
-% value emitted 8 !== .tLiteralInteger on line 3313 of bust.pt
-.tGT !== oEmitValue on line 3314 of bust.pt
-.tIfThen !== % value emitted 18 on line 3315 of bust.pt
-oEmitNullAddress !== .tGT on line 3316 of bust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3317 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3318 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3319 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3320 of bust.pt
-% value emitted 109 !== .tAssignBegin on line 3321 of bust.pt
-% value emitted 104 !== % value emitted 109 on line 3324 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 3325 of bust.pt
-.tLiteralInteger !== oEmitValue on line 3326 of bust.pt
-oEmitValue !== % value emitted 104 on line 3327 of bust.pt
-% value emitted 18 !== .tFetchInteger on line 3328 of bust.pt
-.tGT !== .tLiteralInteger on line 3329 of bust.pt
-.tAssignBoolean !== oEmitValue on line 3330 of bust.pt
-.tIfMerge !== % value emitted 17 on line 3331 of bust.pt
-oEmitNullAddress !== .tGT on line 3332 of bust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3333 of bust.pt
-.tAssignBegin !== .tIfEnd on line 3334 of bust.pt
-.tLiteralAddress !== .tIfMerge on line 3335 of bust.pt
-oEmitValue !== oEmitNullAddress on line 3336 of bust.pt
-% value emitted 109 !== % value emitted -32767 on line 3337 of bust.pt
-.tLiteralAddress !== .tIfBegin on line 3338 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3339 of bust.pt
-% value emitted 104 !== oEmitValue on line 3340 of bust.pt
-.tFetchInteger !== % value emitted 14832 on line 3341 of bust.pt
-.tLiteralInteger !== .tFetchInteger on line 3342 of bust.pt
-oEmitValue !== .tLiteralInteger on line 3343 of bust.pt
-% value emitted 17 !== oEmitValue on line 3344 of bust.pt
-.tGT !== % value emitted 1 on line 3345 of bust.pt
-.tAssignBoolean !== .tGT on line 3346 of bust.pt
-.tIfEnd !== .tInfixAnd on line 3347 of bust.pt
-.tIfMerge !== .tLiteralAddress on line 3348 of bust.pt
-oEmitNullAddress !== oEmitValue on line 3349 of bust.pt
-% value emitted -32767 !== % value emitted 14832 on line 3350 of bust.pt
-.tIfBegin !== .tFetchInteger on line 3351 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3352 of bust.pt
-% value emitted 14832 !== % value emitted 4 on line 3354 of bust.pt
-.tFetchInteger !== .tLT on line 3355 of bust.pt
-.tLiteralInteger !== .tAnd on line 3356 of bust.pt
-oEmitValue !== .tIfThen on line 3357 of bust.pt
-% value emitted 1 !== oEmitNullAddress on line 3358 of bust.pt
-.tGT !== % value emitted -32767 on line 3359 of bust.pt
-.tInfixAnd !== .tAssignBegin on line 3360 of bust.pt
-% value emitted 14832 !== % value emitted 109 on line 3363 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 3364 of bust.pt
-.tLiteralInteger !== oEmitValue on line 3365 of bust.pt
-oEmitValue !== % value emitted 104 on line 3366 of bust.pt
-% value emitted 4 !== .tFetchInteger on line 3367 of bust.pt
-.tLT !== .tLiteralInteger on line 3368 of bust.pt
-.tAnd !== oEmitValue on line 3369 of bust.pt
-.tIfThen !== % value emitted 12 on line 3370 of bust.pt
-oEmitNullAddress !== .tGT on line 3371 of bust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3372 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3373 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3374 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3375 of bust.pt
-% value emitted 109 !== .tIfBegin on line 3376 of bust.pt
-% value emitted 104 !== % value emitted 14832 on line 3379 of bust.pt
-% value emitted 12 !== % value emitted 3 on line 3383 of bust.pt
-.tAssignBoolean !== .tInfixAnd on line 3385 of bust.pt
-.tIfMerge !== .tLiteralAddress on line 3386 of bust.pt
-oEmitNullAddress !== oEmitValue on line 3387 of bust.pt
-% value emitted -32767 !== % value emitted 14832 on line 3388 of bust.pt
-.tIfBegin !== .tFetchInteger on line 3389 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3390 of bust.pt
-% value emitted 14832 !== % value emitted 7 on line 3392 of bust.pt
-.tFetchInteger !== .tLT on line 3393 of bust.pt
-.tLiteralInteger !== .tAnd on line 3394 of bust.pt
-oEmitValue !== .tIfThen on line 3395 of bust.pt
-% value emitted 3 !== oEmitNullAddress on line 3396 of bust.pt
-.tGT !== % value emitted -32767 on line 3397 of bust.pt
-.tInfixAnd !== .tAssignBegin on line 3398 of bust.pt
-% value emitted 14832 !== % value emitted 109 on line 3401 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 3402 of bust.pt
-.tLiteralInteger !== oEmitValue on line 3403 of bust.pt
-oEmitValue !== % value emitted 104 on line 3404 of bust.pt
-% value emitted 7 !== .tFetchInteger on line 3405 of bust.pt
-.tLT !== .tLiteralInteger on line 3406 of bust.pt
-.tAnd !== oEmitValue on line 3407 of bust.pt
-.tIfThen !== % value emitted 11 on line 3408 of bust.pt
-oEmitNullAddress !== .tGT on line 3409 of bust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3410 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3411 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3412 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3413 of bust.pt
-% value emitted 109 !== .tAssignBegin on line 3414 of bust.pt
-% value emitted 104 !== % value emitted 109 on line 3417 of bust.pt
-.tFetchInteger !== .tLiteralAddress on line 3418 of bust.pt
-.tLiteralInteger !== oEmitValue on line 3419 of bust.pt
-oEmitValue !== % value emitted 104 on line 3420 of bust.pt
-% value emitted 11 !== .tFetchInteger on line 3421 of bust.pt
-.tGT !== .tLiteralInteger on line 3422 of bust.pt
-.tAssignBoolean !== oEmitValue on line 3423 of bust.pt
-.tIfMerge !== % value emitted 16 on line 3424 of bust.pt
-oEmitNullAddress !== .tGT on line 3425 of bust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3426 of bust.pt
-.tAssignBegin !== .tIfEnd on line 3427 of bust.pt
-.tLiteralAddress !== .tIfEnd on line 3428 of bust.pt
-oEmitValue !== .tIfEnd on line 3429 of bust.pt
-% value emitted 109 !== .tIfBegin on line 3430 of bust.pt
-% value emitted 104 !== % value emitted 109 on line 3433 of bust.pt
-.tFetchInteger !== .tFetchBoolean on line 3434 of bust.pt
-.tLiteralInteger !== .tNot on line 3435 of bust.pt
-oEmitValue !== .tIfThen on line 3436 of bust.pt
-% value emitted 16 !== oEmitNullAddress on line 3437 of bust.pt
-.tGT !== % value emitted -32767 on line 3438 of bust.pt
-.tAssignBoolean !== .tCallBegin on line 3439 of bust.pt
-.tIfEnd !== .tCallEnd on line 3440 of bust.pt
-.tIfEnd !== oEmitValue on line 3441 of bust.pt
-.tIfEnd !== % value emitted 1958 on line 3442 of bust.pt
-.tIfBegin !== .tIfEnd on line 3443 of bust.pt
-.tLiteralAddress !== .tProcedureEnd on line 3444 of bust.pt
-oEmitValue !== .tSkipProc on line 3445 of bust.pt
-% value emitted 109 !== oEmitNullAddress on line 3446 of bust.pt
-.tFetchBoolean !== % value emitted -32767 on line 3447 of bust.pt
-.tNot !== .tParmEnd on line 3448 of bust.pt
-.tIfThen !== .tCallBegin on line 3449 of bust.pt
-oEmitNullAddress !== .tLiteralAddress on line 3450 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3451 of bust.pt
-.tCallBegin !== % value emitted 80 on line 3452 of bust.pt
-.tCallEnd !== .tFetchInteger on line 3453 of bust.pt
-oEmitValue !== .tParmEnd on line 3454 of bust.pt
-% value emitted 1968 !== .tLiteralAddress on line 3455 of bust.pt
-.tIfEnd !== oEmitValue on line 3456 of bust.pt
-.tProcedureEnd !== % value emitted 8 on line 3457 of bust.pt
-.tSkipProc !== .tVarParm on line 3458 of bust.pt
-oEmitNullAddress !== .tParmEnd on line 3459 of bust.pt
-% value emitted -32767 !== .tLiteralAddress on line 3460 of bust.pt
-.tParmEnd !== oEmitValue on line 3461 of bust.pt
-.tCallBegin !== % value emitted 14836 on line 3462 of bust.pt
-.tLiteralAddress !== .tVarParm on line 3463 of bust.pt
-oEmitValue !== .tParmEnd on line 3464 of bust.pt
-% value emitted 80 !== .tLiteralAddress on line 3465 of bust.pt
-.tFetchInteger !== oEmitValue on line 3466 of bust.pt
-.tParmEnd !== % value emitted 104 on line 3467 of bust.pt
-.tLiteralAddress !== .tVarParm on line 3468 of bust.pt
-oEmitValue !== .tParmEnd on line 3469 of bust.pt
-% value emitted 8 !== .tCallEnd on line 3470 of bust.pt
-.tVarParm !== oEmitValue on line 3471 of bust.pt
-.tParmEnd !== % value emitted 2243 on line 3472 of bust.pt
-.tLiteralAddress !== .tIfBegin on line 3473 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3474 of bust.pt
-% value emitted 14836 !== oEmitValue on line 3475 of bust.pt
-.tVarParm !== % value emitted 104 on line 3476 of bust.pt
-.tParmEnd !== .tFetchInteger on line 3477 of bust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3478 of bust.pt
-% value emitted 104 !== % value emitted 21 on line 3480 of bust.pt
-.tVarParm !== .tEQ on line 3481 of bust.pt
-.tParmEnd !== .tIfThen on line 3482 of bust.pt
-.tCallEnd !== oEmitNullAddress on line 3483 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3484 of bust.pt
-% value emitted 2253 !== .tCallBegin on line 3485 of bust.pt
-.tIfBegin !== .tCallEnd on line 3486 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3487 of bust.pt
-oEmitValue !== % value emitted 506 on line 3488 of bust.pt
-% value emitted 104 !== .tWriteBegin on line 3489 of bust.pt
-.tFetchInteger !== .tTrapBegin on line 3490 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3491 of bust.pt
-% value emitted 21 !== % value emitted 4 on line 3493 of bust.pt
-.tEQ !== .tVarParm on line 3494 of bust.pt
-.tIfThen !== .tParmEnd on line 3495 of bust.pt
-oEmitNullAddress !== .tLiteralString on line 3496 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3497 of bust.pt
-.tCallBegin !== % value emitted 17 on line 3498 of bust.pt
-.tCallEnd !== oEmitString on line 3499 of bust.pt
-oEmitValue !== % value emitted 32 on line 3500 of bust.pt
-% value emitted 514 !== % value emitted 99 on line 3501 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 3502 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 3503 of bust.pt
-.tLiteralAddress !== % value emitted 108 on line 3504 of bust.pt
-oEmitValue !== % value emitted 115 on line 3505 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 3506 of bust.pt
-.tVarParm !== % value emitted 98 on line 3507 of bust.pt
-.tParmEnd !== % value emitted 108 on line 3508 of bust.pt
-.tLiteralString !== % value emitted 97 on line 3509 of bust.pt
-oEmitValue !== % value emitted 99 on line 3510 of bust.pt
-% value emitted 17 !== % value emitted 107 on line 3511 of bust.pt
-oEmitString !== % value emitted 106 on line 3512 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 3513 of bust.pt
-% value emitted 97 !== % value emitted 107 on line 3515 of bust.pt
-% value emitted 108 !== % value emitted 46 on line 3516 of bust.pt
-% value emitted 108 !== .tParmEnd on line 3517 of bust.pt
-% value emitted 115 !== .tLiteralInteger on line 3518 of bust.pt
-% value emitted 32 !== oEmitValue on line 3519 of bust.pt
-% value emitted 98 !== % value emitted 1 on line 3520 of bust.pt
-% value emitted 108 !== .tParmEnd on line 3521 of bust.pt
-% value emitted 97 !== .tTrap on line 3522 of bust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 3523 of bust.pt
-% value emitted 107 !== % value emitted 109 on line 3524 of bust.pt
-% value emitted 106 !== .tWriteEnd on line 3525 of bust.pt
-% value emitted 97 !== .tTrapBegin on line 3526 of bust.pt
-% value emitted 99 !== .tLiteralAddress on line 3527 of bust.pt
-% value emitted 107 !== oEmitValue on line 3528 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3529 of bust.pt
-.tParmEnd !== .tVarParm on line 3530 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3531 of bust.pt
-oEmitValue !== .tTrap on line 3532 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3533 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3534 of bust.pt
-.tTrap !== .tAssignBegin on line 3535 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3536 of bust.pt
-% value emitted 109 !== oEmitValue on line 3537 of bust.pt
-.tWriteEnd !== % value emitted 109 on line 3538 of bust.pt
-.tTrapBegin !== .tLiteralBoolean on line 3539 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3540 of bust.pt
-oEmitValue !== % value emitted 1 on line 3541 of bust.pt
-% value emitted 4 !== .tAssignBoolean on line 3542 of bust.pt
-.tVarParm !== .tAssignBegin on line 3543 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 3544 of bust.pt
-.tTrap !== oEmitValue on line 3545 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 108 on line 3546 of bust.pt
-% value emitted 6 !== .tLiteralBoolean on line 3547 of bust.pt
-.tAssignBegin !== oEmitValue on line 3548 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 3549 of bust.pt
-oEmitValue !== .tAssignBoolean on line 3550 of bust.pt
-% value emitted 109 !== .tAssignBegin on line 3551 of bust.pt
-.tLiteralBoolean !== .tLiteralAddress on line 3552 of bust.pt
-% value emitted 1 !== % value emitted 92 on line 3554 of bust.pt
-.tAssignBoolean !== .tLiteralAddress on line 3555 of bust.pt
-.tAssignBegin !== oEmitValue on line 3556 of bust.pt
-.tLiteralAddress !== % value emitted 92 on line 3557 of bust.pt
-oEmitValue !== .tFetchInteger on line 3558 of bust.pt
-% value emitted 108 !== .tLiteralInteger on line 3559 of bust.pt
-.tLiteralBoolean !== oEmitValue on line 3560 of bust.pt
-oEmitValue !== % value emitted 1 on line 3561 of bust.pt
-% value emitted 1 !== .tAdd on line 3562 of bust.pt
-.tAssignBoolean !== .tAssignInteger on line 3563 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3564 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3565 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3566 of bust.pt
-% value emitted 92 !== .tIfBegin on line 3567 of bust.pt
-% value emitted 92 !== % value emitted 104 on line 3570 of bust.pt
-% value emitted 1 !== % value emitted 21 on line 3574 of bust.pt
-.tAdd !== .tGT on line 3575 of bust.pt
-.tAssignInteger !== .tIfThen on line 3576 of bust.pt
-.tIfMerge !== oEmitNullAddress on line 3577 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3578 of bust.pt
-% value emitted -32767 !== .tCallBegin on line 3579 of bust.pt
-.tIfBegin !== .tCallEnd on line 3580 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3581 of bust.pt
-oEmitValue !== % value emitted 506 on line 3582 of bust.pt
-% value emitted 104 !== .tWriteBegin on line 3583 of bust.pt
-.tFetchInteger !== .tTrapBegin on line 3584 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3585 of bust.pt
-% value emitted 21 !== % value emitted 4 on line 3587 of bust.pt
-.tGT !== .tVarParm on line 3588 of bust.pt
-.tIfThen !== .tParmEnd on line 3589 of bust.pt
-oEmitNullAddress !== .tLiteralString on line 3590 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3591 of bust.pt
-.tCallBegin !== % value emitted 11 on line 3592 of bust.pt
-.tCallEnd !== oEmitString on line 3593 of bust.pt
-oEmitValue !== % value emitted 32 on line 3594 of bust.pt
-% value emitted 514 !== % value emitted 103 on line 3595 of bust.pt
-.tWriteBegin !== % value emitted 111 on line 3596 of bust.pt
-.tTrapBegin !== % value emitted 101 on line 3597 of bust.pt
-.tLiteralAddress !== % value emitted 115 on line 3598 of bust.pt
-oEmitValue !== % value emitted 32 on line 3599 of bust.pt
-% value emitted 4 !== % value emitted 98 on line 3600 of bust.pt
-.tVarParm !== % value emitted 117 on line 3601 of bust.pt
-.tParmEnd !== % value emitted 115 on line 3602 of bust.pt
-.tLiteralString !== % value emitted 116 on line 3603 of bust.pt
-oEmitValue !== % value emitted 46 on line 3604 of bust.pt
-% value emitted 11 !== .tParmEnd on line 3605 of bust.pt
-oEmitString !== .tLiteralInteger on line 3606 of bust.pt
-% value emitted 32 !== oEmitValue on line 3607 of bust.pt
-% value emitted 103 !== % value emitted 1 on line 3608 of bust.pt
-% value emitted 111 !== .tParmEnd on line 3609 of bust.pt
-% value emitted 101 !== .tTrap on line 3610 of bust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 3611 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3612 of bust.pt
-% value emitted 98 !== .tWriteEnd on line 3613 of bust.pt
-% value emitted 117 !== .tTrapBegin on line 3614 of bust.pt
-% value emitted 115 !== .tLiteralAddress on line 3615 of bust.pt
-% value emitted 116 !== oEmitValue on line 3616 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3617 of bust.pt
-.tParmEnd !== .tVarParm on line 3618 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3619 of bust.pt
-oEmitValue !== .tTrap on line 3620 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3621 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3622 of bust.pt
-.tTrap !== .tAssignBegin on line 3623 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3624 of bust.pt
-% value emitted 109 !== oEmitValue on line 3625 of bust.pt
-.tWriteEnd !== % value emitted 109 on line 3626 of bust.pt
-.tTrapBegin !== .tLiteralBoolean on line 3627 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3628 of bust.pt
-oEmitValue !== % value emitted 1 on line 3629 of bust.pt
-% value emitted 4 !== .tAssignBoolean on line 3630 of bust.pt
-.tVarParm !== .tAssignBegin on line 3631 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 3632 of bust.pt
-.tTrap !== oEmitValue on line 3633 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 108 on line 3634 of bust.pt
-% value emitted 6 !== .tLiteralBoolean on line 3635 of bust.pt
-.tAssignBegin !== oEmitValue on line 3636 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 3637 of bust.pt
-oEmitValue !== .tAssignBoolean on line 3638 of bust.pt
-% value emitted 109 !== .tAssignBegin on line 3639 of bust.pt
-.tLiteralBoolean !== .tLiteralAddress on line 3640 of bust.pt
-% value emitted 1 !== % value emitted 96 on line 3642 of bust.pt
-.tAssignBoolean !== .tLiteralAddress on line 3643 of bust.pt
-.tAssignBegin !== oEmitValue on line 3644 of bust.pt
-.tLiteralAddress !== % value emitted 96 on line 3645 of bust.pt
-oEmitValue !== .tFetchInteger on line 3646 of bust.pt
-% value emitted 108 !== .tLiteralInteger on line 3647 of bust.pt
-.tLiteralBoolean !== oEmitValue on line 3648 of bust.pt
-oEmitValue !== % value emitted 1 on line 3649 of bust.pt
-% value emitted 1 !== .tAdd on line 3650 of bust.pt
-.tAssignBoolean !== .tAssignInteger on line 3651 of bust.pt
-.tAssignBegin !== .tIfMerge on line 3652 of bust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3653 of bust.pt
-oEmitValue !== % value emitted -32767 on line 3654 of bust.pt
-% value emitted 96 !== .tIfBegin on line 3655 of bust.pt
-% value emitted 96 !== % value emitted 110 on line 3658 of bust.pt
-.tFetchInteger !== .tFetchString on line 3659 of bust.pt
-.tLiteralInteger !== .tLiteralString on line 3660 of bust.pt
-.tAdd !== oEmitString on line 3663 of bust.pt
-.tAssignInteger !== % value emitted 101 on line 3664 of bust.pt
-.tIfMerge !== .tStringEqual on line 3665 of bust.pt
-oEmitNullAddress !== .tIfThen on line 3666 of bust.pt
-% value emitted -32767 !== oEmitNullAddress on line 3667 of bust.pt
-.tIfBegin !== % value emitted -32767 on line 3668 of bust.pt
-.tLiteralAddress !== .tCallBegin on line 3669 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3670 of bust.pt
-% value emitted 110 !== oEmitValue on line 3671 of bust.pt
-.tFetchString !== % value emitted 14836 on line 3672 of bust.pt
-.tLiteralString !== .tFetchBoolean on line 3673 of bust.pt
-oEmitValue !== .tParmEnd on line 3674 of bust.pt
-% value emitted 1 !== .tCallEnd on line 3675 of bust.pt
-oEmitString !== oEmitValue on line 3676 of bust.pt
-% value emitted 101 !== % value emitted 3066 on line 3677 of bust.pt
-.tStringEqual !== .tIfMerge on line 3678 of bust.pt
-.tIfThen !== oEmitNullAddress on line 3679 of bust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3680 of bust.pt
-% value emitted -32767 !== .tCallBegin on line 3681 of bust.pt
-.tCallBegin !== .tCallEnd on line 3682 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3683 of bust.pt
-oEmitValue !== % value emitted 3026 on line 3684 of bust.pt
-% value emitted 14836 !== .tIfEnd on line 3685 of bust.pt
-.tFetchBoolean !== .tIfEnd on line 3686 of bust.pt
-.tParmEnd !== .tIfEnd on line 3687 of bust.pt
-.tCallEnd !== .tIfBegin on line 3688 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3689 of bust.pt
-% value emitted 3080 !== oEmitValue on line 3690 of bust.pt
-.tIfMerge !== % value emitted 109 on line 3691 of bust.pt
-oEmitNullAddress !== .tFetchBoolean on line 3692 of bust.pt
-% value emitted -32767 !== .tIfThen on line 3693 of bust.pt
-.tCallBegin !== oEmitNullAddress on line 3694 of bust.pt
-.tCallEnd !== % value emitted -32767 on line 3695 of bust.pt
-oEmitValue !== .tCallBegin on line 3696 of bust.pt
-% value emitted 3040 !== .tCallEnd on line 3697 of bust.pt
-.tIfEnd !== oEmitValue on line 3698 of bust.pt
-.tIfEnd !== % value emitted 506 on line 3699 of bust.pt
-.tIfEnd !== .tWriteBegin on line 3700 of bust.pt
-.tIfBegin !== .tTrapBegin on line 3701 of bust.pt
-% value emitted 109 !== % value emitted 4 on line 3704 of bust.pt
-.tFetchBoolean !== .tVarParm on line 3705 of bust.pt
-.tIfThen !== .tParmEnd on line 3706 of bust.pt
-oEmitNullAddress !== .tLiteralString on line 3707 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3708 of bust.pt
-.tCallBegin !== % value emitted 13 on line 3709 of bust.pt
-.tCallEnd !== oEmitString on line 3710 of bust.pt
-oEmitValue !== % value emitted 32 on line 3711 of bust.pt
-% value emitted 514 !== % value emitted 115 on line 3712 of bust.pt
-.tWriteBegin !== % value emitted 116 on line 3713 of bust.pt
-.tTrapBegin !== % value emitted 97 on line 3714 of bust.pt
-.tLiteralAddress !== % value emitted 110 on line 3715 of bust.pt
-oEmitValue !== % value emitted 100 on line 3716 of bust.pt
-% value emitted 4 !== % value emitted 115 on line 3717 of bust.pt
-.tVarParm !== % value emitted 32 on line 3718 of bust.pt
-.tParmEnd !== % value emitted 119 on line 3719 of bust.pt
-.tLiteralString !== % value emitted 105 on line 3720 of bust.pt
-oEmitValue !== % value emitted 116 on line 3721 of bust.pt
-% value emitted 13 !== % value emitted 104 on line 3722 of bust.pt
-oEmitString !== % value emitted 32 on line 3723 of bust.pt
-% value emitted 32 !== .tParmEnd on line 3724 of bust.pt
-% value emitted 115 !== .tLiteralInteger on line 3725 of bust.pt
-% value emitted 116 !== oEmitValue on line 3726 of bust.pt
-% value emitted 97 !== % value emitted 1 on line 3727 of bust.pt
-% value emitted 110 !== .tParmEnd on line 3728 of bust.pt
-% value emitted 100 !== .tTrap on line 3729 of bust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 3730 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3731 of bust.pt
-% value emitted 119 !== .tTrapBegin on line 3732 of bust.pt
-% value emitted 105 !== .tLiteralAddress on line 3733 of bust.pt
-% value emitted 116 !== oEmitValue on line 3734 of bust.pt
-% value emitted 104 !== % value emitted 4 on line 3735 of bust.pt
-% value emitted 32 !== .tVarParm on line 3736 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3738 of bust.pt
-% value emitted 1 !== % value emitted 104 on line 3740 of bust.pt
-.tParmEnd !== .tFetchInteger on line 3741 of bust.pt
-.tTrap !== .tParmEnd on line 3742 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralInteger on line 3743 of bust.pt
-% value emitted 109 !== oEmitValue on line 3744 of bust.pt
-.tTrapBegin !== % value emitted 1 on line 3745 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 3746 of bust.pt
-oEmitValue !== .tTrap on line 3747 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 3748 of bust.pt
-.tVarParm !== % value emitted 8 on line 3749 of bust.pt
-.tParmEnd !== .tTrapBegin on line 3750 of bust.pt
-% value emitted 104 !== % value emitted 4 on line 3753 of bust.pt
-.tFetchInteger !== .tVarParm on line 3754 of bust.pt
-.tLiteralInteger !== .tLiteralString on line 3756 of bust.pt
-.tParmEnd !== oEmitString on line 3759 of bust.pt
-.tTrap !== % value emitted 46 on line 3760 of bust.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 3761 of bust.pt
-% value emitted 7 !== .tLiteralInteger on line 3762 of bust.pt
-.tTrapBegin !== oEmitValue on line 3763 of bust.pt
-.tLiteralAddress !== % value emitted 1 on line 3764 of bust.pt
-oEmitValue !== .tParmEnd on line 3765 of bust.pt
-% value emitted 4 !== .tTrap on line 3766 of bust.pt
-.tVarParm !== oEmitTrapKind(trWriteString) on line 3767 of bust.pt
-.tParmEnd !== % value emitted 109 on line 3768 of bust.pt
-.tLiteralString !== .tWriteEnd on line 3769 of bust.pt
-oEmitValue !== .tTrapBegin on line 3770 of bust.pt
-% value emitted 1 !== .tLiteralAddress on line 3771 of bust.pt
-oEmitString !== oEmitValue on line 3772 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3773 of bust.pt
-.tParmEnd !== .tVarParm on line 3774 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3775 of bust.pt
-oEmitValue !== .tTrap on line 3776 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3777 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3778 of bust.pt
-.tTrap !== .tIfMerge on line 3779 of bust.pt
-oEmitTrapKind(trWriteString) !== oEmitNullAddress on line 3780 of bust.pt
-% value emitted 109 !== % value emitted -32767 on line 3781 of bust.pt
-.tWriteEnd !== .tCallBegin on line 3782 of bust.pt
-.tTrapBegin !== .tCallEnd on line 3783 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3784 of bust.pt
-oEmitValue !== % value emitted 506 on line 3785 of bust.pt
-% value emitted 4 !== .tWriteBegin on line 3786 of bust.pt
-.tVarParm !== .tTrapBegin on line 3787 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 3788 of bust.pt
-.tTrap !== oEmitValue on line 3789 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 3790 of bust.pt
-% value emitted 6 !== .tVarParm on line 3791 of bust.pt
-.tIfMerge !== .tParmEnd on line 3792 of bust.pt
-oEmitNullAddress !== .tLiteralString on line 3793 of bust.pt
-% value emitted -32767 !== oEmitValue on line 3794 of bust.pt
-.tCallBegin !== % value emitted 26 on line 3795 of bust.pt
-.tCallEnd !== oEmitString on line 3796 of bust.pt
-oEmitValue !== % value emitted 32 on line 3797 of bust.pt
-% value emitted 514 !== % value emitted 116 on line 3798 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 3799 of bust.pt
-.tTrapBegin !== % value emitted 107 on line 3800 of bust.pt
-.tLiteralAddress !== % value emitted 101 on line 3801 of bust.pt
-oEmitValue !== % value emitted 115 on line 3802 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 3803 of bust.pt
-.tVarParm !== % value emitted 97 on line 3804 of bust.pt
-.tParmEnd !== % value emitted 32 on line 3805 of bust.pt
-.tLiteralString !== % value emitted 99 on line 3806 of bust.pt
-oEmitValue !== % value emitted 97 on line 3807 of bust.pt
-% value emitted 26 !== % value emitted 114 on line 3808 of bust.pt
-oEmitString !== % value emitted 100 on line 3809 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 3811 of bust.pt
-% value emitted 97 !== % value emitted 110 on line 3812 of bust.pt
-% value emitted 107 !== % value emitted 100 on line 3813 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 3814 of bust.pt
-% value emitted 115 !== % value emitted 110 on line 3815 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 3816 of bust.pt
-% value emitted 97 !== % value emitted 119 on line 3817 of bust.pt
-% value emitted 99 !== % value emitted 104 on line 3819 of bust.pt
-% value emitted 114 !== % value emitted 115 on line 3821 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 3822 of bust.pt
-% value emitted 32 !== .tParmEnd on line 3823 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 3824 of bust.pt
-% value emitted 110 !== oEmitValue on line 3825 of bust.pt
-% value emitted 100 !== % value emitted 1 on line 3826 of bust.pt
-% value emitted 32 !== .tParmEnd on line 3827 of bust.pt
-% value emitted 110 !== .tTrap on line 3828 of bust.pt
-% value emitted 111 !== oEmitTrapKind(trWriteString) on line 3829 of bust.pt
-% value emitted 119 !== % value emitted 109 on line 3830 of bust.pt
-% value emitted 32 !== .tWriteEnd on line 3831 of bust.pt
-% value emitted 104 !== .tCallBegin on line 3832 of bust.pt
-% value emitted 97 !== .tLiteralAddress on line 3833 of bust.pt
-% value emitted 115 !== oEmitValue on line 3834 of bust.pt
-% value emitted 32 !== % value emitted 80 on line 3835 of bust.pt
-.tParmEnd !== .tFetchInteger on line 3836 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3837 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3838 of bust.pt
-% value emitted 1 !== oEmitValue on line 3839 of bust.pt
-.tParmEnd !== % value emitted 8 on line 3840 of bust.pt
-.tTrap !== .tVarParm on line 3841 of bust.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 3842 of bust.pt
-% value emitted 109 !== .tCallEnd on line 3843 of bust.pt
-.tWriteEnd !== oEmitValue on line 3844 of bust.pt
-.tCallBegin !== % value emitted 410 on line 3845 of bust.pt
-.tLiteralAddress !== .tTrapBegin on line 3846 of bust.pt
-oEmitValue !== .tLiteralAddress on line 3847 of bust.pt
-% value emitted 80 !== oEmitValue on line 3848 of bust.pt
-.tFetchInteger !== % value emitted 4 on line 3849 of bust.pt
-.tParmEnd !== .tVarParm on line 3850 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 3851 of bust.pt
-oEmitValue !== .tTrap on line 3852 of bust.pt
-% value emitted 8 !== oEmitTrapKind(trWriteln) on line 3853 of bust.pt
-.tVarParm !== % value emitted 6 on line 3854 of bust.pt
-.tParmEnd !== .tIfEnd on line 3855 of bust.pt
-.tCallEnd !== .tProcedureEnd on line 3856 of bust.pt
-oEmitValue !== .tWriteBegin on line 3857 of bust.pt
-% value emitted 416 !== .tTrapBegin on line 3858 of bust.pt
-.tTrapBegin !== .tLiteralAddress on line 3859 of bust.pt
-.tLiteralAddress !== oEmitValue on line 3860 of bust.pt
-oEmitValue !== % value emitted 4 on line 3861 of bust.pt
-% value emitted 4 !== .tVarParm on line 3862 of bust.pt
-.tVarParm !== .tParmEnd on line 3863 of bust.pt
-.tParmEnd !== .tLiteralString on line 3864 of bust.pt
-.tTrap !== oEmitValue on line 3865 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 45 on line 3866 of bust.pt
-% value emitted 6 !== oEmitString on line 3867 of bust.pt
-.tIfEnd !== % value emitted 84 on line 3868 of bust.pt
-.tProcedureEnd !== % value emitted 104 on line 3869 of bust.pt
-.tWriteBegin !== % value emitted 105 on line 3870 of bust.pt
-.tTrapBegin !== % value emitted 115 on line 3871 of bust.pt
-.tLiteralAddress !== % value emitted 32 on line 3872 of bust.pt
-oEmitValue !== % value emitted 112 on line 3873 of bust.pt
-% value emitted 4 !== % value emitted 114 on line 3874 of bust.pt
-.tVarParm !== % value emitted 111 on line 3875 of bust.pt
-.tParmEnd !== % value emitted 103 on line 3876 of bust.pt
-.tLiteralString !== % value emitted 114 on line 3877 of bust.pt
-oEmitValue !== % value emitted 97 on line 3878 of bust.pt
-% value emitted 45 !== % value emitted 109 on line 3879 of bust.pt
-oEmitString !== % value emitted 32 on line 3880 of bust.pt
-% value emitted 84 !== % value emitted 115 on line 3881 of bust.pt
-% value emitted 104 !== % value emitted 105 on line 3882 of bust.pt
-% value emitted 105 !== % value emitted 109 on line 3883 of bust.pt
-% value emitted 115 !== % value emitted 117 on line 3884 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 3885 of bust.pt
-% value emitted 112 !== % value emitted 97 on line 3886 of bust.pt
-% value emitted 114 !== % value emitted 116 on line 3887 of bust.pt
-% value emitted 111 !== % value emitted 101 on line 3888 of bust.pt
-% value emitted 103 !== % value emitted 115 on line 3889 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 3890 of bust.pt
-% value emitted 97 !== % value emitted 116 on line 3891 of bust.pt
-% value emitted 109 !== % value emitted 104 on line 3892 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 3893 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 3894 of bust.pt
-% value emitted 105 !== % value emitted 103 on line 3895 of bust.pt
-% value emitted 109 !== % value emitted 97 on line 3896 of bust.pt
-% value emitted 117 !== % value emitted 109 on line 3897 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 3898 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 3899 of bust.pt
-% value emitted 116 !== % value emitted 111 on line 3900 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 3901 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 3902 of bust.pt
-% value emitted 32 !== % value emitted 98 on line 3903 of bust.pt
-% value emitted 116 !== % value emitted 108 on line 3904 of bust.pt
-% value emitted 104 !== % value emitted 97 on line 3905 of bust.pt
-% value emitted 101 !== % value emitted 99 on line 3906 of bust.pt
-% value emitted 32 !== % value emitted 107 on line 3907 of bust.pt
-% value emitted 103 !== % value emitted 106 on line 3908 of bust.pt
-% value emitted 109 !== % value emitted 99 on line 3910 of bust.pt
-% value emitted 101 !== % value emitted 107 on line 3911 of bust.pt
-% value emitted 32 !== % value emitted 46 on line 3912 of bust.pt
-% value emitted 111 !== .tParmEnd on line 3913 of bust.pt
-% value emitted 102 !== .tLiteralInteger on line 3914 of bust.pt
-% value emitted 32 !== oEmitValue on line 3915 of bust.pt
-% value emitted 98 !== % value emitted 1 on line 3916 of bust.pt
-% value emitted 108 !== .tParmEnd on line 3917 of bust.pt
-% value emitted 97 !== .tTrap on line 3918 of bust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 3919 of bust.pt
-% value emitted 107 !== % value emitted 109 on line 3920 of bust.pt
-% value emitted 106 !== .tWriteEnd on line 3921 of bust.pt
-% value emitted 97 !== .tTrapBegin on line 3922 of bust.pt
-% value emitted 99 !== .tLiteralAddress on line 3923 of bust.pt
-% value emitted 107 !== oEmitValue on line 3924 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 3925 of bust.pt
-.tParmEnd !== .tVarParm on line 3926 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 3927 of bust.pt
-oEmitValue !== .tTrap on line 3928 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3929 of bust.pt
-.tParmEnd !== % value emitted 6 on line 3930 of bust.pt
-.tTrap !== .tTrapBegin on line 3931 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3932 of bust.pt
-% value emitted 109 !== oEmitValue on line 3933 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 3934 of bust.pt
-.tTrapBegin !== .tVarParm on line 3935 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 3936 of bust.pt
-oEmitValue !== .tTrap on line 3937 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 3938 of bust.pt
-.tVarParm !== % value emitted 6 on line 3939 of bust.pt
-.tParmEnd !== .tWriteBegin on line 3940 of bust.pt
-.tTrap !== .tTrapBegin on line 3941 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 3942 of bust.pt
-% value emitted 6 !== oEmitValue on line 3943 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 3944 of bust.pt
-.tLiteralAddress !== .tVarParm on line 3945 of bust.pt
-oEmitValue !== .tParmEnd on line 3946 of bust.pt
-% value emitted 4 !== .tLiteralString on line 3947 of bust.pt
-.tVarParm !== oEmitValue on line 3948 of bust.pt
-.tParmEnd !== % value emitted 69 on line 3949 of bust.pt
-.tTrap !== oEmitString on line 3950 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 3951 of bust.pt
-% value emitted 6 !== % value emitted 104 on line 3952 of bust.pt
-.tWriteBegin !== % value emitted 101 on line 3953 of bust.pt
-.tTrapBegin !== % value emitted 32 on line 3954 of bust.pt
-.tLiteralAddress !== % value emitted 100 on line 3955 of bust.pt
-oEmitValue !== % value emitted 101 on line 3956 of bust.pt
-% value emitted 4 !== % value emitted 97 on line 3957 of bust.pt
-.tVarParm !== % value emitted 108 on line 3958 of bust.pt
-.tParmEnd !== % value emitted 101 on line 3959 of bust.pt
-.tLiteralString !== % value emitted 114 on line 3960 of bust.pt
-oEmitValue !== % value emitted 32 on line 3961 of bust.pt
-% value emitted 69 !== % value emitted 112 on line 3962 of bust.pt
-oEmitString !== % value emitted 108 on line 3963 of bust.pt
-% value emitted 84 !== % value emitted 97 on line 3964 of bust.pt
-% value emitted 104 !== % value emitted 121 on line 3965 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 3966 of bust.pt
-% value emitted 100 !== % value emitted 116 on line 3968 of bust.pt
-% value emitted 101 !== % value emitted 104 on line 3969 of bust.pt
-% value emitted 97 !== % value emitted 101 on line 3970 of bust.pt
-% value emitted 108 !== % value emitted 32 on line 3971 of bust.pt
-% value emitted 101 !== % value emitted 99 on line 3972 of bust.pt
-% value emitted 114 !== % value emitted 111 on line 3973 of bust.pt
-% value emitted 32 !== % value emitted 109 on line 3974 of bust.pt
-% value emitted 108 !== % value emitted 117 on line 3976 of bust.pt
-% value emitted 97 !== % value emitted 108 on line 3977 of bust.pt
-% value emitted 121 !== % value emitted 115 on line 3978 of bust.pt
-% value emitted 115 !== % value emitted 111 on line 3979 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 3980 of bust.pt
-% value emitted 116 !== % value emitted 121 on line 3981 of bust.pt
-% value emitted 104 !== % value emitted 32 on line 3982 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 3983 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 3984 of bust.pt
-% value emitted 99 !== % value emitted 114 on line 3985 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 3986 of bust.pt
-% value emitted 109 !== % value emitted 116 on line 3987 of bust.pt
-% value emitted 112 !== % value emitted 101 on line 3988 of bust.pt
-% value emitted 117 !== % value emitted 103 on line 3989 of bust.pt
-% value emitted 108 !== % value emitted 121 on line 3990 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 3991 of bust.pt
-% value emitted 114 !== % value emitted 102 on line 3993 of bust.pt
-% value emitted 121 !== % value emitted 32 on line 3994 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 3995 of bust.pt
-% value emitted 115 !== % value emitted 116 on line 3996 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 3997 of bust.pt
-% value emitted 114 !== % value emitted 110 on line 3998 of bust.pt
-% value emitted 97 !== % value emitted 100 on line 3999 of bust.pt
-% value emitted 116 !== % value emitted 105 on line 4000 of bust.pt
-% value emitted 101 !== % value emitted 110 on line 4001 of bust.pt
-% value emitted 121 !== % value emitted 32 on line 4003 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 4004 of bust.pt
-% value emitted 111 !== % value emitted 110 on line 4005 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 4006 of bust.pt
-% value emitted 32 !== % value emitted 49 on line 4007 of bust.pt
-% value emitted 115 !== % value emitted 55 on line 4008 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4009 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 4010 of bust.pt
-% value emitted 110 !== % value emitted 114 on line 4011 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 4012 of bust.pt
-% value emitted 105 !== % value emitted 98 on line 4013 of bust.pt
-% value emitted 110 !== % value emitted 101 on line 4014 of bust.pt
-% value emitted 103 !== % value emitted 116 on line 4015 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4016 of bust.pt
-% value emitted 111 !== % value emitted 101 on line 4017 of bust.pt
-% value emitted 110 !== % value emitted 114 on line 4018 of bust.pt
-% value emitted 32 !== % value emitted 46 on line 4019 of bust.pt
-% value emitted 49 !== .tParmEnd on line 4020 of bust.pt
-% value emitted 55 !== .tLiteralInteger on line 4021 of bust.pt
-% value emitted 32 !== oEmitValue on line 4022 of bust.pt
-% value emitted 111 !== % value emitted 1 on line 4023 of bust.pt
-% value emitted 114 !== .tParmEnd on line 4024 of bust.pt
-% value emitted 32 !== .tTrap on line 4025 of bust.pt
-% value emitted 98 !== oEmitTrapKind(trWriteString) on line 4026 of bust.pt
-% value emitted 101 !== % value emitted 109 on line 4027 of bust.pt
-% value emitted 116 !== .tWriteEnd on line 4028 of bust.pt
-% value emitted 116 !== .tTrapBegin on line 4029 of bust.pt
-% value emitted 101 !== .tLiteralAddress on line 4030 of bust.pt
-% value emitted 114 !== oEmitValue on line 4031 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 4032 of bust.pt
-.tParmEnd !== .tVarParm on line 4033 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4034 of bust.pt
-oEmitValue !== .tTrap on line 4035 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4036 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4037 of bust.pt
-.tTrap !== .tTrapBegin on line 4038 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4039 of bust.pt
-% value emitted 109 !== oEmitValue on line 4040 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 4041 of bust.pt
-.tTrapBegin !== .tVarParm on line 4042 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 4043 of bust.pt
-oEmitValue !== .tTrap on line 4044 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4045 of bust.pt
-.tVarParm !== % value emitted 6 on line 4046 of bust.pt
-.tParmEnd !== .tWriteBegin on line 4047 of bust.pt
-.tTrap !== .tTrapBegin on line 4048 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4049 of bust.pt
-% value emitted 6 !== oEmitValue on line 4050 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4051 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4052 of bust.pt
-oEmitValue !== .tParmEnd on line 4053 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4054 of bust.pt
-.tVarParm !== oEmitValue on line 4055 of bust.pt
-.tParmEnd !== % value emitted 23 on line 4056 of bust.pt
-.tTrap !== oEmitString on line 4057 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 4058 of bust.pt
-% value emitted 6 !== % value emitted 104 on line 4059 of bust.pt
-.tWriteBegin !== % value emitted 101 on line 4060 of bust.pt
-.tTrapBegin !== % value emitted 32 on line 4061 of bust.pt
-.tLiteralAddress !== % value emitted 112 on line 4062 of bust.pt
-oEmitValue !== % value emitted 108 on line 4063 of bust.pt
-% value emitted 4 !== % value emitted 97 on line 4064 of bust.pt
-.tVarParm !== % value emitted 121 on line 4065 of bust.pt
-.tParmEnd !== % value emitted 101 on line 4066 of bust.pt
-.tLiteralString !== % value emitted 114 on line 4067 of bust.pt
-oEmitValue !== % value emitted 32 on line 4068 of bust.pt
-% value emitted 23 !== % value emitted 112 on line 4069 of bust.pt
-oEmitString !== % value emitted 108 on line 4070 of bust.pt
-% value emitted 84 !== % value emitted 97 on line 4071 of bust.pt
-% value emitted 104 !== % value emitted 121 on line 4072 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4073 of bust.pt
-% value emitted 112 !== % value emitted 101 on line 4075 of bust.pt
-% value emitted 108 !== % value emitted 105 on line 4076 of bust.pt
-% value emitted 97 !== % value emitted 116 on line 4077 of bust.pt
-% value emitted 121 !== % value emitted 104 on line 4078 of bust.pt
-% value emitted 32 !== .tParmEnd on line 4081 of bust.pt
-% value emitted 112 !== .tLiteralInteger on line 4082 of bust.pt
-% value emitted 108 !== oEmitValue on line 4083 of bust.pt
-% value emitted 97 !== % value emitted 1 on line 4084 of bust.pt
-% value emitted 121 !== .tParmEnd on line 4085 of bust.pt
-% value emitted 115 !== .tTrap on line 4086 of bust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 4087 of bust.pt
-% value emitted 101 !== % value emitted 109 on line 4088 of bust.pt
-% value emitted 105 !== .tWriteEnd on line 4089 of bust.pt
-% value emitted 116 !== .tTrapBegin on line 4090 of bust.pt
-% value emitted 104 !== .tLiteralAddress on line 4091 of bust.pt
-% value emitted 101 !== oEmitValue on line 4092 of bust.pt
-% value emitted 114 !== % value emitted 4 on line 4093 of bust.pt
-.tParmEnd !== .tVarParm on line 4094 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4095 of bust.pt
-oEmitValue !== .tTrap on line 4096 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4097 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4098 of bust.pt
-.tTrap !== .tWriteBegin on line 4099 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4100 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4101 of bust.pt
-.tWriteEnd !== oEmitValue on line 4102 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4103 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4104 of bust.pt
-oEmitValue !== .tParmEnd on line 4105 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4106 of bust.pt
-.tVarParm !== oEmitValue on line 4107 of bust.pt
-.tParmEnd !== % value emitted 64 on line 4108 of bust.pt
-.tTrap !== oEmitString on line 4109 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4110 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4111 of bust.pt
-.tWriteBegin !== % value emitted 91 on line 4112 of bust.pt
-.tTrapBegin !== % value emitted 49 on line 4113 of bust.pt
-.tLiteralAddress !== % value emitted 93 on line 4114 of bust.pt
-oEmitValue !== % value emitted 32 on line 4115 of bust.pt
-% value emitted 4 !== % value emitted 84 on line 4116 of bust.pt
-.tVarParm !== % value emitted 104 on line 4117 of bust.pt
-.tParmEnd !== % value emitted 101 on line 4118 of bust.pt
-.tLiteralString !== % value emitted 32 on line 4119 of bust.pt
-oEmitValue !== % value emitted 115 on line 4120 of bust.pt
-% value emitted 64 !== % value emitted 116 on line 4121 of bust.pt
-oEmitString !== % value emitted 97 on line 4122 of bust.pt
-% value emitted 32 !== % value emitted 110 on line 4123 of bust.pt
-% value emitted 32 !== % value emitted 100 on line 4124 of bust.pt
-% value emitted 91 !== % value emitted 97 on line 4125 of bust.pt
-% value emitted 49 !== % value emitted 114 on line 4126 of bust.pt
-% value emitted 93 !== % value emitted 100 on line 4127 of bust.pt
-% value emitted 84 !== % value emitted 110 on line 4129 of bust.pt
-% value emitted 104 !== % value emitted 97 on line 4130 of bust.pt
-% value emitted 101 !== % value emitted 105 on line 4131 of bust.pt
-% value emitted 32 !== % value emitted 118 on line 4132 of bust.pt
-% value emitted 115 !== % value emitted 101 on line 4133 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4134 of bust.pt
-% value emitted 97 !== % value emitted 115 on line 4135 of bust.pt
-% value emitted 110 !== % value emitted 116 on line 4136 of bust.pt
-% value emitted 100 !== % value emitted 114 on line 4137 of bust.pt
-% value emitted 114 !== % value emitted 116 on line 4139 of bust.pt
-% value emitted 100 !== % value emitted 101 on line 4140 of bust.pt
-% value emitted 32 !== % value emitted 103 on line 4141 of bust.pt
-% value emitted 110 !== % value emitted 121 on line 4142 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4143 of bust.pt
-% value emitted 105 !== % value emitted 111 on line 4144 of bust.pt
-% value emitted 118 !== % value emitted 102 on line 4145 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4146 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 4147 of bust.pt
-% value emitted 115 !== % value emitted 116 on line 4148 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 4149 of bust.pt
-% value emitted 114 !== % value emitted 110 on line 4150 of bust.pt
-% value emitted 97 !== % value emitted 100 on line 4151 of bust.pt
-% value emitted 116 !== % value emitted 105 on line 4152 of bust.pt
-% value emitted 101 !== % value emitted 110 on line 4153 of bust.pt
-% value emitted 121 !== % value emitted 32 on line 4155 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 4156 of bust.pt
-% value emitted 111 !== % value emitted 110 on line 4157 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 4158 of bust.pt
-% value emitted 32 !== % value emitted 110 on line 4159 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 4160 of bust.pt
-% value emitted 116 !== % value emitted 111 on line 4161 of bust.pt
-% value emitted 97 !== % value emitted 114 on line 4162 of bust.pt
-% value emitted 110 !== % value emitted 32 on line 4163 of bust.pt
-% value emitted 100 !== % value emitted 98 on line 4164 of bust.pt
-% value emitted 105 !== % value emitted 101 on line 4165 of bust.pt
-% value emitted 110 !== % value emitted 116 on line 4166 of bust.pt
-% value emitted 103 !== % value emitted 116 on line 4167 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4168 of bust.pt
-% value emitted 111 !== % value emitted 114 on line 4169 of bust.pt
-% value emitted 110 !== % value emitted 44 on line 4170 of bust.pt
-% value emitted 110 !== % value emitted 111 on line 4172 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 4173 of bust.pt
-% value emitted 111 !== .tParmEnd on line 4174 of bust.pt
-% value emitted 114 !== .tLiteralInteger on line 4175 of bust.pt
-% value emitted 32 !== oEmitValue on line 4176 of bust.pt
-% value emitted 98 !== % value emitted 1 on line 4177 of bust.pt
-% value emitted 101 !== .tParmEnd on line 4178 of bust.pt
-% value emitted 116 !== .tTrap on line 4179 of bust.pt
-% value emitted 116 !== oEmitTrapKind(trWriteString) on line 4180 of bust.pt
-% value emitted 101 !== % value emitted 109 on line 4181 of bust.pt
-% value emitted 114 !== .tWriteEnd on line 4182 of bust.pt
-% value emitted 44 !== .tTrapBegin on line 4183 of bust.pt
-% value emitted 32 !== .tLiteralAddress on line 4184 of bust.pt
-% value emitted 111 !== oEmitValue on line 4185 of bust.pt
-% value emitted 114 !== % value emitted 4 on line 4186 of bust.pt
-.tParmEnd !== .tVarParm on line 4187 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4188 of bust.pt
-oEmitValue !== .tTrap on line 4189 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4190 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4191 of bust.pt
-.tTrap !== .tWriteBegin on line 4192 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4193 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4194 of bust.pt
-.tWriteEnd !== oEmitValue on line 4195 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4196 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4197 of bust.pt
-oEmitValue !== .tParmEnd on line 4198 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4199 of bust.pt
-.tVarParm !== oEmitValue on line 4200 of bust.pt
-.tParmEnd !== % value emitted 66 on line 4201 of bust.pt
-.tTrap !== oEmitString on line 4202 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4203 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4204 of bust.pt
-.tWriteBegin !== % value emitted 91 on line 4205 of bust.pt
-.tTrapBegin !== % value emitted 50 on line 4206 of bust.pt
-.tLiteralAddress !== % value emitted 93 on line 4207 of bust.pt
-oEmitValue !== % value emitted 32 on line 4208 of bust.pt
-% value emitted 4 !== % value emitted 65 on line 4209 of bust.pt
-.tVarParm !== % value emitted 32 on line 4210 of bust.pt
-.tParmEnd !== % value emitted 115 on line 4211 of bust.pt
-.tLiteralString !== % value emitted 105 on line 4212 of bust.pt
-oEmitValue !== % value emitted 109 on line 4213 of bust.pt
-% value emitted 66 !== % value emitted 112 on line 4214 of bust.pt
-oEmitString !== % value emitted 108 on line 4215 of bust.pt
-% value emitted 32 !== % value emitted 105 on line 4216 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 4217 of bust.pt
-% value emitted 91 !== % value emitted 105 on line 4218 of bust.pt
-% value emitted 50 !== % value emitted 101 on line 4219 of bust.pt
-% value emitted 93 !== % value emitted 100 on line 4220 of bust.pt
-% value emitted 65 !== % value emitted 118 on line 4222 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4223 of bust.pt
-% value emitted 115 !== % value emitted 114 on line 4224 of bust.pt
-% value emitted 105 !== % value emitted 115 on line 4225 of bust.pt
-% value emitted 109 !== % value emitted 105 on line 4226 of bust.pt
-% value emitted 112 !== % value emitted 111 on line 4227 of bust.pt
-% value emitted 108 !== % value emitted 110 on line 4228 of bust.pt
-% value emitted 105 !== % value emitted 32 on line 4229 of bust.pt
-% value emitted 102 !== % value emitted 111 on line 4230 of bust.pt
-% value emitted 105 !== % value emitted 102 on line 4231 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4232 of bust.pt
-% value emitted 100 !== % value emitted 116 on line 4233 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 4234 of bust.pt
-% value emitted 118 !== % value emitted 101 on line 4235 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4236 of bust.pt
-% value emitted 114 !== % value emitted 115 on line 4237 of bust.pt
-% value emitted 115 !== % value emitted 116 on line 4238 of bust.pt
-% value emitted 105 !== % value emitted 114 on line 4239 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 4240 of bust.pt
-% value emitted 110 !== % value emitted 116 on line 4241 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4242 of bust.pt
-% value emitted 111 !== % value emitted 103 on line 4243 of bust.pt
-% value emitted 102 !== % value emitted 121 on line 4244 of bust.pt
-% value emitted 116 !== % value emitted 100 on line 4246 of bust.pt
-% value emitted 104 !== % value emitted 101 on line 4247 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4248 of bust.pt
-% value emitted 32 !== % value emitted 99 on line 4249 of bust.pt
-% value emitted 115 !== % value emitted 114 on line 4250 of bust.pt
-% value emitted 116 !== % value emitted 105 on line 4251 of bust.pt
-% value emitted 114 !== % value emitted 98 on line 4252 of bust.pt
-% value emitted 97 !== % value emitted 101 on line 4253 of bust.pt
-% value emitted 116 !== % value emitted 100 on line 4254 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4255 of bust.pt
-% value emitted 103 !== % value emitted 98 on line 4256 of bust.pt
-% value emitted 100 !== % value emitted 32 on line 4259 of bust.pt
-% value emitted 101 !== % value emitted 69 on line 4260 of bust.pt
-% value emitted 115 !== % value emitted 46 on line 4261 of bust.pt
-% value emitted 99 !== % value emitted 79 on line 4262 of bust.pt
-% value emitted 114 !== % value emitted 46 on line 4263 of bust.pt
-% value emitted 105 !== % value emitted 84 on line 4264 of bust.pt
-% value emitted 98 !== % value emitted 104 on line 4265 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 4266 of bust.pt
-% value emitted 100 !== % value emitted 114 on line 4267 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 4268 of bust.pt
-% value emitted 98 !== .tParmEnd on line 4269 of bust.pt
-% value emitted 121 !== .tLiteralInteger on line 4270 of bust.pt
-% value emitted 32 !== oEmitValue on line 4271 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 4272 of bust.pt
-% value emitted 69 !== .tParmEnd on line 4273 of bust.pt
-% value emitted 46 !== .tTrap on line 4274 of bust.pt
-% value emitted 79 !== oEmitTrapKind(trWriteString) on line 4275 of bust.pt
-% value emitted 46 !== % value emitted 109 on line 4276 of bust.pt
-% value emitted 84 !== .tWriteEnd on line 4277 of bust.pt
-% value emitted 104 !== .tTrapBegin on line 4278 of bust.pt
-% value emitted 111 !== .tLiteralAddress on line 4279 of bust.pt
-% value emitted 114 !== oEmitValue on line 4280 of bust.pt
-% value emitted 112 !== % value emitted 4 on line 4281 of bust.pt
-.tParmEnd !== .tVarParm on line 4282 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4283 of bust.pt
-oEmitValue !== .tTrap on line 4284 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4285 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4286 of bust.pt
-.tTrap !== .tWriteBegin on line 4287 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4288 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4289 of bust.pt
-.tWriteEnd !== oEmitValue on line 4290 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4291 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4292 of bust.pt
-oEmitValue !== .tParmEnd on line 4293 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4294 of bust.pt
-.tVarParm !== oEmitValue on line 4295 of bust.pt
-.tParmEnd !== % value emitted 68 on line 4296 of bust.pt
-.tTrap !== oEmitString on line 4297 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4298 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4299 of bust.pt
-.tWriteBegin !== % value emitted 32 on line 4300 of bust.pt
-.tTrapBegin !== % value emitted 32 on line 4301 of bust.pt
-.tLiteralAddress !== % value emitted 32 on line 4302 of bust.pt
-oEmitValue !== % value emitted 32 on line 4303 of bust.pt
-% value emitted 4 !== % value emitted 105 on line 4304 of bust.pt
-.tVarParm !== % value emitted 110 on line 4305 of bust.pt
-.tParmEnd !== % value emitted 32 on line 4306 of bust.pt
-.tLiteralString !== % value emitted 104 on line 4307 of bust.pt
-oEmitValue !== % value emitted 105 on line 4308 of bust.pt
-% value emitted 68 !== % value emitted 115 on line 4309 of bust.pt
-oEmitString !== % value emitted 32 on line 4310 of bust.pt
-% value emitted 32 !== % value emitted 98 on line 4311 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 4312 of bust.pt
-% value emitted 32 !== % value emitted 111 on line 4313 of bust.pt
-% value emitted 32 !== % value emitted 107 on line 4314 of bust.pt
-% value emitted 32 !== % value emitted 34 on line 4316 of bust.pt
-% value emitted 105 !== % value emitted 66 on line 4317 of bust.pt
-% value emitted 110 !== % value emitted 101 on line 4318 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 4319 of bust.pt
-% value emitted 104 !== % value emitted 116 on line 4320 of bust.pt
-% value emitted 105 !== % value emitted 32 on line 4321 of bust.pt
-% value emitted 115 !== % value emitted 116 on line 4322 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 4323 of bust.pt
-% value emitted 98 !== % value emitted 101 on line 4324 of bust.pt
-% value emitted 111 !== % value emitted 32 on line 4325 of bust.pt
-% value emitted 111 !== % value emitted 68 on line 4326 of bust.pt
-% value emitted 107 !== % value emitted 101 on line 4327 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 4328 of bust.pt
-% value emitted 34 !== % value emitted 108 on line 4329 of bust.pt
-% value emitted 66 !== % value emitted 101 on line 4330 of bust.pt
-% value emitted 101 !== % value emitted 114 on line 4331 of bust.pt
-% value emitted 97 !== % value emitted 34 on line 4332 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4333 of bust.pt
-% value emitted 32 !== % value emitted 40 on line 4334 of bust.pt
-% value emitted 116 !== % value emitted 86 on line 4335 of bust.pt
-% value emitted 104 !== % value emitted 105 on line 4336 of bust.pt
-% value emitted 101 !== % value emitted 110 on line 4337 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4338 of bust.pt
-% value emitted 68 !== % value emitted 97 on line 4339 of bust.pt
-% value emitted 101 !== % value emitted 103 on line 4340 of bust.pt
-% value emitted 97 !== % value emitted 101 on line 4341 of bust.pt
-% value emitted 108 !== % value emitted 32 on line 4342 of bust.pt
-% value emitted 101 !== % value emitted 66 on line 4343 of bust.pt
-% value emitted 114 !== % value emitted 111 on line 4344 of bust.pt
-% value emitted 34 !== % value emitted 111 on line 4345 of bust.pt
-% value emitted 32 !== % value emitted 107 on line 4346 of bust.pt
-% value emitted 40 !== % value emitted 115 on line 4347 of bust.pt
-% value emitted 86 !== % value emitted 44 on line 4348 of bust.pt
-% value emitted 105 !== % value emitted 32 on line 4349 of bust.pt
-% value emitted 110 !== % value emitted 49 on line 4350 of bust.pt
-% value emitted 116 !== % value emitted 57 on line 4351 of bust.pt
-% value emitted 97 !== % value emitted 54 on line 4352 of bust.pt
-% value emitted 103 !== % value emitted 54 on line 4353 of bust.pt
-% value emitted 101 !== % value emitted 41 on line 4354 of bust.pt
-% value emitted 66 !== % value emitted 112 on line 4356 of bust.pt
-% value emitted 111 !== % value emitted 112 on line 4357 of bust.pt
-% value emitted 111 !== % value emitted 46 on line 4358 of bust.pt
-% value emitted 107 !== % value emitted 32 on line 4359 of bust.pt
-% value emitted 115 !== % value emitted 50 on line 4360 of bust.pt
-% value emitted 44 !== % value emitted 48 on line 4361 of bust.pt
-% value emitted 32 !== % value emitted 45 on line 4362 of bust.pt
-% value emitted 49 !== % value emitted 50 on line 4363 of bust.pt
-% value emitted 57 !== % value emitted 49 on line 4364 of bust.pt
-% .sNewLine !== % value emitted 46 on line 4365 of bust.pt
-% .sNewLine !== .tParmEnd on line 4366 of bust.pt
-% value emitted 41 !== .tLiteralInteger on line 4367 of bust.pt
-% value emitted 32 !== oEmitValue on line 4368 of bust.pt
-% value emitted 112 !== % value emitted 1 on line 4369 of bust.pt
-% value emitted 112 !== .tParmEnd on line 4370 of bust.pt
-% value emitted 46 !== .tTrap on line 4371 of bust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 4372 of bust.pt
-% value emitted 50 !== % value emitted 109 on line 4373 of bust.pt
-% value emitted 48 !== .tWriteEnd on line 4374 of bust.pt
-% value emitted 45 !== .tTrapBegin on line 4375 of bust.pt
-% value emitted 50 !== .tLiteralAddress on line 4376 of bust.pt
-% value emitted 49 !== oEmitValue on line 4377 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 4378 of bust.pt
-.tParmEnd !== .tVarParm on line 4379 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4380 of bust.pt
-oEmitValue !== .tTrap on line 4381 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4382 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4383 of bust.pt
-.tTrap !== .tTrapBegin on line 4384 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4385 of bust.pt
-% value emitted 109 !== oEmitValue on line 4386 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 4387 of bust.pt
-.tTrapBegin !== .tVarParm on line 4388 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 4389 of bust.pt
-oEmitValue !== .tTrap on line 4390 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4391 of bust.pt
-.tVarParm !== % value emitted 6 on line 4392 of bust.pt
-.tParmEnd !== .tWriteBegin on line 4393 of bust.pt
-.tTrap !== .tTrapBegin on line 4394 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4395 of bust.pt
-% value emitted 6 !== oEmitValue on line 4396 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4397 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4398 of bust.pt
-oEmitValue !== .tParmEnd on line 4399 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4400 of bust.pt
-.tVarParm !== oEmitValue on line 4401 of bust.pt
-.tParmEnd !== % value emitted 7 on line 4402 of bust.pt
-.tTrap !== oEmitString on line 4403 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 73 on line 4404 of bust.pt
-% value emitted 6 !== % value emitted 110 on line 4405 of bust.pt
-.tWriteBegin !== % value emitted 112 on line 4406 of bust.pt
-.tTrapBegin !== % value emitted 117 on line 4407 of bust.pt
-.tLiteralAddress !== % value emitted 116 on line 4408 of bust.pt
-oEmitValue !== % value emitted 32 on line 4409 of bust.pt
-% value emitted 4 !== % value emitted 58 on line 4410 of bust.pt
-.tVarParm !== .tParmEnd on line 4411 of bust.pt
-.tParmEnd !== .tLiteralInteger on line 4412 of bust.pt
-.tLiteralString !== oEmitValue on line 4413 of bust.pt
-oEmitValue !== % value emitted 1 on line 4414 of bust.pt
-% value emitted 7 !== .tParmEnd on line 4415 of bust.pt
-oEmitString !== .tTrap on line 4416 of bust.pt
-% value emitted 73 !== oEmitTrapKind(trWriteString) on line 4417 of bust.pt
-% value emitted 110 !== % value emitted 109 on line 4418 of bust.pt
-% value emitted 112 !== .tWriteEnd on line 4419 of bust.pt
-% value emitted 117 !== .tTrapBegin on line 4420 of bust.pt
-% value emitted 116 !== .tLiteralAddress on line 4421 of bust.pt
-% value emitted 32 !== oEmitValue on line 4422 of bust.pt
-% value emitted 58 !== % value emitted 4 on line 4423 of bust.pt
-.tParmEnd !== .tVarParm on line 4424 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4425 of bust.pt
-oEmitValue !== .tTrap on line 4426 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4427 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4428 of bust.pt
-.tTrap !== .tWriteBegin on line 4429 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4430 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4431 of bust.pt
-.tWriteEnd !== oEmitValue on line 4432 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4433 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4434 of bust.pt
-oEmitValue !== .tParmEnd on line 4435 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4436 of bust.pt
-.tVarParm !== oEmitValue on line 4437 of bust.pt
-.tParmEnd !== % value emitted 73 on line 4438 of bust.pt
-.tTrap !== oEmitString on line 4439 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4440 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4441 of bust.pt
-.tWriteBegin !== % value emitted 70 on line 4442 of bust.pt
-.tTrapBegin !== % value emitted 111 on line 4443 of bust.pt
-.tLiteralAddress !== % value emitted 114 on line 4444 of bust.pt
-oEmitValue !== % value emitted 32 on line 4445 of bust.pt
-% value emitted 4 !== % value emitted 101 on line 4446 of bust.pt
-.tVarParm !== % value emitted 97 on line 4447 of bust.pt
-.tParmEnd !== % value emitted 99 on line 4448 of bust.pt
-.tLiteralString !== % value emitted 104 on line 4449 of bust.pt
-oEmitValue !== % value emitted 32 on line 4450 of bust.pt
-% value emitted 73 !== % value emitted 115 on line 4451 of bust.pt
-oEmitString !== % value emitted 104 on line 4452 of bust.pt
-% value emitted 32 !== % value emitted 117 on line 4453 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 4454 of bust.pt
-% value emitted 70 !== % value emitted 102 on line 4455 of bust.pt
-% value emitted 111 !== % value emitted 108 on line 4456 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 4457 of bust.pt
-% value emitted 32 !== % value emitted 44 on line 4458 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4459 of bust.pt
-% value emitted 99 !== % value emitted 32 on line 4461 of bust.pt
-% value emitted 104 !== % value emitted 112 on line 4462 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 4463 of bust.pt
-% value emitted 115 !== % value emitted 97 on line 4464 of bust.pt
-% value emitted 104 !== % value emitted 121 on line 4465 of bust.pt
-% value emitted 117 !== % value emitted 101 on line 4466 of bust.pt
-% value emitted 102 !== % value emitted 114 on line 4467 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 4468 of bust.pt
-% value emitted 108 !== % value emitted 110 on line 4469 of bust.pt
-% value emitted 101 !== % value emitted 97 on line 4470 of bust.pt
-% value emitted 44 !== % value emitted 109 on line 4471 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4472 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4473 of bust.pt
-% value emitted 32 !== % value emitted 40 on line 4474 of bust.pt
-% value emitted 112 !== % value emitted 99 on line 4475 of bust.pt
-% value emitted 108 !== % value emitted 104 on line 4476 of bust.pt
-% value emitted 121 !== % value emitted 114 on line 4478 of bust.pt
-% value emitted 101 !== % value emitted 97 on line 4479 of bust.pt
-% value emitted 114 !== % value emitted 99 on line 4480 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4481 of bust.pt
-% value emitted 110 !== % value emitted 101 on line 4482 of bust.pt
-% value emitted 97 !== % value emitted 114 on line 4483 of bust.pt
-% value emitted 109 !== % value emitted 32 on line 4484 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4485 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4486 of bust.pt
-% value emitted 40 !== % value emitted 114 on line 4487 of bust.pt
-% value emitted 99 !== % value emitted 105 on line 4488 of bust.pt
-% value emitted 104 !== % value emitted 110 on line 4489 of bust.pt
-% value emitted 97 !== % value emitted 103 on line 4490 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 4491 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 4492 of bust.pt
-% value emitted 99 !== % value emitted 102 on line 4493 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4494 of bust.pt
-% value emitted 101 !== % value emitted 60 on line 4495 of bust.pt
-% value emitted 114 !== % value emitted 61 on line 4496 of bust.pt
-% value emitted 115 !== % value emitted 50 on line 4498 of bust.pt
-% value emitted 116 !== % value emitted 48 on line 4499 of bust.pt
-% value emitted 114 !== % value emitted 32 on line 4500 of bust.pt
-% value emitted 105 !== % value emitted 99 on line 4501 of bust.pt
-% value emitted 110 !== % value emitted 104 on line 4502 of bust.pt
-% value emitted 103 !== % value emitted 97 on line 4503 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 4504 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 4505 of bust.pt
-% value emitted 102 !== % value emitted 99 on line 4506 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4507 of bust.pt
-% value emitted 60 !== % value emitted 101 on line 4508 of bust.pt
-% value emitted 61 !== % value emitted 114 on line 4509 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 4510 of bust.pt
-% value emitted 50 !== % value emitted 41 on line 4511 of bust.pt
-% value emitted 48 !== % value emitted 44 on line 4512 of bust.pt
-% value emitted 32 !== .tParmEnd on line 4513 of bust.pt
-% value emitted 99 !== .tLiteralInteger on line 4514 of bust.pt
-% value emitted 104 !== oEmitValue on line 4515 of bust.pt
-% value emitted 97 !== % value emitted 1 on line 4516 of bust.pt
-% value emitted 114 !== .tParmEnd on line 4517 of bust.pt
-% value emitted 97 !== .tTrap on line 4518 of bust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 4519 of bust.pt
-% value emitted 116 !== % value emitted 109 on line 4520 of bust.pt
-% value emitted 101 !== .tWriteEnd on line 4521 of bust.pt
-% value emitted 114 !== .tTrapBegin on line 4522 of bust.pt
-% value emitted 115 !== .tLiteralAddress on line 4523 of bust.pt
-% value emitted 41 !== oEmitValue on line 4524 of bust.pt
-% value emitted 44 !== % value emitted 4 on line 4525 of bust.pt
-.tParmEnd !== .tVarParm on line 4526 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4527 of bust.pt
-oEmitValue !== .tTrap on line 4528 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4529 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4530 of bust.pt
-.tTrap !== .tWriteBegin on line 4531 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4532 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4533 of bust.pt
-.tWriteEnd !== oEmitValue on line 4534 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4535 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4536 of bust.pt
-oEmitValue !== .tParmEnd on line 4537 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4538 of bust.pt
-.tVarParm !== oEmitValue on line 4539 of bust.pt
-.tParmEnd !== % value emitted 69 on line 4540 of bust.pt
-.tTrap !== oEmitString on line 4541 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4542 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4543 of bust.pt
-.tWriteBegin !== % value emitted 97 on line 4544 of bust.pt
-.tTrapBegin !== % value emitted 110 on line 4545 of bust.pt
-.tLiteralAddress !== % value emitted 100 on line 4546 of bust.pt
-oEmitValue !== % value emitted 32 on line 4547 of bust.pt
-% value emitted 4 !== % value emitted 105 on line 4548 of bust.pt
-.tVarParm !== % value emitted 102 on line 4549 of bust.pt
-.tParmEnd !== % value emitted 32 on line 4550 of bust.pt
-.tLiteralString !== % value emitted 40 on line 4551 of bust.pt
-oEmitValue !== % value emitted 116 on line 4552 of bust.pt
-% value emitted 69 !== % value emitted 104 on line 4553 of bust.pt
-oEmitString !== % value emitted 101 on line 4554 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 4556 of bust.pt
-% value emitted 97 !== % value emitted 108 on line 4557 of bust.pt
-% value emitted 110 !== % value emitted 97 on line 4558 of bust.pt
-% value emitted 100 !== % value emitted 121 on line 4559 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4560 of bust.pt
-% value emitted 105 !== % value emitted 114 on line 4561 of bust.pt
-% value emitted 102 !== % value emitted 32 on line 4562 of bust.pt
-% value emitted 32 !== % value emitted 110 on line 4563 of bust.pt
-% value emitted 40 !== % value emitted 97 on line 4564 of bust.pt
-% value emitted 116 !== % value emitted 109 on line 4565 of bust.pt
-% value emitted 104 !== % value emitted 101 on line 4566 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4567 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 4568 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 4570 of bust.pt
-% value emitted 97 !== % value emitted 99 on line 4571 of bust.pt
-% value emitted 121 !== % value emitted 105 on line 4572 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 4573 of bust.pt
-% value emitted 114 !== % value emitted 105 on line 4574 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4575 of bust.pt
-% value emitted 110 !== % value emitted 100 on line 4576 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4577 of bust.pt
-% value emitted 109 !== % value emitted 105 on line 4578 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4579 of bust.pt
-% value emitted 115 !== % value emitted 110 on line 4581 of bust.pt
-% value emitted 112 !== % value emitted 111 on line 4582 of bust.pt
-% value emitted 101 !== % value emitted 116 on line 4583 of bust.pt
-% value emitted 99 !== % value emitted 32 on line 4584 of bust.pt
-% value emitted 105 !== % value emitted 34 on line 4585 of bust.pt
-% value emitted 102 !== % value emitted 69 on line 4586 of bust.pt
-% value emitted 105 !== % value emitted 46 on line 4587 of bust.pt
-% value emitted 101 !== % value emitted 79 on line 4588 of bust.pt
-% value emitted 100 !== % value emitted 46 on line 4589 of bust.pt
-% value emitted 32 !== % value emitted 84 on line 4590 of bust.pt
-% value emitted 105 !== % value emitted 104 on line 4591 of bust.pt
-% value emitted 115 !== % value emitted 111 on line 4592 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 4593 of bust.pt
-% value emitted 110 !== % value emitted 112 on line 4594 of bust.pt
-% value emitted 111 !== % value emitted 34 on line 4595 of bust.pt
-% value emitted 116 !== % value emitted 44 on line 4596 of bust.pt
-% value emitted 34 !== % value emitted 116 on line 4598 of bust.pt
-% value emitted 69 !== % value emitted 104 on line 4599 of bust.pt
-% value emitted 46 !== % value emitted 101 on line 4600 of bust.pt
-% value emitted 79 !== % value emitted 32 on line 4601 of bust.pt
-% value emitted 46 !== % value emitted 99 on line 4602 of bust.pt
-% value emitted 84 !== % value emitted 111 on line 4603 of bust.pt
-% value emitted 104 !== % value emitted 117 on line 4604 of bust.pt
-% value emitted 111 !== % value emitted 110 on line 4605 of bust.pt
-% value emitted 114 !== % value emitted 116 on line 4606 of bust.pt
-% value emitted 112 !== % value emitted 32 on line 4607 of bust.pt
-% value emitted 34 !== % value emitted 91 on line 4608 of bust.pt
-% value emitted 44 !== % value emitted 110 on line 4609 of bust.pt
-% value emitted 32 !== % value emitted 93 on line 4610 of bust.pt
-% value emitted 116 !== .tParmEnd on line 4611 of bust.pt
-% value emitted 104 !== .tLiteralInteger on line 4612 of bust.pt
-% value emitted 101 !== oEmitValue on line 4613 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 4614 of bust.pt
-% value emitted 99 !== .tParmEnd on line 4615 of bust.pt
-% value emitted 111 !== .tTrap on line 4616 of bust.pt
-% value emitted 117 !== oEmitTrapKind(trWriteString) on line 4617 of bust.pt
-% value emitted 110 !== % value emitted 109 on line 4618 of bust.pt
-% value emitted 116 !== .tWriteEnd on line 4619 of bust.pt
-% value emitted 32 !== .tTrapBegin on line 4620 of bust.pt
-% value emitted 91 !== .tLiteralAddress on line 4621 of bust.pt
-% value emitted 110 !== oEmitValue on line 4622 of bust.pt
-% value emitted 93 !== % value emitted 4 on line 4623 of bust.pt
-.tParmEnd !== .tVarParm on line 4624 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4625 of bust.pt
-oEmitValue !== .tTrap on line 4626 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4627 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4628 of bust.pt
-.tTrap !== .tWriteBegin on line 4629 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4630 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4631 of bust.pt
-.tWriteEnd !== oEmitValue on line 4632 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4633 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4634 of bust.pt
-oEmitValue !== .tParmEnd on line 4635 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4636 of bust.pt
-.tVarParm !== oEmitValue on line 4637 of bust.pt
-.tParmEnd !== % value emitted 29 on line 4638 of bust.pt
-.tTrap !== oEmitString on line 4639 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4640 of bust.pt
-% value emitted 6 !== % value emitted 32 on line 4641 of bust.pt
-.tWriteBegin !== % value emitted 111 on line 4642 of bust.pt
-.tTrapBegin !== % value emitted 110 on line 4643 of bust.pt
-.tLiteralAddress !== % value emitted 32 on line 4644 of bust.pt
-oEmitValue !== % value emitted 119 on line 4645 of bust.pt
-% value emitted 4 !== % value emitted 104 on line 4646 of bust.pt
-.tVarParm !== % value emitted 105 on line 4647 of bust.pt
-.tParmEnd !== % value emitted 99 on line 4648 of bust.pt
-.tLiteralString !== % value emitted 104 on line 4649 of bust.pt
-oEmitValue !== % value emitted 32 on line 4650 of bust.pt
-% value emitted 29 !== % value emitted 116 on line 4651 of bust.pt
-oEmitString !== % value emitted 104 on line 4652 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4653 of bust.pt
-% value emitted 111 !== % value emitted 112 on line 4655 of bust.pt
-% value emitted 110 !== % value emitted 108 on line 4656 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 4657 of bust.pt
-% value emitted 119 !== % value emitted 121 on line 4658 of bust.pt
-% value emitted 104 !== % value emitted 101 on line 4659 of bust.pt
-% value emitted 105 !== % value emitted 114 on line 4660 of bust.pt
-% value emitted 99 !== % value emitted 32 on line 4661 of bust.pt
-% value emitted 104 !== % value emitted 115 on line 4662 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4663 of bust.pt
-% value emitted 116 !== % value emitted 97 on line 4664 of bust.pt
-% value emitted 104 !== % value emitted 110 on line 4665 of bust.pt
-% value emitted 101 !== % value emitted 100 on line 4666 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 4667 of bust.pt
-% value emitted 112 !== % value emitted 46 on line 4668 of bust.pt
-% value emitted 108 !== .tParmEnd on line 4669 of bust.pt
-% value emitted 97 !== .tLiteralInteger on line 4670 of bust.pt
-% value emitted 121 !== oEmitValue on line 4671 of bust.pt
-% value emitted 101 !== % value emitted 1 on line 4672 of bust.pt
-% value emitted 114 !== .tParmEnd on line 4673 of bust.pt
-% value emitted 32 !== .tTrap on line 4674 of bust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 4675 of bust.pt
-% value emitted 116 !== % value emitted 109 on line 4676 of bust.pt
-% value emitted 97 !== .tWriteEnd on line 4677 of bust.pt
-% value emitted 110 !== .tTrapBegin on line 4678 of bust.pt
-% value emitted 100 !== .tLiteralAddress on line 4679 of bust.pt
-% value emitted 115 !== oEmitValue on line 4680 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 4681 of bust.pt
-.tParmEnd !== .tVarParm on line 4682 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4683 of bust.pt
-oEmitValue !== .tTrap on line 4684 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4685 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4686 of bust.pt
-.tTrap !== .tTrapBegin on line 4687 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4688 of bust.pt
-% value emitted 109 !== oEmitValue on line 4689 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 4690 of bust.pt
-.tTrapBegin !== .tVarParm on line 4691 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 4692 of bust.pt
-oEmitValue !== .tTrap on line 4693 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4694 of bust.pt
-.tVarParm !== % value emitted 6 on line 4695 of bust.pt
-.tParmEnd !== .tWriteBegin on line 4696 of bust.pt
-.tTrap !== .tTrapBegin on line 4697 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4698 of bust.pt
-% value emitted 6 !== oEmitValue on line 4699 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4700 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4701 of bust.pt
-oEmitValue !== .tParmEnd on line 4702 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4703 of bust.pt
-.tVarParm !== oEmitValue on line 4704 of bust.pt
-.tParmEnd !== % value emitted 69 on line 4705 of bust.pt
-.tTrap !== oEmitString on line 4706 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 73 on line 4707 of bust.pt
-% value emitted 6 !== % value emitted 102 on line 4708 of bust.pt
-.tWriteBegin !== % value emitted 32 on line 4709 of bust.pt
-.tTrapBegin !== % value emitted 116 on line 4710 of bust.pt
-.tLiteralAddress !== % value emitted 104 on line 4711 of bust.pt
-oEmitValue !== % value emitted 101 on line 4712 of bust.pt
-% value emitted 4 !== % value emitted 32 on line 4713 of bust.pt
-.tVarParm !== % value emitted 112 on line 4714 of bust.pt
-.tParmEnd !== % value emitted 108 on line 4715 of bust.pt
-.tLiteralString !== % value emitted 97 on line 4716 of bust.pt
-oEmitValue !== % value emitted 121 on line 4717 of bust.pt
-% value emitted 69 !== % value emitted 101 on line 4718 of bust.pt
-oEmitString !== % value emitted 114 on line 4719 of bust.pt
-% value emitted 73 !== % value emitted 32 on line 4720 of bust.pt
-% value emitted 102 !== % value emitted 110 on line 4721 of bust.pt
-% value emitted 32 !== % value emitted 97 on line 4722 of bust.pt
-% value emitted 116 !== % value emitted 109 on line 4723 of bust.pt
-% value emitted 104 !== % value emitted 101 on line 4724 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4725 of bust.pt
-% value emitted 32 !== % value emitted 115 on line 4726 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 4728 of bust.pt
-% value emitted 97 !== % value emitted 99 on line 4729 of bust.pt
-% value emitted 121 !== % value emitted 105 on line 4730 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 4731 of bust.pt
-% value emitted 114 !== % value emitted 105 on line 4732 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4733 of bust.pt
-% value emitted 110 !== % value emitted 100 on line 4734 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4735 of bust.pt
-% value emitted 109 !== % value emitted 105 on line 4736 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4737 of bust.pt
-% value emitted 115 !== % value emitted 34 on line 4739 of bust.pt
-% value emitted 112 !== % value emitted 69 on line 4740 of bust.pt
-% value emitted 101 !== % value emitted 46 on line 4741 of bust.pt
-% value emitted 99 !== % value emitted 79 on line 4742 of bust.pt
-% value emitted 105 !== % value emitted 46 on line 4743 of bust.pt
-% value emitted 102 !== % value emitted 84 on line 4744 of bust.pt
-% value emitted 105 !== % value emitted 104 on line 4745 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 4746 of bust.pt
-% value emitted 100 !== % value emitted 114 on line 4747 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 4748 of bust.pt
-% value emitted 105 !== % value emitted 34 on line 4749 of bust.pt
-% value emitted 115 !== % value emitted 44 on line 4750 of bust.pt
-% value emitted 34 !== % value emitted 116 on line 4752 of bust.pt
-% value emitted 69 !== % value emitted 104 on line 4753 of bust.pt
-% value emitted 46 !== % value emitted 101 on line 4754 of bust.pt
-% value emitted 79 !== % value emitted 32 on line 4755 of bust.pt
-% value emitted 46 !== % value emitted 112 on line 4756 of bust.pt
-% value emitted 84 !== % value emitted 108 on line 4757 of bust.pt
-% value emitted 104 !== % value emitted 97 on line 4758 of bust.pt
-% value emitted 111 !== % value emitted 121 on line 4759 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 4760 of bust.pt
-% value emitted 112 !== % value emitted 114 on line 4761 of bust.pt
-% value emitted 34 !== % value emitted 32 on line 4762 of bust.pt
-% value emitted 44 !== % value emitted 115 on line 4763 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4764 of bust.pt
-% value emitted 116 !== % value emitted 114 on line 4765 of bust.pt
-% value emitted 104 !== % value emitted 97 on line 4766 of bust.pt
-% value emitted 101 !== % value emitted 116 on line 4767 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4768 of bust.pt
-% value emitted 112 !== % value emitted 103 on line 4769 of bust.pt
-% value emitted 108 !== % value emitted 121 on line 4770 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4771 of bust.pt
-% value emitted 121 !== % value emitted 117 on line 4772 of bust.pt
-% value emitted 101 !== % value emitted 115 on line 4773 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 4774 of bust.pt
-% value emitted 32 !== % value emitted 100 on line 4775 of bust.pt
-% value emitted 115 !== .tParmEnd on line 4776 of bust.pt
-% value emitted 116 !== .tLiteralInteger on line 4777 of bust.pt
-% value emitted 114 !== oEmitValue on line 4778 of bust.pt
-% value emitted 97 !== % value emitted 1 on line 4779 of bust.pt
-% value emitted 116 !== .tParmEnd on line 4780 of bust.pt
-% value emitted 101 !== .tTrap on line 4781 of bust.pt
-% value emitted 103 !== oEmitTrapKind(trWriteString) on line 4782 of bust.pt
-% value emitted 121 !== % value emitted 109 on line 4783 of bust.pt
-% value emitted 32 !== .tTrapBegin on line 4784 of bust.pt
-% value emitted 117 !== .tLiteralAddress on line 4785 of bust.pt
-% value emitted 115 !== oEmitValue on line 4786 of bust.pt
-% value emitted 101 !== % value emitted 4 on line 4787 of bust.pt
-% value emitted 100 !== .tVarParm on line 4788 of bust.pt
-.tLiteralInteger !== .tLiteralString on line 4790 of bust.pt
-% value emitted 1 !== % value emitted 17 on line 4792 of bust.pt
-.tParmEnd !== oEmitString on line 4793 of bust.pt
-.tTrap !== % value emitted 32 on line 4794 of bust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 119 on line 4795 of bust.pt
-% value emitted 109 !== % value emitted 105 on line 4796 of bust.pt
-.tTrapBegin !== % value emitted 108 on line 4797 of bust.pt
-.tLiteralAddress !== % value emitted 108 on line 4798 of bust.pt
-oEmitValue !== % value emitted 32 on line 4799 of bust.pt
-% value emitted 4 !== % value emitted 98 on line 4800 of bust.pt
-.tVarParm !== % value emitted 101 on line 4801 of bust.pt
-.tParmEnd !== % value emitted 32 on line 4802 of bust.pt
-.tLiteralString !== % value emitted 84 on line 4803 of bust.pt
-oEmitValue !== % value emitted 104 on line 4804 of bust.pt
-% value emitted 17 !== % value emitted 111 on line 4805 of bust.pt
-oEmitString !== % value emitted 114 on line 4806 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 4807 of bust.pt
-% value emitted 119 !== % value emitted 39 on line 4808 of bust.pt
-% value emitted 105 !== % value emitted 115 on line 4809 of bust.pt
-% value emitted 108 !== % value emitted 46 on line 4810 of bust.pt
-% value emitted 108 !== .tParmEnd on line 4811 of bust.pt
-% value emitted 32 !== .tLiteralInteger on line 4812 of bust.pt
-% value emitted 98 !== oEmitValue on line 4813 of bust.pt
-% value emitted 101 !== % value emitted 1 on line 4814 of bust.pt
-% value emitted 32 !== .tParmEnd on line 4815 of bust.pt
-% value emitted 84 !== .tTrap on line 4816 of bust.pt
-% value emitted 104 !== oEmitTrapKind(trWriteString) on line 4817 of bust.pt
-% value emitted 111 !== % value emitted 109 on line 4818 of bust.pt
-% value emitted 114 !== .tWriteEnd on line 4819 of bust.pt
-% value emitted 112 !== .tTrapBegin on line 4820 of bust.pt
-% value emitted 39 !== .tLiteralAddress on line 4821 of bust.pt
-% value emitted 115 !== oEmitValue on line 4822 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 4823 of bust.pt
-.tParmEnd !== .tVarParm on line 4824 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4825 of bust.pt
-oEmitValue !== .tTrap on line 4826 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4827 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4828 of bust.pt
-.tTrap !== .tWriteBegin on line 4829 of bust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4830 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 4831 of bust.pt
-.tWriteEnd !== oEmitValue on line 4832 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4833 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4834 of bust.pt
-oEmitValue !== .tParmEnd on line 4835 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4836 of bust.pt
-.tVarParm !== oEmitValue on line 4837 of bust.pt
-.tParmEnd !== % value emitted 71 on line 4838 of bust.pt
-.tTrap !== oEmitString on line 4839 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 79 on line 4840 of bust.pt
-% value emitted 6 !== % value emitted 116 on line 4841 of bust.pt
-.tWriteBegin !== % value emitted 104 on line 4842 of bust.pt
-.tTrapBegin !== % value emitted 101 on line 4843 of bust.pt
-.tLiteralAddress !== % value emitted 114 on line 4844 of bust.pt
-oEmitValue !== % value emitted 119 on line 4845 of bust.pt
-% value emitted 4 !== % value emitted 105 on line 4846 of bust.pt
-.tVarParm !== % value emitted 115 on line 4847 of bust.pt
-.tParmEnd !== % value emitted 101 on line 4848 of bust.pt
-.tLiteralString !== % value emitted 44 on line 4849 of bust.pt
-oEmitValue !== % value emitted 32 on line 4850 of bust.pt
-% value emitted 71 !== % value emitted 116 on line 4851 of bust.pt
-oEmitString !== % value emitted 104 on line 4852 of bust.pt
-% value emitted 79 !== % value emitted 101 on line 4853 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4854 of bust.pt
-% value emitted 104 !== % value emitted 112 on line 4855 of bust.pt
-% value emitted 101 !== % value emitted 108 on line 4856 of bust.pt
-% value emitted 114 !== % value emitted 97 on line 4857 of bust.pt
-% value emitted 119 !== % value emitted 121 on line 4858 of bust.pt
-% value emitted 105 !== % value emitted 101 on line 4859 of bust.pt
-% value emitted 115 !== % value emitted 114 on line 4860 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4861 of bust.pt
-% value emitted 44 !== % value emitted 119 on line 4862 of bust.pt
-% value emitted 32 !== % value emitted 105 on line 4863 of bust.pt
-% value emitted 116 !== % value emitted 108 on line 4864 of bust.pt
-% value emitted 104 !== % value emitted 108 on line 4865 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 4866 of bust.pt
-% value emitted 32 !== % value emitted 117 on line 4867 of bust.pt
-% value emitted 112 !== % value emitted 115 on line 4868 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 4869 of bust.pt
-% value emitted 97 !== % value emitted 32 on line 4870 of bust.pt
-% value emitted 121 !== % value emitted 116 on line 4871 of bust.pt
-% value emitted 101 !== % value emitted 104 on line 4872 of bust.pt
-% value emitted 114 !== % value emitted 101 on line 4873 of bust.pt
-% value emitted 119 !== % value emitted 115 on line 4875 of bust.pt
-% value emitted 105 !== % value emitted 116 on line 4876 of bust.pt
-% value emitted 108 !== % value emitted 97 on line 4877 of bust.pt
-% value emitted 108 !== % value emitted 110 on line 4878 of bust.pt
-% value emitted 32 !== % value emitted 100 on line 4879 of bust.pt
-% value emitted 117 !== % value emitted 97 on line 4880 of bust.pt
-% value emitted 115 !== % value emitted 114 on line 4881 of bust.pt
-% value emitted 101 !== % value emitted 100 on line 4882 of bust.pt
-% value emitted 116 !== % value emitted 115 on line 4884 of bust.pt
-% value emitted 104 !== % value emitted 116 on line 4885 of bust.pt
-% value emitted 101 !== % value emitted 111 on line 4886 of bust.pt
-% value emitted 32 !== % value emitted 112 on line 4887 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 4888 of bust.pt
-% value emitted 116 !== % value emitted 111 on line 4889 of bust.pt
-% value emitted 97 !== % value emitted 110 on line 4890 of bust.pt
-% value emitted 110 !== % value emitted 32 on line 4891 of bust.pt
-% value emitted 100 !== % value emitted 99 on line 4892 of bust.pt
-% value emitted 97 !== % value emitted 111 on line 4893 of bust.pt
-% value emitted 114 !== % value emitted 117 on line 4894 of bust.pt
-% value emitted 100 !== % value emitted 110 on line 4895 of bust.pt
-% value emitted 32 !== % value emitted 116 on line 4896 of bust.pt
-% value emitted 115 !== % value emitted 32 on line 4897 of bust.pt
-% value emitted 116 !== % value emitted 62 on line 4898 of bust.pt
-% value emitted 111 !== % value emitted 32 on line 4899 of bust.pt
-% value emitted 112 !== % value emitted 110 on line 4900 of bust.pt
-% value emitted 111 !== % value emitted 115 on line 4902 of bust.pt
-% value emitted 110 !== % value emitted 116 on line 4903 of bust.pt
-% value emitted 32 !== % value emitted 114 on line 4904 of bust.pt
-% value emitted 99 !== % value emitted 97 on line 4905 of bust.pt
-% value emitted 111 !== % value emitted 116 on line 4906 of bust.pt
-% value emitted 117 !== % value emitted 101 on line 4907 of bust.pt
-% value emitted 110 !== % value emitted 103 on line 4908 of bust.pt
-% value emitted 116 !== % value emitted 121 on line 4909 of bust.pt
-% value emitted 32 !== % value emitted 46 on line 4910 of bust.pt
-% value emitted 62 !== .tParmEnd on line 4911 of bust.pt
-% value emitted 32 !== .tLiteralInteger on line 4912 of bust.pt
-% value emitted 110 !== oEmitValue on line 4913 of bust.pt
-% value emitted 32 !== % value emitted 1 on line 4914 of bust.pt
-% value emitted 115 !== .tParmEnd on line 4915 of bust.pt
-% value emitted 116 !== .tTrap on line 4916 of bust.pt
-% value emitted 114 !== oEmitTrapKind(trWriteString) on line 4917 of bust.pt
-% value emitted 97 !== % value emitted 109 on line 4918 of bust.pt
-% value emitted 116 !== .tWriteEnd on line 4919 of bust.pt
-% value emitted 101 !== .tTrapBegin on line 4920 of bust.pt
-% value emitted 103 !== .tLiteralAddress on line 4921 of bust.pt
-% value emitted 121 !== oEmitValue on line 4922 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 4923 of bust.pt
-.tParmEnd !== .tVarParm on line 4924 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 4925 of bust.pt
-oEmitValue !== .tTrap on line 4926 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4927 of bust.pt
-.tParmEnd !== % value emitted 6 on line 4928 of bust.pt
-.tTrap !== .tTrapBegin on line 4929 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4930 of bust.pt
-% value emitted 109 !== oEmitValue on line 4931 of bust.pt
-.tWriteEnd !== % value emitted 4 on line 4932 of bust.pt
-.tTrapBegin !== .tVarParm on line 4933 of bust.pt
-.tLiteralAddress !== .tParmEnd on line 4934 of bust.pt
-oEmitValue !== .tTrap on line 4935 of bust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4936 of bust.pt
-.tVarParm !== % value emitted 6 on line 4937 of bust.pt
-.tParmEnd !== .tWriteBegin on line 4938 of bust.pt
-.tTrap !== .tTrapBegin on line 4939 of bust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4940 of bust.pt
-% value emitted 6 !== oEmitValue on line 4941 of bust.pt
-.tTrapBegin !== % value emitted 4 on line 4942 of bust.pt
-.tLiteralAddress !== .tVarParm on line 4943 of bust.pt
-oEmitValue !== .tParmEnd on line 4944 of bust.pt
-% value emitted 4 !== .tLiteralString on line 4945 of bust.pt
-.tVarParm !== oEmitValue on line 4946 of bust.pt
-.tParmEnd !== % value emitted 71 on line 4947 of bust.pt
-.tTrap !== oEmitString on line 4948 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 4949 of bust.pt
-% value emitted 6 !== % value emitted 104 on line 4950 of bust.pt
-.tWriteBegin !== % value emitted 101 on line 4951 of bust.pt
-.tTrapBegin !== % value emitted 32 on line 4952 of bust.pt
-.tLiteralAddress !== % value emitted 112 on line 4953 of bust.pt
-oEmitValue !== % value emitted 114 on line 4954 of bust.pt
-% value emitted 4 !== % value emitted 111 on line 4955 of bust.pt
-.tVarParm !== % value emitted 103 on line 4956 of bust.pt
-.tParmEnd !== % value emitted 114 on line 4957 of bust.pt
-.tLiteralString !== % value emitted 97 on line 4958 of bust.pt
-oEmitValue !== % value emitted 109 on line 4959 of bust.pt
-% value emitted 71 !== % value emitted 32 on line 4960 of bust.pt
-oEmitString !== % value emitted 119 on line 4961 of bust.pt
-% value emitted 84 !== % value emitted 105 on line 4962 of bust.pt
-% value emitted 104 !== % value emitted 108 on line 4963 of bust.pt
-% value emitted 101 !== % value emitted 108 on line 4964 of bust.pt
-% value emitted 112 !== % value emitted 115 on line 4966 of bust.pt
-% value emitted 114 !== % value emitted 105 on line 4967 of bust.pt
-% value emitted 111 !== % value emitted 109 on line 4968 of bust.pt
-% value emitted 103 !== % value emitted 117 on line 4969 of bust.pt
-% value emitted 114 !== % value emitted 108 on line 4970 of bust.pt
-% value emitted 109 !== % value emitted 116 on line 4972 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 4973 of bust.pt
-% value emitted 119 !== % value emitted 32 on line 4974 of bust.pt
-% value emitted 105 !== % value emitted 111 on line 4975 of bust.pt
-% value emitted 108 !== % value emitted 110 on line 4976 of bust.pt
-% value emitted 108 !== % value emitted 101 on line 4977 of bust.pt
-% value emitted 115 !== % value emitted 99 on line 4979 of bust.pt
-% value emitted 105 !== % value emitted 111 on line 4980 of bust.pt
-% value emitted 117 !== % value emitted 112 on line 4982 of bust.pt
-% value emitted 97 !== % value emitted 101 on line 4984 of bust.pt
-% value emitted 111 !== % value emitted 115 on line 4988 of bust.pt
-% value emitted 110 !== % value emitted 104 on line 4989 of bust.pt
-% value emitted 101 !== % value emitted 117 on line 4990 of bust.pt
-% value emitted 32 !== % value emitted 102 on line 4991 of bust.pt
-% value emitted 99 !== % value emitted 102 on line 4992 of bust.pt
-% value emitted 111 !== % value emitted 108 on line 4993 of bust.pt
-% value emitted 109 !== % value emitted 101 on line 4994 of bust.pt
-% value emitted 112 !== % value emitted 32 on line 4995 of bust.pt
-% value emitted 108 !== % value emitted 111 on line 4996 of bust.pt
-% value emitted 101 !== % value emitted 102 on line 4997 of bust.pt
-% value emitted 116 !== % value emitted 32 on line 4998 of bust.pt
-% value emitted 101 !== % value emitted 112 on line 4999 of bust.pt
-% value emitted 32 !== % value emitted 108 on line 5000 of bust.pt
-% value emitted 115 !== % value emitted 97 on line 5001 of bust.pt
-% value emitted 104 !== % value emitted 121 on line 5002 of bust.pt
-% value emitted 117 !== % value emitted 32 on line 5003 of bust.pt
-% value emitted 102 !== % value emitted 111 on line 5005 of bust.pt
-% value emitted 108 !== % value emitted 114 on line 5006 of bust.pt
-% value emitted 101 !== % value emitted 32 on line 5007 of bust.pt
-% value emitted 32 !== % value emitted 101 on line 5008 of bust.pt
-% value emitted 111 !== % value emitted 97 on line 5009 of bust.pt
-% value emitted 102 !== % value emitted 99 on line 5010 of bust.pt
-% value emitted 32 !== % value emitted 104 on line 5011 of bust.pt
-% value emitted 112 !== % value emitted 32 on line 5012 of bust.pt
-% value emitted 108 !== % value emitted 112 on line 5013 of bust.pt
-% value emitted 97 !== % value emitted 108 on line 5014 of bust.pt
-% value emitted 121 !== % value emitted 97 on line 5015 of bust.pt
-% value emitted 32 !== % value emitted 121 on line 5016 of bust.pt
-% value emitted 102 !== % value emitted 101 on line 5017 of bust.pt
-% value emitted 111 !== % value emitted 114 on line 5018 of bust.pt
-% value emitted 114 !== % value emitted 46 on line 5019 of bust.pt
-% value emitted 32 !== .tParmEnd on line 5020 of bust.pt
-% value emitted 101 !== .tLiteralInteger on line 5021 of bust.pt
-% value emitted 97 !== oEmitValue on line 5022 of bust.pt
-% value emitted 99 !== % value emitted 1 on line 5023 of bust.pt
-% value emitted 104 !== .tParmEnd on line 5024 of bust.pt
-% value emitted 32 !== .tTrap on line 5025 of bust.pt
-% value emitted 112 !== oEmitTrapKind(trWriteString) on line 5026 of bust.pt
-% value emitted 108 !== % value emitted 109 on line 5027 of bust.pt
-% value emitted 97 !== .tWriteEnd on line 5028 of bust.pt
-% value emitted 121 !== .tTrapBegin on line 5029 of bust.pt
-% value emitted 101 !== .tLiteralAddress on line 5030 of bust.pt
-% value emitted 114 !== oEmitValue on line 5031 of bust.pt
-% value emitted 46 !== % value emitted 4 on line 5032 of bust.pt
-.tParmEnd !== .tVarParm on line 5033 of bust.pt
-.tLiteralInteger !== .tParmEnd on line 5034 of bust.pt
-oEmitValue !== .tTrap on line 5035 of bust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 5036 of bust.pt
-.tParmEnd !== % value emitted 6 on line 5037 of bust.pt
-.tTrap !== .tAssignBegin on line 5038 of bust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 5039 of bust.pt
-% value emitted 109 !== oEmitValue on line 5040 of bust.pt
-.tWriteEnd !== % value emitted 14684 on line 5041 of bust.pt
-.tTrapBegin !== .tLiteralInteger on line 5042 of bust.pt
-.tLiteralAddress !== oEmitValue on line 5043 of bust.pt
-oEmitValue !== % value emitted 13277 on line 5044 of bust.pt
-% value emitted 4 !== .tAssignInteger on line 5045 of bust.pt
-.tVarParm !== .tAssignBegin on line 5046 of bust.pt
-.tParmEnd !== .tLiteralAddress on line 5047 of bust.pt
-.tTrap !== oEmitValue on line 5048 of bust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 14688 on line 5049 of bust.pt
-% value emitted 6 !== .tLiteralInteger on line 5050 of bust.pt
-.tAssignBegin !== oEmitValue on line 5051 of bust.pt
-.tLiteralAddress !== % value emitted 17 on line 5052 of bust.pt
-oEmitValue !== .tAssignInteger on line 5053 of bust.pt
-% value emitted 14684 !== .tAssignBegin on line 5054 of bust.pt
-.tLiteralInteger !== .tLiteralAddress on line 5055 of bust.pt
-% value emitted 13277 !== % value emitted 1364 on line 5057 of bust.pt
-.tAssignInteger !== .tSubscriptBegin on line 5058 of bust.pt
-.tAssignBegin !== .tLiteralInteger on line 5059 of bust.pt
-.tLiteralAddress !== oEmitValue on line 5060 of bust.pt
-oEmitValue !== % value emitted 1 on line 5061 of bust.pt
-% value emitted 14688 !== .tSubscriptString on line 5062 of bust.pt
-.tLiteralInteger !== .tLiteralString on line 5063 of bust.pt
-% value emitted 17 !== % value emitted 1 on line 5065 of bust.pt
-.tAssignInteger !== oEmitString on line 5066 of bust.pt
-.tAssignBegin !== % value emitted 65 on line 5067 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5068 of bust.pt
-oEmitValue !== .tAssignBegin on line 5069 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5070 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5071 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5072 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5073 of bust.pt
-% value emitted 1 !== .tLiteralInteger on line 5074 of bust.pt
-.tSubscriptString !== oEmitValue on line 5075 of bust.pt
-.tLiteralString !== % value emitted 2 on line 5076 of bust.pt
-oEmitValue !== .tSubscriptString on line 5077 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5078 of bust.pt
-oEmitString !== oEmitValue on line 5079 of bust.pt
-% value emitted 65 !== % value emitted 1 on line 5080 of bust.pt
-.tAssignString !== oEmitString on line 5081 of bust.pt
-.tAssignBegin !== % value emitted 50 on line 5082 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5083 of bust.pt
-oEmitValue !== .tAssignBegin on line 5084 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5085 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5086 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5087 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5088 of bust.pt
-% value emitted 2 !== .tLiteralInteger on line 5089 of bust.pt
-.tSubscriptString !== oEmitValue on line 5090 of bust.pt
-.tLiteralString !== % value emitted 3 on line 5091 of bust.pt
-oEmitValue !== .tSubscriptString on line 5092 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5093 of bust.pt
-oEmitString !== oEmitValue on line 5094 of bust.pt
-% value emitted 50 !== % value emitted 1 on line 5095 of bust.pt
-.tAssignString !== oEmitString on line 5096 of bust.pt
-.tAssignBegin !== % value emitted 51 on line 5097 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5098 of bust.pt
-oEmitValue !== .tAssignBegin on line 5099 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5100 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5101 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5102 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5103 of bust.pt
-% value emitted 3 !== .tLiteralInteger on line 5104 of bust.pt
-.tSubscriptString !== oEmitValue on line 5105 of bust.pt
-.tLiteralString !== % value emitted 4 on line 5106 of bust.pt
-oEmitValue !== .tSubscriptString on line 5107 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5108 of bust.pt
-oEmitString !== oEmitValue on line 5109 of bust.pt
-% value emitted 51 !== % value emitted 1 on line 5110 of bust.pt
-.tAssignString !== oEmitString on line 5111 of bust.pt
-.tAssignBegin !== % value emitted 52 on line 5112 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5113 of bust.pt
-oEmitValue !== .tAssignBegin on line 5114 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5115 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5116 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5117 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5118 of bust.pt
-% value emitted 4 !== .tLiteralInteger on line 5119 of bust.pt
-.tSubscriptString !== oEmitValue on line 5120 of bust.pt
-.tLiteralString !== % value emitted 5 on line 5121 of bust.pt
-oEmitValue !== .tSubscriptString on line 5122 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5123 of bust.pt
-oEmitString !== oEmitValue on line 5124 of bust.pt
-% value emitted 52 !== % value emitted 1 on line 5125 of bust.pt
-.tAssignString !== oEmitString on line 5126 of bust.pt
-.tAssignBegin !== % value emitted 53 on line 5127 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5128 of bust.pt
-oEmitValue !== .tAssignBegin on line 5129 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5130 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5131 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5132 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5133 of bust.pt
-% value emitted 5 !== .tLiteralInteger on line 5134 of bust.pt
-.tSubscriptString !== oEmitValue on line 5135 of bust.pt
-.tLiteralString !== % value emitted 6 on line 5136 of bust.pt
-oEmitValue !== .tSubscriptString on line 5137 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5138 of bust.pt
-oEmitString !== oEmitValue on line 5139 of bust.pt
-% value emitted 53 !== % value emitted 1 on line 5140 of bust.pt
-.tAssignString !== oEmitString on line 5141 of bust.pt
-.tAssignBegin !== % value emitted 54 on line 5142 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5143 of bust.pt
-oEmitValue !== .tAssignBegin on line 5144 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5145 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5146 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5147 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5148 of bust.pt
-% value emitted 6 !== .tLiteralInteger on line 5149 of bust.pt
-.tSubscriptString !== oEmitValue on line 5150 of bust.pt
-.tLiteralString !== % value emitted 7 on line 5151 of bust.pt
-oEmitValue !== .tSubscriptString on line 5152 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5153 of bust.pt
-oEmitString !== oEmitValue on line 5154 of bust.pt
-% .sNewLine !== % value emitted 1 on line 5155 of bust.pt
-.tAssignString !== oEmitString on line 5156 of bust.pt
-.tAssignBegin !== % value emitted 55 on line 5157 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5158 of bust.pt
-oEmitValue !== .tAssignBegin on line 5159 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5160 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5161 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5162 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5163 of bust.pt
-% value emitted 7 !== .tLiteralInteger on line 5164 of bust.pt
-.tSubscriptString !== oEmitValue on line 5165 of bust.pt
-.tLiteralString !== % value emitted 8 on line 5166 of bust.pt
-oEmitValue !== .tSubscriptString on line 5167 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5168 of bust.pt
-oEmitString !== oEmitValue on line 5169 of bust.pt
-% value emitted 55 !== % value emitted 1 on line 5170 of bust.pt
-.tAssignString !== oEmitString on line 5171 of bust.pt
-.tAssignBegin !== % value emitted 56 on line 5172 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5173 of bust.pt
-oEmitValue !== .tAssignBegin on line 5174 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5175 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5176 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5177 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5178 of bust.pt
-% value emitted 8 !== .tLiteralInteger on line 5179 of bust.pt
-.tSubscriptString !== oEmitValue on line 5180 of bust.pt
-.tLiteralString !== % value emitted 9 on line 5181 of bust.pt
-oEmitValue !== .tSubscriptString on line 5182 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5183 of bust.pt
-oEmitString !== oEmitValue on line 5184 of bust.pt
-% value emitted 56 !== % value emitted 1 on line 5185 of bust.pt
-.tAssignString !== oEmitString on line 5186 of bust.pt
-.tAssignBegin !== % value emitted 57 on line 5187 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5188 of bust.pt
-oEmitValue !== .tAssignBegin on line 5189 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5190 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5191 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5192 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5193 of bust.pt
-% value emitted 9 !== .tLiteralInteger on line 5194 of bust.pt
-.tSubscriptString !== oEmitValue on line 5195 of bust.pt
-.tLiteralString !== % value emitted 10 on line 5196 of bust.pt
-oEmitValue !== .tSubscriptString on line 5197 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5198 of bust.pt
-oEmitString !== oEmitValue on line 5199 of bust.pt
-% value emitted 57 !== % value emitted 2 on line 5200 of bust.pt
-.tAssignString !== oEmitString on line 5201 of bust.pt
-.tAssignBegin !== % value emitted 49 on line 5202 of bust.pt
-.tLiteralAddress !== % value emitted 48 on line 5203 of bust.pt
-oEmitValue !== .tAssignString on line 5204 of bust.pt
-% value emitted 1364 !== .tAssignBegin on line 5205 of bust.pt
-.tSubscriptBegin !== .tLiteralAddress on line 5206 of bust.pt
-.tLiteralInteger !== oEmitValue on line 5207 of bust.pt
-oEmitValue !== % value emitted 1364 on line 5208 of bust.pt
-% value emitted 10 !== .tSubscriptBegin on line 5209 of bust.pt
-.tSubscriptString !== .tLiteralInteger on line 5210 of bust.pt
-.tLiteralString !== oEmitValue on line 5211 of bust.pt
-oEmitValue !== % value emitted 11 on line 5212 of bust.pt
-% value emitted 2 !== .tSubscriptString on line 5213 of bust.pt
-oEmitString !== .tLiteralString on line 5214 of bust.pt
-% value emitted 49 !== oEmitValue on line 5215 of bust.pt
-% value emitted 48 !== % value emitted 1 on line 5216 of bust.pt
-.tAssignString !== oEmitString on line 5217 of bust.pt
-.tAssignBegin !== % value emitted 74 on line 5218 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5219 of bust.pt
-oEmitValue !== .tAssignBegin on line 5220 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5221 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5222 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5223 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5224 of bust.pt
-% value emitted 11 !== .tLiteralInteger on line 5225 of bust.pt
-.tSubscriptString !== oEmitValue on line 5226 of bust.pt
-.tLiteralString !== % value emitted 12 on line 5227 of bust.pt
-oEmitValue !== .tSubscriptString on line 5228 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5229 of bust.pt
-oEmitString !== oEmitValue on line 5230 of bust.pt
-% value emitted 74 !== % value emitted 1 on line 5231 of bust.pt
-.tAssignString !== oEmitString on line 5232 of bust.pt
-.tAssignBegin !== % value emitted 81 on line 5233 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5234 of bust.pt
-oEmitValue !== .tAssignBegin on line 5235 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5236 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5237 of bust.pt
-.tLiteralInteger !== % value emitted 1364 on line 5238 of bust.pt
-oEmitValue !== .tSubscriptBegin on line 5239 of bust.pt
-% value emitted 12 !== .tLiteralInteger on line 5240 of bust.pt
-.tSubscriptString !== oEmitValue on line 5241 of bust.pt
-.tLiteralString !== % value emitted 13 on line 5242 of bust.pt
-oEmitValue !== .tSubscriptString on line 5243 of bust.pt
-% value emitted 1 !== .tLiteralString on line 5244 of bust.pt
-oEmitString !== oEmitValue on line 5245 of bust.pt
-% value emitted 81 !== % value emitted 1 on line 5246 of bust.pt
-.tAssignString !== oEmitString on line 5247 of bust.pt
-.tAssignBegin !== % value emitted 75 on line 5248 of bust.pt
-.tLiteralAddress !== .tAssignString on line 5249 of bust.pt
-oEmitValue !== .tCallBegin on line 5250 of bust.pt
-% value emitted 1364 !== .tLiteralAddress on line 5251 of bust.pt
-.tSubscriptBegin !== oEmitValue on line 5252 of bust.pt
-.tLiteralInteger !== % value emitted 1140 on line 5253 of bust.pt
-oEmitValue !== .tVarParm on line 5254 of bust.pt
-% value emitted 13 !== .tParmEnd on line 5255 of bust.pt
-.tSubscriptString !== .tCallEnd on line 5256 of bust.pt
-.tLiteralString !== oEmitValue on line 5257 of bust.pt
-oEmitValue !== % value emitted 617 on line 5258 of bust.pt
-% value emitted 1 !== .tWhileBegin on line 5259 of bust.pt
-oEmitString !== .tWhilePreBreak on line 5260 of bust.pt
-% value emitted 75 !== .tWhileBreakIf on line 5261 of bust.pt
-.tAssignString !== .tLiteralAddress on line 5262 of bust.pt
-.tCallBegin !== oEmitValue on line 5263 of bust.pt
+% value emitted 21 !== .tAnd on line 992 of bust.pt
+.tLT !== .tNot on line 993 of bust.pt
+.tAnd !== .tWhileTest on line 994 of bust.pt
+.tNot !== oEmitNullAddress on line 995 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 996 of bust.pt
+% value emitted 9 !== % value emitted 10 on line 1040 of bust.pt
+% value emitted 929 !== .tWhileEnd on line 1051 of bust.pt
+.tWhileEnd !== % value emitted 920 on line 1052 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 1182 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 1263 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 1390 of bust.pt
+% value emitted 389 !== % value emitted 383 on line 1450 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 1648 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 1679 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 1721 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 1770 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 1855 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 1985 of bust.pt
+% value emitted 351 !== % value emitted 345 on line 2137 of bust.pt
+% value emitted 351 !== % value emitted 345 on line 2170 of bust.pt
+% value emitted 1968 !== % value emitted 1958 on line 2211 of bust.pt
+% value emitted 2002 !== % value emitted 1992 on line 2215 of bust.pt
+% value emitted 1968 !== % value emitted 1958 on line 2219 of bust.pt
+% value emitted 2002 !== % value emitted 1992 on line 2223 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 2270 of bust.pt
+% value emitted 416 !== % value emitted 410 on line 2306 of bust.pt
+% value emitted 416 !== % value emitted 410 on line 2367 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 2446 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 2447 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 2448 of bust.pt
+.tLiteralAddress !== % value emitted 14824 on line 2449 of bust.pt
+oEmitValue !== .tFetchInteger on line 2450 of bust.pt
+% value emitted 14824 !== .tLiteralAddress on line 2451 of bust.pt
+.tFetchInteger !== oEmitValue on line 2452 of bust.pt
+.tLiteralAddress !== % value emitted 14804 on line 2453 of bust.pt
+oEmitValue !== .tFetchInteger on line 2454 of bust.pt
+% value emitted 14804 !== .tGT on line 2455 of bust.pt
+.tFetchInteger !== .tNot on line 2456 of bust.pt
+.tGT !== .tWhileTest on line 2457 of bust.pt
+.tNot !== oEmitNullAddress on line 2458 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 2459 of bust.pt
+% value emitted 2349 !== % value emitted 2339 on line 2536 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2537 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2538 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2539 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2540 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2541 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2542 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2543 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2544 of bust.pt
+% value emitted 2324 !== % value emitted 2314 on line 2545 of bust.pt
+% value emitted 2297 !== .tWhileEnd on line 2578 of bust.pt
+.tWhileEnd !== % value emitted 2286 on line 2579 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 2582 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 2583 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 2584 of bust.pt
+.tLiteralAddress !== % value emitted 14816 on line 2585 of bust.pt
+oEmitValue !== .tFetchAddress on line 2586 of bust.pt
+% value emitted 14816 !== .tFetchInteger on line 2587 of bust.pt
+.tFetchAddress !== .tLiteralInteger on line 2588 of bust.pt
+.tFetchInteger !== oEmitValue on line 2589 of bust.pt
+.tLiteralInteger !== % value emitted 21 on line 2590 of bust.pt
+oEmitValue !== .tLE on line 2591 of bust.pt
+% value emitted 21 !== .tInfixOr on line 2592 of bust.pt
+.tLE !== .tLiteralAddress on line 2593 of bust.pt
+.tInfixOr !== oEmitValue on line 2594 of bust.pt
+.tLiteralAddress !== % value emitted 14820 on line 2595 of bust.pt
+oEmitValue !== .tFetchInteger on line 2596 of bust.pt
+% value emitted 14820 !== .tLiteralInteger on line 2597 of bust.pt
+.tFetchInteger !== oEmitValue on line 2598 of bust.pt
+.tLiteralInteger !== % value emitted 0 on line 2599 of bust.pt
+oEmitValue !== .tEQ on line 2600 of bust.pt
+% value emitted 0 !== .tOr on line 2601 of bust.pt
+.tEQ !== .tNot on line 2602 of bust.pt
+.tOr !== .tWhileTest on line 2603 of bust.pt
+.tNot !== oEmitNullAddress on line 2604 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 2605 of bust.pt
+% value emitted 2433 !== .tWhileEnd on line 2634 of bust.pt
+.tWhileEnd !== % value emitted 2420 on line 2635 of bust.pt
+% value emitted 2253 !== % value emitted 2243 on line 2678 of bust.pt
+% value emitted 2002 !== % value emitted 1992 on line 2864 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 2942 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 3057 of bust.pt
+% value emitted 416 !== % value emitted 410 on line 3217 of bust.pt
+% value emitted 1968 !== % value emitted 1958 on line 3249 of bust.pt
+% value emitted 1968 !== % value emitted 1958 on line 3442 of bust.pt
+% value emitted 2253 !== % value emitted 2243 on line 3472 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 3488 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 3582 of bust.pt
+% value emitted 3080 !== % value emitted 3066 on line 3677 of bust.pt
+% value emitted 3040 !== % value emitted 3026 on line 3684 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 3699 of bust.pt
+% value emitted 7 !== % value emitted 8 on line 3749 of bust.pt
+% value emitted 514 !== % value emitted 506 on line 3785 of bust.pt
+% value emitted 416 !== % value emitted 410 on line 3845 of bust.pt
+% .sNewLine !== % value emitted 54 on line 4352 of bust.pt
+% .sNewLine !== % value emitted 54 on line 4353 of bust.pt
+% .sNewLine !== % value emitted 54 on line 5142 of bust.pt
+% value emitted 625 !== % value emitted 617 on line 5258 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5261 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5262 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 5263 of bust.pt
 .tLiteralAddress !== % value emitted 1140 on line 5264 of bust.pt
 oEmitValue !== .tFetchBoolean on line 5265 of bust.pt
 % value emitted 1140 !== .tNot on line 5266 of bust.pt
-.tVarParm !== .tNot on line 5267 of bust.pt
-.tParmEnd !== .tWhileTest on line 5268 of bust.pt
-.tCallEnd !== oEmitNullAddress on line 5269 of bust.pt
-oEmitValue !== % value emitted -32767 on line 5270 of bust.pt
-% value emitted 625 !== .tCallBegin on line 5271 of bust.pt
-.tWhileBegin !== .tCallEnd on line 5272 of bust.pt
-.tWhilePreBreak !== oEmitValue on line 5273 of bust.pt
-oEmitNullAddress !== % value emitted 145 on line 5274 of bust.pt
-% value emitted -32767 !== .tCallBegin on line 5275 of bust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 5276 of bust.pt
-.tLiteralAddress !== oEmitValue on line 5277 of bust.pt
-oEmitValue !== % value emitted 1140 on line 5278 of bust.pt
-% value emitted 1140 !== .tVarParm on line 5279 of bust.pt
-.tFetchBoolean !== .tParmEnd on line 5280 of bust.pt
-.tNot !== .tCallEnd on line 5281 of bust.pt
-.tNot !== oEmitValue on line 5282 of bust.pt
-.tWhileTest !== % value emitted 1347 on line 5283 of bust.pt
-.tCallBegin !== .tWhileBegin on line 5284 of bust.pt
-.tCallEnd !== .tWhilePreBreak on line 5285 of bust.pt
-oEmitValue !== .tWhileBreakIf on line 5286 of bust.pt
-% value emitted 145 !== .tLiteralAddress on line 5287 of bust.pt
-.tCallBegin !== oEmitValue on line 5288 of bust.pt
+.tFetchBoolean !== .tNot on line 5267 of bust.pt
+.tNot !== .tWhileTest on line 5268 of bust.pt
+.tNot !== oEmitNullAddress on line 5269 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 5270 of bust.pt
+% value emitted 1357 !== % value emitted 1347 on line 5283 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5286 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5287 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 5288 of bust.pt
 .tLiteralAddress !== % value emitted 1140 on line 5289 of bust.pt
 oEmitValue !== .tFetchBoolean on line 5290 of bust.pt
 % value emitted 1140 !== .tNot on line 5291 of bust.pt
-.tVarParm !== .tNot on line 5292 of bust.pt
-.tParmEnd !== .tWhileTest on line 5293 of bust.pt
-.tCallEnd !== oEmitNullAddress on line 5294 of bust.pt
-oEmitValue !== % value emitted -32767 on line 5295 of bust.pt
-% value emitted 1357 !== .tCallBegin on line 5296 of bust.pt
-.tWhileBegin !== .tCallEnd on line 5297 of bust.pt
-.tWhilePreBreak !== oEmitValue on line 5298 of bust.pt
-oEmitNullAddress !== % value emitted 2026 on line 5299 of bust.pt
-% value emitted -32767 !== .tWhileBegin on line 5300 of bust.pt
-.tWhileBreakIf !== .tWhilePreBreak on line 5301 of bust.pt
-.tLiteralAddress !== .tWhileBreakIf on line 5302 of bust.pt
-oEmitValue !== .tLiteralAddress on line 5303 of bust.pt
-% value emitted 1140 !== oEmitValue on line 5304 of bust.pt
-.tFetchBoolean !== % value emitted 109 on line 5305 of bust.pt
-.tNot !== .tFetchBoolean on line 5306 of bust.pt
-.tCallBegin !== oEmitNullAddress on line 5309 of bust.pt
-.tCallEnd !== % value emitted -32767 on line 5310 of bust.pt
-oEmitValue !== .tCallBegin on line 5311 of bust.pt
-% value emitted 2036 !== .tCallEnd on line 5312 of bust.pt
-.tWhileBegin !== oEmitValue on line 5313 of bust.pt
-.tWhilePreBreak !== % value emitted 3248 on line 5314 of bust.pt
-oEmitNullAddress !== .tWhileEnd on line 5315 of bust.pt
-% value emitted -32767 !== % value emitted 4991 on line 5316 of bust.pt
-.tWhileBreakIf !== .tWhileBegin on line 5317 of bust.pt
-.tLiteralAddress !== .tWhilePreBreak on line 5318 of bust.pt
-oEmitValue !== .tWhileBreakIf on line 5319 of bust.pt
-% value emitted 109 !== .tLiteralAddress on line 5320 of bust.pt
-.tFetchBoolean !== oEmitValue on line 5321 of bust.pt
-.tNot !== % value emitted 108 on line 5322 of bust.pt
-.tWhileTest !== .tFetchBoolean on line 5323 of bust.pt
-.tCallBegin !== .tNot on line 5324 of bust.pt
-.tCallEnd !== .tWhileTest on line 5325 of bust.pt
-oEmitValue !== oEmitNullAddress on line 5326 of bust.pt
-% value emitted 3262 !== % value emitted -32767 on line 5327 of bust.pt
-% value emitted 5006 !== .tCallBegin on line 5328 of bust.pt
-.tWhileEnd !== .tCallEnd on line 5329 of bust.pt
-.tWhileBegin !== oEmitValue on line 5330 of bust.pt
-.tWhilePreBreak !== % value emitted 2490 on line 5331 of bust.pt
-oEmitNullAddress !== .tWhileEnd on line 5332 of bust.pt
-% value emitted -32767 !== % value emitted 5011 on line 5333 of bust.pt
-.tWhileBreakIf !== .tCallBegin on line 5334 of bust.pt
-% value emitted 108 !== % value emitted 1140 on line 5337 of bust.pt
-.tFetchBoolean !== .tVarParm on line 5338 of bust.pt
-.tNot !== .tParmEnd on line 5339 of bust.pt
-.tWhileTest !== .tCallEnd on line 5340 of bust.pt
-.tCallBegin !== oEmitValue on line 5341 of bust.pt
-.tCallEnd !== % value emitted 1347 on line 5342 of bust.pt
-oEmitValue !== .tWhileEnd on line 5343 of bust.pt
-% value emitted 2504 !== % value emitted 4972 on line 5344 of bust.pt
-% value emitted 5028 !== .tCallBegin on line 5345 of bust.pt
-.tWhileEnd !== .tLiteralAddress on line 5346 of bust.pt
-.tCallBegin !== oEmitValue on line 5347 of bust.pt
-.tLiteralAddress !== % value emitted 1140 on line 5348 of bust.pt
-oEmitValue !== .tVarParm on line 5349 of bust.pt
-% value emitted 1140 !== .tParmEnd on line 5350 of bust.pt
-.tVarParm !== .tCallEnd on line 5351 of bust.pt
-.tParmEnd !== oEmitValue on line 5352 of bust.pt
-.tCallEnd !== % value emitted 617 on line 5353 of bust.pt
-oEmitValue !== .tWhileEnd on line 5354 of bust.pt
-% value emitted 1357 !== % value emitted 4944 on line 5355 of bust.pt
-% value emitted 4987 !== .tTrapBegin on line 5356 of bust.pt
-.tWhileEnd !== .tTrap on line 5357 of bust.pt
-.tCallBegin !== oEmitTrapKind(trHalt) on line 5358 of bust.pt
-.tLiteralAddress !== % value emitted 0 on line 5359 of bust.pt
-oEmitValue !==  on line 5360 of bust.pt
+.tFetchBoolean !== .tNot on line 5292 of bust.pt
+.tNot !== .tWhileTest on line 5293 of bust.pt
+.tNot !== oEmitNullAddress on line 5294 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 5295 of bust.pt
+% value emitted 2036 !== % value emitted 2026 on line 5299 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5302 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5303 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 5304 of bust.pt
+.tLiteralAddress !== % value emitted 109 on line 5305 of bust.pt
+oEmitValue !== .tFetchBoolean on line 5306 of bust.pt
+% value emitted 109 !== .tNot on line 5307 of bust.pt
+.tFetchBoolean !== .tWhileTest on line 5308 of bust.pt
+.tNot !== oEmitNullAddress on line 5309 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 5310 of bust.pt
+% value emitted 3262 !== % value emitted 3248 on line 5314 of bust.pt
+% value emitted 5006 !== .tWhileEnd on line 5315 of bust.pt
+.tWhileEnd !== % value emitted 4991 on line 5316 of bust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5319 of bust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5320 of bust.pt
+.tWhileBreakIf !== oEmitValue on line 5321 of bust.pt
+.tLiteralAddress !== % value emitted 108 on line 5322 of bust.pt
+oEmitValue !== .tFetchBoolean on line 5323 of bust.pt
+% value emitted 108 !== .tNot on line 5324 of bust.pt
+.tFetchBoolean !== .tWhileTest on line 5325 of bust.pt
+.tNot !== oEmitNullAddress on line 5326 of bust.pt
+.tWhileTest !== % value emitted -32767 on line 5327 of bust.pt
+% value emitted 2504 !== % value emitted 2490 on line 5331 of bust.pt
+% value emitted 5028 !== .tWhileEnd on line 5332 of bust.pt
+.tWhileEnd !== % value emitted 5011 on line 5333 of bust.pt
+% value emitted 1357 !== % value emitted 1347 on line 5342 of bust.pt
+% value emitted 4987 !== .tWhileEnd on line 5343 of bust.pt
+.tWhileEnd !== % value emitted 4972 on line 5344 of bust.pt
+% value emitted 625 !== % value emitted 617 on line 5353 of bust.pt
+% value emitted 4959 !== .tWhileEnd on line 5354 of bust.pt
+.tWhileEnd !== % value emitted 4944 on line 5355 of bust.pt
 
 ```
 end file
@@ -12330,7 +7347,6 @@ Output is:
         % value emitted 10000
         .tModulus
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -12454,7 +7470,6 @@ Output is:
      .tCallEnd
      oEmitValue
      % value emitted 68
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -12492,7 +7507,6 @@ Output is:
         oEmitValue
         % value emitted 1
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -12558,7 +7572,6 @@ Output is:
         .tIfThen
         oEmitNullAddress
         % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -12605,7 +7618,6 @@ Output is:
         oEmitValue
         % value emitted 1
       .tAssignInteger
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -12670,7 +7682,6 @@ Output is:
         .tIfThen
         oEmitNullAddress
         % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -12829,7 +7840,6 @@ Output is:
                   % value emitted 4184
                   .tFetchInteger
                .tAssignInteger
-              #eMutableVarReqd
                .tAssignBegin
                 .tLiteralAddress
                 oEmitValue
@@ -13247,7 +8257,6 @@ Output is:
      .tIfThen
      oEmitNullAddress
      % value emitted -32767
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -13261,7 +8270,6 @@ Output is:
      .tIfMerge
      oEmitNullAddress
      % value emitted -32767
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -14402,1367 +9410,1314 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 134 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 135 of cache.pt
-.tLiteralAddress !== oEmitValue on line 136 of cache.pt
-oEmitValue !== % value emitted 4136 on line 137 of cache.pt
-% value emitted 4136 !== .tFetchAddress on line 138 of cache.pt
-.tFetchAddress !== .tLiteralAddress on line 139 of cache.pt
-.tLiteralAddress !== oEmitValue on line 140 of cache.pt
-oEmitValue !== % value emitted 4028 on line 141 of cache.pt
-% value emitted 4028 !== .tFetchInteger on line 142 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 143 of cache.pt
-.tLiteralAddress !== oEmitValue on line 144 of cache.pt
-oEmitValue !== % value emitted 4140 on line 145 of cache.pt
-% value emitted 4140 !== .tFetchInteger on line 146 of cache.pt
-.tFetchInteger !== .tModulus on line 147 of cache.pt
-.tModulus !== .tLiteralInteger on line 148 of cache.pt
-.tLiteralInteger !== oEmitValue on line 149 of cache.pt
-oEmitValue !== % value emitted 1 on line 150 of cache.pt
-% value emitted 1 !== .tAdd on line 151 of cache.pt
-.tAdd !== .tAssignInteger on line 152 of cache.pt
-.tAssignInteger !== .tProcedureEnd on line 153 of cache.pt
-.tProcedureEnd !== .tSkipProc on line 154 of cache.pt
-.tSkipProc !== oEmitNullAddress on line 155 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 156 of cache.pt
-% value emitted -32767 !== .tParmEnd on line 157 of cache.pt
-.tParmEnd !== .tAssignBegin on line 158 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 159 of cache.pt
-.tLiteralAddress !== oEmitValue on line 160 of cache.pt
-oEmitValue !== % value emitted 4144 on line 161 of cache.pt
-% value emitted 4144 !== .tLiteralInteger on line 162 of cache.pt
-.tLiteralInteger !== oEmitValue on line 163 of cache.pt
-oEmitValue !== % value emitted 1 on line 164 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 165 of cache.pt
-.tAssignInteger !== .tWhileBegin on line 166 of cache.pt
-.tWhileBegin !== .tLiteralAddress on line 167 of cache.pt
-.tLiteralAddress !== oEmitValue on line 168 of cache.pt
-oEmitValue !== % value emitted 4144 on line 169 of cache.pt
-% value emitted 4144 !== .tFetchInteger on line 170 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 171 of cache.pt
-.tLiteralAddress !== oEmitValue on line 172 of cache.pt
-oEmitValue !== % value emitted 8 on line 173 of cache.pt
-% value emitted 8 !== .tFetchInteger on line 174 of cache.pt
-.tFetchInteger !== .tLE on line 175 of cache.pt
-.tLE !== .tWhileTest on line 176 of cache.pt
-.tWhileTest !== oEmitNullAddress on line 177 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 178 of cache.pt
-% value emitted -32767 !== .tCallBegin on line 179 of cache.pt
-.tCallBegin !== .tLiteralAddress on line 180 of cache.pt
-.tLiteralAddress !== oEmitValue on line 181 of cache.pt
-oEmitValue !== % value emitted 4148 on line 182 of cache.pt
-% value emitted 4148 !== .tVarParm on line 183 of cache.pt
-.tVarParm !== .tParmEnd on line 184 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 185 of cache.pt
-.tLiteralInteger !== oEmitValue on line 186 of cache.pt
-oEmitValue !== % value emitted 9000 on line 187 of cache.pt
-% value emitted 9000 !== .tParmEnd on line 188 of cache.pt
-.tParmEnd !== .tCallEnd on line 189 of cache.pt
-.tCallEnd !== oEmitValue on line 190 of cache.pt
-oEmitValue !== % value emitted 68 on line 191 of cache.pt
-% value emitted 68 !== .tAssignBegin on line 192 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 193 of cache.pt
-.tLiteralAddress !== oEmitValue on line 194 of cache.pt
-oEmitValue !== % value emitted 4148 on line 195 of cache.pt
-% value emitted 4148 !== .tLiteralAddress on line 196 of cache.pt
-.tLiteralAddress !== oEmitValue on line 197 of cache.pt
-oEmitValue !== % value emitted 4148 on line 198 of cache.pt
-% value emitted 4148 !== .tFetchInteger on line 199 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 200 of cache.pt
-.tLiteralInteger !== oEmitValue on line 201 of cache.pt
-oEmitValue !== % value emitted 1000 on line 202 of cache.pt
-% value emitted 1000 !== .tAdd on line 203 of cache.pt
-.tAdd !== .tAssignInteger on line 204 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 205 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 206 of cache.pt
-.tLiteralAddress !== oEmitValue on line 207 of cache.pt
-oEmitValue !== % value emitted 16 on line 208 of cache.pt
-% value emitted 16 !== .tSubscriptBegin on line 209 of cache.pt
-.tSubscriptBegin !== .tLiteralAddress on line 210 of cache.pt
-.tLiteralAddress !== oEmitValue on line 211 of cache.pt
-oEmitValue !== % value emitted 4144 on line 212 of cache.pt
-% value emitted 4144 !== .tFetchInteger on line 213 of cache.pt
-.tFetchInteger !== .tSubscriptInteger on line 214 of cache.pt
-.tSubscriptInteger !== .tLiteralAddress on line 215 of cache.pt
-.tLiteralAddress !== oEmitValue on line 216 of cache.pt
-oEmitValue !== % value emitted 4148 on line 217 of cache.pt
-% value emitted 4148 !== .tFetchInteger on line 218 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 219 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 220 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 221 of cache.pt
-.tLiteralAddress !== oEmitValue on line 222 of cache.pt
-oEmitValue !== % value emitted 4144 on line 223 of cache.pt
-% value emitted 4144 !== .tLiteralAddress on line 224 of cache.pt
-.tLiteralAddress !== oEmitValue on line 225 of cache.pt
-oEmitValue !== % value emitted 4144 on line 226 of cache.pt
-% value emitted 4144 !== .tFetchInteger on line 227 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 228 of cache.pt
-.tLiteralInteger !== oEmitValue on line 229 of cache.pt
-oEmitValue !== % value emitted 1 on line 230 of cache.pt
-% value emitted 1 !== .tAdd on line 231 of cache.pt
-.tAdd !== .tAssignInteger on line 232 of cache.pt
-.tAssignInteger !== .tWhileEnd on line 233 of cache.pt
-#eMutableVarReqd !== .tAssignBegin on line 258 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 259 of cache.pt
-.tLiteralAddress !== oEmitValue on line 260 of cache.pt
-oEmitValue !== % value emitted 4152 on line 261 of cache.pt
-% value emitted 4152 !== .tFetchAddress on line 262 of cache.pt
-.tFetchAddress !== .tLiteralAddress on line 263 of cache.pt
-.tLiteralAddress !== oEmitValue on line 264 of cache.pt
-oEmitValue !== % value emitted 16 on line 265 of cache.pt
-% value emitted 16 !== .tSubscriptBegin on line 266 of cache.pt
-.tSubscriptBegin !== .tLiteralAddress on line 267 of cache.pt
-.tLiteralAddress !== oEmitValue on line 268 of cache.pt
-oEmitValue !== % value emitted 4156 on line 269 of cache.pt
-% value emitted 4156 !== .tFetchInteger on line 270 of cache.pt
+% value emitted 161 !== .tWhileEnd on line 233 of cache.pt
+.tProcedureEnd !== % value emitted 161 on line 234 of cache.pt
+.tSkipProc !== .tProcedureEnd on line 235 of cache.pt
+oEmitNullAddress !== .tSkipProc on line 236 of cache.pt
+% value emitted -32767 !== oEmitNullAddress on line 237 of cache.pt
+.tLiteralAddress !== % value emitted -32767 on line 238 of cache.pt
+oEmitValue !== .tLiteralAddress on line 239 of cache.pt
+% value emitted 4152 !== oEmitValue on line 240 of cache.pt
+.tStoreParmAddress !== % value emitted 4152 on line 241 of cache.pt
+.tParmEnd !== .tStoreParmAddress on line 242 of cache.pt
+.tCallBegin !== .tParmEnd on line 243 of cache.pt
+.tLiteralAddress !== .tCallBegin on line 244 of cache.pt
+oEmitValue !== .tLiteralAddress on line 245 of cache.pt
+% value emitted 4156 !== oEmitValue on line 246 of cache.pt
+.tVarParm !== % value emitted 4156 on line 247 of cache.pt
+.tParmEnd !== .tVarParm on line 248 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 249 of cache.pt
+oEmitValue !== .tLiteralAddress on line 250 of cache.pt
+% value emitted 8 !== oEmitValue on line 251 of cache.pt
+.tFetchInteger !== % value emitted 8 on line 252 of cache.pt
+.tParmEnd !== .tFetchInteger on line 253 of cache.pt
+.tCallEnd !== .tParmEnd on line 254 of cache.pt
+oEmitValue !== .tCallEnd on line 255 of cache.pt
+% value emitted 68 !== oEmitValue on line 256 of cache.pt
+.tAssignBegin !== % value emitted 68 on line 257 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 258 of cache.pt
+oEmitValue !== .tLiteralAddress on line 259 of cache.pt
+% value emitted 4152 !== oEmitValue on line 260 of cache.pt
+.tFetchAddress !== % value emitted 4152 on line 261 of cache.pt
+.tLiteralAddress !== .tFetchAddress on line 262 of cache.pt
+oEmitValue !== .tLiteralAddress on line 263 of cache.pt
+% value emitted 16 !== oEmitValue on line 264 of cache.pt
+.tSubscriptBegin !== % value emitted 16 on line 265 of cache.pt
+.tLiteralAddress !== .tSubscriptBegin on line 266 of cache.pt
+oEmitValue !== .tLiteralAddress on line 267 of cache.pt
+% value emitted 4156 !== oEmitValue on line 268 of cache.pt
+.tFetchInteger !== % value emitted 4156 on line 269 of cache.pt
+.tSubscriptInteger !== .tFetchInteger on line 270 of cache.pt
 .tFetchInteger !== .tSubscriptInteger on line 271 of cache.pt
-.tSubscriptInteger !== .tFetchInteger on line 272 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 273 of cache.pt
-.tAssignInteger !== .tProcedureEnd on line 274 of cache.pt
-.tProcedureEnd !== .tSkipProc on line 275 of cache.pt
-.tSkipProc !== oEmitNullAddress on line 276 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 277 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 278 of cache.pt
-.tLiteralAddress !== oEmitValue on line 279 of cache.pt
-oEmitValue !== % value emitted 4164 on line 280 of cache.pt
-% value emitted 4164 !== .tStoreParmAddress on line 281 of cache.pt
-.tStoreParmAddress !== .tLiteralAddress on line 282 of cache.pt
-.tLiteralAddress !== oEmitValue on line 283 of cache.pt
-oEmitValue !== % value emitted 4160 on line 284 of cache.pt
-% value emitted 4160 !== .tStoreParmInteger on line 285 of cache.pt
-.tStoreParmInteger !== .tParmEnd on line 286 of cache.pt
-.tParmEnd !== .tAssignBegin on line 287 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 288 of cache.pt
-.tLiteralAddress !== oEmitValue on line 289 of cache.pt
-oEmitValue !== % value emitted 4168 on line 290 of cache.pt
-% value emitted 4168 !== .tLiteralInteger on line 291 of cache.pt
-.tLiteralInteger !== oEmitValue on line 292 of cache.pt
-oEmitValue !== % value emitted 1 on line 293 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 294 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 295 of cache.pt
-#eMutableVarReqd !== .tLiteralAddress on line 296 of cache.pt
-.tAssignBegin !== oEmitValue on line 297 of cache.pt
-.tLiteralAddress !== % value emitted 4164 on line 298 of cache.pt
-oEmitValue !== .tFetchAddress on line 299 of cache.pt
-% value emitted 4164 !== .tLiteralInteger on line 300 of cache.pt
-.tFetchAddress !== oEmitValue on line 301 of cache.pt
-.tLiteralInteger !== % value emitted 0 on line 302 of cache.pt
-oEmitValue !== .tAssignInteger on line 303 of cache.pt
-% value emitted 0 !== .tWhileBegin on line 304 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 305 of cache.pt
-.tWhileBegin !== oEmitValue on line 306 of cache.pt
-.tLiteralAddress !== % value emitted 4168 on line 307 of cache.pt
-oEmitValue !== .tFetchInteger on line 308 of cache.pt
-% value emitted 4168 !== .tLiteralAddress on line 309 of cache.pt
-.tFetchInteger !== oEmitValue on line 310 of cache.pt
-.tLiteralAddress !== % value emitted 8 on line 311 of cache.pt
-oEmitValue !== .tFetchInteger on line 312 of cache.pt
-% value emitted 8 !== .tLE on line 313 of cache.pt
-.tFetchInteger !== .tInfixAnd on line 314 of cache.pt
-.tLE !== .tLiteralAddress on line 315 of cache.pt
-.tInfixAnd !== oEmitValue on line 316 of cache.pt
-.tLiteralAddress !== % value emitted 4164 on line 317 of cache.pt
-oEmitValue !== .tFetchAddress on line 318 of cache.pt
-% value emitted 4164 !== .tFetchInteger on line 319 of cache.pt
-.tFetchAddress !== .tLiteralInteger on line 320 of cache.pt
-.tFetchInteger !== oEmitValue on line 321 of cache.pt
-.tLiteralInteger !== % value emitted 0 on line 322 of cache.pt
-oEmitValue !== .tEQ on line 323 of cache.pt
-% value emitted 0 !== .tAnd on line 324 of cache.pt
-.tEQ !== .tWhileTest on line 325 of cache.pt
-.tAnd !== oEmitNullAddress on line 326 of cache.pt
-.tWhileTest !== % value emitted -32767 on line 327 of cache.pt
-oEmitNullAddress !== .tAssignBegin on line 328 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 329 of cache.pt
-.tAssignBegin !== oEmitValue on line 330 of cache.pt
+.tAssignInteger !== .tFetchInteger on line 272 of cache.pt
+.tProcedureEnd !== .tAssignInteger on line 273 of cache.pt
+.tSkipProc !== .tProcedureEnd on line 274 of cache.pt
+oEmitNullAddress !== .tSkipProc on line 275 of cache.pt
+% value emitted -32767 !== oEmitNullAddress on line 276 of cache.pt
+.tLiteralAddress !== % value emitted -32767 on line 277 of cache.pt
+oEmitValue !== .tLiteralAddress on line 278 of cache.pt
+% value emitted 4164 !== oEmitValue on line 279 of cache.pt
+.tStoreParmAddress !== % value emitted 4164 on line 280 of cache.pt
+.tLiteralAddress !== .tStoreParmAddress on line 281 of cache.pt
+oEmitValue !== .tLiteralAddress on line 282 of cache.pt
+% value emitted 4160 !== oEmitValue on line 283 of cache.pt
+.tStoreParmInteger !== % value emitted 4160 on line 284 of cache.pt
+.tParmEnd !== .tStoreParmInteger on line 285 of cache.pt
+.tAssignBegin !== .tParmEnd on line 286 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 287 of cache.pt
+oEmitValue !== .tLiteralAddress on line 288 of cache.pt
+% value emitted 4168 !== oEmitValue on line 289 of cache.pt
+.tLiteralInteger !== % value emitted 4168 on line 290 of cache.pt
+oEmitValue !== .tLiteralInteger on line 291 of cache.pt
+% value emitted 1 !== oEmitValue on line 292 of cache.pt
+.tAssignInteger !== % value emitted 1 on line 293 of cache.pt
+.tAssignBegin !== .tAssignInteger on line 294 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 295 of cache.pt
+oEmitValue !== .tLiteralAddress on line 296 of cache.pt
+% value emitted 4164 !== oEmitValue on line 297 of cache.pt
+.tFetchAddress !== % value emitted 4164 on line 298 of cache.pt
+.tLiteralInteger !== .tFetchAddress on line 299 of cache.pt
+oEmitValue !== .tLiteralInteger on line 300 of cache.pt
+% value emitted 0 !== oEmitValue on line 301 of cache.pt
+.tAssignInteger !== % value emitted 0 on line 302 of cache.pt
+.tWhileBegin !== .tAssignInteger on line 303 of cache.pt
+.tLiteralAddress !== .tWhileBegin on line 304 of cache.pt
+oEmitValue !== .tLiteralAddress on line 305 of cache.pt
+% value emitted 4168 !== oEmitValue on line 306 of cache.pt
+.tFetchInteger !== % value emitted 4168 on line 307 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 308 of cache.pt
+oEmitValue !== .tLiteralAddress on line 309 of cache.pt
+% value emitted 8 !== oEmitValue on line 310 of cache.pt
+.tFetchInteger !== % value emitted 8 on line 311 of cache.pt
+.tLE !== .tFetchInteger on line 312 of cache.pt
+.tInfixAnd !== .tLE on line 313 of cache.pt
+.tLiteralAddress !== .tInfixAnd on line 314 of cache.pt
+oEmitValue !== .tLiteralAddress on line 315 of cache.pt
+% value emitted 4164 !== oEmitValue on line 316 of cache.pt
+.tFetchAddress !== % value emitted 4164 on line 317 of cache.pt
+.tFetchInteger !== .tFetchAddress on line 318 of cache.pt
+.tLiteralInteger !== .tFetchInteger on line 319 of cache.pt
+oEmitValue !== .tLiteralInteger on line 320 of cache.pt
+% value emitted 0 !== oEmitValue on line 321 of cache.pt
+.tEQ !== % value emitted 0 on line 322 of cache.pt
+.tAnd !== .tEQ on line 323 of cache.pt
+.tWhileTest !== .tAnd on line 324 of cache.pt
+oEmitNullAddress !== .tWhileTest on line 325 of cache.pt
+% value emitted -32767 !== oEmitNullAddress on line 326 of cache.pt
+.tAssignBegin !== % value emitted -32767 on line 327 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 328 of cache.pt
+oEmitValue !== .tLiteralAddress on line 329 of cache.pt
+% value emitted 4024 !== oEmitValue on line 330 of cache.pt
 .tLiteralAddress !== % value emitted 4024 on line 331 of cache.pt
 oEmitValue !== .tLiteralAddress on line 332 of cache.pt
 % value emitted 4024 !== oEmitValue on line 333 of cache.pt
-.tLiteralAddress !== % value emitted 4024 on line 334 of cache.pt
-oEmitValue !== .tFetchInteger on line 335 of cache.pt
-% value emitted 4024 !== .tLiteralInteger on line 336 of cache.pt
-.tFetchInteger !== oEmitValue on line 337 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 338 of cache.pt
-oEmitValue !== .tAdd on line 339 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 340 of cache.pt
-.tAdd !== .tIfBegin on line 341 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 342 of cache.pt
-.tIfBegin !== oEmitValue on line 343 of cache.pt
-.tLiteralAddress !== % value emitted 16 on line 344 of cache.pt
-oEmitValue !== .tSubscriptBegin on line 345 of cache.pt
-% value emitted 16 !== .tLiteralAddress on line 346 of cache.pt
-.tSubscriptBegin !== oEmitValue on line 347 of cache.pt
-.tLiteralAddress !== % value emitted 4168 on line 348 of cache.pt
-oEmitValue !== .tFetchInteger on line 349 of cache.pt
-% value emitted 4168 !== .tSubscriptInteger on line 350 of cache.pt
-.tSubscriptInteger !== .tLiteralAddress on line 352 of cache.pt
-.tFetchInteger !== oEmitValue on line 353 of cache.pt
-.tLiteralAddress !== % value emitted 4160 on line 354 of cache.pt
-oEmitValue !== .tFetchInteger on line 355 of cache.pt
-% value emitted 4160 !== .tEQ on line 356 of cache.pt
-.tFetchInteger !== .tIfThen on line 357 of cache.pt
-.tEQ !== oEmitNullAddress on line 358 of cache.pt
-.tIfThen !== % value emitted -32767 on line 359 of cache.pt
-oEmitNullAddress !== .tAssignBegin on line 360 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 361 of cache.pt
-#eMutableVarReqd !== oEmitValue on line 362 of cache.pt
-.tAssignBegin !== % value emitted 4164 on line 363 of cache.pt
+.tFetchInteger !== % value emitted 4024 on line 334 of cache.pt
+.tLiteralInteger !== .tFetchInteger on line 335 of cache.pt
+oEmitValue !== .tLiteralInteger on line 336 of cache.pt
+% value emitted 1 !== oEmitValue on line 337 of cache.pt
+.tAdd !== % value emitted 1 on line 338 of cache.pt
+.tAssignInteger !== .tAdd on line 339 of cache.pt
+.tIfBegin !== .tAssignInteger on line 340 of cache.pt
+.tLiteralAddress !== .tIfBegin on line 341 of cache.pt
+oEmitValue !== .tLiteralAddress on line 342 of cache.pt
+% value emitted 16 !== oEmitValue on line 343 of cache.pt
+.tSubscriptBegin !== % value emitted 16 on line 344 of cache.pt
+.tLiteralAddress !== .tSubscriptBegin on line 345 of cache.pt
+oEmitValue !== .tLiteralAddress on line 346 of cache.pt
+% value emitted 4168 !== oEmitValue on line 347 of cache.pt
+.tFetchInteger !== % value emitted 4168 on line 348 of cache.pt
+.tSubscriptInteger !== .tFetchInteger on line 349 of cache.pt
+.tFetchInteger !== .tSubscriptInteger on line 350 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 351 of cache.pt
+oEmitValue !== .tLiteralAddress on line 352 of cache.pt
+% value emitted 4160 !== oEmitValue on line 353 of cache.pt
+.tFetchInteger !== % value emitted 4160 on line 354 of cache.pt
+.tEQ !== .tFetchInteger on line 355 of cache.pt
+.tIfThen !== .tEQ on line 356 of cache.pt
+oEmitNullAddress !== .tIfThen on line 357 of cache.pt
+% value emitted -32767 !== oEmitNullAddress on line 358 of cache.pt
+.tAssignBegin !== % value emitted -32767 on line 359 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 360 of cache.pt
+oEmitValue !== .tLiteralAddress on line 361 of cache.pt
+% value emitted 4164 !== oEmitValue on line 362 of cache.pt
+.tFetchAddress !== % value emitted 4164 on line 363 of cache.pt
 .tLiteralAddress !== .tFetchAddress on line 364 of cache.pt
 oEmitValue !== .tLiteralAddress on line 365 of cache.pt
-% value emitted 4164 !== oEmitValue on line 366 of cache.pt
-.tFetchAddress !== % value emitted 4168 on line 367 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 368 of cache.pt
-oEmitValue !== .tAssignInteger on line 369 of cache.pt
-% value emitted 4168 !== .tIfEnd on line 370 of cache.pt
-.tFetchInteger !== .tAssignBegin on line 371 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 372 of cache.pt
-.tIfEnd !== oEmitValue on line 373 of cache.pt
-.tAssignBegin !== % value emitted 4168 on line 374 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 378 of cache.pt
+% value emitted 4168 !== oEmitValue on line 366 of cache.pt
+.tFetchInteger !== % value emitted 4168 on line 367 of cache.pt
+.tAssignInteger !== .tFetchInteger on line 368 of cache.pt
+.tIfEnd !== .tAssignInteger on line 369 of cache.pt
+.tAssignBegin !== .tIfEnd on line 370 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 371 of cache.pt
+oEmitValue !== .tLiteralAddress on line 372 of cache.pt
+% value emitted 4168 !== oEmitValue on line 373 of cache.pt
+.tLiteralAddress !== % value emitted 4168 on line 374 of cache.pt
+oEmitValue !== .tLiteralAddress on line 375 of cache.pt
+% value emitted 4168 !== oEmitValue on line 376 of cache.pt
+.tFetchInteger !== % value emitted 4168 on line 377 of cache.pt
+.tLiteralInteger !== .tFetchInteger on line 378 of cache.pt
 oEmitValue !== .tLiteralInteger on line 379 of cache.pt
-% value emitted 4168 !== oEmitValue on line 380 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 381 of cache.pt
-.tLiteralInteger !== .tAdd on line 382 of cache.pt
-oEmitValue !== .tAssignInteger on line 383 of cache.pt
-% value emitted 1 !== .tWhileEnd on line 384 of cache.pt
-.tAdd !== % value emitted 297 on line 385 of cache.pt
-.tAssignInteger !== .tProcedureEnd on line 386 of cache.pt
-% value emitted 296 !== .tSkipProc on line 387 of cache.pt
-.tProcedureEnd !== oEmitNullAddress on line 388 of cache.pt
-.tSkipProc !== % value emitted -32767 on line 389 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 390 of cache.pt
-% value emitted -32767 !== oEmitValue on line 391 of cache.pt
+% value emitted 1 !== oEmitValue on line 380 of cache.pt
+.tAdd !== % value emitted 1 on line 381 of cache.pt
+.tAssignInteger !== .tAdd on line 382 of cache.pt
+% value emitted 296 !== .tAssignInteger on line 383 of cache.pt
+.tProcedureEnd !== .tWhileEnd on line 384 of cache.pt
+.tSkipProc !== % value emitted 297 on line 385 of cache.pt
+oEmitNullAddress !== .tProcedureEnd on line 386 of cache.pt
+% value emitted -32767 !== .tSkipProc on line 387 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 388 of cache.pt
+oEmitValue !== % value emitted -32767 on line 389 of cache.pt
+% value emitted 4176 !== .tLiteralAddress on line 390 of cache.pt
+.tStoreParmAddress !== oEmitValue on line 391 of cache.pt
 .tLiteralAddress !== % value emitted 4176 on line 392 of cache.pt
 oEmitValue !== .tStoreParmAddress on line 393 of cache.pt
-% value emitted 4176 !== .tLiteralAddress on line 394 of cache.pt
-.tStoreParmAddress !== oEmitValue on line 395 of cache.pt
-.tLiteralAddress !== % value emitted 4172 on line 396 of cache.pt
-oEmitValue !== .tStoreParmInteger on line 397 of cache.pt
-% value emitted 4172 !== .tParmEnd on line 398 of cache.pt
-.tStoreParmInteger !== .tAssignBegin on line 399 of cache.pt
-.tParmEnd !== .tLiteralAddress on line 400 of cache.pt
-.tAssignBegin !== oEmitValue on line 401 of cache.pt
-.tLiteralAddress !== % value emitted 4180 on line 402 of cache.pt
-oEmitValue !== .tLiteralInteger on line 403 of cache.pt
-% value emitted 4180 !== oEmitValue on line 404 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 405 of cache.pt
-oEmitValue !== .tAssignInteger on line 406 of cache.pt
-% value emitted 1 !== .tAssignBegin on line 407 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 408 of cache.pt
-#eMutableVarReqd !== oEmitValue on line 409 of cache.pt
-.tAssignBegin !== % value emitted 4176 on line 410 of cache.pt
-.tLiteralAddress !== .tFetchAddress on line 411 of cache.pt
-oEmitValue !== .tLiteralInteger on line 412 of cache.pt
-% value emitted 4176 !== oEmitValue on line 413 of cache.pt
-.tFetchAddress !== % value emitted 0 on line 414 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 415 of cache.pt
+% value emitted 4172 !== .tLiteralAddress on line 394 of cache.pt
+.tStoreParmInteger !== oEmitValue on line 395 of cache.pt
+.tParmEnd !== % value emitted 4172 on line 396 of cache.pt
+.tAssignBegin !== .tStoreParmInteger on line 397 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 398 of cache.pt
+oEmitValue !== .tAssignBegin on line 399 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 400 of cache.pt
+.tLiteralInteger !== oEmitValue on line 401 of cache.pt
+oEmitValue !== % value emitted 4180 on line 402 of cache.pt
+% value emitted 1 !== .tLiteralInteger on line 403 of cache.pt
+.tAssignInteger !== oEmitValue on line 404 of cache.pt
+.tAssignBegin !== % value emitted 1 on line 405 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 406 of cache.pt
+oEmitValue !== .tAssignBegin on line 407 of cache.pt
+% value emitted 4176 !== .tLiteralAddress on line 408 of cache.pt
+.tFetchAddress !== oEmitValue on line 409 of cache.pt
+.tLiteralInteger !== % value emitted 4176 on line 410 of cache.pt
+oEmitValue !== .tFetchAddress on line 411 of cache.pt
+% value emitted 0 !== .tLiteralInteger on line 412 of cache.pt
+.tAssignInteger !== oEmitValue on line 413 of cache.pt
+.tWhileBegin !== % value emitted 0 on line 414 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 415 of cache.pt
 oEmitValue !== .tWhileBegin on line 416 of cache.pt
-% value emitted 0 !== .tLiteralAddress on line 417 of cache.pt
-.tAssignInteger !== oEmitValue on line 418 of cache.pt
-.tWhileBegin !== % value emitted 4180 on line 419 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 420 of cache.pt
-oEmitValue !== .tLiteralInteger on line 421 of cache.pt
-% value emitted 4180 !== oEmitValue on line 422 of cache.pt
-.tFetchInteger !== % value emitted 10 on line 423 of cache.pt
-.tLiteralInteger !== .tLE on line 424 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 417 of cache.pt
+.tFetchInteger !== oEmitValue on line 418 of cache.pt
+.tLiteralInteger !== % value emitted 4180 on line 419 of cache.pt
+oEmitValue !== .tFetchInteger on line 420 of cache.pt
+% value emitted 10 !== .tLiteralInteger on line 421 of cache.pt
+.tLE !== oEmitValue on line 422 of cache.pt
+.tInfixAnd !== % value emitted 10 on line 423 of cache.pt
+.tLiteralAddress !== .tLE on line 424 of cache.pt
 oEmitValue !== .tInfixAnd on line 425 of cache.pt
-% value emitted 10 !== .tLiteralAddress on line 426 of cache.pt
-.tLE !== oEmitValue on line 427 of cache.pt
-.tInfixAnd !== % value emitted 4176 on line 428 of cache.pt
-.tLiteralAddress !== .tFetchAddress on line 429 of cache.pt
+% value emitted 4176 !== .tLiteralAddress on line 426 of cache.pt
+.tFetchAddress !== oEmitValue on line 427 of cache.pt
+.tFetchInteger !== % value emitted 4176 on line 428 of cache.pt
+.tLiteralInteger !== .tFetchAddress on line 429 of cache.pt
 oEmitValue !== .tFetchInteger on line 430 of cache.pt
-% value emitted 4176 !== .tLiteralInteger on line 431 of cache.pt
-.tFetchAddress !== oEmitValue on line 432 of cache.pt
-.tFetchInteger !== % value emitted 0 on line 433 of cache.pt
-.tLiteralInteger !== .tEQ on line 434 of cache.pt
-oEmitValue !== .tAnd on line 435 of cache.pt
-% value emitted 0 !== .tWhileTest on line 436 of cache.pt
-.tEQ !== oEmitNullAddress on line 437 of cache.pt
-.tAnd !== % value emitted -32767 on line 438 of cache.pt
-.tWhileTest !== .tAssignBegin on line 439 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 440 of cache.pt
-% value emitted -32767 !== oEmitValue on line 441 of cache.pt
-.tAssignBegin !== % value emitted 4024 on line 442 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 446 of cache.pt
-oEmitValue !== .tLiteralInteger on line 447 of cache.pt
-% value emitted 4024 !== oEmitValue on line 448 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 449 of cache.pt
-.tLiteralInteger !== .tAdd on line 450 of cache.pt
-oEmitValue !== .tAssignInteger on line 451 of cache.pt
-% value emitted 1 !== .tIfBegin on line 452 of cache.pt
-.tAdd !== .tLiteralAddress on line 453 of cache.pt
-.tAssignInteger !== oEmitValue on line 454 of cache.pt
-.tIfBegin !== % value emitted 4036 on line 455 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 456 of cache.pt
-oEmitValue !== .tLiteralAddress on line 457 of cache.pt
-% value emitted 4036 !== oEmitValue on line 458 of cache.pt
-.tSubscriptBegin !== % value emitted 4180 on line 459 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 460 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 461 of cache.pt
-% value emitted 4180 !== .tFetchInteger on line 462 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 463 of cache.pt
-.tSubscriptInteger !== oEmitValue on line 464 of cache.pt
-.tFetchInteger !== % value emitted 4172 on line 465 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 466 of cache.pt
-oEmitValue !== .tEQ on line 467 of cache.pt
-% value emitted 4172 !== .tIfThen on line 468 of cache.pt
-.tFetchInteger !== oEmitNullAddress on line 469 of cache.pt
-.tEQ !== % value emitted -32767 on line 470 of cache.pt
-.tIfThen !== .tAssignBegin on line 471 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 472 of cache.pt
-% value emitted -32767 !== oEmitValue on line 473 of cache.pt
-#eMutableVarReqd !== % value emitted 4176 on line 474 of cache.pt
-.tAssignBegin !== .tFetchAddress on line 475 of cache.pt
-% value emitted 4176 !== % value emitted 4084 on line 478 of cache.pt
-.tFetchAddress !== .tSubscriptBegin on line 479 of cache.pt
-% value emitted 4084 !== % value emitted 4180 on line 482 of cache.pt
-.tSubscriptBegin !== .tFetchInteger on line 483 of cache.pt
-.tLiteralAddress !== .tSubscriptInteger on line 484 of cache.pt
-oEmitValue !== .tFetchInteger on line 485 of cache.pt
-% value emitted 4180 !== .tAssignInteger on line 486 of cache.pt
-.tFetchInteger !== .tIfEnd on line 487 of cache.pt
-.tSubscriptInteger !== .tAssignBegin on line 488 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 489 of cache.pt
-.tAssignInteger !== oEmitValue on line 490 of cache.pt
-.tIfEnd !== % value emitted 4180 on line 491 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 492 of cache.pt
-.tLiteralAddress !== oEmitValue on line 493 of cache.pt
-oEmitValue !== % value emitted 4180 on line 494 of cache.pt
-% value emitted 4180 !== .tFetchInteger on line 495 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 496 of cache.pt
-% value emitted 4180 !== % value emitted 1 on line 498 of cache.pt
-.tFetchInteger !== .tAdd on line 499 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 500 of cache.pt
-oEmitValue !== .tWhileEnd on line 501 of cache.pt
-% value emitted 1 !== % value emitted 407 on line 502 of cache.pt
-.tAdd !== .tAssignBegin on line 503 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 504 of cache.pt
-% value emitted 405 !== oEmitValue on line 505 of cache.pt
-.tAssignBegin !== % value emitted 4184 on line 506 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 507 of cache.pt
-% value emitted 4184 !== % value emitted 1 on line 509 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 510 of cache.pt
-oEmitValue !== .tWhileBegin on line 511 of cache.pt
-% value emitted 1 !== .tLiteralAddress on line 512 of cache.pt
-.tAssignInteger !== oEmitValue on line 513 of cache.pt
-.tWhileBegin !== % value emitted 4184 on line 514 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 515 of cache.pt
-oEmitValue !== .tLiteralAddress on line 516 of cache.pt
-% value emitted 4184 !== oEmitValue on line 517 of cache.pt
-.tFetchInteger !== % value emitted 8 on line 518 of cache.pt
+% value emitted 0 !== .tLiteralInteger on line 431 of cache.pt
+.tEQ !== oEmitValue on line 432 of cache.pt
+.tAnd !== % value emitted 0 on line 433 of cache.pt
+.tWhileTest !== .tEQ on line 434 of cache.pt
+oEmitNullAddress !== .tAnd on line 435 of cache.pt
+% value emitted -32767 !== .tWhileTest on line 436 of cache.pt
+.tAssignBegin !== oEmitNullAddress on line 437 of cache.pt
+.tLiteralAddress !== % value emitted -32767 on line 438 of cache.pt
+oEmitValue !== .tAssignBegin on line 439 of cache.pt
+% value emitted 4024 !== .tLiteralAddress on line 440 of cache.pt
+.tLiteralAddress !== oEmitValue on line 441 of cache.pt
+oEmitValue !== % value emitted 4024 on line 442 of cache.pt
+% value emitted 4024 !== .tLiteralAddress on line 443 of cache.pt
+.tFetchInteger !== oEmitValue on line 444 of cache.pt
+.tLiteralInteger !== % value emitted 4024 on line 445 of cache.pt
+oEmitValue !== .tFetchInteger on line 446 of cache.pt
+% value emitted 1 !== .tLiteralInteger on line 447 of cache.pt
+.tAdd !== oEmitValue on line 448 of cache.pt
+.tAssignInteger !== % value emitted 1 on line 449 of cache.pt
+.tIfBegin !== .tAdd on line 450 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 451 of cache.pt
+oEmitValue !== .tIfBegin on line 452 of cache.pt
+% value emitted 4036 !== .tLiteralAddress on line 453 of cache.pt
+.tSubscriptBegin !== oEmitValue on line 454 of cache.pt
+.tLiteralAddress !== % value emitted 4036 on line 455 of cache.pt
+oEmitValue !== .tSubscriptBegin on line 456 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 457 of cache.pt
+.tFetchInteger !== oEmitValue on line 458 of cache.pt
+.tSubscriptInteger !== % value emitted 4180 on line 459 of cache.pt
+.tLiteralAddress !== .tSubscriptInteger on line 461 of cache.pt
+oEmitValue !== .tFetchInteger on line 462 of cache.pt
+% value emitted 4172 !== .tLiteralAddress on line 463 of cache.pt
+.tFetchInteger !== oEmitValue on line 464 of cache.pt
+.tEQ !== % value emitted 4172 on line 465 of cache.pt
+.tIfThen !== .tFetchInteger on line 466 of cache.pt
+oEmitNullAddress !== .tEQ on line 467 of cache.pt
+% value emitted -32767 !== .tIfThen on line 468 of cache.pt
+.tAssignBegin !== oEmitNullAddress on line 469 of cache.pt
+.tLiteralAddress !== % value emitted -32767 on line 470 of cache.pt
+oEmitValue !== .tAssignBegin on line 471 of cache.pt
+% value emitted 4176 !== .tLiteralAddress on line 472 of cache.pt
+.tFetchAddress !== oEmitValue on line 473 of cache.pt
+.tLiteralAddress !== % value emitted 4176 on line 474 of cache.pt
+oEmitValue !== .tFetchAddress on line 475 of cache.pt
+% value emitted 4084 !== .tLiteralAddress on line 476 of cache.pt
+.tSubscriptBegin !== oEmitValue on line 477 of cache.pt
+.tLiteralAddress !== % value emitted 4084 on line 478 of cache.pt
+oEmitValue !== .tSubscriptBegin on line 479 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 480 of cache.pt
+.tFetchInteger !== oEmitValue on line 481 of cache.pt
+.tSubscriptInteger !== % value emitted 4180 on line 482 of cache.pt
+.tAssignInteger !== .tSubscriptInteger on line 484 of cache.pt
+.tIfEnd !== .tFetchInteger on line 485 of cache.pt
+.tAssignBegin !== .tAssignInteger on line 486 of cache.pt
+.tLiteralAddress !== .tIfEnd on line 487 of cache.pt
+oEmitValue !== .tAssignBegin on line 488 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 489 of cache.pt
+.tLiteralAddress !== oEmitValue on line 490 of cache.pt
+oEmitValue !== % value emitted 4180 on line 491 of cache.pt
+% value emitted 4180 !== .tLiteralAddress on line 492 of cache.pt
+.tFetchInteger !== oEmitValue on line 493 of cache.pt
+.tLiteralInteger !== % value emitted 4180 on line 494 of cache.pt
+oEmitValue !== .tFetchInteger on line 495 of cache.pt
+% value emitted 1 !== .tLiteralInteger on line 496 of cache.pt
+.tAdd !== oEmitValue on line 497 of cache.pt
+.tAssignInteger !== % value emitted 1 on line 498 of cache.pt
+% value emitted 405 !== .tAdd on line 499 of cache.pt
+.tAssignBegin !== .tAssignInteger on line 500 of cache.pt
+.tLiteralAddress !== .tWhileEnd on line 501 of cache.pt
+oEmitValue !== % value emitted 407 on line 502 of cache.pt
+% value emitted 4184 !== .tAssignBegin on line 503 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 504 of cache.pt
+% value emitted 1 !== % value emitted 4184 on line 506 of cache.pt
+.tAssignInteger !== .tLiteralInteger on line 507 of cache.pt
+.tWhileBegin !== oEmitValue on line 508 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 509 of cache.pt
+oEmitValue !== .tAssignInteger on line 510 of cache.pt
+% value emitted 4184 !== .tWhileBegin on line 511 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 512 of cache.pt
+.tLiteralAddress !== oEmitValue on line 513 of cache.pt
+oEmitValue !== % value emitted 4184 on line 514 of cache.pt
+% value emitted 8 !== .tFetchInteger on line 515 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 516 of cache.pt
+.tLE !== oEmitValue on line 517 of cache.pt
+.tInfixAnd !== % value emitted 8 on line 518 of cache.pt
 .tLiteralAddress !== .tFetchInteger on line 519 of cache.pt
 oEmitValue !== .tLE on line 520 of cache.pt
-% value emitted 8 !== .tInfixAnd on line 521 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 522 of cache.pt
-.tLE !== oEmitValue on line 523 of cache.pt
-.tInfixAnd !== % value emitted 4176 on line 524 of cache.pt
-.tLiteralAddress !== .tFetchAddress on line 525 of cache.pt
-oEmitValue !== .tFetchInteger on line 526 of cache.pt
-% value emitted 4176 !== .tLiteralInteger on line 527 of cache.pt
-.tFetchAddress !== oEmitValue on line 528 of cache.pt
-.tFetchInteger !== % value emitted 0 on line 529 of cache.pt
-.tLiteralInteger !== .tEQ on line 530 of cache.pt
-oEmitValue !== .tAnd on line 531 of cache.pt
-% value emitted 0 !== .tWhileTest on line 532 of cache.pt
-.tEQ !== oEmitNullAddress on line 533 of cache.pt
-.tAnd !== % value emitted -32767 on line 534 of cache.pt
-.tWhileTest !== .tAssignBegin on line 535 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 536 of cache.pt
-% value emitted -32767 !== oEmitValue on line 537 of cache.pt
-.tAssignBegin !== % value emitted 4024 on line 538 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 542 of cache.pt
-oEmitValue !== .tLiteralInteger on line 543 of cache.pt
-% value emitted 4024 !== oEmitValue on line 544 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 545 of cache.pt
-.tLiteralInteger !== .tAdd on line 546 of cache.pt
+% value emitted 4176 !== .tInfixAnd on line 521 of cache.pt
+.tFetchAddress !== .tLiteralAddress on line 522 of cache.pt
+.tFetchInteger !== oEmitValue on line 523 of cache.pt
+.tLiteralInteger !== % value emitted 4176 on line 524 of cache.pt
+oEmitValue !== .tFetchAddress on line 525 of cache.pt
+% value emitted 0 !== .tFetchInteger on line 526 of cache.pt
+.tEQ !== .tLiteralInteger on line 527 of cache.pt
+.tAnd !== oEmitValue on line 528 of cache.pt
+.tWhileTest !== % value emitted 0 on line 529 of cache.pt
+oEmitNullAddress !== .tEQ on line 530 of cache.pt
+% value emitted -32767 !== .tAnd on line 531 of cache.pt
+.tAssignBegin !== .tWhileTest on line 532 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 533 of cache.pt
+oEmitValue !== % value emitted -32767 on line 534 of cache.pt
+% value emitted 4024 !== .tAssignBegin on line 535 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 539 of cache.pt
+.tLiteralInteger !== oEmitValue on line 540 of cache.pt
+oEmitValue !== % value emitted 4024 on line 541 of cache.pt
+% value emitted 1 !== .tFetchInteger on line 542 of cache.pt
+.tAdd !== .tLiteralInteger on line 543 of cache.pt
+.tAssignInteger !== oEmitValue on line 544 of cache.pt
+.tIfBegin !== % value emitted 1 on line 545 of cache.pt
+.tLiteralAddress !== .tAdd on line 546 of cache.pt
 oEmitValue !== .tAssignInteger on line 547 of cache.pt
-% value emitted 1 !== .tIfBegin on line 548 of cache.pt
-.tAdd !== .tLiteralAddress on line 549 of cache.pt
-.tAssignInteger !== oEmitValue on line 550 of cache.pt
-.tIfBegin !== % value emitted 16 on line 551 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 552 of cache.pt
-oEmitValue !== .tLiteralAddress on line 553 of cache.pt
-% value emitted 16 !== oEmitValue on line 554 of cache.pt
-.tSubscriptBegin !== % value emitted 4184 on line 555 of cache.pt
+% value emitted 16 !== .tIfBegin on line 548 of cache.pt
+.tSubscriptBegin !== .tLiteralAddress on line 549 of cache.pt
+.tLiteralAddress !== oEmitValue on line 550 of cache.pt
+oEmitValue !== % value emitted 16 on line 551 of cache.pt
+% value emitted 4184 !== .tSubscriptBegin on line 552 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 553 of cache.pt
+.tSubscriptInteger !== oEmitValue on line 554 of cache.pt
+.tFetchInteger !== % value emitted 4184 on line 555 of cache.pt
 .tLiteralAddress !== .tFetchInteger on line 556 of cache.pt
 oEmitValue !== .tSubscriptInteger on line 557 of cache.pt
-% value emitted 4184 !== .tFetchInteger on line 558 of cache.pt
+% value emitted 4172 !== .tFetchInteger on line 558 of cache.pt
 .tFetchInteger !== .tLiteralAddress on line 559 of cache.pt
-.tSubscriptInteger !== oEmitValue on line 560 of cache.pt
-.tFetchInteger !== % value emitted 4172 on line 561 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 562 of cache.pt
-oEmitValue !== .tEQ on line 563 of cache.pt
-% value emitted 4172 !== .tIfThen on line 564 of cache.pt
-.tFetchInteger !== oEmitNullAddress on line 565 of cache.pt
-.tEQ !== % value emitted -32767 on line 566 of cache.pt
-.tIfThen !== .tAssignBegin on line 567 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 568 of cache.pt
-% value emitted -32767 !== oEmitValue on line 569 of cache.pt
-.tAssignBegin !== % value emitted 4132 on line 570 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 574 of cache.pt
-oEmitValue !== .tLiteralInteger on line 575 of cache.pt
-% value emitted 4132 !== oEmitValue on line 576 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 577 of cache.pt
-.tLiteralInteger !== .tAdd on line 578 of cache.pt
+.tEQ !== oEmitValue on line 560 of cache.pt
+.tIfThen !== % value emitted 4172 on line 561 of cache.pt
+oEmitNullAddress !== .tFetchInteger on line 562 of cache.pt
+% value emitted -32767 !== .tEQ on line 563 of cache.pt
+.tAssignBegin !== .tIfThen on line 564 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 565 of cache.pt
+oEmitValue !== % value emitted -32767 on line 566 of cache.pt
+% value emitted 4132 !== .tAssignBegin on line 567 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 571 of cache.pt
+.tLiteralInteger !== oEmitValue on line 572 of cache.pt
+oEmitValue !== % value emitted 4132 on line 573 of cache.pt
+% value emitted 1 !== .tFetchInteger on line 574 of cache.pt
+.tAdd !== .tLiteralInteger on line 575 of cache.pt
+.tAssignInteger !== oEmitValue on line 576 of cache.pt
+.tIfBegin !== % value emitted 1 on line 577 of cache.pt
+.tLiteralAddress !== .tAdd on line 578 of cache.pt
 oEmitValue !== .tAssignInteger on line 579 of cache.pt
-% value emitted 1 !== .tIfBegin on line 580 of cache.pt
-.tAdd !== .tLiteralAddress on line 581 of cache.pt
-.tAssignInteger !== oEmitValue on line 582 of cache.pt
-.tIfBegin !== % value emitted 4132 on line 583 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 584 of cache.pt
-oEmitValue !== .tLiteralInteger on line 585 of cache.pt
-% value emitted 4132 !== oEmitValue on line 586 of cache.pt
-.tFetchInteger !== % value emitted 10 on line 587 of cache.pt
-.tLiteralInteger !== .tGT on line 588 of cache.pt
-oEmitValue !== .tIfThen on line 589 of cache.pt
-% value emitted 10 !== oEmitNullAddress on line 590 of cache.pt
-.tGT !== % value emitted -32767 on line 591 of cache.pt
-.tIfThen !== .tAssignBegin on line 592 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 593 of cache.pt
-% value emitted -32767 !== oEmitValue on line 594 of cache.pt
-.tAssignBegin !== % value emitted 4132 on line 595 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 596 of cache.pt
-% value emitted 4132 !== % value emitted 1 on line 598 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 599 of cache.pt
-oEmitValue !== .tAssignBegin on line 600 of cache.pt
-% value emitted 1 !== .tLiteralAddress on line 601 of cache.pt
-.tAssignInteger !== oEmitValue on line 602 of cache.pt
-.tAssignBegin !== % value emitted 4036 on line 603 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 604 of cache.pt
-oEmitValue !== .tLiteralAddress on line 605 of cache.pt
-% value emitted 4036 !== oEmitValue on line 606 of cache.pt
-.tSubscriptBegin !== % value emitted 4132 on line 607 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 608 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 609 of cache.pt
-% value emitted 4132 !== .tLiteralAddress on line 610 of cache.pt
-.tFetchInteger !== oEmitValue on line 611 of cache.pt
-.tSubscriptInteger !== % value emitted 4172 on line 612 of cache.pt
+% value emitted 4132 !== .tIfBegin on line 580 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 581 of cache.pt
+.tLiteralInteger !== oEmitValue on line 582 of cache.pt
+oEmitValue !== % value emitted 4132 on line 583 of cache.pt
+% value emitted 10 !== .tFetchInteger on line 584 of cache.pt
+.tGT !== .tLiteralInteger on line 585 of cache.pt
+.tIfThen !== oEmitValue on line 586 of cache.pt
+oEmitNullAddress !== % value emitted 10 on line 587 of cache.pt
+% value emitted -32767 !== .tGT on line 588 of cache.pt
+.tAssignBegin !== .tIfThen on line 589 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 590 of cache.pt
+oEmitValue !== % value emitted -32767 on line 591 of cache.pt
+% value emitted 4132 !== .tAssignBegin on line 592 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 593 of cache.pt
+% value emitted 1 !== % value emitted 4132 on line 595 of cache.pt
+.tAssignInteger !== .tLiteralInteger on line 596 of cache.pt
+.tAssignBegin !== oEmitValue on line 597 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 598 of cache.pt
+oEmitValue !== .tAssignInteger on line 599 of cache.pt
+% value emitted 4036 !== .tAssignBegin on line 600 of cache.pt
+.tSubscriptBegin !== .tLiteralAddress on line 601 of cache.pt
+.tLiteralAddress !== oEmitValue on line 602 of cache.pt
+oEmitValue !== % value emitted 4036 on line 603 of cache.pt
+% value emitted 4132 !== .tSubscriptBegin on line 604 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 605 of cache.pt
+.tSubscriptInteger !== oEmitValue on line 606 of cache.pt
+.tLiteralAddress !== % value emitted 4132 on line 607 of cache.pt
+oEmitValue !== .tFetchInteger on line 608 of cache.pt
+% value emitted 4172 !== .tSubscriptInteger on line 609 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 610 of cache.pt
+.tAssignInteger !== oEmitValue on line 611 of cache.pt
+.tAssignBegin !== % value emitted 4172 on line 612 of cache.pt
 .tLiteralAddress !== .tFetchInteger on line 613 of cache.pt
 oEmitValue !== .tAssignInteger on line 614 of cache.pt
-% value emitted 4172 !== .tAssignBegin on line 615 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 616 of cache.pt
-.tAssignInteger !== oEmitValue on line 617 of cache.pt
-.tAssignBegin !== % value emitted 4084 on line 618 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 619 of cache.pt
-oEmitValue !== .tLiteralAddress on line 620 of cache.pt
-% value emitted 4084 !== oEmitValue on line 621 of cache.pt
-.tSubscriptBegin !== % value emitted 4132 on line 622 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 623 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 624 of cache.pt
-% value emitted 4132 !== .tLiteralAddress on line 625 of cache.pt
-.tFetchInteger !== oEmitValue on line 626 of cache.pt
-.tSubscriptInteger !== % value emitted 4184 on line 627 of cache.pt
+% value emitted 4084 !== .tAssignBegin on line 615 of cache.pt
+.tSubscriptBegin !== .tLiteralAddress on line 616 of cache.pt
+.tLiteralAddress !== oEmitValue on line 617 of cache.pt
+oEmitValue !== % value emitted 4084 on line 618 of cache.pt
+% value emitted 4132 !== .tSubscriptBegin on line 619 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 620 of cache.pt
+.tSubscriptInteger !== oEmitValue on line 621 of cache.pt
+.tLiteralAddress !== % value emitted 4132 on line 622 of cache.pt
+oEmitValue !== .tFetchInteger on line 623 of cache.pt
+% value emitted 4184 !== .tSubscriptInteger on line 624 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 625 of cache.pt
+.tAssignInteger !== oEmitValue on line 626 of cache.pt
+.tAssignBegin !== % value emitted 4184 on line 627 of cache.pt
 .tLiteralAddress !== .tFetchInteger on line 628 of cache.pt
 oEmitValue !== .tAssignInteger on line 629 of cache.pt
-% value emitted 4184 !== .tAssignBegin on line 630 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 631 of cache.pt
-.tAssignInteger !== oEmitValue on line 632 of cache.pt
-#eMutableVarReqd !== % value emitted 4176 on line 633 of cache.pt
-.tAssignBegin !== .tFetchAddress on line 634 of cache.pt
-% value emitted 4176 !== % value emitted 4184 on line 637 of cache.pt
-.tFetchAddress !== .tFetchInteger on line 638 of cache.pt
-.tLiteralAddress !== .tAssignInteger on line 639 of cache.pt
-oEmitValue !== .tIfEnd on line 640 of cache.pt
-% value emitted 4184 !== .tIfEnd on line 641 of cache.pt
-.tFetchInteger !== .tAssignBegin on line 642 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 643 of cache.pt
-.tIfEnd !== oEmitValue on line 644 of cache.pt
-.tIfEnd !== % value emitted 4184 on line 645 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 646 of cache.pt
-.tLiteralAddress !== oEmitValue on line 647 of cache.pt
+% value emitted 4176 !== .tAssignBegin on line 630 of cache.pt
+.tFetchAddress !== .tLiteralAddress on line 631 of cache.pt
+.tLiteralAddress !== oEmitValue on line 632 of cache.pt
+oEmitValue !== % value emitted 4176 on line 633 of cache.pt
+% value emitted 4184 !== .tFetchAddress on line 634 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 635 of cache.pt
+.tAssignInteger !== oEmitValue on line 636 of cache.pt
+.tIfEnd !== % value emitted 4184 on line 637 of cache.pt
+.tIfEnd !== .tFetchInteger on line 638 of cache.pt
+.tAssignBegin !== .tAssignInteger on line 639 of cache.pt
+.tLiteralAddress !== .tIfEnd on line 640 of cache.pt
+oEmitValue !== .tIfEnd on line 641 of cache.pt
+% value emitted 4184 !== .tAssignBegin on line 642 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 646 of cache.pt
+.tLiteralInteger !== oEmitValue on line 647 of cache.pt
 oEmitValue !== % value emitted 4184 on line 648 of cache.pt
-% value emitted 4184 !== .tFetchInteger on line 649 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 650 of cache.pt
-% value emitted 4184 !== % value emitted 1 on line 652 of cache.pt
-.tFetchInteger !== .tAdd on line 653 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 654 of cache.pt
-oEmitValue !== .tWhileEnd on line 655 of cache.pt
-% value emitted 1 !== % value emitted 498 on line 656 of cache.pt
-.tAdd !== .tProcedureEnd on line 657 of cache.pt
-.tAssignInteger !== .tSkipProc on line 658 of cache.pt
-% value emitted 495 !== oEmitNullAddress on line 659 of cache.pt
-.tProcedureEnd !== % value emitted -32767 on line 660 of cache.pt
-.tSkipProc !== .tLiteralAddress on line 661 of cache.pt
-oEmitNullAddress !== oEmitValue on line 662 of cache.pt
-% value emitted -32767 !== % value emitted 4192 on line 663 of cache.pt
-.tLiteralAddress !== .tStoreParmInteger on line 664 of cache.pt
-oEmitValue !== .tLiteralAddress on line 665 of cache.pt
-% value emitted 4192 !== oEmitValue on line 666 of cache.pt
-.tStoreParmInteger !== % value emitted 4188 on line 667 of cache.pt
-.tLiteralAddress !== .tStoreParmInteger on line 668 of cache.pt
-oEmitValue !== .tParmEnd on line 669 of cache.pt
-% value emitted 4188 !== .tAssignBegin on line 670 of cache.pt
-.tStoreParmInteger !== .tLiteralAddress on line 671 of cache.pt
-.tParmEnd !== oEmitValue on line 672 of cache.pt
-.tAssignBegin !== % value emitted 4196 on line 673 of cache.pt
-% value emitted 4196 !== % value emitted 16 on line 676 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 677 of cache.pt
-oEmitValue !== .tLiteralAddress on line 678 of cache.pt
-% value emitted 16 !== oEmitValue on line 679 of cache.pt
-.tSubscriptBegin !== % value emitted 4188 on line 680 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 681 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 682 of cache.pt
-% value emitted 4188 !== .tFetchInteger on line 683 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 684 of cache.pt
-.tSubscriptInteger !== .tAssignBegin on line 685 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 686 of cache.pt
-.tAssignInteger !== oEmitValue on line 687 of cache.pt
-.tAssignBegin !== % value emitted 16 on line 688 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 689 of cache.pt
-oEmitValue !== .tLiteralAddress on line 690 of cache.pt
-% value emitted 16 !== oEmitValue on line 691 of cache.pt
-.tSubscriptBegin !== % value emitted 4188 on line 692 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 693 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 694 of cache.pt
-% value emitted 4188 !== .tLiteralAddress on line 695 of cache.pt
-.tFetchInteger !== oEmitValue on line 696 of cache.pt
-.tSubscriptInteger !== % value emitted 16 on line 697 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 698 of cache.pt
-oEmitValue !== .tLiteralAddress on line 699 of cache.pt
-% value emitted 16 !== oEmitValue on line 700 of cache.pt
-.tSubscriptBegin !== % value emitted 4192 on line 701 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 702 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 703 of cache.pt
-% value emitted 4192 !== .tFetchInteger on line 704 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 705 of cache.pt
-.tSubscriptInteger !== .tAssignBegin on line 706 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 707 of cache.pt
-.tAssignInteger !== oEmitValue on line 708 of cache.pt
-.tAssignBegin !== % value emitted 16 on line 709 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 710 of cache.pt
-oEmitValue !== .tLiteralAddress on line 711 of cache.pt
-% value emitted 16 !== oEmitValue on line 712 of cache.pt
-.tSubscriptBegin !== % value emitted 4192 on line 713 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 714 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 715 of cache.pt
-% value emitted 4192 !== .tLiteralAddress on line 716 of cache.pt
-.tFetchInteger !== oEmitValue on line 717 of cache.pt
-.tSubscriptInteger !== % value emitted 4196 on line 718 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 719 of cache.pt
-oEmitValue !== .tAssignInteger on line 720 of cache.pt
-% value emitted 4196 !== .tProcedureEnd on line 721 of cache.pt
-.tFetchInteger !== .tSkipProc on line 722 of cache.pt
-.tAssignInteger !== oEmitNullAddress on line 723 of cache.pt
-.tProcedureEnd !== % value emitted -32767 on line 724 of cache.pt
-.tSkipProc !== .tParmEnd on line 725 of cache.pt
-oEmitNullAddress !== .tAssignBegin on line 726 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 727 of cache.pt
-.tParmEnd !== oEmitValue on line 728 of cache.pt
-.tAssignBegin !== % value emitted 4200 on line 729 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 730 of cache.pt
-% value emitted 4200 !== % value emitted 1 on line 732 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 733 of cache.pt
-oEmitValue !== .tAssignBegin on line 734 of cache.pt
-% value emitted 1 !== .tLiteralAddress on line 735 of cache.pt
-.tAssignInteger !== oEmitValue on line 736 of cache.pt
-.tAssignBegin !== % value emitted 4204 on line 737 of cache.pt
-% value emitted 4204 !== % value emitted 8 on line 740 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 741 of cache.pt
-oEmitValue !== .tAssignInteger on line 742 of cache.pt
-% value emitted 8 !== .tWhileBegin on line 743 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 744 of cache.pt
-.tAssignInteger !== oEmitValue on line 745 of cache.pt
-.tWhileBegin !== % value emitted 4204 on line 746 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 747 of cache.pt
-oEmitValue !== .tLiteralInteger on line 748 of cache.pt
-% value emitted 4204 !== oEmitValue on line 749 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 750 of cache.pt
-.tLiteralInteger !== .tGT on line 751 of cache.pt
-oEmitValue !== .tInfixAnd on line 752 of cache.pt
-% value emitted 1 !== .tLiteralAddress on line 753 of cache.pt
-.tGT !== oEmitValue on line 754 of cache.pt
-.tInfixAnd !== % value emitted 4200 on line 755 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 756 of cache.pt
-oEmitValue !== .tLiteralInteger on line 757 of cache.pt
-% value emitted 4200 !== oEmitValue on line 758 of cache.pt
-.tFetchInteger !== % value emitted 0 on line 759 of cache.pt
-.tLiteralInteger !== .tNE on line 760 of cache.pt
-oEmitValue !== .tAnd on line 761 of cache.pt
-% value emitted 0 !== .tWhileTest on line 762 of cache.pt
-.tNE !== oEmitNullAddress on line 763 of cache.pt
-.tAnd !== % value emitted -32767 on line 764 of cache.pt
-.tWhileTest !== .tAssignBegin on line 765 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 766 of cache.pt
-% value emitted -32767 !== oEmitValue on line 767 of cache.pt
-.tAssignBegin !== % value emitted 4200 on line 768 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 769 of cache.pt
-% value emitted 4200 !== % value emitted 0 on line 771 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 772 of cache.pt
-oEmitValue !== .tAssignBegin on line 773 of cache.pt
-% value emitted 0 !== .tLiteralAddress on line 774 of cache.pt
-.tAssignInteger !== oEmitValue on line 775 of cache.pt
-.tAssignBegin !== % value emitted 4208 on line 776 of cache.pt
-.tLiteralAddress !== .tLiteralInteger on line 777 of cache.pt
-% value emitted 4208 !== % value emitted 1 on line 779 of cache.pt
-.tLiteralInteger !== .tAssignInteger on line 780 of cache.pt
-oEmitValue !== .tWhileBegin on line 781 of cache.pt
-% value emitted 1 !== .tLiteralAddress on line 782 of cache.pt
-.tAssignInteger !== oEmitValue on line 783 of cache.pt
-.tWhileBegin !== % value emitted 4208 on line 784 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 785 of cache.pt
-oEmitValue !== .tLiteralAddress on line 786 of cache.pt
-% value emitted 4208 !== oEmitValue on line 787 of cache.pt
-.tFetchInteger !== % value emitted 4204 on line 788 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 789 of cache.pt
-oEmitValue !== .tLT on line 790 of cache.pt
-% value emitted 4204 !== .tWhileTest on line 791 of cache.pt
-.tFetchInteger !== oEmitNullAddress on line 792 of cache.pt
-.tLT !== % value emitted -32767 on line 793 of cache.pt
-.tWhileTest !== .tAssignBegin on line 794 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 795 of cache.pt
-% value emitted -32767 !== oEmitValue on line 796 of cache.pt
-.tAssignBegin !== % value emitted 4024 on line 797 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 801 of cache.pt
-oEmitValue !== .tLiteralInteger on line 802 of cache.pt
-% value emitted 4024 !== oEmitValue on line 803 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 804 of cache.pt
-.tLiteralInteger !== .tAdd on line 805 of cache.pt
-oEmitValue !== .tAssignInteger on line 806 of cache.pt
-% value emitted 1 !== .tIfBegin on line 807 of cache.pt
-.tAdd !== .tLiteralAddress on line 808 of cache.pt
-.tAssignInteger !== oEmitValue on line 809 of cache.pt
-.tIfBegin !== % value emitted 16 on line 810 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 811 of cache.pt
-oEmitValue !== .tLiteralAddress on line 812 of cache.pt
-% value emitted 16 !== oEmitValue on line 813 of cache.pt
-.tSubscriptBegin !== % value emitted 4208 on line 814 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 815 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 816 of cache.pt
-% value emitted 4208 !== .tFetchInteger on line 817 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 818 of cache.pt
-.tSubscriptInteger !== oEmitValue on line 819 of cache.pt
-.tFetchInteger !== % value emitted 16 on line 820 of cache.pt
-.tLiteralAddress !== .tSubscriptBegin on line 821 of cache.pt
-oEmitValue !== .tLiteralAddress on line 822 of cache.pt
-% value emitted 16 !== oEmitValue on line 823 of cache.pt
-.tSubscriptBegin !== % value emitted 4208 on line 824 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 825 of cache.pt
-oEmitValue !== .tLiteralInteger on line 826 of cache.pt
-% value emitted 4208 !== oEmitValue on line 827 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 828 of cache.pt
-.tLiteralInteger !== .tAdd on line 829 of cache.pt
-oEmitValue !== .tSubscriptInteger on line 830 of cache.pt
-% value emitted 1 !== .tFetchInteger on line 831 of cache.pt
-.tAdd !== .tGT on line 832 of cache.pt
-.tSubscriptInteger !== .tIfThen on line 833 of cache.pt
-.tFetchInteger !== oEmitNullAddress on line 834 of cache.pt
-.tGT !== % value emitted -32767 on line 835 of cache.pt
-.tIfThen !== .tAssignBegin on line 836 of cache.pt
-oEmitNullAddress !== .tLiteralAddress on line 837 of cache.pt
-% value emitted -32767 !== oEmitValue on line 838 of cache.pt
-.tAssignBegin !== % value emitted 4200 on line 839 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 843 of cache.pt
-oEmitValue !== .tLiteralInteger on line 844 of cache.pt
-% value emitted 4200 !== oEmitValue on line 845 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 846 of cache.pt
-.tLiteralInteger !== .tAdd on line 847 of cache.pt
-oEmitValue !== .tAssignInteger on line 848 of cache.pt
-% value emitted 1 !== .tCallBegin on line 849 of cache.pt
-.tAdd !== .tLiteralAddress on line 850 of cache.pt
-.tAssignInteger !== oEmitValue on line 851 of cache.pt
-.tCallBegin !== % value emitted 4208 on line 852 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 853 of cache.pt
-oEmitValue !== .tParmEnd on line 854 of cache.pt
-% value emitted 4208 !== .tLiteralAddress on line 855 of cache.pt
-.tFetchInteger !== oEmitValue on line 856 of cache.pt
-.tParmEnd !== % value emitted 4208 on line 857 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 858 of cache.pt
-oEmitValue !== .tLiteralInteger on line 859 of cache.pt
-% value emitted 4208 !== oEmitValue on line 860 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 861 of cache.pt
-.tLiteralInteger !== .tAdd on line 862 of cache.pt
-oEmitValue !== .tParmEnd on line 863 of cache.pt
-% value emitted 1 !== .tCallEnd on line 864 of cache.pt
-.tAdd !== oEmitValue on line 865 of cache.pt
-.tParmEnd !== % value emitted 643 on line 866 of cache.pt
-.tCallEnd !== .tIfEnd on line 867 of cache.pt
-oEmitValue !== .tAssignBegin on line 868 of cache.pt
-% value emitted 639 !== .tLiteralAddress on line 869 of cache.pt
-.tIfEnd !== oEmitValue on line 870 of cache.pt
-.tAssignBegin !== % value emitted 4208 on line 871 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 875 of cache.pt
-oEmitValue !== .tLiteralInteger on line 876 of cache.pt
-% value emitted 4208 !== oEmitValue on line 877 of cache.pt
-.tFetchInteger !== % value emitted 1 on line 878 of cache.pt
-.tLiteralInteger !== .tAdd on line 879 of cache.pt
+% value emitted 1 !== .tFetchInteger on line 649 of cache.pt
+.tAdd !== .tLiteralInteger on line 650 of cache.pt
+.tAssignInteger !== oEmitValue on line 651 of cache.pt
+% value emitted 495 !== % value emitted 1 on line 652 of cache.pt
+.tProcedureEnd !== .tAdd on line 653 of cache.pt
+.tSkipProc !== .tAssignInteger on line 654 of cache.pt
+oEmitNullAddress !== .tWhileEnd on line 655 of cache.pt
+% value emitted -32767 !== % value emitted 498 on line 656 of cache.pt
+.tLiteralAddress !== .tProcedureEnd on line 657 of cache.pt
+oEmitValue !== .tSkipProc on line 658 of cache.pt
+% value emitted 4192 !== oEmitNullAddress on line 659 of cache.pt
+.tStoreParmInteger !== % value emitted -32767 on line 660 of cache.pt
+% value emitted 4188 !== % value emitted 4192 on line 663 of cache.pt
+.tParmEnd !== .tLiteralAddress on line 665 of cache.pt
+.tAssignBegin !== oEmitValue on line 666 of cache.pt
+.tLiteralAddress !== % value emitted 4188 on line 667 of cache.pt
+oEmitValue !== .tStoreParmInteger on line 668 of cache.pt
+% value emitted 4196 !== .tParmEnd on line 669 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 670 of cache.pt
+oEmitValue !== .tLiteralAddress on line 671 of cache.pt
+% value emitted 16 !== oEmitValue on line 672 of cache.pt
+.tSubscriptBegin !== % value emitted 4196 on line 673 of cache.pt
+% value emitted 4188 !== % value emitted 16 on line 676 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 677 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 678 of cache.pt
+.tFetchInteger !== oEmitValue on line 679 of cache.pt
+.tAssignInteger !== % value emitted 4188 on line 680 of cache.pt
+.tAssignBegin !== .tFetchInteger on line 681 of cache.pt
+.tLiteralAddress !== .tSubscriptInteger on line 682 of cache.pt
+oEmitValue !== .tFetchInteger on line 683 of cache.pt
+% value emitted 16 !== .tAssignInteger on line 684 of cache.pt
+.tSubscriptBegin !== .tAssignBegin on line 685 of cache.pt
+% value emitted 4188 !== % value emitted 16 on line 688 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 689 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 690 of cache.pt
+.tLiteralAddress !== oEmitValue on line 691 of cache.pt
+oEmitValue !== % value emitted 4188 on line 692 of cache.pt
+% value emitted 16 !== .tFetchInteger on line 693 of cache.pt
+.tSubscriptBegin !== .tSubscriptInteger on line 694 of cache.pt
+% value emitted 4192 !== % value emitted 16 on line 697 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 698 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 699 of cache.pt
+.tFetchInteger !== oEmitValue on line 700 of cache.pt
+.tAssignInteger !== % value emitted 4192 on line 701 of cache.pt
+.tAssignBegin !== .tFetchInteger on line 702 of cache.pt
+.tLiteralAddress !== .tSubscriptInteger on line 703 of cache.pt
+oEmitValue !== .tFetchInteger on line 704 of cache.pt
+% value emitted 16 !== .tAssignInteger on line 705 of cache.pt
+.tSubscriptBegin !== .tAssignBegin on line 706 of cache.pt
+% value emitted 4192 !== % value emitted 16 on line 709 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 710 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 711 of cache.pt
+.tLiteralAddress !== oEmitValue on line 712 of cache.pt
+oEmitValue !== % value emitted 4192 on line 713 of cache.pt
+% value emitted 4196 !== .tFetchInteger on line 714 of cache.pt
+.tFetchInteger !== .tSubscriptInteger on line 715 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 716 of cache.pt
+.tProcedureEnd !== oEmitValue on line 717 of cache.pt
+.tSkipProc !== % value emitted 4196 on line 718 of cache.pt
+oEmitNullAddress !== .tFetchInteger on line 719 of cache.pt
+% value emitted -32767 !== .tAssignInteger on line 720 of cache.pt
+.tParmEnd !== .tProcedureEnd on line 721 of cache.pt
+.tAssignBegin !== .tSkipProc on line 722 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 723 of cache.pt
+oEmitValue !== % value emitted -32767 on line 724 of cache.pt
+% value emitted 4200 !== .tParmEnd on line 725 of cache.pt
+.tLiteralInteger !== .tAssignBegin on line 726 of cache.pt
+oEmitValue !== .tLiteralAddress on line 727 of cache.pt
+% value emitted 1 !== oEmitValue on line 728 of cache.pt
+.tAssignInteger !== % value emitted 4200 on line 729 of cache.pt
+.tAssignBegin !== .tLiteralInteger on line 730 of cache.pt
+.tLiteralAddress !== oEmitValue on line 731 of cache.pt
+oEmitValue !== % value emitted 1 on line 732 of cache.pt
+% value emitted 4204 !== .tAssignInteger on line 733 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 734 of cache.pt
+oEmitValue !== .tLiteralAddress on line 735 of cache.pt
+% value emitted 8 !== oEmitValue on line 736 of cache.pt
+.tFetchInteger !== % value emitted 4204 on line 737 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 738 of cache.pt
+.tWhileBegin !== oEmitValue on line 739 of cache.pt
+.tLiteralAddress !== % value emitted 8 on line 740 of cache.pt
+oEmitValue !== .tFetchInteger on line 741 of cache.pt
+% value emitted 4204 !== .tAssignInteger on line 742 of cache.pt
+.tFetchInteger !== .tWhileBegin on line 743 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 744 of cache.pt
+% value emitted 1 !== % value emitted 4204 on line 746 of cache.pt
+.tGT !== .tFetchInteger on line 747 of cache.pt
+.tInfixAnd !== .tLiteralInteger on line 748 of cache.pt
+.tLiteralAddress !== oEmitValue on line 749 of cache.pt
+oEmitValue !== % value emitted 1 on line 750 of cache.pt
+% value emitted 4200 !== .tGT on line 751 of cache.pt
+.tFetchInteger !== .tInfixAnd on line 752 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 753 of cache.pt
+% value emitted 0 !== % value emitted 4200 on line 755 of cache.pt
+.tNE !== .tFetchInteger on line 756 of cache.pt
+.tAnd !== .tLiteralInteger on line 757 of cache.pt
+.tWhileTest !== oEmitValue on line 758 of cache.pt
+oEmitNullAddress !== % value emitted 0 on line 759 of cache.pt
+% value emitted -32767 !== .tNE on line 760 of cache.pt
+.tAssignBegin !== .tAnd on line 761 of cache.pt
+.tLiteralAddress !== .tWhileTest on line 762 of cache.pt
+oEmitValue !== oEmitNullAddress on line 763 of cache.pt
+% value emitted 4200 !== % value emitted -32767 on line 764 of cache.pt
+.tLiteralInteger !== .tAssignBegin on line 765 of cache.pt
+oEmitValue !== .tLiteralAddress on line 766 of cache.pt
+% value emitted 0 !== oEmitValue on line 767 of cache.pt
+.tAssignInteger !== % value emitted 4200 on line 768 of cache.pt
+.tAssignBegin !== .tLiteralInteger on line 769 of cache.pt
+.tLiteralAddress !== oEmitValue on line 770 of cache.pt
+oEmitValue !== % value emitted 0 on line 771 of cache.pt
+% value emitted 4208 !== .tAssignInteger on line 772 of cache.pt
+.tLiteralInteger !== .tAssignBegin on line 773 of cache.pt
+oEmitValue !== .tLiteralAddress on line 774 of cache.pt
+% value emitted 1 !== oEmitValue on line 775 of cache.pt
+.tAssignInteger !== % value emitted 4208 on line 776 of cache.pt
+.tWhileBegin !== .tLiteralInteger on line 777 of cache.pt
+.tLiteralAddress !== oEmitValue on line 778 of cache.pt
+oEmitValue !== % value emitted 1 on line 779 of cache.pt
+% value emitted 4208 !== .tAssignInteger on line 780 of cache.pt
+.tFetchInteger !== .tWhileBegin on line 781 of cache.pt
+% value emitted 4204 !== % value emitted 4208 on line 784 of cache.pt
+.tLT !== .tLiteralAddress on line 786 of cache.pt
+.tWhileTest !== oEmitValue on line 787 of cache.pt
+oEmitNullAddress !== % value emitted 4204 on line 788 of cache.pt
+% value emitted -32767 !== .tFetchInteger on line 789 of cache.pt
+.tAssignBegin !== .tLT on line 790 of cache.pt
+.tLiteralAddress !== .tWhileTest on line 791 of cache.pt
+oEmitValue !== oEmitNullAddress on line 792 of cache.pt
+% value emitted 4024 !== % value emitted -32767 on line 793 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 794 of cache.pt
+oEmitValue !== .tLiteralAddress on line 795 of cache.pt
+% value emitted 4024 !== oEmitValue on line 796 of cache.pt
+.tFetchInteger !== % value emitted 4024 on line 797 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 798 of cache.pt
+% value emitted 1 !== % value emitted 4024 on line 800 of cache.pt
+.tAdd !== .tFetchInteger on line 801 of cache.pt
+.tAssignInteger !== .tLiteralInteger on line 802 of cache.pt
+.tIfBegin !== oEmitValue on line 803 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 804 of cache.pt
+oEmitValue !== .tAdd on line 805 of cache.pt
+% value emitted 16 !== .tAssignInteger on line 806 of cache.pt
+.tSubscriptBegin !== .tIfBegin on line 807 of cache.pt
+% value emitted 4208 !== % value emitted 16 on line 810 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 811 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 812 of cache.pt
+.tFetchInteger !== oEmitValue on line 813 of cache.pt
+.tLiteralAddress !== % value emitted 4208 on line 814 of cache.pt
+oEmitValue !== .tFetchInteger on line 815 of cache.pt
+% value emitted 16 !== .tSubscriptInteger on line 816 of cache.pt
+.tSubscriptBegin !== .tFetchInteger on line 817 of cache.pt
+% value emitted 4208 !== % value emitted 16 on line 820 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 821 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 822 of cache.pt
+% value emitted 1 !== % value emitted 4208 on line 824 of cache.pt
+.tAdd !== .tFetchInteger on line 825 of cache.pt
+.tSubscriptInteger !== .tLiteralInteger on line 826 of cache.pt
+.tFetchInteger !== oEmitValue on line 827 of cache.pt
+.tGT !== % value emitted 1 on line 828 of cache.pt
+.tIfThen !== .tAdd on line 829 of cache.pt
+oEmitNullAddress !== .tSubscriptInteger on line 830 of cache.pt
+% value emitted -32767 !== .tFetchInteger on line 831 of cache.pt
+.tAssignBegin !== .tGT on line 832 of cache.pt
+.tLiteralAddress !== .tIfThen on line 833 of cache.pt
+oEmitValue !== oEmitNullAddress on line 834 of cache.pt
+% value emitted 4200 !== % value emitted -32767 on line 835 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 836 of cache.pt
+oEmitValue !== .tLiteralAddress on line 837 of cache.pt
+% value emitted 4200 !== oEmitValue on line 838 of cache.pt
+.tFetchInteger !== % value emitted 4200 on line 839 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 840 of cache.pt
+% value emitted 1 !== % value emitted 4200 on line 842 of cache.pt
+.tAdd !== .tFetchInteger on line 843 of cache.pt
+.tAssignInteger !== .tLiteralInteger on line 844 of cache.pt
+.tCallBegin !== oEmitValue on line 845 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 846 of cache.pt
+oEmitValue !== .tAdd on line 847 of cache.pt
+% value emitted 4208 !== .tAssignInteger on line 848 of cache.pt
+.tFetchInteger !== .tCallBegin on line 849 of cache.pt
+.tParmEnd !== .tLiteralAddress on line 850 of cache.pt
+.tLiteralAddress !== oEmitValue on line 851 of cache.pt
+oEmitValue !== % value emitted 4208 on line 852 of cache.pt
+% value emitted 4208 !== .tFetchInteger on line 853 of cache.pt
+.tFetchInteger !== .tParmEnd on line 854 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 855 of cache.pt
+% value emitted 1 !== % value emitted 4208 on line 857 of cache.pt
+.tAdd !== .tFetchInteger on line 858 of cache.pt
+.tParmEnd !== .tLiteralInteger on line 859 of cache.pt
+.tCallEnd !== oEmitValue on line 860 of cache.pt
+oEmitValue !== % value emitted 1 on line 861 of cache.pt
+% value emitted 639 !== .tAdd on line 862 of cache.pt
+.tIfEnd !== .tParmEnd on line 863 of cache.pt
+.tAssignBegin !== .tCallEnd on line 864 of cache.pt
+.tLiteralAddress !== oEmitValue on line 865 of cache.pt
+oEmitValue !== % value emitted 643 on line 866 of cache.pt
+% value emitted 4208 !== .tIfEnd on line 867 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 868 of cache.pt
+oEmitValue !== .tLiteralAddress on line 869 of cache.pt
+% value emitted 4208 !== oEmitValue on line 870 of cache.pt
+.tFetchInteger !== % value emitted 4208 on line 871 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 872 of cache.pt
+% value emitted 1 !== % value emitted 4208 on line 874 of cache.pt
+.tAdd !== .tFetchInteger on line 875 of cache.pt
+.tAssignInteger !== .tLiteralInteger on line 876 of cache.pt
+% value emitted 756 !== oEmitValue on line 877 of cache.pt
+.tAssignBegin !== % value emitted 1 on line 878 of cache.pt
+.tLiteralAddress !== .tAdd on line 879 of cache.pt
 oEmitValue !== .tAssignInteger on line 880 of cache.pt
-% value emitted 1 !== .tWhileEnd on line 881 of cache.pt
-.tAdd !== % value emitted 760 on line 882 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 883 of cache.pt
-% value emitted 756 !== .tLiteralAddress on line 884 of cache.pt
-.tAssignBegin !== oEmitValue on line 885 of cache.pt
-.tLiteralAddress !== % value emitted 4204 on line 886 of cache.pt
+% value emitted 4204 !== .tWhileEnd on line 881 of cache.pt
+.tLiteralAddress !== % value emitted 760 on line 882 of cache.pt
+oEmitValue !== .tAssignBegin on line 883 of cache.pt
+% value emitted 4204 !== .tLiteralAddress on line 884 of cache.pt
+.tFetchInteger !== oEmitValue on line 885 of cache.pt
+.tLiteralInteger !== % value emitted 4204 on line 886 of cache.pt
 oEmitValue !== .tLiteralAddress on line 887 of cache.pt
-% value emitted 4204 !== oEmitValue on line 888 of cache.pt
-.tLiteralAddress !== % value emitted 4204 on line 889 of cache.pt
-oEmitValue !== .tFetchInteger on line 890 of cache.pt
-% value emitted 4204 !== .tLiteralInteger on line 891 of cache.pt
-.tFetchInteger !== oEmitValue on line 892 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 893 of cache.pt
-oEmitValue !== .tSubtract on line 894 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 895 of cache.pt
-.tSubtract !== .tWhileEnd on line 896 of cache.pt
-.tAssignInteger !== % value emitted 725 on line 897 of cache.pt
-% value emitted 721 !== .tProcedureEnd on line 898 of cache.pt
-.tProcedureEnd !== .tSkipProc on line 899 of cache.pt
-.tSkipProc !== oEmitNullAddress on line 900 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 901 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 902 of cache.pt
-.tLiteralAddress !== oEmitValue on line 903 of cache.pt
-oEmitValue !== % value emitted 4216 on line 904 of cache.pt
-% value emitted 4216 !== .tStoreParmAddress on line 905 of cache.pt
-.tStoreParmAddress !== .tLiteralAddress on line 906 of cache.pt
-.tLiteralAddress !== oEmitValue on line 907 of cache.pt
-oEmitValue !== % value emitted 4212 on line 908 of cache.pt
-% value emitted 4212 !== .tStoreParmInteger on line 909 of cache.pt
-.tStoreParmInteger !== .tParmEnd on line 910 of cache.pt
-.tParmEnd !== .tAssignBegin on line 911 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 912 of cache.pt
-.tLiteralAddress !== oEmitValue on line 913 of cache.pt
-oEmitValue !== % value emitted 4220 on line 914 of cache.pt
-% value emitted 4220 !== .tLiteralInteger on line 915 of cache.pt
-.tLiteralInteger !== oEmitValue on line 916 of cache.pt
-oEmitValue !== % value emitted 1 on line 917 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 918 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 919 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 920 of cache.pt
-.tLiteralAddress !== oEmitValue on line 921 of cache.pt
-oEmitValue !== % value emitted 4224 on line 922 of cache.pt
-% value emitted 4224 !== .tLiteralAddress on line 923 of cache.pt
-.tLiteralAddress !== oEmitValue on line 924 of cache.pt
-oEmitValue !== % value emitted 8 on line 925 of cache.pt
-% value emitted 8 !== .tFetchInteger on line 926 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 927 of cache.pt
-.tAssignInteger !== .tWhileBegin on line 928 of cache.pt
-.tWhileBegin !== .tLiteralAddress on line 929 of cache.pt
-.tLiteralAddress !== oEmitValue on line 930 of cache.pt
-oEmitValue !== % value emitted 4220 on line 931 of cache.pt
-% value emitted 4220 !== .tFetchInteger on line 932 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 933 of cache.pt
-.tLiteralAddress !== oEmitValue on line 934 of cache.pt
-oEmitValue !== % value emitted 4224 on line 935 of cache.pt
-% value emitted 4224 !== .tFetchInteger on line 936 of cache.pt
-.tFetchInteger !== .tNE on line 937 of cache.pt
-.tNE !== .tWhileTest on line 938 of cache.pt
-.tWhileTest !== oEmitNullAddress on line 939 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 940 of cache.pt
-% value emitted -32767 !== .tAssignBegin on line 941 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 942 of cache.pt
+% value emitted 1 !== oEmitValue on line 888 of cache.pt
+.tSubtract !== % value emitted 4204 on line 889 of cache.pt
+.tAssignInteger !== .tFetchInteger on line 890 of cache.pt
+% value emitted 721 !== .tLiteralInteger on line 891 of cache.pt
+.tProcedureEnd !== oEmitValue on line 892 of cache.pt
+.tSkipProc !== % value emitted 1 on line 893 of cache.pt
+oEmitNullAddress !== .tSubtract on line 894 of cache.pt
+% value emitted -32767 !== .tAssignInteger on line 895 of cache.pt
+.tLiteralAddress !== .tWhileEnd on line 896 of cache.pt
+oEmitValue !== % value emitted 725 on line 897 of cache.pt
+% value emitted 4216 !== .tProcedureEnd on line 898 of cache.pt
+.tStoreParmAddress !== .tSkipProc on line 899 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 900 of cache.pt
+oEmitValue !== % value emitted -32767 on line 901 of cache.pt
+% value emitted 4212 !== .tLiteralAddress on line 902 of cache.pt
+.tStoreParmInteger !== oEmitValue on line 903 of cache.pt
+.tParmEnd !== % value emitted 4216 on line 904 of cache.pt
+.tAssignBegin !== .tStoreParmAddress on line 905 of cache.pt
+% value emitted 4220 !== % value emitted 4212 on line 908 of cache.pt
+.tLiteralInteger !== .tStoreParmInteger on line 909 of cache.pt
+oEmitValue !== .tParmEnd on line 910 of cache.pt
+% value emitted 1 !== .tAssignBegin on line 911 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 912 of cache.pt
+.tAssignBegin !== oEmitValue on line 913 of cache.pt
+.tLiteralAddress !== % value emitted 4220 on line 914 of cache.pt
+oEmitValue !== .tLiteralInteger on line 915 of cache.pt
+% value emitted 4224 !== oEmitValue on line 916 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 917 of cache.pt
+oEmitValue !== .tAssignInteger on line 918 of cache.pt
+% value emitted 8 !== .tAssignBegin on line 919 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 920 of cache.pt
+.tAssignInteger !== oEmitValue on line 921 of cache.pt
+.tWhileBegin !== % value emitted 4224 on line 922 of cache.pt
+% value emitted 4220 !== % value emitted 8 on line 925 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 927 of cache.pt
+oEmitValue !== .tWhileBegin on line 928 of cache.pt
+% value emitted 4224 !== .tLiteralAddress on line 929 of cache.pt
+.tFetchInteger !== oEmitValue on line 930 of cache.pt
+.tNE !== % value emitted 4220 on line 931 of cache.pt
+.tWhileTest !== .tFetchInteger on line 932 of cache.pt
+oEmitNullAddress !== .tLiteralAddress on line 933 of cache.pt
+% value emitted -32767 !== oEmitValue on line 934 of cache.pt
+.tAssignBegin !== % value emitted 4224 on line 935 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 936 of cache.pt
+oEmitValue !== .tNE on line 937 of cache.pt
+% value emitted 4228 !== .tWhileTest on line 938 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 939 of cache.pt
+oEmitValue !== % value emitted -32767 on line 940 of cache.pt
+% value emitted 4220 !== .tAssignBegin on line 941 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 942 of cache.pt
 .tLiteralAddress !== oEmitValue on line 943 of cache.pt
 oEmitValue !== % value emitted 4228 on line 944 of cache.pt
-% value emitted 4228 !== .tLiteralAddress on line 945 of cache.pt
-.tLiteralAddress !== oEmitValue on line 946 of cache.pt
-oEmitValue !== % value emitted 4220 on line 947 of cache.pt
-% value emitted 4220 !== .tFetchInteger on line 948 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 949 of cache.pt
-.tLiteralAddress !== oEmitValue on line 950 of cache.pt
-oEmitValue !== % value emitted 4224 on line 951 of cache.pt
-% value emitted 4224 !== .tFetchInteger on line 952 of cache.pt
-.tFetchInteger !== .tAdd on line 953 of cache.pt
-.tAdd !== .tLiteralInteger on line 954 of cache.pt
-.tLiteralInteger !== oEmitValue on line 955 of cache.pt
-oEmitValue !== % value emitted 2 on line 956 of cache.pt
-% value emitted 2 !== .tDivide on line 957 of cache.pt
-.tDivide !== .tAssignInteger on line 958 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 959 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 960 of cache.pt
-.tLiteralAddress !== oEmitValue on line 961 of cache.pt
+% value emitted 4224 !== .tLiteralAddress on line 945 of cache.pt
+.tFetchInteger !== oEmitValue on line 946 of cache.pt
+.tAdd !== % value emitted 4220 on line 947 of cache.pt
+.tLiteralInteger !== .tFetchInteger on line 948 of cache.pt
+oEmitValue !== .tLiteralAddress on line 949 of cache.pt
+% value emitted 2 !== oEmitValue on line 950 of cache.pt
+.tDivide !== % value emitted 4224 on line 951 of cache.pt
+.tAssignInteger !== .tFetchInteger on line 952 of cache.pt
+.tAssignBegin !== .tAdd on line 953 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 954 of cache.pt
+% value emitted 4024 !== % value emitted 2 on line 956 of cache.pt
+.tLiteralAddress !== .tDivide on line 957 of cache.pt
+oEmitValue !== .tAssignInteger on line 958 of cache.pt
+% value emitted 4024 !== .tAssignBegin on line 959 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 960 of cache.pt
+.tLiteralInteger !== oEmitValue on line 961 of cache.pt
 oEmitValue !== % value emitted 4024 on line 962 of cache.pt
-% value emitted 4024 !== .tLiteralAddress on line 963 of cache.pt
-.tLiteralAddress !== oEmitValue on line 964 of cache.pt
-oEmitValue !== % value emitted 4024 on line 965 of cache.pt
-% value emitted 4024 !== .tFetchInteger on line 966 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 967 of cache.pt
-.tLiteralInteger !== oEmitValue on line 968 of cache.pt
-oEmitValue !== % value emitted 1 on line 969 of cache.pt
-% value emitted 1 !== .tAdd on line 970 of cache.pt
-.tAdd !== .tAssignInteger on line 971 of cache.pt
-.tAssignInteger !== .tIfBegin on line 972 of cache.pt
-.tIfBegin !== .tLiteralAddress on line 973 of cache.pt
-.tLiteralAddress !== oEmitValue on line 974 of cache.pt
-oEmitValue !== % value emitted 4212 on line 975 of cache.pt
-% value emitted 4212 !== .tFetchInteger on line 976 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 977 of cache.pt
-.tLiteralAddress !== oEmitValue on line 978 of cache.pt
-oEmitValue !== % value emitted 16 on line 979 of cache.pt
-% value emitted 16 !== .tSubscriptBegin on line 980 of cache.pt
-.tSubscriptBegin !== .tLiteralAddress on line 981 of cache.pt
-.tLiteralAddress !== oEmitValue on line 982 of cache.pt
-oEmitValue !== % value emitted 4228 on line 983 of cache.pt
-% value emitted 4228 !== .tFetchInteger on line 984 of cache.pt
-.tFetchInteger !== .tSubscriptInteger on line 985 of cache.pt
-.tSubscriptInteger !== .tFetchInteger on line 986 of cache.pt
-.tFetchInteger !== .tGT on line 987 of cache.pt
-.tGT !== .tIfThen on line 988 of cache.pt
-.tIfThen !== oEmitNullAddress on line 989 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 990 of cache.pt
-% value emitted -32767 !== .tAssignBegin on line 991 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 992 of cache.pt
-.tLiteralAddress !== oEmitValue on line 993 of cache.pt
+% value emitted 1 !== .tLiteralAddress on line 963 of cache.pt
+.tAdd !== oEmitValue on line 964 of cache.pt
+.tAssignInteger !== % value emitted 4024 on line 965 of cache.pt
+.tIfBegin !== .tFetchInteger on line 966 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 967 of cache.pt
+% value emitted 4212 !== % value emitted 1 on line 969 of cache.pt
+.tFetchInteger !== .tAdd on line 970 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 971 of cache.pt
+oEmitValue !== .tIfBegin on line 972 of cache.pt
+% value emitted 16 !== .tLiteralAddress on line 973 of cache.pt
+.tSubscriptBegin !== oEmitValue on line 974 of cache.pt
+.tLiteralAddress !== % value emitted 4212 on line 975 of cache.pt
+oEmitValue !== .tFetchInteger on line 976 of cache.pt
+% value emitted 4228 !== .tLiteralAddress on line 977 of cache.pt
+.tFetchInteger !== oEmitValue on line 978 of cache.pt
+.tSubscriptInteger !== % value emitted 16 on line 979 of cache.pt
+.tFetchInteger !== .tSubscriptBegin on line 980 of cache.pt
+.tGT !== .tLiteralAddress on line 981 of cache.pt
+.tIfThen !== oEmitValue on line 982 of cache.pt
+oEmitNullAddress !== % value emitted 4228 on line 983 of cache.pt
+% value emitted -32767 !== .tFetchInteger on line 984 of cache.pt
+.tAssignBegin !== .tSubscriptInteger on line 985 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 986 of cache.pt
+oEmitValue !== .tGT on line 987 of cache.pt
+% value emitted 4220 !== .tIfThen on line 988 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 989 of cache.pt
+oEmitValue !== % value emitted -32767 on line 990 of cache.pt
+% value emitted 4228 !== .tAssignBegin on line 991 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 992 of cache.pt
+.tLiteralInteger !== oEmitValue on line 993 of cache.pt
 oEmitValue !== % value emitted 4220 on line 994 of cache.pt
-% value emitted 4220 !== .tLiteralAddress on line 995 of cache.pt
-.tLiteralAddress !== oEmitValue on line 996 of cache.pt
-oEmitValue !== % value emitted 4228 on line 997 of cache.pt
-% value emitted 4228 !== .tFetchInteger on line 998 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 999 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1000 of cache.pt
-oEmitValue !== % value emitted 1 on line 1001 of cache.pt
-% value emitted 1 !== .tAdd on line 1002 of cache.pt
-.tAdd !== .tAssignInteger on line 1003 of cache.pt
-.tAssignInteger !== .tIfMerge on line 1004 of cache.pt
-.tIfMerge !== oEmitNullAddress on line 1005 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 1006 of cache.pt
-% value emitted -32767 !== .tAssignBegin on line 1007 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1008 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1009 of cache.pt
-oEmitValue !== % value emitted 4224 on line 1010 of cache.pt
-% value emitted 4224 !== .tLiteralAddress on line 1011 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1012 of cache.pt
-oEmitValue !== % value emitted 4228 on line 1013 of cache.pt
-% value emitted 4228 !== .tFetchInteger on line 1014 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 1015 of cache.pt
-.tAssignInteger !== .tIfEnd on line 1016 of cache.pt
-.tIfEnd !== .tWhileEnd on line 1017 of cache.pt
-% value emitted 897 !== % value emitted 903 on line 1018 of cache.pt
-#eMutableVarReqd !== .tAssignBegin on line 1051 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1052 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1053 of cache.pt
-oEmitValue !== % value emitted 4216 on line 1054 of cache.pt
-% value emitted 4216 !== .tFetchAddress on line 1055 of cache.pt
-.tFetchAddress !== .tLiteralAddress on line 1056 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1057 of cache.pt
-oEmitValue !== % value emitted 4220 on line 1058 of cache.pt
-% value emitted 4220 !== .tFetchInteger on line 1059 of cache.pt
-.tFetchInteger !== .tAssignInteger on line 1060 of cache.pt
-.tAssignInteger !== .tIfMerge on line 1061 of cache.pt
-.tIfMerge !== oEmitNullAddress on line 1062 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 1063 of cache.pt
-% value emitted -32767 !== .tAssignBegin on line 1064 of cache.pt
-#eMutableVarReqd !== .tLiteralAddress on line 1065 of cache.pt
-.tAssignBegin !== oEmitValue on line 1066 of cache.pt
-.tLiteralAddress !== % value emitted 4216 on line 1067 of cache.pt
-oEmitValue !== .tFetchAddress on line 1068 of cache.pt
-% value emitted 4216 !== .tLiteralInteger on line 1069 of cache.pt
-.tFetchAddress !== oEmitValue on line 1070 of cache.pt
-.tLiteralInteger !== % value emitted 0 on line 1071 of cache.pt
-oEmitValue !== .tAssignInteger on line 1072 of cache.pt
-% value emitted 0 !== .tIfEnd on line 1073 of cache.pt
-.tAssignInteger !== .tProcedureEnd on line 1074 of cache.pt
-.tIfEnd !== .tWriteBegin on line 1075 of cache.pt
-.tProcedureEnd !== .tTrapBegin on line 1076 of cache.pt
-.tWriteBegin !== .tLiteralAddress on line 1077 of cache.pt
-.tTrapBegin !== oEmitValue on line 1078 of cache.pt
-.tLiteralAddress !== % value emitted 4 on line 1079 of cache.pt
-oEmitValue !== .tVarParm on line 1080 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1081 of cache.pt
-.tVarParm !== .tLiteralString on line 1082 of cache.pt
-.tParmEnd !== oEmitValue on line 1083 of cache.pt
-.tLiteralString !== % value emitted 54 on line 1084 of cache.pt
-oEmitValue !== oEmitString on line 1085 of cache.pt
-% .sNewLine !== % value emitted 69 on line 1086 of cache.pt
-oEmitString !== % value emitted 110 on line 1087 of cache.pt
-% value emitted 69 !== % value emitted 116 on line 1088 of cache.pt
-% value emitted 110 !== % value emitted 101 on line 1089 of cache.pt
-% value emitted 116 !== % value emitted 114 on line 1090 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1091 of cache.pt
-% value emitted 114 !== % value emitted 78 on line 1092 of cache.pt
-% value emitted 78 !== % value emitted 40 on line 1094 of cache.pt
-% value emitted 32 !== % value emitted 110 on line 1095 of cache.pt
-% value emitted 40 !== % value emitted 117 on line 1096 of cache.pt
-% value emitted 110 !== % value emitted 109 on line 1097 of cache.pt
-% value emitted 117 !== % value emitted 98 on line 1098 of cache.pt
-% value emitted 109 !== % value emitted 101 on line 1099 of cache.pt
-% value emitted 98 !== % value emitted 114 on line 1100 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1101 of cache.pt
-% value emitted 114 !== % value emitted 111 on line 1102 of cache.pt
-% value emitted 32 !== % value emitted 102 on line 1103 of cache.pt
-% value emitted 111 !== % value emitted 32 on line 1104 of cache.pt
-% value emitted 102 !== % value emitted 101 on line 1105 of cache.pt
-% value emitted 32 !== % value emitted 108 on line 1106 of cache.pt
-% value emitted 108 !== % value emitted 109 on line 1108 of cache.pt
-% value emitted 109 !== % value emitted 110 on line 1110 of cache.pt
-% value emitted 101 !== % value emitted 116 on line 1111 of cache.pt
-% value emitted 110 !== % value emitted 115 on line 1112 of cache.pt
-% value emitted 116 !== % value emitted 44 on line 1113 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1114 of cache.pt
-% value emitted 44 !== % value emitted 97 on line 1115 of cache.pt
-% value emitted 32 !== % value emitted 116 on line 1116 of cache.pt
-% value emitted 97 !== % value emitted 32 on line 1117 of cache.pt
-% value emitted 116 !== % value emitted 109 on line 1118 of cache.pt
-% value emitted 32 !== % value emitted 111 on line 1119 of cache.pt
-% value emitted 109 !== % value emitted 115 on line 1120 of cache.pt
-% value emitted 111 !== % value emitted 116 on line 1121 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1122 of cache.pt
-% value emitted 116 !== % value emitted 49 on line 1123 of cache.pt
-% value emitted 32 !== % value emitted 48 on line 1124 of cache.pt
-% value emitted 49 !== % value emitted 48 on line 1125 of cache.pt
-% value emitted 48 !== % value emitted 44 on line 1127 of cache.pt
+% value emitted 1 !== .tLiteralAddress on line 995 of cache.pt
+.tAdd !== oEmitValue on line 996 of cache.pt
+.tAssignInteger !== % value emitted 4228 on line 997 of cache.pt
+.tIfMerge !== .tFetchInteger on line 998 of cache.pt
+oEmitNullAddress !== .tLiteralInteger on line 999 of cache.pt
+% value emitted -32767 !== oEmitValue on line 1000 of cache.pt
+.tAssignBegin !== % value emitted 1 on line 1001 of cache.pt
+.tLiteralAddress !== .tAdd on line 1002 of cache.pt
+oEmitValue !== .tAssignInteger on line 1003 of cache.pt
+% value emitted 4224 !== .tIfMerge on line 1004 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 1005 of cache.pt
+oEmitValue !== % value emitted -32767 on line 1006 of cache.pt
+% value emitted 4228 !== .tAssignBegin on line 1007 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1008 of cache.pt
+.tAssignInteger !== oEmitValue on line 1009 of cache.pt
+.tIfEnd !== % value emitted 4224 on line 1010 of cache.pt
+% value emitted 897 !== .tLiteralAddress on line 1011 of cache.pt
+.tAssignBegin !== oEmitValue on line 1012 of cache.pt
+.tLiteralAddress !== % value emitted 4228 on line 1013 of cache.pt
+oEmitValue !== .tFetchInteger on line 1014 of cache.pt
+% value emitted 4024 !== .tAssignInteger on line 1015 of cache.pt
+.tLiteralAddress !== .tIfEnd on line 1016 of cache.pt
+oEmitValue !== .tWhileEnd on line 1017 of cache.pt
+% value emitted 4024 !== % value emitted 903 on line 1018 of cache.pt
+.tFetchInteger !== .tAssignBegin on line 1019 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 1020 of cache.pt
+% value emitted 1 !== % value emitted 4024 on line 1022 of cache.pt
+.tAdd !== .tLiteralAddress on line 1023 of cache.pt
+.tAssignInteger !== oEmitValue on line 1024 of cache.pt
+.tIfBegin !== % value emitted 4024 on line 1025 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 1026 of cache.pt
+oEmitValue !== .tLiteralInteger on line 1027 of cache.pt
+% value emitted 16 !== oEmitValue on line 1028 of cache.pt
+.tSubscriptBegin !== % value emitted 1 on line 1029 of cache.pt
+.tLiteralAddress !== .tAdd on line 1030 of cache.pt
+oEmitValue !== .tAssignInteger on line 1031 of cache.pt
+% value emitted 4220 !== .tIfBegin on line 1032 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1033 of cache.pt
+.tSubscriptInteger !== oEmitValue on line 1034 of cache.pt
+.tFetchInteger !== % value emitted 16 on line 1035 of cache.pt
+.tLiteralAddress !== .tSubscriptBegin on line 1036 of cache.pt
+oEmitValue !== .tLiteralAddress on line 1037 of cache.pt
+% value emitted 4212 !== oEmitValue on line 1038 of cache.pt
+.tFetchInteger !== % value emitted 4220 on line 1039 of cache.pt
+.tEQ !== .tFetchInteger on line 1040 of cache.pt
+.tIfThen !== .tSubscriptInteger on line 1041 of cache.pt
+oEmitNullAddress !== .tFetchInteger on line 1042 of cache.pt
+% value emitted -32767 !== .tLiteralAddress on line 1043 of cache.pt
+.tAssignBegin !== oEmitValue on line 1044 of cache.pt
+.tLiteralAddress !== % value emitted 4212 on line 1045 of cache.pt
+oEmitValue !== .tFetchInteger on line 1046 of cache.pt
+% value emitted 4216 !== .tEQ on line 1047 of cache.pt
+.tFetchAddress !== .tIfThen on line 1048 of cache.pt
+.tLiteralAddress !== oEmitNullAddress on line 1049 of cache.pt
+oEmitValue !== % value emitted -32767 on line 1050 of cache.pt
+% value emitted 4220 !== .tAssignBegin on line 1051 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1052 of cache.pt
+.tAssignInteger !== oEmitValue on line 1053 of cache.pt
+.tIfMerge !== % value emitted 4216 on line 1054 of cache.pt
+oEmitNullAddress !== .tFetchAddress on line 1055 of cache.pt
+% value emitted -32767 !== .tLiteralAddress on line 1056 of cache.pt
+.tAssignBegin !== oEmitValue on line 1057 of cache.pt
+.tLiteralAddress !== % value emitted 4220 on line 1058 of cache.pt
+oEmitValue !== .tFetchInteger on line 1059 of cache.pt
+% value emitted 4216 !== .tAssignInteger on line 1060 of cache.pt
+.tFetchAddress !== .tIfMerge on line 1061 of cache.pt
+.tLiteralInteger !== oEmitNullAddress on line 1062 of cache.pt
+oEmitValue !== % value emitted -32767 on line 1063 of cache.pt
+% value emitted 0 !== .tAssignBegin on line 1064 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 1065 of cache.pt
+.tIfEnd !== oEmitValue on line 1066 of cache.pt
+.tProcedureEnd !== % value emitted 4216 on line 1067 of cache.pt
+.tWriteBegin !== .tFetchAddress on line 1068 of cache.pt
+.tTrapBegin !== .tLiteralInteger on line 1069 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1070 of cache.pt
+oEmitValue !== % value emitted 0 on line 1071 of cache.pt
+% value emitted 4 !== .tAssignInteger on line 1072 of cache.pt
+.tVarParm !== .tIfEnd on line 1073 of cache.pt
+.tParmEnd !== .tProcedureEnd on line 1074 of cache.pt
+.tLiteralString !== .tWriteBegin on line 1075 of cache.pt
+oEmitValue !== .tTrapBegin on line 1076 of cache.pt
+% .sNewLine !== .tLiteralAddress on line 1077 of cache.pt
+oEmitString !== oEmitValue on line 1078 of cache.pt
+% value emitted 69 !== % value emitted 4 on line 1079 of cache.pt
+% value emitted 110 !== .tVarParm on line 1080 of cache.pt
+% value emitted 116 !== .tParmEnd on line 1081 of cache.pt
+% value emitted 101 !== .tLiteralString on line 1082 of cache.pt
+% value emitted 114 !== oEmitValue on line 1083 of cache.pt
+% value emitted 32 !== % value emitted 54 on line 1084 of cache.pt
+% value emitted 78 !== oEmitString on line 1085 of cache.pt
+% value emitted 32 !== % value emitted 69 on line 1086 of cache.pt
+% value emitted 40 !== % value emitted 110 on line 1087 of cache.pt
+% value emitted 110 !== % value emitted 116 on line 1088 of cache.pt
+% value emitted 117 !== % value emitted 101 on line 1089 of cache.pt
+% value emitted 109 !== % value emitted 114 on line 1090 of cache.pt
+% value emitted 98 !== % value emitted 32 on line 1091 of cache.pt
+% value emitted 101 !== % value emitted 78 on line 1092 of cache.pt
+% value emitted 114 !== % value emitted 32 on line 1093 of cache.pt
+% value emitted 32 !== % value emitted 40 on line 1094 of cache.pt
+% value emitted 111 !== % value emitted 110 on line 1095 of cache.pt
+% value emitted 102 !== % value emitted 117 on line 1096 of cache.pt
+% value emitted 32 !== % value emitted 109 on line 1097 of cache.pt
+% value emitted 101 !== % value emitted 98 on line 1098 of cache.pt
+% value emitted 108 !== % value emitted 101 on line 1099 of cache.pt
+% value emitted 101 !== % value emitted 114 on line 1100 of cache.pt
+% value emitted 109 !== % value emitted 32 on line 1101 of cache.pt
+% value emitted 101 !== % value emitted 111 on line 1102 of cache.pt
+% value emitted 110 !== % value emitted 102 on line 1103 of cache.pt
+% value emitted 116 !== % value emitted 32 on line 1104 of cache.pt
+% value emitted 115 !== % value emitted 101 on line 1105 of cache.pt
+% value emitted 44 !== % value emitted 108 on line 1106 of cache.pt
+% value emitted 32 !== % value emitted 101 on line 1107 of cache.pt
+% value emitted 97 !== % value emitted 109 on line 1108 of cache.pt
+% value emitted 116 !== % value emitted 101 on line 1109 of cache.pt
+% value emitted 32 !== % value emitted 110 on line 1110 of cache.pt
+% value emitted 109 !== % value emitted 116 on line 1111 of cache.pt
+% value emitted 111 !== % value emitted 115 on line 1112 of cache.pt
+% value emitted 115 !== % value emitted 44 on line 1113 of cache.pt
+% value emitted 116 !== % value emitted 32 on line 1114 of cache.pt
+% value emitted 32 !== % value emitted 97 on line 1115 of cache.pt
+% value emitted 49 !== % value emitted 116 on line 1116 of cache.pt
+% value emitted 48 !== % value emitted 32 on line 1117 of cache.pt
+% value emitted 48 !== % value emitted 109 on line 1118 of cache.pt
+% value emitted 48 !== % value emitted 111 on line 1119 of cache.pt
+% value emitted 44 !== % value emitted 115 on line 1120 of cache.pt
+% value emitted 32 !== % value emitted 116 on line 1121 of cache.pt
+% value emitted 101 !== % value emitted 32 on line 1122 of cache.pt
+% value emitted 46 !== % value emitted 49 on line 1123 of cache.pt
+% value emitted 103 !== % value emitted 48 on line 1124 of cache.pt
+% value emitted 46 !== % value emitted 48 on line 1125 of cache.pt
+% value emitted 32 !== % value emitted 48 on line 1126 of cache.pt
+% value emitted 49 !== % value emitted 44 on line 1127 of cache.pt
 % value emitted 48 !== % value emitted 32 on line 1128 of cache.pt
-% value emitted 44 !== % value emitted 101 on line 1129 of cache.pt
-% value emitted 32 !== % value emitted 46 on line 1130 of cache.pt
-% value emitted 101 !== % value emitted 103 on line 1131 of cache.pt
-% value emitted 103 !== % value emitted 32 on line 1133 of cache.pt
-% value emitted 46 !== % value emitted 49 on line 1134 of cache.pt
-% value emitted 32 !== % value emitted 48 on line 1135 of cache.pt
-% value emitted 49 !== % value emitted 48 on line 1136 of cache.pt
-% value emitted 48 !== % value emitted 41 on line 1137 of cache.pt
-% value emitted 48 !== % value emitted 58 on line 1138 of cache.pt
-% value emitted 41 !== % value emitted 32 on line 1139 of cache.pt
-% value emitted 58 !== .tParmEnd on line 1140 of cache.pt
-% value emitted 32 !== .tLiteralInteger on line 1141 of cache.pt
-.tParmEnd !== oEmitValue on line 1142 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1143 of cache.pt
-oEmitValue !== .tParmEnd on line 1144 of cache.pt
-% value emitted 1 !== .tTrap on line 1145 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1146 of cache.pt
-.tTrap !== % value emitted 109 on line 1147 of cache.pt
-oEmitTrapKind(trWriteString) !== .tWriteEnd on line 1148 of cache.pt
-% value emitted 109 !== .tReadBegin on line 1149 of cache.pt
-.tWriteEnd !== .tTrapBegin on line 1150 of cache.pt
-.tReadBegin !== .tLiteralAddress on line 1151 of cache.pt
-.tTrapBegin !== oEmitValue on line 1152 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1153 of cache.pt
-oEmitValue !== .tVarParm on line 1154 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1155 of cache.pt
-.tVarParm !== .tLiteralAddress on line 1156 of cache.pt
-.tParmEnd !== oEmitValue on line 1157 of cache.pt
-.tLiteralAddress !== % value emitted 8 on line 1158 of cache.pt
-oEmitValue !== .tVarParm on line 1159 of cache.pt
-% value emitted 8 !== .tParmEnd on line 1160 of cache.pt
-.tVarParm !== .tTrap on line 1161 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadInteger) on line 1162 of cache.pt
-.tTrap !== % value emitted 10 on line 1163 of cache.pt
-oEmitTrapKind(trReadInteger) !== .tReadEnd on line 1164 of cache.pt
-% value emitted 9 !== .tTrapBegin on line 1165 of cache.pt
-.tReadEnd !== .tLiteralAddress on line 1166 of cache.pt
-.tTrapBegin !== oEmitValue on line 1167 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1168 of cache.pt
-oEmitValue !== .tVarParm on line 1169 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1170 of cache.pt
-.tVarParm !== .tTrap on line 1171 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadln) on line 1172 of cache.pt
-.tTrap !== % value emitted 4 on line 1173 of cache.pt
-oEmitTrapKind(trReadln) !== .tWriteBegin on line 1174 of cache.pt
-% value emitted 4 !== .tTrapBegin on line 1175 of cache.pt
-.tWriteBegin !== .tLiteralAddress on line 1176 of cache.pt
-.tTrapBegin !== oEmitValue on line 1177 of cache.pt
-.tLiteralAddress !== % value emitted 4 on line 1178 of cache.pt
-oEmitValue !== .tVarParm on line 1179 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1180 of cache.pt
-.tVarParm !== .tLiteralString on line 1181 of cache.pt
-.tParmEnd !== oEmitValue on line 1182 of cache.pt
-.tLiteralString !== % value emitted 40 on line 1183 of cache.pt
-oEmitValue !== oEmitString on line 1184 of cache.pt
-% value emitted 40 !== % value emitted 69 on line 1185 of cache.pt
-oEmitString !== % value emitted 110 on line 1186 of cache.pt
-% value emitted 69 !== % value emitted 116 on line 1187 of cache.pt
-% value emitted 110 !== % value emitted 101 on line 1188 of cache.pt
-% value emitted 116 !== % value emitted 114 on line 1189 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1190 of cache.pt
-% value emitted 114 !== % value emitted 77 on line 1191 of cache.pt
-% value emitted 77 !== % value emitted 40 on line 1193 of cache.pt
-% value emitted 32 !== % value emitted 110 on line 1194 of cache.pt
-% value emitted 40 !== % value emitted 117 on line 1195 of cache.pt
-% value emitted 110 !== % value emitted 109 on line 1196 of cache.pt
-% value emitted 117 !== % value emitted 98 on line 1197 of cache.pt
-% value emitted 109 !== % value emitted 101 on line 1198 of cache.pt
-% value emitted 98 !== % value emitted 114 on line 1199 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1200 of cache.pt
-% value emitted 114 !== % value emitted 111 on line 1201 of cache.pt
-% value emitted 32 !== % value emitted 102 on line 1202 of cache.pt
-% value emitted 111 !== % value emitted 32 on line 1203 of cache.pt
-% value emitted 102 !== % value emitted 108 on line 1204 of cache.pt
+% value emitted 48 !== % value emitted 101 on line 1129 of cache.pt
+% value emitted 41 !== % value emitted 46 on line 1130 of cache.pt
+% value emitted 58 !== % value emitted 103 on line 1131 of cache.pt
+% value emitted 32 !== % value emitted 46 on line 1132 of cache.pt
+.tParmEnd !== % value emitted 32 on line 1133 of cache.pt
+.tLiteralInteger !== % value emitted 49 on line 1134 of cache.pt
+oEmitValue !== % value emitted 48 on line 1135 of cache.pt
+% value emitted 1 !== % value emitted 48 on line 1136 of cache.pt
+.tParmEnd !== % value emitted 41 on line 1137 of cache.pt
+.tTrap !== % value emitted 58 on line 1138 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 32 on line 1139 of cache.pt
+% value emitted 109 !== .tParmEnd on line 1140 of cache.pt
+.tWriteEnd !== .tLiteralInteger on line 1141 of cache.pt
+.tReadBegin !== oEmitValue on line 1142 of cache.pt
+.tTrapBegin !== % value emitted 1 on line 1143 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1144 of cache.pt
+oEmitValue !== .tTrap on line 1145 of cache.pt
+% value emitted 0 !== oEmitTrapKind(trWriteString) on line 1146 of cache.pt
+.tVarParm !== % value emitted 109 on line 1147 of cache.pt
+.tParmEnd !== .tWriteEnd on line 1148 of cache.pt
+.tLiteralAddress !== .tReadBegin on line 1149 of cache.pt
+oEmitValue !== .tTrapBegin on line 1150 of cache.pt
+% value emitted 8 !== .tLiteralAddress on line 1151 of cache.pt
+.tVarParm !== oEmitValue on line 1152 of cache.pt
+.tParmEnd !== % value emitted 0 on line 1153 of cache.pt
+.tTrap !== .tVarParm on line 1154 of cache.pt
+oEmitTrapKind(trReadInteger) !== .tParmEnd on line 1155 of cache.pt
+% value emitted 9 !== .tLiteralAddress on line 1156 of cache.pt
+.tReadEnd !== oEmitValue on line 1157 of cache.pt
+.tTrapBegin !== % value emitted 8 on line 1158 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1159 of cache.pt
+oEmitValue !== .tParmEnd on line 1160 of cache.pt
+% value emitted 0 !== .tTrap on line 1161 of cache.pt
+.tVarParm !== oEmitTrapKind(trReadInteger) on line 1162 of cache.pt
+.tParmEnd !== % value emitted 10 on line 1163 of cache.pt
+.tTrap !== .tReadEnd on line 1164 of cache.pt
+oEmitTrapKind(trReadln) !== .tTrapBegin on line 1165 of cache.pt
+% value emitted 4 !== .tLiteralAddress on line 1166 of cache.pt
+.tWriteBegin !== oEmitValue on line 1167 of cache.pt
+.tTrapBegin !== % value emitted 0 on line 1168 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1169 of cache.pt
+oEmitValue !== .tParmEnd on line 1170 of cache.pt
+% value emitted 4 !== .tTrap on line 1171 of cache.pt
+.tVarParm !== oEmitTrapKind(trReadln) on line 1172 of cache.pt
+.tParmEnd !== % value emitted 4 on line 1173 of cache.pt
+.tLiteralString !== .tWriteBegin on line 1174 of cache.pt
+oEmitValue !== .tTrapBegin on line 1175 of cache.pt
+% value emitted 40 !== .tLiteralAddress on line 1176 of cache.pt
+oEmitString !== oEmitValue on line 1177 of cache.pt
+% value emitted 69 !== % value emitted 4 on line 1178 of cache.pt
+% value emitted 110 !== .tVarParm on line 1179 of cache.pt
+% value emitted 116 !== .tParmEnd on line 1180 of cache.pt
+% value emitted 101 !== .tLiteralString on line 1181 of cache.pt
+% value emitted 114 !== oEmitValue on line 1182 of cache.pt
+% value emitted 32 !== % value emitted 40 on line 1183 of cache.pt
+% value emitted 77 !== oEmitString on line 1184 of cache.pt
+% value emitted 32 !== % value emitted 69 on line 1185 of cache.pt
+% value emitted 40 !== % value emitted 110 on line 1186 of cache.pt
+% value emitted 110 !== % value emitted 116 on line 1187 of cache.pt
+% value emitted 117 !== % value emitted 101 on line 1188 of cache.pt
+% value emitted 109 !== % value emitted 114 on line 1189 of cache.pt
+% value emitted 98 !== % value emitted 32 on line 1190 of cache.pt
+% value emitted 101 !== % value emitted 77 on line 1191 of cache.pt
+% value emitted 114 !== % value emitted 32 on line 1192 of cache.pt
+% value emitted 32 !== % value emitted 40 on line 1193 of cache.pt
+% value emitted 111 !== % value emitted 110 on line 1194 of cache.pt
+% value emitted 102 !== % value emitted 117 on line 1195 of cache.pt
+% value emitted 32 !== % value emitted 109 on line 1196 of cache.pt
+% value emitted 108 !== % value emitted 98 on line 1197 of cache.pt
+% value emitted 111 !== % value emitted 101 on line 1198 of cache.pt
+% value emitted 111 !== % value emitted 114 on line 1199 of cache.pt
+% value emitted 107 !== % value emitted 32 on line 1200 of cache.pt
+% value emitted 117 !== % value emitted 111 on line 1201 of cache.pt
+% value emitted 112 !== % value emitted 102 on line 1202 of cache.pt
+% value emitted 115 !== % value emitted 32 on line 1203 of cache.pt
+% value emitted 44 !== % value emitted 108 on line 1204 of cache.pt
 % value emitted 32 !== % value emitted 111 on line 1205 of cache.pt
-% value emitted 108 !== % value emitted 111 on line 1206 of cache.pt
-% value emitted 111 !== % value emitted 107 on line 1207 of cache.pt
-% value emitted 111 !== % value emitted 117 on line 1208 of cache.pt
-% value emitted 107 !== % value emitted 112 on line 1209 of cache.pt
-% value emitted 117 !== % value emitted 115 on line 1210 of cache.pt
-% value emitted 112 !== % value emitted 44 on line 1211 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1212 of cache.pt
-% value emitted 44 !== % value emitted 101 on line 1213 of cache.pt
-% value emitted 32 !== % value emitted 46 on line 1214 of cache.pt
-% value emitted 101 !== % value emitted 103 on line 1215 of cache.pt
-% value emitted 103 !== % value emitted 32 on line 1217 of cache.pt
-% value emitted 46 !== % value emitted 49 on line 1218 of cache.pt
-% value emitted 32 !== % value emitted 48 on line 1219 of cache.pt
-% value emitted 49 !== % value emitted 48 on line 1220 of cache.pt
-% value emitted 48 !== % value emitted 41 on line 1222 of cache.pt
-% value emitted 48 !== % value emitted 58 on line 1223 of cache.pt
-% value emitted 41 !== % value emitted 32 on line 1224 of cache.pt
-% value emitted 58 !== .tParmEnd on line 1225 of cache.pt
-% value emitted 32 !== .tLiteralInteger on line 1226 of cache.pt
-.tParmEnd !== oEmitValue on line 1227 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1228 of cache.pt
-oEmitValue !== .tParmEnd on line 1229 of cache.pt
-% value emitted 1 !== .tTrap on line 1230 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1231 of cache.pt
-.tTrap !== % value emitted 109 on line 1232 of cache.pt
-oEmitTrapKind(trWriteString) !== .tWriteEnd on line 1233 of cache.pt
-% value emitted 109 !== .tReadBegin on line 1234 of cache.pt
-.tWriteEnd !== .tTrapBegin on line 1235 of cache.pt
-.tReadBegin !== .tLiteralAddress on line 1236 of cache.pt
-.tTrapBegin !== oEmitValue on line 1237 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1238 of cache.pt
-oEmitValue !== .tVarParm on line 1239 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1240 of cache.pt
-.tVarParm !== .tLiteralAddress on line 1241 of cache.pt
-.tParmEnd !== oEmitValue on line 1242 of cache.pt
-.tLiteralAddress !== % value emitted 12 on line 1243 of cache.pt
-oEmitValue !== .tVarParm on line 1244 of cache.pt
-% value emitted 12 !== .tParmEnd on line 1245 of cache.pt
-.tVarParm !== .tTrap on line 1246 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadInteger) on line 1247 of cache.pt
-.tTrap !== % value emitted 10 on line 1248 of cache.pt
-oEmitTrapKind(trReadInteger) !== .tReadEnd on line 1249 of cache.pt
-% value emitted 9 !== .tTrapBegin on line 1250 of cache.pt
-.tReadEnd !== .tLiteralAddress on line 1251 of cache.pt
-.tTrapBegin !== oEmitValue on line 1252 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1253 of cache.pt
-oEmitValue !== .tVarParm on line 1254 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1255 of cache.pt
-.tVarParm !== .tTrap on line 1256 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadln) on line 1257 of cache.pt
-.tTrap !== % value emitted 4 on line 1258 of cache.pt
-oEmitTrapKind(trReadln) !== .tWriteBegin on line 1259 of cache.pt
-% value emitted 4 !== .tTrapBegin on line 1260 of cache.pt
-.tWriteBegin !== .tLiteralAddress on line 1261 of cache.pt
-.tTrapBegin !== oEmitValue on line 1262 of cache.pt
-.tLiteralAddress !== % value emitted 4 on line 1263 of cache.pt
-oEmitValue !== .tVarParm on line 1264 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1265 of cache.pt
-.tVarParm !== .tLiteralString on line 1266 of cache.pt
-.tParmEnd !== oEmitValue on line 1267 of cache.pt
-.tLiteralString !== % value emitted 45 on line 1268 of cache.pt
-oEmitValue !== oEmitString on line 1269 of cache.pt
-% value emitted 45 !== % value emitted 69 on line 1270 of cache.pt
-oEmitString !== % value emitted 110 on line 1271 of cache.pt
-% value emitted 69 !== % value emitted 116 on line 1272 of cache.pt
-% value emitted 110 !== % value emitted 101 on line 1273 of cache.pt
-% value emitted 116 !== % value emitted 114 on line 1274 of cache.pt
+% value emitted 101 !== % value emitted 111 on line 1206 of cache.pt
+% value emitted 46 !== % value emitted 107 on line 1207 of cache.pt
+% value emitted 103 !== % value emitted 117 on line 1208 of cache.pt
+% value emitted 46 !== % value emitted 112 on line 1209 of cache.pt
+% value emitted 32 !== % value emitted 115 on line 1210 of cache.pt
+% value emitted 49 !== % value emitted 44 on line 1211 of cache.pt
+% value emitted 48 !== % value emitted 32 on line 1212 of cache.pt
+% value emitted 48 !== % value emitted 101 on line 1213 of cache.pt
+% value emitted 48 !== % value emitted 46 on line 1214 of cache.pt
+% value emitted 41 !== % value emitted 103 on line 1215 of cache.pt
+% value emitted 58 !== % value emitted 46 on line 1216 of cache.pt
+.tParmEnd !== % value emitted 49 on line 1218 of cache.pt
+.tLiteralInteger !== % value emitted 48 on line 1219 of cache.pt
+oEmitValue !== % value emitted 48 on line 1220 of cache.pt
+% value emitted 1 !== % value emitted 48 on line 1221 of cache.pt
+.tParmEnd !== % value emitted 41 on line 1222 of cache.pt
+.tTrap !== % value emitted 58 on line 1223 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 32 on line 1224 of cache.pt
+% value emitted 109 !== .tParmEnd on line 1225 of cache.pt
+.tWriteEnd !== .tLiteralInteger on line 1226 of cache.pt
+.tReadBegin !== oEmitValue on line 1227 of cache.pt
+.tTrapBegin !== % value emitted 1 on line 1228 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1229 of cache.pt
+oEmitValue !== .tTrap on line 1230 of cache.pt
+% value emitted 0 !== oEmitTrapKind(trWriteString) on line 1231 of cache.pt
+.tVarParm !== % value emitted 109 on line 1232 of cache.pt
+.tParmEnd !== .tWriteEnd on line 1233 of cache.pt
+.tLiteralAddress !== .tReadBegin on line 1234 of cache.pt
+oEmitValue !== .tTrapBegin on line 1235 of cache.pt
+% value emitted 12 !== .tLiteralAddress on line 1236 of cache.pt
+.tVarParm !== oEmitValue on line 1237 of cache.pt
+.tParmEnd !== % value emitted 0 on line 1238 of cache.pt
+.tTrap !== .tVarParm on line 1239 of cache.pt
+oEmitTrapKind(trReadInteger) !== .tParmEnd on line 1240 of cache.pt
+% value emitted 9 !== .tLiteralAddress on line 1241 of cache.pt
+.tReadEnd !== oEmitValue on line 1242 of cache.pt
+.tTrapBegin !== % value emitted 12 on line 1243 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1244 of cache.pt
+oEmitValue !== .tParmEnd on line 1245 of cache.pt
+% value emitted 0 !== .tTrap on line 1246 of cache.pt
+.tVarParm !== oEmitTrapKind(trReadInteger) on line 1247 of cache.pt
+.tParmEnd !== % value emitted 10 on line 1248 of cache.pt
+.tTrap !== .tReadEnd on line 1249 of cache.pt
+oEmitTrapKind(trReadln) !== .tTrapBegin on line 1250 of cache.pt
+% value emitted 4 !== .tLiteralAddress on line 1251 of cache.pt
+.tWriteBegin !== oEmitValue on line 1252 of cache.pt
+.tTrapBegin !== % value emitted 0 on line 1253 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1254 of cache.pt
+oEmitValue !== .tParmEnd on line 1255 of cache.pt
+% value emitted 4 !== .tTrap on line 1256 of cache.pt
+.tVarParm !== oEmitTrapKind(trReadln) on line 1257 of cache.pt
+.tParmEnd !== % value emitted 4 on line 1258 of cache.pt
+.tLiteralString !== .tWriteBegin on line 1259 of cache.pt
+oEmitValue !== .tTrapBegin on line 1260 of cache.pt
+% value emitted 45 !== .tLiteralAddress on line 1261 of cache.pt
+oEmitString !== oEmitValue on line 1262 of cache.pt
+% value emitted 69 !== % value emitted 4 on line 1263 of cache.pt
+% value emitted 110 !== .tVarParm on line 1264 of cache.pt
+% value emitted 116 !== .tParmEnd on line 1265 of cache.pt
+% value emitted 101 !== .tLiteralString on line 1266 of cache.pt
+% value emitted 114 !== oEmitValue on line 1267 of cache.pt
+% value emitted 32 !== % value emitted 45 on line 1268 of cache.pt
+% value emitted 97 !== oEmitString on line 1269 of cache.pt
+% value emitted 32 !== % value emitted 69 on line 1270 of cache.pt
+% value emitted 112 !== % value emitted 110 on line 1271 of cache.pt
+% value emitted 114 !== % value emitted 116 on line 1272 of cache.pt
+% value emitted 105 !== % value emitted 101 on line 1273 of cache.pt
+% value emitted 109 !== % value emitted 114 on line 1274 of cache.pt
 % value emitted 101 !== % value emitted 32 on line 1275 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1276 of cache.pt
-% value emitted 97 !== % value emitted 112 on line 1278 of cache.pt
-% value emitted 32 !== % value emitted 114 on line 1279 of cache.pt
-% value emitted 112 !== % value emitted 105 on line 1280 of cache.pt
-% value emitted 114 !== % value emitted 109 on line 1281 of cache.pt
-% value emitted 105 !== % value emitted 101 on line 1282 of cache.pt
-% value emitted 109 !== % value emitted 32 on line 1283 of cache.pt
-% value emitted 101 !== % value emitted 110 on line 1284 of cache.pt
-% value emitted 32 !== % value emitted 117 on line 1285 of cache.pt
-% value emitted 110 !== % value emitted 109 on line 1286 of cache.pt
-% value emitted 117 !== % value emitted 98 on line 1287 of cache.pt
-% value emitted 109 !== % value emitted 101 on line 1288 of cache.pt
-% value emitted 98 !== % value emitted 114 on line 1289 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1290 of cache.pt
-% value emitted 114 !== % value emitted 40 on line 1291 of cache.pt
-% value emitted 32 !== % value emitted 101 on line 1292 of cache.pt
-% value emitted 40 !== % value emitted 46 on line 1293 of cache.pt
-% value emitted 101 !== % value emitted 103 on line 1294 of cache.pt
-% value emitted 103 !== % value emitted 32 on line 1296 of cache.pt
-% value emitted 46 !== % value emitted 49 on line 1297 of cache.pt
-% value emitted 32 !== % value emitted 51 on line 1298 of cache.pt
+% value emitted 32 !== % value emitted 97 on line 1276 of cache.pt
+% value emitted 110 !== % value emitted 32 on line 1277 of cache.pt
+% value emitted 117 !== % value emitted 112 on line 1278 of cache.pt
+% value emitted 109 !== % value emitted 114 on line 1279 of cache.pt
+% value emitted 98 !== % value emitted 105 on line 1280 of cache.pt
+% value emitted 101 !== % value emitted 109 on line 1281 of cache.pt
+% value emitted 114 !== % value emitted 101 on line 1282 of cache.pt
+% value emitted 40 !== % value emitted 110 on line 1284 of cache.pt
+% value emitted 101 !== % value emitted 117 on line 1285 of cache.pt
+% value emitted 46 !== % value emitted 109 on line 1286 of cache.pt
+% value emitted 103 !== % value emitted 98 on line 1287 of cache.pt
+% value emitted 46 !== % value emitted 101 on line 1288 of cache.pt
+% value emitted 32 !== % value emitted 114 on line 1289 of cache.pt
+% value emitted 49 !== % value emitted 32 on line 1290 of cache.pt
+% value emitted 51 !== % value emitted 40 on line 1291 of cache.pt
+% value emitted 44 !== % value emitted 101 on line 1292 of cache.pt
+% value emitted 32 !== % value emitted 46 on line 1293 of cache.pt
+% value emitted 49 !== % value emitted 103 on line 1294 of cache.pt
+% value emitted 57 !== % value emitted 46 on line 1295 of cache.pt
+% value emitted 44 !== % value emitted 32 on line 1296 of cache.pt
+% value emitted 32 !== % value emitted 49 on line 1297 of cache.pt
+% value emitted 53 !== % value emitted 51 on line 1298 of cache.pt
 % value emitted 49 !== % value emitted 44 on line 1299 of cache.pt
-% value emitted 51 !== % value emitted 32 on line 1300 of cache.pt
-% value emitted 44 !== % value emitted 49 on line 1301 of cache.pt
-% value emitted 32 !== % value emitted 57 on line 1302 of cache.pt
-% value emitted 49 !== % value emitted 44 on line 1303 of cache.pt
-% value emitted 57 !== % value emitted 32 on line 1304 of cache.pt
-% value emitted 44 !== % value emitted 53 on line 1305 of cache.pt
-% value emitted 32 !== % value emitted 49 on line 1306 of cache.pt
-% value emitted 53 !== % value emitted 44 on line 1307 of cache.pt
-% value emitted 49 !== % value emitted 32 on line 1308 of cache.pt
-% value emitted 44 !== % value emitted 46 on line 1309 of cache.pt
-% value emitted 32 !== % value emitted 46 on line 1310 of cache.pt
-% value emitted 46 !== % value emitted 41 on line 1312 of cache.pt
-% value emitted 46 !== % value emitted 58 on line 1313 of cache.pt
-% value emitted 41 !== % value emitted 32 on line 1314 of cache.pt
-% value emitted 58 !== .tParmEnd on line 1315 of cache.pt
-% value emitted 32 !== .tLiteralInteger on line 1316 of cache.pt
-.tParmEnd !== oEmitValue on line 1317 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1318 of cache.pt
-oEmitValue !== .tParmEnd on line 1319 of cache.pt
-% value emitted 1 !== .tTrap on line 1320 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1321 of cache.pt
-.tTrap !== % value emitted 109 on line 1322 of cache.pt
-oEmitTrapKind(trWriteString) !== .tWriteEnd on line 1323 of cache.pt
-% value emitted 109 !== .tReadBegin on line 1324 of cache.pt
-.tWriteEnd !== .tTrapBegin on line 1325 of cache.pt
-.tReadBegin !== .tLiteralAddress on line 1326 of cache.pt
-.tTrapBegin !== oEmitValue on line 1327 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1328 of cache.pt
-oEmitValue !== .tVarParm on line 1329 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1330 of cache.pt
-.tVarParm !== .tLiteralAddress on line 1331 of cache.pt
-.tParmEnd !== oEmitValue on line 1332 of cache.pt
-.tLiteralAddress !== % value emitted 4032 on line 1333 of cache.pt
-oEmitValue !== .tVarParm on line 1334 of cache.pt
-% value emitted 4032 !== .tParmEnd on line 1335 of cache.pt
-.tVarParm !== .tTrap on line 1336 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadInteger) on line 1337 of cache.pt
-.tTrap !== % value emitted 10 on line 1338 of cache.pt
-oEmitTrapKind(trReadInteger) !== .tReadEnd on line 1339 of cache.pt
-% value emitted 9 !== .tTrapBegin on line 1340 of cache.pt
-.tReadEnd !== .tLiteralAddress on line 1341 of cache.pt
-.tTrapBegin !== oEmitValue on line 1342 of cache.pt
-.tLiteralAddress !== % value emitted 0 on line 1343 of cache.pt
+% value emitted 44 !== % value emitted 32 on line 1300 of cache.pt
+% value emitted 32 !== % value emitted 49 on line 1301 of cache.pt
+% value emitted 46 !== % value emitted 57 on line 1302 of cache.pt
+% value emitted 46 !== % value emitted 44 on line 1303 of cache.pt
+% value emitted 46 !== % value emitted 32 on line 1304 of cache.pt
+% value emitted 41 !== % value emitted 53 on line 1305 of cache.pt
+% value emitted 58 !== % value emitted 49 on line 1306 of cache.pt
+% value emitted 32 !== % value emitted 44 on line 1307 of cache.pt
+.tParmEnd !== % value emitted 32 on line 1308 of cache.pt
+.tLiteralInteger !== % value emitted 46 on line 1309 of cache.pt
+oEmitValue !== % value emitted 46 on line 1310 of cache.pt
+% value emitted 1 !== % value emitted 46 on line 1311 of cache.pt
+.tParmEnd !== % value emitted 41 on line 1312 of cache.pt
+.tTrap !== % value emitted 58 on line 1313 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 32 on line 1314 of cache.pt
+% value emitted 109 !== .tParmEnd on line 1315 of cache.pt
+.tWriteEnd !== .tLiteralInteger on line 1316 of cache.pt
+.tReadBegin !== oEmitValue on line 1317 of cache.pt
+.tTrapBegin !== % value emitted 1 on line 1318 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1319 of cache.pt
+oEmitValue !== .tTrap on line 1320 of cache.pt
+% value emitted 0 !== oEmitTrapKind(trWriteString) on line 1321 of cache.pt
+.tVarParm !== % value emitted 109 on line 1322 of cache.pt
+.tParmEnd !== .tWriteEnd on line 1323 of cache.pt
+.tLiteralAddress !== .tReadBegin on line 1324 of cache.pt
+oEmitValue !== .tTrapBegin on line 1325 of cache.pt
+% value emitted 4032 !== .tLiteralAddress on line 1326 of cache.pt
+.tVarParm !== oEmitValue on line 1327 of cache.pt
+.tParmEnd !== % value emitted 0 on line 1328 of cache.pt
+.tTrap !== .tVarParm on line 1329 of cache.pt
+oEmitTrapKind(trReadInteger) !== .tParmEnd on line 1330 of cache.pt
+% value emitted 9 !== .tLiteralAddress on line 1331 of cache.pt
+.tReadEnd !== oEmitValue on line 1332 of cache.pt
+.tTrapBegin !== % value emitted 4032 on line 1333 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1334 of cache.pt
+oEmitValue !== .tParmEnd on line 1335 of cache.pt
+% value emitted 0 !== .tTrap on line 1336 of cache.pt
+.tVarParm !== oEmitTrapKind(trReadInteger) on line 1337 of cache.pt
+.tParmEnd !== % value emitted 10 on line 1338 of cache.pt
+.tTrap !== .tReadEnd on line 1339 of cache.pt
+oEmitTrapKind(trReadln) !== .tTrapBegin on line 1340 of cache.pt
+% value emitted 4 !== .tLiteralAddress on line 1341 of cache.pt
+.tCallBegin !== oEmitValue on line 1342 of cache.pt
+.tCallEnd !== % value emitted 0 on line 1343 of cache.pt
 oEmitValue !== .tVarParm on line 1344 of cache.pt
-% value emitted 0 !== .tParmEnd on line 1345 of cache.pt
-.tVarParm !== .tTrap on line 1346 of cache.pt
-.tParmEnd !== oEmitTrapKind(trReadln) on line 1347 of cache.pt
-.tTrap !== % value emitted 4 on line 1348 of cache.pt
-oEmitTrapKind(trReadln) !== .tCallBegin on line 1349 of cache.pt
-% value emitted 4 !== .tCallEnd on line 1350 of cache.pt
-.tCallBegin !== oEmitValue on line 1351 of cache.pt
-.tCallEnd !== % value emitted 149 on line 1352 of cache.pt
-oEmitValue !== .tTrapBegin on line 1353 of cache.pt
-% value emitted 149 !== .tLiteralAddress on line 1354 of cache.pt
-.tTrapBegin !== oEmitValue on line 1355 of cache.pt
-.tLiteralAddress !== % value emitted 4 on line 1356 of cache.pt
-oEmitValue !== .tVarParm on line 1357 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1358 of cache.pt
-.tVarParm !== .tTrap on line 1359 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteln) on line 1360 of cache.pt
-.tTrap !== % value emitted 6 on line 1361 of cache.pt
-oEmitTrapKind(trWriteln) !== .tWriteBegin on line 1362 of cache.pt
-% value emitted 6 !== .tTrapBegin on line 1363 of cache.pt
-.tWriteBegin !== .tLiteralAddress on line 1364 of cache.pt
-.tTrapBegin !== oEmitValue on line 1365 of cache.pt
-.tLiteralAddress !== % value emitted 4 on line 1366 of cache.pt
-oEmitValue !== .tVarParm on line 1367 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1368 of cache.pt
-.tVarParm !== .tLiteralString on line 1369 of cache.pt
-.tParmEnd !== oEmitValue on line 1370 of cache.pt
-.tLiteralString !== % value emitted 13 on line 1371 of cache.pt
-oEmitValue !== oEmitString on line 1372 of cache.pt
-% value emitted 13 !== % value emitted 76 on line 1373 of cache.pt
-oEmitString !== % value emitted 105 on line 1374 of cache.pt
-% value emitted 76 !== % value emitted 110 on line 1375 of cache.pt
-% value emitted 105 !== % value emitted 101 on line 1376 of cache.pt
-% value emitted 110 !== % value emitted 97 on line 1377 of cache.pt
-% value emitted 101 !== % value emitted 114 on line 1378 of cache.pt
-% value emitted 97 !== % value emitted 32 on line 1379 of cache.pt
-% value emitted 114 !== % value emitted 108 on line 1380 of cache.pt
-% value emitted 32 !== % value emitted 111 on line 1381 of cache.pt
-% value emitted 108 !== % value emitted 111 on line 1382 of cache.pt
-% value emitted 111 !== % value emitted 107 on line 1383 of cache.pt
-% value emitted 111 !== % value emitted 117 on line 1384 of cache.pt
-% value emitted 107 !== % value emitted 112 on line 1385 of cache.pt
-% value emitted 117 !== .tParmEnd on line 1386 of cache.pt
-% value emitted 112 !== .tLiteralInteger on line 1387 of cache.pt
-.tParmEnd !== oEmitValue on line 1388 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1389 of cache.pt
+% value emitted 149 !== .tParmEnd on line 1345 of cache.pt
+.tTrapBegin !== .tTrap on line 1346 of cache.pt
+.tLiteralAddress !== oEmitTrapKind(trReadln) on line 1347 of cache.pt
+oEmitValue !== % value emitted 4 on line 1348 of cache.pt
+% value emitted 4 !== .tCallBegin on line 1349 of cache.pt
+.tVarParm !== .tCallEnd on line 1350 of cache.pt
+.tParmEnd !== oEmitValue on line 1351 of cache.pt
+.tTrap !== % value emitted 149 on line 1352 of cache.pt
+oEmitTrapKind(trWriteln) !== .tTrapBegin on line 1353 of cache.pt
+% value emitted 6 !== .tLiteralAddress on line 1354 of cache.pt
+.tWriteBegin !== oEmitValue on line 1355 of cache.pt
+.tTrapBegin !== % value emitted 4 on line 1356 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1357 of cache.pt
+oEmitValue !== .tParmEnd on line 1358 of cache.pt
+% value emitted 4 !== .tTrap on line 1359 of cache.pt
+.tVarParm !== oEmitTrapKind(trWriteln) on line 1360 of cache.pt
+.tParmEnd !== % value emitted 6 on line 1361 of cache.pt
+.tLiteralString !== .tWriteBegin on line 1362 of cache.pt
+oEmitValue !== .tTrapBegin on line 1363 of cache.pt
+% value emitted 13 !== .tLiteralAddress on line 1364 of cache.pt
+oEmitString !== oEmitValue on line 1365 of cache.pt
+% value emitted 76 !== % value emitted 4 on line 1366 of cache.pt
+% value emitted 105 !== .tVarParm on line 1367 of cache.pt
+% value emitted 110 !== .tParmEnd on line 1368 of cache.pt
+% value emitted 101 !== .tLiteralString on line 1369 of cache.pt
+% value emitted 97 !== oEmitValue on line 1370 of cache.pt
+% value emitted 114 !== % value emitted 13 on line 1371 of cache.pt
+% value emitted 32 !== oEmitString on line 1372 of cache.pt
+% value emitted 108 !== % value emitted 76 on line 1373 of cache.pt
+% value emitted 111 !== % value emitted 105 on line 1374 of cache.pt
+% value emitted 111 !== % value emitted 110 on line 1375 of cache.pt
+% value emitted 107 !== % value emitted 101 on line 1376 of cache.pt
+% value emitted 117 !== % value emitted 97 on line 1377 of cache.pt
+% value emitted 112 !== % value emitted 114 on line 1378 of cache.pt
+.tParmEnd !== % value emitted 32 on line 1379 of cache.pt
+.tLiteralInteger !== % value emitted 108 on line 1380 of cache.pt
+oEmitValue !== % value emitted 111 on line 1381 of cache.pt
+% value emitted 1 !== % value emitted 111 on line 1382 of cache.pt
+.tParmEnd !== % value emitted 107 on line 1383 of cache.pt
+.tTrap !== % value emitted 117 on line 1384 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 112 on line 1385 of cache.pt
+% value emitted 109 !== .tParmEnd on line 1386 of cache.pt
+.tWriteEnd !== .tLiteralInteger on line 1387 of cache.pt
+.tTrapBegin !== oEmitValue on line 1388 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 1389 of cache.pt
 oEmitValue !== .tParmEnd on line 1390 of cache.pt
-% value emitted 1 !== .tTrap on line 1391 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1392 of cache.pt
-.tTrap !== % value emitted 109 on line 1393 of cache.pt
-oEmitTrapKind(trWriteString) !== .tWriteEnd on line 1394 of cache.pt
-% value emitted 109 !== .tTrapBegin on line 1395 of cache.pt
-.tWriteEnd !== .tLiteralAddress on line 1396 of cache.pt
-.tTrapBegin !== oEmitValue on line 1397 of cache.pt
+% value emitted 4 !== .tTrap on line 1391 of cache.pt
+.tVarParm !== oEmitTrapKind(trWriteString) on line 1392 of cache.pt
+.tParmEnd !== % value emitted 109 on line 1393 of cache.pt
+.tTrap !== .tWriteEnd on line 1394 of cache.pt
+oEmitTrapKind(trWriteln) !== .tTrapBegin on line 1395 of cache.pt
+% value emitted 6 !== .tLiteralAddress on line 1396 of cache.pt
+.tAssignBegin !== oEmitValue on line 1397 of cache.pt
 .tLiteralAddress !== % value emitted 4 on line 1398 of cache.pt
 oEmitValue !== .tVarParm on line 1399 of cache.pt
-% value emitted 4 !== .tParmEnd on line 1400 of cache.pt
-.tVarParm !== .tTrap on line 1401 of cache.pt
-.tParmEnd !== oEmitTrapKind(trWriteln) on line 1402 of cache.pt
-.tTrap !== % value emitted 6 on line 1403 of cache.pt
-oEmitTrapKind(trWriteln) !== .tAssignBegin on line 1404 of cache.pt
-% value emitted 6 !== .tLiteralAddress on line 1405 of cache.pt
-.tAssignBegin !== oEmitValue on line 1406 of cache.pt
-.tLiteralAddress !== % value emitted 4024 on line 1407 of cache.pt
-oEmitValue !== .tLiteralInteger on line 1408 of cache.pt
-% value emitted 4024 !== oEmitValue on line 1409 of cache.pt
-.tLiteralInteger !== % value emitted 0 on line 1410 of cache.pt
-oEmitValue !== .tAssignInteger on line 1411 of cache.pt
-% value emitted 0 !== .tAssignBegin on line 1412 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 1413 of cache.pt
-.tAssignBegin !== oEmitValue on line 1414 of cache.pt
-.tLiteralAddress !== % value emitted 4232 on line 1415 of cache.pt
-oEmitValue !== .tLiteralInteger on line 1416 of cache.pt
-% value emitted 4232 !== oEmitValue on line 1417 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1418 of cache.pt
+% value emitted 4024 !== .tParmEnd on line 1400 of cache.pt
+.tLiteralInteger !== .tTrap on line 1401 of cache.pt
+oEmitValue !== oEmitTrapKind(trWriteln) on line 1402 of cache.pt
+% value emitted 0 !== % value emitted 6 on line 1403 of cache.pt
+.tAssignInteger !== .tAssignBegin on line 1404 of cache.pt
+.tAssignBegin !== .tLiteralAddress on line 1405 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1406 of cache.pt
+oEmitValue !== % value emitted 4024 on line 1407 of cache.pt
+% value emitted 4232 !== .tLiteralInteger on line 1408 of cache.pt
+.tLiteralInteger !== oEmitValue on line 1409 of cache.pt
+oEmitValue !== % value emitted 0 on line 1410 of cache.pt
+% value emitted 1 !== .tAssignInteger on line 1411 of cache.pt
+.tAssignInteger !== .tAssignBegin on line 1412 of cache.pt
+.tWhileBegin !== .tLiteralAddress on line 1413 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1414 of cache.pt
+oEmitValue !== % value emitted 4232 on line 1415 of cache.pt
+% value emitted 4232 !== .tLiteralInteger on line 1416 of cache.pt
+.tFetchInteger !== oEmitValue on line 1417 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 1418 of cache.pt
 oEmitValue !== .tAssignInteger on line 1419 of cache.pt
-% value emitted 1 !== .tWhileBegin on line 1420 of cache.pt
-.tAssignInteger !== .tLiteralAddress on line 1421 of cache.pt
-.tWhileBegin !== oEmitValue on line 1422 of cache.pt
-.tLiteralAddress !== % value emitted 4232 on line 1423 of cache.pt
-oEmitValue !== .tFetchInteger on line 1424 of cache.pt
-% value emitted 4232 !== .tLiteralAddress on line 1425 of cache.pt
-.tFetchInteger !== oEmitValue on line 1426 of cache.pt
+% value emitted 12 !== .tWhileBegin on line 1420 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1421 of cache.pt
+.tLE !== oEmitValue on line 1422 of cache.pt
+.tWhileTest !== % value emitted 4232 on line 1423 of cache.pt
+oEmitNullAddress !== .tFetchInteger on line 1424 of cache.pt
+% value emitted -32767 !== .tLiteralAddress on line 1425 of cache.pt
+.tCallBegin !== oEmitValue on line 1426 of cache.pt
 .tLiteralAddress !== % value emitted 12 on line 1427 of cache.pt
 oEmitValue !== .tFetchInteger on line 1428 of cache.pt
-% value emitted 12 !== .tLE on line 1429 of cache.pt
-.tFetchInteger !== .tWhileTest on line 1430 of cache.pt
-.tLE !== oEmitNullAddress on line 1431 of cache.pt
-.tWhileTest !== % value emitted -32767 on line 1432 of cache.pt
-oEmitNullAddress !== .tCallBegin on line 1433 of cache.pt
-% value emitted -32767 !== .tLiteralAddress on line 1434 of cache.pt
+% value emitted 4236 !== .tLE on line 1429 of cache.pt
+.tVarParm !== .tWhileTest on line 1430 of cache.pt
+.tParmEnd !== oEmitNullAddress on line 1431 of cache.pt
+.tCallEnd !== % value emitted -32767 on line 1432 of cache.pt
+oEmitValue !== .tCallBegin on line 1433 of cache.pt
+% value emitted 230 !== .tLiteralAddress on line 1434 of cache.pt
 .tCallBegin !== oEmitValue on line 1435 of cache.pt
 .tLiteralAddress !== % value emitted 4236 on line 1436 of cache.pt
 oEmitValue !== .tVarParm on line 1437 of cache.pt
 % value emitted 4236 !== .tParmEnd on line 1438 of cache.pt
-.tVarParm !== .tCallEnd on line 1439 of cache.pt
+.tFetchInteger !== .tCallEnd on line 1439 of cache.pt
 .tParmEnd !== oEmitValue on line 1440 of cache.pt
-.tCallEnd !== % value emitted 231 on line 1441 of cache.pt
+.tLiteralAddress !== % value emitted 231 on line 1441 of cache.pt
 oEmitValue !== .tCallBegin on line 1442 of cache.pt
-% value emitted 230 !== .tLiteralAddress on line 1443 of cache.pt
-.tCallBegin !== oEmitValue on line 1444 of cache.pt
-.tLiteralAddress !== % value emitted 4236 on line 1445 of cache.pt
-oEmitValue !== .tFetchInteger on line 1446 of cache.pt
-% value emitted 4236 !== .tParmEnd on line 1447 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 1448 of cache.pt
-.tParmEnd !== oEmitValue on line 1449 of cache.pt
+% value emitted 4240 !== .tLiteralAddress on line 1443 of cache.pt
+.tVarParm !== oEmitValue on line 1444 of cache.pt
+.tParmEnd !== % value emitted 4236 on line 1445 of cache.pt
+.tCallEnd !== .tFetchInteger on line 1446 of cache.pt
+oEmitValue !== .tParmEnd on line 1447 of cache.pt
+% value emitted 269 !== .tLiteralAddress on line 1448 of cache.pt
+.tAssignBegin !== oEmitValue on line 1449 of cache.pt
 .tLiteralAddress !== % value emitted 4240 on line 1450 of cache.pt
 oEmitValue !== .tVarParm on line 1451 of cache.pt
-% value emitted 4240 !== .tParmEnd on line 1452 of cache.pt
-.tVarParm !== .tCallEnd on line 1453 of cache.pt
-.tParmEnd !== oEmitValue on line 1454 of cache.pt
-.tCallEnd !== % value emitted 270 on line 1455 of cache.pt
-oEmitValue !== .tAssignBegin on line 1456 of cache.pt
-% value emitted 269 !== .tLiteralAddress on line 1457 of cache.pt
-.tAssignBegin !== oEmitValue on line 1458 of cache.pt
-.tLiteralAddress !== % value emitted 4232 on line 1459 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1460 of cache.pt
-% value emitted 4232 !== oEmitValue on line 1461 of cache.pt
-.tLiteralAddress !== % value emitted 4232 on line 1462 of cache.pt
-oEmitValue !== .tFetchInteger on line 1463 of cache.pt
-% value emitted 4232 !== .tLiteralInteger on line 1464 of cache.pt
-.tFetchInteger !== oEmitValue on line 1465 of cache.pt
-.tLiteralInteger !== % value emitted 1 on line 1466 of cache.pt
-oEmitValue !== .tAdd on line 1467 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 1468 of cache.pt
-.tAdd !== .tWhileEnd on line 1469 of cache.pt
-.tAssignInteger !== % value emitted 1371 on line 1470 of cache.pt
-% value emitted 1364 !== .tAssignBegin on line 1471 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1472 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1473 of cache.pt
-oEmitValue !== % value emitted 4244 on line 1474 of cache.pt
-% value emitted 4244 !== .tLiteralAddress on line 1475 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1476 of cache.pt
-oEmitValue !== % value emitted 4024 on line 1477 of cache.pt
-% value emitted 4024 !== .tFetchInteger on line 1478 of cache.pt
-.tFetchInteger !== .tLiteralAddress on line 1479 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1480 of cache.pt
-oEmitValue !== % value emitted 12 on line 1481 of cache.pt
-% value emitted 12 !== .tFetchInteger on line 1482 of cache.pt
-.tFetchInteger !== .tDivide on line 1483 of cache.pt
-.tDivide !== .tAssignInteger on line 1484 of cache.pt
-.tAssignInteger !== .tWriteBegin on line 1485 of cache.pt
-.tWriteBegin !== .tTrapBegin on line 1486 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1487 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1488 of cache.pt
-oEmitValue !== % value emitted 4 on line 1489 of cache.pt
-% value emitted 4 !== .tVarParm on line 1490 of cache.pt
-.tVarParm !== .tParmEnd on line 1491 of cache.pt
-.tParmEnd !== .tLiteralString on line 1492 of cache.pt
-.tLiteralString !== oEmitValue on line 1493 of cache.pt
-oEmitValue !== % value emitted 3 on line 1494 of cache.pt
-% value emitted 3 !== oEmitString on line 1495 of cache.pt
-oEmitString !== % value emitted 78 on line 1496 of cache.pt
-% value emitted 78 !== % value emitted 61 on line 1497 of cache.pt
-% value emitted 61 !== % value emitted 32 on line 1498 of cache.pt
-% value emitted 32 !== .tParmEnd on line 1499 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 1500 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1501 of cache.pt
-oEmitValue !== % value emitted 1 on line 1502 of cache.pt
-% value emitted 1 !== .tParmEnd on line 1503 of cache.pt
+% value emitted 4232 !== .tParmEnd on line 1452 of cache.pt
+.tLiteralAddress !== .tCallEnd on line 1453 of cache.pt
+% value emitted 4232 !== % value emitted 270 on line 1455 of cache.pt
+.tFetchInteger !== .tAssignBegin on line 1456 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 1457 of cache.pt
+% value emitted 1 !== % value emitted 4232 on line 1459 of cache.pt
+.tAdd !== .tLiteralAddress on line 1460 of cache.pt
+.tAssignInteger !== oEmitValue on line 1461 of cache.pt
+% value emitted 1364 !== % value emitted 4232 on line 1462 of cache.pt
+.tAssignBegin !== .tFetchInteger on line 1463 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1464 of cache.pt
+% value emitted 4244 !== % value emitted 1 on line 1466 of cache.pt
+.tLiteralAddress !== .tAdd on line 1467 of cache.pt
+oEmitValue !== .tAssignInteger on line 1468 of cache.pt
+% value emitted 4024 !== .tWhileEnd on line 1469 of cache.pt
+.tFetchInteger !== % value emitted 1371 on line 1470 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 1471 of cache.pt
+oEmitValue !== .tLiteralAddress on line 1472 of cache.pt
+% value emitted 12 !== oEmitValue on line 1473 of cache.pt
+.tFetchInteger !== % value emitted 4244 on line 1474 of cache.pt
+.tDivide !== .tLiteralAddress on line 1475 of cache.pt
+.tAssignInteger !== oEmitValue on line 1476 of cache.pt
+.tWriteBegin !== % value emitted 4024 on line 1477 of cache.pt
+.tTrapBegin !== .tFetchInteger on line 1478 of cache.pt
+% value emitted 4 !== % value emitted 12 on line 1481 of cache.pt
+.tVarParm !== .tFetchInteger on line 1482 of cache.pt
+.tParmEnd !== .tDivide on line 1483 of cache.pt
+.tLiteralString !== .tAssignInteger on line 1484 of cache.pt
+oEmitValue !== .tWriteBegin on line 1485 of cache.pt
+% value emitted 3 !== .tTrapBegin on line 1486 of cache.pt
+oEmitString !== .tLiteralAddress on line 1487 of cache.pt
+% value emitted 78 !== oEmitValue on line 1488 of cache.pt
+% value emitted 61 !== % value emitted 4 on line 1489 of cache.pt
+% value emitted 32 !== .tVarParm on line 1490 of cache.pt
+.tLiteralInteger !== .tLiteralString on line 1492 of cache.pt
+% value emitted 1 !== % value emitted 3 on line 1494 of cache.pt
+.tParmEnd !== oEmitString on line 1495 of cache.pt
+.tTrap !== % value emitted 78 on line 1496 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 61 on line 1497 of cache.pt
+% value emitted 109 !== % value emitted 32 on line 1498 of cache.pt
+.tTrapBegin !== .tParmEnd on line 1499 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1500 of cache.pt
+% value emitted 4 !== % value emitted 1 on line 1502 of cache.pt
+.tVarParm !== .tParmEnd on line 1503 of cache.pt
 .tParmEnd !== .tTrap on line 1504 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteString) on line 1505 of cache.pt
-oEmitTrapKind(trWriteString) !== % value emitted 109 on line 1506 of cache.pt
-% value emitted 109 !== .tTrapBegin on line 1507 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1508 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1509 of cache.pt
-oEmitValue !== % value emitted 4 on line 1510 of cache.pt
-% value emitted 4 !== .tVarParm on line 1511 of cache.pt
-.tVarParm !== .tParmEnd on line 1512 of cache.pt
+.tLiteralAddress !== oEmitTrapKind(trWriteString) on line 1505 of cache.pt
+oEmitValue !== % value emitted 109 on line 1506 of cache.pt
+% value emitted 8 !== .tTrapBegin on line 1507 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1508 of cache.pt
+.tParmEnd !== oEmitValue on line 1509 of cache.pt
+.tLiteralInteger !== % value emitted 4 on line 1510 of cache.pt
+oEmitValue !== .tVarParm on line 1511 of cache.pt
+% value emitted 1 !== .tParmEnd on line 1512 of cache.pt
 .tParmEnd !== .tLiteralAddress on line 1513 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1514 of cache.pt
-oEmitValue !== % value emitted 8 on line 1515 of cache.pt
-% value emitted 8 !== .tFetchInteger on line 1516 of cache.pt
-.tFetchInteger !== .tParmEnd on line 1517 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 1518 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1519 of cache.pt
-oEmitValue !== % value emitted 1 on line 1520 of cache.pt
-% value emitted 1 !== .tParmEnd on line 1521 of cache.pt
+.tTrap !== oEmitValue on line 1514 of cache.pt
+oEmitTrapKind(trWriteInteger) !== % value emitted 8 on line 1515 of cache.pt
+% value emitted 7 !== .tFetchInteger on line 1516 of cache.pt
+.tTrapBegin !== .tParmEnd on line 1517 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1518 of cache.pt
+% value emitted 4 !== % value emitted 1 on line 1520 of cache.pt
+.tVarParm !== .tParmEnd on line 1521 of cache.pt
 .tParmEnd !== .tTrap on line 1522 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteInteger) on line 1523 of cache.pt
-oEmitTrapKind(trWriteInteger) !== % value emitted 8 on line 1524 of cache.pt
-% value emitted 7 !== .tTrapBegin on line 1525 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1526 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1527 of cache.pt
-oEmitValue !== % value emitted 4 on line 1528 of cache.pt
-% value emitted 4 !== .tVarParm on line 1529 of cache.pt
-.tVarParm !== .tParmEnd on line 1530 of cache.pt
-.tParmEnd !== .tLiteralString on line 1531 of cache.pt
-.tLiteralString !== oEmitValue on line 1532 of cache.pt
-oEmitValue !== % value emitted 40 on line 1533 of cache.pt
-% value emitted 40 !== oEmitString on line 1534 of cache.pt
-oEmitString !== % value emitted 32 on line 1535 of cache.pt
-% value emitted 32 !== % value emitted 65 on line 1537 of cache.pt
-% value emitted 65 !== % value emitted 118 on line 1538 of cache.pt
-% value emitted 118 !== % value emitted 101 on line 1539 of cache.pt
-% value emitted 101 !== % value emitted 114 on line 1540 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1541 of cache.pt
-% value emitted 97 !== % value emitted 103 on line 1542 of cache.pt
-% value emitted 103 !== % value emitted 101 on line 1543 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 1544 of cache.pt
+.tLiteralString !== oEmitTrapKind(trWriteInteger) on line 1523 of cache.pt
+oEmitValue !== % value emitted 8 on line 1524 of cache.pt
+% value emitted 40 !== .tTrapBegin on line 1525 of cache.pt
+oEmitString !== .tLiteralAddress on line 1526 of cache.pt
+% value emitted 32 !== oEmitValue on line 1527 of cache.pt
+% value emitted 32 !== % value emitted 4 on line 1528 of cache.pt
+% value emitted 65 !== .tVarParm on line 1529 of cache.pt
+% value emitted 118 !== .tParmEnd on line 1530 of cache.pt
+% value emitted 101 !== .tLiteralString on line 1531 of cache.pt
+% value emitted 114 !== oEmitValue on line 1532 of cache.pt
+% value emitted 97 !== % value emitted 40 on line 1533 of cache.pt
+% value emitted 103 !== oEmitString on line 1534 of cache.pt
+% value emitted 101 !== % value emitted 32 on line 1535 of cache.pt
+% value emitted 99 !== % value emitted 65 on line 1537 of cache.pt
+% value emitted 111 !== % value emitted 118 on line 1538 of cache.pt
+% value emitted 109 !== % value emitted 101 on line 1539 of cache.pt
+% value emitted 112 !== % value emitted 114 on line 1540 of cache.pt
+% value emitted 114 !== % value emitted 103 on line 1542 of cache.pt
+% value emitted 115 !== % value emitted 32 on line 1544 of cache.pt
 % value emitted 32 !== % value emitted 99 on line 1545 of cache.pt
-% value emitted 99 !== % value emitted 111 on line 1546 of cache.pt
-% value emitted 111 !== % value emitted 109 on line 1547 of cache.pt
-% value emitted 109 !== % value emitted 112 on line 1548 of cache.pt
-% value emitted 112 !== % value emitted 97 on line 1549 of cache.pt
-% value emitted 97 !== % value emitted 114 on line 1550 of cache.pt
-% value emitted 114 !== % value emitted 101 on line 1551 of cache.pt
-% value emitted 101 !== % value emitted 115 on line 1552 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1553 of cache.pt
-% value emitted 32 !== % value emitted 112 on line 1554 of cache.pt
-% value emitted 112 !== % value emitted 101 on line 1555 of cache.pt
-% value emitted 101 !== % value emitted 114 on line 1556 of cache.pt
-% value emitted 114 !== % value emitted 32 on line 1557 of cache.pt
-% value emitted 32 !== % value emitted 115 on line 1558 of cache.pt
-% value emitted 115 !== % value emitted 101 on line 1559 of cache.pt
-% value emitted 101 !== % value emitted 97 on line 1560 of cache.pt
-% value emitted 97 !== % value emitted 114 on line 1561 of cache.pt
-% value emitted 114 !== % value emitted 99 on line 1562 of cache.pt
-% value emitted 99 !== % value emitted 104 on line 1563 of cache.pt
-% value emitted 104 !== % value emitted 32 on line 1564 of cache.pt
-% value emitted 32 !== % value emitted 40 on line 1565 of cache.pt
-% value emitted 40 !== % value emitted 67 on line 1566 of cache.pt
-% value emitted 67 !== % value emitted 97 on line 1567 of cache.pt
-% value emitted 97 !== % value emitted 118 on line 1568 of cache.pt
-% value emitted 118 !== % value emitted 103 on line 1569 of cache.pt
-% value emitted 103 !== % value emitted 41 on line 1570 of cache.pt
-% value emitted 41 !== % value emitted 32 on line 1571 of cache.pt
-% value emitted 32 !== % value emitted 61 on line 1572 of cache.pt
-% value emitted 61 !== % value emitted 32 on line 1574 of cache.pt
-% value emitted 32 !== .tParmEnd on line 1575 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 1576 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1577 of cache.pt
-oEmitValue !== % value emitted 1 on line 1578 of cache.pt
-% value emitted 1 !== .tParmEnd on line 1579 of cache.pt
+% value emitted 112 !== % value emitted 111 on line 1546 of cache.pt
+% value emitted 101 !== % value emitted 109 on line 1547 of cache.pt
+% value emitted 114 !== % value emitted 112 on line 1548 of cache.pt
+% value emitted 32 !== % value emitted 97 on line 1549 of cache.pt
+% value emitted 115 !== % value emitted 114 on line 1550 of cache.pt
+% value emitted 97 !== % value emitted 115 on line 1552 of cache.pt
+% value emitted 114 !== % value emitted 32 on line 1553 of cache.pt
+% value emitted 99 !== % value emitted 112 on line 1554 of cache.pt
+% value emitted 104 !== % value emitted 101 on line 1555 of cache.pt
+% value emitted 32 !== % value emitted 114 on line 1556 of cache.pt
+% value emitted 40 !== % value emitted 32 on line 1557 of cache.pt
+% value emitted 67 !== % value emitted 115 on line 1558 of cache.pt
+% value emitted 97 !== % value emitted 101 on line 1559 of cache.pt
+% value emitted 118 !== % value emitted 97 on line 1560 of cache.pt
+% value emitted 103 !== % value emitted 114 on line 1561 of cache.pt
+% value emitted 41 !== % value emitted 99 on line 1562 of cache.pt
+% value emitted 32 !== % value emitted 104 on line 1563 of cache.pt
+% value emitted 61 !== % value emitted 32 on line 1564 of cache.pt
+% value emitted 61 !== % value emitted 40 on line 1565 of cache.pt
+% value emitted 32 !== % value emitted 67 on line 1566 of cache.pt
+.tParmEnd !== % value emitted 97 on line 1567 of cache.pt
+.tLiteralInteger !== % value emitted 118 on line 1568 of cache.pt
+oEmitValue !== % value emitted 103 on line 1569 of cache.pt
+% value emitted 1 !== % value emitted 41 on line 1570 of cache.pt
+.tParmEnd !== % value emitted 32 on line 1571 of cache.pt
+.tTrap !== % value emitted 61 on line 1572 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 61 on line 1573 of cache.pt
+% value emitted 109 !== % value emitted 32 on line 1574 of cache.pt
+.tTrapBegin !== .tParmEnd on line 1575 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1576 of cache.pt
+% value emitted 4 !== % value emitted 1 on line 1578 of cache.pt
+.tVarParm !== .tParmEnd on line 1579 of cache.pt
 .tParmEnd !== .tTrap on line 1580 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteString) on line 1581 of cache.pt
-oEmitTrapKind(trWriteString) !== % value emitted 109 on line 1582 of cache.pt
-% value emitted 109 !== .tTrapBegin on line 1583 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1584 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1585 of cache.pt
-oEmitValue !== % value emitted 4 on line 1586 of cache.pt
-% value emitted 4 !== .tVarParm on line 1587 of cache.pt
-.tVarParm !== .tParmEnd on line 1588 of cache.pt
+.tLiteralAddress !== oEmitTrapKind(trWriteString) on line 1581 of cache.pt
+oEmitValue !== % value emitted 109 on line 1582 of cache.pt
+% value emitted 4244 !== .tTrapBegin on line 1583 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1584 of cache.pt
+.tParmEnd !== oEmitValue on line 1585 of cache.pt
+.tLiteralInteger !== % value emitted 4 on line 1586 of cache.pt
+oEmitValue !== .tVarParm on line 1587 of cache.pt
+% value emitted 1 !== .tParmEnd on line 1588 of cache.pt
 .tParmEnd !== .tLiteralAddress on line 1589 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1590 of cache.pt
-oEmitValue !== % value emitted 4244 on line 1591 of cache.pt
-% value emitted 4244 !== .tFetchInteger on line 1592 of cache.pt
-.tFetchInteger !== .tParmEnd on line 1593 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 1594 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1595 of cache.pt
+.tTrap !== oEmitValue on line 1590 of cache.pt
+oEmitTrapKind(trWriteInteger) !== % value emitted 4244 on line 1591 of cache.pt
+% value emitted 7 !== .tFetchInteger on line 1592 of cache.pt
+.tWriteEnd !== .tParmEnd on line 1593 of cache.pt
+.tTrapBegin !== .tLiteralInteger on line 1594 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1595 of cache.pt
 oEmitValue !== % value emitted 1 on line 1596 of cache.pt
-% value emitted 1 !== .tParmEnd on line 1597 of cache.pt
-.tParmEnd !== .tTrap on line 1598 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteInteger) on line 1599 of cache.pt
-oEmitTrapKind(trWriteInteger) !== % value emitted 8 on line 1600 of cache.pt
-% value emitted 7 !== .tWriteEnd on line 1601 of cache.pt
-.tWriteEnd !== .tTrapBegin on line 1602 of cache.pt
+% value emitted 4 !== .tParmEnd on line 1597 of cache.pt
+.tVarParm !== .tTrap on line 1598 of cache.pt
+.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1599 of cache.pt
+.tTrap !== % value emitted 8 on line 1600 of cache.pt
+oEmitTrapKind(trWriteln) !== .tWriteEnd on line 1601 of cache.pt
+% value emitted 6 !== .tTrapBegin on line 1602 of cache.pt
 .tTrapBegin !== .tLiteralAddress on line 1603 of cache.pt
 .tLiteralAddress !== oEmitValue on line 1604 of cache.pt
 oEmitValue !== % value emitted 4 on line 1605 of cache.pt
@@ -15772,263 +10727,286 @@ oEmitValue !== % value emitted 4 on line 1605 of cache.pt
 .tTrap !== oEmitTrapKind(trWriteln) on line 1609 of cache.pt
 oEmitTrapKind(trWriteln) !== % value emitted 6 on line 1610 of cache.pt
 % value emitted 6 !== .tTrapBegin on line 1611 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1612 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1613 of cache.pt
-oEmitValue !== % value emitted 4 on line 1614 of cache.pt
-% value emitted 4 !== .tVarParm on line 1615 of cache.pt
-.tVarParm !== .tParmEnd on line 1616 of cache.pt
-.tParmEnd !== .tTrap on line 1617 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteln) on line 1618 of cache.pt
-oEmitTrapKind(trWriteln) !== % value emitted 6 on line 1619 of cache.pt
-% value emitted 6 !== .tWriteBegin on line 1620 of cache.pt
-.tWriteBegin !== .tTrapBegin on line 1621 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1622 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1623 of cache.pt
-oEmitValue !== % value emitted 4 on line 1624 of cache.pt
-% value emitted 4 !== .tVarParm on line 1625 of cache.pt
-.tVarParm !== .tParmEnd on line 1626 of cache.pt
-.tParmEnd !== .tLiteralString on line 1627 of cache.pt
-.tLiteralString !== oEmitValue on line 1628 of cache.pt
-oEmitValue !== % value emitted 24 on line 1629 of cache.pt
-% value emitted 24 !== oEmitString on line 1630 of cache.pt
-oEmitString !== % value emitted 76 on line 1631 of cache.pt
-% value emitted 76 !== % value emitted 105 on line 1632 of cache.pt
-% value emitted 105 !== % value emitted 110 on line 1633 of cache.pt
-% value emitted 110 !== % value emitted 101 on line 1634 of cache.pt
-% value emitted 101 !== % value emitted 97 on line 1635 of cache.pt
-% value emitted 97 !== % value emitted 114 on line 1636 of cache.pt
-% value emitted 114 !== % value emitted 32 on line 1637 of cache.pt
-% value emitted 32 !== % value emitted 108 on line 1638 of cache.pt
-% value emitted 108 !== % value emitted 111 on line 1639 of cache.pt
-% value emitted 111 !== % value emitted 107 on line 1641 of cache.pt
-% value emitted 107 !== % value emitted 117 on line 1642 of cache.pt
-% value emitted 117 !== % value emitted 112 on line 1643 of cache.pt
-% value emitted 112 !== % value emitted 32 on line 1644 of cache.pt
-% value emitted 32 !== % value emitted 119 on line 1645 of cache.pt
-% value emitted 119 !== % value emitted 105 on line 1646 of cache.pt
-% value emitted 105 !== % value emitted 116 on line 1647 of cache.pt
-% value emitted 116 !== % value emitted 104 on line 1648 of cache.pt
-% value emitted 104 !== % value emitted 32 on line 1649 of cache.pt
-% value emitted 32 !== % value emitted 99 on line 1650 of cache.pt
-% value emitted 99 !== % value emitted 97 on line 1651 of cache.pt
-% value emitted 97 !== % value emitted 99 on line 1652 of cache.pt
-% value emitted 99 !== % value emitted 104 on line 1653 of cache.pt
-% value emitted 104 !== % value emitted 101 on line 1654 of cache.pt
-% value emitted 101 !== .tParmEnd on line 1655 of cache.pt
-.tParmEnd !== .tLiteralInteger on line 1656 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1657 of cache.pt
+.tWriteBegin !== .tLiteralAddress on line 1612 of cache.pt
+.tTrapBegin !== oEmitValue on line 1613 of cache.pt
+.tLiteralAddress !== % value emitted 4 on line 1614 of cache.pt
+oEmitValue !== .tVarParm on line 1615 of cache.pt
+% value emitted 4 !== .tParmEnd on line 1616 of cache.pt
+.tVarParm !== .tTrap on line 1617 of cache.pt
+.tParmEnd !== oEmitTrapKind(trWriteln) on line 1618 of cache.pt
+.tLiteralString !== % value emitted 6 on line 1619 of cache.pt
+oEmitValue !== .tWriteBegin on line 1620 of cache.pt
+% value emitted 24 !== .tTrapBegin on line 1621 of cache.pt
+oEmitString !== .tLiteralAddress on line 1622 of cache.pt
+% value emitted 76 !== oEmitValue on line 1623 of cache.pt
+% value emitted 105 !== % value emitted 4 on line 1624 of cache.pt
+% value emitted 110 !== .tVarParm on line 1625 of cache.pt
+% value emitted 101 !== .tParmEnd on line 1626 of cache.pt
+% value emitted 97 !== .tLiteralString on line 1627 of cache.pt
+% value emitted 114 !== oEmitValue on line 1628 of cache.pt
+% value emitted 32 !== % value emitted 24 on line 1629 of cache.pt
+% value emitted 108 !== oEmitString on line 1630 of cache.pt
+% value emitted 111 !== % value emitted 76 on line 1631 of cache.pt
+% value emitted 111 !== % value emitted 105 on line 1632 of cache.pt
+% value emitted 107 !== % value emitted 110 on line 1633 of cache.pt
+% value emitted 117 !== % value emitted 101 on line 1634 of cache.pt
+% value emitted 112 !== % value emitted 97 on line 1635 of cache.pt
+% value emitted 32 !== % value emitted 114 on line 1636 of cache.pt
+% value emitted 119 !== % value emitted 32 on line 1637 of cache.pt
+% value emitted 105 !== % value emitted 108 on line 1638 of cache.pt
+% value emitted 116 !== % value emitted 111 on line 1639 of cache.pt
+% value emitted 104 !== % value emitted 111 on line 1640 of cache.pt
+% value emitted 32 !== % value emitted 107 on line 1641 of cache.pt
+% value emitted 99 !== % value emitted 117 on line 1642 of cache.pt
+% value emitted 97 !== % value emitted 112 on line 1643 of cache.pt
+% value emitted 99 !== % value emitted 32 on line 1644 of cache.pt
+% value emitted 104 !== % value emitted 119 on line 1645 of cache.pt
+% value emitted 101 !== % value emitted 105 on line 1646 of cache.pt
+.tParmEnd !== % value emitted 116 on line 1647 of cache.pt
+.tLiteralInteger !== % value emitted 104 on line 1648 of cache.pt
+oEmitValue !== % value emitted 32 on line 1649 of cache.pt
+% value emitted 1 !== % value emitted 99 on line 1650 of cache.pt
+.tParmEnd !== % value emitted 97 on line 1651 of cache.pt
+.tTrap !== % value emitted 99 on line 1652 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 104 on line 1653 of cache.pt
+% value emitted 109 !== % value emitted 101 on line 1654 of cache.pt
+.tWriteEnd !== .tParmEnd on line 1655 of cache.pt
+.tTrapBegin !== .tLiteralInteger on line 1656 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1657 of cache.pt
 oEmitValue !== % value emitted 1 on line 1658 of cache.pt
-% value emitted 1 !== .tParmEnd on line 1659 of cache.pt
-.tParmEnd !== .tTrap on line 1660 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteString) on line 1661 of cache.pt
-oEmitTrapKind(trWriteString) !== % value emitted 109 on line 1662 of cache.pt
-% value emitted 109 !== .tWriteEnd on line 1663 of cache.pt
-.tWriteEnd !== .tTrapBegin on line 1664 of cache.pt
-.tTrapBegin !== .tLiteralAddress on line 1665 of cache.pt
+% value emitted 4 !== .tParmEnd on line 1659 of cache.pt
+.tVarParm !== .tTrap on line 1660 of cache.pt
+.tParmEnd !== oEmitTrapKind(trWriteString) on line 1661 of cache.pt
+.tTrap !== % value emitted 109 on line 1662 of cache.pt
+oEmitTrapKind(trWriteln) !== .tWriteEnd on line 1663 of cache.pt
+% value emitted 6 !== .tTrapBegin on line 1664 of cache.pt
+.tAssignBegin !== .tLiteralAddress on line 1665 of cache.pt
 .tLiteralAddress !== oEmitValue on line 1666 of cache.pt
 oEmitValue !== % value emitted 4 on line 1667 of cache.pt
-% value emitted 4 !== .tVarParm on line 1668 of cache.pt
-.tVarParm !== .tParmEnd on line 1669 of cache.pt
-.tParmEnd !== .tTrap on line 1670 of cache.pt
-.tTrap !== oEmitTrapKind(trWriteln) on line 1671 of cache.pt
-oEmitTrapKind(trWriteln) !== % value emitted 6 on line 1672 of cache.pt
-% value emitted 6 !== .tAssignBegin on line 1673 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1674 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1675 of cache.pt
-oEmitValue !== % value emitted 4024 on line 1676 of cache.pt
-% value emitted 4024 !== .tLiteralInteger on line 1677 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1678 of cache.pt
-oEmitValue !== % value emitted 0 on line 1679 of cache.pt
-% value emitted 0 !== .tAssignInteger on line 1680 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 1681 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1682 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1683 of cache.pt
-oEmitValue !== % value emitted 4132 on line 1684 of cache.pt
-% value emitted 4132 !== .tLiteralInteger on line 1685 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1686 of cache.pt
-oEmitValue !== % value emitted 0 on line 1687 of cache.pt
-% value emitted 0 !== .tAssignInteger on line 1688 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 1689 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1690 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1691 of cache.pt
-oEmitValue !== % value emitted 4248 on line 1692 of cache.pt
-% value emitted 4248 !== .tLiteralInteger on line 1693 of cache.pt
+% value emitted 4024 !== .tVarParm on line 1668 of cache.pt
+.tLiteralInteger !== .tParmEnd on line 1669 of cache.pt
+oEmitValue !== .tTrap on line 1670 of cache.pt
+% value emitted 0 !== oEmitTrapKind(trWriteln) on line 1671 of cache.pt
+.tAssignInteger !== % value emitted 6 on line 1672 of cache.pt
+% value emitted 4132 !== % value emitted 4024 on line 1676 of cache.pt
+% value emitted 4248 !== % value emitted 4132 on line 1684 of cache.pt
+% value emitted 1 !== % value emitted 0 on line 1687 of cache.pt
+.tWhileBegin !== .tAssignBegin on line 1689 of cache.pt
+.tFetchInteger !== .tLiteralInteger on line 1693 of cache.pt
 .tLiteralInteger !== oEmitValue on line 1694 of cache.pt
 oEmitValue !== % value emitted 1 on line 1695 of cache.pt
-% value emitted 1 !== .tAssignInteger on line 1696 of cache.pt
-.tAssignInteger !== .tWhileBegin on line 1697 of cache.pt
-.tWhileBegin !== .tLiteralAddress on line 1698 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1699 of cache.pt
-oEmitValue !== % value emitted 4248 on line 1700 of cache.pt
-% value emitted 4248 !== .tFetchInteger on line 1701 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 1702 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1703 of cache.pt
-oEmitValue !== % value emitted 10 on line 1704 of cache.pt
-% value emitted 10 !== .tLE on line 1705 of cache.pt
-.tLE !== .tWhileTest on line 1706 of cache.pt
-.tWhileTest !== oEmitNullAddress on line 1707 of cache.pt
-oEmitNullAddress !== % value emitted -32767 on line 1708 of cache.pt
-% value emitted -32767 !== .tAssignBegin on line 1709 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1710 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1711 of cache.pt
+% value emitted 10 !== .tAssignInteger on line 1696 of cache.pt
+.tLE !== .tWhileBegin on line 1697 of cache.pt
+.tWhileTest !== .tLiteralAddress on line 1698 of cache.pt
+oEmitNullAddress !== oEmitValue on line 1699 of cache.pt
+% value emitted -32767 !== % value emitted 4248 on line 1700 of cache.pt
+.tAssignBegin !== .tFetchInteger on line 1701 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1702 of cache.pt
+% value emitted 4036 !== % value emitted 10 on line 1704 of cache.pt
+.tSubscriptBegin !== .tLE on line 1705 of cache.pt
+.tLiteralAddress !== .tWhileTest on line 1706 of cache.pt
+oEmitValue !== oEmitNullAddress on line 1707 of cache.pt
+% value emitted 4248 !== % value emitted -32767 on line 1708 of cache.pt
+.tFetchInteger !== .tAssignBegin on line 1709 of cache.pt
+.tSubscriptInteger !== .tLiteralAddress on line 1710 of cache.pt
+.tLiteralInteger !== oEmitValue on line 1711 of cache.pt
 oEmitValue !== % value emitted 4036 on line 1712 of cache.pt
-% value emitted 4036 !== .tSubscriptBegin on line 1713 of cache.pt
-.tSubscriptBegin !== .tLiteralAddress on line 1714 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1715 of cache.pt
-oEmitValue !== % value emitted 4248 on line 1716 of cache.pt
-% value emitted 4248 !== .tFetchInteger on line 1717 of cache.pt
-.tFetchInteger !== .tSubscriptInteger on line 1718 of cache.pt
-.tSubscriptInteger !== .tLiteralInteger on line 1719 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1720 of cache.pt
-oEmitValue !== % value emitted 0 on line 1721 of cache.pt
-% value emitted 0 !== .tAssignInteger on line 1722 of cache.pt
-.tAssignInteger !== .tAssignBegin on line 1723 of cache.pt
-.tAssignBegin !== .tLiteralAddress on line 1724 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1725 of cache.pt
-oEmitValue !== % value emitted 4248 on line 1726 of cache.pt
-% value emitted 4248 !== .tLiteralAddress on line 1727 of cache.pt
-.tLiteralAddress !== oEmitValue on line 1728 of cache.pt
-oEmitValue !== % value emitted 4248 on line 1729 of cache.pt
-% value emitted 4248 !== .tFetchInteger on line 1730 of cache.pt
-.tFetchInteger !== .tLiteralInteger on line 1731 of cache.pt
-.tLiteralInteger !== oEmitValue on line 1732 of cache.pt
-oEmitValue !== % value emitted 1 on line 1733 of cache.pt
-% value emitted 1 !== .tAdd on line 1734 of cache.pt
-.tAdd !== .tAssignInteger on line 1735 of cache.pt
+% value emitted 0 !== .tSubscriptBegin on line 1713 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 1714 of cache.pt
+.tAssignBegin !== oEmitValue on line 1715 of cache.pt
+.tLiteralAddress !== % value emitted 4248 on line 1716 of cache.pt
+oEmitValue !== .tFetchInteger on line 1717 of cache.pt
+% value emitted 4248 !== .tSubscriptInteger on line 1718 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1719 of cache.pt
+% value emitted 4248 !== % value emitted 0 on line 1721 of cache.pt
+.tFetchInteger !== .tAssignInteger on line 1722 of cache.pt
+.tLiteralInteger !== .tAssignBegin on line 1723 of cache.pt
+oEmitValue !== .tLiteralAddress on line 1724 of cache.pt
+% value emitted 1 !== oEmitValue on line 1725 of cache.pt
+.tAdd !== % value emitted 4248 on line 1726 of cache.pt
+.tAssignInteger !== .tLiteralAddress on line 1727 of cache.pt
+% value emitted 1613 !== oEmitValue on line 1728 of cache.pt
+.tAssignBegin !== % value emitted 4248 on line 1729 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 1730 of cache.pt
+oEmitValue !== .tLiteralInteger on line 1731 of cache.pt
+% value emitted 4232 !== oEmitValue on line 1732 of cache.pt
+.tLiteralInteger !== % value emitted 1 on line 1733 of cache.pt
+oEmitValue !== .tAdd on line 1734 of cache.pt
+% value emitted 1 !== .tAssignInteger on line 1735 of cache.pt
 .tAssignInteger !== .tWhileEnd on line 1736 of cache.pt
-% value emitted 1613 !== % value emitted 1621 on line 1737 of cache.pt
-% value emitted 230 !== % value emitted 231 on line 1767 of cache.pt
-% value emitted 378 !== % value emitted 380 on line 1781 of cache.pt
-% value emitted 1660 !== .tWhileEnd on line 1795 of cache.pt
-.tAssignBegin !== % value emitted 1669 on line 1796 of cache.pt
-.tLiteralAddress !== .tAssignBegin on line 1797 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1798 of cache.pt
-% value emitted 4244 !== oEmitValue on line 1799 of cache.pt
-.tLiteralAddress !== % value emitted 4244 on line 1800 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1801 of cache.pt
-% value emitted 4024 !== oEmitValue on line 1802 of cache.pt
-.tFetchInteger !== % value emitted 4024 on line 1803 of cache.pt
-.tLiteralAddress !== .tFetchInteger on line 1804 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1805 of cache.pt
-% value emitted 12 !== oEmitValue on line 1806 of cache.pt
-.tFetchInteger !== % value emitted 12 on line 1807 of cache.pt
-.tDivide !== .tFetchInteger on line 1808 of cache.pt
-.tAssignInteger !== .tDivide on line 1809 of cache.pt
-.tWriteBegin !== .tAssignInteger on line 1810 of cache.pt
-.tTrapBegin !== .tWriteBegin on line 1811 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1812 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1813 of cache.pt
-% value emitted 4 !== oEmitValue on line 1814 of cache.pt
-.tVarParm !== % value emitted 4 on line 1815 of cache.pt
-.tParmEnd !== .tVarParm on line 1816 of cache.pt
-.tLiteralString !== .tParmEnd on line 1817 of cache.pt
-oEmitValue !== .tLiteralString on line 1818 of cache.pt
-% value emitted 3 !== oEmitValue on line 1819 of cache.pt
-oEmitString !== % value emitted 3 on line 1820 of cache.pt
-% value emitted 78 !== oEmitString on line 1821 of cache.pt
-% value emitted 61 !== % value emitted 78 on line 1822 of cache.pt
-% value emitted 32 !== % value emitted 61 on line 1823 of cache.pt
-.tParmEnd !== % value emitted 32 on line 1824 of cache.pt
-.tLiteralInteger !== .tParmEnd on line 1825 of cache.pt
-oEmitValue !== .tLiteralInteger on line 1826 of cache.pt
-% value emitted 1 !== oEmitValue on line 1827 of cache.pt
+.tWhileBegin !== % value emitted 1621 on line 1737 of cache.pt
+.tLiteralAddress !== .tAssignBegin on line 1738 of cache.pt
+oEmitValue !== .tLiteralAddress on line 1739 of cache.pt
+% value emitted 4232 !== oEmitValue on line 1740 of cache.pt
+.tFetchInteger !== % value emitted 4232 on line 1741 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 1742 of cache.pt
+% value emitted 12 !== % value emitted 1 on line 1744 of cache.pt
+.tFetchInteger !== .tAssignInteger on line 1745 of cache.pt
+.tLE !== .tWhileBegin on line 1746 of cache.pt
+.tWhileTest !== .tLiteralAddress on line 1747 of cache.pt
+oEmitNullAddress !== oEmitValue on line 1748 of cache.pt
+% value emitted -32767 !== % value emitted 4232 on line 1749 of cache.pt
+.tCallBegin !== .tFetchInteger on line 1750 of cache.pt
+% value emitted 4252 !== % value emitted 12 on line 1753 of cache.pt
+.tVarParm !== .tFetchInteger on line 1754 of cache.pt
+.tParmEnd !== .tLE on line 1755 of cache.pt
+.tCallEnd !== .tWhileTest on line 1756 of cache.pt
+oEmitValue !== oEmitNullAddress on line 1757 of cache.pt
+% value emitted 230 !== % value emitted -32767 on line 1758 of cache.pt
+.tFetchInteger !== .tVarParm on line 1763 of cache.pt
+.tLiteralAddress !== .tCallEnd on line 1765 of cache.pt
+% value emitted 4256 !== % value emitted 231 on line 1767 of cache.pt
+.tVarParm !== .tCallBegin on line 1768 of cache.pt
+.tParmEnd !== .tLiteralAddress on line 1769 of cache.pt
+.tCallEnd !== oEmitValue on line 1770 of cache.pt
+oEmitValue !== % value emitted 4252 on line 1771 of cache.pt
+% value emitted 378 !== .tFetchInteger on line 1772 of cache.pt
+.tAssignBegin !== .tParmEnd on line 1773 of cache.pt
+% value emitted 4232 !== % value emitted 4256 on line 1776 of cache.pt
+.tLiteralAddress !== .tVarParm on line 1777 of cache.pt
+oEmitValue !== .tParmEnd on line 1778 of cache.pt
+% value emitted 4232 !== .tCallEnd on line 1779 of cache.pt
+.tFetchInteger !== oEmitValue on line 1780 of cache.pt
+.tLiteralInteger !== % value emitted 380 on line 1781 of cache.pt
+oEmitValue !== .tAssignBegin on line 1782 of cache.pt
+% value emitted 1 !== .tLiteralAddress on line 1783 of cache.pt
+.tAdd !== oEmitValue on line 1784 of cache.pt
+.tAssignInteger !== % value emitted 4232 on line 1785 of cache.pt
+% value emitted 1660 !== .tLiteralAddress on line 1786 of cache.pt
+.tAssignBegin !== oEmitValue on line 1787 of cache.pt
+.tLiteralAddress !== % value emitted 4232 on line 1788 of cache.pt
+oEmitValue !== .tFetchInteger on line 1789 of cache.pt
+% value emitted 4244 !== .tLiteralInteger on line 1790 of cache.pt
+.tLiteralAddress !== oEmitValue on line 1791 of cache.pt
+oEmitValue !== % value emitted 1 on line 1792 of cache.pt
+% value emitted 4024 !== .tAdd on line 1793 of cache.pt
+.tFetchInteger !== .tAssignInteger on line 1794 of cache.pt
+.tLiteralAddress !== .tWhileEnd on line 1795 of cache.pt
+oEmitValue !== % value emitted 1669 on line 1796 of cache.pt
+% value emitted 12 !== .tAssignBegin on line 1797 of cache.pt
+.tFetchInteger !== .tLiteralAddress on line 1798 of cache.pt
+.tDivide !== oEmitValue on line 1799 of cache.pt
+.tAssignInteger !== % value emitted 4244 on line 1800 of cache.pt
+.tWriteBegin !== .tLiteralAddress on line 1801 of cache.pt
+.tTrapBegin !== oEmitValue on line 1802 of cache.pt
+.tLiteralAddress !== % value emitted 4024 on line 1803 of cache.pt
+oEmitValue !== .tFetchInteger on line 1804 of cache.pt
+% value emitted 4 !== .tLiteralAddress on line 1805 of cache.pt
+.tVarParm !== oEmitValue on line 1806 of cache.pt
+.tParmEnd !== % value emitted 12 on line 1807 of cache.pt
+.tLiteralString !== .tFetchInteger on line 1808 of cache.pt
+oEmitValue !== .tDivide on line 1809 of cache.pt
+% value emitted 3 !== .tAssignInteger on line 1810 of cache.pt
+oEmitString !== .tWriteBegin on line 1811 of cache.pt
+% value emitted 78 !== .tTrapBegin on line 1812 of cache.pt
+% value emitted 61 !== .tLiteralAddress on line 1813 of cache.pt
+% value emitted 32 !== oEmitValue on line 1814 of cache.pt
+.tParmEnd !== % value emitted 4 on line 1815 of cache.pt
+.tLiteralInteger !== .tVarParm on line 1816 of cache.pt
+oEmitValue !== .tParmEnd on line 1817 of cache.pt
+% value emitted 1 !== .tLiteralString on line 1818 of cache.pt
+.tParmEnd !== oEmitValue on line 1819 of cache.pt
+.tTrap !== % value emitted 3 on line 1820 of cache.pt
+oEmitTrapKind(trWriteString) !== oEmitString on line 1821 of cache.pt
+% value emitted 109 !== % value emitted 78 on line 1822 of cache.pt
+.tTrapBegin !== % value emitted 61 on line 1823 of cache.pt
+.tLiteralAddress !== % value emitted 32 on line 1824 of cache.pt
+oEmitValue !== .tParmEnd on line 1825 of cache.pt
+% value emitted 4 !== .tLiteralInteger on line 1826 of cache.pt
+.tVarParm !== oEmitValue on line 1827 of cache.pt
 .tParmEnd !== % value emitted 1 on line 1828 of cache.pt
-.tTrap !== .tParmEnd on line 1829 of cache.pt
-oEmitTrapKind(trWriteString) !== .tTrap on line 1830 of cache.pt
-% value emitted 109 !== oEmitTrapKind(trWriteString) on line 1831 of cache.pt
-.tTrapBegin !== % value emitted 109 on line 1832 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1833 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1834 of cache.pt
-% value emitted 4 !== oEmitValue on line 1835 of cache.pt
-.tVarParm !== % value emitted 4 on line 1836 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1829 of cache.pt
+oEmitValue !== .tTrap on line 1830 of cache.pt
+% value emitted 8 !== oEmitTrapKind(trWriteString) on line 1831 of cache.pt
+.tFetchInteger !== % value emitted 109 on line 1832 of cache.pt
+.tParmEnd !== .tTrapBegin on line 1833 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 1834 of cache.pt
+% value emitted 1 !== % value emitted 4 on line 1836 of cache.pt
 .tParmEnd !== .tVarParm on line 1837 of cache.pt
-.tLiteralAddress !== .tParmEnd on line 1838 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1839 of cache.pt
-% value emitted 8 !== oEmitValue on line 1840 of cache.pt
-.tFetchInteger !== % value emitted 8 on line 1841 of cache.pt
-.tParmEnd !== .tFetchInteger on line 1842 of cache.pt
-.tLiteralInteger !== .tParmEnd on line 1843 of cache.pt
-oEmitValue !== .tLiteralInteger on line 1844 of cache.pt
-% value emitted 1 !== oEmitValue on line 1845 of cache.pt
+.tTrap !== .tParmEnd on line 1838 of cache.pt
+oEmitTrapKind(trWriteInteger) !== .tLiteralAddress on line 1839 of cache.pt
+% value emitted 7 !== oEmitValue on line 1840 of cache.pt
+.tTrapBegin !== % value emitted 8 on line 1841 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 1842 of cache.pt
+oEmitValue !== .tParmEnd on line 1843 of cache.pt
+% value emitted 4 !== .tLiteralInteger on line 1844 of cache.pt
+.tVarParm !== oEmitValue on line 1845 of cache.pt
 .tParmEnd !== % value emitted 1 on line 1846 of cache.pt
-.tTrap !== .tParmEnd on line 1847 of cache.pt
-oEmitTrapKind(trWriteInteger) !== .tTrap on line 1848 of cache.pt
-% value emitted 7 !== oEmitTrapKind(trWriteInteger) on line 1849 of cache.pt
-.tTrapBegin !== % value emitted 8 on line 1850 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1851 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1852 of cache.pt
-% value emitted 4 !== oEmitValue on line 1853 of cache.pt
-.tVarParm !== % value emitted 4 on line 1854 of cache.pt
-.tParmEnd !== .tVarParm on line 1855 of cache.pt
-.tLiteralString !== .tParmEnd on line 1856 of cache.pt
-oEmitValue !== .tLiteralString on line 1857 of cache.pt
-% value emitted 40 !== oEmitValue on line 1858 of cache.pt
-oEmitString !== % value emitted 40 on line 1859 of cache.pt
+.tLiteralString !== .tParmEnd on line 1847 of cache.pt
+oEmitValue !== .tTrap on line 1848 of cache.pt
+% value emitted 40 !== oEmitTrapKind(trWriteInteger) on line 1849 of cache.pt
+oEmitString !== % value emitted 8 on line 1850 of cache.pt
+% value emitted 32 !== .tTrapBegin on line 1851 of cache.pt
+% value emitted 32 !== .tLiteralAddress on line 1852 of cache.pt
+% value emitted 65 !== oEmitValue on line 1853 of cache.pt
+% value emitted 118 !== % value emitted 4 on line 1854 of cache.pt
+% value emitted 101 !== .tVarParm on line 1855 of cache.pt
+% value emitted 114 !== .tParmEnd on line 1856 of cache.pt
+% value emitted 97 !== .tLiteralString on line 1857 of cache.pt
+% value emitted 103 !== oEmitValue on line 1858 of cache.pt
+% value emitted 101 !== % value emitted 40 on line 1859 of cache.pt
 % value emitted 32 !== oEmitString on line 1860 of cache.pt
-% value emitted 65 !== % value emitted 32 on line 1862 of cache.pt
-% value emitted 118 !== % value emitted 65 on line 1863 of cache.pt
-% value emitted 101 !== % value emitted 118 on line 1864 of cache.pt
-% value emitted 114 !== % value emitted 101 on line 1865 of cache.pt
-% value emitted 97 !== % value emitted 114 on line 1866 of cache.pt
-% value emitted 103 !== % value emitted 97 on line 1867 of cache.pt
-% value emitted 101 !== % value emitted 103 on line 1868 of cache.pt
+% value emitted 99 !== % value emitted 32 on line 1861 of cache.pt
+% value emitted 111 !== % value emitted 32 on line 1862 of cache.pt
+% value emitted 109 !== % value emitted 65 on line 1863 of cache.pt
+% value emitted 112 !== % value emitted 118 on line 1864 of cache.pt
+% value emitted 97 !== % value emitted 101 on line 1865 of cache.pt
+% value emitted 101 !== % value emitted 97 on line 1867 of cache.pt
+% value emitted 115 !== % value emitted 103 on line 1868 of cache.pt
 % value emitted 32 !== % value emitted 101 on line 1869 of cache.pt
-% value emitted 99 !== % value emitted 32 on line 1870 of cache.pt
-% value emitted 111 !== % value emitted 99 on line 1871 of cache.pt
-% value emitted 109 !== % value emitted 111 on line 1872 of cache.pt
-% value emitted 112 !== % value emitted 109 on line 1873 of cache.pt
-% value emitted 97 !== % value emitted 112 on line 1874 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1875 of cache.pt
-% value emitted 101 !== % value emitted 114 on line 1876 of cache.pt
-% value emitted 115 !== % value emitted 101 on line 1877 of cache.pt
-% value emitted 32 !== % value emitted 115 on line 1878 of cache.pt
-% value emitted 112 !== % value emitted 32 on line 1879 of cache.pt
-% value emitted 101 !== % value emitted 112 on line 1880 of cache.pt
-% value emitted 114 !== % value emitted 101 on line 1881 of cache.pt
-% value emitted 32 !== % value emitted 114 on line 1882 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1883 of cache.pt
-% value emitted 101 !== % value emitted 115 on line 1884 of cache.pt
-% value emitted 97 !== % value emitted 101 on line 1885 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1886 of cache.pt
-% value emitted 99 !== % value emitted 114 on line 1887 of cache.pt
-% value emitted 104 !== % value emitted 99 on line 1888 of cache.pt
-% value emitted 32 !== % value emitted 104 on line 1889 of cache.pt
-% value emitted 40 !== % value emitted 32 on line 1890 of cache.pt
-% value emitted 67 !== % value emitted 40 on line 1891 of cache.pt
-% value emitted 97 !== % value emitted 67 on line 1892 of cache.pt
-% value emitted 118 !== % value emitted 97 on line 1893 of cache.pt
-% value emitted 103 !== % value emitted 118 on line 1894 of cache.pt
-% value emitted 41 !== % value emitted 103 on line 1895 of cache.pt
-% value emitted 32 !== % value emitted 41 on line 1896 of cache.pt
-% value emitted 61 !== % value emitted 32 on line 1897 of cache.pt
-% value emitted 32 !== % value emitted 61 on line 1899 of cache.pt
-.tParmEnd !== % value emitted 32 on line 1900 of cache.pt
-.tLiteralInteger !== .tParmEnd on line 1901 of cache.pt
-oEmitValue !== .tLiteralInteger on line 1902 of cache.pt
-% value emitted 1 !== oEmitValue on line 1903 of cache.pt
+% value emitted 112 !== % value emitted 32 on line 1870 of cache.pt
+% value emitted 101 !== % value emitted 99 on line 1871 of cache.pt
+% value emitted 114 !== % value emitted 111 on line 1872 of cache.pt
+% value emitted 32 !== % value emitted 109 on line 1873 of cache.pt
+% value emitted 115 !== % value emitted 112 on line 1874 of cache.pt
+% value emitted 101 !== % value emitted 97 on line 1875 of cache.pt
+% value emitted 97 !== % value emitted 114 on line 1876 of cache.pt
+% value emitted 114 !== % value emitted 101 on line 1877 of cache.pt
+% value emitted 99 !== % value emitted 115 on line 1878 of cache.pt
+% value emitted 104 !== % value emitted 32 on line 1879 of cache.pt
+% value emitted 32 !== % value emitted 112 on line 1880 of cache.pt
+% value emitted 40 !== % value emitted 101 on line 1881 of cache.pt
+% value emitted 67 !== % value emitted 114 on line 1882 of cache.pt
+% value emitted 97 !== % value emitted 32 on line 1883 of cache.pt
+% value emitted 118 !== % value emitted 115 on line 1884 of cache.pt
+% value emitted 103 !== % value emitted 101 on line 1885 of cache.pt
+% value emitted 41 !== % value emitted 97 on line 1886 of cache.pt
+% value emitted 32 !== % value emitted 114 on line 1887 of cache.pt
+% value emitted 61 !== % value emitted 99 on line 1888 of cache.pt
+% value emitted 61 !== % value emitted 104 on line 1889 of cache.pt
+.tParmEnd !== % value emitted 40 on line 1891 of cache.pt
+.tLiteralInteger !== % value emitted 67 on line 1892 of cache.pt
+oEmitValue !== % value emitted 97 on line 1893 of cache.pt
+% value emitted 1 !== % value emitted 118 on line 1894 of cache.pt
+.tParmEnd !== % value emitted 103 on line 1895 of cache.pt
+.tTrap !== % value emitted 41 on line 1896 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 32 on line 1897 of cache.pt
+% value emitted 109 !== % value emitted 61 on line 1898 of cache.pt
+.tTrapBegin !== % value emitted 61 on line 1899 of cache.pt
+.tLiteralAddress !== % value emitted 32 on line 1900 of cache.pt
+oEmitValue !== .tParmEnd on line 1901 of cache.pt
+% value emitted 4 !== .tLiteralInteger on line 1902 of cache.pt
+.tVarParm !== oEmitValue on line 1903 of cache.pt
 .tParmEnd !== % value emitted 1 on line 1904 of cache.pt
-.tTrap !== .tParmEnd on line 1905 of cache.pt
-oEmitTrapKind(trWriteString) !== .tTrap on line 1906 of cache.pt
-% value emitted 109 !== oEmitTrapKind(trWriteString) on line 1907 of cache.pt
-.tTrapBegin !== % value emitted 109 on line 1908 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1909 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1910 of cache.pt
-% value emitted 4 !== oEmitValue on line 1911 of cache.pt
-.tVarParm !== % value emitted 4 on line 1912 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1905 of cache.pt
+oEmitValue !== .tTrap on line 1906 of cache.pt
+% value emitted 4244 !== oEmitTrapKind(trWriteString) on line 1907 of cache.pt
+.tFetchInteger !== % value emitted 109 on line 1908 of cache.pt
+.tParmEnd !== .tTrapBegin on line 1909 of cache.pt
+.tLiteralInteger !== .tLiteralAddress on line 1910 of cache.pt
+% value emitted 1 !== % value emitted 4 on line 1912 of cache.pt
 .tParmEnd !== .tVarParm on line 1913 of cache.pt
-.tLiteralAddress !== .tParmEnd on line 1914 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1915 of cache.pt
-% value emitted 4244 !== oEmitValue on line 1916 of cache.pt
-.tFetchInteger !== % value emitted 4244 on line 1917 of cache.pt
-.tParmEnd !== .tFetchInteger on line 1918 of cache.pt
-.tLiteralInteger !== .tParmEnd on line 1919 of cache.pt
+.tTrap !== .tParmEnd on line 1914 of cache.pt
+oEmitTrapKind(trWriteInteger) !== .tLiteralAddress on line 1915 of cache.pt
+% value emitted 7 !== oEmitValue on line 1916 of cache.pt
+.tWriteEnd !== % value emitted 4244 on line 1917 of cache.pt
+.tTrapBegin !== .tFetchInteger on line 1918 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1919 of cache.pt
 oEmitValue !== .tLiteralInteger on line 1920 of cache.pt
-% value emitted 1 !== oEmitValue on line 1921 of cache.pt
-.tParmEnd !== % value emitted 1 on line 1922 of cache.pt
-.tTrap !== .tParmEnd on line 1923 of cache.pt
-oEmitTrapKind(trWriteInteger) !== .tTrap on line 1924 of cache.pt
-% value emitted 7 !== oEmitTrapKind(trWriteInteger) on line 1925 of cache.pt
-.tWriteEnd !== % value emitted 8 on line 1926 of cache.pt
+% value emitted 4 !== oEmitValue on line 1921 of cache.pt
+.tVarParm !== % value emitted 1 on line 1922 of cache.pt
+oEmitTrapKind(trWriteln) !== oEmitTrapKind(trWriteInteger) on line 1925 of cache.pt
+% value emitted 6 !== % value emitted 8 on line 1926 of cache.pt
 .tTrapBegin !== .tWriteEnd on line 1927 of cache.pt
 .tLiteralAddress !== .tTrapBegin on line 1928 of cache.pt
 oEmitValue !== .tLiteralAddress on line 1929 of cache.pt
@@ -16038,272 +11016,250 @@ oEmitValue !== .tLiteralAddress on line 1929 of cache.pt
 .tTrap !== .tParmEnd on line 1933 of cache.pt
 oEmitTrapKind(trWriteln) !== .tTrap on line 1934 of cache.pt
 % value emitted 6 !== oEmitTrapKind(trWriteln) on line 1935 of cache.pt
-.tTrapBegin !== % value emitted 6 on line 1936 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1937 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1938 of cache.pt
-% value emitted 4 !== oEmitValue on line 1939 of cache.pt
-.tVarParm !== % value emitted 4 on line 1940 of cache.pt
-.tParmEnd !== .tVarParm on line 1941 of cache.pt
-.tTrap !== .tParmEnd on line 1942 of cache.pt
-oEmitTrapKind(trWriteln) !== .tTrap on line 1943 of cache.pt
-% value emitted 6 !== oEmitTrapKind(trWriteln) on line 1944 of cache.pt
-.tWriteBegin !== % value emitted 6 on line 1945 of cache.pt
-.tTrapBegin !== .tWriteBegin on line 1946 of cache.pt
-.tLiteralAddress !== .tTrapBegin on line 1947 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1948 of cache.pt
-% value emitted 4 !== oEmitValue on line 1949 of cache.pt
-.tVarParm !== % value emitted 4 on line 1950 of cache.pt
-.tParmEnd !== .tVarParm on line 1951 of cache.pt
-.tLiteralString !== .tParmEnd on line 1952 of cache.pt
-oEmitValue !== .tLiteralString on line 1953 of cache.pt
-% value emitted 13 !== oEmitValue on line 1954 of cache.pt
-oEmitString !== % value emitted 13 on line 1955 of cache.pt
-% value emitted 66 !== oEmitString on line 1956 of cache.pt
-% value emitted 105 !== % value emitted 66 on line 1957 of cache.pt
-% value emitted 110 !== % value emitted 105 on line 1958 of cache.pt
-% value emitted 97 !== % value emitted 110 on line 1959 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1960 of cache.pt
-% value emitted 121 !== % value emitted 114 on line 1961 of cache.pt
-% value emitted 32 !== % value emitted 121 on line 1962 of cache.pt
-% value emitted 115 !== % value emitted 32 on line 1963 of cache.pt
-% value emitted 101 !== % value emitted 115 on line 1964 of cache.pt
-% value emitted 97 !== % value emitted 101 on line 1965 of cache.pt
-% value emitted 114 !== % value emitted 97 on line 1966 of cache.pt
-% value emitted 99 !== % value emitted 114 on line 1967 of cache.pt
-% value emitted 104 !== % value emitted 99 on line 1968 of cache.pt
-.tParmEnd !== % value emitted 104 on line 1969 of cache.pt
-.tLiteralInteger !== .tParmEnd on line 1970 of cache.pt
+.tWriteBegin !== % value emitted 6 on line 1936 of cache.pt
+.tLiteralString !== .tTrap on line 1943 of cache.pt
+oEmitValue !== oEmitTrapKind(trWriteln) on line 1944 of cache.pt
+% value emitted 13 !== % value emitted 6 on line 1945 of cache.pt
+oEmitString !== .tWriteBegin on line 1946 of cache.pt
+% value emitted 66 !== .tTrapBegin on line 1947 of cache.pt
+% value emitted 105 !== .tLiteralAddress on line 1948 of cache.pt
+% value emitted 110 !== oEmitValue on line 1949 of cache.pt
+% value emitted 97 !== % value emitted 4 on line 1950 of cache.pt
+% value emitted 114 !== .tVarParm on line 1951 of cache.pt
+% value emitted 121 !== .tParmEnd on line 1952 of cache.pt
+% value emitted 32 !== .tLiteralString on line 1953 of cache.pt
+% value emitted 115 !== oEmitValue on line 1954 of cache.pt
+% value emitted 101 !== % value emitted 13 on line 1955 of cache.pt
+% value emitted 97 !== oEmitString on line 1956 of cache.pt
+% value emitted 114 !== % value emitted 66 on line 1957 of cache.pt
+% value emitted 99 !== % value emitted 105 on line 1958 of cache.pt
+% value emitted 104 !== % value emitted 110 on line 1959 of cache.pt
+.tParmEnd !== % value emitted 97 on line 1960 of cache.pt
+.tLiteralInteger !== % value emitted 114 on line 1961 of cache.pt
+oEmitValue !== % value emitted 121 on line 1962 of cache.pt
+% value emitted 1 !== % value emitted 32 on line 1963 of cache.pt
+.tParmEnd !== % value emitted 115 on line 1964 of cache.pt
+.tTrap !== % value emitted 101 on line 1965 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 97 on line 1966 of cache.pt
+% value emitted 109 !== % value emitted 114 on line 1967 of cache.pt
+.tWriteEnd !== % value emitted 99 on line 1968 of cache.pt
+.tTrapBegin !== % value emitted 104 on line 1969 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 1970 of cache.pt
 oEmitValue !== .tLiteralInteger on line 1971 of cache.pt
-% value emitted 1 !== oEmitValue on line 1972 of cache.pt
-.tParmEnd !== % value emitted 1 on line 1973 of cache.pt
-.tTrap !== .tParmEnd on line 1974 of cache.pt
-oEmitTrapKind(trWriteString) !== .tTrap on line 1975 of cache.pt
-% value emitted 109 !== oEmitTrapKind(trWriteString) on line 1976 of cache.pt
-.tWriteEnd !== % value emitted 109 on line 1977 of cache.pt
-.tTrapBegin !== .tWriteEnd on line 1978 of cache.pt
+% value emitted 4 !== oEmitValue on line 1972 of cache.pt
+.tVarParm !== % value emitted 1 on line 1973 of cache.pt
+oEmitTrapKind(trWriteln) !== oEmitTrapKind(trWriteString) on line 1976 of cache.pt
+% value emitted 6 !== % value emitted 109 on line 1977 of cache.pt
+.tAssignBegin !== .tWriteEnd on line 1978 of cache.pt
 .tLiteralAddress !== .tTrapBegin on line 1979 of cache.pt
 oEmitValue !== .tLiteralAddress on line 1980 of cache.pt
-% value emitted 4 !== oEmitValue on line 1981 of cache.pt
-.tVarParm !== % value emitted 4 on line 1982 of cache.pt
-.tParmEnd !== .tVarParm on line 1983 of cache.pt
-.tTrap !== .tParmEnd on line 1984 of cache.pt
-oEmitTrapKind(trWriteln) !== .tTrap on line 1985 of cache.pt
-% value emitted 6 !== oEmitTrapKind(trWriteln) on line 1986 of cache.pt
-.tAssignBegin !== % value emitted 6 on line 1987 of cache.pt
-.tLiteralAddress !== .tAssignBegin on line 1988 of cache.pt
-oEmitValue !== .tLiteralAddress on line 1989 of cache.pt
-% value emitted 4024 !== oEmitValue on line 1990 of cache.pt
-.tLiteralInteger !== % value emitted 4024 on line 1991 of cache.pt
+% value emitted 4024 !== oEmitValue on line 1981 of cache.pt
+.tLiteralInteger !== % value emitted 4 on line 1982 of cache.pt
+oEmitValue !== .tVarParm on line 1983 of cache.pt
+% value emitted 0 !== .tParmEnd on line 1984 of cache.pt
+.tAssignInteger !== .tTrap on line 1985 of cache.pt
+.tCallBegin !== oEmitTrapKind(trWriteln) on line 1986 of cache.pt
+.tCallEnd !== % value emitted 6 on line 1987 of cache.pt
+oEmitValue !== .tAssignBegin on line 1988 of cache.pt
+% value emitted 700 !== .tLiteralAddress on line 1989 of cache.pt
+.tAssignBegin !== oEmitValue on line 1990 of cache.pt
+.tLiteralAddress !== % value emitted 4024 on line 1991 of cache.pt
 oEmitValue !== .tLiteralInteger on line 1992 of cache.pt
-% value emitted 0 !== oEmitValue on line 1993 of cache.pt
-.tAssignInteger !== % value emitted 0 on line 1994 of cache.pt
-.tCallBegin !== .tAssignInteger on line 1995 of cache.pt
-.tCallEnd !== .tCallBegin on line 1996 of cache.pt
-oEmitValue !== .tCallEnd on line 1997 of cache.pt
-% value emitted 700 !== oEmitValue on line 1998 of cache.pt
-.tAssignBegin !== % value emitted 704 on line 1999 of cache.pt
-.tLiteralAddress !== .tAssignBegin on line 2000 of cache.pt
-oEmitValue !== .tLiteralAddress on line 2001 of cache.pt
-% value emitted 4232 !== oEmitValue on line 2002 of cache.pt
-.tLiteralInteger !== % value emitted 4232 on line 2003 of cache.pt
+% value emitted 4232 !== oEmitValue on line 1993 of cache.pt
+.tLiteralInteger !== % value emitted 0 on line 1994 of cache.pt
+oEmitValue !== .tAssignInteger on line 1995 of cache.pt
+% value emitted 1 !== .tCallBegin on line 1996 of cache.pt
+.tAssignInteger !== .tCallEnd on line 1997 of cache.pt
+.tWhileBegin !== oEmitValue on line 1998 of cache.pt
+.tLiteralAddress !== % value emitted 704 on line 1999 of cache.pt
+oEmitValue !== .tAssignBegin on line 2000 of cache.pt
+% value emitted 4232 !== .tLiteralAddress on line 2001 of cache.pt
+.tFetchInteger !== oEmitValue on line 2002 of cache.pt
+.tLiteralAddress !== % value emitted 4232 on line 2003 of cache.pt
 oEmitValue !== .tLiteralInteger on line 2004 of cache.pt
-% value emitted 1 !== oEmitValue on line 2005 of cache.pt
-.tAssignInteger !== % value emitted 1 on line 2006 of cache.pt
-.tWhileBegin !== .tAssignInteger on line 2007 of cache.pt
-.tLiteralAddress !== .tWhileBegin on line 2008 of cache.pt
-oEmitValue !== .tLiteralAddress on line 2009 of cache.pt
-% value emitted 4232 !== oEmitValue on line 2010 of cache.pt
-.tFetchInteger !== % value emitted 4232 on line 2011 of cache.pt
+% value emitted 12 !== oEmitValue on line 2005 of cache.pt
+.tFetchInteger !== % value emitted 1 on line 2006 of cache.pt
+.tLE !== .tAssignInteger on line 2007 of cache.pt
+.tWhileTest !== .tWhileBegin on line 2008 of cache.pt
+oEmitNullAddress !== .tLiteralAddress on line 2009 of cache.pt
+% value emitted -32767 !== oEmitValue on line 2010 of cache.pt
+.tCallBegin !== % value emitted 4232 on line 2011 of cache.pt
 .tLiteralAddress !== .tFetchInteger on line 2012 of cache.pt
 oEmitValue !== .tLiteralAddress on line 2013 of cache.pt
-% value emitted 12 !== oEmitValue on line 2014 of cache.pt
-.tFetchInteger !== % value emitted 12 on line 2015 of cache.pt
-.tLE !== .tFetchInteger on line 2016 of cache.pt
-.tWhileTest !== .tLE on line 2017 of cache.pt
-oEmitNullAddress !== .tWhileTest on line 2018 of cache.pt
-% value emitted -32767 !== oEmitNullAddress on line 2019 of cache.pt
+% value emitted 4260 !== oEmitValue on line 2014 of cache.pt
+.tVarParm !== % value emitted 12 on line 2015 of cache.pt
+.tParmEnd !== .tFetchInteger on line 2016 of cache.pt
+.tCallEnd !== .tLE on line 2017 of cache.pt
+oEmitValue !== .tWhileTest on line 2018 of cache.pt
+% value emitted 230 !== oEmitNullAddress on line 2019 of cache.pt
 .tCallBegin !== % value emitted -32767 on line 2020 of cache.pt
 .tLiteralAddress !== .tCallBegin on line 2021 of cache.pt
 oEmitValue !== .tLiteralAddress on line 2022 of cache.pt
 % value emitted 4260 !== oEmitValue on line 2023 of cache.pt
-.tVarParm !== % value emitted 4260 on line 2024 of cache.pt
+.tFetchInteger !== % value emitted 4260 on line 2024 of cache.pt
 .tParmEnd !== .tVarParm on line 2025 of cache.pt
-.tCallEnd !== .tParmEnd on line 2026 of cache.pt
+.tLiteralAddress !== .tParmEnd on line 2026 of cache.pt
 oEmitValue !== .tCallEnd on line 2027 of cache.pt
-% value emitted 230 !== oEmitValue on line 2028 of cache.pt
-.tCallBegin !== % value emitted 231 on line 2029 of cache.pt
-.tLiteralAddress !== .tCallBegin on line 2030 of cache.pt
-oEmitValue !== .tLiteralAddress on line 2031 of cache.pt
-% value emitted 4260 !== oEmitValue on line 2032 of cache.pt
-.tFetchInteger !== % value emitted 4260 on line 2033 of cache.pt
-.tParmEnd !== .tFetchInteger on line 2034 of cache.pt
+% value emitted 4264 !== oEmitValue on line 2028 of cache.pt
+.tVarParm !== % value emitted 231 on line 2029 of cache.pt
+.tParmEnd !== .tCallBegin on line 2030 of cache.pt
+.tCallEnd !== .tLiteralAddress on line 2031 of cache.pt
+% value emitted 870 !== % value emitted 4260 on line 2033 of cache.pt
+.tAssignBegin !== .tFetchInteger on line 2034 of cache.pt
 .tLiteralAddress !== .tParmEnd on line 2035 of cache.pt
 oEmitValue !== .tLiteralAddress on line 2036 of cache.pt
-% value emitted 4264 !== oEmitValue on line 2037 of cache.pt
-.tVarParm !== % value emitted 4264 on line 2038 of cache.pt
-.tParmEnd !== .tVarParm on line 2039 of cache.pt
-.tCallEnd !== .tParmEnd on line 2040 of cache.pt
-oEmitValue !== .tCallEnd on line 2041 of cache.pt
-% value emitted 870 !== oEmitValue on line 2042 of cache.pt
-.tAssignBegin !== % value emitted 876 on line 2043 of cache.pt
-.tLiteralAddress !== .tAssignBegin on line 2044 of cache.pt
-oEmitValue !== .tLiteralAddress on line 2045 of cache.pt
-% value emitted 4232 !== oEmitValue on line 2046 of cache.pt
-.tLiteralAddress !== % value emitted 4232 on line 2047 of cache.pt
-oEmitValue !== .tLiteralAddress on line 2048 of cache.pt
-% value emitted 4232 !== oEmitValue on line 2049 of cache.pt
-.tFetchInteger !== % value emitted 4232 on line 2050 of cache.pt
-.tLiteralInteger !== .tFetchInteger on line 2051 of cache.pt
-oEmitValue !== .tLiteralInteger on line 2052 of cache.pt
-% value emitted 1 !== oEmitValue on line 2053 of cache.pt
-.tAdd !== % value emitted 1 on line 2054 of cache.pt
-.tAssignInteger !== .tAdd on line 2055 of cache.pt
-% value emitted 1895 !== .tAssignInteger on line 2056 of cache.pt
-.tAssignBegin !== .tWhileEnd on line 2057 of cache.pt
-.tLiteralAddress !== % value emitted 1905 on line 2058 of cache.pt
-oEmitValue !== .tAssignBegin on line 2059 of cache.pt
-% value emitted 4244 !== .tLiteralAddress on line 2060 of cache.pt
-.tLiteralAddress !== oEmitValue on line 2061 of cache.pt
-oEmitValue !== % value emitted 4244 on line 2062 of cache.pt
-% value emitted 4024 !== .tLiteralAddress on line 2063 of cache.pt
-.tFetchInteger !== oEmitValue on line 2064 of cache.pt
-.tLiteralAddress !== % value emitted 4024 on line 2065 of cache.pt
-oEmitValue !== .tFetchInteger on line 2066 of cache.pt
-% value emitted 12 !== .tLiteralAddress on line 2067 of cache.pt
-.tFetchInteger !== oEmitValue on line 2068 of cache.pt
-.tDivide !== % value emitted 12 on line 2069 of cache.pt
-.tAssignInteger !== .tFetchInteger on line 2070 of cache.pt
-.tWriteBegin !== .tDivide on line 2071 of cache.pt
-.tTrapBegin !== .tAssignInteger on line 2072 of cache.pt
-.tLiteralAddress !== .tWriteBegin on line 2073 of cache.pt
-oEmitValue !== .tTrapBegin on line 2074 of cache.pt
-% value emitted 4 !== .tLiteralAddress on line 2075 of cache.pt
-.tVarParm !== oEmitValue on line 2076 of cache.pt
-.tParmEnd !== % value emitted 4 on line 2077 of cache.pt
-.tLiteralString !== .tVarParm on line 2078 of cache.pt
-oEmitValue !== .tParmEnd on line 2079 of cache.pt
-% value emitted 3 !== .tLiteralString on line 2080 of cache.pt
-oEmitString !== oEmitValue on line 2081 of cache.pt
-% value emitted 78 !== % value emitted 3 on line 2082 of cache.pt
-% value emitted 61 !== oEmitString on line 2083 of cache.pt
-% value emitted 32 !== % value emitted 78 on line 2084 of cache.pt
-.tParmEnd !== % value emitted 61 on line 2085 of cache.pt
-.tLiteralInteger !== % value emitted 32 on line 2086 of cache.pt
-oEmitValue !== .tParmEnd on line 2087 of cache.pt
-% value emitted 1 !== .tLiteralInteger on line 2088 of cache.pt
+% value emitted 4232 !== oEmitValue on line 2037 of cache.pt
+.tLiteralAddress !== % value emitted 4264 on line 2038 of cache.pt
+oEmitValue !== .tVarParm on line 2039 of cache.pt
+% value emitted 4232 !== .tParmEnd on line 2040 of cache.pt
+.tFetchInteger !== .tCallEnd on line 2041 of cache.pt
+.tLiteralInteger !== oEmitValue on line 2042 of cache.pt
+oEmitValue !== % value emitted 876 on line 2043 of cache.pt
+% value emitted 1 !== .tAssignBegin on line 2044 of cache.pt
+.tAdd !== .tLiteralAddress on line 2045 of cache.pt
+.tAssignInteger !== oEmitValue on line 2046 of cache.pt
+% value emitted 1895 !== % value emitted 4232 on line 2047 of cache.pt
+.tAssignBegin !== .tLiteralAddress on line 2048 of cache.pt
+.tLiteralAddress !== oEmitValue on line 2049 of cache.pt
+oEmitValue !== % value emitted 4232 on line 2050 of cache.pt
+% value emitted 4244 !== .tFetchInteger on line 2051 of cache.pt
+.tLiteralAddress !== .tLiteralInteger on line 2052 of cache.pt
+% value emitted 4024 !== % value emitted 1 on line 2054 of cache.pt
+.tFetchInteger !== .tAdd on line 2055 of cache.pt
+.tLiteralAddress !== .tAssignInteger on line 2056 of cache.pt
+oEmitValue !== .tWhileEnd on line 2057 of cache.pt
+% value emitted 12 !== % value emitted 1905 on line 2058 of cache.pt
+.tFetchInteger !== .tAssignBegin on line 2059 of cache.pt
+.tDivide !== .tLiteralAddress on line 2060 of cache.pt
+.tAssignInteger !== oEmitValue on line 2061 of cache.pt
+.tWriteBegin !== % value emitted 4244 on line 2062 of cache.pt
+.tTrapBegin !== .tLiteralAddress on line 2063 of cache.pt
+.tLiteralAddress !== oEmitValue on line 2064 of cache.pt
+oEmitValue !== % value emitted 4024 on line 2065 of cache.pt
+% value emitted 4 !== .tFetchInteger on line 2066 of cache.pt
+.tVarParm !== .tLiteralAddress on line 2067 of cache.pt
+.tParmEnd !== oEmitValue on line 2068 of cache.pt
+.tLiteralString !== % value emitted 12 on line 2069 of cache.pt
+oEmitValue !== .tFetchInteger on line 2070 of cache.pt
+% value emitted 3 !== .tDivide on line 2071 of cache.pt
+oEmitString !== .tAssignInteger on line 2072 of cache.pt
+% value emitted 78 !== .tWriteBegin on line 2073 of cache.pt
+% value emitted 61 !== .tTrapBegin on line 2074 of cache.pt
+% value emitted 32 !== .tLiteralAddress on line 2075 of cache.pt
+.tParmEnd !== oEmitValue on line 2076 of cache.pt
+.tLiteralInteger !== % value emitted 4 on line 2077 of cache.pt
+oEmitValue !== .tVarParm on line 2078 of cache.pt
+% value emitted 1 !== .tParmEnd on line 2079 of cache.pt
+.tParmEnd !== .tLiteralString on line 2080 of cache.pt
+.tTrap !== oEmitValue on line 2081 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 3 on line 2082 of cache.pt
+% value emitted 109 !== oEmitString on line 2083 of cache.pt
+.tTrapBegin !== % value emitted 78 on line 2084 of cache.pt
+.tLiteralAddress !== % value emitted 61 on line 2085 of cache.pt
+oEmitValue !== % value emitted 32 on line 2086 of cache.pt
+% value emitted 4 !== .tParmEnd on line 2087 of cache.pt
+.tVarParm !== .tLiteralInteger on line 2088 of cache.pt
 .tParmEnd !== oEmitValue on line 2089 of cache.pt
-.tTrap !== % value emitted 1 on line 2090 of cache.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 2091 of cache.pt
-% value emitted 109 !== .tTrap on line 2092 of cache.pt
-.tTrapBegin !== oEmitTrapKind(trWriteString) on line 2093 of cache.pt
-.tLiteralAddress !== % value emitted 109 on line 2094 of cache.pt
-oEmitValue !== .tTrapBegin on line 2095 of cache.pt
-% value emitted 4 !== .tLiteralAddress on line 2096 of cache.pt
-.tVarParm !== oEmitValue on line 2097 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 2090 of cache.pt
+oEmitValue !== .tParmEnd on line 2091 of cache.pt
+% value emitted 8 !== .tTrap on line 2092 of cache.pt
+.tFetchInteger !== oEmitTrapKind(trWriteString) on line 2093 of cache.pt
+.tParmEnd !== % value emitted 109 on line 2094 of cache.pt
+.tLiteralInteger !== .tTrapBegin on line 2095 of cache.pt
+oEmitValue !== .tLiteralAddress on line 2096 of cache.pt
+% value emitted 1 !== oEmitValue on line 2097 of cache.pt
 .tParmEnd !== % value emitted 4 on line 2098 of cache.pt
-.tLiteralAddress !== .tVarParm on line 2099 of cache.pt
-oEmitValue !== .tParmEnd on line 2100 of cache.pt
-% value emitted 8 !== .tLiteralAddress on line 2101 of cache.pt
-.tFetchInteger !== oEmitValue on line 2102 of cache.pt
-.tParmEnd !== % value emitted 8 on line 2103 of cache.pt
-.tLiteralInteger !== .tFetchInteger on line 2104 of cache.pt
-oEmitValue !== .tParmEnd on line 2105 of cache.pt
-% value emitted 1 !== .tLiteralInteger on line 2106 of cache.pt
+.tTrap !== .tVarParm on line 2099 of cache.pt
+oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 2100 of cache.pt
+% value emitted 7 !== .tLiteralAddress on line 2101 of cache.pt
+.tTrapBegin !== oEmitValue on line 2102 of cache.pt
+.tLiteralAddress !== % value emitted 8 on line 2103 of cache.pt
+oEmitValue !== .tFetchInteger on line 2104 of cache.pt
+% value emitted 4 !== .tParmEnd on line 2105 of cache.pt
+.tVarParm !== .tLiteralInteger on line 2106 of cache.pt
 .tParmEnd !== oEmitValue on line 2107 of cache.pt
-.tTrap !== % value emitted 1 on line 2108 of cache.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 2109 of cache.pt
-% value emitted 7 !== .tTrap on line 2110 of cache.pt
-.tTrapBegin !== oEmitTrapKind(trWriteInteger) on line 2111 of cache.pt
-.tLiteralAddress !== % value emitted 8 on line 2112 of cache.pt
-oEmitValue !== .tTrapBegin on line 2113 of cache.pt
-% value emitted 4 !== .tLiteralAddress on line 2114 of cache.pt
-.tVarParm !== oEmitValue on line 2115 of cache.pt
-.tParmEnd !== % value emitted 4 on line 2116 of cache.pt
-.tLiteralString !== .tVarParm on line 2117 of cache.pt
-oEmitValue !== .tParmEnd on line 2118 of cache.pt
-% value emitted 40 !== .tLiteralString on line 2119 of cache.pt
-oEmitString !== oEmitValue on line 2120 of cache.pt
+.tLiteralString !== % value emitted 1 on line 2108 of cache.pt
+oEmitValue !== .tParmEnd on line 2109 of cache.pt
+% value emitted 40 !== .tTrap on line 2110 of cache.pt
+oEmitString !== oEmitTrapKind(trWriteInteger) on line 2111 of cache.pt
+% value emitted 32 !== % value emitted 8 on line 2112 of cache.pt
+% value emitted 32 !== .tTrapBegin on line 2113 of cache.pt
+% value emitted 65 !== .tLiteralAddress on line 2114 of cache.pt
+% value emitted 118 !== oEmitValue on line 2115 of cache.pt
+% value emitted 101 !== % value emitted 4 on line 2116 of cache.pt
+% value emitted 114 !== .tVarParm on line 2117 of cache.pt
+% value emitted 97 !== .tParmEnd on line 2118 of cache.pt
+% value emitted 103 !== .tLiteralString on line 2119 of cache.pt
+% value emitted 101 !== oEmitValue on line 2120 of cache.pt
 % value emitted 32 !== % value emitted 40 on line 2121 of cache.pt
-% value emitted 32 !== oEmitString on line 2122 of cache.pt
-% value emitted 65 !== % value emitted 32 on line 2123 of cache.pt
-% value emitted 118 !== % value emitted 32 on line 2124 of cache.pt
-% value emitted 101 !== % value emitted 65 on line 2125 of cache.pt
-% value emitted 114 !== % value emitted 118 on line 2126 of cache.pt
-% value emitted 97 !== % value emitted 101 on line 2127 of cache.pt
-% value emitted 103 !== % value emitted 114 on line 2128 of cache.pt
-% value emitted 101 !== % value emitted 97 on line 2129 of cache.pt
+% value emitted 99 !== oEmitString on line 2122 of cache.pt
+% value emitted 111 !== % value emitted 32 on line 2123 of cache.pt
+% value emitted 109 !== % value emitted 32 on line 2124 of cache.pt
+% value emitted 112 !== % value emitted 65 on line 2125 of cache.pt
+% value emitted 97 !== % value emitted 118 on line 2126 of cache.pt
+% value emitted 114 !== % value emitted 101 on line 2127 of cache.pt
+% value emitted 101 !== % value emitted 114 on line 2128 of cache.pt
+% value emitted 115 !== % value emitted 97 on line 2129 of cache.pt
 % value emitted 32 !== % value emitted 103 on line 2130 of cache.pt
-% value emitted 99 !== % value emitted 101 on line 2131 of cache.pt
-% value emitted 111 !== % value emitted 32 on line 2132 of cache.pt
-% value emitted 109 !== % value emitted 99 on line 2133 of cache.pt
-% value emitted 112 !== % value emitted 111 on line 2134 of cache.pt
-% value emitted 97 !== % value emitted 109 on line 2135 of cache.pt
-% value emitted 114 !== % value emitted 112 on line 2136 of cache.pt
-% value emitted 101 !== % value emitted 97 on line 2137 of cache.pt
-% value emitted 115 !== % value emitted 114 on line 2138 of cache.pt
-% value emitted 32 !== % value emitted 101 on line 2139 of cache.pt
-% value emitted 112 !== % value emitted 115 on line 2140 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 2141 of cache.pt
-% value emitted 114 !== % value emitted 112 on line 2142 of cache.pt
-% value emitted 32 !== % value emitted 101 on line 2143 of cache.pt
-% value emitted 115 !== % value emitted 114 on line 2144 of cache.pt
-% value emitted 101 !== % value emitted 32 on line 2145 of cache.pt
-% value emitted 97 !== % value emitted 115 on line 2146 of cache.pt
-% value emitted 114 !== % value emitted 101 on line 2147 of cache.pt
-% value emitted 99 !== % value emitted 97 on line 2148 of cache.pt
-% value emitted 104 !== % value emitted 114 on line 2149 of cache.pt
-% value emitted 32 !== % value emitted 99 on line 2150 of cache.pt
-% value emitted 40 !== % value emitted 104 on line 2151 of cache.pt
-% value emitted 67 !== % value emitted 32 on line 2152 of cache.pt
-% value emitted 97 !== % value emitted 40 on line 2153 of cache.pt
-% value emitted 118 !== % value emitted 67 on line 2154 of cache.pt
-% value emitted 103 !== % value emitted 97 on line 2155 of cache.pt
-% value emitted 41 !== % value emitted 118 on line 2156 of cache.pt
-% value emitted 32 !== % value emitted 103 on line 2157 of cache.pt
-% value emitted 61 !== % value emitted 41 on line 2158 of cache.pt
-% value emitted 61 !== % value emitted 32 on line 2159 of cache.pt
-% value emitted 32 !== % value emitted 61 on line 2160 of cache.pt
-.tParmEnd !== % value emitted 61 on line 2161 of cache.pt
-.tLiteralInteger !== % value emitted 32 on line 2162 of cache.pt
-oEmitValue !== .tParmEnd on line 2163 of cache.pt
-% value emitted 1 !== .tLiteralInteger on line 2164 of cache.pt
+% value emitted 112 !== % value emitted 101 on line 2131 of cache.pt
+% value emitted 101 !== % value emitted 32 on line 2132 of cache.pt
+% value emitted 114 !== % value emitted 99 on line 2133 of cache.pt
+% value emitted 32 !== % value emitted 111 on line 2134 of cache.pt
+% value emitted 115 !== % value emitted 109 on line 2135 of cache.pt
+% value emitted 101 !== % value emitted 112 on line 2136 of cache.pt
+% value emitted 99 !== % value emitted 101 on line 2139 of cache.pt
+% value emitted 104 !== % value emitted 115 on line 2140 of cache.pt
+% value emitted 40 !== % value emitted 112 on line 2142 of cache.pt
+% value emitted 67 !== % value emitted 101 on line 2143 of cache.pt
+% value emitted 97 !== % value emitted 114 on line 2144 of cache.pt
+% value emitted 118 !== % value emitted 32 on line 2145 of cache.pt
+% value emitted 103 !== % value emitted 115 on line 2146 of cache.pt
+% value emitted 41 !== % value emitted 101 on line 2147 of cache.pt
+% value emitted 32 !== % value emitted 97 on line 2148 of cache.pt
+% value emitted 61 !== % value emitted 114 on line 2149 of cache.pt
+% value emitted 61 !== % value emitted 99 on line 2150 of cache.pt
+% value emitted 32 !== % value emitted 104 on line 2151 of cache.pt
+.tParmEnd !== % value emitted 32 on line 2152 of cache.pt
+.tLiteralInteger !== % value emitted 40 on line 2153 of cache.pt
+oEmitValue !== % value emitted 67 on line 2154 of cache.pt
+% value emitted 1 !== % value emitted 97 on line 2155 of cache.pt
+.tParmEnd !== % value emitted 118 on line 2156 of cache.pt
+.tTrap !== % value emitted 103 on line 2157 of cache.pt
+oEmitTrapKind(trWriteString) !== % value emitted 41 on line 2158 of cache.pt
+% value emitted 109 !== % value emitted 32 on line 2159 of cache.pt
+.tTrapBegin !== % value emitted 61 on line 2160 of cache.pt
+.tLiteralAddress !== % value emitted 61 on line 2161 of cache.pt
+oEmitValue !== % value emitted 32 on line 2162 of cache.pt
+% value emitted 4 !== .tParmEnd on line 2163 of cache.pt
+.tVarParm !== .tLiteralInteger on line 2164 of cache.pt
 .tParmEnd !== oEmitValue on line 2165 of cache.pt
-.tTrap !== % value emitted 1 on line 2166 of cache.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 2167 of cache.pt
-% value emitted 109 !== .tTrap on line 2168 of cache.pt
-.tTrapBegin !== oEmitTrapKind(trWriteString) on line 2169 of cache.pt
-.tLiteralAddress !== % value emitted 109 on line 2170 of cache.pt
-oEmitValue !== .tTrapBegin on line 2171 of cache.pt
-% value emitted 4 !== .tLiteralAddress on line 2172 of cache.pt
-.tVarParm !== oEmitValue on line 2173 of cache.pt
+.tLiteralAddress !== % value emitted 1 on line 2166 of cache.pt
+oEmitValue !== .tParmEnd on line 2167 of cache.pt
+% value emitted 4244 !== .tTrap on line 2168 of cache.pt
+.tFetchInteger !== oEmitTrapKind(trWriteString) on line 2169 of cache.pt
+.tParmEnd !== % value emitted 109 on line 2170 of cache.pt
+.tLiteralInteger !== .tTrapBegin on line 2171 of cache.pt
+oEmitValue !== .tLiteralAddress on line 2172 of cache.pt
+% value emitted 1 !== oEmitValue on line 2173 of cache.pt
 .tParmEnd !== % value emitted 4 on line 2174 of cache.pt
-.tLiteralAddress !== .tVarParm on line 2175 of cache.pt
-oEmitValue !== .tParmEnd on line 2176 of cache.pt
-% value emitted 4244 !== .tLiteralAddress on line 2177 of cache.pt
-.tFetchInteger !== oEmitValue on line 2178 of cache.pt
-.tParmEnd !== % value emitted 4244 on line 2179 of cache.pt
-.tLiteralInteger !== .tFetchInteger on line 2180 of cache.pt
+.tTrap !== .tVarParm on line 2175 of cache.pt
+oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 2176 of cache.pt
+% value emitted 7 !== .tLiteralAddress on line 2177 of cache.pt
+.tWriteEnd !== oEmitValue on line 2178 of cache.pt
+.tTrapBegin !== % value emitted 4244 on line 2179 of cache.pt
+.tLiteralAddress !== .tFetchInteger on line 2180 of cache.pt
 oEmitValue !== .tParmEnd on line 2181 of cache.pt
-% value emitted 1 !== .tLiteralInteger on line 2182 of cache.pt
-.tParmEnd !== oEmitValue on line 2183 of cache.pt
-.tTrap !== % value emitted 1 on line 2184 of cache.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 2185 of cache.pt
-% value emitted 7 !== .tTrap on line 2186 of cache.pt
-.tWriteEnd !== oEmitTrapKind(trWriteInteger) on line 2187 of cache.pt
+% value emitted 4 !== .tLiteralInteger on line 2182 of cache.pt
+.tVarParm !== oEmitValue on line 2183 of cache.pt
+.tParmEnd !== % value emitted 1 on line 2184 of cache.pt
+.tTrap !== .tParmEnd on line 2185 of cache.pt
+oEmitTrapKind(trWriteln) !== .tTrap on line 2186 of cache.pt
+% value emitted 6 !== oEmitTrapKind(trWriteInteger) on line 2187 of cache.pt
 .tTrapBegin !== % value emitted 8 on line 2188 of cache.pt
-.tLiteralAddress !== .tWriteEnd on line 2189 of cache.pt
-oEmitValue !== .tTrapBegin on line 2190 of cache.pt
-% value emitted 4 !== .tLiteralAddress on line 2191 of cache.pt
-.tVarParm !== oEmitValue on line 2192 of cache.pt
-.tParmEnd !== % value emitted 4 on line 2193 of cache.pt
-.tTrap !== .tVarParm on line 2194 of cache.pt
-oEmitTrapKind(trWriteln) !== .tParmEnd on line 2195 of cache.pt
-% value emitted 6 !== .tTrap on line 2196 of cache.pt
-.tTrapBegin !== oEmitTrapKind(trWriteln) on line 2197 of cache.pt
-.tTrap !== % value emitted 6 on line 2198 of cache.pt
-oEmitTrapKind(trHalt) !== .tTrapBegin on line 2199 of cache.pt
-% value emitted 0 !== .tTrap on line 2200 of cache.pt
- !== oEmitTrapKind(trHalt) on line 2201 of cache.pt
+.tTrap !== .tWriteEnd on line 2189 of cache.pt
+oEmitTrapKind(trHalt) !== .tTrapBegin on line 2190 of cache.pt
+% value emitted 0 !== .tLiteralAddress on line 2191 of cache.pt
+ !== oEmitValue on line 2192 of cache.pt
 
 ```
 end file
@@ -20078,7 +15034,6 @@ oEmitValue !== .tLT on line 794 of lunch.pt
 end file
 --------------------------------
 Reading file mbubblesort.pt
-Lengths do not match!  Something went wrong in mbubblesort.pt
 
 Output is: 
 ```
@@ -20119,7 +15074,6 @@ Output is:
        % value emitted 112
        .tStoreParmInteger
        .tParmEnd
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -20540,420 +15494,165 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 37 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 38 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 39 of mbubblesort.pt
-oEmitValue !== % value emitted 120 on line 40 of mbubblesort.pt
-% value emitted 120 !== .tFetchAddress on line 41 of mbubblesort.pt
-.tFetchAddress !== .tLiteralAddress on line 42 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 43 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 44 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 45 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 46 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 47 of mbubblesort.pt
-oEmitValue !== % value emitted 112 on line 48 of mbubblesort.pt
-% value emitted 112 !== .tFetchInteger on line 49 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 50 of mbubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 51 of mbubblesort.pt
-.tFetchInteger !== .tLiteralAddress on line 52 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 53 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 54 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 55 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 56 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 57 of mbubblesort.pt
-oEmitValue !== % value emitted 116 on line 58 of mbubblesort.pt
-% value emitted 116 !== .tFetchInteger on line 59 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 60 of mbubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 61 of mbubblesort.pt
-.tFetchInteger !== .tLT on line 62 of mbubblesort.pt
-.tLT !== .tAssignBoolean on line 63 of mbubblesort.pt
-.tAssignBoolean !== .tProcedureEnd on line 64 of mbubblesort.pt
-.tProcedureEnd !== .tSkipProc on line 65 of mbubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 66 of mbubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 67 of mbubblesort.pt
-% value emitted -32767 !== .tLiteralAddress on line 68 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 69 of mbubblesort.pt
-oEmitValue !== % value emitted 128 on line 70 of mbubblesort.pt
-% value emitted 128 !== .tStoreParmInteger on line 71 of mbubblesort.pt
-.tStoreParmInteger !== .tLiteralAddress on line 72 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 73 of mbubblesort.pt
-oEmitValue !== % value emitted 124 on line 74 of mbubblesort.pt
-% value emitted 124 !== .tStoreParmInteger on line 75 of mbubblesort.pt
-.tStoreParmInteger !== .tParmEnd on line 76 of mbubblesort.pt
-.tParmEnd !== .tAssignBegin on line 77 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 78 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 79 of mbubblesort.pt
-oEmitValue !== % value emitted 132 on line 80 of mbubblesort.pt
-% value emitted 132 !== .tLiteralAddress on line 81 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 82 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 83 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 84 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 85 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 86 of mbubblesort.pt
-oEmitValue !== % value emitted 124 on line 87 of mbubblesort.pt
-% value emitted 124 !== .tFetchInteger on line 88 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 89 of mbubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 90 of mbubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 91 of mbubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 92 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 93 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 94 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 95 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 96 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 97 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 98 of mbubblesort.pt
-oEmitValue !== % value emitted 124 on line 99 of mbubblesort.pt
-% value emitted 124 !== .tFetchInteger on line 100 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 101 of mbubblesort.pt
-.tSubscriptInteger !== .tLiteralAddress on line 102 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 103 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 104 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 105 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 106 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 107 of mbubblesort.pt
-oEmitValue !== % value emitted 128 on line 108 of mbubblesort.pt
-% value emitted 128 !== .tFetchInteger on line 109 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 110 of mbubblesort.pt
-.tSubscriptInteger !== .tFetchInteger on line 111 of mbubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 112 of mbubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 113 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 114 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 115 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 116 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 117 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralAddress on line 118 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 119 of mbubblesort.pt
-oEmitValue !== % value emitted 128 on line 120 of mbubblesort.pt
-% value emitted 128 !== .tFetchInteger on line 121 of mbubblesort.pt
-.tFetchInteger !== .tSubscriptInteger on line 122 of mbubblesort.pt
-.tSubscriptInteger !== .tLiteralAddress on line 123 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 124 of mbubblesort.pt
-oEmitValue !== % value emitted 132 on line 125 of mbubblesort.pt
-% value emitted 132 !== .tFetchInteger on line 126 of mbubblesort.pt
-.tFetchInteger !== .tAssignInteger on line 127 of mbubblesort.pt
-.tAssignInteger !== .tProcedureEnd on line 128 of mbubblesort.pt
-.tProcedureEnd !== .tSkipProc on line 129 of mbubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 130 of mbubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 131 of mbubblesort.pt
-% value emitted -32767 !== .tParmEnd on line 132 of mbubblesort.pt
-.tParmEnd !== .tAssignBegin on line 133 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 134 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 135 of mbubblesort.pt
-oEmitValue !== % value emitted 136 on line 136 of mbubblesort.pt
-% value emitted 136 !== .tLiteralInteger on line 137 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 138 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 139 of mbubblesort.pt
-% value emitted 1 !== .tAssignInteger on line 140 of mbubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 141 of mbubblesort.pt
-.tWhileBegin !== .tWhilePreBreak on line 142 of mbubblesort.pt
-.tWhilePreBreak !== .tWriteBegin on line 143 of mbubblesort.pt
-oEmitNullAddress !== .tTrapBegin on line 144 of mbubblesort.pt
-% value emitted -32767 !== .tLiteralAddress on line 145 of mbubblesort.pt
-.tWriteBegin !== oEmitValue on line 146 of mbubblesort.pt
-.tTrapBegin !== % value emitted 0 on line 147 of mbubblesort.pt
-.tLiteralAddress !== .tVarParm on line 148 of mbubblesort.pt
-oEmitValue !== .tParmEnd on line 149 of mbubblesort.pt
-% value emitted 0 !== .tLiteralAddress on line 150 of mbubblesort.pt
-.tVarParm !== oEmitValue on line 151 of mbubblesort.pt
-.tParmEnd !== % value emitted 4 on line 152 of mbubblesort.pt
-.tLiteralAddress !== .tSubscriptBegin on line 153 of mbubblesort.pt
-oEmitValue !== .tLiteralAddress on line 154 of mbubblesort.pt
-% value emitted 4 !== oEmitValue on line 155 of mbubblesort.pt
-.tSubscriptBegin !== % value emitted 136 on line 156 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 157 of mbubblesort.pt
-oEmitValue !== .tSubscriptInteger on line 158 of mbubblesort.pt
-% value emitted 136 !== .tFetchInteger on line 159 of mbubblesort.pt
-.tFetchInteger !== .tParmEnd on line 160 of mbubblesort.pt
-.tSubscriptInteger !== .tLiteralInteger on line 161 of mbubblesort.pt
-.tFetchInteger !== oEmitValue on line 162 of mbubblesort.pt
-.tParmEnd !== % value emitted 4 on line 163 of mbubblesort.pt
-.tLiteralInteger !== .tParmEnd on line 164 of mbubblesort.pt
-oEmitValue !== .tTrap on line 165 of mbubblesort.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 166 of mbubblesort.pt
-.tParmEnd !== % value emitted 8 on line 167 of mbubblesort.pt
-.tTrap !== .tWriteEnd on line 168 of mbubblesort.pt
-oEmitTrapKind(trWriteInteger) !== .tAssignBegin on line 169 of mbubblesort.pt
-% value emitted 7 !== .tLiteralAddress on line 170 of mbubblesort.pt
-.tWriteEnd !== oEmitValue on line 171 of mbubblesort.pt
-.tAssignBegin !== % value emitted 136 on line 172 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 176 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 177 of mbubblesort.pt
-% value emitted 136 !== oEmitValue on line 178 of mbubblesort.pt
-.tFetchInteger !== % value emitted 1 on line 179 of mbubblesort.pt
-.tLiteralInteger !== .tAdd on line 180 of mbubblesort.pt
-oEmitValue !== .tAssignInteger on line 181 of mbubblesort.pt
-% value emitted 1 !== .tWhileBreakIf on line 182 of mbubblesort.pt
-.tAdd !== .tLiteralAddress on line 183 of mbubblesort.pt
-.tAssignInteger !== oEmitValue on line 184 of mbubblesort.pt
-.tWhileBreakIf !== % value emitted 136 on line 185 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 186 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 187 of mbubblesort.pt
-% value emitted 136 !== oEmitValue on line 188 of mbubblesort.pt
-.tFetchInteger !== % value emitted 25 on line 189 of mbubblesort.pt
-.tLiteralInteger !== .tGT on line 190 of mbubblesort.pt
-oEmitValue !== .tNot on line 191 of mbubblesort.pt
-% value emitted 25 !== .tWhileTest on line 192 of mbubblesort.pt
-.tGT !== oEmitNullAddress on line 193 of mbubblesort.pt
-.tNot !== % value emitted -32767 on line 194 of mbubblesort.pt
-.tWhileTest !== .tWhileEnd on line 195 of mbubblesort.pt
-% value emitted 138 !== % value emitted 137 on line 196 of mbubblesort.pt
-.tWhileEnd !== .tTrapBegin on line 197 of mbubblesort.pt
-.tTrapBegin !== .tLiteralAddress on line 198 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 199 of mbubblesort.pt
-oEmitValue !== % value emitted 0 on line 200 of mbubblesort.pt
-% value emitted 0 !== .tVarParm on line 201 of mbubblesort.pt
-.tVarParm !== .tParmEnd on line 202 of mbubblesort.pt
-.tParmEnd !== .tTrap on line 203 of mbubblesort.pt
-.tTrap !== oEmitTrapKind(trWriteln) on line 204 of mbubblesort.pt
-oEmitTrapKind(trWriteln) !== % value emitted 6 on line 205 of mbubblesort.pt
-% value emitted 6 !== .tProcedureEnd on line 206 of mbubblesort.pt
-.tProcedureEnd !== .tAssignBegin on line 207 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 208 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 209 of mbubblesort.pt
-oEmitValue !== % value emitted 4 on line 210 of mbubblesort.pt
-% value emitted 4 !== .tSubscriptBegin on line 211 of mbubblesort.pt
-.tSubscriptBegin !== .tLiteralInteger on line 212 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 213 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 214 of mbubblesort.pt
-% value emitted 1 !== .tSubscriptInteger on line 215 of mbubblesort.pt
-.tSubscriptInteger !== .tLiteralInteger on line 216 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 217 of mbubblesort.pt
-oEmitValue !== % value emitted 61 on line 218 of mbubblesort.pt
-% value emitted 61 !== .tAssignInteger on line 219 of mbubblesort.pt
-.tAssignInteger !== .tAssignBegin on line 220 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 221 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 222 of mbubblesort.pt
-oEmitValue !== % value emitted 140 on line 223 of mbubblesort.pt
-% value emitted 140 !== .tLiteralInteger on line 224 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 225 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 226 of mbubblesort.pt
-% value emitted 1 !== .tAssignInteger on line 227 of mbubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 228 of mbubblesort.pt
-.tWhileBegin !== .tWhilePreBreak on line 229 of mbubblesort.pt
-.tWhilePreBreak !== .tAssignBegin on line 230 of mbubblesort.pt
-oEmitNullAddress !== .tLiteralAddress on line 231 of mbubblesort.pt
-% value emitted -32767 !== oEmitValue on line 232 of mbubblesort.pt
-.tAssignBegin !== % value emitted 140 on line 233 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 237 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 238 of mbubblesort.pt
-% value emitted 140 !== oEmitValue on line 239 of mbubblesort.pt
-.tFetchInteger !== % value emitted 1 on line 240 of mbubblesort.pt
-.tLiteralInteger !== .tAdd on line 241 of mbubblesort.pt
-oEmitValue !== .tAssignInteger on line 242 of mbubblesort.pt
-% value emitted 1 !== .tAssignBegin on line 243 of mbubblesort.pt
-.tAdd !== .tLiteralAddress on line 244 of mbubblesort.pt
-.tAssignInteger !== oEmitValue on line 245 of mbubblesort.pt
-.tAssignBegin !== % value emitted 144 on line 246 of mbubblesort.pt
-% value emitted 144 !== % value emitted 4 on line 249 of mbubblesort.pt
-.tLiteralAddress !== .tSubscriptBegin on line 250 of mbubblesort.pt
-oEmitValue !== .tLiteralAddress on line 251 of mbubblesort.pt
-% value emitted 4 !== oEmitValue on line 252 of mbubblesort.pt
-.tSubscriptBegin !== % value emitted 140 on line 253 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 254 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 255 of mbubblesort.pt
-% value emitted 140 !== oEmitValue on line 256 of mbubblesort.pt
-.tFetchInteger !== % value emitted 1 on line 257 of mbubblesort.pt
-.tLiteralInteger !== .tSubtract on line 258 of mbubblesort.pt
-oEmitValue !== .tSubscriptInteger on line 259 of mbubblesort.pt
-% value emitted 1 !== .tFetchInteger on line 260 of mbubblesort.pt
-.tSubtract !== .tLiteralInteger on line 261 of mbubblesort.pt
-.tSubscriptInteger !== oEmitValue on line 262 of mbubblesort.pt
-.tFetchInteger !== % value emitted 1271 on line 263 of mbubblesort.pt
-.tLiteralInteger !== .tMultiply on line 264 of mbubblesort.pt
-oEmitValue !== .tAssignInteger on line 265 of mbubblesort.pt
-% value emitted 1271 !== .tAssignBegin on line 266 of mbubblesort.pt
-.tMultiply !== .tLiteralAddress on line 267 of mbubblesort.pt
-.tAssignInteger !== oEmitValue on line 268 of mbubblesort.pt
-.tAssignBegin !== % value emitted 4 on line 269 of mbubblesort.pt
-.tLiteralAddress !== .tSubscriptBegin on line 270 of mbubblesort.pt
-oEmitValue !== .tLiteralAddress on line 271 of mbubblesort.pt
-% value emitted 4 !== oEmitValue on line 272 of mbubblesort.pt
-.tSubscriptBegin !== % value emitted 140 on line 273 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 274 of mbubblesort.pt
-oEmitValue !== .tSubscriptInteger on line 275 of mbubblesort.pt
-% value emitted 140 !== .tLiteralAddress on line 276 of mbubblesort.pt
-.tFetchInteger !== oEmitValue on line 277 of mbubblesort.pt
-.tSubscriptInteger !== % value emitted 144 on line 278 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 279 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 280 of mbubblesort.pt
-% value emitted 144 !== oEmitValue on line 281 of mbubblesort.pt
-.tFetchInteger !== % value emitted 99 on line 282 of mbubblesort.pt
-.tLiteralInteger !== .tModulus on line 283 of mbubblesort.pt
-oEmitValue !== .tAssignInteger on line 284 of mbubblesort.pt
-% value emitted 99 !== .tWhileBreakIf on line 285 of mbubblesort.pt
-.tModulus !== .tLiteralAddress on line 286 of mbubblesort.pt
-.tAssignInteger !== oEmitValue on line 287 of mbubblesort.pt
-.tWhileBreakIf !== % value emitted 140 on line 288 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 289 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 290 of mbubblesort.pt
-% value emitted 140 !== oEmitValue on line 291 of mbubblesort.pt
-.tFetchInteger !== % value emitted 25 on line 292 of mbubblesort.pt
-.tLiteralInteger !== .tEQ on line 293 of mbubblesort.pt
-oEmitValue !== .tNot on line 294 of mbubblesort.pt
-% value emitted 25 !== .tWhileTest on line 295 of mbubblesort.pt
-.tEQ !== oEmitNullAddress on line 296 of mbubblesort.pt
-.tNot !== % value emitted -32767 on line 297 of mbubblesort.pt
-.tWhileTest !== .tWhileEnd on line 298 of mbubblesort.pt
-% value emitted 225 !== % value emitted 222 on line 299 of mbubblesort.pt
-.tWhileEnd !== .tSkipProc on line 300 of mbubblesort.pt
-.tSkipProc !== oEmitNullAddress on line 301 of mbubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 302 of mbubblesort.pt
-% value emitted -32767 !== .tParmEnd on line 303 of mbubblesort.pt
-.tParmEnd !== .tAssignBegin on line 304 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 305 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 306 of mbubblesort.pt
-oEmitValue !== % value emitted 148 on line 307 of mbubblesort.pt
-% value emitted 148 !== .tLiteralInteger on line 308 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 309 of mbubblesort.pt
-oEmitValue !== % value emitted 25 on line 310 of mbubblesort.pt
-% value emitted 25 !== .tLiteralInteger on line 311 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 312 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 313 of mbubblesort.pt
-% value emitted 1 !== .tSubtract on line 314 of mbubblesort.pt
-.tSubtract !== .tAssignInteger on line 315 of mbubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 316 of mbubblesort.pt
-.tWhileBegin !== .tWhilePreBreak on line 317 of mbubblesort.pt
-.tWhilePreBreak !== .tWhileBreakIf on line 318 of mbubblesort.pt
-oEmitNullAddress !== .tLiteralAddress on line 319 of mbubblesort.pt
-% value emitted -32767 !== oEmitValue on line 320 of mbubblesort.pt
-.tWhileBreakIf !== % value emitted 148 on line 321 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 322 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 323 of mbubblesort.pt
-% value emitted 148 !== oEmitValue on line 324 of mbubblesort.pt
-.tFetchInteger !== % value emitted 0 on line 325 of mbubblesort.pt
-.tLiteralInteger !== .tEQ on line 326 of mbubblesort.pt
-oEmitValue !== .tNot on line 327 of mbubblesort.pt
-% value emitted 0 !== .tWhileTest on line 328 of mbubblesort.pt
-.tEQ !== oEmitNullAddress on line 329 of mbubblesort.pt
-.tNot !== % value emitted -32767 on line 330 of mbubblesort.pt
-.tWhileTest !== .tAssignBegin on line 331 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 332 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 333 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 334 of mbubblesort.pt
-% value emitted 152 !== .tLiteralInteger on line 335 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 336 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 337 of mbubblesort.pt
-% value emitted 1 !== .tAssignInteger on line 338 of mbubblesort.pt
-.tAssignInteger !== .tWhileBegin on line 339 of mbubblesort.pt
-.tWhileBegin !== .tWhilePreBreak on line 340 of mbubblesort.pt
-.tWhilePreBreak !== .tWhileBreakIf on line 341 of mbubblesort.pt
-oEmitNullAddress !== .tLiteralAddress on line 342 of mbubblesort.pt
-% value emitted -32767 !== oEmitValue on line 343 of mbubblesort.pt
-.tWhileBreakIf !== % value emitted 152 on line 344 of mbubblesort.pt
-.tLiteralAddress !== .tFetchInteger on line 345 of mbubblesort.pt
-oEmitValue !== .tLiteralInteger on line 346 of mbubblesort.pt
-% value emitted 152 !== oEmitValue on line 347 of mbubblesort.pt
-.tFetchInteger !== % value emitted 25 on line 348 of mbubblesort.pt
-.tLiteralInteger !== .tEQ on line 349 of mbubblesort.pt
-oEmitValue !== .tNot on line 350 of mbubblesort.pt
-% value emitted 25 !== .tWhileTest on line 351 of mbubblesort.pt
-.tEQ !== oEmitNullAddress on line 352 of mbubblesort.pt
-.tNot !== % value emitted -32767 on line 353 of mbubblesort.pt
-.tWhileTest !== .tCallBegin on line 354 of mbubblesort.pt
-.tCallBegin !== .tLiteralAddress on line 355 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 356 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 357 of mbubblesort.pt
-% value emitted 152 !== .tFetchInteger on line 358 of mbubblesort.pt
-.tFetchInteger !== .tParmEnd on line 359 of mbubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 360 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 361 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 362 of mbubblesort.pt
-% value emitted 152 !== .tFetchInteger on line 363 of mbubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 364 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 365 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 366 of mbubblesort.pt
-% value emitted 1 !== .tAdd on line 367 of mbubblesort.pt
-.tAdd !== .tParmEnd on line 368 of mbubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 369 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 370 of mbubblesort.pt
-oEmitValue !== % value emitted 156 on line 371 of mbubblesort.pt
-% value emitted 156 !== .tVarParm on line 372 of mbubblesort.pt
-.tVarParm !== .tParmEnd on line 373 of mbubblesort.pt
-.tParmEnd !== .tCallEnd on line 374 of mbubblesort.pt
-.tCallEnd !== oEmitValue on line 375 of mbubblesort.pt
-oEmitValue !== % value emitted 23 on line 376 of mbubblesort.pt
-% value emitted 23 !== .tIfBegin on line 377 of mbubblesort.pt
-.tIfBegin !== .tLiteralAddress on line 378 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 379 of mbubblesort.pt
-oEmitValue !== % value emitted 156 on line 380 of mbubblesort.pt
-% value emitted 156 !== .tFetchBoolean on line 381 of mbubblesort.pt
-.tFetchBoolean !== .tNot on line 382 of mbubblesort.pt
-.tNot !== .tIfThen on line 383 of mbubblesort.pt
-.tIfThen !== oEmitNullAddress on line 384 of mbubblesort.pt
-oEmitNullAddress !== % value emitted -32767 on line 385 of mbubblesort.pt
-% value emitted -32767 !== .tCallBegin on line 386 of mbubblesort.pt
-.tCallBegin !== .tLiteralAddress on line 387 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 388 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 389 of mbubblesort.pt
-% value emitted 152 !== .tFetchInteger on line 390 of mbubblesort.pt
-.tFetchInteger !== .tParmEnd on line 391 of mbubblesort.pt
-.tParmEnd !== .tLiteralAddress on line 392 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 393 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 394 of mbubblesort.pt
-% value emitted 152 !== .tFetchInteger on line 395 of mbubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 396 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 397 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 398 of mbubblesort.pt
-% value emitted 1 !== .tAdd on line 399 of mbubblesort.pt
-.tAdd !== .tParmEnd on line 400 of mbubblesort.pt
-.tParmEnd !== .tCallEnd on line 401 of mbubblesort.pt
-.tCallEnd !== oEmitValue on line 402 of mbubblesort.pt
-oEmitValue !== % value emitted 64 on line 403 of mbubblesort.pt
-% value emitted 64 !== .tIfEnd on line 404 of mbubblesort.pt
-.tIfEnd !== .tAssignBegin on line 405 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 406 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 407 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 408 of mbubblesort.pt
-% value emitted 152 !== .tLiteralAddress on line 409 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 410 of mbubblesort.pt
-oEmitValue !== % value emitted 152 on line 411 of mbubblesort.pt
-% value emitted 152 !== .tFetchInteger on line 412 of mbubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 413 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 414 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 415 of mbubblesort.pt
-% value emitted 1 !== .tAdd on line 416 of mbubblesort.pt
-.tAdd !== .tAssignInteger on line 417 of mbubblesort.pt
-.tAssignInteger !== .tWhileEnd on line 418 of mbubblesort.pt
-% value emitted 334 !== % value emitted 331 on line 419 of mbubblesort.pt
-.tWhileEnd !== .tAssignBegin on line 420 of mbubblesort.pt
-.tAssignBegin !== .tLiteralAddress on line 421 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 422 of mbubblesort.pt
-oEmitValue !== % value emitted 148 on line 423 of mbubblesort.pt
-% value emitted 148 !== .tLiteralAddress on line 424 of mbubblesort.pt
-.tLiteralAddress !== oEmitValue on line 425 of mbubblesort.pt
-oEmitValue !== % value emitted 148 on line 426 of mbubblesort.pt
-% value emitted 148 !== .tFetchInteger on line 427 of mbubblesort.pt
-.tFetchInteger !== .tLiteralInteger on line 428 of mbubblesort.pt
-.tLiteralInteger !== oEmitValue on line 429 of mbubblesort.pt
-oEmitValue !== % value emitted 1 on line 430 of mbubblesort.pt
-% value emitted 1 !== .tSubtract on line 431 of mbubblesort.pt
-.tSubtract !== .tAssignInteger on line 432 of mbubblesort.pt
-.tAssignInteger !== .tWhileEnd on line 433 of mbubblesort.pt
-% value emitted 310 !== % value emitted 307 on line 434 of mbubblesort.pt
-.tWhileEnd !== .tProcedureEnd on line 435 of mbubblesort.pt
-.tProcedureEnd !== .tCallBegin on line 436 of mbubblesort.pt
-.tCallBegin !== .tCallEnd on line 437 of mbubblesort.pt
-.tCallEnd !== oEmitValue on line 438 of mbubblesort.pt
-oEmitValue !== % value emitted 125 on line 439 of mbubblesort.pt
-% value emitted 125 !== .tCallBegin on line 440 of mbubblesort.pt
-.tCallBegin !== .tCallEnd on line 441 of mbubblesort.pt
-.tCallEnd !== oEmitValue on line 442 of mbubblesort.pt
-oEmitValue !== % value emitted 292 on line 443 of mbubblesort.pt
-% value emitted 294 !== .tCallBegin on line 444 of mbubblesort.pt
-.tCallBegin !== .tCallEnd on line 445 of mbubblesort.pt
-.tCallEnd !== oEmitValue on line 446 of mbubblesort.pt
-oEmitValue !== % value emitted 125 on line 447 of mbubblesort.pt
-% value emitted 125 !== .tTrapBegin on line 448 of mbubblesort.pt
-.tTrapBegin !== .tTrap on line 449 of mbubblesort.pt
-.tTrap !== oEmitTrapKind(trHalt) on line 450 of mbubblesort.pt
-oEmitTrapKind(trHalt) !== % value emitted 0 on line 451 of mbubblesort.pt
-% value emitted 0 !==  on line 452 of mbubblesort.pt
+oEmitNullAddress !== .tWriteBegin on line 143 of mbubblesort.pt
+% value emitted -32767 !== .tTrapBegin on line 144 of mbubblesort.pt
+.tWriteBegin !== .tLiteralAddress on line 145 of mbubblesort.pt
+.tTrapBegin !== oEmitValue on line 146 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 0 on line 147 of mbubblesort.pt
+oEmitValue !== .tVarParm on line 148 of mbubblesort.pt
+% value emitted 0 !== .tParmEnd on line 149 of mbubblesort.pt
+.tVarParm !== .tLiteralAddress on line 150 of mbubblesort.pt
+.tParmEnd !== oEmitValue on line 151 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 4 on line 152 of mbubblesort.pt
+oEmitValue !== .tSubscriptBegin on line 153 of mbubblesort.pt
+% value emitted 4 !== .tLiteralAddress on line 154 of mbubblesort.pt
+.tSubscriptBegin !== oEmitValue on line 155 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 136 on line 156 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 157 of mbubblesort.pt
+% value emitted 136 !== .tSubscriptInteger on line 158 of mbubblesort.pt
+.tSubscriptInteger !== .tParmEnd on line 160 of mbubblesort.pt
+.tFetchInteger !== .tLiteralInteger on line 161 of mbubblesort.pt
+.tParmEnd !== oEmitValue on line 162 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 4 on line 163 of mbubblesort.pt
+oEmitValue !== .tParmEnd on line 164 of mbubblesort.pt
+% value emitted 4 !== .tTrap on line 165 of mbubblesort.pt
+.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 166 of mbubblesort.pt
+.tTrap !== % value emitted 8 on line 167 of mbubblesort.pt
+oEmitTrapKind(trWriteInteger) !== .tWriteEnd on line 168 of mbubblesort.pt
+% value emitted 7 !== .tAssignBegin on line 169 of mbubblesort.pt
+.tWriteEnd !== .tLiteralAddress on line 170 of mbubblesort.pt
+.tAssignBegin !== oEmitValue on line 171 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 136 on line 172 of mbubblesort.pt
+oEmitValue !== .tLiteralAddress on line 173 of mbubblesort.pt
+% value emitted 136 !== oEmitValue on line 174 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 136 on line 175 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 176 of mbubblesort.pt
+% value emitted 136 !== .tLiteralInteger on line 177 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 178 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 1 on line 179 of mbubblesort.pt
+oEmitValue !== .tAdd on line 180 of mbubblesort.pt
+% value emitted 1 !== .tAssignInteger on line 181 of mbubblesort.pt
+.tAdd !== .tWhileBreakIf on line 182 of mbubblesort.pt
+.tAssignInteger !== .tLiteralAddress on line 183 of mbubblesort.pt
+.tWhileBreakIf !== oEmitValue on line 184 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 136 on line 185 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 186 of mbubblesort.pt
+% value emitted 136 !== .tLiteralInteger on line 187 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 188 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 25 on line 189 of mbubblesort.pt
+oEmitValue !== .tGT on line 190 of mbubblesort.pt
+% value emitted 25 !== .tNot on line 191 of mbubblesort.pt
+.tGT !== .tWhileTest on line 192 of mbubblesort.pt
+.tNot !== oEmitNullAddress on line 193 of mbubblesort.pt
+.tWhileTest !== % value emitted -32767 on line 194 of mbubblesort.pt
+% value emitted 138 !== .tWhileEnd on line 195 of mbubblesort.pt
+.tWhileEnd !== % value emitted 137 on line 196 of mbubblesort.pt
+oEmitNullAddress !== .tAssignBegin on line 230 of mbubblesort.pt
+% value emitted -32767 !== .tLiteralAddress on line 231 of mbubblesort.pt
+.tAssignBegin !== oEmitValue on line 232 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 233 of mbubblesort.pt
+oEmitValue !== .tLiteralAddress on line 234 of mbubblesort.pt
+% value emitted 140 !== oEmitValue on line 235 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 236 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 237 of mbubblesort.pt
+% value emitted 140 !== .tLiteralInteger on line 238 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 239 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 1 on line 240 of mbubblesort.pt
+oEmitValue !== .tAdd on line 241 of mbubblesort.pt
+% value emitted 1 !== .tAssignInteger on line 242 of mbubblesort.pt
+.tAdd !== .tAssignBegin on line 243 of mbubblesort.pt
+.tAssignInteger !== .tLiteralAddress on line 244 of mbubblesort.pt
+.tAssignBegin !== oEmitValue on line 245 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 144 on line 246 of mbubblesort.pt
+oEmitValue !== .tLiteralAddress on line 247 of mbubblesort.pt
+% value emitted 144 !== oEmitValue on line 248 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 4 on line 249 of mbubblesort.pt
+oEmitValue !== .tSubscriptBegin on line 250 of mbubblesort.pt
+% value emitted 4 !== .tLiteralAddress on line 251 of mbubblesort.pt
+.tSubscriptBegin !== oEmitValue on line 252 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 253 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 254 of mbubblesort.pt
+% value emitted 140 !== .tLiteralInteger on line 255 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 256 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 1 on line 257 of mbubblesort.pt
+oEmitValue !== .tSubtract on line 258 of mbubblesort.pt
+% value emitted 1 !== .tSubscriptInteger on line 259 of mbubblesort.pt
+.tSubtract !== .tFetchInteger on line 260 of mbubblesort.pt
+.tSubscriptInteger !== .tLiteralInteger on line 261 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 262 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 1271 on line 263 of mbubblesort.pt
+oEmitValue !== .tMultiply on line 264 of mbubblesort.pt
+% value emitted 1271 !== .tAssignInteger on line 265 of mbubblesort.pt
+.tMultiply !== .tAssignBegin on line 266 of mbubblesort.pt
+.tAssignInteger !== .tLiteralAddress on line 267 of mbubblesort.pt
+.tAssignBegin !== oEmitValue on line 268 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 4 on line 269 of mbubblesort.pt
+oEmitValue !== .tSubscriptBegin on line 270 of mbubblesort.pt
+% value emitted 4 !== .tLiteralAddress on line 271 of mbubblesort.pt
+.tSubscriptBegin !== oEmitValue on line 272 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 273 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 274 of mbubblesort.pt
+% value emitted 140 !== .tSubscriptInteger on line 275 of mbubblesort.pt
+.tFetchInteger !== .tLiteralAddress on line 276 of mbubblesort.pt
+.tSubscriptInteger !== oEmitValue on line 277 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 144 on line 278 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 279 of mbubblesort.pt
+% value emitted 144 !== .tLiteralInteger on line 280 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 281 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 99 on line 282 of mbubblesort.pt
+oEmitValue !== .tModulus on line 283 of mbubblesort.pt
+% value emitted 99 !== .tAssignInteger on line 284 of mbubblesort.pt
+.tModulus !== .tWhileBreakIf on line 285 of mbubblesort.pt
+.tAssignInteger !== .tLiteralAddress on line 286 of mbubblesort.pt
+.tWhileBreakIf !== oEmitValue on line 287 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 140 on line 288 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 289 of mbubblesort.pt
+% value emitted 140 !== .tLiteralInteger on line 290 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 291 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 25 on line 292 of mbubblesort.pt
+oEmitValue !== .tEQ on line 293 of mbubblesort.pt
+% value emitted 25 !== .tNot on line 294 of mbubblesort.pt
+.tEQ !== .tWhileTest on line 295 of mbubblesort.pt
+.tNot !== oEmitNullAddress on line 296 of mbubblesort.pt
+.tWhileTest !== % value emitted -32767 on line 297 of mbubblesort.pt
+% value emitted 225 !== .tWhileEnd on line 298 of mbubblesort.pt
+.tWhileEnd !== % value emitted 222 on line 299 of mbubblesort.pt
+oEmitNullAddress !== .tWhileBreakIf on line 318 of mbubblesort.pt
+% value emitted -32767 !== .tLiteralAddress on line 319 of mbubblesort.pt
+.tWhileBreakIf !== oEmitValue on line 320 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 148 on line 321 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 322 of mbubblesort.pt
+% value emitted 148 !== .tLiteralInteger on line 323 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 324 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 0 on line 325 of mbubblesort.pt
+oEmitValue !== .tEQ on line 326 of mbubblesort.pt
+% value emitted 0 !== .tNot on line 327 of mbubblesort.pt
+.tEQ !== .tWhileTest on line 328 of mbubblesort.pt
+.tNot !== oEmitNullAddress on line 329 of mbubblesort.pt
+.tWhileTest !== % value emitted -32767 on line 330 of mbubblesort.pt
+oEmitNullAddress !== .tWhileBreakIf on line 341 of mbubblesort.pt
+% value emitted -32767 !== .tLiteralAddress on line 342 of mbubblesort.pt
+.tWhileBreakIf !== oEmitValue on line 343 of mbubblesort.pt
+.tLiteralAddress !== % value emitted 152 on line 344 of mbubblesort.pt
+oEmitValue !== .tFetchInteger on line 345 of mbubblesort.pt
+% value emitted 152 !== .tLiteralInteger on line 346 of mbubblesort.pt
+.tFetchInteger !== oEmitValue on line 347 of mbubblesort.pt
+.tLiteralInteger !== % value emitted 25 on line 348 of mbubblesort.pt
+oEmitValue !== .tEQ on line 349 of mbubblesort.pt
+% value emitted 25 !== .tNot on line 350 of mbubblesort.pt
+.tEQ !== .tWhileTest on line 351 of mbubblesort.pt
+.tNot !== oEmitNullAddress on line 352 of mbubblesort.pt
+.tWhileTest !== % value emitted -32767 on line 353 of mbubblesort.pt
+% value emitted 334 !== .tWhileEnd on line 418 of mbubblesort.pt
+.tWhileEnd !== % value emitted 331 on line 419 of mbubblesort.pt
+% value emitted 310 !== .tWhileEnd on line 433 of mbubblesort.pt
+.tWhileEnd !== % value emitted 307 on line 434 of mbubblesort.pt
+% value emitted 294 !== % value emitted 292 on line 443 of mbubblesort.pt
 
 ```
 end file
 --------------------------------
 Reading file mbust.pt
-Lengths do not match!  Something went wrong in mbust.pt
 
 Output is: 
 ```
@@ -21082,7 +15781,6 @@ Output is:
           % value emitted 10000
           .tModulus
         .tAssignInteger
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -21348,7 +16046,6 @@ Output is:
           % value emitted 1
           .tAdd
         .tAssignInteger
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -21374,7 +16071,6 @@ Output is:
        % value emitted 1452
        .tStoreParmAddress
        .tParmEnd
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -22056,7 +16752,6 @@ Output is:
      .tIfThen
      oEmitNullAddress
      % value emitted -32767
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -22605,7 +17300,6 @@ Output is:
               % value emitted 6
            .tIfEnd
         .tIfEnd
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -22706,7 +17400,6 @@ Output is:
            % value emitted 1
            .tAdd
          .tAssignInteger
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -23279,7 +17972,6 @@ Output is:
               % value emitted 6
            .tIfEnd
         .tIfEnd
-        #eMutableVarReqd
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -23604,7 +18296,6 @@ Output is:
      % value emitted 14800
      .tStoreParmInteger
      .tParmEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -23661,7 +18352,6 @@ Output is:
        .tCaseSelect
        oEmitNullAddress
        % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -23688,7 +18378,6 @@ Output is:
         .tCaseMerge
         oEmitNullAddress
         % value emitted -32767
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -23735,7 +18424,6 @@ Output is:
         % value emitted 2523
         % value emitted 2523
         .tCaseOtherwise
-           #eMutableVarReqd
             .tAssignBegin
              .tLiteralAddress
              oEmitValue
@@ -23795,7 +18483,6 @@ Output is:
         .tOr
      .tNot
      .tWhileTest
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -23826,7 +18513,6 @@ Output is:
         .tAssignInteger
      % value emitted 2632
      .tWhileEnd
-     #eMutableVarReqd
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -26345,5053 +21031,354 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 125 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 126 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 127 of mbust.pt
-oEmitValue !== % value emitted 1148 on line 128 of mbust.pt
-% value emitted 1148 !== .tFetchAddress on line 129 of mbust.pt
-.tFetchAddress !== .tLiteralAddress on line 130 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 131 of mbust.pt
-oEmitValue !== % value emitted 1140 on line 132 of mbust.pt
-% value emitted 1140 !== .tFetchInteger on line 133 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 134 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 135 of mbust.pt
-oEmitValue !== % value emitted 1152 on line 136 of mbust.pt
-% value emitted 1152 !== .tFetchInteger on line 137 of mbust.pt
-.tFetchInteger !== .tModulus on line 138 of mbust.pt
-.tModulus !== .tLiteralInteger on line 139 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 140 of mbust.pt
-oEmitValue !== % value emitted 1 on line 141 of mbust.pt
-% value emitted 1 !== .tAdd on line 142 of mbust.pt
-.tAdd !== .tAssignInteger on line 143 of mbust.pt
-.tAssignInteger !== .tProcedureEnd on line 144 of mbust.pt
-.tProcedureEnd !== .tCallBegin on line 145 of mbust.pt
-.tCallBegin !== .tCallEnd on line 146 of mbust.pt
-.tCallEnd !== oEmitValue on line 147 of mbust.pt
-oEmitValue !== % value emitted 40 on line 148 of mbust.pt
-% value emitted 40 !== .tLiteralInteger on line 149 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 150 of mbust.pt
-oEmitValue !== % value emitted 1 on line 151 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 152 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 153 of mbust.pt
-oEmitDataAddress !== % value emitted 1156 on line 154 of mbust.pt
-% value emitted 1156 !== .tArrayDescriptor on line 155 of mbust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 156 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 157 of mbust.pt
-oEmitValue !== % value emitted 52 on line 158 of mbust.pt
-% value emitted 52 !== .tLiteralAddress on line 159 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 160 of mbust.pt
-oEmitDataAddress !== % value emitted 1160 on line 161 of mbust.pt
-% value emitted 1160 !== .tArrayDescriptor on line 162 of mbust.pt
-.tArrayDescriptor !== .tSkipProc on line 163 of mbust.pt
-.tSkipProc !== oEmitNullAddress on line 164 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 165 of mbust.pt
-% value emitted -32767 !== .tParmEnd on line 166 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 167 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 168 of mbust.pt
-oEmitValue !== % value emitted 1 on line 169 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 170 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 171 of mbust.pt
-oEmitDataAddress !== % value emitted 1376 on line 172 of mbust.pt
-% value emitted 1376 !== .tArrayDescriptor on line 173 of mbust.pt
-.tArrayDescriptor !== .tLiteralInteger on line 174 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 175 of mbust.pt
-oEmitValue !== % value emitted 13 on line 176 of mbust.pt
-% value emitted 13 !== .tLiteralAddress on line 177 of mbust.pt
-.tLiteralAddress !== oEmitDataAddress on line 178 of mbust.pt
-oEmitDataAddress !== % value emitted 1380 on line 179 of mbust.pt
-% value emitted 1380 !== .tArrayDescriptor on line 180 of mbust.pt
-.tArrayDescriptor !== .tAssignBegin on line 181 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 182 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 183 of mbust.pt
-oEmitValue !== % value emitted 1436 on line 184 of mbust.pt
-% value emitted 1436 !== .tLiteralInteger on line 185 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 186 of mbust.pt
-oEmitValue !== % value emitted 1 on line 187 of mbust.pt
-% value emitted 1 !== .tAssignInteger on line 188 of mbust.pt
-.tAssignInteger !== .tWhileBegin on line 189 of mbust.pt
-.tWhileBegin !== .tWhilePreBreak on line 190 of mbust.pt
-.tWhilePreBreak !== .tAssignBegin on line 191 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 192 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 193 of mbust.pt
-.tAssignBegin !== % value emitted 1376 on line 194 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 195 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 196 of mbust.pt
-% value emitted 1376 !== oEmitValue on line 197 of mbust.pt
-.tSubscriptBegin !== % value emitted 1436 on line 198 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 199 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 200 of mbust.pt
-% value emitted 1436 !== .tLiteralInteger on line 201 of mbust.pt
-.tFetchInteger !== oEmitValue on line 202 of mbust.pt
-.tSubscriptInteger !== % value emitted 0 on line 203 of mbust.pt
-.tLiteralInteger !== .tAssignInteger on line 204 of mbust.pt
-oEmitValue !== .tAssignBegin on line 205 of mbust.pt
-% value emitted 0 !== .tLiteralAddress on line 206 of mbust.pt
-.tAssignInteger !== oEmitValue on line 207 of mbust.pt
-.tAssignBegin !== % value emitted 1436 on line 208 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 212 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 213 of mbust.pt
-% value emitted 1436 !== oEmitValue on line 214 of mbust.pt
-.tFetchInteger !== % value emitted 1 on line 215 of mbust.pt
-.tLiteralInteger !== .tAdd on line 216 of mbust.pt
-oEmitValue !== .tAssignInteger on line 217 of mbust.pt
-% value emitted 1 !== .tWhileBreakIf on line 218 of mbust.pt
-.tAdd !== .tLiteralAddress on line 219 of mbust.pt
-.tAssignInteger !== oEmitValue on line 220 of mbust.pt
-.tWhileBreakIf !== % value emitted 1436 on line 221 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 222 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 223 of mbust.pt
-% value emitted 1436 !== oEmitValue on line 224 of mbust.pt
-.tFetchInteger !== % value emitted 13 on line 225 of mbust.pt
-.tLiteralInteger !== .tGT on line 226 of mbust.pt
-oEmitValue !== .tNot on line 227 of mbust.pt
-% value emitted 13 !== .tWhileTest on line 228 of mbust.pt
-.tGT !== oEmitNullAddress on line 229 of mbust.pt
-.tNot !== % value emitted -32767 on line 230 of mbust.pt
-.tWhileTest !== .tWhileEnd on line 231 of mbust.pt
-% value emitted 187 !== % value emitted 186 on line 232 of mbust.pt
-.tWhileEnd !== .tAssignBegin on line 233 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 234 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 235 of mbust.pt
-oEmitValue !== % value emitted 1440 on line 236 of mbust.pt
-% value emitted 1440 !== .tLiteralInteger on line 237 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 238 of mbust.pt
-oEmitValue !== % value emitted 1 on line 239 of mbust.pt
-% value emitted 1 !== .tAssignInteger on line 240 of mbust.pt
-.tAssignInteger !== .tWhileBegin on line 241 of mbust.pt
-.tWhileBegin !== .tWhilePreBreak on line 242 of mbust.pt
-.tWhilePreBreak !== .tCallBegin on line 243 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 244 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 245 of mbust.pt
-.tCallBegin !== % value emitted 1444 on line 246 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 247 of mbust.pt
-oEmitValue !== .tParmEnd on line 248 of mbust.pt
-% value emitted 1444 !== .tLiteralInteger on line 249 of mbust.pt
-.tVarParm !== oEmitValue on line 250 of mbust.pt
-.tParmEnd !== % value emitted 13 on line 251 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 252 of mbust.pt
-oEmitValue !== .tCallEnd on line 253 of mbust.pt
-% value emitted 13 !== oEmitValue on line 254 of mbust.pt
-.tParmEnd !== % value emitted 64 on line 255 of mbust.pt
-.tCallEnd !== .tWhileBegin on line 256 of mbust.pt
-oEmitValue !== .tWhilePreBreak on line 257 of mbust.pt
-% value emitted 64 !== .tWhileBreakIf on line 258 of mbust.pt
-.tWhileBegin !== .tLiteralAddress on line 259 of mbust.pt
-.tWhilePreBreak !== oEmitValue on line 260 of mbust.pt
-oEmitNullAddress !== % value emitted 1376 on line 261 of mbust.pt
-% value emitted -32767 !== .tSubscriptBegin on line 262 of mbust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 263 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 264 of mbust.pt
-oEmitValue !== % value emitted 1444 on line 265 of mbust.pt
-% value emitted 1376 !== .tFetchInteger on line 266 of mbust.pt
-.tSubscriptBegin !== .tSubscriptInteger on line 267 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 268 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 269 of mbust.pt
-% value emitted 1444 !== oEmitValue on line 270 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 271 of mbust.pt
-.tSubscriptInteger !== .tNE on line 272 of mbust.pt
-.tFetchInteger !== .tNot on line 273 of mbust.pt
-.tLiteralInteger !== .tWhileTest on line 274 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 275 of mbust.pt
-% value emitted 4 !== % value emitted -32767 on line 276 of mbust.pt
-.tNE !== .tCallBegin on line 277 of mbust.pt
-.tNot !== .tLiteralAddress on line 278 of mbust.pt
-.tWhileTest !== oEmitValue on line 279 of mbust.pt
-.tCallBegin !== % value emitted 1444 on line 280 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 281 of mbust.pt
-oEmitValue !== .tParmEnd on line 282 of mbust.pt
-% value emitted 1444 !== .tLiteralInteger on line 283 of mbust.pt
-.tVarParm !== oEmitValue on line 284 of mbust.pt
-.tParmEnd !== % value emitted 13 on line 285 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 286 of mbust.pt
-oEmitValue !== .tCallEnd on line 287 of mbust.pt
-% value emitted 13 !== oEmitValue on line 288 of mbust.pt
-.tParmEnd !== % value emitted 64 on line 289 of mbust.pt
-.tCallEnd !== .tWhileEnd on line 290 of mbust.pt
-oEmitValue !== % value emitted 253 on line 291 of mbust.pt
-% value emitted 64 !== .tAssignBegin on line 292 of mbust.pt
-% value emitted 257 !== .tLiteralAddress on line 293 of mbust.pt
-.tWhileEnd !== oEmitValue on line 294 of mbust.pt
-.tAssignBegin !== % value emitted 1156 on line 295 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 296 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 297 of mbust.pt
-% value emitted 1156 !== oEmitValue on line 298 of mbust.pt
-.tSubscriptBegin !== % value emitted 1440 on line 299 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 300 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 301 of mbust.pt
-% value emitted 1440 !== .tLiteralAddress on line 302 of mbust.pt
-.tFetchInteger !== oEmitValue on line 303 of mbust.pt
-.tSubscriptInteger !== % value emitted 1444 on line 304 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 305 of mbust.pt
-oEmitValue !== .tAssignInteger on line 306 of mbust.pt
-% value emitted 1444 !== .tAssignBegin on line 307 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 308 of mbust.pt
-.tAssignInteger !== oEmitValue on line 309 of mbust.pt
-.tAssignBegin !== % value emitted 1376 on line 310 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 311 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 312 of mbust.pt
-% value emitted 1376 !== oEmitValue on line 313 of mbust.pt
-.tSubscriptBegin !== % value emitted 1444 on line 314 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 315 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 316 of mbust.pt
-% value emitted 1444 !== .tLiteralAddress on line 317 of mbust.pt
-.tFetchInteger !== oEmitValue on line 318 of mbust.pt
-.tSubscriptInteger !== % value emitted 1376 on line 319 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 320 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 321 of mbust.pt
-% value emitted 1376 !== oEmitValue on line 322 of mbust.pt
-.tSubscriptBegin !== % value emitted 1444 on line 323 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 324 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 325 of mbust.pt
-% value emitted 1444 !== .tFetchInteger on line 326 of mbust.pt
-.tFetchInteger !== .tLiteralInteger on line 327 of mbust.pt
-.tSubscriptInteger !== oEmitValue on line 328 of mbust.pt
-.tFetchInteger !== % value emitted 1 on line 329 of mbust.pt
-.tLiteralInteger !== .tAdd on line 330 of mbust.pt
-oEmitValue !== .tAssignInteger on line 331 of mbust.pt
-% value emitted 1 !== .tAssignBegin on line 332 of mbust.pt
-.tAdd !== .tLiteralAddress on line 333 of mbust.pt
-.tAssignInteger !== oEmitValue on line 334 of mbust.pt
-.tAssignBegin !== % value emitted 1440 on line 335 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 339 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 340 of mbust.pt
-% value emitted 1440 !== oEmitValue on line 341 of mbust.pt
-.tFetchInteger !== % value emitted 1 on line 342 of mbust.pt
-.tLiteralInteger !== .tAdd on line 343 of mbust.pt
-oEmitValue !== .tAssignInteger on line 344 of mbust.pt
-% value emitted 1 !== .tWhileBreakIf on line 345 of mbust.pt
-.tAdd !== .tLiteralAddress on line 346 of mbust.pt
-.tAssignInteger !== oEmitValue on line 347 of mbust.pt
-.tWhileBreakIf !== % value emitted 1440 on line 348 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 349 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 350 of mbust.pt
-% value emitted 1440 !== oEmitValue on line 351 of mbust.pt
-.tFetchInteger !== % value emitted 52 on line 352 of mbust.pt
-.tLiteralInteger !== .tGT on line 353 of mbust.pt
-oEmitValue !== .tNot on line 354 of mbust.pt
-% value emitted 52 !== .tWhileTest on line 355 of mbust.pt
-.tGT !== oEmitNullAddress on line 356 of mbust.pt
-.tNot !== % value emitted -32767 on line 357 of mbust.pt
-.tWhileTest !== .tWhileEnd on line 358 of mbust.pt
-% value emitted 240 !== % value emitted 237 on line 359 of mbust.pt
-.tWhileEnd !== .tAssignBegin on line 360 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 361 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 362 of mbust.pt
-oEmitValue !== % value emitted 1372 on line 363 of mbust.pt
-% value emitted 1372 !== .tLiteralInteger on line 364 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 365 of mbust.pt
-oEmitValue !== % value emitted 0 on line 366 of mbust.pt
-% value emitted 0 !== .tAssignInteger on line 367 of mbust.pt
-.tAssignInteger !== .tProcedureEnd on line 368 of mbust.pt
-.tProcedureEnd !== .tSkipProc on line 369 of mbust.pt
-.tSkipProc !== oEmitNullAddress on line 370 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 371 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 372 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 373 of mbust.pt
-oEmitValue !== % value emitted 1448 on line 374 of mbust.pt
-% value emitted 1448 !== .tStoreParmAddress on line 375 of mbust.pt
-.tStoreParmAddress !== .tParmEnd on line 376 of mbust.pt
-.tParmEnd !== .tAssignBegin on line 377 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 378 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 379 of mbust.pt
-oEmitValue !== % value emitted 1372 on line 380 of mbust.pt
-% value emitted 1372 !== .tLiteralAddress on line 381 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 382 of mbust.pt
-oEmitValue !== % value emitted 1372 on line 383 of mbust.pt
-% value emitted 1372 !== .tFetchInteger on line 384 of mbust.pt
-.tFetchInteger !== .tLiteralInteger on line 385 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 386 of mbust.pt
-oEmitValue !== % value emitted 1 on line 387 of mbust.pt
-% value emitted 1 !== .tAdd on line 388 of mbust.pt
-.tAdd !== .tAssignInteger on line 389 of mbust.pt
-.tAssignInteger !== .tAssignBegin on line 390 of mbust.pt
-#eMutableVarReqd !== .tLiteralAddress on line 391 of mbust.pt
-.tAssignBegin !== oEmitValue on line 392 of mbust.pt
-.tLiteralAddress !== % value emitted 1448 on line 393 of mbust.pt
-oEmitValue !== .tFetchAddress on line 394 of mbust.pt
-% value emitted 1448 !== .tLiteralAddress on line 395 of mbust.pt
-.tFetchAddress !== oEmitValue on line 396 of mbust.pt
-.tLiteralAddress !== % value emitted 1156 on line 397 of mbust.pt
-oEmitValue !== .tSubscriptBegin on line 398 of mbust.pt
-% value emitted 1156 !== .tLiteralAddress on line 399 of mbust.pt
-.tSubscriptBegin !== oEmitValue on line 400 of mbust.pt
-.tLiteralAddress !== % value emitted 1372 on line 401 of mbust.pt
-oEmitValue !== .tFetchInteger on line 402 of mbust.pt
-% value emitted 1372 !== .tSubscriptInteger on line 403 of mbust.pt
-.tSubscriptInteger !== .tAssignInteger on line 405 of mbust.pt
-.tFetchInteger !== .tProcedureEnd on line 406 of mbust.pt
-.tAssignInteger !== .tSkipProc on line 407 of mbust.pt
-.tProcedureEnd !== oEmitNullAddress on line 408 of mbust.pt
-.tSkipProc !== % value emitted -32767 on line 409 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 410 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 411 of mbust.pt
-.tLiteralAddress !== % value emitted 1452 on line 412 of mbust.pt
-oEmitValue !== .tStoreParmAddress on line 413 of mbust.pt
-% value emitted 1452 !== .tParmEnd on line 414 of mbust.pt
-.tStoreParmAddress !== .tAssignBegin on line 415 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 416 of mbust.pt
-#eMutableVarReqd !== oEmitValue on line 417 of mbust.pt
-.tAssignBegin !== % value emitted 1452 on line 418 of mbust.pt
-.tLiteralAddress !== .tFetchAddress on line 419 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 420 of mbust.pt
-% value emitted 1452 !== oEmitValue on line 421 of mbust.pt
-.tFetchAddress !== % value emitted 52 on line 422 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 423 of mbust.pt
-% value emitted 52 !== % value emitted 1372 on line 425 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 426 of mbust.pt
-oEmitValue !== .tSubtract on line 427 of mbust.pt
-% value emitted 1372 !== .tLiteralInteger on line 428 of mbust.pt
-.tFetchInteger !== oEmitValue on line 429 of mbust.pt
-.tSubtract !== % value emitted 1 on line 430 of mbust.pt
-.tLiteralInteger !== .tAdd on line 431 of mbust.pt
-oEmitValue !== .tAssignInteger on line 432 of mbust.pt
-% value emitted 1 !== .tProcedureEnd on line 433 of mbust.pt
-.tAdd !== .tLiteralInteger on line 434 of mbust.pt
-.tAssignInteger !== oEmitValue on line 435 of mbust.pt
-.tProcedureEnd !== % value emitted 1 on line 436 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 437 of mbust.pt
-oEmitValue !== oEmitDataAddress on line 438 of mbust.pt
-% value emitted 1 !== % value emitted 1456 on line 439 of mbust.pt
-.tLiteralAddress !== .tArrayDescriptor on line 440 of mbust.pt
-oEmitDataAddress !== .tLiteralInteger on line 441 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 442 of mbust.pt
-.tArrayDescriptor !== % value emitted 13 on line 443 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 444 of mbust.pt
-oEmitValue !== oEmitDataAddress on line 445 of mbust.pt
-% value emitted 13 !== % value emitted 1460 on line 446 of mbust.pt
-.tLiteralAddress !== .tArrayDescriptor on line 447 of mbust.pt
-oEmitDataAddress !== .tSkipProc on line 448 of mbust.pt
-% value emitted 1460 !== oEmitNullAddress on line 449 of mbust.pt
-.tArrayDescriptor !== % value emitted -32767 on line 450 of mbust.pt
-.tSkipProc !== .tLiteralAddress on line 451 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 452 of mbust.pt
-% value emitted -32767 !== % value emitted 14780 on line 453 of mbust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 454 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 455 of mbust.pt
-% value emitted 14780 !== oEmitValue on line 456 of mbust.pt
-.tStoreParmAddress !== % value emitted 14776 on line 457 of mbust.pt
-.tLiteralAddress !== .tStoreParmInteger on line 458 of mbust.pt
-oEmitValue !== .tParmEnd on line 459 of mbust.pt
-% value emitted 14776 !== .tAssignBegin on line 460 of mbust.pt
-.tStoreParmInteger !== .tLiteralAddress on line 461 of mbust.pt
-.tParmEnd !== oEmitValue on line 462 of mbust.pt
-.tAssignBegin !== % value emitted 14784 on line 463 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 464 of mbust.pt
-% value emitted 14784 !== % value emitted 1 on line 466 of mbust.pt
-.tLiteralInteger !== .tAssignInteger on line 467 of mbust.pt
-oEmitValue !== .tWhileBegin on line 468 of mbust.pt
-% value emitted 1 !== .tWhilePreBreak on line 469 of mbust.pt
-.tAssignInteger !== .tWhileBreakIf on line 470 of mbust.pt
-.tWhileBegin !== .tLiteralAddress on line 471 of mbust.pt
-.tWhilePreBreak !== oEmitValue on line 472 of mbust.pt
-oEmitNullAddress !== % value emitted 14784 on line 473 of mbust.pt
-% value emitted -32767 !== .tFetchInteger on line 474 of mbust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 475 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 476 of mbust.pt
-oEmitValue !== % value emitted 14776 on line 477 of mbust.pt
-% value emitted 14784 !== .tFetchInteger on line 478 of mbust.pt
-.tFetchInteger !== .tGT on line 479 of mbust.pt
-.tLiteralAddress !== .tNot on line 480 of mbust.pt
-oEmitValue !== .tWhileTest on line 481 of mbust.pt
-% value emitted 14776 !== oEmitNullAddress on line 482 of mbust.pt
-.tFetchInteger !== % value emitted -32767 on line 483 of mbust.pt
-.tGT !== .tWriteBegin on line 484 of mbust.pt
-.tNot !== .tTrapBegin on line 485 of mbust.pt
-.tWhileTest !== .tLiteralAddress on line 486 of mbust.pt
-.tWriteBegin !== oEmitValue on line 487 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 488 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 489 of mbust.pt
-oEmitValue !== .tParmEnd on line 490 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 491 of mbust.pt
-.tVarParm !== oEmitValue on line 492 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 493 of mbust.pt
-.tLiteralString !== oEmitString on line 494 of mbust.pt
-oEmitValue !== % value emitted 32 on line 495 of mbust.pt
-% value emitted 1 !== .tParmEnd on line 496 of mbust.pt
-oEmitString !== .tLiteralInteger on line 497 of mbust.pt
-% value emitted 32 !== oEmitValue on line 498 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 499 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 500 of mbust.pt
-oEmitValue !== .tTrap on line 501 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 502 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 503 of mbust.pt
-.tTrap !== .tTrapBegin on line 504 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 505 of mbust.pt
-% value emitted 109 !== oEmitValue on line 506 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 507 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 508 of mbust.pt
-oEmitValue !== .tParmEnd on line 509 of mbust.pt
-% value emitted 4 !== .tLiteralAddress on line 510 of mbust.pt
-.tVarParm !== oEmitValue on line 511 of mbust.pt
-.tParmEnd !== % value emitted 1456 on line 512 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 513 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 514 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 515 of mbust.pt
-.tSubscriptBegin !== % value emitted 14780 on line 516 of mbust.pt
-.tLiteralAddress !== .tFetchAddress on line 517 of mbust.pt
-oEmitValue !== .tSubscriptBegin on line 518 of mbust.pt
-% value emitted 14780 !== .tLiteralAddress on line 519 of mbust.pt
-.tFetchAddress !== oEmitValue on line 520 of mbust.pt
-.tSubscriptBegin !== % value emitted 14784 on line 521 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 522 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 523 of mbust.pt
-% value emitted 14784 !== .tFetchInteger on line 524 of mbust.pt
-.tFetchInteger !== .tSubscriptString on line 525 of mbust.pt
-.tSubscriptInteger !== .tFetchString on line 526 of mbust.pt
-.tFetchInteger !== .tParmEnd on line 527 of mbust.pt
-.tSubscriptString !== .tLiteralInteger on line 528 of mbust.pt
-.tFetchString !== oEmitValue on line 529 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 530 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 531 of mbust.pt
-oEmitValue !== .tTrap on line 532 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 533 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 534 of mbust.pt
-.tTrap !== .tWriteEnd on line 535 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tAssignBegin on line 536 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 537 of mbust.pt
-.tWriteEnd !== oEmitValue on line 538 of mbust.pt
-.tAssignBegin !== % value emitted 14784 on line 539 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 543 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 544 of mbust.pt
-% value emitted 14784 !== oEmitValue on line 545 of mbust.pt
-.tFetchInteger !== % value emitted 1 on line 546 of mbust.pt
-.tLiteralInteger !== .tAdd on line 547 of mbust.pt
-oEmitValue !== .tAssignInteger on line 548 of mbust.pt
-% value emitted 1 !== .tWhileEnd on line 549 of mbust.pt
-.tAdd !== % value emitted 457 on line 550 of mbust.pt
-.tAssignInteger !== .tProcedureEnd on line 551 of mbust.pt
-% value emitted 464 !== .tAssignBegin on line 552 of mbust.pt
-.tWhileEnd !== .tLiteralAddress on line 553 of mbust.pt
-.tProcedureEnd !== oEmitValue on line 554 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 555 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 556 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 557 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 558 of mbust.pt
-.tSubscriptBegin !== % value emitted 1 on line 559 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 560 of mbust.pt
-oEmitValue !== .tLiteralString on line 561 of mbust.pt
-% value emitted 1 !== oEmitValue on line 562 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 563 of mbust.pt
-.tLiteralString !== oEmitString on line 564 of mbust.pt
-oEmitValue !== % value emitted 65 on line 565 of mbust.pt
-% value emitted 1 !== .tAssignString on line 566 of mbust.pt
-oEmitString !== .tAssignBegin on line 567 of mbust.pt
-% value emitted 65 !== .tLiteralAddress on line 568 of mbust.pt
-.tAssignString !== oEmitValue on line 569 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 570 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 571 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 572 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 573 of mbust.pt
-.tSubscriptBegin !== % value emitted 2 on line 574 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 575 of mbust.pt
-oEmitValue !== .tLiteralString on line 576 of mbust.pt
-% value emitted 2 !== oEmitValue on line 577 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 578 of mbust.pt
-.tLiteralString !== oEmitString on line 579 of mbust.pt
-oEmitValue !== % value emitted 50 on line 580 of mbust.pt
-% value emitted 1 !== .tAssignString on line 581 of mbust.pt
-oEmitString !== .tAssignBegin on line 582 of mbust.pt
-% value emitted 50 !== .tLiteralAddress on line 583 of mbust.pt
-.tAssignString !== oEmitValue on line 584 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 585 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 586 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 587 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 588 of mbust.pt
-.tSubscriptBegin !== % value emitted 3 on line 589 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 590 of mbust.pt
-oEmitValue !== .tLiteralString on line 591 of mbust.pt
-% value emitted 3 !== oEmitValue on line 592 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 593 of mbust.pt
-.tLiteralString !== oEmitString on line 594 of mbust.pt
-oEmitValue !== % value emitted 51 on line 595 of mbust.pt
-% value emitted 1 !== .tAssignString on line 596 of mbust.pt
-oEmitString !== .tAssignBegin on line 597 of mbust.pt
-% value emitted 51 !== .tLiteralAddress on line 598 of mbust.pt
-.tAssignString !== oEmitValue on line 599 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 600 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 601 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 602 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 603 of mbust.pt
-.tSubscriptBegin !== % value emitted 4 on line 604 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 605 of mbust.pt
-oEmitValue !== .tLiteralString on line 606 of mbust.pt
-% value emitted 4 !== oEmitValue on line 607 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 608 of mbust.pt
-.tLiteralString !== oEmitString on line 609 of mbust.pt
-oEmitValue !== % value emitted 52 on line 610 of mbust.pt
-% value emitted 1 !== .tAssignString on line 611 of mbust.pt
-oEmitString !== .tAssignBegin on line 612 of mbust.pt
-% value emitted 52 !== .tLiteralAddress on line 613 of mbust.pt
-.tAssignString !== oEmitValue on line 614 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 615 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 616 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 617 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 618 of mbust.pt
-.tSubscriptBegin !== % value emitted 5 on line 619 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 620 of mbust.pt
-oEmitValue !== .tLiteralString on line 621 of mbust.pt
-% value emitted 5 !== oEmitValue on line 622 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 623 of mbust.pt
-.tLiteralString !== oEmitString on line 624 of mbust.pt
-oEmitValue !== % value emitted 53 on line 625 of mbust.pt
-% value emitted 1 !== .tAssignString on line 626 of mbust.pt
-oEmitString !== .tAssignBegin on line 627 of mbust.pt
-% value emitted 53 !== .tLiteralAddress on line 628 of mbust.pt
-.tAssignString !== oEmitValue on line 629 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 630 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 631 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 632 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 633 of mbust.pt
-.tSubscriptBegin !== % value emitted 6 on line 634 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 635 of mbust.pt
-oEmitValue !== .tLiteralString on line 636 of mbust.pt
-% value emitted 6 !== oEmitValue on line 637 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 638 of mbust.pt
-.tLiteralString !== oEmitString on line 639 of mbust.pt
-oEmitValue !== % value emitted 54 on line 640 of mbust.pt
-% value emitted 1 !== .tAssignString on line 641 of mbust.pt
-oEmitString !== .tAssignBegin on line 642 of mbust.pt
-% .sNewLine !== .tLiteralAddress on line 643 of mbust.pt
-.tAssignString !== oEmitValue on line 644 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 645 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 646 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 647 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 648 of mbust.pt
-.tSubscriptBegin !== % value emitted 7 on line 649 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 650 of mbust.pt
-oEmitValue !== .tLiteralString on line 651 of mbust.pt
-% value emitted 7 !== oEmitValue on line 652 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 653 of mbust.pt
-.tLiteralString !== oEmitString on line 654 of mbust.pt
-oEmitValue !== % value emitted 55 on line 655 of mbust.pt
-% value emitted 1 !== .tAssignString on line 656 of mbust.pt
-oEmitString !== .tAssignBegin on line 657 of mbust.pt
-% value emitted 55 !== .tLiteralAddress on line 658 of mbust.pt
-.tAssignString !== oEmitValue on line 659 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 660 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 661 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 662 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 663 of mbust.pt
-.tSubscriptBegin !== % value emitted 8 on line 664 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 665 of mbust.pt
-oEmitValue !== .tLiteralString on line 666 of mbust.pt
-% value emitted 8 !== oEmitValue on line 667 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 668 of mbust.pt
-.tLiteralString !== oEmitString on line 669 of mbust.pt
-oEmitValue !== % value emitted 56 on line 670 of mbust.pt
-% value emitted 1 !== .tAssignString on line 671 of mbust.pt
-oEmitString !== .tAssignBegin on line 672 of mbust.pt
-% value emitted 56 !== .tLiteralAddress on line 673 of mbust.pt
-.tAssignString !== oEmitValue on line 674 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 675 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 676 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 677 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 678 of mbust.pt
-.tSubscriptBegin !== % value emitted 9 on line 679 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 680 of mbust.pt
-oEmitValue !== .tLiteralString on line 681 of mbust.pt
-% value emitted 9 !== oEmitValue on line 682 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 683 of mbust.pt
-.tLiteralString !== oEmitString on line 684 of mbust.pt
-oEmitValue !== % value emitted 57 on line 685 of mbust.pt
-% value emitted 1 !== .tAssignString on line 686 of mbust.pt
-oEmitString !== .tAssignBegin on line 687 of mbust.pt
-% value emitted 57 !== .tLiteralAddress on line 688 of mbust.pt
-.tAssignString !== oEmitValue on line 689 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 690 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 691 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 692 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 693 of mbust.pt
-.tSubscriptBegin !== % value emitted 10 on line 694 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 695 of mbust.pt
-oEmitValue !== .tLiteralString on line 696 of mbust.pt
-% value emitted 10 !== oEmitValue on line 697 of mbust.pt
-.tSubscriptString !== % value emitted 2 on line 698 of mbust.pt
-.tLiteralString !== oEmitString on line 699 of mbust.pt
-oEmitValue !== % value emitted 49 on line 700 of mbust.pt
-% value emitted 2 !== % value emitted 48 on line 701 of mbust.pt
-oEmitString !== .tAssignString on line 702 of mbust.pt
-% value emitted 49 !== .tAssignBegin on line 703 of mbust.pt
-% value emitted 48 !== .tLiteralAddress on line 704 of mbust.pt
-.tAssignString !== oEmitValue on line 705 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 706 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 707 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 708 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 709 of mbust.pt
-.tSubscriptBegin !== % value emitted 11 on line 710 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 711 of mbust.pt
-oEmitValue !== .tLiteralString on line 712 of mbust.pt
-% value emitted 11 !== oEmitValue on line 713 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 714 of mbust.pt
-.tLiteralString !== oEmitString on line 715 of mbust.pt
-oEmitValue !== % value emitted 74 on line 716 of mbust.pt
-% value emitted 1 !== .tAssignString on line 717 of mbust.pt
-oEmitString !== .tAssignBegin on line 718 of mbust.pt
-% value emitted 74 !== .tLiteralAddress on line 719 of mbust.pt
-.tAssignString !== oEmitValue on line 720 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 721 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 722 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 723 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 724 of mbust.pt
-.tSubscriptBegin !== % value emitted 12 on line 725 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 726 of mbust.pt
-oEmitValue !== .tLiteralString on line 727 of mbust.pt
-% value emitted 12 !== oEmitValue on line 728 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 729 of mbust.pt
-.tLiteralString !== oEmitString on line 730 of mbust.pt
-oEmitValue !== % value emitted 81 on line 731 of mbust.pt
-% value emitted 1 !== .tAssignString on line 732 of mbust.pt
-oEmitString !== .tAssignBegin on line 733 of mbust.pt
-% value emitted 81 !== .tLiteralAddress on line 734 of mbust.pt
-.tAssignString !== oEmitValue on line 735 of mbust.pt
-.tAssignBegin !== % value emitted 1456 on line 736 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 737 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 738 of mbust.pt
-% value emitted 1456 !== oEmitValue on line 739 of mbust.pt
-.tSubscriptBegin !== % value emitted 13 on line 740 of mbust.pt
-.tLiteralInteger !== .tSubscriptString on line 741 of mbust.pt
-oEmitValue !== .tLiteralString on line 742 of mbust.pt
-% value emitted 13 !== oEmitValue on line 743 of mbust.pt
-.tSubscriptString !== % value emitted 1 on line 744 of mbust.pt
-.tLiteralString !== oEmitString on line 745 of mbust.pt
-oEmitValue !== % value emitted 75 on line 746 of mbust.pt
-% value emitted 1 !== .tAssignString on line 747 of mbust.pt
-oEmitString !== .tSkipProc on line 748 of mbust.pt
-% value emitted 75 !== oEmitNullAddress on line 749 of mbust.pt
-.tAssignString !== % value emitted -32767 on line 750 of mbust.pt
-.tSkipProc !== .tParmEnd on line 751 of mbust.pt
-oEmitNullAddress !== .tIfBegin on line 752 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 753 of mbust.pt
-.tParmEnd !== oEmitValue on line 754 of mbust.pt
-.tIfBegin !== % value emitted 110 on line 755 of mbust.pt
-.tLiteralAddress !== .tFetchString on line 756 of mbust.pt
-oEmitValue !== .tLiteralString on line 757 of mbust.pt
-% value emitted 110 !== oEmitValue on line 758 of mbust.pt
-.tFetchString !== % value emitted 1 on line 759 of mbust.pt
-.tLiteralString !== oEmitString on line 760 of mbust.pt
-oEmitValue !== % value emitted 101 on line 761 of mbust.pt
-% value emitted 1 !== .tStringEqual on line 762 of mbust.pt
-oEmitString !== .tIfThen on line 763 of mbust.pt
-% value emitted 101 !== oEmitNullAddress on line 764 of mbust.pt
-.tStringEqual !== % value emitted -32767 on line 765 of mbust.pt
-.tIfThen !== .tWriteBegin on line 766 of mbust.pt
-oEmitNullAddress !== .tTrapBegin on line 767 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 768 of mbust.pt
-.tWriteBegin !== oEmitValue on line 769 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 770 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 771 of mbust.pt
-oEmitValue !== .tParmEnd on line 772 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 773 of mbust.pt
-.tVarParm !== oEmitValue on line 774 of mbust.pt
-.tParmEnd !== % value emitted 10 on line 775 of mbust.pt
-.tLiteralString !== oEmitString on line 776 of mbust.pt
-oEmitValue !== % value emitted 69 on line 777 of mbust.pt
-% value emitted 10 !== % value emitted 46 on line 778 of mbust.pt
-oEmitString !== % value emitted 79 on line 779 of mbust.pt
-% value emitted 69 !== % value emitted 46 on line 780 of mbust.pt
-% value emitted 46 !== % value emitted 32 on line 781 of mbust.pt
-% value emitted 79 !== % value emitted 84 on line 782 of mbust.pt
-% value emitted 46 !== % value emitted 104 on line 783 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 784 of mbust.pt
-% value emitted 84 !== % value emitted 114 on line 785 of mbust.pt
-% value emitted 104 !== % value emitted 112 on line 786 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 787 of mbust.pt
-% value emitted 114 !== .tLiteralInteger on line 788 of mbust.pt
-% value emitted 112 !== oEmitValue on line 789 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 790 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 791 of mbust.pt
-oEmitValue !== .tTrap on line 792 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 793 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 794 of mbust.pt
-.tTrap !== .tWriteEnd on line 795 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tIfMerge on line 796 of mbust.pt
-% value emitted 109 !== oEmitNullAddress on line 797 of mbust.pt
-.tWriteEnd !== % value emitted -32767 on line 798 of mbust.pt
-.tIfMerge !== .tIfBegin on line 799 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 800 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 801 of mbust.pt
-.tIfBegin !== % value emitted 110 on line 802 of mbust.pt
-.tLiteralAddress !== .tFetchString on line 803 of mbust.pt
-oEmitValue !== .tLiteralString on line 804 of mbust.pt
-% value emitted 110 !== oEmitValue on line 805 of mbust.pt
-.tFetchString !== % value emitted 1 on line 806 of mbust.pt
-.tLiteralString !== oEmitString on line 807 of mbust.pt
-oEmitValue !== % value emitted 106 on line 808 of mbust.pt
-% value emitted 1 !== .tStringEqual on line 809 of mbust.pt
-oEmitString !== .tIfThen on line 810 of mbust.pt
-% value emitted 106 !== oEmitNullAddress on line 811 of mbust.pt
-.tStringEqual !== % value emitted -32767 on line 812 of mbust.pt
-.tIfThen !== .tWriteBegin on line 813 of mbust.pt
-oEmitNullAddress !== .tTrapBegin on line 814 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 815 of mbust.pt
-.tWriteBegin !== oEmitValue on line 816 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 817 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 818 of mbust.pt
-oEmitValue !== .tParmEnd on line 819 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 820 of mbust.pt
-.tVarParm !== oEmitValue on line 821 of mbust.pt
-.tParmEnd !== % value emitted 3 on line 822 of mbust.pt
-.tLiteralString !== oEmitString on line 823 of mbust.pt
-oEmitValue !== % value emitted 74 on line 824 of mbust.pt
-% value emitted 3 !== % value emitted 105 on line 825 of mbust.pt
-oEmitString !== % value emitted 109 on line 826 of mbust.pt
-% value emitted 74 !== .tParmEnd on line 827 of mbust.pt
-% value emitted 105 !== .tLiteralInteger on line 828 of mbust.pt
-% value emitted 109 !== oEmitValue on line 829 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 830 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 831 of mbust.pt
-oEmitValue !== .tTrap on line 832 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 833 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 834 of mbust.pt
-.tTrap !== .tWriteEnd on line 835 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tIfMerge on line 836 of mbust.pt
-% value emitted 109 !== oEmitNullAddress on line 837 of mbust.pt
-.tWriteEnd !== % value emitted -32767 on line 838 of mbust.pt
-.tIfMerge !== .tWriteBegin on line 839 of mbust.pt
-oEmitNullAddress !== .tTrapBegin on line 840 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 841 of mbust.pt
-.tWriteBegin !== oEmitValue on line 842 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 843 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 844 of mbust.pt
-oEmitValue !== .tParmEnd on line 845 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 846 of mbust.pt
-.tVarParm !== oEmitValue on line 847 of mbust.pt
-.tParmEnd !== % value emitted 5 on line 848 of mbust.pt
-.tLiteralString !== oEmitString on line 849 of mbust.pt
-oEmitValue !== % value emitted 80 on line 850 of mbust.pt
-% value emitted 5 !== % value emitted 111 on line 851 of mbust.pt
-oEmitString !== % value emitted 111 on line 852 of mbust.pt
-% value emitted 80 !== % value emitted 106 on line 853 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 854 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 855 of mbust.pt
-% value emitted 106 !== .tLiteralInteger on line 856 of mbust.pt
-% value emitted 97 !== oEmitValue on line 857 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 858 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 859 of mbust.pt
-oEmitValue !== .tTrap on line 860 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 861 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 862 of mbust.pt
-.tTrap !== .tWriteEnd on line 863 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tIfEnd on line 864 of mbust.pt
-% value emitted 109 !== .tIfEnd on line 865 of mbust.pt
-.tWriteEnd !== .tProcedureEnd on line 866 of mbust.pt
-.tIfEnd !== .tSkipProc on line 867 of mbust.pt
-.tIfEnd !== oEmitNullAddress on line 868 of mbust.pt
-.tProcedureEnd !== % value emitted -32767 on line 869 of mbust.pt
-.tSkipProc !== .tLiteralAddress on line 870 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 871 of mbust.pt
-% value emitted -32767 !== % value emitted 14788 on line 872 of mbust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 873 of mbust.pt
-oEmitValue !== .tParmEnd on line 874 of mbust.pt
-% value emitted 14788 !== .tAssignBegin on line 875 of mbust.pt
-.tStoreParmAddress !== .tLiteralAddress on line 876 of mbust.pt
-.tParmEnd !== oEmitValue on line 877 of mbust.pt
-.tAssignBegin !== % value emitted 88 on line 878 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 879 of mbust.pt
-% value emitted 88 !== % value emitted 0 on line 881 of mbust.pt
-.tLiteralInteger !== .tAssignInteger on line 882 of mbust.pt
-oEmitValue !== .tAssignBegin on line 883 of mbust.pt
-% value emitted 0 !== .tLiteralAddress on line 884 of mbust.pt
-.tAssignInteger !== oEmitValue on line 885 of mbust.pt
-.tAssignBegin !== % value emitted 92 on line 886 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 887 of mbust.pt
-% value emitted 92 !== % value emitted 0 on line 889 of mbust.pt
-.tLiteralInteger !== .tAssignInteger on line 890 of mbust.pt
-oEmitValue !== .tAssignBegin on line 891 of mbust.pt
-% value emitted 0 !== .tLiteralAddress on line 892 of mbust.pt
-.tAssignInteger !== oEmitValue on line 893 of mbust.pt
-.tAssignBegin !== % value emitted 96 on line 894 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 895 of mbust.pt
-% value emitted 96 !== % value emitted 0 on line 897 of mbust.pt
-.tLiteralInteger !== .tAssignInteger on line 898 of mbust.pt
-oEmitValue !== .tTrapBegin on line 899 of mbust.pt
-% value emitted 0 !== .tLiteralAddress on line 900 of mbust.pt
-.tAssignInteger !== oEmitValue on line 901 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 902 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 903 of mbust.pt
-oEmitValue !== .tParmEnd on line 904 of mbust.pt
-% value emitted 4 !== .tTrap on line 905 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 906 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 907 of mbust.pt
-.tTrap !== .tTrapBegin on line 908 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 909 of mbust.pt
-% value emitted 6 !== oEmitValue on line 910 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 911 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 912 of mbust.pt
-oEmitValue !== .tParmEnd on line 913 of mbust.pt
-% value emitted 4 !== .tTrap on line 914 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 915 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 916 of mbust.pt
-.tTrap !== .tWriteBegin on line 917 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tTrapBegin on line 918 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 919 of mbust.pt
-.tWriteBegin !== oEmitValue on line 920 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 921 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 922 of mbust.pt
-oEmitValue !== .tParmEnd on line 923 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 924 of mbust.pt
-.tVarParm !== oEmitValue on line 925 of mbust.pt
-.tParmEnd !== % value emitted 12 on line 926 of mbust.pt
-.tLiteralString !== oEmitString on line 927 of mbust.pt
-oEmitValue !== % value emitted 78 on line 928 of mbust.pt
-% value emitted 12 !== % value emitted 101 on line 929 of mbust.pt
-oEmitString !== % value emitted 119 on line 930 of mbust.pt
-% value emitted 78 !== % value emitted 32 on line 931 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 932 of mbust.pt
-% value emitted 119 !== % value emitted 104 on line 933 of mbust.pt
-% value emitted 32 !== % value emitted 117 on line 934 of mbust.pt
-% value emitted 115 !== % value emitted 102 on line 935 of mbust.pt
-% value emitted 104 !== % value emitted 102 on line 936 of mbust.pt
-% value emitted 117 !== % value emitted 108 on line 937 of mbust.pt
-% value emitted 102 !== % value emitted 101 on line 938 of mbust.pt
-% value emitted 102 !== % value emitted 46 on line 939 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 940 of mbust.pt
-% value emitted 101 !== .tLiteralInteger on line 941 of mbust.pt
-% value emitted 46 !== oEmitValue on line 942 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 943 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 944 of mbust.pt
-oEmitValue !== .tTrap on line 945 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 946 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 947 of mbust.pt
-.tTrap !== .tWriteEnd on line 948 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 949 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 950 of mbust.pt
-.tWriteEnd !== oEmitValue on line 951 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 952 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 953 of mbust.pt
-oEmitValue !== .tParmEnd on line 954 of mbust.pt
-% value emitted 4 !== .tTrap on line 955 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 956 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 957 of mbust.pt
-.tTrap !== .tTrapBegin on line 958 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 959 of mbust.pt
-% value emitted 6 !== oEmitValue on line 960 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 961 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 962 of mbust.pt
-oEmitValue !== .tParmEnd on line 963 of mbust.pt
-% value emitted 4 !== .tTrap on line 964 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteln) on line 965 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 966 of mbust.pt
-.tTrap !== .tWriteBegin on line 967 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tTrapBegin on line 968 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 969 of mbust.pt
-.tWriteBegin !== oEmitValue on line 970 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 971 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 972 of mbust.pt
-oEmitValue !== .tParmEnd on line 973 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 974 of mbust.pt
-.tVarParm !== oEmitValue on line 975 of mbust.pt
-.tParmEnd !== % value emitted 70 on line 976 of mbust.pt
-.tLiteralString !== oEmitString on line 977 of mbust.pt
-oEmitValue !== % value emitted 67 on line 978 of mbust.pt
-% value emitted 70 !== % value emitted 104 on line 979 of mbust.pt
-oEmitString !== % value emitted 111 on line 980 of mbust.pt
-% value emitted 67 !== % value emitted 111 on line 981 of mbust.pt
-% value emitted 104 !== % value emitted 115 on line 982 of mbust.pt
-% value emitted 111 !== % value emitted 101 on line 983 of mbust.pt
-% value emitted 111 !== % value emitted 32 on line 984 of mbust.pt
-% value emitted 115 !== % value emitted 97 on line 985 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 986 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 987 of mbust.pt
-% value emitted 97 !== % value emitted 108 on line 988 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 989 of mbust.pt
-% value emitted 112 !== % value emitted 121 on line 990 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 991 of mbust.pt
-% value emitted 97 !== % value emitted 114 on line 992 of mbust.pt
-% value emitted 121 !== % value emitted 32 on line 993 of mbust.pt
-% value emitted 101 !== % value emitted 40 on line 994 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 995 of mbust.pt
-% value emitted 40 !== % value emitted 102 on line 997 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 998 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 999 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 1000 of mbust.pt
-% value emitted 111 !== % value emitted 69 on line 1001 of mbust.pt
-% value emitted 114 !== % value emitted 46 on line 1002 of mbust.pt
-% value emitted 32 !== % value emitted 79 on line 1003 of mbust.pt
-% value emitted 69 !== % value emitted 46 on line 1004 of mbust.pt
-% value emitted 46 !== % value emitted 84 on line 1005 of mbust.pt
-% value emitted 79 !== % value emitted 104 on line 1006 of mbust.pt
-% value emitted 46 !== % value emitted 111 on line 1007 of mbust.pt
-% value emitted 84 !== % value emitted 114 on line 1008 of mbust.pt
-% value emitted 104 !== % value emitted 112 on line 1009 of mbust.pt
-% value emitted 111 !== % value emitted 44 on line 1010 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 1011 of mbust.pt
-% value emitted 112 !== % value emitted 106 on line 1012 of mbust.pt
-% value emitted 44 !== % value emitted 32 on line 1013 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 1014 of mbust.pt
-% value emitted 106 !== % value emitted 111 on line 1015 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 1016 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 1017 of mbust.pt
-% value emitted 111 !== % value emitted 74 on line 1018 of mbust.pt
-% value emitted 114 !== % value emitted 105 on line 1019 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 1020 of mbust.pt
-% value emitted 74 !== % value emitted 44 on line 1021 of mbust.pt
-% value emitted 105 !== % value emitted 32 on line 1022 of mbust.pt
-% value emitted 109 !== % value emitted 112 on line 1023 of mbust.pt
-% value emitted 44 !== % value emitted 32 on line 1024 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 1025 of mbust.pt
-% value emitted 112 !== % value emitted 111 on line 1026 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 1027 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 1028 of mbust.pt
-% value emitted 111 !== % value emitted 80 on line 1029 of mbust.pt
-% value emitted 114 !== % value emitted 111 on line 1030 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 1031 of mbust.pt
-% value emitted 80 !== % value emitted 106 on line 1032 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 1033 of mbust.pt
-% value emitted 111 !== % value emitted 44 on line 1034 of mbust.pt
-% value emitted 106 !== % value emitted 32 on line 1035 of mbust.pt
-% value emitted 97 !== % value emitted 113 on line 1036 of mbust.pt
-% value emitted 44 !== % value emitted 32 on line 1037 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 1038 of mbust.pt
-% value emitted 113 !== % value emitted 111 on line 1039 of mbust.pt
-% value emitted 116 !== % value emitted 113 on line 1041 of mbust.pt
-% value emitted 111 !== % value emitted 117 on line 1042 of mbust.pt
-% value emitted 32 !== % value emitted 105 on line 1043 of mbust.pt
-% value emitted 113 !== % value emitted 116 on line 1044 of mbust.pt
-% value emitted 117 !== % value emitted 41 on line 1045 of mbust.pt
-% value emitted 105 !== % value emitted 58 on line 1046 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 1047 of mbust.pt
-% value emitted 41 !== .tParmEnd on line 1048 of mbust.pt
-% value emitted 58 !== .tLiteralInteger on line 1049 of mbust.pt
-% value emitted 32 !== oEmitValue on line 1050 of mbust.pt
-.tParmEnd !== % value emitted 1 on line 1051 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 1052 of mbust.pt
-oEmitValue !== .tTrap on line 1053 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteString) on line 1054 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 1055 of mbust.pt
-.tTrap !== .tWriteEnd on line 1056 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tReadBegin on line 1057 of mbust.pt
-% value emitted 109 !== .tTrapBegin on line 1058 of mbust.pt
-.tWriteEnd !== .tLiteralAddress on line 1059 of mbust.pt
-.tReadBegin !== oEmitValue on line 1060 of mbust.pt
-.tTrapBegin !== % value emitted 0 on line 1061 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 1062 of mbust.pt
-oEmitValue !== .tParmEnd on line 1063 of mbust.pt
-% value emitted 0 !== .tLiteralAddress on line 1064 of mbust.pt
-.tVarParm !== oEmitValue on line 1065 of mbust.pt
-.tParmEnd !== % value emitted 110 on line 1066 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 1067 of mbust.pt
-oEmitValue !== .tParmEnd on line 1068 of mbust.pt
-% value emitted 110 !== .tTrap on line 1069 of mbust.pt
-.tVarParm !== oEmitTrapKind(trReadString) on line 1070 of mbust.pt
-.tParmEnd !== % value emitted 108 on line 1071 of mbust.pt
-.tTrap !== .tReadEnd on line 1072 of mbust.pt
-oEmitTrapKind(trReadString) !== .tTrapBegin on line 1073 of mbust.pt
-% value emitted 108 !== .tLiteralAddress on line 1074 of mbust.pt
-.tReadEnd !== oEmitValue on line 1075 of mbust.pt
-.tTrapBegin !== % value emitted 0 on line 1076 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 1077 of mbust.pt
-oEmitValue !== .tParmEnd on line 1078 of mbust.pt
-% value emitted 0 !== .tTrap on line 1079 of mbust.pt
-.tVarParm !== oEmitTrapKind(trReadln) on line 1080 of mbust.pt
-.tParmEnd !== % value emitted 4 on line 1081 of mbust.pt
-.tTrap !== .tIfBegin on line 1082 of mbust.pt
-oEmitTrapKind(trReadln) !== .tLiteralAddress on line 1083 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1084 of mbust.pt
-.tIfBegin !== % value emitted 110 on line 1085 of mbust.pt
-.tLiteralAddress !== .tFetchString on line 1086 of mbust.pt
-oEmitValue !== .tLiteralString on line 1087 of mbust.pt
-% value emitted 110 !== oEmitValue on line 1088 of mbust.pt
-.tFetchString !== % value emitted 1 on line 1089 of mbust.pt
-.tLiteralString !== oEmitString on line 1090 of mbust.pt
-oEmitValue !== % value emitted 113 on line 1091 of mbust.pt
-% value emitted 1 !== .tStringEqual on line 1092 of mbust.pt
-oEmitString !== .tIfThen on line 1093 of mbust.pt
-% value emitted 113 !== oEmitNullAddress on line 1094 of mbust.pt
-.tStringEqual !== % value emitted -32767 on line 1095 of mbust.pt
-.tIfThen !== .tAssignBegin on line 1096 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1097 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 1098 of mbust.pt
-#eMutableVarReqd !== % value emitted 14788 on line 1099 of mbust.pt
-.tAssignBegin !== .tFetchAddress on line 1100 of mbust.pt
-.tLiteralAddress !== .tLiteralBoolean on line 1101 of mbust.pt
-% value emitted 14788 !== % value emitted 0 on line 1103 of mbust.pt
-.tFetchAddress !== .tAssignBoolean on line 1104 of mbust.pt
-.tLiteralBoolean !== .tIfMerge on line 1105 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 1106 of mbust.pt
-% value emitted 0 !== % value emitted -32767 on line 1107 of mbust.pt
-.tAssignBoolean !== .tIfBegin on line 1108 of mbust.pt
-.tIfMerge !== .tLiteralAddress on line 1109 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 1110 of mbust.pt
-% value emitted -32767 !== % value emitted 110 on line 1111 of mbust.pt
-.tIfBegin !== .tFetchString on line 1112 of mbust.pt
-.tLiteralAddress !== .tLiteralString on line 1113 of mbust.pt
-% value emitted 110 !== % value emitted 1 on line 1115 of mbust.pt
-.tFetchString !== oEmitString on line 1116 of mbust.pt
-.tLiteralString !== % value emitted 101 on line 1117 of mbust.pt
-oEmitValue !== .tStringEqual on line 1118 of mbust.pt
-% value emitted 1 !== .tNot on line 1119 of mbust.pt
-oEmitString !== .tIfThen on line 1120 of mbust.pt
-% value emitted 101 !== oEmitNullAddress on line 1121 of mbust.pt
-.tStringEqual !== % value emitted -32767 on line 1122 of mbust.pt
-.tNot !== .tWriteBegin on line 1123 of mbust.pt
-.tIfThen !== .tTrapBegin on line 1124 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1125 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 1126 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1127 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1128 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1129 of mbust.pt
-oEmitValue !== .tLiteralString on line 1130 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1131 of mbust.pt
-.tVarParm !== % value emitted 25 on line 1132 of mbust.pt
-.tParmEnd !== oEmitString on line 1133 of mbust.pt
-.tLiteralString !== % value emitted 87 on line 1134 of mbust.pt
-oEmitValue !== % value emitted 104 on line 1135 of mbust.pt
-% value emitted 25 !== % value emitted 97 on line 1136 of mbust.pt
-oEmitString !== % value emitted 116 on line 1137 of mbust.pt
-% value emitted 87 !== % value emitted 32 on line 1138 of mbust.pt
-% value emitted 104 !== % value emitted 100 on line 1139 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 1140 of mbust.pt
-% value emitted 116 !== % value emitted 101 on line 1141 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 1142 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 1143 of mbust.pt
-% value emitted 111 !== % value emitted 115 on line 1144 of mbust.pt
-% value emitted 101 !== % value emitted 47 on line 1145 of mbust.pt
-% value emitted 115 !== % value emitted 104 on line 1146 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 1147 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 1148 of mbust.pt
-% value emitted 47 !== % value emitted 115 on line 1149 of mbust.pt
-% value emitted 104 !== % value emitted 116 on line 1150 of mbust.pt
-% value emitted 101 !== % value emitted 97 on line 1151 of mbust.pt
-% value emitted 32 !== % value emitted 110 on line 1152 of mbust.pt
-% value emitted 115 !== % value emitted 100 on line 1153 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 1154 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 1155 of mbust.pt
-% value emitted 100 !== % value emitted 63 on line 1157 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 1159 of mbust.pt
-% value emitted 110 !== .tLiteralInteger on line 1160 of mbust.pt
-% value emitted 63 !== oEmitValue on line 1161 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 1162 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1164 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1165 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1166 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1167 of mbust.pt
-.tTrap !== .tReadBegin on line 1168 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 1169 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 1170 of mbust.pt
-.tWriteEnd !== oEmitValue on line 1171 of mbust.pt
-.tReadBegin !== % value emitted 0 on line 1172 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1173 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1174 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1175 of mbust.pt
-% value emitted 0 !== oEmitValue on line 1176 of mbust.pt
-.tVarParm !== % value emitted 1136 on line 1177 of mbust.pt
-.tParmEnd !== .tVarParm on line 1178 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1179 of mbust.pt
-oEmitValue !== .tTrap on line 1180 of mbust.pt
-% value emitted 1136 !== oEmitTrapKind(trReadInteger) on line 1181 of mbust.pt
-.tVarParm !== % value emitted 10 on line 1182 of mbust.pt
-.tParmEnd !== .tReadEnd on line 1183 of mbust.pt
-.tTrap !== .tTrapBegin on line 1184 of mbust.pt
-oEmitTrapKind(trReadInteger) !== .tLiteralAddress on line 1185 of mbust.pt
-% value emitted 9 !== oEmitValue on line 1186 of mbust.pt
-.tReadEnd !== % value emitted 0 on line 1187 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1188 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1189 of mbust.pt
-oEmitValue !== .tTrap on line 1190 of mbust.pt
-% value emitted 0 !== oEmitTrapKind(trReadln) on line 1191 of mbust.pt
-.tVarParm !== % value emitted 4 on line 1192 of mbust.pt
-.tParmEnd !== .tWhileBegin on line 1193 of mbust.pt
-.tTrap !== .tWhilePreBreak on line 1194 of mbust.pt
-oEmitTrapKind(trReadln) !== .tWhileBreakIf on line 1195 of mbust.pt
-% value emitted 4 !== .tLiteralAddress on line 1196 of mbust.pt
-.tWhileBegin !== oEmitValue on line 1197 of mbust.pt
-.tWhilePreBreak !== % value emitted 1136 on line 1198 of mbust.pt
-oEmitNullAddress !== .tFetchInteger on line 1199 of mbust.pt
-% value emitted -32767 !== .tLiteralInteger on line 1200 of mbust.pt
-.tWhileBreakIf !== oEmitValue on line 1201 of mbust.pt
-.tLiteralAddress !== % value emitted 0 on line 1202 of mbust.pt
+oEmitNullAddress !== .tAssignBegin on line 191 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 192 of mbust.pt
+.tAssignBegin !== oEmitValue on line 193 of mbust.pt
+.tLiteralAddress !== % value emitted 1376 on line 194 of mbust.pt
+oEmitValue !== .tSubscriptBegin on line 195 of mbust.pt
+% value emitted 1376 !== .tLiteralAddress on line 196 of mbust.pt
+.tSubscriptBegin !== oEmitValue on line 197 of mbust.pt
+.tLiteralAddress !== % value emitted 1436 on line 198 of mbust.pt
+oEmitValue !== .tFetchInteger on line 199 of mbust.pt
+% value emitted 1436 !== .tSubscriptInteger on line 200 of mbust.pt
+.tFetchInteger !== .tLiteralInteger on line 201 of mbust.pt
+.tSubscriptInteger !== oEmitValue on line 202 of mbust.pt
+.tLiteralInteger !== % value emitted 0 on line 203 of mbust.pt
+oEmitValue !== .tAssignInteger on line 204 of mbust.pt
+% value emitted 0 !== .tAssignBegin on line 205 of mbust.pt
+.tAssignInteger !== .tLiteralAddress on line 206 of mbust.pt
+.tAssignBegin !== oEmitValue on line 207 of mbust.pt
+.tLiteralAddress !== % value emitted 1436 on line 208 of mbust.pt
+oEmitValue !== .tLiteralAddress on line 209 of mbust.pt
+% value emitted 1436 !== oEmitValue on line 210 of mbust.pt
+.tLiteralAddress !== % value emitted 1436 on line 211 of mbust.pt
+oEmitValue !== .tFetchInteger on line 212 of mbust.pt
+% value emitted 1436 !== .tLiteralInteger on line 213 of mbust.pt
+.tFetchInteger !== oEmitValue on line 214 of mbust.pt
+.tLiteralInteger !== % value emitted 1 on line 215 of mbust.pt
+oEmitValue !== .tAdd on line 216 of mbust.pt
+% value emitted 1 !== .tAssignInteger on line 217 of mbust.pt
+.tAdd !== .tWhileBreakIf on line 218 of mbust.pt
+.tAssignInteger !== .tLiteralAddress on line 219 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 220 of mbust.pt
+.tLiteralAddress !== % value emitted 1436 on line 221 of mbust.pt
+oEmitValue !== .tFetchInteger on line 222 of mbust.pt
+% value emitted 1436 !== .tLiteralInteger on line 223 of mbust.pt
+.tFetchInteger !== oEmitValue on line 224 of mbust.pt
+.tLiteralInteger !== % value emitted 13 on line 225 of mbust.pt
+oEmitValue !== .tGT on line 226 of mbust.pt
+% value emitted 13 !== .tNot on line 227 of mbust.pt
+.tGT !== .tWhileTest on line 228 of mbust.pt
+.tNot !== oEmitNullAddress on line 229 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 230 of mbust.pt
+% value emitted 187 !== .tWhileEnd on line 231 of mbust.pt
+.tWhileEnd !== % value emitted 186 on line 232 of mbust.pt
+oEmitNullAddress !== .tCallBegin on line 243 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 244 of mbust.pt
+.tCallBegin !== oEmitValue on line 245 of mbust.pt
+.tLiteralAddress !== % value emitted 1444 on line 246 of mbust.pt
+oEmitValue !== .tVarParm on line 247 of mbust.pt
+% value emitted 1444 !== .tParmEnd on line 248 of mbust.pt
+.tVarParm !== .tLiteralInteger on line 249 of mbust.pt
+.tParmEnd !== oEmitValue on line 250 of mbust.pt
+.tLiteralInteger !== % value emitted 13 on line 251 of mbust.pt
+oEmitValue !== .tParmEnd on line 252 of mbust.pt
+% value emitted 13 !== .tCallEnd on line 253 of mbust.pt
+.tParmEnd !== oEmitValue on line 254 of mbust.pt
+.tCallEnd !== % value emitted 64 on line 255 of mbust.pt
+oEmitValue !== .tWhileBegin on line 256 of mbust.pt
+% value emitted 64 !== .tWhilePreBreak on line 257 of mbust.pt
+.tWhileBegin !== .tWhileBreakIf on line 258 of mbust.pt
+.tWhilePreBreak !== .tLiteralAddress on line 259 of mbust.pt
+oEmitNullAddress !== oEmitValue on line 260 of mbust.pt
+% value emitted -32767 !== % value emitted 1376 on line 261 of mbust.pt
+.tWhileBreakIf !== .tSubscriptBegin on line 262 of mbust.pt
+% value emitted 1376 !== % value emitted 1444 on line 265 of mbust.pt
+.tSubscriptBegin !== .tFetchInteger on line 266 of mbust.pt
+.tLiteralAddress !== .tSubscriptInteger on line 267 of mbust.pt
+oEmitValue !== .tFetchInteger on line 268 of mbust.pt
+% value emitted 1444 !== .tLiteralInteger on line 269 of mbust.pt
+.tFetchInteger !== oEmitValue on line 270 of mbust.pt
+.tSubscriptInteger !== % value emitted 4 on line 271 of mbust.pt
+.tFetchInteger !== .tNE on line 272 of mbust.pt
+.tLiteralInteger !== .tNot on line 273 of mbust.pt
+oEmitValue !== .tWhileTest on line 274 of mbust.pt
+% value emitted 4 !== oEmitNullAddress on line 275 of mbust.pt
+.tNE !== % value emitted -32767 on line 276 of mbust.pt
+.tNot !== .tCallBegin on line 277 of mbust.pt
+.tWhileTest !== .tLiteralAddress on line 278 of mbust.pt
+.tCallBegin !== oEmitValue on line 279 of mbust.pt
+.tLiteralAddress !== % value emitted 1444 on line 280 of mbust.pt
+oEmitValue !== .tVarParm on line 281 of mbust.pt
+% value emitted 1444 !== .tParmEnd on line 282 of mbust.pt
+.tVarParm !== .tLiteralInteger on line 283 of mbust.pt
+.tParmEnd !== oEmitValue on line 284 of mbust.pt
+.tLiteralInteger !== % value emitted 13 on line 285 of mbust.pt
+oEmitValue !== .tParmEnd on line 286 of mbust.pt
+% value emitted 13 !== .tCallEnd on line 287 of mbust.pt
+.tParmEnd !== oEmitValue on line 288 of mbust.pt
+.tCallEnd !== % value emitted 64 on line 289 of mbust.pt
+oEmitValue !== .tWhileEnd on line 290 of mbust.pt
+% value emitted 64 !== % value emitted 253 on line 291 of mbust.pt
+% value emitted 257 !== .tAssignBegin on line 292 of mbust.pt
+.tWhileEnd !== .tLiteralAddress on line 293 of mbust.pt
+.tAssignBegin !== oEmitValue on line 294 of mbust.pt
+.tLiteralAddress !== % value emitted 1156 on line 295 of mbust.pt
+oEmitValue !== .tSubscriptBegin on line 296 of mbust.pt
+% value emitted 1156 !== .tLiteralAddress on line 297 of mbust.pt
+.tSubscriptBegin !== oEmitValue on line 298 of mbust.pt
+.tLiteralAddress !== % value emitted 1440 on line 299 of mbust.pt
+oEmitValue !== .tFetchInteger on line 300 of mbust.pt
+% value emitted 1440 !== .tSubscriptInteger on line 301 of mbust.pt
+.tFetchInteger !== .tLiteralAddress on line 302 of mbust.pt
+.tSubscriptInteger !== oEmitValue on line 303 of mbust.pt
+.tLiteralAddress !== % value emitted 1444 on line 304 of mbust.pt
+oEmitValue !== .tFetchInteger on line 305 of mbust.pt
+% value emitted 1444 !== .tAssignInteger on line 306 of mbust.pt
+.tFetchInteger !== .tAssignBegin on line 307 of mbust.pt
+.tAssignInteger !== .tLiteralAddress on line 308 of mbust.pt
+.tAssignBegin !== oEmitValue on line 309 of mbust.pt
+.tLiteralAddress !== % value emitted 1376 on line 310 of mbust.pt
+oEmitValue !== .tSubscriptBegin on line 311 of mbust.pt
+% value emitted 1376 !== .tLiteralAddress on line 312 of mbust.pt
+.tSubscriptBegin !== oEmitValue on line 313 of mbust.pt
+.tLiteralAddress !== % value emitted 1444 on line 314 of mbust.pt
+oEmitValue !== .tFetchInteger on line 315 of mbust.pt
+% value emitted 1444 !== .tSubscriptInteger on line 316 of mbust.pt
+.tFetchInteger !== .tLiteralAddress on line 317 of mbust.pt
+.tSubscriptInteger !== oEmitValue on line 318 of mbust.pt
+.tLiteralAddress !== % value emitted 1376 on line 319 of mbust.pt
+oEmitValue !== .tSubscriptBegin on line 320 of mbust.pt
+% value emitted 1376 !== .tLiteralAddress on line 321 of mbust.pt
+.tSubscriptBegin !== oEmitValue on line 322 of mbust.pt
+.tLiteralAddress !== % value emitted 1444 on line 323 of mbust.pt
+oEmitValue !== .tFetchInteger on line 324 of mbust.pt
+% value emitted 1444 !== .tSubscriptInteger on line 325 of mbust.pt
+.tSubscriptInteger !== .tLiteralInteger on line 327 of mbust.pt
+.tFetchInteger !== oEmitValue on line 328 of mbust.pt
+.tLiteralInteger !== % value emitted 1 on line 329 of mbust.pt
+oEmitValue !== .tAdd on line 330 of mbust.pt
+% value emitted 1 !== .tAssignInteger on line 331 of mbust.pt
+.tAdd !== .tAssignBegin on line 332 of mbust.pt
+.tAssignInteger !== .tLiteralAddress on line 333 of mbust.pt
+.tAssignBegin !== oEmitValue on line 334 of mbust.pt
+.tLiteralAddress !== % value emitted 1440 on line 335 of mbust.pt
+oEmitValue !== .tLiteralAddress on line 336 of mbust.pt
+% value emitted 1440 !== oEmitValue on line 337 of mbust.pt
+.tLiteralAddress !== % value emitted 1440 on line 338 of mbust.pt
+oEmitValue !== .tFetchInteger on line 339 of mbust.pt
+% value emitted 1440 !== .tLiteralInteger on line 340 of mbust.pt
+.tFetchInteger !== oEmitValue on line 341 of mbust.pt
+.tLiteralInteger !== % value emitted 1 on line 342 of mbust.pt
+oEmitValue !== .tAdd on line 343 of mbust.pt
+% value emitted 1 !== .tAssignInteger on line 344 of mbust.pt
+.tAdd !== .tWhileBreakIf on line 345 of mbust.pt
+.tAssignInteger !== .tLiteralAddress on line 346 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 347 of mbust.pt
+.tLiteralAddress !== % value emitted 1440 on line 348 of mbust.pt
+oEmitValue !== .tFetchInteger on line 349 of mbust.pt
+% value emitted 1440 !== .tLiteralInteger on line 350 of mbust.pt
+.tFetchInteger !== oEmitValue on line 351 of mbust.pt
+.tLiteralInteger !== % value emitted 52 on line 352 of mbust.pt
+oEmitValue !== .tGT on line 353 of mbust.pt
+% value emitted 52 !== .tNot on line 354 of mbust.pt
+.tGT !== .tWhileTest on line 355 of mbust.pt
+.tNot !== oEmitNullAddress on line 356 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 357 of mbust.pt
+% value emitted 240 !== .tWhileEnd on line 358 of mbust.pt
+.tWhileEnd !== % value emitted 237 on line 359 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 470 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 471 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 472 of mbust.pt
+.tLiteralAddress !== % value emitted 14784 on line 473 of mbust.pt
+oEmitValue !== .tFetchInteger on line 474 of mbust.pt
+% value emitted 14784 !== .tLiteralAddress on line 475 of mbust.pt
+.tFetchInteger !== oEmitValue on line 476 of mbust.pt
+.tLiteralAddress !== % value emitted 14776 on line 477 of mbust.pt
+oEmitValue !== .tFetchInteger on line 478 of mbust.pt
+% value emitted 14776 !== .tGT on line 479 of mbust.pt
+.tFetchInteger !== .tNot on line 480 of mbust.pt
+.tGT !== .tWhileTest on line 481 of mbust.pt
+.tNot !== oEmitNullAddress on line 482 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 483 of mbust.pt
+% value emitted 464 !== .tWhileEnd on line 549 of mbust.pt
+.tWhileEnd !== % value emitted 457 on line 550 of mbust.pt
+% .sNewLine !== % value emitted 54 on line 640 of mbust.pt
+% value emitted 9 !== % value emitted 10 on line 1182 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 1195 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 1196 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 1197 of mbust.pt
+.tLiteralAddress !== % value emitted 1136 on line 1198 of mbust.pt
+oEmitValue !== .tFetchInteger on line 1199 of mbust.pt
+% value emitted 1136 !== .tLiteralInteger on line 1200 of mbust.pt
+.tFetchInteger !== oEmitValue on line 1201 of mbust.pt
+.tLiteralInteger !== % value emitted 0 on line 1202 of mbust.pt
 oEmitValue !== .tGT on line 1203 of mbust.pt
-% value emitted 1136 !== .tInfixAnd on line 1204 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 1205 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 1206 of mbust.pt
-oEmitValue !== % value emitted 1136 on line 1207 of mbust.pt
-% value emitted 0 !== .tFetchInteger on line 1208 of mbust.pt
-.tGT !== .tLiteralInteger on line 1209 of mbust.pt
-.tInfixAnd !== oEmitValue on line 1210 of mbust.pt
-.tLiteralAddress !== % value emitted 21 on line 1211 of mbust.pt
+% value emitted 0 !== .tInfixAnd on line 1204 of mbust.pt
+.tGT !== .tLiteralAddress on line 1205 of mbust.pt
+.tInfixAnd !== oEmitValue on line 1206 of mbust.pt
+.tLiteralAddress !== % value emitted 1136 on line 1207 of mbust.pt
+oEmitValue !== .tFetchInteger on line 1208 of mbust.pt
+% value emitted 1136 !== .tLiteralInteger on line 1209 of mbust.pt
+.tFetchInteger !== oEmitValue on line 1210 of mbust.pt
+.tLiteralInteger !== % value emitted 21 on line 1211 of mbust.pt
 oEmitValue !== .tLT on line 1212 of mbust.pt
-% value emitted 1136 !== .tAnd on line 1213 of mbust.pt
-.tFetchInteger !== .tNot on line 1214 of mbust.pt
-.tLiteralInteger !== .tWhileTest on line 1215 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 1216 of mbust.pt
-% value emitted 21 !== % value emitted -32767 on line 1217 of mbust.pt
-.tLT !== .tWriteBegin on line 1218 of mbust.pt
-.tAnd !== .tTrapBegin on line 1219 of mbust.pt
-.tNot !== .tLiteralAddress on line 1220 of mbust.pt
-.tWhileTest !== oEmitValue on line 1221 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1222 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1223 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1224 of mbust.pt
-oEmitValue !== .tLiteralString on line 1225 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1226 of mbust.pt
-.tVarParm !== % value emitted 9 on line 1227 of mbust.pt
-.tParmEnd !== oEmitString on line 1228 of mbust.pt
-.tLiteralString !== % value emitted 40 on line 1229 of mbust.pt
-oEmitValue !== % value emitted 49 on line 1230 of mbust.pt
-% value emitted 9 !== % value emitted 46 on line 1231 of mbust.pt
-oEmitString !== % value emitted 46 on line 1232 of mbust.pt
-% value emitted 40 !== % value emitted 50 on line 1233 of mbust.pt
-% value emitted 49 !== % value emitted 48 on line 1234 of mbust.pt
-% value emitted 46 !== % value emitted 41 on line 1235 of mbust.pt
-% value emitted 46 !== % value emitted 58 on line 1236 of mbust.pt
-% value emitted 50 !== % value emitted 32 on line 1237 of mbust.pt
-% value emitted 48 !== .tParmEnd on line 1238 of mbust.pt
-% value emitted 41 !== .tLiteralInteger on line 1239 of mbust.pt
-% value emitted 58 !== oEmitValue on line 1240 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 1241 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1243 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1244 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1245 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1246 of mbust.pt
-.tTrap !== .tReadBegin on line 1247 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 1248 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 1249 of mbust.pt
-.tWriteEnd !== oEmitValue on line 1250 of mbust.pt
-.tReadBegin !== % value emitted 0 on line 1251 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1252 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1253 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1254 of mbust.pt
-% value emitted 0 !== oEmitValue on line 1255 of mbust.pt
-.tVarParm !== % value emitted 1136 on line 1256 of mbust.pt
-.tParmEnd !== .tVarParm on line 1257 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1258 of mbust.pt
-oEmitValue !== .tTrap on line 1259 of mbust.pt
-% value emitted 1136 !== oEmitTrapKind(trReadInteger) on line 1260 of mbust.pt
-.tVarParm !== % value emitted 10 on line 1261 of mbust.pt
-.tParmEnd !== .tReadEnd on line 1262 of mbust.pt
-.tTrap !== .tTrapBegin on line 1263 of mbust.pt
-oEmitTrapKind(trReadInteger) !== .tLiteralAddress on line 1264 of mbust.pt
-% value emitted 9 !== oEmitValue on line 1265 of mbust.pt
-.tReadEnd !== % value emitted 0 on line 1266 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1267 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1268 of mbust.pt
-oEmitValue !== .tTrap on line 1269 of mbust.pt
-% value emitted 0 !== oEmitTrapKind(trReadln) on line 1270 of mbust.pt
-.tVarParm !== % value emitted 4 on line 1271 of mbust.pt
-.tParmEnd !== .tWhileEnd on line 1272 of mbust.pt
-.tTrap !== % value emitted 1119 on line 1273 of mbust.pt
-oEmitTrapKind(trReadln) !== .tIfEnd on line 1274 of mbust.pt
-% value emitted 4 !== .tIfBegin on line 1275 of mbust.pt
-% value emitted 1128 !== .tLiteralAddress on line 1276 of mbust.pt
-.tWhileEnd !== oEmitValue on line 1277 of mbust.pt
-.tIfEnd !== % value emitted 110 on line 1278 of mbust.pt
-.tIfBegin !== .tFetchString on line 1279 of mbust.pt
-.tLiteralAddress !== .tLiteralString on line 1280 of mbust.pt
-% value emitted 110 !== % value emitted 1 on line 1282 of mbust.pt
-.tFetchString !== oEmitString on line 1283 of mbust.pt
-.tLiteralString !== % value emitted 101 on line 1284 of mbust.pt
-oEmitValue !== .tStringEqual on line 1285 of mbust.pt
-% value emitted 1 !== .tIfThen on line 1286 of mbust.pt
-oEmitString !== oEmitNullAddress on line 1287 of mbust.pt
-% value emitted 101 !== % value emitted -32767 on line 1288 of mbust.pt
-.tStringEqual !== .tTrapBegin on line 1289 of mbust.pt
-.tIfThen !== .tLiteralAddress on line 1290 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 1291 of mbust.pt
-% value emitted -32767 !== % value emitted 4 on line 1292 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1293 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1294 of mbust.pt
-oEmitValue !== .tTrap on line 1295 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1296 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1297 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 1298 of mbust.pt
-.tTrap !== .tTrapBegin on line 1299 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1300 of mbust.pt
-% value emitted 6 !== oEmitValue on line 1301 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1302 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1303 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1304 of mbust.pt
-oEmitValue !== .tLiteralString on line 1305 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1306 of mbust.pt
-.tVarParm !== % value emitted 26 on line 1307 of mbust.pt
-.tParmEnd !== oEmitString on line 1308 of mbust.pt
-.tLiteralString !== % value emitted 69 on line 1309 of mbust.pt
-oEmitValue !== % value emitted 46 on line 1310 of mbust.pt
-% value emitted 26 !== % value emitted 79 on line 1311 of mbust.pt
-oEmitString !== % value emitted 46 on line 1312 of mbust.pt
-% value emitted 69 !== % value emitted 84 on line 1313 of mbust.pt
-% value emitted 46 !== % value emitted 104 on line 1314 of mbust.pt
-% value emitted 79 !== % value emitted 111 on line 1315 of mbust.pt
-% value emitted 46 !== % value emitted 114 on line 1316 of mbust.pt
-% value emitted 84 !== % value emitted 112 on line 1317 of mbust.pt
-% value emitted 104 !== % value emitted 32 on line 1318 of mbust.pt
-% value emitted 111 !== % value emitted 112 on line 1319 of mbust.pt
-% value emitted 114 !== % value emitted 108 on line 1320 of mbust.pt
-% value emitted 112 !== % value emitted 97 on line 1321 of mbust.pt
-% value emitted 32 !== % value emitted 121 on line 1322 of mbust.pt
-% value emitted 112 !== % value emitted 115 on line 1323 of mbust.pt
-% value emitted 108 !== % value emitted 32 on line 1324 of mbust.pt
-% value emitted 97 !== % value emitted 116 on line 1325 of mbust.pt
-% value emitted 121 !== % value emitted 104 on line 1326 of mbust.pt
-% value emitted 115 !== % value emitted 105 on line 1327 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 1328 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 1329 of mbust.pt
-% value emitted 104 !== % value emitted 116 on line 1330 of mbust.pt
-% value emitted 115 !== % value emitted 109 on line 1332 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 1333 of mbust.pt
-% value emitted 116 !== % value emitted 46 on line 1334 of mbust.pt
-% value emitted 105 !== .tParmEnd on line 1335 of mbust.pt
-% value emitted 109 !== .tLiteralInteger on line 1336 of mbust.pt
-% value emitted 101 !== oEmitValue on line 1337 of mbust.pt
-% value emitted 46 !== % value emitted 1 on line 1338 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1340 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1341 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1342 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1343 of mbust.pt
-.tTrap !== .tTrapBegin on line 1344 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1345 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1346 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 1347 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1348 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1349 of mbust.pt
-oEmitValue !== .tTrap on line 1350 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1351 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1352 of mbust.pt
-.tParmEnd !== .tIfMerge on line 1353 of mbust.pt
-.tTrap !== oEmitNullAddress on line 1354 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted -32767 on line 1355 of mbust.pt
-% value emitted 6 !== .tTrapBegin on line 1356 of mbust.pt
-.tIfMerge !== .tLiteralAddress on line 1357 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 1358 of mbust.pt
-% value emitted -32767 !== % value emitted 4 on line 1359 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1360 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1361 of mbust.pt
-oEmitValue !== .tTrap on line 1362 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1363 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1364 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 1365 of mbust.pt
-.tTrap !== .tTrapBegin on line 1366 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1367 of mbust.pt
-% value emitted 6 !== oEmitValue on line 1368 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1369 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1370 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1371 of mbust.pt
-oEmitValue !== .tLiteralString on line 1372 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1373 of mbust.pt
-.tVarParm !== % value emitted 15 on line 1374 of mbust.pt
-.tParmEnd !== oEmitString on line 1375 of mbust.pt
-.tLiteralString !== % value emitted 78 on line 1376 of mbust.pt
-oEmitValue !== % value emitted 101 on line 1377 of mbust.pt
-% value emitted 15 !== % value emitted 120 on line 1378 of mbust.pt
-oEmitString !== % value emitted 116 on line 1379 of mbust.pt
-% value emitted 78 !== % value emitted 32 on line 1380 of mbust.pt
-% value emitted 101 !== % value emitted 112 on line 1381 of mbust.pt
-% value emitted 120 !== % value emitted 108 on line 1382 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 1383 of mbust.pt
-% value emitted 32 !== % value emitted 121 on line 1384 of mbust.pt
-% value emitted 112 !== % value emitted 101 on line 1385 of mbust.pt
-% value emitted 108 !== % value emitted 114 on line 1386 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 1387 of mbust.pt
-% value emitted 121 !== % value emitted 105 on line 1388 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 1389 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 1390 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 1391 of mbust.pt
-% value emitted 105 !== .tLiteralInteger on line 1392 of mbust.pt
-% value emitted 115 !== oEmitValue on line 1393 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 1394 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1396 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1397 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1398 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1399 of mbust.pt
-.tTrap !== .tCallBegin on line 1400 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tCallEnd on line 1401 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1402 of mbust.pt
-.tWriteEnd !== % value emitted 705 on line 1403 of mbust.pt
-.tCallBegin !== .tWriteBegin on line 1404 of mbust.pt
-.tCallEnd !== .tTrapBegin on line 1405 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1406 of mbust.pt
-% value emitted 713 !== oEmitValue on line 1407 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1408 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1409 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1410 of mbust.pt
-oEmitValue !== .tLiteralString on line 1411 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1412 of mbust.pt
-.tVarParm !== % value emitted 1 on line 1413 of mbust.pt
-.tParmEnd !== oEmitString on line 1414 of mbust.pt
-.tLiteralString !== % value emitted 46 on line 1415 of mbust.pt
-oEmitValue !== .tParmEnd on line 1416 of mbust.pt
-% value emitted 1 !== .tLiteralInteger on line 1417 of mbust.pt
-oEmitString !== oEmitValue on line 1418 of mbust.pt
-% value emitted 46 !== % value emitted 1 on line 1419 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1421 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1422 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1423 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1424 of mbust.pt
-.tTrap !== .tTrapBegin on line 1425 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1426 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1427 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 1428 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1429 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1430 of mbust.pt
-oEmitValue !== .tTrap on line 1431 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1432 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1433 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 1434 of mbust.pt
-.tTrap !== .tTrapBegin on line 1435 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 1436 of mbust.pt
-% value emitted 6 !== oEmitValue on line 1437 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1438 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1439 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1440 of mbust.pt
-oEmitValue !== .tLiteralString on line 1441 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1442 of mbust.pt
-.tVarParm !== % value emitted 14 on line 1443 of mbust.pt
-.tParmEnd !== oEmitString on line 1444 of mbust.pt
-.tLiteralString !== % value emitted 83 on line 1445 of mbust.pt
-oEmitValue !== % value emitted 47 on line 1446 of mbust.pt
-% value emitted 14 !== % value emitted 104 on line 1447 of mbust.pt
-oEmitString !== % value emitted 101 on line 1448 of mbust.pt
-% value emitted 83 !== % value emitted 32 on line 1449 of mbust.pt
-% value emitted 47 !== % value emitted 115 on line 1450 of mbust.pt
-% value emitted 104 !== % value emitted 116 on line 1451 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 1452 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 1453 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 1455 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 1456 of mbust.pt
-% value emitted 112 !== % value emitted 116 on line 1457 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 1458 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 1459 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 1460 of mbust.pt
-% value emitted 116 !== oEmitValue on line 1461 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 1462 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1464 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1465 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1466 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 1467 of mbust.pt
-.tTrap !== .tLiteralAddress on line 1468 of mbust.pt
-oEmitTrapKind(trWriteString) !== oEmitValue on line 1469 of mbust.pt
-% value emitted 109 !== % value emitted 4 on line 1470 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1471 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1472 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1473 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1474 of mbust.pt
-.tVarParm !== % value emitted 1136 on line 1475 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 1476 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1477 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 1478 of mbust.pt
-% value emitted 1136 !== oEmitValue on line 1479 of mbust.pt
-.tFetchInteger !== % value emitted 1 on line 1480 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1482 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteInteger) on line 1483 of mbust.pt
-% value emitted 1 !== % value emitted 8 on line 1484 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 1485 of mbust.pt
-.tTrap !== .tLiteralAddress on line 1486 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== oEmitValue on line 1487 of mbust.pt
-% value emitted 7 !== % value emitted 4 on line 1488 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1489 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1490 of mbust.pt
-oEmitValue !== .tLiteralString on line 1491 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1492 of mbust.pt
-.tVarParm !== % value emitted 1 on line 1493 of mbust.pt
-.tParmEnd !== oEmitString on line 1494 of mbust.pt
-.tLiteralString !== % value emitted 46 on line 1495 of mbust.pt
-oEmitValue !== .tParmEnd on line 1496 of mbust.pt
-% value emitted 1 !== .tLiteralInteger on line 1497 of mbust.pt
-oEmitString !== oEmitValue on line 1498 of mbust.pt
-% value emitted 46 !== % value emitted 1 on line 1499 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1501 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1502 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1503 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1504 of mbust.pt
-.tTrap !== .tTrapBegin on line 1505 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1506 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1507 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 1508 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1509 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1510 of mbust.pt
-oEmitValue !== .tTrap on line 1511 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1512 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1513 of mbust.pt
-.tParmEnd !== .tIfBegin on line 1514 of mbust.pt
-.tTrap !== .tLiteralAddress on line 1515 of mbust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 1516 of mbust.pt
-% value emitted 6 !== % value emitted 1136 on line 1517 of mbust.pt
-.tIfBegin !== .tFetchInteger on line 1518 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 1519 of mbust.pt
-% value emitted 1136 !== % value emitted 15 on line 1521 of mbust.pt
-.tFetchInteger !== .tLT on line 1522 of mbust.pt
-.tLiteralInteger !== .tIfThen on line 1523 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 1524 of mbust.pt
-% value emitted 15 !== % value emitted -32767 on line 1525 of mbust.pt
-.tLT !== .tWriteBegin on line 1526 of mbust.pt
-.tIfThen !== .tTrapBegin on line 1527 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1528 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 1529 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1530 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1531 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1532 of mbust.pt
-oEmitValue !== .tLiteralString on line 1533 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1534 of mbust.pt
-.tVarParm !== % value emitted 19 on line 1535 of mbust.pt
-.tParmEnd !== oEmitString on line 1536 of mbust.pt
-.tLiteralString !== % value emitted 40 on line 1537 of mbust.pt
-oEmitValue !== % value emitted 87 on line 1538 of mbust.pt
-% value emitted 19 !== % value emitted 104 on line 1539 of mbust.pt
-oEmitString !== % value emitted 97 on line 1540 of mbust.pt
-% value emitted 40 !== % value emitted 116 on line 1541 of mbust.pt
-% value emitted 87 !== % value emitted 32 on line 1542 of mbust.pt
-% value emitted 104 !== % value emitted 97 on line 1543 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 1544 of mbust.pt
-% value emitted 116 !== % value emitted 104 on line 1545 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 1546 of mbust.pt
-% value emitted 97 !== % value emitted 109 on line 1547 of mbust.pt
-% value emitted 32 !== % value emitted 98 on line 1548 of mbust.pt
-% value emitted 104 !== % value emitted 117 on line 1549 of mbust.pt
-% value emitted 97 !== % value emitted 114 on line 1550 of mbust.pt
-% value emitted 109 !== % value emitted 103 on line 1551 of mbust.pt
-% value emitted 98 !== % value emitted 101 on line 1552 of mbust.pt
-% value emitted 117 !== % value emitted 114 on line 1553 of mbust.pt
-% value emitted 114 !== % value emitted 33 on line 1554 of mbust.pt
-% value emitted 103 !== % value emitted 41 on line 1555 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 1556 of mbust.pt
-% value emitted 114 !== .tLiteralInteger on line 1557 of mbust.pt
-% value emitted 33 !== oEmitValue on line 1558 of mbust.pt
-% value emitted 41 !== % value emitted 1 on line 1559 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1561 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1562 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1563 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1564 of mbust.pt
-.tTrap !== .tTrapBegin on line 1565 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1566 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1567 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 1568 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1569 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1570 of mbust.pt
-oEmitValue !== .tTrap on line 1571 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1572 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1573 of mbust.pt
-.tParmEnd !== .tIfMerge on line 1574 of mbust.pt
-.tTrap !== oEmitNullAddress on line 1575 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted -32767 on line 1576 of mbust.pt
-% value emitted 6 !== .tWriteBegin on line 1577 of mbust.pt
-.tIfMerge !== .tTrapBegin on line 1578 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 1579 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 1580 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1581 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1582 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1583 of mbust.pt
-oEmitValue !== .tLiteralString on line 1584 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1585 of mbust.pt
-.tVarParm !== % value emitted 11 on line 1586 of mbust.pt
-.tParmEnd !== oEmitString on line 1587 of mbust.pt
-.tLiteralString !== % value emitted 71 on line 1588 of mbust.pt
-oEmitValue !== % value emitted 111 on line 1589 of mbust.pt
-% value emitted 11 !== % value emitted 111 on line 1590 of mbust.pt
-oEmitString !== % value emitted 100 on line 1591 of mbust.pt
-% value emitted 71 !== % value emitted 32 on line 1592 of mbust.pt
-% value emitted 111 !== % value emitted 108 on line 1593 of mbust.pt
-% value emitted 111 !== % value emitted 117 on line 1594 of mbust.pt
-% value emitted 100 !== % value emitted 99 on line 1595 of mbust.pt
-% value emitted 32 !== % value emitted 107 on line 1596 of mbust.pt
-% value emitted 108 !== % value emitted 44 on line 1597 of mbust.pt
-% value emitted 117 !== % value emitted 32 on line 1598 of mbust.pt
-% value emitted 99 !== .tParmEnd on line 1599 of mbust.pt
-% value emitted 107 !== .tLiteralInteger on line 1600 of mbust.pt
-% value emitted 44 !== oEmitValue on line 1601 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 1602 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1604 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1605 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1606 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1607 of mbust.pt
-.tTrap !== .tCallBegin on line 1608 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tCallEnd on line 1609 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1610 of mbust.pt
-.tWriteEnd !== % value emitted 705 on line 1611 of mbust.pt
-.tCallBegin !== .tWriteBegin on line 1612 of mbust.pt
-.tCallEnd !== .tTrapBegin on line 1613 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1614 of mbust.pt
-% value emitted 713 !== oEmitValue on line 1615 of mbust.pt
-.tWriteBegin !== % value emitted 4 on line 1616 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1617 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1618 of mbust.pt
-oEmitValue !== .tLiteralString on line 1619 of mbust.pt
-% value emitted 4 !== oEmitValue on line 1620 of mbust.pt
-.tVarParm !== % value emitted 1 on line 1621 of mbust.pt
-.tParmEnd !== oEmitString on line 1622 of mbust.pt
-.tLiteralString !== % value emitted 46 on line 1623 of mbust.pt
-oEmitValue !== .tParmEnd on line 1624 of mbust.pt
-% value emitted 1 !== .tLiteralInteger on line 1625 of mbust.pt
-oEmitString !== oEmitValue on line 1626 of mbust.pt
-% value emitted 46 !== % value emitted 1 on line 1627 of mbust.pt
-.tLiteralInteger !== .tTrap on line 1629 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteString) on line 1630 of mbust.pt
-% value emitted 1 !== % value emitted 109 on line 1631 of mbust.pt
-.tParmEnd !== .tWriteEnd on line 1632 of mbust.pt
-.tTrap !== .tTrapBegin on line 1633 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 1634 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1635 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 1636 of mbust.pt
-.tTrapBegin !== .tVarParm on line 1637 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 1638 of mbust.pt
-oEmitValue !== .tTrap on line 1639 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 1640 of mbust.pt
-.tVarParm !== % value emitted 6 on line 1641 of mbust.pt
-.tParmEnd !== .tIfEnd on line 1642 of mbust.pt
-.tTrap !== .tIfEnd on line 1643 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tAssignBegin on line 1644 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 1645 of mbust.pt
-.tIfEnd !== oEmitValue on line 1646 of mbust.pt
-.tIfEnd !== % value emitted 14788 on line 1647 of mbust.pt
-#eMutableVarReqd !== .tFetchAddress on line 1648 of mbust.pt
-.tAssignBegin !== .tLiteralBoolean on line 1649 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1650 of mbust.pt
-oEmitValue !== % value emitted 1 on line 1651 of mbust.pt
-% value emitted 14788 !== .tAssignBoolean on line 1652 of mbust.pt
-.tFetchAddress !== .tIfEnd on line 1653 of mbust.pt
-.tLiteralBoolean !== .tProcedureEnd on line 1654 of mbust.pt
-oEmitValue !== .tSkipProc on line 1655 of mbust.pt
-% value emitted 1 !== oEmitNullAddress on line 1656 of mbust.pt
-.tAssignBoolean !== % value emitted -32767 on line 1657 of mbust.pt
-.tIfEnd !== .tLiteralAddress on line 1658 of mbust.pt
-.tProcedureEnd !== oEmitValue on line 1659 of mbust.pt
-.tSkipProc !== % value emitted 14792 on line 1660 of mbust.pt
-oEmitNullAddress !== .tStoreParmAddress on line 1661 of mbust.pt
-% value emitted -32767 !== .tParmEnd on line 1662 of mbust.pt
-.tLiteralAddress !== .tCallBegin on line 1663 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1664 of mbust.pt
-% value emitted 14792 !== oEmitValue on line 1665 of mbust.pt
-.tStoreParmAddress !== % value emitted 14796 on line 1666 of mbust.pt
-.tParmEnd !== .tVarParm on line 1667 of mbust.pt
-.tCallBegin !== .tParmEnd on line 1668 of mbust.pt
-.tLiteralAddress !== .tCallEnd on line 1669 of mbust.pt
-% value emitted 14796 !== % value emitted 400 on line 1671 of mbust.pt
-.tVarParm !== .tIfBegin on line 1672 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 1673 of mbust.pt
-.tCallEnd !== oEmitValue on line 1674 of mbust.pt
-oEmitValue !== % value emitted 14796 on line 1675 of mbust.pt
-% value emitted 406 !== .tFetchInteger on line 1676 of mbust.pt
-.tIfBegin !== .tLiteralInteger on line 1677 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1678 of mbust.pt
-oEmitValue !== % value emitted 10 on line 1679 of mbust.pt
-% value emitted 14796 !== .tGT on line 1680 of mbust.pt
-.tFetchInteger !== .tIfThen on line 1681 of mbust.pt
-.tLiteralInteger !== oEmitNullAddress on line 1682 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 1683 of mbust.pt
-% value emitted 10 !== .tTrapBegin on line 1684 of mbust.pt
-.tGT !== .tLiteralAddress on line 1685 of mbust.pt
-.tIfThen !== oEmitValue on line 1686 of mbust.pt
-oEmitNullAddress !== % value emitted 4 on line 1687 of mbust.pt
-% value emitted -32767 !== .tVarParm on line 1688 of mbust.pt
-.tTrapBegin !== .tParmEnd on line 1689 of mbust.pt
-.tLiteralAddress !== .tTrap on line 1690 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteln) on line 1691 of mbust.pt
-% value emitted 4 !== % value emitted 6 on line 1692 of mbust.pt
-.tVarParm !== .tWriteBegin on line 1693 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 1694 of mbust.pt
-.tTrap !== .tLiteralAddress on line 1695 of mbust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 1696 of mbust.pt
-% value emitted 6 !== % value emitted 4 on line 1697 of mbust.pt
-.tWriteBegin !== .tVarParm on line 1698 of mbust.pt
-.tTrapBegin !== .tParmEnd on line 1699 of mbust.pt
-.tLiteralAddress !== .tLiteralString on line 1700 of mbust.pt
-% value emitted 4 !== % value emitted 9 on line 1702 of mbust.pt
-.tVarParm !== oEmitString on line 1703 of mbust.pt
-.tParmEnd !== % value emitted 78 on line 1704 of mbust.pt
-.tLiteralString !== % value emitted 101 on line 1705 of mbust.pt
-oEmitValue !== % value emitted 119 on line 1706 of mbust.pt
-% value emitted 9 !== % value emitted 32 on line 1707 of mbust.pt
-oEmitString !== % value emitted 103 on line 1708 of mbust.pt
-% value emitted 78 !== % value emitted 97 on line 1709 of mbust.pt
-% value emitted 101 !== % value emitted 109 on line 1710 of mbust.pt
-% value emitted 119 !== % value emitted 101 on line 1711 of mbust.pt
-% value emitted 32 !== % value emitted 46 on line 1712 of mbust.pt
-% value emitted 103 !== .tParmEnd on line 1713 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 1714 of mbust.pt
-% value emitted 109 !== oEmitValue on line 1715 of mbust.pt
-% value emitted 101 !== % value emitted 1 on line 1716 of mbust.pt
-% value emitted 46 !== .tParmEnd on line 1717 of mbust.pt
-.tParmEnd !== .tTrap on line 1718 of mbust.pt
-.tLiteralInteger !== oEmitTrapKind(trWriteString) on line 1719 of mbust.pt
-oEmitValue !== % value emitted 109 on line 1720 of mbust.pt
-% value emitted 1 !== .tWriteEnd on line 1721 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 1722 of mbust.pt
-.tTrap !== .tLiteralAddress on line 1723 of mbust.pt
-oEmitTrapKind(trWriteString) !== oEmitValue on line 1724 of mbust.pt
-% value emitted 109 !== % value emitted 4 on line 1725 of mbust.pt
-.tWriteEnd !== .tVarParm on line 1726 of mbust.pt
-.tTrapBegin !== .tParmEnd on line 1727 of mbust.pt
-.tLiteralAddress !== .tTrap on line 1728 of mbust.pt
-oEmitValue !== oEmitTrapKind(trWriteln) on line 1729 of mbust.pt
-% value emitted 4 !== % value emitted 6 on line 1730 of mbust.pt
-.tVarParm !== .tAssignBegin on line 1731 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 1732 of mbust.pt
-.tTrap !== oEmitValue on line 1733 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 88 on line 1734 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 1735 of mbust.pt
-.tAssignBegin !== oEmitValue on line 1736 of mbust.pt
-.tLiteralAddress !== % value emitted 88 on line 1737 of mbust.pt
-oEmitValue !== .tFetchInteger on line 1738 of mbust.pt
-% value emitted 88 !== .tLiteralInteger on line 1739 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1740 of mbust.pt
-oEmitValue !== % value emitted 1 on line 1741 of mbust.pt
-% value emitted 88 !== .tAdd on line 1742 of mbust.pt
-.tFetchInteger !== .tAssignInteger on line 1743 of mbust.pt
-.tLiteralInteger !== .tAssignBegin on line 1744 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 1745 of mbust.pt
-% value emitted 1 !== oEmitValue on line 1746 of mbust.pt
-.tAdd !== % value emitted 14792 on line 1747 of mbust.pt
-.tAssignInteger !== .tFetchAddress on line 1748 of mbust.pt
-#eMutableVarReqd !== .tLiteralBoolean on line 1749 of mbust.pt
-.tAssignBegin !== oEmitValue on line 1750 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 1751 of mbust.pt
-oEmitValue !== .tAssignBoolean on line 1752 of mbust.pt
-% value emitted 14792 !== .tIfMerge on line 1753 of mbust.pt
-.tFetchAddress !== oEmitNullAddress on line 1754 of mbust.pt
-.tLiteralBoolean !== % value emitted -32767 on line 1755 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1756 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1757 of mbust.pt
-.tAssignBoolean !== oEmitValue on line 1758 of mbust.pt
-.tIfMerge !== % value emitted 4 on line 1759 of mbust.pt
-oEmitNullAddress !== .tVarParm on line 1760 of mbust.pt
-% value emitted -32767 !== .tParmEnd on line 1761 of mbust.pt
-.tTrapBegin !== .tTrap on line 1762 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1763 of mbust.pt
-oEmitValue !== % value emitted 6 on line 1764 of mbust.pt
-% value emitted 4 !== .tWriteBegin on line 1765 of mbust.pt
-.tVarParm !== .tTrapBegin on line 1766 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 1767 of mbust.pt
-.tTrap !== oEmitValue on line 1768 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 1769 of mbust.pt
-% value emitted 6 !== .tVarParm on line 1770 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 1771 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1772 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1773 of mbust.pt
-oEmitValue !== % value emitted 36 on line 1774 of mbust.pt
-% value emitted 4 !== oEmitString on line 1775 of mbust.pt
-.tVarParm !== % value emitted 84 on line 1776 of mbust.pt
-.tParmEnd !== % value emitted 111 on line 1777 of mbust.pt
-.tLiteralString !== % value emitted 111 on line 1778 of mbust.pt
-oEmitValue !== % value emitted 32 on line 1779 of mbust.pt
-% value emitted 36 !== % value emitted 102 on line 1780 of mbust.pt
-oEmitString !== % value emitted 101 on line 1781 of mbust.pt
-% value emitted 84 !== % value emitted 119 on line 1782 of mbust.pt
-% value emitted 111 !== % value emitted 32 on line 1783 of mbust.pt
-% value emitted 111 !== % value emitted 99 on line 1784 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 1785 of mbust.pt
-% value emitted 102 !== % value emitted 114 on line 1786 of mbust.pt
-% value emitted 101 !== % value emitted 100 on line 1787 of mbust.pt
-% value emitted 119 !== % value emitted 115 on line 1788 of mbust.pt
-% value emitted 99 !== % value emitted 108 on line 1790 of mbust.pt
-% value emitted 97 !== % value emitted 101 on line 1791 of mbust.pt
-% value emitted 114 !== % value emitted 102 on line 1792 of mbust.pt
-% value emitted 100 !== % value emitted 116 on line 1793 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 1794 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 1795 of mbust.pt
-% value emitted 108 !== % value emitted 111 on line 1796 of mbust.pt
-% value emitted 101 !== % value emitted 114 on line 1797 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 1798 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 1799 of mbust.pt
-% value emitted 32 !== % value emitted 110 on line 1800 of mbust.pt
-% value emitted 102 !== % value emitted 111 on line 1801 of mbust.pt
-% value emitted 111 !== % value emitted 116 on line 1802 of mbust.pt
-% value emitted 114 !== % value emitted 104 on line 1803 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 1804 of mbust.pt
-% value emitted 97 !== % value emitted 114 on line 1805 of mbust.pt
-% value emitted 110 !== % value emitted 32 on line 1806 of mbust.pt
-% value emitted 111 !== % value emitted 103 on line 1807 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 1808 of mbust.pt
-% value emitted 104 !== % value emitted 109 on line 1809 of mbust.pt
-% value emitted 114 !== % value emitted 46 on line 1811 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 1812 of mbust.pt
-% value emitted 103 !== .tLiteralInteger on line 1813 of mbust.pt
-% value emitted 97 !== oEmitValue on line 1814 of mbust.pt
-% value emitted 109 !== % value emitted 1 on line 1815 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 1816 of mbust.pt
-% value emitted 46 !== .tTrap on line 1817 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1818 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 1819 of mbust.pt
-oEmitValue !== .tWriteEnd on line 1820 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 1821 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 1822 of mbust.pt
-.tTrap !== oEmitValue on line 1823 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 1824 of mbust.pt
-% value emitted 109 !== .tVarParm on line 1825 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 1826 of mbust.pt
-.tTrapBegin !== .tTrap on line 1827 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 1828 of mbust.pt
-oEmitValue !== % value emitted 6 on line 1829 of mbust.pt
-% value emitted 4 !== .tWriteBegin on line 1830 of mbust.pt
-.tVarParm !== .tTrapBegin on line 1831 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 1832 of mbust.pt
-.tTrap !== oEmitValue on line 1833 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 1834 of mbust.pt
-% value emitted 6 !== .tVarParm on line 1835 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 1836 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1837 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1838 of mbust.pt
-oEmitValue !== % value emitted 3 on line 1839 of mbust.pt
-% value emitted 4 !== oEmitString on line 1840 of mbust.pt
-.tVarParm !== % value emitted 79 on line 1841 of mbust.pt
-.tParmEnd !== % value emitted 102 on line 1842 of mbust.pt
-.tLiteralString !== % value emitted 32 on line 1843 of mbust.pt
-oEmitValue !== .tParmEnd on line 1844 of mbust.pt
-% value emitted 3 !== .tLiteralInteger on line 1845 of mbust.pt
-oEmitString !== oEmitValue on line 1846 of mbust.pt
-% value emitted 79 !== % value emitted 1 on line 1847 of mbust.pt
-% value emitted 102 !== .tParmEnd on line 1848 of mbust.pt
-% value emitted 32 !== .tTrap on line 1849 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1850 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 1851 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1852 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1853 of mbust.pt
-.tParmEnd !== oEmitValue on line 1854 of mbust.pt
-.tTrap !== % value emitted 4 on line 1855 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1856 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 1857 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 1858 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1859 of mbust.pt
-oEmitValue !== % value emitted 88 on line 1860 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 1861 of mbust.pt
-.tVarParm !== .tParmEnd on line 1862 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 1863 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1864 of mbust.pt
-oEmitValue !== % value emitted 1 on line 1865 of mbust.pt
-% value emitted 88 !== .tParmEnd on line 1866 of mbust.pt
-.tFetchInteger !== .tTrap on line 1867 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1868 of mbust.pt
-.tLiteralInteger !== % value emitted 8 on line 1869 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1870 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1871 of mbust.pt
-.tParmEnd !== oEmitValue on line 1872 of mbust.pt
-.tTrap !== % value emitted 4 on line 1873 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1874 of mbust.pt
-% value emitted 7 !== .tParmEnd on line 1875 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1876 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1877 of mbust.pt
-oEmitValue !== % value emitted 8 on line 1878 of mbust.pt
-% value emitted 4 !== oEmitString on line 1879 of mbust.pt
-.tVarParm !== % value emitted 32 on line 1880 of mbust.pt
-.tParmEnd !== % value emitted 103 on line 1881 of mbust.pt
-.tLiteralString !== % value emitted 97 on line 1882 of mbust.pt
-oEmitValue !== % value emitted 109 on line 1883 of mbust.pt
-% value emitted 8 !== % value emitted 101 on line 1884 of mbust.pt
-oEmitString !== % value emitted 115 on line 1885 of mbust.pt
-% value emitted 32 !== % value emitted 44 on line 1886 of mbust.pt
-% value emitted 103 !== % value emitted 32 on line 1887 of mbust.pt
-% value emitted 97 !== .tParmEnd on line 1888 of mbust.pt
-% value emitted 109 !== .tLiteralInteger on line 1889 of mbust.pt
-% value emitted 101 !== oEmitValue on line 1890 of mbust.pt
-% value emitted 115 !== % value emitted 1 on line 1891 of mbust.pt
-% value emitted 44 !== .tParmEnd on line 1892 of mbust.pt
-% value emitted 32 !== .tTrap on line 1893 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1894 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 1895 of mbust.pt
-oEmitValue !== .tWriteEnd on line 1896 of mbust.pt
-% value emitted 1 !== .tCallBegin on line 1897 of mbust.pt
-.tParmEnd !== .tCallEnd on line 1898 of mbust.pt
-.tTrap !== oEmitValue on line 1899 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 705 on line 1900 of mbust.pt
-% value emitted 109 !== .tWriteBegin on line 1901 of mbust.pt
-.tWriteEnd !== .tTrapBegin on line 1902 of mbust.pt
-.tCallBegin !== .tLiteralAddress on line 1903 of mbust.pt
-.tCallEnd !== oEmitValue on line 1904 of mbust.pt
-oEmitValue !== % value emitted 4 on line 1905 of mbust.pt
-% value emitted 713 !== .tVarParm on line 1906 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 1907 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1908 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1909 of mbust.pt
-oEmitValue !== % value emitted 5 on line 1910 of mbust.pt
-% value emitted 4 !== oEmitString on line 1911 of mbust.pt
-.tVarParm !== % value emitted 32 on line 1912 of mbust.pt
-.tParmEnd !== % value emitted 119 on line 1913 of mbust.pt
-.tLiteralString !== % value emitted 111 on line 1914 of mbust.pt
-oEmitValue !== % value emitted 110 on line 1915 of mbust.pt
-% value emitted 5 !== % value emitted 32 on line 1916 of mbust.pt
-oEmitString !== .tParmEnd on line 1917 of mbust.pt
-% value emitted 32 !== .tLiteralInteger on line 1918 of mbust.pt
-% value emitted 119 !== oEmitValue on line 1919 of mbust.pt
-% value emitted 111 !== % value emitted 1 on line 1920 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 1921 of mbust.pt
-% value emitted 32 !== .tTrap on line 1922 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1923 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 1924 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1925 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1926 of mbust.pt
-.tParmEnd !== oEmitValue on line 1927 of mbust.pt
-.tTrap !== % value emitted 4 on line 1928 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1929 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 1930 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 1931 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1932 of mbust.pt
-oEmitValue !== % value emitted 92 on line 1933 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 1934 of mbust.pt
-.tVarParm !== .tParmEnd on line 1935 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 1936 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1937 of mbust.pt
-oEmitValue !== % value emitted 1 on line 1938 of mbust.pt
-% value emitted 92 !== .tParmEnd on line 1939 of mbust.pt
-.tFetchInteger !== .tTrap on line 1940 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1941 of mbust.pt
-.tLiteralInteger !== % value emitted 8 on line 1942 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1943 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1944 of mbust.pt
-.tParmEnd !== oEmitValue on line 1945 of mbust.pt
-.tTrap !== % value emitted 4 on line 1946 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1947 of mbust.pt
-% value emitted 7 !== .tParmEnd on line 1948 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1949 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1950 of mbust.pt
-oEmitValue !== % value emitted 13 on line 1951 of mbust.pt
-% value emitted 4 !== oEmitString on line 1952 of mbust.pt
-.tVarParm !== % value emitted 44 on line 1953 of mbust.pt
-.tParmEnd !== % value emitted 32 on line 1954 of mbust.pt
-.tLiteralString !== % value emitted 100 on line 1955 of mbust.pt
-oEmitValue !== % value emitted 101 on line 1956 of mbust.pt
-% value emitted 13 !== % value emitted 97 on line 1957 of mbust.pt
-oEmitString !== % value emitted 108 on line 1958 of mbust.pt
-% value emitted 44 !== % value emitted 101 on line 1959 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 1960 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 1961 of mbust.pt
-% value emitted 101 !== % value emitted 119 on line 1962 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 1963 of mbust.pt
-% value emitted 108 !== % value emitted 110 on line 1964 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 1965 of mbust.pt
-% value emitted 114 !== .tParmEnd on line 1966 of mbust.pt
-% value emitted 32 !== .tLiteralInteger on line 1967 of mbust.pt
-% value emitted 119 !== oEmitValue on line 1968 of mbust.pt
-% value emitted 111 !== % value emitted 1 on line 1969 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 1970 of mbust.pt
-% value emitted 32 !== .tTrap on line 1971 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 1972 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 1973 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1974 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1975 of mbust.pt
-.tParmEnd !== oEmitValue on line 1976 of mbust.pt
-.tTrap !== % value emitted 4 on line 1977 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 1978 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 1979 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 1980 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1981 of mbust.pt
-oEmitValue !== % value emitted 96 on line 1982 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 1983 of mbust.pt
-.tVarParm !== .tParmEnd on line 1984 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 1985 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1986 of mbust.pt
-oEmitValue !== % value emitted 1 on line 1987 of mbust.pt
-% value emitted 96 !== .tParmEnd on line 1988 of mbust.pt
-.tFetchInteger !== .tTrap on line 1989 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteInteger) on line 1990 of mbust.pt
-.tLiteralInteger !== % value emitted 8 on line 1991 of mbust.pt
-oEmitValue !== .tTrapBegin on line 1992 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 1993 of mbust.pt
-.tParmEnd !== oEmitValue on line 1994 of mbust.pt
-.tTrap !== % value emitted 4 on line 1995 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== .tVarParm on line 1996 of mbust.pt
-% value emitted 7 !== .tParmEnd on line 1997 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 1998 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 1999 of mbust.pt
-oEmitValue !== % value emitted 1 on line 2000 of mbust.pt
-% value emitted 4 !== oEmitString on line 2001 of mbust.pt
-.tVarParm !== % value emitted 46 on line 2002 of mbust.pt
-.tLiteralString !== .tLiteralInteger on line 2004 of mbust.pt
-oEmitString !== .tParmEnd on line 2007 of mbust.pt
-% value emitted 46 !== .tTrap on line 2008 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2009 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2010 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2011 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 2012 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2013 of mbust.pt
-.tTrap !== oEmitValue on line 2014 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2015 of mbust.pt
-% value emitted 109 !== .tVarParm on line 2016 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 2017 of mbust.pt
-.tTrapBegin !== .tTrap on line 2018 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2019 of mbust.pt
-oEmitValue !== % value emitted 6 on line 2020 of mbust.pt
-% value emitted 4 !== .tIfBegin on line 2021 of mbust.pt
-.tVarParm !== .tLiteralAddress on line 2022 of mbust.pt
-.tParmEnd !== oEmitValue on line 2023 of mbust.pt
-.tTrap !== % value emitted 96 on line 2024 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tFetchInteger on line 2025 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 2026 of mbust.pt
-.tIfBegin !== oEmitValue on line 2027 of mbust.pt
-.tLiteralAddress !== % value emitted 92 on line 2028 of mbust.pt
-oEmitValue !== .tFetchInteger on line 2029 of mbust.pt
-% value emitted 96 !== .tGT on line 2030 of mbust.pt
-.tFetchInteger !== .tIfThen on line 2031 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2032 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2033 of mbust.pt
-% value emitted 92 !== .tWriteBegin on line 2034 of mbust.pt
-.tFetchInteger !== .tTrapBegin on line 2035 of mbust.pt
-.tGT !== .tLiteralAddress on line 2036 of mbust.pt
-.tIfThen !== oEmitValue on line 2037 of mbust.pt
-oEmitNullAddress !== % value emitted 4 on line 2038 of mbust.pt
-% value emitted -32767 !== .tVarParm on line 2039 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 2040 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 2041 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2042 of mbust.pt
-oEmitValue !== % value emitted 19 on line 2043 of mbust.pt
-% value emitted 4 !== oEmitString on line 2044 of mbust.pt
-.tVarParm !== % value emitted 72 on line 2045 of mbust.pt
-.tParmEnd !== % value emitted 111 on line 2046 of mbust.pt
-.tLiteralString !== % value emitted 117 on line 2047 of mbust.pt
-oEmitValue !== % value emitted 115 on line 2048 of mbust.pt
-% value emitted 19 !== % value emitted 101 on line 2049 of mbust.pt
-oEmitString !== % value emitted 32 on line 2050 of mbust.pt
-% value emitted 72 !== % value emitted 99 on line 2051 of mbust.pt
-% value emitted 111 !== % value emitted 108 on line 2052 of mbust.pt
-% value emitted 117 !== % value emitted 101 on line 2053 of mbust.pt
-% value emitted 115 !== % value emitted 97 on line 2054 of mbust.pt
-% value emitted 101 !== % value emitted 110 on line 2055 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 2056 of mbust.pt
-% value emitted 99 !== % value emitted 32 on line 2057 of mbust.pt
-% value emitted 108 !== % value emitted 117 on line 2058 of mbust.pt
-% value emitted 101 !== % value emitted 112 on line 2059 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 2060 of mbust.pt
-% value emitted 110 !== % value emitted 111 on line 2061 of mbust.pt
-% value emitted 115 !== % value emitted 110 on line 2062 of mbust.pt
-% value emitted 117 !== .tParmEnd on line 2064 of mbust.pt
-% value emitted 112 !== .tLiteralInteger on line 2065 of mbust.pt
-% value emitted 32 !== oEmitValue on line 2066 of mbust.pt
-% value emitted 111 !== % value emitted 1 on line 2067 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 2068 of mbust.pt
-% value emitted 32 !== .tTrap on line 2069 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2070 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2071 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2072 of mbust.pt
-% value emitted 1 !== .tCallBegin on line 2073 of mbust.pt
-.tParmEnd !== .tCallEnd on line 2074 of mbust.pt
-.tTrap !== oEmitValue on line 2075 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 705 on line 2076 of mbust.pt
-% value emitted 109 !== .tWriteBegin on line 2077 of mbust.pt
-.tWriteEnd !== .tTrapBegin on line 2078 of mbust.pt
-.tCallBegin !== .tLiteralAddress on line 2079 of mbust.pt
-.tCallEnd !== oEmitValue on line 2080 of mbust.pt
-oEmitValue !== % value emitted 4 on line 2081 of mbust.pt
-% value emitted 713 !== .tVarParm on line 2082 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 2083 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 2084 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2085 of mbust.pt
-oEmitValue !== % value emitted 11 on line 2086 of mbust.pt
-% value emitted 4 !== oEmitString on line 2087 of mbust.pt
-.tVarParm !== % value emitted 32 on line 2088 of mbust.pt
-.tParmEnd !== % value emitted 116 on line 2089 of mbust.pt
-.tLiteralString !== % value emitted 104 on line 2090 of mbust.pt
-oEmitValue !== % value emitted 105 on line 2091 of mbust.pt
-% value emitted 11 !== % value emitted 115 on line 2092 of mbust.pt
-oEmitString !== % value emitted 32 on line 2093 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 2094 of mbust.pt
-% value emitted 116 !== % value emitted 105 on line 2095 of mbust.pt
-% value emitted 104 !== % value emitted 109 on line 2096 of mbust.pt
-% value emitted 105 !== % value emitted 101 on line 2097 of mbust.pt
-% value emitted 115 !== % value emitted 46 on line 2098 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 2099 of mbust.pt
-% value emitted 116 !== .tLiteralInteger on line 2100 of mbust.pt
-% value emitted 105 !== oEmitValue on line 2101 of mbust.pt
-% value emitted 109 !== % value emitted 1 on line 2102 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2103 of mbust.pt
-% value emitted 46 !== .tTrap on line 2104 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2105 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2106 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2107 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 2108 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2109 of mbust.pt
-.tTrap !== oEmitValue on line 2110 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2111 of mbust.pt
-% value emitted 109 !== .tVarParm on line 2112 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 2113 of mbust.pt
-.tTrapBegin !== .tTrap on line 2114 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2115 of mbust.pt
-oEmitValue !== % value emitted 6 on line 2116 of mbust.pt
-% value emitted 4 !== .tIfMerge on line 2117 of mbust.pt
-.tVarParm !== oEmitNullAddress on line 2118 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 2119 of mbust.pt
-.tTrap !== .tIfBegin on line 2120 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 2121 of mbust.pt
-% value emitted 6 !== oEmitValue on line 2122 of mbust.pt
-.tIfMerge !== % value emitted 92 on line 2123 of mbust.pt
-oEmitNullAddress !== .tFetchInteger on line 2124 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 2125 of mbust.pt
-.tIfBegin !== oEmitValue on line 2126 of mbust.pt
-.tLiteralAddress !== % value emitted 96 on line 2127 of mbust.pt
-oEmitValue !== .tFetchInteger on line 2128 of mbust.pt
-% value emitted 92 !== .tGT on line 2129 of mbust.pt
-.tFetchInteger !== .tIfThen on line 2130 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2131 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2132 of mbust.pt
-% value emitted 96 !== .tIfBegin on line 2133 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2134 of mbust.pt
-.tGT !== oEmitValue on line 2135 of mbust.pt
-.tIfThen !== % value emitted 110 on line 2136 of mbust.pt
-oEmitNullAddress !== .tFetchString on line 2137 of mbust.pt
-% value emitted -32767 !== .tLiteralString on line 2138 of mbust.pt
-.tIfBegin !== oEmitValue on line 2139 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 2140 of mbust.pt
-oEmitValue !== oEmitString on line 2141 of mbust.pt
-% value emitted 110 !== % value emitted 101 on line 2142 of mbust.pt
-.tFetchString !== .tStringEqual on line 2143 of mbust.pt
-.tLiteralString !== .tIfThen on line 2144 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 2145 of mbust.pt
-% value emitted 1 !== % value emitted -32767 on line 2146 of mbust.pt
-oEmitString !== .tWriteBegin on line 2147 of mbust.pt
-% value emitted 101 !== .tTrapBegin on line 2148 of mbust.pt
-.tStringEqual !== .tLiteralAddress on line 2149 of mbust.pt
-.tIfThen !== oEmitValue on line 2150 of mbust.pt
-oEmitNullAddress !== % value emitted 4 on line 2151 of mbust.pt
-% value emitted -32767 !== .tVarParm on line 2152 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 2153 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 2154 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2155 of mbust.pt
-oEmitValue !== % value emitted 24 on line 2156 of mbust.pt
-% value emitted 4 !== oEmitString on line 2157 of mbust.pt
-.tVarParm !== % value emitted 69 on line 2158 of mbust.pt
-.tParmEnd !== % value emitted 46 on line 2159 of mbust.pt
-.tLiteralString !== % value emitted 79 on line 2160 of mbust.pt
-oEmitValue !== % value emitted 46 on line 2161 of mbust.pt
-% value emitted 24 !== % value emitted 84 on line 2162 of mbust.pt
-oEmitString !== % value emitted 104 on line 2163 of mbust.pt
-% value emitted 69 !== % value emitted 111 on line 2164 of mbust.pt
-% value emitted 46 !== % value emitted 114 on line 2165 of mbust.pt
-% value emitted 79 !== % value emitted 112 on line 2166 of mbust.pt
-% value emitted 46 !== % value emitted 32 on line 2167 of mbust.pt
-% value emitted 84 !== % value emitted 100 on line 2168 of mbust.pt
-% value emitted 104 !== % value emitted 111 on line 2169 of mbust.pt
-% value emitted 111 !== % value emitted 101 on line 2170 of mbust.pt
-% value emitted 114 !== % value emitted 115 on line 2171 of mbust.pt
-% value emitted 112 !== % value emitted 32 on line 2172 of mbust.pt
-% value emitted 32 !== % value emitted 105 on line 2173 of mbust.pt
-% value emitted 100 !== % value emitted 116 on line 2174 of mbust.pt
-% value emitted 111 !== % value emitted 32 on line 2175 of mbust.pt
-% value emitted 101 !== % value emitted 97 on line 2176 of mbust.pt
-% value emitted 115 !== % value emitted 103 on line 2177 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 2178 of mbust.pt
-% value emitted 116 !== % value emitted 110 on line 2180 of mbust.pt
-% value emitted 32 !== % value emitted 46 on line 2181 of mbust.pt
-% value emitted 97 !== .tParmEnd on line 2182 of mbust.pt
-% value emitted 103 !== .tLiteralInteger on line 2183 of mbust.pt
-% value emitted 97 !== oEmitValue on line 2184 of mbust.pt
-% value emitted 105 !== % value emitted 1 on line 2185 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 2186 of mbust.pt
-% value emitted 46 !== .tTrap on line 2187 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2188 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2189 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2190 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 2191 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2192 of mbust.pt
-.tTrap !== oEmitValue on line 2193 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2194 of mbust.pt
-% value emitted 109 !== .tVarParm on line 2195 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 2196 of mbust.pt
-.tTrapBegin !== .tTrap on line 2197 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2198 of mbust.pt
-oEmitValue !== % value emitted 6 on line 2199 of mbust.pt
-% value emitted 4 !== .tIfMerge on line 2200 of mbust.pt
-.tVarParm !== oEmitNullAddress on line 2201 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 2202 of mbust.pt
-.tTrap !== .tCallBegin on line 2203 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tCallEnd on line 2204 of mbust.pt
-% value emitted 6 !== oEmitValue on line 2205 of mbust.pt
-.tIfMerge !== % value emitted 705 on line 2206 of mbust.pt
-oEmitNullAddress !== .tWriteBegin on line 2207 of mbust.pt
-% value emitted -32767 !== .tTrapBegin on line 2208 of mbust.pt
-.tCallBegin !== .tLiteralAddress on line 2209 of mbust.pt
-.tCallEnd !== oEmitValue on line 2210 of mbust.pt
-oEmitValue !== % value emitted 4 on line 2211 of mbust.pt
-% value emitted 713 !== .tVarParm on line 2212 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 2213 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 2214 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2215 of mbust.pt
-oEmitValue !== % value emitted 32 on line 2216 of mbust.pt
-% value emitted 4 !== oEmitString on line 2217 of mbust.pt
-.tVarParm !== % value emitted 32 on line 2218 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 2219 of mbust.pt
-.tLiteralString !== % value emitted 117 on line 2220 of mbust.pt
-oEmitValue !== % value emitted 115 on line 2221 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 2222 of mbust.pt
-oEmitString !== % value emitted 32 on line 2223 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 2224 of mbust.pt
-% value emitted 109 !== % value emitted 97 on line 2225 of mbust.pt
-% value emitted 117 !== % value emitted 118 on line 2226 of mbust.pt
-% value emitted 115 !== % value emitted 101 on line 2227 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 2228 of mbust.pt
-% value emitted 32 !== % value emitted 100 on line 2229 of mbust.pt
-% value emitted 104 !== % value emitted 111 on line 2230 of mbust.pt
-% value emitted 97 !== % value emitted 99 on line 2231 of mbust.pt
-% value emitted 118 !== % value emitted 116 on line 2232 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 2233 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 2234 of mbust.pt
-% value emitted 100 !== % value emitted 101 on line 2235 of mbust.pt
-% value emitted 111 !== % value emitted 100 on line 2236 of mbust.pt
-% value emitted 99 !== % value emitted 32 on line 2237 of mbust.pt
-% value emitted 111 !== % value emitted 104 on line 2239 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 2240 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 2241 of mbust.pt
-% value emitted 100 !== % value emitted 115 on line 2242 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 2243 of mbust.pt
-% value emitted 116 !== % value emitted 117 on line 2244 of mbust.pt
-% value emitted 104 !== % value emitted 102 on line 2245 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 2246 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 2247 of mbust.pt
-% value emitted 115 !== % value emitted 101 on line 2248 of mbust.pt
-% value emitted 104 !== % value emitted 46 on line 2249 of mbust.pt
-% value emitted 117 !== .tParmEnd on line 2250 of mbust.pt
-% value emitted 102 !== .tLiteralInteger on line 2251 of mbust.pt
-% value emitted 102 !== oEmitValue on line 2252 of mbust.pt
-% value emitted 108 !== % value emitted 1 on line 2253 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2254 of mbust.pt
-% value emitted 46 !== .tTrap on line 2255 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2256 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2257 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2258 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 2259 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2260 of mbust.pt
-.tTrap !== oEmitValue on line 2261 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2262 of mbust.pt
-% value emitted 109 !== .tVarParm on line 2263 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 2264 of mbust.pt
-.tTrapBegin !== .tTrap on line 2265 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2266 of mbust.pt
-oEmitValue !== % value emitted 6 on line 2267 of mbust.pt
-% value emitted 4 !== .tIfEnd on line 2268 of mbust.pt
-.tVarParm !== .tIfMerge on line 2269 of mbust.pt
-.tParmEnd !== oEmitNullAddress on line 2270 of mbust.pt
-.tTrap !== % value emitted -32767 on line 2271 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tWriteBegin on line 2272 of mbust.pt
-% value emitted 6 !== .tTrapBegin on line 2273 of mbust.pt
-.tIfEnd !== .tLiteralAddress on line 2274 of mbust.pt
-.tIfMerge !== oEmitValue on line 2275 of mbust.pt
-oEmitNullAddress !== % value emitted 4 on line 2276 of mbust.pt
-% value emitted -32767 !== .tVarParm on line 2277 of mbust.pt
-.tWriteBegin !== .tParmEnd on line 2278 of mbust.pt
-.tTrapBegin !== .tLiteralString on line 2279 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2280 of mbust.pt
-oEmitValue !== % value emitted 13 on line 2281 of mbust.pt
-% value emitted 4 !== oEmitString on line 2282 of mbust.pt
-.tVarParm !== % value emitted 69 on line 2283 of mbust.pt
-.tParmEnd !== % value emitted 118 on line 2284 of mbust.pt
-.tLiteralString !== % value emitted 101 on line 2285 of mbust.pt
-oEmitValue !== % value emitted 110 on line 2286 of mbust.pt
-% value emitted 13 !== % value emitted 32 on line 2287 of mbust.pt
-oEmitString !== % value emitted 115 on line 2288 of mbust.pt
-% value emitted 69 !== % value emitted 104 on line 2289 of mbust.pt
-% value emitted 118 !== % value emitted 117 on line 2290 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 2291 of mbust.pt
-% value emitted 110 !== % value emitted 102 on line 2292 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 2293 of mbust.pt
-% value emitted 115 !== % value emitted 101 on line 2294 of mbust.pt
-% value emitted 104 !== % value emitted 46 on line 2295 of mbust.pt
-% value emitted 117 !== .tParmEnd on line 2296 of mbust.pt
-% value emitted 102 !== .tLiteralInteger on line 2297 of mbust.pt
-% value emitted 102 !== oEmitValue on line 2298 of mbust.pt
-% value emitted 108 !== % value emitted 1 on line 2299 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2300 of mbust.pt
-% value emitted 46 !== .tTrap on line 2301 of mbust.pt
-.tParmEnd !== oEmitTrapKind(trWriteString) on line 2302 of mbust.pt
-.tLiteralInteger !== % value emitted 109 on line 2303 of mbust.pt
-oEmitValue !== .tWriteEnd on line 2304 of mbust.pt
-% value emitted 1 !== .tTrapBegin on line 2305 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2306 of mbust.pt
-.tTrap !== oEmitValue on line 2307 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 4 on line 2308 of mbust.pt
-% value emitted 109 !== .tVarParm on line 2309 of mbust.pt
-.tWriteEnd !== .tParmEnd on line 2310 of mbust.pt
-.tTrapBegin !== .tTrap on line 2311 of mbust.pt
-.tLiteralAddress !== oEmitTrapKind(trWriteln) on line 2312 of mbust.pt
-oEmitValue !== % value emitted 6 on line 2313 of mbust.pt
-% value emitted 4 !== .tIfEnd on line 2314 of mbust.pt
-.tVarParm !== .tIfEnd on line 2315 of mbust.pt
-.tParmEnd !== .tAssignBegin on line 2316 of mbust.pt
-.tTrap !== .tLiteralAddress on line 2317 of mbust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 2318 of mbust.pt
-% value emitted 6 !== % value emitted 14792 on line 2319 of mbust.pt
-.tIfEnd !== .tFetchAddress on line 2320 of mbust.pt
-.tIfEnd !== .tLiteralBoolean on line 2321 of mbust.pt
-#eMutableVarReqd !== oEmitValue on line 2322 of mbust.pt
-.tAssignBegin !== % value emitted 0 on line 2323 of mbust.pt
-.tLiteralAddress !== .tAssignBoolean on line 2324 of mbust.pt
-oEmitValue !== .tIfEnd on line 2325 of mbust.pt
-% value emitted 14792 !== .tProcedureEnd on line 2326 of mbust.pt
-.tFetchAddress !== .tSkipProc on line 2327 of mbust.pt
-.tLiteralBoolean !== oEmitNullAddress on line 2328 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2329 of mbust.pt
-% value emitted 0 !== .tParmEnd on line 2330 of mbust.pt
-.tAssignBoolean !== .tAssignBegin on line 2331 of mbust.pt
-.tIfEnd !== .tLiteralAddress on line 2332 of mbust.pt
-.tProcedureEnd !== oEmitValue on line 2333 of mbust.pt
-.tSkipProc !== % value emitted 80 on line 2334 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2335 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 2336 of mbust.pt
-.tParmEnd !== % value emitted 80 on line 2337 of mbust.pt
-.tAssignBegin !== .tFetchInteger on line 2338 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2339 of mbust.pt
-% value emitted 80 !== % value emitted 1 on line 2341 of mbust.pt
-.tLiteralAddress !== .tAdd on line 2342 of mbust.pt
-oEmitValue !== .tAssignInteger on line 2343 of mbust.pt
-% value emitted 80 !== .tCallBegin on line 2344 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2345 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 2346 of mbust.pt
-oEmitValue !== % value emitted 8 on line 2347 of mbust.pt
-% value emitted 1 !== .tSubscriptBegin on line 2348 of mbust.pt
-.tAdd !== .tLiteralAddress on line 2349 of mbust.pt
-.tAssignInteger !== oEmitValue on line 2350 of mbust.pt
-.tCallBegin !== % value emitted 80 on line 2351 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 2352 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 2353 of mbust.pt
-% value emitted 8 !== .tVarParm on line 2354 of mbust.pt
-.tSubscriptBegin !== .tParmEnd on line 2355 of mbust.pt
-.tLiteralAddress !== .tCallEnd on line 2356 of mbust.pt
-% value emitted 80 !== % value emitted 362 on line 2358 of mbust.pt
-.tFetchInteger !== .tProcedureEnd on line 2359 of mbust.pt
-.tSubscriptInteger !== .tSkipProc on line 2360 of mbust.pt
-.tVarParm !== oEmitNullAddress on line 2361 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 2362 of mbust.pt
-.tCallEnd !== .tParmEnd on line 2363 of mbust.pt
-oEmitValue !== .tAssignBegin on line 2364 of mbust.pt
-% value emitted 368 !== .tLiteralAddress on line 2365 of mbust.pt
-.tProcedureEnd !== oEmitValue on line 2366 of mbust.pt
-.tSkipProc !== % value emitted 84 on line 2367 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2368 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 2369 of mbust.pt
-.tParmEnd !== % value emitted 84 on line 2370 of mbust.pt
-.tAssignBegin !== .tFetchInteger on line 2371 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2372 of mbust.pt
-% value emitted 84 !== % value emitted 1 on line 2374 of mbust.pt
-.tLiteralAddress !== .tAdd on line 2375 of mbust.pt
-oEmitValue !== .tAssignInteger on line 2376 of mbust.pt
-% value emitted 84 !== .tCallBegin on line 2377 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2378 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 2379 of mbust.pt
-oEmitValue !== % value emitted 44 on line 2380 of mbust.pt
-% value emitted 1 !== .tSubscriptBegin on line 2381 of mbust.pt
-.tAdd !== .tLiteralAddress on line 2382 of mbust.pt
-.tAssignInteger !== oEmitValue on line 2383 of mbust.pt
-.tCallBegin !== % value emitted 84 on line 2384 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 2385 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 2386 of mbust.pt
-% value emitted 44 !== .tVarParm on line 2387 of mbust.pt
-.tSubscriptBegin !== .tParmEnd on line 2388 of mbust.pt
-.tLiteralAddress !== .tCallEnd on line 2389 of mbust.pt
-% value emitted 84 !== % value emitted 362 on line 2391 of mbust.pt
-.tFetchInteger !== .tProcedureEnd on line 2392 of mbust.pt
-.tSubscriptInteger !== .tSkipProc on line 2393 of mbust.pt
-.tVarParm !== oEmitNullAddress on line 2394 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 2395 of mbust.pt
-.tCallEnd !== .tParmEnd on line 2396 of mbust.pt
-oEmitValue !== .tAssignBegin on line 2397 of mbust.pt
-% value emitted 368 !== .tLiteralAddress on line 2398 of mbust.pt
-.tProcedureEnd !== oEmitValue on line 2399 of mbust.pt
-.tSkipProc !== % value emitted 109 on line 2400 of mbust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 2401 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 2402 of mbust.pt
-.tParmEnd !== % value emitted 0 on line 2403 of mbust.pt
-.tAssignBegin !== .tAssignBoolean on line 2404 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2405 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2406 of mbust.pt
-% value emitted 109 !== oEmitValue on line 2407 of mbust.pt
-.tLiteralBoolean !== % value emitted 108 on line 2408 of mbust.pt
-oEmitValue !== .tLiteralBoolean on line 2409 of mbust.pt
-% value emitted 0 !== oEmitValue on line 2410 of mbust.pt
-.tAssignBoolean !== % value emitted 0 on line 2411 of mbust.pt
-.tAssignBegin !== .tAssignBoolean on line 2412 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2413 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2414 of mbust.pt
-% value emitted 108 !== oEmitValue on line 2415 of mbust.pt
-.tLiteralBoolean !== % value emitted 80 on line 2416 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 2417 of mbust.pt
-% value emitted 0 !== oEmitValue on line 2418 of mbust.pt
-.tAssignBoolean !== % value emitted 0 on line 2419 of mbust.pt
-.tAssignBegin !== .tAssignInteger on line 2420 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2421 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2422 of mbust.pt
-% value emitted 80 !== oEmitValue on line 2423 of mbust.pt
-.tLiteralInteger !== % value emitted 84 on line 2424 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 2425 of mbust.pt
-% value emitted 0 !== oEmitValue on line 2426 of mbust.pt
-.tAssignInteger !== % value emitted 0 on line 2427 of mbust.pt
-.tAssignBegin !== .tAssignInteger on line 2428 of mbust.pt
-.tLiteralAddress !== .tCallBegin on line 2429 of mbust.pt
-oEmitValue !== .tCallEnd on line 2430 of mbust.pt
-% value emitted 84 !== oEmitValue on line 2431 of mbust.pt
-.tLiteralInteger !== % value emitted 2157 on line 2432 of mbust.pt
-oEmitValue !== .tCallBegin on line 2433 of mbust.pt
-% value emitted 0 !== .tCallEnd on line 2434 of mbust.pt
-.tAssignInteger !== oEmitValue on line 2435 of mbust.pt
-.tCallBegin !== % value emitted 2191 on line 2436 of mbust.pt
-.tCallEnd !== .tCallBegin on line 2437 of mbust.pt
-oEmitValue !== .tCallEnd on line 2438 of mbust.pt
-% value emitted 2167 !== oEmitValue on line 2439 of mbust.pt
-.tCallBegin !== % value emitted 2157 on line 2440 of mbust.pt
-.tCallEnd !== .tCallBegin on line 2441 of mbust.pt
-oEmitValue !== .tCallEnd on line 2442 of mbust.pt
-% value emitted 2201 !== oEmitValue on line 2443 of mbust.pt
-.tCallBegin !== % value emitted 2191 on line 2444 of mbust.pt
-.tCallEnd !== .tWriteBegin on line 2445 of mbust.pt
-oEmitValue !== .tTrapBegin on line 2446 of mbust.pt
-% value emitted 2167 !== .tLiteralAddress on line 2447 of mbust.pt
-.tCallBegin !== oEmitValue on line 2448 of mbust.pt
-.tCallEnd !== % value emitted 4 on line 2449 of mbust.pt
-oEmitValue !== .tVarParm on line 2450 of mbust.pt
-% value emitted 2201 !== .tParmEnd on line 2451 of mbust.pt
-.tWriteBegin !== .tLiteralString on line 2452 of mbust.pt
-.tTrapBegin !== oEmitValue on line 2453 of mbust.pt
-.tLiteralAddress !== % value emitted 23 on line 2454 of mbust.pt
-oEmitValue !== oEmitString on line 2455 of mbust.pt
-% value emitted 4 !== % value emitted 84 on line 2456 of mbust.pt
-.tVarParm !== % value emitted 104 on line 2457 of mbust.pt
-.tParmEnd !== % value emitted 101 on line 2458 of mbust.pt
-.tLiteralString !== % value emitted 32 on line 2459 of mbust.pt
-oEmitValue !== % value emitted 105 on line 2460 of mbust.pt
-% value emitted 23 !== % value emitted 110 on line 2461 of mbust.pt
-oEmitString !== % value emitted 105 on line 2462 of mbust.pt
-% value emitted 84 !== % value emitted 116 on line 2463 of mbust.pt
-% value emitted 104 !== % value emitted 105 on line 2464 of mbust.pt
-% value emitted 101 !== % value emitted 97 on line 2465 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 2466 of mbust.pt
-% value emitted 105 !== % value emitted 32 on line 2467 of mbust.pt
-% value emitted 110 !== % value emitted 100 on line 2468 of mbust.pt
-% value emitted 105 !== % value emitted 101 on line 2469 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 2470 of mbust.pt
-% value emitted 105 !== % value emitted 108 on line 2471 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 2472 of mbust.pt
-% value emitted 108 !== % value emitted 103 on line 2473 of mbust.pt
-% value emitted 32 !== % value emitted 105 on line 2474 of mbust.pt
-% value emitted 100 !== % value emitted 118 on line 2475 of mbust.pt
-% value emitted 97 !== % value emitted 115 on line 2477 of mbust.pt
-% value emitted 108 !== % value emitted 32 on line 2478 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 2479 of mbust.pt
-% value emitted 103 !== .tLiteralInteger on line 2480 of mbust.pt
-% value emitted 105 !== oEmitValue on line 2481 of mbust.pt
-% value emitted 118 !== % value emitted 1 on line 2482 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2483 of mbust.pt
-% value emitted 115 !== .tTrap on line 2484 of mbust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 2485 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 2486 of mbust.pt
-.tLiteralInteger !== .tWriteEnd on line 2487 of mbust.pt
-oEmitValue !== .tCallBegin on line 2488 of mbust.pt
-% value emitted 1 !== .tCallEnd on line 2489 of mbust.pt
-.tParmEnd !== oEmitValue on line 2490 of mbust.pt
-.tTrap !== % value emitted 705 on line 2491 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tWriteBegin on line 2492 of mbust.pt
-% value emitted 109 !== .tTrapBegin on line 2493 of mbust.pt
-.tWriteEnd !== .tLiteralAddress on line 2494 of mbust.pt
-.tCallBegin !== oEmitValue on line 2495 of mbust.pt
-.tCallEnd !== % value emitted 4 on line 2496 of mbust.pt
-oEmitValue !== .tVarParm on line 2497 of mbust.pt
-% value emitted 713 !== .tParmEnd on line 2498 of mbust.pt
-.tWriteBegin !== .tLiteralString on line 2499 of mbust.pt
-.tTrapBegin !== oEmitValue on line 2500 of mbust.pt
-.tLiteralAddress !== % value emitted 2 on line 2501 of mbust.pt
-oEmitValue !== oEmitString on line 2502 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 2503 of mbust.pt
-.tVarParm !== % value emitted 58 on line 2504 of mbust.pt
-.tLiteralString !== .tLiteralInteger on line 2506 of mbust.pt
-% value emitted 2 !== % value emitted 1 on line 2508 of mbust.pt
-oEmitString !== .tParmEnd on line 2509 of mbust.pt
-% value emitted 32 !== .tTrap on line 2510 of mbust.pt
-% value emitted 58 !== oEmitTrapKind(trWriteString) on line 2511 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 2512 of mbust.pt
-.tLiteralInteger !== .tWriteEnd on line 2513 of mbust.pt
-oEmitValue !== .tCallBegin on line 2514 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 2515 of mbust.pt
-.tParmEnd !== oEmitValue on line 2516 of mbust.pt
-.tTrap !== % value emitted 80 on line 2517 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tFetchInteger on line 2518 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 2519 of mbust.pt
-.tWriteEnd !== .tLiteralAddress on line 2520 of mbust.pt
-.tCallBegin !== oEmitValue on line 2521 of mbust.pt
-.tLiteralAddress !== % value emitted 8 on line 2522 of mbust.pt
-oEmitValue !== .tVarParm on line 2523 of mbust.pt
-% value emitted 80 !== .tParmEnd on line 2524 of mbust.pt
-.tFetchInteger !== .tCallEnd on line 2525 of mbust.pt
-.tParmEnd !== oEmitValue on line 2526 of mbust.pt
-.tLiteralAddress !== % value emitted 439 on line 2527 of mbust.pt
-oEmitValue !== .tTrapBegin on line 2528 of mbust.pt
-% value emitted 8 !== .tLiteralAddress on line 2529 of mbust.pt
-.tVarParm !== oEmitValue on line 2530 of mbust.pt
-.tParmEnd !== % value emitted 4 on line 2531 of mbust.pt
-.tCallEnd !== .tVarParm on line 2532 of mbust.pt
-oEmitValue !== .tParmEnd on line 2533 of mbust.pt
-% value emitted 445 !== .tTrap on line 2534 of mbust.pt
-.tTrapBegin !== oEmitTrapKind(trWriteln) on line 2535 of mbust.pt
-.tLiteralAddress !== % value emitted 6 on line 2536 of mbust.pt
-oEmitValue !== .tWriteBegin on line 2537 of mbust.pt
-% value emitted 4 !== .tTrapBegin on line 2538 of mbust.pt
-.tVarParm !== .tLiteralAddress on line 2539 of mbust.pt
-.tParmEnd !== oEmitValue on line 2540 of mbust.pt
-.tTrap !== % value emitted 4 on line 2541 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tVarParm on line 2542 of mbust.pt
-% value emitted 6 !== .tParmEnd on line 2543 of mbust.pt
-.tWriteBegin !== .tLiteralString on line 2544 of mbust.pt
-.tTrapBegin !== oEmitValue on line 2545 of mbust.pt
-.tLiteralAddress !== % value emitted 18 on line 2546 of mbust.pt
-oEmitValue !== oEmitString on line 2547 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 2548 of mbust.pt
-.tVarParm !== % value emitted 32 on line 2549 of mbust.pt
-.tParmEnd !== % value emitted 97 on line 2550 of mbust.pt
-.tLiteralString !== % value emitted 110 on line 2551 of mbust.pt
-oEmitValue !== % value emitted 100 on line 2552 of mbust.pt
-% value emitted 18 !== % value emitted 32 on line 2553 of mbust.pt
-oEmitString !== % value emitted 116 on line 2554 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 2555 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 2556 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 2557 of mbust.pt
-% value emitted 110 !== % value emitted 100 on line 2558 of mbust.pt
-% value emitted 100 !== % value emitted 101 on line 2559 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 2560 of mbust.pt
-% value emitted 116 !== % value emitted 108 on line 2561 of mbust.pt
-% value emitted 104 !== % value emitted 101 on line 2562 of mbust.pt
-% value emitted 101 !== % value emitted 114 on line 2563 of mbust.pt
-% value emitted 100 !== % value emitted 58 on line 2565 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2566 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 2567 of mbust.pt
-% value emitted 108 !== oEmitValue on line 2568 of mbust.pt
-% value emitted 101 !== % value emitted 1 on line 2569 of mbust.pt
-% value emitted 114 !== .tParmEnd on line 2570 of mbust.pt
-% value emitted 32 !== .tTrap on line 2571 of mbust.pt
-% value emitted 58 !== oEmitTrapKind(trWriteString) on line 2572 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 2573 of mbust.pt
-.tLiteralInteger !== .tWriteEnd on line 2574 of mbust.pt
-oEmitValue !== .tCallBegin on line 2575 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 2576 of mbust.pt
-.tParmEnd !== oEmitValue on line 2577 of mbust.pt
-.tTrap !== % value emitted 84 on line 2578 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tFetchInteger on line 2579 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 2580 of mbust.pt
-.tWriteEnd !== .tLiteralAddress on line 2581 of mbust.pt
-.tCallBegin !== oEmitValue on line 2582 of mbust.pt
-.tLiteralAddress !== % value emitted 44 on line 2583 of mbust.pt
-oEmitValue !== .tVarParm on line 2584 of mbust.pt
-% value emitted 84 !== .tParmEnd on line 2585 of mbust.pt
-.tFetchInteger !== .tCallEnd on line 2586 of mbust.pt
-.tParmEnd !== oEmitValue on line 2587 of mbust.pt
-.tLiteralAddress !== % value emitted 439 on line 2588 of mbust.pt
-oEmitValue !== .tWriteBegin on line 2589 of mbust.pt
-% value emitted 44 !== .tTrapBegin on line 2590 of mbust.pt
-.tVarParm !== .tLiteralAddress on line 2591 of mbust.pt
-.tParmEnd !== oEmitValue on line 2592 of mbust.pt
-.tCallEnd !== % value emitted 4 on line 2593 of mbust.pt
-oEmitValue !== .tVarParm on line 2594 of mbust.pt
-% value emitted 445 !== .tParmEnd on line 2595 of mbust.pt
-.tWriteBegin !== .tLiteralString on line 2596 of mbust.pt
-.tTrapBegin !== oEmitValue on line 2597 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 2598 of mbust.pt
-oEmitValue !== oEmitString on line 2599 of mbust.pt
-% value emitted 4 !== % value emitted 46 on line 2600 of mbust.pt
-.tVarParm !== .tParmEnd on line 2601 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 2602 of mbust.pt
-.tLiteralString !== oEmitValue on line 2603 of mbust.pt
-oEmitValue !== % value emitted 1 on line 2604 of mbust.pt
-% value emitted 1 !== .tParmEnd on line 2605 of mbust.pt
-oEmitString !== .tTrap on line 2606 of mbust.pt
-% value emitted 46 !== oEmitTrapKind(trWriteString) on line 2607 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 2608 of mbust.pt
-.tLiteralInteger !== .tWriteEnd on line 2609 of mbust.pt
-oEmitValue !== .tTrapBegin on line 2610 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 2611 of mbust.pt
-.tParmEnd !== oEmitValue on line 2612 of mbust.pt
-.tTrap !== % value emitted 4 on line 2613 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tVarParm on line 2614 of mbust.pt
-% value emitted 109 !== .tParmEnd on line 2615 of mbust.pt
-.tWriteEnd !== .tTrap on line 2616 of mbust.pt
-.tTrapBegin !== oEmitTrapKind(trWriteln) on line 2617 of mbust.pt
-.tLiteralAddress !== % value emitted 6 on line 2618 of mbust.pt
-oEmitValue !== .tProcedureEnd on line 2619 of mbust.pt
-% value emitted 4 !== .tSkipProc on line 2620 of mbust.pt
-.tVarParm !== oEmitNullAddress on line 2621 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 2622 of mbust.pt
-.tTrap !== .tLiteralAddress on line 2623 of mbust.pt
-oEmitTrapKind(trWriteln) !== oEmitValue on line 2624 of mbust.pt
-% value emitted 6 !== % value emitted 14812 on line 2625 of mbust.pt
-.tProcedureEnd !== .tStoreParmAddress on line 2626 of mbust.pt
-.tSkipProc !== .tLiteralAddress on line 2627 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 2628 of mbust.pt
-% value emitted -32767 !== % value emitted 14808 on line 2629 of mbust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 2630 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2631 of mbust.pt
-% value emitted 14812 !== oEmitValue on line 2632 of mbust.pt
-.tStoreParmAddress !== % value emitted 14804 on line 2633 of mbust.pt
-.tLiteralAddress !== .tStoreParmAddress on line 2634 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2635 of mbust.pt
-% value emitted 14808 !== oEmitValue on line 2636 of mbust.pt
-.tStoreParmAddress !== % value emitted 14800 on line 2637 of mbust.pt
-.tLiteralAddress !== .tStoreParmInteger on line 2638 of mbust.pt
-oEmitValue !== .tParmEnd on line 2639 of mbust.pt
-% value emitted 14804 !== .tAssignBegin on line 2640 of mbust.pt
-.tStoreParmAddress !== .tLiteralAddress on line 2641 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2642 of mbust.pt
-oEmitValue !== % value emitted 14812 on line 2643 of mbust.pt
-% value emitted 14800 !== .tFetchAddress on line 2644 of mbust.pt
-.tStoreParmInteger !== .tLiteralInteger on line 2645 of mbust.pt
-.tParmEnd !== oEmitValue on line 2646 of mbust.pt
-#eMutableVarReqd !== % value emitted 0 on line 2647 of mbust.pt
-.tAssignBegin !== .tAssignInteger on line 2648 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2649 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2650 of mbust.pt
-% value emitted 14812 !== oEmitValue on line 2651 of mbust.pt
-.tFetchAddress !== % value emitted 14816 on line 2652 of mbust.pt
-% value emitted 14816 !== % value emitted 14820 on line 2660 of mbust.pt
-% value emitted 0 !== % value emitted 1 on line 2663 of mbust.pt
-.tAssignBegin !== .tWhileBegin on line 2665 of mbust.pt
-.tLiteralAddress !== .tWhilePreBreak on line 2666 of mbust.pt
-oEmitValue !== .tWhileBreakIf on line 2667 of mbust.pt
-% value emitted 14820 !== .tLiteralAddress on line 2668 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 2669 of mbust.pt
-oEmitValue !== % value emitted 14820 on line 2670 of mbust.pt
-% value emitted 1 !== .tFetchInteger on line 2671 of mbust.pt
-.tAssignInteger !== .tLiteralAddress on line 2672 of mbust.pt
-.tWhileBegin !== oEmitValue on line 2673 of mbust.pt
-.tWhilePreBreak !== % value emitted 14800 on line 2674 of mbust.pt
-oEmitNullAddress !== .tFetchInteger on line 2675 of mbust.pt
-% value emitted -32767 !== .tGT on line 2676 of mbust.pt
-.tWhileBreakIf !== .tNot on line 2677 of mbust.pt
-.tLiteralAddress !== .tWhileTest on line 2678 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 2679 of mbust.pt
-% value emitted 14820 !== % value emitted -32767 on line 2680 of mbust.pt
-.tFetchInteger !== .tCaseBegin on line 2681 of mbust.pt
-% value emitted 14800 !== % value emitted 14804 on line 2684 of mbust.pt
-.tFetchInteger !== .tFetchAddress on line 2685 of mbust.pt
-.tGT !== .tSubscriptBegin on line 2686 of mbust.pt
-.tNot !== .tLiteralAddress on line 2687 of mbust.pt
-.tWhileTest !== oEmitValue on line 2688 of mbust.pt
-.tCaseBegin !== % value emitted 14820 on line 2689 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 2690 of mbust.pt
-oEmitValue !== .tSubscriptInteger on line 2691 of mbust.pt
-% value emitted 14804 !== .tFetchInteger on line 2692 of mbust.pt
-.tFetchAddress !== .tCaseSelect on line 2693 of mbust.pt
-.tSubscriptBegin !== oEmitNullAddress on line 2694 of mbust.pt
-.tLiteralAddress !== % value emitted -32767 on line 2695 of mbust.pt
-oEmitValue !== .tAssignBegin on line 2696 of mbust.pt
-% value emitted 14820 !== .tLiteralAddress on line 2697 of mbust.pt
-.tFetchInteger !== oEmitValue on line 2698 of mbust.pt
-.tSubscriptInteger !== % value emitted 14812 on line 2699 of mbust.pt
-.tFetchInteger !== .tFetchAddress on line 2700 of mbust.pt
-.tCaseSelect !== .tLiteralAddress on line 2701 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 2702 of mbust.pt
-% value emitted -32767 !== % value emitted 14812 on line 2703 of mbust.pt
-#eMutableVarReqd !== .tFetchAddress on line 2704 of mbust.pt
-.tAssignBegin !== .tFetchInteger on line 2705 of mbust.pt
-% value emitted 14812 !== % value emitted 14804 on line 2708 of mbust.pt
-.tLiteralAddress !== .tSubscriptBegin on line 2710 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2711 of mbust.pt
-% value emitted 14812 !== oEmitValue on line 2712 of mbust.pt
-.tFetchAddress !== % value emitted 14820 on line 2713 of mbust.pt
-.tLiteralAddress !== .tSubscriptInteger on line 2715 of mbust.pt
-oEmitValue !== .tFetchInteger on line 2716 of mbust.pt
-% value emitted 14804 !== .tAdd on line 2717 of mbust.pt
-.tFetchAddress !== .tAssignInteger on line 2718 of mbust.pt
-.tSubscriptBegin !== .tCaseMerge on line 2719 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2720 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2721 of mbust.pt
-% value emitted 14820 !== .tAssignBegin on line 2722 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2723 of mbust.pt
-.tSubscriptInteger !== oEmitValue on line 2724 of mbust.pt
-.tFetchInteger !== % value emitted 14812 on line 2725 of mbust.pt
-.tAdd !== .tFetchAddress on line 2726 of mbust.pt
-.tAssignInteger !== .tLiteralAddress on line 2727 of mbust.pt
-.tCaseMerge !== oEmitValue on line 2728 of mbust.pt
-oEmitNullAddress !== % value emitted 14812 on line 2729 of mbust.pt
-% value emitted -32767 !== .tFetchAddress on line 2730 of mbust.pt
-#eMutableVarReqd !== .tFetchInteger on line 2731 of mbust.pt
-.tAssignBegin !== .tLiteralInteger on line 2732 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2733 of mbust.pt
-oEmitValue !== % value emitted 11 on line 2734 of mbust.pt
-% value emitted 14812 !== .tAdd on line 2735 of mbust.pt
-.tFetchAddress !== .tAssignInteger on line 2736 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2737 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2738 of mbust.pt
-% value emitted 14812 !== oEmitValue on line 2739 of mbust.pt
-.tFetchAddress !== % value emitted 14816 on line 2740 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2741 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 2742 of mbust.pt
-oEmitValue !== % value emitted 14816 on line 2743 of mbust.pt
-% value emitted 11 !== .tFetchInteger on line 2744 of mbust.pt
-.tAdd !== .tLiteralInteger on line 2745 of mbust.pt
-.tAssignInteger !== oEmitValue on line 2746 of mbust.pt
-.tAssignBegin !== % value emitted 1 on line 2747 of mbust.pt
-.tLiteralAddress !== .tAdd on line 2748 of mbust.pt
-oEmitValue !== .tAssignInteger on line 2749 of mbust.pt
-% value emitted 14816 !== .tCaseMerge on line 2750 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2751 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2752 of mbust.pt
-% value emitted 14816 !== .tCaseEnd on line 2753 of mbust.pt
-.tFetchInteger !== oEmitCaseBranchTable on line 2754 of mbust.pt
-.tLiteralInteger !== % value emitted 1 on line 2755 of mbust.pt
-oEmitValue !== % value emitted 10 on line 2756 of mbust.pt
-% value emitted 1 !== % value emitted 2538 on line 2757 of mbust.pt
-.tAdd !== % value emitted 2513 on line 2758 of mbust.pt
-.tAssignInteger !== % value emitted 2513 on line 2759 of mbust.pt
-.tCaseMerge !== % value emitted 2513 on line 2760 of mbust.pt
-oEmitNullAddress !== % value emitted 2513 on line 2761 of mbust.pt
-% value emitted -32767 !== % value emitted 2513 on line 2762 of mbust.pt
-.tCaseEnd !== % value emitted 2513 on line 2763 of mbust.pt
-oEmitCaseBranchTable !== % value emitted 2513 on line 2764 of mbust.pt
-% value emitted 1 !== % value emitted 2513 on line 2765 of mbust.pt
-% value emitted 10 !== % value emitted 2513 on line 2766 of mbust.pt
-% value emitted 2548 !== .tCaseOtherwise on line 2767 of mbust.pt
-% value emitted 2523 !== .tAssignBegin on line 2768 of mbust.pt
-% value emitted 2523 !== .tLiteralAddress on line 2769 of mbust.pt
-% value emitted 2523 !== oEmitValue on line 2770 of mbust.pt
-% value emitted 2523 !== % value emitted 14812 on line 2771 of mbust.pt
-% value emitted 2523 !== .tFetchAddress on line 2772 of mbust.pt
-% value emitted 2523 !== .tLiteralAddress on line 2773 of mbust.pt
-% value emitted 2523 !== oEmitValue on line 2774 of mbust.pt
-% value emitted 2523 !== % value emitted 14812 on line 2775 of mbust.pt
-% value emitted 2523 !== .tFetchAddress on line 2776 of mbust.pt
-.tCaseOtherwise !== .tFetchInteger on line 2777 of mbust.pt
-#eMutableVarReqd !== .tLiteralInteger on line 2778 of mbust.pt
-.tAssignBegin !== oEmitValue on line 2779 of mbust.pt
-.tLiteralAddress !== % value emitted 10 on line 2780 of mbust.pt
-oEmitValue !== .tAdd on line 2781 of mbust.pt
-% value emitted 14812 !== .tAssignInteger on line 2782 of mbust.pt
-.tFetchAddress !== .tCaseMerge on line 2783 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2784 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2785 of mbust.pt
-% value emitted 14812 !== .tAssignBegin on line 2786 of mbust.pt
-.tFetchAddress !== .tLiteralAddress on line 2787 of mbust.pt
-.tFetchInteger !== oEmitValue on line 2788 of mbust.pt
-.tLiteralInteger !== % value emitted 14820 on line 2789 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2790 of mbust.pt
-% value emitted 10 !== oEmitValue on line 2791 of mbust.pt
-.tAdd !== % value emitted 14820 on line 2792 of mbust.pt
-.tAssignInteger !== .tFetchInteger on line 2793 of mbust.pt
-.tCaseMerge !== .tLiteralInteger on line 2794 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 2795 of mbust.pt
-% value emitted -32767 !== % value emitted 1 on line 2796 of mbust.pt
-.tAssignBegin !== .tAdd on line 2797 of mbust.pt
-.tLiteralAddress !== .tAssignInteger on line 2798 of mbust.pt
-oEmitValue !== .tWhileEnd on line 2799 of mbust.pt
-% value emitted 14820 !== % value emitted 2485 on line 2800 of mbust.pt
-.tLiteralAddress !== .tWhileBegin on line 2801 of mbust.pt
-oEmitValue !== .tWhilePreBreak on line 2802 of mbust.pt
-% value emitted 14820 !== .tWhileBreakIf on line 2803 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 2804 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 2805 of mbust.pt
-oEmitValue !== % value emitted 14812 on line 2806 of mbust.pt
-% value emitted 1 !== .tFetchAddress on line 2807 of mbust.pt
-.tAdd !== .tFetchInteger on line 2808 of mbust.pt
-.tAssignInteger !== .tLiteralInteger on line 2809 of mbust.pt
-% value emitted 2496 !== oEmitValue on line 2810 of mbust.pt
-.tWhileEnd !== % value emitted 21 on line 2811 of mbust.pt
-.tWhileBegin !== .tLE on line 2812 of mbust.pt
-.tWhilePreBreak !== .tInfixOr on line 2813 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 2814 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 2815 of mbust.pt
-.tWhileBreakIf !== % value emitted 14816 on line 2816 of mbust.pt
-.tLiteralAddress !== .tFetchInteger on line 2817 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 2818 of mbust.pt
-% value emitted 14812 !== oEmitValue on line 2819 of mbust.pt
-.tFetchAddress !== % value emitted 0 on line 2820 of mbust.pt
-.tFetchInteger !== .tEQ on line 2821 of mbust.pt
-.tLiteralInteger !== .tOr on line 2822 of mbust.pt
-oEmitValue !== .tNot on line 2823 of mbust.pt
-% value emitted 21 !== .tWhileTest on line 2824 of mbust.pt
-.tLE !== oEmitNullAddress on line 2825 of mbust.pt
-.tInfixOr !== % value emitted -32767 on line 2826 of mbust.pt
-.tLiteralAddress !== .tAssignBegin on line 2827 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2828 of mbust.pt
-% value emitted 14816 !== oEmitValue on line 2829 of mbust.pt
-.tFetchInteger !== % value emitted 14812 on line 2830 of mbust.pt
-.tLiteralInteger !== .tFetchAddress on line 2831 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2832 of mbust.pt
-% value emitted 0 !== oEmitValue on line 2833 of mbust.pt
-.tEQ !== % value emitted 14812 on line 2834 of mbust.pt
-.tOr !== .tFetchAddress on line 2835 of mbust.pt
-.tNot !== .tFetchInteger on line 2836 of mbust.pt
-.tWhileTest !== .tLiteralInteger on line 2837 of mbust.pt
-#eMutableVarReqd !== oEmitValue on line 2838 of mbust.pt
-.tAssignBegin !== % value emitted 10 on line 2839 of mbust.pt
-.tLiteralAddress !== .tSubtract on line 2840 of mbust.pt
-oEmitValue !== .tAssignInteger on line 2841 of mbust.pt
-% value emitted 14812 !== .tAssignBegin on line 2842 of mbust.pt
-.tFetchAddress !== .tLiteralAddress on line 2843 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2844 of mbust.pt
-oEmitValue !== % value emitted 14816 on line 2845 of mbust.pt
-% value emitted 14812 !== .tLiteralAddress on line 2846 of mbust.pt
-.tFetchAddress !== oEmitValue on line 2847 of mbust.pt
-.tFetchInteger !== % value emitted 14816 on line 2848 of mbust.pt
-.tLiteralInteger !== .tFetchInteger on line 2849 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 2850 of mbust.pt
-% value emitted 10 !== oEmitValue on line 2851 of mbust.pt
-.tSubtract !== % value emitted 1 on line 2852 of mbust.pt
-.tAssignInteger !== .tSubtract on line 2853 of mbust.pt
-.tAssignBegin !== .tAssignInteger on line 2854 of mbust.pt
-.tLiteralAddress !== .tWhileEnd on line 2855 of mbust.pt
-oEmitValue !== % value emitted 2619 on line 2856 of mbust.pt
-% value emitted 14816 !== .tAssignBegin on line 2857 of mbust.pt
-% value emitted 14816 !== % value emitted 14808 on line 2860 of mbust.pt
-.tFetchInteger !== .tFetchAddress on line 2861 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 2862 of mbust.pt
-% value emitted 1 !== % value emitted 14816 on line 2864 of mbust.pt
-.tSubtract !== .tFetchInteger on line 2865 of mbust.pt
-.tAssignInteger !== .tLiteralInteger on line 2866 of mbust.pt
-% value emitted 2632 !== oEmitValue on line 2867 of mbust.pt
-.tWhileEnd !== % value emitted 0 on line 2868 of mbust.pt
-#eMutableVarReqd !== .tGT on line 2869 of mbust.pt
-.tAssignBegin !== .tAssignBoolean on line 2870 of mbust.pt
-.tLiteralAddress !== .tProcedureEnd on line 2871 of mbust.pt
-oEmitValue !== .tSkipProc on line 2872 of mbust.pt
-% value emitted 14808 !== oEmitNullAddress on line 2873 of mbust.pt
-.tFetchAddress !== % value emitted -32767 on line 2874 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 2875 of mbust.pt
-oEmitValue !== .tCallBegin on line 2876 of mbust.pt
-% value emitted 14816 !== .tLiteralAddress on line 2877 of mbust.pt
-.tFetchInteger !== oEmitValue on line 2878 of mbust.pt
-.tLiteralInteger !== % value emitted 84 on line 2879 of mbust.pt
-oEmitValue !== .tFetchInteger on line 2880 of mbust.pt
-% value emitted 0 !== .tParmEnd on line 2881 of mbust.pt
-.tGT !== .tLiteralAddress on line 2882 of mbust.pt
-.tAssignBoolean !== oEmitValue on line 2883 of mbust.pt
-.tProcedureEnd !== % value emitted 44 on line 2884 of mbust.pt
-.tSkipProc !== .tVarParm on line 2885 of mbust.pt
-oEmitNullAddress !== .tParmEnd on line 2886 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 2887 of mbust.pt
-.tParmEnd !== oEmitValue on line 2888 of mbust.pt
-.tCallBegin !== % value emitted 14824 on line 2889 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 2890 of mbust.pt
-oEmitValue !== .tParmEnd on line 2891 of mbust.pt
-% value emitted 84 !== .tLiteralAddress on line 2892 of mbust.pt
-.tFetchInteger !== oEmitValue on line 2893 of mbust.pt
-.tParmEnd !== % value emitted 100 on line 2894 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 2895 of mbust.pt
-oEmitValue !== .tParmEnd on line 2896 of mbust.pt
-% value emitted 44 !== .tCallEnd on line 2897 of mbust.pt
-.tVarParm !== oEmitValue on line 2898 of mbust.pt
-.tParmEnd !== % value emitted 2442 on line 2899 of mbust.pt
-.tLiteralAddress !== .tIfBegin on line 2900 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 2901 of mbust.pt
-% value emitted 14824 !== oEmitValue on line 2902 of mbust.pt
-.tVarParm !== % value emitted 100 on line 2903 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 2904 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 2905 of mbust.pt
-% value emitted 100 !== % value emitted 21 on line 2907 of mbust.pt
-.tVarParm !== .tGT on line 2908 of mbust.pt
-.tParmEnd !== .tIfThen on line 2909 of mbust.pt
-.tCallEnd !== oEmitNullAddress on line 2910 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2911 of mbust.pt
-% value emitted 2452 !== .tWriteBegin on line 2912 of mbust.pt
-.tIfBegin !== .tTrapBegin on line 2913 of mbust.pt
-% value emitted 100 !== % value emitted 4 on line 2916 of mbust.pt
-.tFetchInteger !== .tVarParm on line 2917 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 2918 of mbust.pt
-oEmitValue !== .tLiteralString on line 2919 of mbust.pt
-% value emitted 21 !== oEmitValue on line 2920 of mbust.pt
-.tGT !== % value emitted 17 on line 2921 of mbust.pt
-.tIfThen !== oEmitString on line 2922 of mbust.pt
-oEmitNullAddress !== % value emitted 68 on line 2923 of mbust.pt
-% value emitted -32767 !== % value emitted 101 on line 2924 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 2925 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 2926 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 2927 of mbust.pt
-oEmitValue !== % value emitted 114 on line 2928 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 2929 of mbust.pt
-.tVarParm !== % value emitted 103 on line 2930 of mbust.pt
-.tParmEnd !== % value emitted 111 on line 2931 of mbust.pt
-.tLiteralString !== % value emitted 101 on line 2932 of mbust.pt
-oEmitValue !== % value emitted 115 on line 2933 of mbust.pt
-% value emitted 17 !== % value emitted 32 on line 2934 of mbust.pt
-oEmitString !== % value emitted 98 on line 2935 of mbust.pt
-% value emitted 68 !== % value emitted 117 on line 2936 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 2937 of mbust.pt
-% value emitted 97 !== % value emitted 116 on line 2938 of mbust.pt
-% value emitted 108 !== % value emitted 46 on line 2939 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 2940 of mbust.pt
-% value emitted 114 !== .tLiteralInteger on line 2941 of mbust.pt
-% value emitted 32 !== oEmitValue on line 2942 of mbust.pt
-% value emitted 103 !== % value emitted 1 on line 2943 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 2944 of mbust.pt
-% value emitted 101 !== .tTrap on line 2945 of mbust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 2946 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 2947 of mbust.pt
-% value emitted 98 !== .tWriteEnd on line 2948 of mbust.pt
-% value emitted 117 !== .tTrapBegin on line 2949 of mbust.pt
-% value emitted 115 !== .tLiteralAddress on line 2950 of mbust.pt
-% value emitted 116 !== oEmitValue on line 2951 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 2952 of mbust.pt
-.tParmEnd !== .tVarParm on line 2953 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 2954 of mbust.pt
-oEmitValue !== .tTrap on line 2955 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 2956 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 2957 of mbust.pt
-.tTrap !== .tAssignBegin on line 2958 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 2959 of mbust.pt
-% value emitted 109 !== oEmitValue on line 2960 of mbust.pt
-.tWriteEnd !== % value emitted 108 on line 2961 of mbust.pt
-.tTrapBegin !== .tLiteralBoolean on line 2962 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 2963 of mbust.pt
-oEmitValue !== % value emitted 1 on line 2964 of mbust.pt
-% value emitted 4 !== .tAssignBoolean on line 2965 of mbust.pt
-.tVarParm !== .tAssignBegin on line 2966 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 2967 of mbust.pt
-.tTrap !== oEmitValue on line 2968 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 92 on line 2969 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 2970 of mbust.pt
-.tAssignBegin !== oEmitValue on line 2971 of mbust.pt
-.tLiteralAddress !== % value emitted 92 on line 2972 of mbust.pt
-oEmitValue !== .tFetchInteger on line 2973 of mbust.pt
-% value emitted 108 !== .tLiteralInteger on line 2974 of mbust.pt
-.tLiteralBoolean !== oEmitValue on line 2975 of mbust.pt
-oEmitValue !== % value emitted 1 on line 2976 of mbust.pt
-% value emitted 1 !== .tAdd on line 2977 of mbust.pt
-.tAssignBoolean !== .tAssignInteger on line 2978 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 2979 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 2980 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 2981 of mbust.pt
-% value emitted 92 !== .tIfBegin on line 2982 of mbust.pt
-% value emitted 92 !== % value emitted 100 on line 2985 of mbust.pt
-% value emitted 1 !== % value emitted 21 on line 2989 of mbust.pt
-.tAdd !== .tEQ on line 2990 of mbust.pt
-.tAssignInteger !== .tIfThen on line 2991 of mbust.pt
-.tIfMerge !== oEmitNullAddress on line 2992 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 2993 of mbust.pt
-% value emitted -32767 !== .tWriteBegin on line 2994 of mbust.pt
-.tIfBegin !== .tTrapBegin on line 2995 of mbust.pt
-% value emitted 100 !== % value emitted 4 on line 2998 of mbust.pt
-.tFetchInteger !== .tVarParm on line 2999 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3000 of mbust.pt
-oEmitValue !== .tLiteralString on line 3001 of mbust.pt
-% value emitted 21 !== oEmitValue on line 3002 of mbust.pt
-.tEQ !== % value emitted 23 on line 3003 of mbust.pt
-.tIfThen !== oEmitString on line 3004 of mbust.pt
-oEmitNullAddress !== % value emitted 68 on line 3005 of mbust.pt
-% value emitted -32767 !== % value emitted 101 on line 3006 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 3007 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 3008 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 3009 of mbust.pt
-oEmitValue !== % value emitted 114 on line 3010 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 3011 of mbust.pt
-.tVarParm !== % value emitted 99 on line 3012 of mbust.pt
-.tParmEnd !== % value emitted 97 on line 3013 of mbust.pt
-.tLiteralString !== % value emitted 108 on line 3014 of mbust.pt
-oEmitValue !== % value emitted 108 on line 3015 of mbust.pt
-% value emitted 23 !== % value emitted 115 on line 3016 of mbust.pt
-oEmitString !== % value emitted 32 on line 3017 of mbust.pt
-% value emitted 68 !== % value emitted 98 on line 3018 of mbust.pt
-% value emitted 101 !== % value emitted 108 on line 3019 of mbust.pt
-% value emitted 108 !== % value emitted 99 on line 3021 of mbust.pt
-% value emitted 101 !== % value emitted 107 on line 3022 of mbust.pt
-% value emitted 114 !== % value emitted 106 on line 3023 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 3024 of mbust.pt
-% value emitted 97 !== % value emitted 107 on line 3026 of mbust.pt
-% value emitted 108 !== % value emitted 46 on line 3027 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 3028 of mbust.pt
-% value emitted 115 !== .tLiteralInteger on line 3029 of mbust.pt
-% value emitted 32 !== oEmitValue on line 3030 of mbust.pt
-% value emitted 98 !== % value emitted 1 on line 3031 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 3032 of mbust.pt
-% value emitted 97 !== .tTrap on line 3033 of mbust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 3034 of mbust.pt
-% value emitted 107 !== % value emitted 109 on line 3035 of mbust.pt
-% value emitted 106 !== .tWriteEnd on line 3036 of mbust.pt
-% value emitted 97 !== .tTrapBegin on line 3037 of mbust.pt
-% value emitted 99 !== .tLiteralAddress on line 3038 of mbust.pt
-% value emitted 107 !== oEmitValue on line 3039 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3040 of mbust.pt
-.tParmEnd !== .tVarParm on line 3041 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3042 of mbust.pt
-oEmitValue !== .tTrap on line 3043 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3044 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3045 of mbust.pt
-.tTrap !== .tAssignBegin on line 3046 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3047 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3048 of mbust.pt
-.tWriteEnd !== % value emitted 108 on line 3049 of mbust.pt
-.tTrapBegin !== .tLiteralBoolean on line 3050 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3051 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3052 of mbust.pt
-% value emitted 4 !== .tAssignBoolean on line 3053 of mbust.pt
-.tVarParm !== .tAssignBegin on line 3054 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 3055 of mbust.pt
-.tTrap !== oEmitValue on line 3056 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 96 on line 3057 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 3058 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3059 of mbust.pt
-.tLiteralAddress !== % value emitted 96 on line 3060 of mbust.pt
-oEmitValue !== .tFetchInteger on line 3061 of mbust.pt
-% value emitted 108 !== .tLiteralInteger on line 3062 of mbust.pt
-.tLiteralBoolean !== oEmitValue on line 3063 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3064 of mbust.pt
-% value emitted 1 !== .tAdd on line 3065 of mbust.pt
-.tAssignBoolean !== .tAssignInteger on line 3066 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3067 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3068 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3069 of mbust.pt
-% value emitted 96 !== .tIfBegin on line 3070 of mbust.pt
-% value emitted 96 !== % value emitted 100 on line 3073 of mbust.pt
-% value emitted 1 !== % value emitted 17 on line 3077 of mbust.pt
-.tAdd !== .tLT on line 3078 of mbust.pt
-.tAssignInteger !== .tIfThen on line 3079 of mbust.pt
-.tIfMerge !== oEmitNullAddress on line 3080 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3081 of mbust.pt
-% value emitted -32767 !== .tCallBegin on line 3082 of mbust.pt
-.tIfBegin !== .tCallEnd on line 3083 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3084 of mbust.pt
-oEmitValue !== % value emitted 2191 on line 3085 of mbust.pt
-% value emitted 100 !== .tIfMerge on line 3086 of mbust.pt
-.tFetchInteger !== oEmitNullAddress on line 3087 of mbust.pt
-.tLiteralInteger !== % value emitted -32767 on line 3088 of mbust.pt
-oEmitValue !== .tAssignBegin on line 3089 of mbust.pt
-% value emitted 17 !== .tLiteralAddress on line 3090 of mbust.pt
-.tLT !== oEmitValue on line 3091 of mbust.pt
-.tIfThen !== % value emitted 108 on line 3092 of mbust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 3093 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3094 of mbust.pt
-.tCallBegin !== % value emitted 1 on line 3095 of mbust.pt
-.tCallEnd !== .tAssignBoolean on line 3096 of mbust.pt
-oEmitValue !== .tIfEnd on line 3097 of mbust.pt
-% value emitted 2201 !== .tIfEnd on line 3098 of mbust.pt
-.tIfMerge !== .tIfEnd on line 3099 of mbust.pt
-oEmitNullAddress !== .tIfBegin on line 3100 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 3101 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3102 of mbust.pt
-.tLiteralAddress !== % value emitted 108 on line 3103 of mbust.pt
-oEmitValue !== .tFetchBoolean on line 3104 of mbust.pt
-% value emitted 108 !== .tIfThen on line 3105 of mbust.pt
-.tLiteralBoolean !== oEmitNullAddress on line 3106 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3107 of mbust.pt
-% value emitted 1 !== .tWriteBegin on line 3108 of mbust.pt
-.tAssignBoolean !== .tTrapBegin on line 3109 of mbust.pt
-.tIfEnd !== .tLiteralAddress on line 3110 of mbust.pt
-.tIfEnd !== oEmitValue on line 3111 of mbust.pt
-.tIfEnd !== % value emitted 4 on line 3112 of mbust.pt
-.tIfBegin !== .tVarParm on line 3113 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 3114 of mbust.pt
-oEmitValue !== .tLiteralString on line 3115 of mbust.pt
-% value emitted 108 !== oEmitValue on line 3116 of mbust.pt
-.tFetchBoolean !== % value emitted 19 on line 3117 of mbust.pt
-.tIfThen !== oEmitString on line 3118 of mbust.pt
-oEmitNullAddress !== % value emitted 68 on line 3119 of mbust.pt
-% value emitted -32767 !== % value emitted 101 on line 3120 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 3121 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 3122 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 3123 of mbust.pt
-oEmitValue !== % value emitted 114 on line 3124 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 3125 of mbust.pt
-.tVarParm !== % value emitted 115 on line 3126 of mbust.pt
-.tParmEnd !== % value emitted 116 on line 3127 of mbust.pt
-.tLiteralString !== % value emitted 97 on line 3128 of mbust.pt
-oEmitValue !== % value emitted 110 on line 3129 of mbust.pt
-% value emitted 19 !== % value emitted 100 on line 3130 of mbust.pt
-oEmitString !== % value emitted 115 on line 3131 of mbust.pt
-% value emitted 68 !== % value emitted 32 on line 3132 of mbust.pt
-% value emitted 101 !== % value emitted 119 on line 3133 of mbust.pt
-% value emitted 97 !== % value emitted 105 on line 3134 of mbust.pt
-% value emitted 108 !== % value emitted 116 on line 3135 of mbust.pt
-% value emitted 101 !== % value emitted 104 on line 3136 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 3137 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 3138 of mbust.pt
-% value emitted 115 !== .tLiteralInteger on line 3139 of mbust.pt
-% value emitted 116 !== oEmitValue on line 3140 of mbust.pt
-% value emitted 97 !== % value emitted 1 on line 3141 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 3142 of mbust.pt
-% value emitted 100 !== .tTrap on line 3143 of mbust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 3144 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3145 of mbust.pt
-% value emitted 119 !== .tTrapBegin on line 3146 of mbust.pt
-% value emitted 105 !== .tLiteralAddress on line 3147 of mbust.pt
-% value emitted 116 !== oEmitValue on line 3148 of mbust.pt
-% value emitted 104 !== % value emitted 4 on line 3149 of mbust.pt
-% value emitted 32 !== .tVarParm on line 3150 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3152 of mbust.pt
-% value emitted 1 !== % value emitted 100 on line 3154 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 3155 of mbust.pt
-.tTrap !== .tParmEnd on line 3156 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralInteger on line 3157 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3158 of mbust.pt
-.tTrapBegin !== % value emitted 1 on line 3159 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 3160 of mbust.pt
-oEmitValue !== .tTrap on line 3161 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 3162 of mbust.pt
-.tVarParm !== % value emitted 8 on line 3163 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 3164 of mbust.pt
-% value emitted 100 !== % value emitted 4 on line 3167 of mbust.pt
-.tFetchInteger !== .tVarParm on line 3168 of mbust.pt
-.tLiteralInteger !== .tLiteralString on line 3170 of mbust.pt
-.tParmEnd !== oEmitString on line 3173 of mbust.pt
-.tTrap !== % value emitted 46 on line 3174 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 3175 of mbust.pt
-% value emitted 7 !== .tLiteralInteger on line 3176 of mbust.pt
-.tTrapBegin !== oEmitValue on line 3177 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 3178 of mbust.pt
-oEmitValue !== .tParmEnd on line 3179 of mbust.pt
-% value emitted 4 !== .tTrap on line 3180 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteString) on line 3181 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 3182 of mbust.pt
-.tLiteralString !== .tWriteEnd on line 3183 of mbust.pt
-oEmitValue !== .tTrapBegin on line 3184 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 3185 of mbust.pt
-oEmitString !== oEmitValue on line 3186 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3187 of mbust.pt
-.tParmEnd !== .tVarParm on line 3188 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3189 of mbust.pt
-oEmitValue !== .tTrap on line 3190 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3191 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3192 of mbust.pt
-.tTrap !== .tIfBegin on line 3193 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3194 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3195 of mbust.pt
-.tWriteEnd !== % value emitted 100 on line 3196 of mbust.pt
-.tTrapBegin !== .tFetchInteger on line 3197 of mbust.pt
-% value emitted 4 !== % value emitted 104 on line 3200 of mbust.pt
-.tVarParm !== .tFetchInteger on line 3201 of mbust.pt
-.tParmEnd !== .tGT on line 3202 of mbust.pt
-.tTrap !== .tIfThen on line 3203 of mbust.pt
-oEmitTrapKind(trWriteln) !== oEmitNullAddress on line 3204 of mbust.pt
-% value emitted 6 !== % value emitted -32767 on line 3205 of mbust.pt
-.tIfBegin !== .tWriteBegin on line 3206 of mbust.pt
-.tLiteralAddress !== .tTrapBegin on line 3207 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3208 of mbust.pt
-% value emitted 100 !== oEmitValue on line 3209 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 3210 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 3211 of mbust.pt
-oEmitValue !== .tParmEnd on line 3212 of mbust.pt
-% value emitted 104 !== .tLiteralString on line 3213 of mbust.pt
-.tFetchInteger !== oEmitValue on line 3214 of mbust.pt
-.tGT !== % value emitted 11 on line 3215 of mbust.pt
-.tIfThen !== oEmitString on line 3216 of mbust.pt
-oEmitNullAddress !== % value emitted 72 on line 3217 of mbust.pt
-% value emitted -32767 !== % value emitted 111 on line 3218 of mbust.pt
-.tWriteBegin !== % value emitted 117 on line 3219 of mbust.pt
-.tTrapBegin !== % value emitted 115 on line 3220 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 3221 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3222 of mbust.pt
-% value emitted 4 !== % value emitted 119 on line 3223 of mbust.pt
-.tVarParm !== % value emitted 105 on line 3224 of mbust.pt
-.tParmEnd !== % value emitted 110 on line 3225 of mbust.pt
-.tLiteralString !== % value emitted 115 on line 3226 of mbust.pt
-oEmitValue !== % value emitted 46 on line 3227 of mbust.pt
-% value emitted 11 !== .tParmEnd on line 3228 of mbust.pt
-oEmitString !== .tLiteralInteger on line 3229 of mbust.pt
-% value emitted 72 !== oEmitValue on line 3230 of mbust.pt
-% value emitted 111 !== % value emitted 1 on line 3231 of mbust.pt
-% value emitted 117 !== .tParmEnd on line 3232 of mbust.pt
-% value emitted 115 !== .tTrap on line 3233 of mbust.pt
-% value emitted 101 !== oEmitTrapKind(trWriteString) on line 3234 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3235 of mbust.pt
-% value emitted 119 !== .tWriteEnd on line 3236 of mbust.pt
-% value emitted 105 !== .tTrapBegin on line 3237 of mbust.pt
-% value emitted 110 !== .tLiteralAddress on line 3238 of mbust.pt
-% value emitted 115 !== oEmitValue on line 3239 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3240 of mbust.pt
-.tParmEnd !== .tVarParm on line 3241 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3242 of mbust.pt
-oEmitValue !== .tTrap on line 3243 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3244 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3245 of mbust.pt
-.tTrap !== .tAssignBegin on line 3246 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3247 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3248 of mbust.pt
-.tWriteEnd !== % value emitted 96 on line 3249 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 3250 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3251 of mbust.pt
-oEmitValue !== % value emitted 96 on line 3252 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 3253 of mbust.pt
-.tVarParm !== .tLiteralInteger on line 3254 of mbust.pt
-.tParmEnd !== oEmitValue on line 3255 of mbust.pt
-.tTrap !== % value emitted 1 on line 3256 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tAdd on line 3257 of mbust.pt
-% value emitted 6 !== .tAssignInteger on line 3258 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3259 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3260 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3261 of mbust.pt
-% value emitted 96 !== .tIfBegin on line 3262 of mbust.pt
-% value emitted 96 !== % value emitted 100 on line 3265 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3267 of mbust.pt
-% value emitted 1 !== % value emitted 104 on line 3269 of mbust.pt
-.tAdd !== .tFetchInteger on line 3270 of mbust.pt
-.tAssignInteger !== .tLT on line 3271 of mbust.pt
-.tIfMerge !== .tIfThen on line 3272 of mbust.pt
-.tIfBegin !== .tCallBegin on line 3275 of mbust.pt
-.tLiteralAddress !== .tCallEnd on line 3276 of mbust.pt
-% value emitted 100 !== % value emitted 705 on line 3278 of mbust.pt
-.tFetchInteger !== .tWriteBegin on line 3279 of mbust.pt
-.tLiteralAddress !== .tTrapBegin on line 3280 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3281 of mbust.pt
-% value emitted 104 !== oEmitValue on line 3282 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 3283 of mbust.pt
-.tLT !== .tVarParm on line 3284 of mbust.pt
-.tIfThen !== .tParmEnd on line 3285 of mbust.pt
-oEmitNullAddress !== .tLiteralString on line 3286 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3287 of mbust.pt
-.tCallBegin !== % value emitted 6 on line 3288 of mbust.pt
-.tCallEnd !== oEmitString on line 3289 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3290 of mbust.pt
-% value emitted 713 !== % value emitted 119 on line 3291 of mbust.pt
-.tWriteBegin !== % value emitted 105 on line 3292 of mbust.pt
-.tTrapBegin !== % value emitted 110 on line 3293 of mbust.pt
-.tLiteralAddress !== % value emitted 115 on line 3294 of mbust.pt
-oEmitValue !== % value emitted 46 on line 3295 of mbust.pt
-% value emitted 4 !== .tParmEnd on line 3296 of mbust.pt
-.tVarParm !== .tLiteralInteger on line 3297 of mbust.pt
-.tParmEnd !== oEmitValue on line 3298 of mbust.pt
-.tLiteralString !== % value emitted 1 on line 3299 of mbust.pt
-oEmitValue !== .tParmEnd on line 3300 of mbust.pt
-% value emitted 6 !== .tTrap on line 3301 of mbust.pt
-oEmitString !== oEmitTrapKind(trWriteString) on line 3302 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3303 of mbust.pt
-% value emitted 119 !== .tWriteEnd on line 3304 of mbust.pt
-% value emitted 105 !== .tTrapBegin on line 3305 of mbust.pt
-% value emitted 110 !== .tLiteralAddress on line 3306 of mbust.pt
-% value emitted 115 !== oEmitValue on line 3307 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3308 of mbust.pt
-.tParmEnd !== .tVarParm on line 3309 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3310 of mbust.pt
-oEmitValue !== .tTrap on line 3311 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3312 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3313 of mbust.pt
-.tTrap !== .tAssignBegin on line 3314 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3315 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3316 of mbust.pt
-.tWriteEnd !== % value emitted 92 on line 3317 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 3318 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3319 of mbust.pt
-oEmitValue !== % value emitted 92 on line 3320 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 3321 of mbust.pt
-.tVarParm !== .tLiteralInteger on line 3322 of mbust.pt
-.tParmEnd !== oEmitValue on line 3323 of mbust.pt
-.tTrap !== % value emitted 1 on line 3324 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tAdd on line 3325 of mbust.pt
-% value emitted 6 !== .tAssignInteger on line 3326 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3327 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3328 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3329 of mbust.pt
-% value emitted 92 !== .tWriteBegin on line 3330 of mbust.pt
-.tLiteralAddress !== .tTrapBegin on line 3331 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3332 of mbust.pt
-% value emitted 92 !== oEmitValue on line 3333 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 3334 of mbust.pt
-.tLiteralInteger !== .tVarParm on line 3335 of mbust.pt
-oEmitValue !== .tParmEnd on line 3336 of mbust.pt
-% value emitted 1 !== .tLiteralString on line 3337 of mbust.pt
-.tAdd !== oEmitValue on line 3338 of mbust.pt
-.tAssignInteger !== % value emitted 9 on line 3339 of mbust.pt
-.tIfMerge !== oEmitString on line 3340 of mbust.pt
-oEmitNullAddress !== % value emitted 84 on line 3341 of mbust.pt
-% value emitted -32767 !== % value emitted 105 on line 3342 of mbust.pt
-.tWriteBegin !== % value emitted 101 on line 3343 of mbust.pt
-.tTrapBegin !== % value emitted 32 on line 3344 of mbust.pt
-.tLiteralAddress !== % value emitted 103 on line 3345 of mbust.pt
-oEmitValue !== % value emitted 97 on line 3346 of mbust.pt
-% value emitted 4 !== % value emitted 109 on line 3347 of mbust.pt
-.tVarParm !== % value emitted 101 on line 3348 of mbust.pt
-.tParmEnd !== % value emitted 46 on line 3349 of mbust.pt
-.tLiteralString !== .tParmEnd on line 3350 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 3351 of mbust.pt
-% value emitted 9 !== oEmitValue on line 3352 of mbust.pt
-oEmitString !== % value emitted 1 on line 3353 of mbust.pt
-% value emitted 84 !== .tParmEnd on line 3354 of mbust.pt
-% value emitted 105 !== .tTrap on line 3355 of mbust.pt
-% value emitted 101 !== oEmitTrapKind(trWriteString) on line 3356 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3357 of mbust.pt
-% value emitted 103 !== .tWriteEnd on line 3358 of mbust.pt
-% value emitted 97 !== .tTrapBegin on line 3359 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 3360 of mbust.pt
-% value emitted 101 !== oEmitValue on line 3361 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3362 of mbust.pt
-.tParmEnd !== .tVarParm on line 3363 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3364 of mbust.pt
-oEmitValue !== .tTrap on line 3365 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3366 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3367 of mbust.pt
-.tTrap !== .tIfEnd on line 3368 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tIfEnd on line 3369 of mbust.pt
-% value emitted 109 !== .tIfMerge on line 3370 of mbust.pt
-.tWriteEnd !== oEmitNullAddress on line 3371 of mbust.pt
-.tTrapBegin !== % value emitted -32767 on line 3372 of mbust.pt
-.tLiteralAddress !== .tWriteBegin on line 3373 of mbust.pt
-oEmitValue !== .tTrapBegin on line 3374 of mbust.pt
-% value emitted 4 !== .tLiteralAddress on line 3375 of mbust.pt
-.tVarParm !== oEmitValue on line 3376 of mbust.pt
-.tParmEnd !== % value emitted 4 on line 3377 of mbust.pt
-.tTrap !== .tVarParm on line 3378 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tParmEnd on line 3379 of mbust.pt
-% value emitted 6 !== .tLiteralString on line 3380 of mbust.pt
-.tIfEnd !== oEmitValue on line 3381 of mbust.pt
-.tIfEnd !== % value emitted 32 on line 3382 of mbust.pt
-.tIfMerge !== oEmitString on line 3383 of mbust.pt
-oEmitNullAddress !== % value emitted 68 on line 3384 of mbust.pt
-% value emitted -32767 !== % value emitted 101 on line 3385 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 3386 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 3387 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 3388 of mbust.pt
-oEmitValue !== % value emitted 114 on line 3389 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 3390 of mbust.pt
-.tVarParm !== % value emitted 116 on line 3391 of mbust.pt
-.tParmEnd !== % value emitted 97 on line 3392 of mbust.pt
-.tLiteralString !== % value emitted 107 on line 3393 of mbust.pt
-oEmitValue !== % value emitted 101 on line 3394 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 3395 of mbust.pt
-oEmitString !== % value emitted 32 on line 3396 of mbust.pt
-% value emitted 68 !== % value emitted 97 on line 3397 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 3398 of mbust.pt
-% value emitted 97 !== % value emitted 99 on line 3399 of mbust.pt
-% value emitted 108 !== % value emitted 97 on line 3400 of mbust.pt
-% value emitted 101 !== % value emitted 114 on line 3401 of mbust.pt
-% value emitted 114 !== % value emitted 100 on line 3402 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 3404 of mbust.pt
-% value emitted 97 !== % value emitted 110 on line 3405 of mbust.pt
-% value emitted 107 !== % value emitted 100 on line 3406 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 3407 of mbust.pt
-% value emitted 115 !== % value emitted 110 on line 3408 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 3409 of mbust.pt
-% value emitted 97 !== % value emitted 119 on line 3410 of mbust.pt
-% value emitted 99 !== % value emitted 104 on line 3412 of mbust.pt
-% value emitted 114 !== % value emitted 115 on line 3414 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 3415 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 3416 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 3417 of mbust.pt
-% value emitted 110 !== oEmitValue on line 3418 of mbust.pt
-% value emitted 100 !== % value emitted 1 on line 3419 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 3420 of mbust.pt
-% value emitted 110 !== .tTrap on line 3421 of mbust.pt
-% value emitted 111 !== oEmitTrapKind(trWriteString) on line 3422 of mbust.pt
-% value emitted 119 !== % value emitted 109 on line 3423 of mbust.pt
-% value emitted 32 !== .tWriteEnd on line 3424 of mbust.pt
-% value emitted 104 !== .tCallBegin on line 3425 of mbust.pt
-% value emitted 97 !== .tLiteralAddress on line 3426 of mbust.pt
-% value emitted 115 !== oEmitValue on line 3427 of mbust.pt
-% value emitted 32 !== % value emitted 84 on line 3428 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 3429 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3430 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3431 of mbust.pt
-% value emitted 1 !== oEmitValue on line 3432 of mbust.pt
-.tParmEnd !== % value emitted 44 on line 3433 of mbust.pt
-.tTrap !== .tVarParm on line 3434 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 3435 of mbust.pt
-% value emitted 109 !== .tCallEnd on line 3436 of mbust.pt
-.tWriteEnd !== oEmitValue on line 3437 of mbust.pt
-.tCallBegin !== % value emitted 439 on line 3438 of mbust.pt
-.tLiteralAddress !== .tTrapBegin on line 3439 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3440 of mbust.pt
-% value emitted 84 !== oEmitValue on line 3441 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 3442 of mbust.pt
-.tParmEnd !== .tVarParm on line 3443 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 3444 of mbust.pt
-oEmitValue !== .tTrap on line 3445 of mbust.pt
-% value emitted 44 !== oEmitTrapKind(trWriteln) on line 3446 of mbust.pt
-.tVarParm !== % value emitted 6 on line 3447 of mbust.pt
-.tParmEnd !== .tIfEnd on line 3448 of mbust.pt
-.tCallEnd !== .tProcedureEnd on line 3449 of mbust.pt
-oEmitValue !== .tSkipProc on line 3450 of mbust.pt
-% value emitted 445 !== oEmitNullAddress on line 3451 of mbust.pt
-.tTrapBegin !== % value emitted -32767 on line 3452 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 3453 of mbust.pt
-oEmitValue !== .tIfBegin on line 3454 of mbust.pt
-% value emitted 4 !== .tLiteralAddress on line 3455 of mbust.pt
-.tVarParm !== oEmitValue on line 3456 of mbust.pt
-.tParmEnd !== % value emitted 104 on line 3457 of mbust.pt
-.tTrap !== .tFetchInteger on line 3458 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 3459 of mbust.pt
-% value emitted 6 !== oEmitValue on line 3460 of mbust.pt
-.tIfEnd !== % value emitted 1136 on line 3461 of mbust.pt
-.tProcedureEnd !== .tFetchInteger on line 3462 of mbust.pt
-.tSkipProc !== .tLT on line 3463 of mbust.pt
-oEmitNullAddress !== .tIfThen on line 3464 of mbust.pt
-% value emitted -32767 !== oEmitNullAddress on line 3465 of mbust.pt
-.tParmEnd !== % value emitted -32767 on line 3466 of mbust.pt
-.tIfBegin !== .tCallBegin on line 3467 of mbust.pt
-.tLiteralAddress !== .tCallEnd on line 3468 of mbust.pt
-% value emitted 104 !== % value emitted 2157 on line 3470 of mbust.pt
-.tFetchInteger !== .tIfMerge on line 3471 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3472 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3473 of mbust.pt
-% value emitted 1136 !== .tAssignBegin on line 3474 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 3475 of mbust.pt
-.tLT !== oEmitValue on line 3476 of mbust.pt
-.tIfThen !== % value emitted 109 on line 3477 of mbust.pt
-oEmitNullAddress !== .tLiteralBoolean on line 3478 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3479 of mbust.pt
-.tCallBegin !== % value emitted 1 on line 3480 of mbust.pt
-.tCallEnd !== .tAssignBoolean on line 3481 of mbust.pt
-oEmitValue !== .tIfEnd on line 3482 of mbust.pt
-% value emitted 2167 !== .tProcedureEnd on line 3483 of mbust.pt
-.tIfMerge !== .tSkipProc on line 3484 of mbust.pt
-.tAssignBegin !== .tLiteralAddress on line 3487 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3488 of mbust.pt
-oEmitValue !== % value emitted 14825 on line 3489 of mbust.pt
-% value emitted 109 !== .tStoreParmBoolean on line 3490 of mbust.pt
-.tLiteralBoolean !== .tParmEnd on line 3491 of mbust.pt
-oEmitValue !== .tAssignBegin on line 3492 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 3493 of mbust.pt
-.tAssignBoolean !== oEmitValue on line 3494 of mbust.pt
-.tIfEnd !== % value emitted 14828 on line 3495 of mbust.pt
-.tProcedureEnd !== .tLiteralAddress on line 3496 of mbust.pt
-.tSkipProc !== oEmitValue on line 3497 of mbust.pt
-oEmitNullAddress !== % value emitted 44 on line 3498 of mbust.pt
-% value emitted -32767 !== .tSubscriptBegin on line 3499 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3500 of mbust.pt
-% value emitted 14825 !== % value emitted 1 on line 3502 of mbust.pt
-.tStoreParmBoolean !== .tSubscriptInteger on line 3503 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 3504 of mbust.pt
-.tAssignBegin !== .tAssignInteger on line 3505 of mbust.pt
-.tLiteralAddress !== .tIfBegin on line 3506 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3507 of mbust.pt
-% value emitted 14828 !== oEmitValue on line 3508 of mbust.pt
-.tLiteralAddress !== % value emitted 14825 on line 3509 of mbust.pt
-oEmitValue !== .tFetchBoolean on line 3510 of mbust.pt
-% value emitted 44 !== .tIfThen on line 3511 of mbust.pt
-.tSubscriptBegin !== oEmitNullAddress on line 3512 of mbust.pt
-.tLiteralInteger !== % value emitted -32767 on line 3513 of mbust.pt
-oEmitValue !== .tIfBegin on line 3514 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 3515 of mbust.pt
-.tSubscriptInteger !== oEmitValue on line 3516 of mbust.pt
-.tFetchInteger !== % value emitted 14828 on line 3517 of mbust.pt
-.tAssignInteger !== .tFetchInteger on line 3518 of mbust.pt
-.tIfBegin !== .tLiteralInteger on line 3519 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3520 of mbust.pt
-oEmitValue !== % value emitted 8 on line 3521 of mbust.pt
-% value emitted 14825 !== .tGT on line 3522 of mbust.pt
-.tFetchBoolean !== .tIfThen on line 3523 of mbust.pt
-.tIfThen !== oEmitNullAddress on line 3524 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3525 of mbust.pt
-% value emitted -32767 !== .tAssignBegin on line 3526 of mbust.pt
-.tIfBegin !== .tLiteralAddress on line 3527 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3528 of mbust.pt
-oEmitValue !== % value emitted 109 on line 3529 of mbust.pt
-% value emitted 14828 !== .tLiteralAddress on line 3530 of mbust.pt
-.tFetchInteger !== oEmitValue on line 3531 of mbust.pt
-.tLiteralInteger !== % value emitted 104 on line 3532 of mbust.pt
-oEmitValue !== .tFetchInteger on line 3533 of mbust.pt
-% value emitted 8 !== .tLiteralInteger on line 3534 of mbust.pt
-.tGT !== oEmitValue on line 3535 of mbust.pt
-.tIfThen !== % value emitted 18 on line 3536 of mbust.pt
-oEmitNullAddress !== .tGT on line 3537 of mbust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3538 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3539 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3540 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3541 of mbust.pt
-% value emitted 109 !== .tAssignBegin on line 3542 of mbust.pt
-% value emitted 104 !== % value emitted 109 on line 3545 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 3546 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 3547 of mbust.pt
-oEmitValue !== % value emitted 104 on line 3548 of mbust.pt
-% value emitted 18 !== .tFetchInteger on line 3549 of mbust.pt
-.tGT !== .tLiteralInteger on line 3550 of mbust.pt
-.tAssignBoolean !== oEmitValue on line 3551 of mbust.pt
-.tIfMerge !== % value emitted 17 on line 3552 of mbust.pt
-oEmitNullAddress !== .tGT on line 3553 of mbust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3554 of mbust.pt
-.tAssignBegin !== .tIfEnd on line 3555 of mbust.pt
-.tLiteralAddress !== .tIfMerge on line 3556 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 3557 of mbust.pt
-% value emitted 109 !== % value emitted -32767 on line 3558 of mbust.pt
-.tLiteralAddress !== .tIfBegin on line 3559 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3560 of mbust.pt
-% value emitted 104 !== oEmitValue on line 3561 of mbust.pt
-.tFetchInteger !== % value emitted 14828 on line 3562 of mbust.pt
-.tLiteralInteger !== .tFetchInteger on line 3563 of mbust.pt
-oEmitValue !== .tLiteralInteger on line 3564 of mbust.pt
-% value emitted 17 !== oEmitValue on line 3565 of mbust.pt
-.tGT !== % value emitted 1 on line 3566 of mbust.pt
-.tAssignBoolean !== .tGT on line 3567 of mbust.pt
-.tIfEnd !== .tInfixAnd on line 3568 of mbust.pt
-.tIfMerge !== .tLiteralAddress on line 3569 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 3570 of mbust.pt
-% value emitted -32767 !== % value emitted 14828 on line 3571 of mbust.pt
-.tIfBegin !== .tFetchInteger on line 3572 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3573 of mbust.pt
-% value emitted 14828 !== % value emitted 4 on line 3575 of mbust.pt
-.tFetchInteger !== .tLT on line 3576 of mbust.pt
-.tLiteralInteger !== .tAnd on line 3577 of mbust.pt
-oEmitValue !== .tIfThen on line 3578 of mbust.pt
-% value emitted 1 !== oEmitNullAddress on line 3579 of mbust.pt
-.tGT !== % value emitted -32767 on line 3580 of mbust.pt
-.tInfixAnd !== .tAssignBegin on line 3581 of mbust.pt
-% value emitted 14828 !== % value emitted 109 on line 3584 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 3585 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 3586 of mbust.pt
-oEmitValue !== % value emitted 104 on line 3587 of mbust.pt
-% value emitted 4 !== .tFetchInteger on line 3588 of mbust.pt
-.tLT !== .tLiteralInteger on line 3589 of mbust.pt
-.tAnd !== oEmitValue on line 3590 of mbust.pt
-.tIfThen !== % value emitted 12 on line 3591 of mbust.pt
-oEmitNullAddress !== .tGT on line 3592 of mbust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3593 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3594 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3595 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3596 of mbust.pt
-% value emitted 109 !== .tIfBegin on line 3597 of mbust.pt
-% value emitted 104 !== % value emitted 14828 on line 3600 of mbust.pt
-% value emitted 12 !== % value emitted 3 on line 3604 of mbust.pt
-.tAssignBoolean !== .tInfixAnd on line 3606 of mbust.pt
-.tIfMerge !== .tLiteralAddress on line 3607 of mbust.pt
-oEmitNullAddress !== oEmitValue on line 3608 of mbust.pt
-% value emitted -32767 !== % value emitted 14828 on line 3609 of mbust.pt
-.tIfBegin !== .tFetchInteger on line 3610 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3611 of mbust.pt
-% value emitted 14828 !== % value emitted 7 on line 3613 of mbust.pt
-.tFetchInteger !== .tLT on line 3614 of mbust.pt
-.tLiteralInteger !== .tAnd on line 3615 of mbust.pt
-oEmitValue !== .tIfThen on line 3616 of mbust.pt
-% value emitted 3 !== oEmitNullAddress on line 3617 of mbust.pt
-.tGT !== % value emitted -32767 on line 3618 of mbust.pt
-.tInfixAnd !== .tAssignBegin on line 3619 of mbust.pt
-% value emitted 14828 !== % value emitted 109 on line 3622 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 3623 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 3624 of mbust.pt
-oEmitValue !== % value emitted 104 on line 3625 of mbust.pt
-% value emitted 7 !== .tFetchInteger on line 3626 of mbust.pt
-.tLT !== .tLiteralInteger on line 3627 of mbust.pt
-.tAnd !== oEmitValue on line 3628 of mbust.pt
-.tIfThen !== % value emitted 11 on line 3629 of mbust.pt
-oEmitNullAddress !== .tGT on line 3630 of mbust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3631 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3632 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3633 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3634 of mbust.pt
-% value emitted 109 !== .tAssignBegin on line 3635 of mbust.pt
-% value emitted 104 !== % value emitted 109 on line 3638 of mbust.pt
-.tFetchInteger !== .tLiteralAddress on line 3639 of mbust.pt
-.tLiteralInteger !== oEmitValue on line 3640 of mbust.pt
-oEmitValue !== % value emitted 104 on line 3641 of mbust.pt
-% value emitted 11 !== .tFetchInteger on line 3642 of mbust.pt
-.tGT !== .tLiteralInteger on line 3643 of mbust.pt
-.tAssignBoolean !== oEmitValue on line 3644 of mbust.pt
-.tIfMerge !== % value emitted 16 on line 3645 of mbust.pt
-oEmitNullAddress !== .tGT on line 3646 of mbust.pt
-% value emitted -32767 !== .tAssignBoolean on line 3647 of mbust.pt
-.tAssignBegin !== .tIfEnd on line 3648 of mbust.pt
-.tLiteralAddress !== .tIfEnd on line 3649 of mbust.pt
-oEmitValue !== .tIfEnd on line 3650 of mbust.pt
-% value emitted 109 !== .tIfBegin on line 3651 of mbust.pt
-% value emitted 104 !== % value emitted 109 on line 3654 of mbust.pt
-.tFetchInteger !== .tFetchBoolean on line 3655 of mbust.pt
-.tLiteralInteger !== .tNot on line 3656 of mbust.pt
-oEmitValue !== .tIfThen on line 3657 of mbust.pt
-% value emitted 16 !== oEmitNullAddress on line 3658 of mbust.pt
-.tGT !== % value emitted -32767 on line 3659 of mbust.pt
-.tAssignBoolean !== .tCallBegin on line 3660 of mbust.pt
-.tIfEnd !== .tCallEnd on line 3661 of mbust.pt
-.tIfEnd !== oEmitValue on line 3662 of mbust.pt
-.tIfEnd !== % value emitted 2157 on line 3663 of mbust.pt
-.tIfBegin !== .tIfEnd on line 3664 of mbust.pt
-.tLiteralAddress !== .tProcedureEnd on line 3665 of mbust.pt
-oEmitValue !== .tSkipProc on line 3666 of mbust.pt
-% value emitted 109 !== oEmitNullAddress on line 3667 of mbust.pt
-.tFetchBoolean !== % value emitted -32767 on line 3668 of mbust.pt
-.tNot !== .tParmEnd on line 3669 of mbust.pt
-.tIfThen !== .tCallBegin on line 3670 of mbust.pt
-oEmitNullAddress !== .tLiteralAddress on line 3671 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3672 of mbust.pt
-.tCallBegin !== % value emitted 80 on line 3673 of mbust.pt
-.tCallEnd !== .tFetchInteger on line 3674 of mbust.pt
-oEmitValue !== .tParmEnd on line 3675 of mbust.pt
-% value emitted 2167 !== .tLiteralAddress on line 3676 of mbust.pt
-.tIfEnd !== oEmitValue on line 3677 of mbust.pt
-.tProcedureEnd !== % value emitted 8 on line 3678 of mbust.pt
-.tSkipProc !== .tVarParm on line 3679 of mbust.pt
-oEmitNullAddress !== .tParmEnd on line 3680 of mbust.pt
-% value emitted -32767 !== .tLiteralAddress on line 3681 of mbust.pt
-.tParmEnd !== oEmitValue on line 3682 of mbust.pt
-.tCallBegin !== % value emitted 14832 on line 3683 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 3684 of mbust.pt
-oEmitValue !== .tParmEnd on line 3685 of mbust.pt
-% value emitted 80 !== .tLiteralAddress on line 3686 of mbust.pt
-.tFetchInteger !== oEmitValue on line 3687 of mbust.pt
-.tParmEnd !== % value emitted 104 on line 3688 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 3689 of mbust.pt
-oEmitValue !== .tParmEnd on line 3690 of mbust.pt
-% value emitted 8 !== .tCallEnd on line 3691 of mbust.pt
-.tVarParm !== oEmitValue on line 3692 of mbust.pt
-.tParmEnd !== % value emitted 2442 on line 3693 of mbust.pt
-.tLiteralAddress !== .tIfBegin on line 3694 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3695 of mbust.pt
-% value emitted 14832 !== oEmitValue on line 3696 of mbust.pt
-.tVarParm !== % value emitted 104 on line 3697 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 3698 of mbust.pt
-.tLiteralAddress !== .tLiteralInteger on line 3699 of mbust.pt
-% value emitted 104 !== % value emitted 21 on line 3701 of mbust.pt
-.tVarParm !== .tEQ on line 3702 of mbust.pt
-.tParmEnd !== .tIfThen on line 3703 of mbust.pt
-.tCallEnd !== oEmitNullAddress on line 3704 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3705 of mbust.pt
-% value emitted 2452 !== .tCallBegin on line 3706 of mbust.pt
-.tIfBegin !== .tCallEnd on line 3707 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3708 of mbust.pt
-oEmitValue !== % value emitted 705 on line 3709 of mbust.pt
-% value emitted 104 !== .tWriteBegin on line 3710 of mbust.pt
-.tFetchInteger !== .tTrapBegin on line 3711 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3712 of mbust.pt
-% value emitted 21 !== % value emitted 4 on line 3714 of mbust.pt
-.tEQ !== .tVarParm on line 3715 of mbust.pt
-.tIfThen !== .tParmEnd on line 3716 of mbust.pt
-oEmitNullAddress !== .tLiteralString on line 3717 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3718 of mbust.pt
-.tCallBegin !== % value emitted 17 on line 3719 of mbust.pt
-.tCallEnd !== oEmitString on line 3720 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3721 of mbust.pt
-% value emitted 713 !== % value emitted 99 on line 3722 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 3723 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 3724 of mbust.pt
-.tLiteralAddress !== % value emitted 108 on line 3725 of mbust.pt
-oEmitValue !== % value emitted 115 on line 3726 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 3727 of mbust.pt
-.tVarParm !== % value emitted 98 on line 3728 of mbust.pt
-.tParmEnd !== % value emitted 108 on line 3729 of mbust.pt
-.tLiteralString !== % value emitted 97 on line 3730 of mbust.pt
-oEmitValue !== % value emitted 99 on line 3731 of mbust.pt
-% value emitted 17 !== % value emitted 107 on line 3732 of mbust.pt
-oEmitString !== % value emitted 106 on line 3733 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 3734 of mbust.pt
-% value emitted 97 !== % value emitted 107 on line 3736 of mbust.pt
-% value emitted 108 !== % value emitted 46 on line 3737 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 3738 of mbust.pt
-% value emitted 115 !== .tLiteralInteger on line 3739 of mbust.pt
-% value emitted 32 !== oEmitValue on line 3740 of mbust.pt
-% value emitted 98 !== % value emitted 1 on line 3741 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 3742 of mbust.pt
-% value emitted 97 !== .tTrap on line 3743 of mbust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 3744 of mbust.pt
-% value emitted 107 !== % value emitted 109 on line 3745 of mbust.pt
-% value emitted 106 !== .tWriteEnd on line 3746 of mbust.pt
-% value emitted 97 !== .tTrapBegin on line 3747 of mbust.pt
-% value emitted 99 !== .tLiteralAddress on line 3748 of mbust.pt
-% value emitted 107 !== oEmitValue on line 3749 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3750 of mbust.pt
-.tParmEnd !== .tVarParm on line 3751 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3752 of mbust.pt
-oEmitValue !== .tTrap on line 3753 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3754 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3755 of mbust.pt
-.tTrap !== .tAssignBegin on line 3756 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3757 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3758 of mbust.pt
-.tWriteEnd !== % value emitted 109 on line 3759 of mbust.pt
-.tTrapBegin !== .tLiteralBoolean on line 3760 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3761 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3762 of mbust.pt
-% value emitted 4 !== .tAssignBoolean on line 3763 of mbust.pt
-.tVarParm !== .tAssignBegin on line 3764 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 3765 of mbust.pt
-.tTrap !== oEmitValue on line 3766 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 108 on line 3767 of mbust.pt
-% value emitted 6 !== .tLiteralBoolean on line 3768 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3769 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 3770 of mbust.pt
-oEmitValue !== .tAssignBoolean on line 3771 of mbust.pt
-% value emitted 109 !== .tAssignBegin on line 3772 of mbust.pt
-.tLiteralBoolean !== .tLiteralAddress on line 3773 of mbust.pt
-% value emitted 1 !== % value emitted 92 on line 3775 of mbust.pt
-.tAssignBoolean !== .tLiteralAddress on line 3776 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3777 of mbust.pt
-.tLiteralAddress !== % value emitted 92 on line 3778 of mbust.pt
-oEmitValue !== .tFetchInteger on line 3779 of mbust.pt
-% value emitted 108 !== .tLiteralInteger on line 3780 of mbust.pt
-.tLiteralBoolean !== oEmitValue on line 3781 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3782 of mbust.pt
-% value emitted 1 !== .tAdd on line 3783 of mbust.pt
-.tAssignBoolean !== .tAssignInteger on line 3784 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3785 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3786 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3787 of mbust.pt
-% value emitted 92 !== .tIfBegin on line 3788 of mbust.pt
-% value emitted 92 !== % value emitted 104 on line 3791 of mbust.pt
-% value emitted 1 !== % value emitted 21 on line 3795 of mbust.pt
-.tAdd !== .tGT on line 3796 of mbust.pt
-.tAssignInteger !== .tIfThen on line 3797 of mbust.pt
-.tIfMerge !== oEmitNullAddress on line 3798 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3799 of mbust.pt
-% value emitted -32767 !== .tCallBegin on line 3800 of mbust.pt
-.tIfBegin !== .tCallEnd on line 3801 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3802 of mbust.pt
-oEmitValue !== % value emitted 705 on line 3803 of mbust.pt
-% value emitted 104 !== .tWriteBegin on line 3804 of mbust.pt
-.tFetchInteger !== .tTrapBegin on line 3805 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3806 of mbust.pt
-% value emitted 21 !== % value emitted 4 on line 3808 of mbust.pt
-.tGT !== .tVarParm on line 3809 of mbust.pt
-.tIfThen !== .tParmEnd on line 3810 of mbust.pt
-oEmitNullAddress !== .tLiteralString on line 3811 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3812 of mbust.pt
-.tCallBegin !== % value emitted 11 on line 3813 of mbust.pt
-.tCallEnd !== oEmitString on line 3814 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3815 of mbust.pt
-% value emitted 713 !== % value emitted 103 on line 3816 of mbust.pt
-.tWriteBegin !== % value emitted 111 on line 3817 of mbust.pt
-.tTrapBegin !== % value emitted 101 on line 3818 of mbust.pt
-.tLiteralAddress !== % value emitted 115 on line 3819 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3820 of mbust.pt
-% value emitted 4 !== % value emitted 98 on line 3821 of mbust.pt
-.tVarParm !== % value emitted 117 on line 3822 of mbust.pt
-.tParmEnd !== % value emitted 115 on line 3823 of mbust.pt
-.tLiteralString !== % value emitted 116 on line 3824 of mbust.pt
-oEmitValue !== % value emitted 46 on line 3825 of mbust.pt
-% value emitted 11 !== .tParmEnd on line 3826 of mbust.pt
-oEmitString !== .tLiteralInteger on line 3827 of mbust.pt
-% value emitted 32 !== oEmitValue on line 3828 of mbust.pt
-% value emitted 103 !== % value emitted 1 on line 3829 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 3830 of mbust.pt
-% value emitted 101 !== .tTrap on line 3831 of mbust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 3832 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3833 of mbust.pt
-% value emitted 98 !== .tWriteEnd on line 3834 of mbust.pt
-% value emitted 117 !== .tTrapBegin on line 3835 of mbust.pt
-% value emitted 115 !== .tLiteralAddress on line 3836 of mbust.pt
-% value emitted 116 !== oEmitValue on line 3837 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3838 of mbust.pt
-.tParmEnd !== .tVarParm on line 3839 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3840 of mbust.pt
-oEmitValue !== .tTrap on line 3841 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3842 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3843 of mbust.pt
-.tTrap !== .tAssignBegin on line 3844 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 3845 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3846 of mbust.pt
-.tWriteEnd !== % value emitted 109 on line 3847 of mbust.pt
-.tTrapBegin !== .tLiteralBoolean on line 3848 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3849 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3850 of mbust.pt
-% value emitted 4 !== .tAssignBoolean on line 3851 of mbust.pt
-.tVarParm !== .tAssignBegin on line 3852 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 3853 of mbust.pt
-.tTrap !== oEmitValue on line 3854 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 108 on line 3855 of mbust.pt
-% value emitted 6 !== .tLiteralBoolean on line 3856 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3857 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 3858 of mbust.pt
-oEmitValue !== .tAssignBoolean on line 3859 of mbust.pt
-% value emitted 109 !== .tAssignBegin on line 3860 of mbust.pt
-.tLiteralBoolean !== .tLiteralAddress on line 3861 of mbust.pt
-% value emitted 1 !== % value emitted 96 on line 3863 of mbust.pt
-.tAssignBoolean !== .tLiteralAddress on line 3864 of mbust.pt
-.tAssignBegin !== oEmitValue on line 3865 of mbust.pt
-.tLiteralAddress !== % value emitted 96 on line 3866 of mbust.pt
-oEmitValue !== .tFetchInteger on line 3867 of mbust.pt
-% value emitted 108 !== .tLiteralInteger on line 3868 of mbust.pt
-.tLiteralBoolean !== oEmitValue on line 3869 of mbust.pt
-oEmitValue !== % value emitted 1 on line 3870 of mbust.pt
-% value emitted 1 !== .tAdd on line 3871 of mbust.pt
-.tAssignBoolean !== .tAssignInteger on line 3872 of mbust.pt
-.tAssignBegin !== .tIfMerge on line 3873 of mbust.pt
-.tLiteralAddress !== oEmitNullAddress on line 3874 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 3875 of mbust.pt
-% value emitted 96 !== .tIfBegin on line 3876 of mbust.pt
-% value emitted 96 !== % value emitted 110 on line 3879 of mbust.pt
-.tFetchInteger !== .tFetchString on line 3880 of mbust.pt
-.tLiteralInteger !== .tLiteralString on line 3881 of mbust.pt
-.tAdd !== oEmitString on line 3884 of mbust.pt
-.tAssignInteger !== % value emitted 101 on line 3885 of mbust.pt
-.tIfMerge !== .tStringEqual on line 3886 of mbust.pt
-oEmitNullAddress !== .tIfThen on line 3887 of mbust.pt
-% value emitted -32767 !== oEmitNullAddress on line 3888 of mbust.pt
-.tIfBegin !== % value emitted -32767 on line 3889 of mbust.pt
-.tLiteralAddress !== .tCallBegin on line 3890 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3891 of mbust.pt
-% value emitted 110 !== oEmitValue on line 3892 of mbust.pt
-.tFetchString !== % value emitted 14832 on line 3893 of mbust.pt
-.tLiteralString !== .tFetchBoolean on line 3894 of mbust.pt
-oEmitValue !== .tParmEnd on line 3895 of mbust.pt
-% value emitted 1 !== .tCallEnd on line 3896 of mbust.pt
-oEmitString !== oEmitValue on line 3897 of mbust.pt
-% value emitted 101 !== % value emitted 3265 on line 3898 of mbust.pt
-.tStringEqual !== .tIfMerge on line 3899 of mbust.pt
-.tIfThen !== oEmitNullAddress on line 3900 of mbust.pt
-oEmitNullAddress !== % value emitted -32767 on line 3901 of mbust.pt
-% value emitted -32767 !== .tCallBegin on line 3902 of mbust.pt
-.tCallBegin !== .tCallEnd on line 3903 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 3904 of mbust.pt
-oEmitValue !== % value emitted 3225 on line 3905 of mbust.pt
-% value emitted 14832 !== .tIfEnd on line 3906 of mbust.pt
-.tFetchBoolean !== .tIfEnd on line 3907 of mbust.pt
-.tParmEnd !== .tIfEnd on line 3908 of mbust.pt
-.tCallEnd !== .tIfBegin on line 3909 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 3910 of mbust.pt
-% value emitted 3279 !== oEmitValue on line 3911 of mbust.pt
-.tIfMerge !== % value emitted 109 on line 3912 of mbust.pt
-oEmitNullAddress !== .tFetchBoolean on line 3913 of mbust.pt
-% value emitted -32767 !== .tIfThen on line 3914 of mbust.pt
-.tCallBegin !== oEmitNullAddress on line 3915 of mbust.pt
-.tCallEnd !== % value emitted -32767 on line 3916 of mbust.pt
-oEmitValue !== .tCallBegin on line 3917 of mbust.pt
-% value emitted 3239 !== .tCallEnd on line 3918 of mbust.pt
-.tIfEnd !== oEmitValue on line 3919 of mbust.pt
-.tIfEnd !== % value emitted 705 on line 3920 of mbust.pt
-.tIfEnd !== .tWriteBegin on line 3921 of mbust.pt
-.tIfBegin !== .tTrapBegin on line 3922 of mbust.pt
-% value emitted 109 !== % value emitted 4 on line 3925 of mbust.pt
-.tFetchBoolean !== .tVarParm on line 3926 of mbust.pt
-.tIfThen !== .tParmEnd on line 3927 of mbust.pt
-oEmitNullAddress !== .tLiteralString on line 3928 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 3929 of mbust.pt
-.tCallBegin !== % value emitted 13 on line 3930 of mbust.pt
-.tCallEnd !== oEmitString on line 3931 of mbust.pt
-oEmitValue !== % value emitted 32 on line 3932 of mbust.pt
-% value emitted 713 !== % value emitted 115 on line 3933 of mbust.pt
-.tWriteBegin !== % value emitted 116 on line 3934 of mbust.pt
-.tTrapBegin !== % value emitted 97 on line 3935 of mbust.pt
-.tLiteralAddress !== % value emitted 110 on line 3936 of mbust.pt
-oEmitValue !== % value emitted 100 on line 3937 of mbust.pt
-% value emitted 4 !== % value emitted 115 on line 3938 of mbust.pt
-.tVarParm !== % value emitted 32 on line 3939 of mbust.pt
-.tParmEnd !== % value emitted 119 on line 3940 of mbust.pt
-.tLiteralString !== % value emitted 105 on line 3941 of mbust.pt
-oEmitValue !== % value emitted 116 on line 3942 of mbust.pt
-% value emitted 13 !== % value emitted 104 on line 3943 of mbust.pt
-oEmitString !== % value emitted 32 on line 3944 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 3945 of mbust.pt
-% value emitted 115 !== .tLiteralInteger on line 3946 of mbust.pt
-% value emitted 116 !== oEmitValue on line 3947 of mbust.pt
-% value emitted 97 !== % value emitted 1 on line 3948 of mbust.pt
-% value emitted 110 !== .tParmEnd on line 3949 of mbust.pt
-% value emitted 100 !== .tTrap on line 3950 of mbust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 3951 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 3952 of mbust.pt
-% value emitted 119 !== .tTrapBegin on line 3953 of mbust.pt
-% value emitted 105 !== .tLiteralAddress on line 3954 of mbust.pt
-% value emitted 116 !== oEmitValue on line 3955 of mbust.pt
-% value emitted 104 !== % value emitted 4 on line 3956 of mbust.pt
-% value emitted 32 !== .tVarParm on line 3957 of mbust.pt
-.tLiteralInteger !== .tLiteralAddress on line 3959 of mbust.pt
-% value emitted 1 !== % value emitted 104 on line 3961 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 3962 of mbust.pt
-.tTrap !== .tParmEnd on line 3963 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralInteger on line 3964 of mbust.pt
-% value emitted 109 !== oEmitValue on line 3965 of mbust.pt
-.tTrapBegin !== % value emitted 1 on line 3966 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 3967 of mbust.pt
-oEmitValue !== .tTrap on line 3968 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteInteger) on line 3969 of mbust.pt
-.tVarParm !== % value emitted 8 on line 3970 of mbust.pt
-.tParmEnd !== .tTrapBegin on line 3971 of mbust.pt
-% value emitted 104 !== % value emitted 4 on line 3974 of mbust.pt
-.tFetchInteger !== .tVarParm on line 3975 of mbust.pt
-.tLiteralInteger !== .tLiteralString on line 3977 of mbust.pt
-.tParmEnd !== oEmitString on line 3980 of mbust.pt
-.tTrap !== % value emitted 46 on line 3981 of mbust.pt
-oEmitTrapKind(trWriteInteger) !== .tParmEnd on line 3982 of mbust.pt
-% value emitted 7 !== .tLiteralInteger on line 3983 of mbust.pt
-.tTrapBegin !== oEmitValue on line 3984 of mbust.pt
-.tLiteralAddress !== % value emitted 1 on line 3985 of mbust.pt
-oEmitValue !== .tParmEnd on line 3986 of mbust.pt
-% value emitted 4 !== .tTrap on line 3987 of mbust.pt
-.tVarParm !== oEmitTrapKind(trWriteString) on line 3988 of mbust.pt
-.tParmEnd !== % value emitted 109 on line 3989 of mbust.pt
-.tLiteralString !== .tWriteEnd on line 3990 of mbust.pt
-oEmitValue !== .tTrapBegin on line 3991 of mbust.pt
-% value emitted 1 !== .tLiteralAddress on line 3992 of mbust.pt
-oEmitString !== oEmitValue on line 3993 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 3994 of mbust.pt
-.tParmEnd !== .tVarParm on line 3995 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 3996 of mbust.pt
-oEmitValue !== .tTrap on line 3997 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 3998 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 3999 of mbust.pt
-.tTrap !== .tIfMerge on line 4000 of mbust.pt
-oEmitTrapKind(trWriteString) !== oEmitNullAddress on line 4001 of mbust.pt
-% value emitted 109 !== % value emitted -32767 on line 4002 of mbust.pt
-.tWriteEnd !== .tCallBegin on line 4003 of mbust.pt
-.tTrapBegin !== .tCallEnd on line 4004 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 4005 of mbust.pt
-oEmitValue !== % value emitted 705 on line 4006 of mbust.pt
-% value emitted 4 !== .tWriteBegin on line 4007 of mbust.pt
-.tVarParm !== .tTrapBegin on line 4008 of mbust.pt
-.tParmEnd !== .tLiteralAddress on line 4009 of mbust.pt
-.tTrap !== oEmitValue on line 4010 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 4 on line 4011 of mbust.pt
-% value emitted 6 !== .tVarParm on line 4012 of mbust.pt
-.tIfMerge !== .tParmEnd on line 4013 of mbust.pt
-oEmitNullAddress !== .tLiteralString on line 4014 of mbust.pt
-% value emitted -32767 !== oEmitValue on line 4015 of mbust.pt
-.tCallBegin !== % value emitted 26 on line 4016 of mbust.pt
-.tCallEnd !== oEmitString on line 4017 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4018 of mbust.pt
-% value emitted 713 !== % value emitted 116 on line 4019 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 4020 of mbust.pt
-.tTrapBegin !== % value emitted 107 on line 4021 of mbust.pt
-.tLiteralAddress !== % value emitted 101 on line 4022 of mbust.pt
-oEmitValue !== % value emitted 115 on line 4023 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 4024 of mbust.pt
-.tVarParm !== % value emitted 97 on line 4025 of mbust.pt
-.tParmEnd !== % value emitted 32 on line 4026 of mbust.pt
-.tLiteralString !== % value emitted 99 on line 4027 of mbust.pt
-oEmitValue !== % value emitted 97 on line 4028 of mbust.pt
-% value emitted 26 !== % value emitted 114 on line 4029 of mbust.pt
-oEmitString !== % value emitted 100 on line 4030 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 4032 of mbust.pt
-% value emitted 97 !== % value emitted 110 on line 4033 of mbust.pt
-% value emitted 107 !== % value emitted 100 on line 4034 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4035 of mbust.pt
-% value emitted 115 !== % value emitted 110 on line 4036 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 4037 of mbust.pt
-% value emitted 97 !== % value emitted 119 on line 4038 of mbust.pt
-% value emitted 99 !== % value emitted 104 on line 4040 of mbust.pt
-% value emitted 114 !== % value emitted 115 on line 4042 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 4043 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 4044 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 4045 of mbust.pt
-% value emitted 110 !== oEmitValue on line 4046 of mbust.pt
-% value emitted 100 !== % value emitted 1 on line 4047 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 4048 of mbust.pt
-% value emitted 110 !== .tTrap on line 4049 of mbust.pt
-% value emitted 111 !== oEmitTrapKind(trWriteString) on line 4050 of mbust.pt
-% value emitted 119 !== % value emitted 109 on line 4051 of mbust.pt
-% value emitted 32 !== .tWriteEnd on line 4052 of mbust.pt
-% value emitted 104 !== .tCallBegin on line 4053 of mbust.pt
-% value emitted 97 !== .tLiteralAddress on line 4054 of mbust.pt
-% value emitted 115 !== oEmitValue on line 4055 of mbust.pt
-% value emitted 32 !== % value emitted 80 on line 4056 of mbust.pt
-.tParmEnd !== .tFetchInteger on line 4057 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4058 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 4059 of mbust.pt
-% value emitted 1 !== oEmitValue on line 4060 of mbust.pt
-.tParmEnd !== % value emitted 8 on line 4061 of mbust.pt
-.tTrap !== .tVarParm on line 4062 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tParmEnd on line 4063 of mbust.pt
-% value emitted 109 !== .tCallEnd on line 4064 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4065 of mbust.pt
-.tCallBegin !== % value emitted 439 on line 4066 of mbust.pt
-.tLiteralAddress !== .tTrapBegin on line 4067 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 4068 of mbust.pt
-% value emitted 80 !== oEmitValue on line 4069 of mbust.pt
-.tFetchInteger !== % value emitted 4 on line 4070 of mbust.pt
-.tParmEnd !== .tVarParm on line 4071 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 4072 of mbust.pt
-oEmitValue !== .tTrap on line 4073 of mbust.pt
-% value emitted 8 !== oEmitTrapKind(trWriteln) on line 4074 of mbust.pt
-.tVarParm !== % value emitted 6 on line 4075 of mbust.pt
-.tParmEnd !== .tIfEnd on line 4076 of mbust.pt
-.tCallEnd !== .tProcedureEnd on line 4077 of mbust.pt
-oEmitValue !== .tWriteBegin on line 4078 of mbust.pt
-% value emitted 445 !== .tTrapBegin on line 4079 of mbust.pt
-.tTrapBegin !== .tLiteralAddress on line 4080 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 4081 of mbust.pt
-oEmitValue !== % value emitted 4 on line 4082 of mbust.pt
-% value emitted 4 !== .tVarParm on line 4083 of mbust.pt
-.tVarParm !== .tParmEnd on line 4084 of mbust.pt
-.tParmEnd !== .tLiteralString on line 4085 of mbust.pt
-.tTrap !== oEmitValue on line 4086 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 45 on line 4087 of mbust.pt
-% value emitted 6 !== oEmitString on line 4088 of mbust.pt
-.tIfEnd !== % value emitted 84 on line 4089 of mbust.pt
-.tProcedureEnd !== % value emitted 104 on line 4090 of mbust.pt
-.tWriteBegin !== % value emitted 105 on line 4091 of mbust.pt
-.tTrapBegin !== % value emitted 115 on line 4092 of mbust.pt
-.tLiteralAddress !== % value emitted 32 on line 4093 of mbust.pt
-oEmitValue !== % value emitted 112 on line 4094 of mbust.pt
-% value emitted 4 !== % value emitted 114 on line 4095 of mbust.pt
-.tVarParm !== % value emitted 111 on line 4096 of mbust.pt
-.tParmEnd !== % value emitted 103 on line 4097 of mbust.pt
-.tLiteralString !== % value emitted 114 on line 4098 of mbust.pt
-oEmitValue !== % value emitted 97 on line 4099 of mbust.pt
-% value emitted 45 !== % value emitted 109 on line 4100 of mbust.pt
-oEmitString !== % value emitted 32 on line 4101 of mbust.pt
-% value emitted 84 !== % value emitted 115 on line 4102 of mbust.pt
-% value emitted 104 !== % value emitted 105 on line 4103 of mbust.pt
-% value emitted 105 !== % value emitted 109 on line 4104 of mbust.pt
-% value emitted 115 !== % value emitted 117 on line 4105 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 4106 of mbust.pt
-% value emitted 112 !== % value emitted 97 on line 4107 of mbust.pt
-% value emitted 114 !== % value emitted 116 on line 4108 of mbust.pt
-% value emitted 111 !== % value emitted 101 on line 4109 of mbust.pt
-% value emitted 103 !== % value emitted 115 on line 4110 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 4111 of mbust.pt
-% value emitted 97 !== % value emitted 116 on line 4112 of mbust.pt
-% value emitted 109 !== % value emitted 104 on line 4113 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4114 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 4115 of mbust.pt
-% value emitted 105 !== % value emitted 103 on line 4116 of mbust.pt
-% value emitted 109 !== % value emitted 97 on line 4117 of mbust.pt
-% value emitted 117 !== % value emitted 109 on line 4118 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 4119 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4120 of mbust.pt
-% value emitted 116 !== % value emitted 111 on line 4121 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 4122 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 4123 of mbust.pt
-% value emitted 32 !== % value emitted 98 on line 4124 of mbust.pt
-% value emitted 116 !== % value emitted 108 on line 4125 of mbust.pt
-% value emitted 104 !== % value emitted 97 on line 4126 of mbust.pt
-% value emitted 101 !== % value emitted 99 on line 4127 of mbust.pt
-% value emitted 32 !== % value emitted 107 on line 4128 of mbust.pt
-% value emitted 103 !== % value emitted 106 on line 4129 of mbust.pt
-% value emitted 109 !== % value emitted 99 on line 4131 of mbust.pt
-% value emitted 101 !== % value emitted 107 on line 4132 of mbust.pt
-% value emitted 32 !== % value emitted 46 on line 4133 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 4134 of mbust.pt
-% value emitted 102 !== .tLiteralInteger on line 4135 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4136 of mbust.pt
-% value emitted 98 !== % value emitted 1 on line 4137 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 4138 of mbust.pt
-% value emitted 97 !== .tTrap on line 4139 of mbust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 4140 of mbust.pt
-% value emitted 107 !== % value emitted 109 on line 4141 of mbust.pt
-% value emitted 106 !== .tWriteEnd on line 4142 of mbust.pt
-% value emitted 97 !== .tTrapBegin on line 4143 of mbust.pt
-% value emitted 99 !== .tLiteralAddress on line 4144 of mbust.pt
-% value emitted 107 !== oEmitValue on line 4145 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 4146 of mbust.pt
-.tParmEnd !== .tVarParm on line 4147 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4148 of mbust.pt
-oEmitValue !== .tTrap on line 4149 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4150 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4151 of mbust.pt
-.tTrap !== .tTrapBegin on line 4152 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4153 of mbust.pt
-% value emitted 109 !== oEmitValue on line 4154 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 4155 of mbust.pt
-.tTrapBegin !== .tVarParm on line 4156 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 4157 of mbust.pt
-oEmitValue !== .tTrap on line 4158 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4159 of mbust.pt
-.tVarParm !== % value emitted 6 on line 4160 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 4161 of mbust.pt
-.tTrap !== .tTrapBegin on line 4162 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4163 of mbust.pt
-% value emitted 6 !== oEmitValue on line 4164 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4165 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4166 of mbust.pt
-oEmitValue !== .tParmEnd on line 4167 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4168 of mbust.pt
-.tVarParm !== oEmitValue on line 4169 of mbust.pt
-.tParmEnd !== % value emitted 69 on line 4170 of mbust.pt
-.tTrap !== oEmitString on line 4171 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 4172 of mbust.pt
-% value emitted 6 !== % value emitted 104 on line 4173 of mbust.pt
-.tWriteBegin !== % value emitted 101 on line 4174 of mbust.pt
-.tTrapBegin !== % value emitted 32 on line 4175 of mbust.pt
-.tLiteralAddress !== % value emitted 100 on line 4176 of mbust.pt
-oEmitValue !== % value emitted 101 on line 4177 of mbust.pt
-% value emitted 4 !== % value emitted 97 on line 4178 of mbust.pt
-.tVarParm !== % value emitted 108 on line 4179 of mbust.pt
-.tParmEnd !== % value emitted 101 on line 4180 of mbust.pt
-.tLiteralString !== % value emitted 114 on line 4181 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4182 of mbust.pt
-% value emitted 69 !== % value emitted 112 on line 4183 of mbust.pt
-oEmitString !== % value emitted 108 on line 4184 of mbust.pt
-% value emitted 84 !== % value emitted 97 on line 4185 of mbust.pt
-% value emitted 104 !== % value emitted 121 on line 4186 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4187 of mbust.pt
-% value emitted 100 !== % value emitted 116 on line 4189 of mbust.pt
-% value emitted 101 !== % value emitted 104 on line 4190 of mbust.pt
-% value emitted 97 !== % value emitted 101 on line 4191 of mbust.pt
-% value emitted 108 !== % value emitted 32 on line 4192 of mbust.pt
-% value emitted 101 !== % value emitted 99 on line 4193 of mbust.pt
-% value emitted 114 !== % value emitted 111 on line 4194 of mbust.pt
-% value emitted 32 !== % value emitted 109 on line 4195 of mbust.pt
-% value emitted 108 !== % value emitted 117 on line 4197 of mbust.pt
-% value emitted 97 !== % value emitted 108 on line 4198 of mbust.pt
-% value emitted 121 !== % value emitted 115 on line 4199 of mbust.pt
-% value emitted 115 !== % value emitted 111 on line 4200 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 4201 of mbust.pt
-% value emitted 116 !== % value emitted 121 on line 4202 of mbust.pt
-% value emitted 104 !== % value emitted 32 on line 4203 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4204 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4205 of mbust.pt
-% value emitted 99 !== % value emitted 114 on line 4206 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 4207 of mbust.pt
-% value emitted 109 !== % value emitted 116 on line 4208 of mbust.pt
-% value emitted 112 !== % value emitted 101 on line 4209 of mbust.pt
-% value emitted 117 !== % value emitted 103 on line 4210 of mbust.pt
-% value emitted 108 !== % value emitted 121 on line 4211 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 4212 of mbust.pt
-% value emitted 114 !== % value emitted 102 on line 4214 of mbust.pt
-% value emitted 121 !== % value emitted 32 on line 4215 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4216 of mbust.pt
-% value emitted 115 !== % value emitted 116 on line 4217 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 4218 of mbust.pt
-% value emitted 114 !== % value emitted 110 on line 4219 of mbust.pt
-% value emitted 97 !== % value emitted 100 on line 4220 of mbust.pt
-% value emitted 116 !== % value emitted 105 on line 4221 of mbust.pt
-% value emitted 101 !== % value emitted 110 on line 4222 of mbust.pt
-% value emitted 121 !== % value emitted 32 on line 4224 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 4225 of mbust.pt
-% value emitted 111 !== % value emitted 110 on line 4226 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 4227 of mbust.pt
-% value emitted 32 !== % value emitted 49 on line 4228 of mbust.pt
-% value emitted 115 !== % value emitted 55 on line 4229 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 4230 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 4231 of mbust.pt
-% value emitted 110 !== % value emitted 114 on line 4232 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 4233 of mbust.pt
-% value emitted 105 !== % value emitted 98 on line 4234 of mbust.pt
-% value emitted 110 !== % value emitted 101 on line 4235 of mbust.pt
-% value emitted 103 !== % value emitted 116 on line 4236 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4237 of mbust.pt
-% value emitted 111 !== % value emitted 101 on line 4238 of mbust.pt
-% value emitted 110 !== % value emitted 114 on line 4239 of mbust.pt
-% value emitted 32 !== % value emitted 46 on line 4240 of mbust.pt
-% value emitted 49 !== .tParmEnd on line 4241 of mbust.pt
-% value emitted 55 !== .tLiteralInteger on line 4242 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4243 of mbust.pt
-% value emitted 111 !== % value emitted 1 on line 4244 of mbust.pt
-% value emitted 114 !== .tParmEnd on line 4245 of mbust.pt
-% value emitted 32 !== .tTrap on line 4246 of mbust.pt
-% value emitted 98 !== oEmitTrapKind(trWriteString) on line 4247 of mbust.pt
-% value emitted 101 !== % value emitted 109 on line 4248 of mbust.pt
-% value emitted 116 !== .tWriteEnd on line 4249 of mbust.pt
-% value emitted 116 !== .tTrapBegin on line 4250 of mbust.pt
-% value emitted 101 !== .tLiteralAddress on line 4251 of mbust.pt
-% value emitted 114 !== oEmitValue on line 4252 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 4253 of mbust.pt
-.tParmEnd !== .tVarParm on line 4254 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4255 of mbust.pt
-oEmitValue !== .tTrap on line 4256 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4257 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4258 of mbust.pt
-.tTrap !== .tTrapBegin on line 4259 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4260 of mbust.pt
-% value emitted 109 !== oEmitValue on line 4261 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 4262 of mbust.pt
-.tTrapBegin !== .tVarParm on line 4263 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 4264 of mbust.pt
-oEmitValue !== .tTrap on line 4265 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4266 of mbust.pt
-.tVarParm !== % value emitted 6 on line 4267 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 4268 of mbust.pt
-.tTrap !== .tTrapBegin on line 4269 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4270 of mbust.pt
-% value emitted 6 !== oEmitValue on line 4271 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4272 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4273 of mbust.pt
-oEmitValue !== .tParmEnd on line 4274 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4275 of mbust.pt
-.tVarParm !== oEmitValue on line 4276 of mbust.pt
-.tParmEnd !== % value emitted 23 on line 4277 of mbust.pt
-.tTrap !== oEmitString on line 4278 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 4279 of mbust.pt
-% value emitted 6 !== % value emitted 104 on line 4280 of mbust.pt
-.tWriteBegin !== % value emitted 101 on line 4281 of mbust.pt
-.tTrapBegin !== % value emitted 32 on line 4282 of mbust.pt
-.tLiteralAddress !== % value emitted 112 on line 4283 of mbust.pt
-oEmitValue !== % value emitted 108 on line 4284 of mbust.pt
-% value emitted 4 !== % value emitted 97 on line 4285 of mbust.pt
-.tVarParm !== % value emitted 121 on line 4286 of mbust.pt
-.tParmEnd !== % value emitted 101 on line 4287 of mbust.pt
-.tLiteralString !== % value emitted 114 on line 4288 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4289 of mbust.pt
-% value emitted 23 !== % value emitted 112 on line 4290 of mbust.pt
-oEmitString !== % value emitted 108 on line 4291 of mbust.pt
-% value emitted 84 !== % value emitted 97 on line 4292 of mbust.pt
-% value emitted 104 !== % value emitted 121 on line 4293 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4294 of mbust.pt
-% value emitted 112 !== % value emitted 101 on line 4296 of mbust.pt
-% value emitted 108 !== % value emitted 105 on line 4297 of mbust.pt
-% value emitted 97 !== % value emitted 116 on line 4298 of mbust.pt
-% value emitted 121 !== % value emitted 104 on line 4299 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 4302 of mbust.pt
-% value emitted 112 !== .tLiteralInteger on line 4303 of mbust.pt
-% value emitted 108 !== oEmitValue on line 4304 of mbust.pt
-% value emitted 97 !== % value emitted 1 on line 4305 of mbust.pt
-% value emitted 121 !== .tParmEnd on line 4306 of mbust.pt
-% value emitted 115 !== .tTrap on line 4307 of mbust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 4308 of mbust.pt
-% value emitted 101 !== % value emitted 109 on line 4309 of mbust.pt
-% value emitted 105 !== .tWriteEnd on line 4310 of mbust.pt
-% value emitted 116 !== .tTrapBegin on line 4311 of mbust.pt
-% value emitted 104 !== .tLiteralAddress on line 4312 of mbust.pt
-% value emitted 101 !== oEmitValue on line 4313 of mbust.pt
-% value emitted 114 !== % value emitted 4 on line 4314 of mbust.pt
-.tParmEnd !== .tVarParm on line 4315 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4316 of mbust.pt
-oEmitValue !== .tTrap on line 4317 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4318 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4319 of mbust.pt
-.tTrap !== .tWriteBegin on line 4320 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4321 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4322 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4323 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4324 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4325 of mbust.pt
-oEmitValue !== .tParmEnd on line 4326 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4327 of mbust.pt
-.tVarParm !== oEmitValue on line 4328 of mbust.pt
-.tParmEnd !== % value emitted 64 on line 4329 of mbust.pt
-.tTrap !== oEmitString on line 4330 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4331 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4332 of mbust.pt
-.tWriteBegin !== % value emitted 91 on line 4333 of mbust.pt
-.tTrapBegin !== % value emitted 49 on line 4334 of mbust.pt
-.tLiteralAddress !== % value emitted 93 on line 4335 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4336 of mbust.pt
-% value emitted 4 !== % value emitted 84 on line 4337 of mbust.pt
-.tVarParm !== % value emitted 104 on line 4338 of mbust.pt
-.tParmEnd !== % value emitted 101 on line 4339 of mbust.pt
-.tLiteralString !== % value emitted 32 on line 4340 of mbust.pt
-oEmitValue !== % value emitted 115 on line 4341 of mbust.pt
-% value emitted 64 !== % value emitted 116 on line 4342 of mbust.pt
-oEmitString !== % value emitted 97 on line 4343 of mbust.pt
-% value emitted 32 !== % value emitted 110 on line 4344 of mbust.pt
-% value emitted 32 !== % value emitted 100 on line 4345 of mbust.pt
-% value emitted 91 !== % value emitted 97 on line 4346 of mbust.pt
-% value emitted 49 !== % value emitted 114 on line 4347 of mbust.pt
-% value emitted 93 !== % value emitted 100 on line 4348 of mbust.pt
-% value emitted 84 !== % value emitted 110 on line 4350 of mbust.pt
-% value emitted 104 !== % value emitted 97 on line 4351 of mbust.pt
-% value emitted 101 !== % value emitted 105 on line 4352 of mbust.pt
-% value emitted 32 !== % value emitted 118 on line 4353 of mbust.pt
-% value emitted 115 !== % value emitted 101 on line 4354 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 4355 of mbust.pt
-% value emitted 97 !== % value emitted 115 on line 4356 of mbust.pt
-% value emitted 110 !== % value emitted 116 on line 4357 of mbust.pt
-% value emitted 100 !== % value emitted 114 on line 4358 of mbust.pt
-% value emitted 114 !== % value emitted 116 on line 4360 of mbust.pt
-% value emitted 100 !== % value emitted 101 on line 4361 of mbust.pt
-% value emitted 32 !== % value emitted 103 on line 4362 of mbust.pt
-% value emitted 110 !== % value emitted 121 on line 4363 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4364 of mbust.pt
-% value emitted 105 !== % value emitted 111 on line 4365 of mbust.pt
-% value emitted 118 !== % value emitted 102 on line 4366 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4367 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4368 of mbust.pt
-% value emitted 115 !== % value emitted 116 on line 4369 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 4370 of mbust.pt
-% value emitted 114 !== % value emitted 110 on line 4371 of mbust.pt
-% value emitted 97 !== % value emitted 100 on line 4372 of mbust.pt
-% value emitted 116 !== % value emitted 105 on line 4373 of mbust.pt
-% value emitted 101 !== % value emitted 110 on line 4374 of mbust.pt
-% value emitted 121 !== % value emitted 32 on line 4376 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 4377 of mbust.pt
-% value emitted 111 !== % value emitted 110 on line 4378 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 4379 of mbust.pt
-% value emitted 32 !== % value emitted 110 on line 4380 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 4381 of mbust.pt
-% value emitted 116 !== % value emitted 111 on line 4382 of mbust.pt
-% value emitted 97 !== % value emitted 114 on line 4383 of mbust.pt
-% value emitted 110 !== % value emitted 32 on line 4384 of mbust.pt
-% value emitted 100 !== % value emitted 98 on line 4385 of mbust.pt
-% value emitted 105 !== % value emitted 101 on line 4386 of mbust.pt
-% value emitted 110 !== % value emitted 116 on line 4387 of mbust.pt
-% value emitted 103 !== % value emitted 116 on line 4388 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4389 of mbust.pt
-% value emitted 111 !== % value emitted 114 on line 4390 of mbust.pt
-% value emitted 110 !== % value emitted 44 on line 4391 of mbust.pt
-% value emitted 110 !== % value emitted 111 on line 4393 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 4394 of mbust.pt
-% value emitted 111 !== .tParmEnd on line 4395 of mbust.pt
-% value emitted 114 !== .tLiteralInteger on line 4396 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4397 of mbust.pt
-% value emitted 98 !== % value emitted 1 on line 4398 of mbust.pt
-% value emitted 101 !== .tParmEnd on line 4399 of mbust.pt
-% value emitted 116 !== .tTrap on line 4400 of mbust.pt
-% value emitted 116 !== oEmitTrapKind(trWriteString) on line 4401 of mbust.pt
-% value emitted 101 !== % value emitted 109 on line 4402 of mbust.pt
-% value emitted 114 !== .tWriteEnd on line 4403 of mbust.pt
-% value emitted 44 !== .tTrapBegin on line 4404 of mbust.pt
-% value emitted 32 !== .tLiteralAddress on line 4405 of mbust.pt
-% value emitted 111 !== oEmitValue on line 4406 of mbust.pt
-% value emitted 114 !== % value emitted 4 on line 4407 of mbust.pt
-.tParmEnd !== .tVarParm on line 4408 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4409 of mbust.pt
-oEmitValue !== .tTrap on line 4410 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4411 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4412 of mbust.pt
-.tTrap !== .tWriteBegin on line 4413 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4414 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4415 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4416 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4417 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4418 of mbust.pt
-oEmitValue !== .tParmEnd on line 4419 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4420 of mbust.pt
-.tVarParm !== oEmitValue on line 4421 of mbust.pt
-.tParmEnd !== % value emitted 66 on line 4422 of mbust.pt
-.tTrap !== oEmitString on line 4423 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4424 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4425 of mbust.pt
-.tWriteBegin !== % value emitted 91 on line 4426 of mbust.pt
-.tTrapBegin !== % value emitted 50 on line 4427 of mbust.pt
-.tLiteralAddress !== % value emitted 93 on line 4428 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4429 of mbust.pt
-% value emitted 4 !== % value emitted 65 on line 4430 of mbust.pt
-.tVarParm !== % value emitted 32 on line 4431 of mbust.pt
-.tParmEnd !== % value emitted 115 on line 4432 of mbust.pt
-.tLiteralString !== % value emitted 105 on line 4433 of mbust.pt
-oEmitValue !== % value emitted 109 on line 4434 of mbust.pt
-% value emitted 66 !== % value emitted 112 on line 4435 of mbust.pt
-oEmitString !== % value emitted 108 on line 4436 of mbust.pt
-% value emitted 32 !== % value emitted 105 on line 4437 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 4438 of mbust.pt
-% value emitted 91 !== % value emitted 105 on line 4439 of mbust.pt
-% value emitted 50 !== % value emitted 101 on line 4440 of mbust.pt
-% value emitted 93 !== % value emitted 100 on line 4441 of mbust.pt
-% value emitted 65 !== % value emitted 118 on line 4443 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4444 of mbust.pt
-% value emitted 115 !== % value emitted 114 on line 4445 of mbust.pt
-% value emitted 105 !== % value emitted 115 on line 4446 of mbust.pt
-% value emitted 109 !== % value emitted 105 on line 4447 of mbust.pt
-% value emitted 112 !== % value emitted 111 on line 4448 of mbust.pt
-% value emitted 108 !== % value emitted 110 on line 4449 of mbust.pt
-% value emitted 105 !== % value emitted 32 on line 4450 of mbust.pt
-% value emitted 102 !== % value emitted 111 on line 4451 of mbust.pt
-% value emitted 105 !== % value emitted 102 on line 4452 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4453 of mbust.pt
-% value emitted 100 !== % value emitted 116 on line 4454 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 4455 of mbust.pt
-% value emitted 118 !== % value emitted 101 on line 4456 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4457 of mbust.pt
-% value emitted 114 !== % value emitted 115 on line 4458 of mbust.pt
-% value emitted 115 !== % value emitted 116 on line 4459 of mbust.pt
-% value emitted 105 !== % value emitted 114 on line 4460 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 4461 of mbust.pt
-% value emitted 110 !== % value emitted 116 on line 4462 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4463 of mbust.pt
-% value emitted 111 !== % value emitted 103 on line 4464 of mbust.pt
-% value emitted 102 !== % value emitted 121 on line 4465 of mbust.pt
-% value emitted 116 !== % value emitted 100 on line 4467 of mbust.pt
-% value emitted 104 !== % value emitted 101 on line 4468 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4469 of mbust.pt
-% value emitted 32 !== % value emitted 99 on line 4470 of mbust.pt
-% value emitted 115 !== % value emitted 114 on line 4471 of mbust.pt
-% value emitted 116 !== % value emitted 105 on line 4472 of mbust.pt
-% value emitted 114 !== % value emitted 98 on line 4473 of mbust.pt
-% value emitted 97 !== % value emitted 101 on line 4474 of mbust.pt
-% value emitted 116 !== % value emitted 100 on line 4475 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4476 of mbust.pt
-% value emitted 103 !== % value emitted 98 on line 4477 of mbust.pt
-% value emitted 100 !== % value emitted 32 on line 4480 of mbust.pt
-% value emitted 101 !== % value emitted 69 on line 4481 of mbust.pt
-% value emitted 115 !== % value emitted 46 on line 4482 of mbust.pt
-% value emitted 99 !== % value emitted 79 on line 4483 of mbust.pt
-% value emitted 114 !== % value emitted 46 on line 4484 of mbust.pt
-% value emitted 105 !== % value emitted 84 on line 4485 of mbust.pt
-% value emitted 98 !== % value emitted 104 on line 4486 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 4487 of mbust.pt
-% value emitted 100 !== % value emitted 114 on line 4488 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 4489 of mbust.pt
-% value emitted 98 !== .tParmEnd on line 4490 of mbust.pt
-% value emitted 121 !== .tLiteralInteger on line 4491 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4492 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 4493 of mbust.pt
-% value emitted 69 !== .tParmEnd on line 4494 of mbust.pt
-% value emitted 46 !== .tTrap on line 4495 of mbust.pt
-% value emitted 79 !== oEmitTrapKind(trWriteString) on line 4496 of mbust.pt
-% value emitted 46 !== % value emitted 109 on line 4497 of mbust.pt
-% value emitted 84 !== .tWriteEnd on line 4498 of mbust.pt
-% value emitted 104 !== .tTrapBegin on line 4499 of mbust.pt
-% value emitted 111 !== .tLiteralAddress on line 4500 of mbust.pt
-% value emitted 114 !== oEmitValue on line 4501 of mbust.pt
-% value emitted 112 !== % value emitted 4 on line 4502 of mbust.pt
-.tParmEnd !== .tVarParm on line 4503 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4504 of mbust.pt
-oEmitValue !== .tTrap on line 4505 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4506 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4507 of mbust.pt
-.tTrap !== .tWriteBegin on line 4508 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4509 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4510 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4511 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4512 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4513 of mbust.pt
-oEmitValue !== .tParmEnd on line 4514 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4515 of mbust.pt
-.tVarParm !== oEmitValue on line 4516 of mbust.pt
-.tParmEnd !== % value emitted 69 on line 4517 of mbust.pt
-.tTrap !== oEmitString on line 4518 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4519 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4520 of mbust.pt
-.tWriteBegin !== % value emitted 32 on line 4521 of mbust.pt
-.tTrapBegin !== % value emitted 32 on line 4522 of mbust.pt
-.tLiteralAddress !== % value emitted 32 on line 4523 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4524 of mbust.pt
-% value emitted 4 !== % value emitted 105 on line 4525 of mbust.pt
-.tVarParm !== % value emitted 110 on line 4526 of mbust.pt
-.tParmEnd !== % value emitted 32 on line 4527 of mbust.pt
-.tLiteralString !== % value emitted 104 on line 4528 of mbust.pt
-oEmitValue !== % value emitted 105 on line 4529 of mbust.pt
-% value emitted 69 !== % value emitted 115 on line 4530 of mbust.pt
-oEmitString !== % value emitted 32 on line 4531 of mbust.pt
-% value emitted 32 !== % value emitted 98 on line 4532 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 4533 of mbust.pt
-% value emitted 32 !== % value emitted 111 on line 4534 of mbust.pt
-% value emitted 32 !== % value emitted 107 on line 4535 of mbust.pt
-% value emitted 32 !== % value emitted 34 on line 4537 of mbust.pt
-% value emitted 105 !== % value emitted 66 on line 4538 of mbust.pt
-% value emitted 110 !== % value emitted 101 on line 4539 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 4540 of mbust.pt
-% value emitted 104 !== % value emitted 116 on line 4541 of mbust.pt
-% value emitted 105 !== % value emitted 32 on line 4542 of mbust.pt
-% value emitted 115 !== % value emitted 116 on line 4543 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 4544 of mbust.pt
-% value emitted 98 !== % value emitted 101 on line 4545 of mbust.pt
-% value emitted 111 !== % value emitted 32 on line 4546 of mbust.pt
-% value emitted 111 !== % value emitted 68 on line 4547 of mbust.pt
-% value emitted 107 !== % value emitted 101 on line 4548 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 4549 of mbust.pt
-% value emitted 34 !== % value emitted 108 on line 4550 of mbust.pt
-% value emitted 66 !== % value emitted 101 on line 4551 of mbust.pt
-% value emitted 101 !== % value emitted 114 on line 4552 of mbust.pt
-% value emitted 97 !== % value emitted 34 on line 4553 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 4554 of mbust.pt
-% value emitted 32 !== % value emitted 40 on line 4555 of mbust.pt
-% value emitted 116 !== % value emitted 86 on line 4556 of mbust.pt
-% value emitted 104 !== % value emitted 105 on line 4557 of mbust.pt
-% value emitted 101 !== % value emitted 110 on line 4558 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4559 of mbust.pt
-% value emitted 68 !== % value emitted 97 on line 4560 of mbust.pt
-% value emitted 101 !== % value emitted 103 on line 4561 of mbust.pt
-% value emitted 97 !== % value emitted 101 on line 4562 of mbust.pt
-% value emitted 108 !== % value emitted 32 on line 4563 of mbust.pt
-% value emitted 101 !== % value emitted 66 on line 4564 of mbust.pt
-% value emitted 114 !== % value emitted 111 on line 4565 of mbust.pt
-% value emitted 34 !== % value emitted 111 on line 4566 of mbust.pt
-% value emitted 32 !== % value emitted 107 on line 4567 of mbust.pt
-% value emitted 40 !== % value emitted 115 on line 4568 of mbust.pt
-% value emitted 86 !== % value emitted 44 on line 4569 of mbust.pt
-% value emitted 105 !== % value emitted 32 on line 4570 of mbust.pt
-% value emitted 110 !== % value emitted 49 on line 4571 of mbust.pt
-% value emitted 116 !== % value emitted 57 on line 4572 of mbust.pt
-% value emitted 97 !== % value emitted 54 on line 4573 of mbust.pt
-% value emitted 103 !== % value emitted 54 on line 4574 of mbust.pt
-% value emitted 101 !== % value emitted 41 on line 4575 of mbust.pt
-% value emitted 32 !== % value emitted 59 on line 4576 of mbust.pt
-% value emitted 66 !== % value emitted 32 on line 4577 of mbust.pt
-% value emitted 111 !== % value emitted 112 on line 4578 of mbust.pt
-% value emitted 111 !== % value emitted 112 on line 4579 of mbust.pt
-% value emitted 107 !== % value emitted 46 on line 4580 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 4581 of mbust.pt
-% value emitted 44 !== % value emitted 50 on line 4582 of mbust.pt
-% value emitted 32 !== % value emitted 48 on line 4583 of mbust.pt
-% value emitted 49 !== % value emitted 45 on line 4584 of mbust.pt
-% value emitted 57 !== % value emitted 50 on line 4585 of mbust.pt
-% .sNewLine !== % value emitted 49 on line 4586 of mbust.pt
-% .sNewLine !== % value emitted 46 on line 4587 of mbust.pt
-% value emitted 41 !== .tParmEnd on line 4588 of mbust.pt
-% value emitted 59 !== .tLiteralInteger on line 4589 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4590 of mbust.pt
-% value emitted 112 !== % value emitted 1 on line 4591 of mbust.pt
-% value emitted 112 !== .tParmEnd on line 4592 of mbust.pt
-% value emitted 46 !== .tTrap on line 4593 of mbust.pt
-% value emitted 32 !== oEmitTrapKind(trWriteString) on line 4594 of mbust.pt
-% value emitted 50 !== % value emitted 109 on line 4595 of mbust.pt
-% value emitted 48 !== .tWriteEnd on line 4596 of mbust.pt
-% value emitted 45 !== .tTrapBegin on line 4597 of mbust.pt
-% value emitted 50 !== .tLiteralAddress on line 4598 of mbust.pt
-% value emitted 49 !== oEmitValue on line 4599 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 4600 of mbust.pt
-.tParmEnd !== .tVarParm on line 4601 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4602 of mbust.pt
-oEmitValue !== .tTrap on line 4603 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4604 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4605 of mbust.pt
-.tTrap !== .tTrapBegin on line 4606 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4607 of mbust.pt
-% value emitted 109 !== oEmitValue on line 4608 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 4609 of mbust.pt
-.tTrapBegin !== .tVarParm on line 4610 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 4611 of mbust.pt
-oEmitValue !== .tTrap on line 4612 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4613 of mbust.pt
-.tVarParm !== % value emitted 6 on line 4614 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 4615 of mbust.pt
-.tTrap !== .tTrapBegin on line 4616 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4617 of mbust.pt
-% value emitted 6 !== oEmitValue on line 4618 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4619 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4620 of mbust.pt
-oEmitValue !== .tParmEnd on line 4621 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4622 of mbust.pt
-.tVarParm !== oEmitValue on line 4623 of mbust.pt
-.tParmEnd !== % value emitted 7 on line 4624 of mbust.pt
-.tTrap !== oEmitString on line 4625 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 73 on line 4626 of mbust.pt
-% value emitted 6 !== % value emitted 110 on line 4627 of mbust.pt
-.tWriteBegin !== % value emitted 112 on line 4628 of mbust.pt
-.tTrapBegin !== % value emitted 117 on line 4629 of mbust.pt
-.tLiteralAddress !== % value emitted 116 on line 4630 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4631 of mbust.pt
-% value emitted 4 !== % value emitted 58 on line 4632 of mbust.pt
-.tVarParm !== .tParmEnd on line 4633 of mbust.pt
-.tParmEnd !== .tLiteralInteger on line 4634 of mbust.pt
-.tLiteralString !== oEmitValue on line 4635 of mbust.pt
-oEmitValue !== % value emitted 1 on line 4636 of mbust.pt
-% value emitted 7 !== .tParmEnd on line 4637 of mbust.pt
-oEmitString !== .tTrap on line 4638 of mbust.pt
-% value emitted 73 !== oEmitTrapKind(trWriteString) on line 4639 of mbust.pt
-% value emitted 110 !== % value emitted 109 on line 4640 of mbust.pt
-% value emitted 112 !== .tWriteEnd on line 4641 of mbust.pt
-% value emitted 117 !== .tTrapBegin on line 4642 of mbust.pt
-% value emitted 116 !== .tLiteralAddress on line 4643 of mbust.pt
-% value emitted 32 !== oEmitValue on line 4644 of mbust.pt
-% value emitted 58 !== % value emitted 4 on line 4645 of mbust.pt
-.tParmEnd !== .tVarParm on line 4646 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4647 of mbust.pt
-oEmitValue !== .tTrap on line 4648 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4649 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4650 of mbust.pt
-.tTrap !== .tWriteBegin on line 4651 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4652 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4653 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4654 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4655 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4656 of mbust.pt
-oEmitValue !== .tParmEnd on line 4657 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4658 of mbust.pt
-.tVarParm !== oEmitValue on line 4659 of mbust.pt
-.tParmEnd !== % value emitted 73 on line 4660 of mbust.pt
-.tTrap !== oEmitString on line 4661 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4662 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4663 of mbust.pt
-.tWriteBegin !== % value emitted 70 on line 4664 of mbust.pt
-.tTrapBegin !== % value emitted 111 on line 4665 of mbust.pt
-.tLiteralAddress !== % value emitted 114 on line 4666 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4667 of mbust.pt
-% value emitted 4 !== % value emitted 101 on line 4668 of mbust.pt
-.tVarParm !== % value emitted 97 on line 4669 of mbust.pt
-.tParmEnd !== % value emitted 99 on line 4670 of mbust.pt
-.tLiteralString !== % value emitted 104 on line 4671 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4672 of mbust.pt
-% value emitted 73 !== % value emitted 115 on line 4673 of mbust.pt
-oEmitString !== % value emitted 104 on line 4674 of mbust.pt
-% value emitted 32 !== % value emitted 117 on line 4675 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 4676 of mbust.pt
-% value emitted 70 !== % value emitted 102 on line 4677 of mbust.pt
-% value emitted 111 !== % value emitted 108 on line 4678 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 4679 of mbust.pt
-% value emitted 32 !== % value emitted 44 on line 4680 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4681 of mbust.pt
-% value emitted 99 !== % value emitted 32 on line 4683 of mbust.pt
-% value emitted 104 !== % value emitted 112 on line 4684 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 4685 of mbust.pt
-% value emitted 115 !== % value emitted 97 on line 4686 of mbust.pt
-% value emitted 104 !== % value emitted 121 on line 4687 of mbust.pt
-% value emitted 117 !== % value emitted 101 on line 4688 of mbust.pt
-% value emitted 102 !== % value emitted 114 on line 4689 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 4690 of mbust.pt
-% value emitted 108 !== % value emitted 110 on line 4691 of mbust.pt
-% value emitted 101 !== % value emitted 97 on line 4692 of mbust.pt
-% value emitted 44 !== % value emitted 109 on line 4693 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4694 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4695 of mbust.pt
-% value emitted 32 !== % value emitted 40 on line 4696 of mbust.pt
-% value emitted 112 !== % value emitted 99 on line 4697 of mbust.pt
-% value emitted 108 !== % value emitted 104 on line 4698 of mbust.pt
-% value emitted 121 !== % value emitted 114 on line 4700 of mbust.pt
-% value emitted 101 !== % value emitted 97 on line 4701 of mbust.pt
-% value emitted 114 !== % value emitted 99 on line 4702 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4703 of mbust.pt
-% value emitted 110 !== % value emitted 101 on line 4704 of mbust.pt
-% value emitted 97 !== % value emitted 114 on line 4705 of mbust.pt
-% value emitted 109 !== % value emitted 32 on line 4706 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4707 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4708 of mbust.pt
-% value emitted 40 !== % value emitted 114 on line 4709 of mbust.pt
-% value emitted 99 !== % value emitted 105 on line 4710 of mbust.pt
-% value emitted 104 !== % value emitted 110 on line 4711 of mbust.pt
-% value emitted 97 !== % value emitted 103 on line 4712 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 4713 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 4714 of mbust.pt
-% value emitted 99 !== % value emitted 102 on line 4715 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 4716 of mbust.pt
-% value emitted 101 !== % value emitted 60 on line 4717 of mbust.pt
-% value emitted 114 !== % value emitted 61 on line 4718 of mbust.pt
-% value emitted 115 !== % value emitted 50 on line 4720 of mbust.pt
-% value emitted 116 !== % value emitted 48 on line 4721 of mbust.pt
-% value emitted 114 !== % value emitted 32 on line 4722 of mbust.pt
-% value emitted 105 !== % value emitted 99 on line 4723 of mbust.pt
-% value emitted 110 !== % value emitted 104 on line 4724 of mbust.pt
-% value emitted 103 !== % value emitted 97 on line 4725 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 4726 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 4727 of mbust.pt
-% value emitted 102 !== % value emitted 99 on line 4728 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4729 of mbust.pt
-% value emitted 60 !== % value emitted 101 on line 4730 of mbust.pt
-% value emitted 61 !== % value emitted 114 on line 4731 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4732 of mbust.pt
-% value emitted 50 !== % value emitted 41 on line 4733 of mbust.pt
-% value emitted 48 !== % value emitted 44 on line 4734 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 4735 of mbust.pt
-% value emitted 99 !== .tLiteralInteger on line 4736 of mbust.pt
-% value emitted 104 !== oEmitValue on line 4737 of mbust.pt
-% value emitted 97 !== % value emitted 1 on line 4738 of mbust.pt
-% value emitted 114 !== .tParmEnd on line 4739 of mbust.pt
-% value emitted 97 !== .tTrap on line 4740 of mbust.pt
-% value emitted 99 !== oEmitTrapKind(trWriteString) on line 4741 of mbust.pt
-% value emitted 116 !== % value emitted 109 on line 4742 of mbust.pt
-% value emitted 101 !== .tWriteEnd on line 4743 of mbust.pt
-% value emitted 114 !== .tTrapBegin on line 4744 of mbust.pt
-% value emitted 115 !== .tLiteralAddress on line 4745 of mbust.pt
-% value emitted 41 !== oEmitValue on line 4746 of mbust.pt
-% value emitted 44 !== % value emitted 4 on line 4747 of mbust.pt
-.tParmEnd !== .tVarParm on line 4748 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4749 of mbust.pt
-oEmitValue !== .tTrap on line 4750 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4751 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4752 of mbust.pt
-.tTrap !== .tWriteBegin on line 4753 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4754 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4755 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4756 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4757 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4758 of mbust.pt
-oEmitValue !== .tParmEnd on line 4759 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4760 of mbust.pt
-.tVarParm !== oEmitValue on line 4761 of mbust.pt
-.tParmEnd !== % value emitted 69 on line 4762 of mbust.pt
-.tTrap !== oEmitString on line 4763 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4764 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4765 of mbust.pt
-.tWriteBegin !== % value emitted 97 on line 4766 of mbust.pt
-.tTrapBegin !== % value emitted 110 on line 4767 of mbust.pt
-.tLiteralAddress !== % value emitted 100 on line 4768 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4769 of mbust.pt
-% value emitted 4 !== % value emitted 105 on line 4770 of mbust.pt
-.tVarParm !== % value emitted 102 on line 4771 of mbust.pt
-.tParmEnd !== % value emitted 32 on line 4772 of mbust.pt
-.tLiteralString !== % value emitted 40 on line 4773 of mbust.pt
-oEmitValue !== % value emitted 116 on line 4774 of mbust.pt
-% value emitted 69 !== % value emitted 104 on line 4775 of mbust.pt
-oEmitString !== % value emitted 101 on line 4776 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 4778 of mbust.pt
-% value emitted 97 !== % value emitted 108 on line 4779 of mbust.pt
-% value emitted 110 !== % value emitted 97 on line 4780 of mbust.pt
-% value emitted 100 !== % value emitted 121 on line 4781 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4782 of mbust.pt
-% value emitted 105 !== % value emitted 114 on line 4783 of mbust.pt
-% value emitted 102 !== % value emitted 32 on line 4784 of mbust.pt
-% value emitted 32 !== % value emitted 110 on line 4785 of mbust.pt
-% value emitted 40 !== % value emitted 97 on line 4786 of mbust.pt
-% value emitted 116 !== % value emitted 109 on line 4787 of mbust.pt
-% value emitted 104 !== % value emitted 101 on line 4788 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4789 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4790 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 4792 of mbust.pt
-% value emitted 97 !== % value emitted 99 on line 4793 of mbust.pt
-% value emitted 121 !== % value emitted 105 on line 4794 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 4795 of mbust.pt
-% value emitted 114 !== % value emitted 105 on line 4796 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4797 of mbust.pt
-% value emitted 110 !== % value emitted 100 on line 4798 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4799 of mbust.pt
-% value emitted 109 !== % value emitted 105 on line 4800 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4801 of mbust.pt
-% value emitted 115 !== % value emitted 110 on line 4803 of mbust.pt
-% value emitted 112 !== % value emitted 111 on line 4804 of mbust.pt
-% value emitted 101 !== % value emitted 116 on line 4805 of mbust.pt
-% value emitted 99 !== % value emitted 32 on line 4806 of mbust.pt
-% value emitted 105 !== % value emitted 34 on line 4807 of mbust.pt
-% value emitted 102 !== % value emitted 69 on line 4808 of mbust.pt
-% value emitted 105 !== % value emitted 46 on line 4809 of mbust.pt
-% value emitted 101 !== % value emitted 79 on line 4810 of mbust.pt
-% value emitted 100 !== % value emitted 46 on line 4811 of mbust.pt
-% value emitted 32 !== % value emitted 84 on line 4812 of mbust.pt
-% value emitted 105 !== % value emitted 104 on line 4813 of mbust.pt
-% value emitted 115 !== % value emitted 111 on line 4814 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 4815 of mbust.pt
-% value emitted 110 !== % value emitted 112 on line 4816 of mbust.pt
-% value emitted 111 !== % value emitted 34 on line 4817 of mbust.pt
-% value emitted 116 !== % value emitted 44 on line 4818 of mbust.pt
-% value emitted 34 !== % value emitted 116 on line 4820 of mbust.pt
-% value emitted 69 !== % value emitted 104 on line 4821 of mbust.pt
-% value emitted 46 !== % value emitted 101 on line 4822 of mbust.pt
-% value emitted 79 !== % value emitted 32 on line 4823 of mbust.pt
-% value emitted 46 !== % value emitted 99 on line 4824 of mbust.pt
-% value emitted 84 !== % value emitted 111 on line 4825 of mbust.pt
-% value emitted 104 !== % value emitted 117 on line 4826 of mbust.pt
-% value emitted 111 !== % value emitted 110 on line 4827 of mbust.pt
-% value emitted 114 !== % value emitted 116 on line 4828 of mbust.pt
-% value emitted 112 !== % value emitted 32 on line 4829 of mbust.pt
-% value emitted 34 !== % value emitted 91 on line 4830 of mbust.pt
-% value emitted 44 !== % value emitted 110 on line 4831 of mbust.pt
-% value emitted 32 !== % value emitted 93 on line 4832 of mbust.pt
-% value emitted 116 !== .tParmEnd on line 4833 of mbust.pt
-% value emitted 104 !== .tLiteralInteger on line 4834 of mbust.pt
-% value emitted 101 !== oEmitValue on line 4835 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 4836 of mbust.pt
-% value emitted 99 !== .tParmEnd on line 4837 of mbust.pt
-% value emitted 111 !== .tTrap on line 4838 of mbust.pt
-% value emitted 117 !== oEmitTrapKind(trWriteString) on line 4839 of mbust.pt
-% value emitted 110 !== % value emitted 109 on line 4840 of mbust.pt
-% value emitted 116 !== .tWriteEnd on line 4841 of mbust.pt
-% value emitted 32 !== .tTrapBegin on line 4842 of mbust.pt
-% value emitted 91 !== .tLiteralAddress on line 4843 of mbust.pt
-% value emitted 110 !== oEmitValue on line 4844 of mbust.pt
-% value emitted 93 !== % value emitted 4 on line 4845 of mbust.pt
-.tParmEnd !== .tVarParm on line 4846 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4847 of mbust.pt
-oEmitValue !== .tTrap on line 4848 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4849 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4850 of mbust.pt
-.tTrap !== .tWriteBegin on line 4851 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 4852 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 4853 of mbust.pt
-.tWriteEnd !== oEmitValue on line 4854 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4855 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4856 of mbust.pt
-oEmitValue !== .tParmEnd on line 4857 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4858 of mbust.pt
-.tVarParm !== oEmitValue on line 4859 of mbust.pt
-.tParmEnd !== % value emitted 29 on line 4860 of mbust.pt
-.tTrap !== oEmitString on line 4861 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 32 on line 4862 of mbust.pt
-% value emitted 6 !== % value emitted 32 on line 4863 of mbust.pt
-.tWriteBegin !== % value emitted 111 on line 4864 of mbust.pt
-.tTrapBegin !== % value emitted 110 on line 4865 of mbust.pt
-.tLiteralAddress !== % value emitted 32 on line 4866 of mbust.pt
-oEmitValue !== % value emitted 119 on line 4867 of mbust.pt
-% value emitted 4 !== % value emitted 104 on line 4868 of mbust.pt
-.tVarParm !== % value emitted 105 on line 4869 of mbust.pt
-.tParmEnd !== % value emitted 99 on line 4870 of mbust.pt
-.tLiteralString !== % value emitted 104 on line 4871 of mbust.pt
-oEmitValue !== % value emitted 32 on line 4872 of mbust.pt
-% value emitted 29 !== % value emitted 116 on line 4873 of mbust.pt
-oEmitString !== % value emitted 104 on line 4874 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4875 of mbust.pt
-% value emitted 111 !== % value emitted 112 on line 4877 of mbust.pt
-% value emitted 110 !== % value emitted 108 on line 4878 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 4879 of mbust.pt
-% value emitted 119 !== % value emitted 121 on line 4880 of mbust.pt
-% value emitted 104 !== % value emitted 101 on line 4881 of mbust.pt
-% value emitted 105 !== % value emitted 114 on line 4882 of mbust.pt
-% value emitted 99 !== % value emitted 32 on line 4883 of mbust.pt
-% value emitted 104 !== % value emitted 115 on line 4884 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4885 of mbust.pt
-% value emitted 116 !== % value emitted 97 on line 4886 of mbust.pt
-% value emitted 104 !== % value emitted 110 on line 4887 of mbust.pt
-% value emitted 101 !== % value emitted 100 on line 4888 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4889 of mbust.pt
-% value emitted 112 !== % value emitted 46 on line 4890 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 4891 of mbust.pt
-% value emitted 97 !== .tLiteralInteger on line 4892 of mbust.pt
-% value emitted 121 !== oEmitValue on line 4893 of mbust.pt
-% value emitted 101 !== % value emitted 1 on line 4894 of mbust.pt
-% value emitted 114 !== .tParmEnd on line 4895 of mbust.pt
-% value emitted 32 !== .tTrap on line 4896 of mbust.pt
-% value emitted 115 !== oEmitTrapKind(trWriteString) on line 4897 of mbust.pt
-% value emitted 116 !== % value emitted 109 on line 4898 of mbust.pt
-% value emitted 97 !== .tWriteEnd on line 4899 of mbust.pt
-% value emitted 110 !== .tTrapBegin on line 4900 of mbust.pt
-% value emitted 100 !== .tLiteralAddress on line 4901 of mbust.pt
-% value emitted 115 !== oEmitValue on line 4902 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 4903 of mbust.pt
-.tParmEnd !== .tVarParm on line 4904 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 4905 of mbust.pt
-oEmitValue !== .tTrap on line 4906 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 4907 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 4908 of mbust.pt
-.tTrap !== .tTrapBegin on line 4909 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 4910 of mbust.pt
-% value emitted 109 !== oEmitValue on line 4911 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 4912 of mbust.pt
-.tTrapBegin !== .tVarParm on line 4913 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 4914 of mbust.pt
-oEmitValue !== .tTrap on line 4915 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 4916 of mbust.pt
-.tVarParm !== % value emitted 6 on line 4917 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 4918 of mbust.pt
-.tTrap !== .tTrapBegin on line 4919 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 4920 of mbust.pt
-% value emitted 6 !== oEmitValue on line 4921 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 4922 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 4923 of mbust.pt
-oEmitValue !== .tParmEnd on line 4924 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 4925 of mbust.pt
-.tVarParm !== oEmitValue on line 4926 of mbust.pt
-.tParmEnd !== % value emitted 69 on line 4927 of mbust.pt
-.tTrap !== oEmitString on line 4928 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 73 on line 4929 of mbust.pt
-% value emitted 6 !== % value emitted 102 on line 4930 of mbust.pt
-.tWriteBegin !== % value emitted 32 on line 4931 of mbust.pt
-.tTrapBegin !== % value emitted 116 on line 4932 of mbust.pt
-.tLiteralAddress !== % value emitted 104 on line 4933 of mbust.pt
-oEmitValue !== % value emitted 101 on line 4934 of mbust.pt
-% value emitted 4 !== % value emitted 32 on line 4935 of mbust.pt
-.tVarParm !== % value emitted 112 on line 4936 of mbust.pt
-.tParmEnd !== % value emitted 108 on line 4937 of mbust.pt
-.tLiteralString !== % value emitted 97 on line 4938 of mbust.pt
-oEmitValue !== % value emitted 121 on line 4939 of mbust.pt
-% value emitted 69 !== % value emitted 101 on line 4940 of mbust.pt
-oEmitString !== % value emitted 114 on line 4941 of mbust.pt
-% value emitted 73 !== % value emitted 32 on line 4942 of mbust.pt
-% value emitted 102 !== % value emitted 110 on line 4943 of mbust.pt
-% value emitted 32 !== % value emitted 97 on line 4944 of mbust.pt
-% value emitted 116 !== % value emitted 109 on line 4945 of mbust.pt
-% value emitted 104 !== % value emitted 101 on line 4946 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 4947 of mbust.pt
-% value emitted 32 !== % value emitted 115 on line 4948 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 4950 of mbust.pt
-% value emitted 97 !== % value emitted 99 on line 4951 of mbust.pt
-% value emitted 121 !== % value emitted 105 on line 4952 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 4953 of mbust.pt
-% value emitted 114 !== % value emitted 105 on line 4954 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4955 of mbust.pt
-% value emitted 110 !== % value emitted 100 on line 4956 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4957 of mbust.pt
-% value emitted 109 !== % value emitted 105 on line 4958 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4959 of mbust.pt
-% value emitted 115 !== % value emitted 34 on line 4961 of mbust.pt
-% value emitted 112 !== % value emitted 69 on line 4962 of mbust.pt
-% value emitted 101 !== % value emitted 46 on line 4963 of mbust.pt
-% value emitted 99 !== % value emitted 79 on line 4964 of mbust.pt
-% value emitted 105 !== % value emitted 46 on line 4965 of mbust.pt
-% value emitted 102 !== % value emitted 84 on line 4966 of mbust.pt
-% value emitted 105 !== % value emitted 104 on line 4967 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 4968 of mbust.pt
-% value emitted 100 !== % value emitted 114 on line 4969 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 4970 of mbust.pt
-% value emitted 105 !== % value emitted 34 on line 4971 of mbust.pt
-% value emitted 115 !== % value emitted 44 on line 4972 of mbust.pt
-% value emitted 34 !== % value emitted 116 on line 4974 of mbust.pt
-% value emitted 69 !== % value emitted 104 on line 4975 of mbust.pt
-% value emitted 46 !== % value emitted 101 on line 4976 of mbust.pt
-% value emitted 79 !== % value emitted 32 on line 4977 of mbust.pt
-% value emitted 46 !== % value emitted 112 on line 4978 of mbust.pt
-% value emitted 84 !== % value emitted 108 on line 4979 of mbust.pt
-% value emitted 104 !== % value emitted 97 on line 4980 of mbust.pt
-% value emitted 111 !== % value emitted 121 on line 4981 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 4982 of mbust.pt
-% value emitted 112 !== % value emitted 114 on line 4983 of mbust.pt
-% value emitted 34 !== % value emitted 32 on line 4984 of mbust.pt
-% value emitted 44 !== % value emitted 115 on line 4985 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 4986 of mbust.pt
-% value emitted 116 !== % value emitted 114 on line 4987 of mbust.pt
-% value emitted 104 !== % value emitted 97 on line 4988 of mbust.pt
-% value emitted 101 !== % value emitted 116 on line 4989 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 4990 of mbust.pt
-% value emitted 112 !== % value emitted 103 on line 4991 of mbust.pt
-% value emitted 108 !== % value emitted 121 on line 4992 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 4993 of mbust.pt
-% value emitted 121 !== % value emitted 117 on line 4994 of mbust.pt
-% value emitted 101 !== % value emitted 115 on line 4995 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 4996 of mbust.pt
-% value emitted 32 !== % value emitted 100 on line 4997 of mbust.pt
-% value emitted 115 !== .tParmEnd on line 4998 of mbust.pt
-% value emitted 116 !== .tLiteralInteger on line 4999 of mbust.pt
-% value emitted 114 !== oEmitValue on line 5000 of mbust.pt
-% value emitted 97 !== % value emitted 1 on line 5001 of mbust.pt
-% value emitted 116 !== .tParmEnd on line 5002 of mbust.pt
-% value emitted 101 !== .tTrap on line 5003 of mbust.pt
-% value emitted 103 !== oEmitTrapKind(trWriteString) on line 5004 of mbust.pt
-% value emitted 121 !== % value emitted 109 on line 5005 of mbust.pt
-% value emitted 32 !== .tTrapBegin on line 5006 of mbust.pt
-% value emitted 117 !== .tLiteralAddress on line 5007 of mbust.pt
-% value emitted 115 !== oEmitValue on line 5008 of mbust.pt
-% value emitted 101 !== % value emitted 4 on line 5009 of mbust.pt
-% value emitted 100 !== .tVarParm on line 5010 of mbust.pt
-.tLiteralInteger !== .tLiteralString on line 5012 of mbust.pt
-% value emitted 1 !== % value emitted 17 on line 5014 of mbust.pt
-.tParmEnd !== oEmitString on line 5015 of mbust.pt
-.tTrap !== % value emitted 32 on line 5016 of mbust.pt
-oEmitTrapKind(trWriteString) !== % value emitted 119 on line 5017 of mbust.pt
-% value emitted 109 !== % value emitted 105 on line 5018 of mbust.pt
-.tTrapBegin !== % value emitted 108 on line 5019 of mbust.pt
-.tLiteralAddress !== % value emitted 108 on line 5020 of mbust.pt
-oEmitValue !== % value emitted 32 on line 5021 of mbust.pt
-% value emitted 4 !== % value emitted 98 on line 5022 of mbust.pt
-.tVarParm !== % value emitted 101 on line 5023 of mbust.pt
-.tParmEnd !== % value emitted 32 on line 5024 of mbust.pt
-.tLiteralString !== % value emitted 84 on line 5025 of mbust.pt
-oEmitValue !== % value emitted 104 on line 5026 of mbust.pt
-% value emitted 17 !== % value emitted 111 on line 5027 of mbust.pt
-oEmitString !== % value emitted 114 on line 5028 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 5029 of mbust.pt
-% value emitted 119 !== % value emitted 39 on line 5030 of mbust.pt
-% value emitted 105 !== % value emitted 115 on line 5031 of mbust.pt
-% value emitted 108 !== % value emitted 46 on line 5032 of mbust.pt
-% value emitted 108 !== .tParmEnd on line 5033 of mbust.pt
-% value emitted 32 !== .tLiteralInteger on line 5034 of mbust.pt
-% value emitted 98 !== oEmitValue on line 5035 of mbust.pt
-% value emitted 101 !== % value emitted 1 on line 5036 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 5037 of mbust.pt
-% value emitted 84 !== .tTrap on line 5038 of mbust.pt
-% value emitted 104 !== oEmitTrapKind(trWriteString) on line 5039 of mbust.pt
-% value emitted 111 !== % value emitted 109 on line 5040 of mbust.pt
-% value emitted 114 !== .tWriteEnd on line 5041 of mbust.pt
-% value emitted 112 !== .tTrapBegin on line 5042 of mbust.pt
-% value emitted 39 !== .tLiteralAddress on line 5043 of mbust.pt
-% value emitted 115 !== oEmitValue on line 5044 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 5045 of mbust.pt
-.tParmEnd !== .tVarParm on line 5046 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 5047 of mbust.pt
-oEmitValue !== .tTrap on line 5048 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 5049 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 5050 of mbust.pt
-.tTrap !== .tWriteBegin on line 5051 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tTrapBegin on line 5052 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 5053 of mbust.pt
-.tWriteEnd !== oEmitValue on line 5054 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 5055 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 5056 of mbust.pt
-oEmitValue !== .tParmEnd on line 5057 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 5058 of mbust.pt
-.tVarParm !== oEmitValue on line 5059 of mbust.pt
-.tParmEnd !== % value emitted 71 on line 5060 of mbust.pt
-.tTrap !== oEmitString on line 5061 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 79 on line 5062 of mbust.pt
-% value emitted 6 !== % value emitted 116 on line 5063 of mbust.pt
-.tWriteBegin !== % value emitted 104 on line 5064 of mbust.pt
-.tTrapBegin !== % value emitted 101 on line 5065 of mbust.pt
-.tLiteralAddress !== % value emitted 114 on line 5066 of mbust.pt
-oEmitValue !== % value emitted 119 on line 5067 of mbust.pt
-% value emitted 4 !== % value emitted 105 on line 5068 of mbust.pt
-.tVarParm !== % value emitted 115 on line 5069 of mbust.pt
-.tParmEnd !== % value emitted 101 on line 5070 of mbust.pt
-.tLiteralString !== % value emitted 44 on line 5071 of mbust.pt
-oEmitValue !== % value emitted 32 on line 5072 of mbust.pt
-% value emitted 71 !== % value emitted 116 on line 5073 of mbust.pt
-oEmitString !== % value emitted 104 on line 5074 of mbust.pt
-% value emitted 79 !== % value emitted 101 on line 5075 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 5076 of mbust.pt
-% value emitted 104 !== % value emitted 112 on line 5077 of mbust.pt
-% value emitted 101 !== % value emitted 108 on line 5078 of mbust.pt
-% value emitted 114 !== % value emitted 97 on line 5079 of mbust.pt
-% value emitted 119 !== % value emitted 121 on line 5080 of mbust.pt
-% value emitted 105 !== % value emitted 101 on line 5081 of mbust.pt
-% value emitted 115 !== % value emitted 114 on line 5082 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 5083 of mbust.pt
-% value emitted 44 !== % value emitted 119 on line 5084 of mbust.pt
-% value emitted 32 !== % value emitted 105 on line 5085 of mbust.pt
-% value emitted 116 !== % value emitted 108 on line 5086 of mbust.pt
-% value emitted 104 !== % value emitted 108 on line 5087 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 5088 of mbust.pt
-% value emitted 32 !== % value emitted 117 on line 5089 of mbust.pt
-% value emitted 112 !== % value emitted 115 on line 5090 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 5091 of mbust.pt
-% value emitted 97 !== % value emitted 32 on line 5092 of mbust.pt
-% value emitted 121 !== % value emitted 116 on line 5093 of mbust.pt
-% value emitted 101 !== % value emitted 104 on line 5094 of mbust.pt
-% value emitted 114 !== % value emitted 101 on line 5095 of mbust.pt
-% value emitted 119 !== % value emitted 115 on line 5097 of mbust.pt
-% value emitted 105 !== % value emitted 116 on line 5098 of mbust.pt
-% value emitted 108 !== % value emitted 97 on line 5099 of mbust.pt
-% value emitted 108 !== % value emitted 110 on line 5100 of mbust.pt
-% value emitted 32 !== % value emitted 100 on line 5101 of mbust.pt
-% value emitted 117 !== % value emitted 97 on line 5102 of mbust.pt
-% value emitted 115 !== % value emitted 114 on line 5103 of mbust.pt
-% value emitted 101 !== % value emitted 100 on line 5104 of mbust.pt
-% value emitted 116 !== % value emitted 115 on line 5106 of mbust.pt
-% value emitted 104 !== % value emitted 116 on line 5107 of mbust.pt
-% value emitted 101 !== % value emitted 111 on line 5108 of mbust.pt
-% value emitted 32 !== % value emitted 112 on line 5109 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 5110 of mbust.pt
-% value emitted 116 !== % value emitted 111 on line 5111 of mbust.pt
-% value emitted 97 !== % value emitted 110 on line 5112 of mbust.pt
-% value emitted 110 !== % value emitted 32 on line 5113 of mbust.pt
-% value emitted 100 !== % value emitted 99 on line 5114 of mbust.pt
-% value emitted 97 !== % value emitted 111 on line 5115 of mbust.pt
-% value emitted 114 !== % value emitted 117 on line 5116 of mbust.pt
-% value emitted 100 !== % value emitted 110 on line 5117 of mbust.pt
-% value emitted 32 !== % value emitted 116 on line 5118 of mbust.pt
-% value emitted 115 !== % value emitted 32 on line 5119 of mbust.pt
-% value emitted 116 !== % value emitted 62 on line 5120 of mbust.pt
-% value emitted 111 !== % value emitted 32 on line 5121 of mbust.pt
-% value emitted 112 !== % value emitted 110 on line 5122 of mbust.pt
-% value emitted 111 !== % value emitted 115 on line 5124 of mbust.pt
-% value emitted 110 !== % value emitted 116 on line 5125 of mbust.pt
-% value emitted 32 !== % value emitted 114 on line 5126 of mbust.pt
-% value emitted 99 !== % value emitted 97 on line 5127 of mbust.pt
-% value emitted 111 !== % value emitted 116 on line 5128 of mbust.pt
-% value emitted 117 !== % value emitted 101 on line 5129 of mbust.pt
-% value emitted 110 !== % value emitted 103 on line 5130 of mbust.pt
-% value emitted 116 !== % value emitted 121 on line 5131 of mbust.pt
-% value emitted 32 !== % value emitted 46 on line 5132 of mbust.pt
-% value emitted 62 !== .tParmEnd on line 5133 of mbust.pt
-% value emitted 32 !== .tLiteralInteger on line 5134 of mbust.pt
-% value emitted 110 !== oEmitValue on line 5135 of mbust.pt
-% value emitted 32 !== % value emitted 1 on line 5136 of mbust.pt
-% value emitted 115 !== .tParmEnd on line 5137 of mbust.pt
-% value emitted 116 !== .tTrap on line 5138 of mbust.pt
-% value emitted 114 !== oEmitTrapKind(trWriteString) on line 5139 of mbust.pt
-% value emitted 97 !== % value emitted 109 on line 5140 of mbust.pt
-% value emitted 116 !== .tWriteEnd on line 5141 of mbust.pt
-% value emitted 101 !== .tTrapBegin on line 5142 of mbust.pt
-% value emitted 103 !== .tLiteralAddress on line 5143 of mbust.pt
-% value emitted 121 !== oEmitValue on line 5144 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 5145 of mbust.pt
-.tParmEnd !== .tVarParm on line 5146 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 5147 of mbust.pt
-oEmitValue !== .tTrap on line 5148 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 5149 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 5150 of mbust.pt
-.tTrap !== .tTrapBegin on line 5151 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 5152 of mbust.pt
-% value emitted 109 !== oEmitValue on line 5153 of mbust.pt
-.tWriteEnd !== % value emitted 4 on line 5154 of mbust.pt
-.tTrapBegin !== .tVarParm on line 5155 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 5156 of mbust.pt
-oEmitValue !== .tTrap on line 5157 of mbust.pt
-% value emitted 4 !== oEmitTrapKind(trWriteln) on line 5158 of mbust.pt
-.tVarParm !== % value emitted 6 on line 5159 of mbust.pt
-.tParmEnd !== .tWriteBegin on line 5160 of mbust.pt
-.tTrap !== .tTrapBegin on line 5161 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tLiteralAddress on line 5162 of mbust.pt
-% value emitted 6 !== oEmitValue on line 5163 of mbust.pt
-.tTrapBegin !== % value emitted 4 on line 5164 of mbust.pt
-.tLiteralAddress !== .tVarParm on line 5165 of mbust.pt
-oEmitValue !== .tParmEnd on line 5166 of mbust.pt
-% value emitted 4 !== .tLiteralString on line 5167 of mbust.pt
-.tVarParm !== oEmitValue on line 5168 of mbust.pt
-.tParmEnd !== % value emitted 71 on line 5169 of mbust.pt
-.tTrap !== oEmitString on line 5170 of mbust.pt
-oEmitTrapKind(trWriteln) !== % value emitted 84 on line 5171 of mbust.pt
-% value emitted 6 !== % value emitted 104 on line 5172 of mbust.pt
-.tWriteBegin !== % value emitted 101 on line 5173 of mbust.pt
-.tTrapBegin !== % value emitted 32 on line 5174 of mbust.pt
-.tLiteralAddress !== % value emitted 112 on line 5175 of mbust.pt
-oEmitValue !== % value emitted 114 on line 5176 of mbust.pt
-% value emitted 4 !== % value emitted 111 on line 5177 of mbust.pt
-.tVarParm !== % value emitted 103 on line 5178 of mbust.pt
-.tParmEnd !== % value emitted 114 on line 5179 of mbust.pt
-.tLiteralString !== % value emitted 97 on line 5180 of mbust.pt
-oEmitValue !== % value emitted 109 on line 5181 of mbust.pt
-% value emitted 71 !== % value emitted 32 on line 5182 of mbust.pt
-oEmitString !== % value emitted 119 on line 5183 of mbust.pt
-% value emitted 84 !== % value emitted 105 on line 5184 of mbust.pt
-% value emitted 104 !== % value emitted 108 on line 5185 of mbust.pt
-% value emitted 101 !== % value emitted 108 on line 5186 of mbust.pt
-% value emitted 112 !== % value emitted 115 on line 5188 of mbust.pt
-% value emitted 114 !== % value emitted 105 on line 5189 of mbust.pt
-% value emitted 111 !== % value emitted 109 on line 5190 of mbust.pt
-% value emitted 103 !== % value emitted 117 on line 5191 of mbust.pt
-% value emitted 114 !== % value emitted 108 on line 5192 of mbust.pt
-% value emitted 109 !== % value emitted 116 on line 5194 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 5195 of mbust.pt
-% value emitted 119 !== % value emitted 32 on line 5196 of mbust.pt
-% value emitted 105 !== % value emitted 111 on line 5197 of mbust.pt
-% value emitted 108 !== % value emitted 110 on line 5198 of mbust.pt
-% value emitted 108 !== % value emitted 101 on line 5199 of mbust.pt
-% value emitted 115 !== % value emitted 99 on line 5201 of mbust.pt
-% value emitted 105 !== % value emitted 111 on line 5202 of mbust.pt
-% value emitted 117 !== % value emitted 112 on line 5204 of mbust.pt
-% value emitted 97 !== % value emitted 101 on line 5206 of mbust.pt
-% value emitted 111 !== % value emitted 115 on line 5210 of mbust.pt
-% value emitted 110 !== % value emitted 104 on line 5211 of mbust.pt
-% value emitted 101 !== % value emitted 117 on line 5212 of mbust.pt
-% value emitted 32 !== % value emitted 102 on line 5213 of mbust.pt
-% value emitted 99 !== % value emitted 102 on line 5214 of mbust.pt
-% value emitted 111 !== % value emitted 108 on line 5215 of mbust.pt
-% value emitted 109 !== % value emitted 101 on line 5216 of mbust.pt
-% value emitted 112 !== % value emitted 32 on line 5217 of mbust.pt
-% value emitted 108 !== % value emitted 111 on line 5218 of mbust.pt
-% value emitted 101 !== % value emitted 102 on line 5219 of mbust.pt
-% value emitted 116 !== % value emitted 32 on line 5220 of mbust.pt
-% value emitted 101 !== % value emitted 112 on line 5221 of mbust.pt
-% value emitted 32 !== % value emitted 108 on line 5222 of mbust.pt
-% value emitted 115 !== % value emitted 97 on line 5223 of mbust.pt
-% value emitted 104 !== % value emitted 121 on line 5224 of mbust.pt
-% value emitted 117 !== % value emitted 32 on line 5225 of mbust.pt
-% value emitted 102 !== % value emitted 111 on line 5227 of mbust.pt
-% value emitted 108 !== % value emitted 114 on line 5228 of mbust.pt
-% value emitted 101 !== % value emitted 32 on line 5229 of mbust.pt
-% value emitted 32 !== % value emitted 101 on line 5230 of mbust.pt
-% value emitted 111 !== % value emitted 97 on line 5231 of mbust.pt
-% value emitted 102 !== % value emitted 99 on line 5232 of mbust.pt
-% value emitted 32 !== % value emitted 104 on line 5233 of mbust.pt
-% value emitted 112 !== % value emitted 32 on line 5234 of mbust.pt
-% value emitted 108 !== % value emitted 112 on line 5235 of mbust.pt
-% value emitted 97 !== % value emitted 108 on line 5236 of mbust.pt
-% value emitted 121 !== % value emitted 97 on line 5237 of mbust.pt
-% value emitted 32 !== % value emitted 121 on line 5238 of mbust.pt
-% value emitted 102 !== % value emitted 101 on line 5239 of mbust.pt
-% value emitted 111 !== % value emitted 114 on line 5240 of mbust.pt
-% value emitted 114 !== % value emitted 46 on line 5241 of mbust.pt
-% value emitted 32 !== .tParmEnd on line 5242 of mbust.pt
-% value emitted 101 !== .tLiteralInteger on line 5243 of mbust.pt
-% value emitted 97 !== oEmitValue on line 5244 of mbust.pt
-% value emitted 99 !== % value emitted 1 on line 5245 of mbust.pt
-% value emitted 104 !== .tParmEnd on line 5246 of mbust.pt
-% value emitted 32 !== .tTrap on line 5247 of mbust.pt
-% value emitted 112 !== oEmitTrapKind(trWriteString) on line 5248 of mbust.pt
-% value emitted 108 !== % value emitted 109 on line 5249 of mbust.pt
-% value emitted 97 !== .tWriteEnd on line 5250 of mbust.pt
-% value emitted 121 !== .tTrapBegin on line 5251 of mbust.pt
-% value emitted 101 !== .tLiteralAddress on line 5252 of mbust.pt
-% value emitted 114 !== oEmitValue on line 5253 of mbust.pt
-% value emitted 46 !== % value emitted 4 on line 5254 of mbust.pt
-.tParmEnd !== .tVarParm on line 5255 of mbust.pt
-.tLiteralInteger !== .tParmEnd on line 5256 of mbust.pt
-oEmitValue !== .tTrap on line 5257 of mbust.pt
-% value emitted 1 !== oEmitTrapKind(trWriteln) on line 5258 of mbust.pt
-.tParmEnd !== % value emitted 6 on line 5259 of mbust.pt
-.tTrap !== .tCallBegin on line 5260 of mbust.pt
-oEmitTrapKind(trWriteString) !== .tLiteralAddress on line 5261 of mbust.pt
-% value emitted 109 !== oEmitValue on line 5262 of mbust.pt
-.tWriteEnd !== % value emitted 14833 on line 5263 of mbust.pt
-.tTrapBegin !== .tVarParm on line 5264 of mbust.pt
-.tLiteralAddress !== .tParmEnd on line 5265 of mbust.pt
-oEmitValue !== .tCallEnd on line 5266 of mbust.pt
-% value emitted 4 !== oEmitValue on line 5267 of mbust.pt
-.tVarParm !== % value emitted 816 on line 5268 of mbust.pt
-.tParmEnd !== .tWhileBegin on line 5269 of mbust.pt
-.tTrap !== .tWhilePreBreak on line 5270 of mbust.pt
-oEmitTrapKind(trWriteln) !== .tWhileBreakIf on line 5271 of mbust.pt
-% value emitted 6 !== .tLiteralAddress on line 5272 of mbust.pt
-.tCallBegin !== oEmitValue on line 5273 of mbust.pt
+% value emitted 21 !== .tAnd on line 1213 of mbust.pt
+.tLT !== .tNot on line 1214 of mbust.pt
+.tAnd !== .tWhileTest on line 1215 of mbust.pt
+.tNot !== oEmitNullAddress on line 1216 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 1217 of mbust.pt
+% value emitted 9 !== % value emitted 10 on line 1261 of mbust.pt
+% value emitted 1128 !== .tWhileEnd on line 1272 of mbust.pt
+.tWhileEnd !== % value emitted 1119 on line 1273 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 1403 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 1484 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 1611 of mbust.pt
+% value emitted 406 !== % value emitted 400 on line 1671 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 1869 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 1900 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 1942 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 1991 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 2076 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 2206 of mbust.pt
+% value emitted 368 !== % value emitted 362 on line 2358 of mbust.pt
+% value emitted 368 !== % value emitted 362 on line 2391 of mbust.pt
+% value emitted 2167 !== % value emitted 2157 on line 2432 of mbust.pt
+% value emitted 2201 !== % value emitted 2191 on line 2436 of mbust.pt
+% value emitted 2167 !== % value emitted 2157 on line 2440 of mbust.pt
+% value emitted 2201 !== % value emitted 2191 on line 2444 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 2491 of mbust.pt
+% value emitted 445 !== % value emitted 439 on line 2527 of mbust.pt
+% value emitted 445 !== % value emitted 439 on line 2588 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 2667 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 2668 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 2669 of mbust.pt
+.tLiteralAddress !== % value emitted 14820 on line 2670 of mbust.pt
+oEmitValue !== .tFetchInteger on line 2671 of mbust.pt
+% value emitted 14820 !== .tLiteralAddress on line 2672 of mbust.pt
+.tFetchInteger !== oEmitValue on line 2673 of mbust.pt
+.tLiteralAddress !== % value emitted 14800 on line 2674 of mbust.pt
+oEmitValue !== .tFetchInteger on line 2675 of mbust.pt
+% value emitted 14800 !== .tGT on line 2676 of mbust.pt
+.tFetchInteger !== .tNot on line 2677 of mbust.pt
+.tGT !== .tWhileTest on line 2678 of mbust.pt
+.tNot !== oEmitNullAddress on line 2679 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 2680 of mbust.pt
+% value emitted 2548 !== % value emitted 2538 on line 2757 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2758 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2759 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2760 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2761 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2762 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2763 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2764 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2765 of mbust.pt
+% value emitted 2523 !== % value emitted 2513 on line 2766 of mbust.pt
+% value emitted 2496 !== .tWhileEnd on line 2799 of mbust.pt
+.tWhileEnd !== % value emitted 2485 on line 2800 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 2803 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 2804 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 2805 of mbust.pt
+.tLiteralAddress !== % value emitted 14812 on line 2806 of mbust.pt
+oEmitValue !== .tFetchAddress on line 2807 of mbust.pt
+% value emitted 14812 !== .tFetchInteger on line 2808 of mbust.pt
+.tFetchAddress !== .tLiteralInteger on line 2809 of mbust.pt
+.tFetchInteger !== oEmitValue on line 2810 of mbust.pt
+.tLiteralInteger !== % value emitted 21 on line 2811 of mbust.pt
+oEmitValue !== .tLE on line 2812 of mbust.pt
+% value emitted 21 !== .tInfixOr on line 2813 of mbust.pt
+.tLE !== .tLiteralAddress on line 2814 of mbust.pt
+.tInfixOr !== oEmitValue on line 2815 of mbust.pt
+.tLiteralAddress !== % value emitted 14816 on line 2816 of mbust.pt
+oEmitValue !== .tFetchInteger on line 2817 of mbust.pt
+% value emitted 14816 !== .tLiteralInteger on line 2818 of mbust.pt
+.tFetchInteger !== oEmitValue on line 2819 of mbust.pt
+.tLiteralInteger !== % value emitted 0 on line 2820 of mbust.pt
+oEmitValue !== .tEQ on line 2821 of mbust.pt
+% value emitted 0 !== .tOr on line 2822 of mbust.pt
+.tEQ !== .tNot on line 2823 of mbust.pt
+.tOr !== .tWhileTest on line 2824 of mbust.pt
+.tNot !== oEmitNullAddress on line 2825 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 2826 of mbust.pt
+% value emitted 2632 !== .tWhileEnd on line 2855 of mbust.pt
+.tWhileEnd !== % value emitted 2619 on line 2856 of mbust.pt
+% value emitted 2452 !== % value emitted 2442 on line 2899 of mbust.pt
+% value emitted 2201 !== % value emitted 2191 on line 3085 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 3163 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 3278 of mbust.pt
+% value emitted 445 !== % value emitted 439 on line 3438 of mbust.pt
+% value emitted 2167 !== % value emitted 2157 on line 3470 of mbust.pt
+% value emitted 2167 !== % value emitted 2157 on line 3663 of mbust.pt
+% value emitted 2452 !== % value emitted 2442 on line 3693 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 3709 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 3803 of mbust.pt
+% value emitted 3279 !== % value emitted 3265 on line 3898 of mbust.pt
+% value emitted 3239 !== % value emitted 3225 on line 3905 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 3920 of mbust.pt
+% value emitted 7 !== % value emitted 8 on line 3970 of mbust.pt
+% value emitted 713 !== % value emitted 705 on line 4006 of mbust.pt
+% value emitted 445 !== % value emitted 439 on line 4066 of mbust.pt
+% .sNewLine !== % value emitted 54 on line 4573 of mbust.pt
+% .sNewLine !== % value emitted 54 on line 4574 of mbust.pt
+% value emitted 824 !== % value emitted 816 on line 5268 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5271 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5272 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 5273 of mbust.pt
 .tLiteralAddress !== % value emitted 14833 on line 5274 of mbust.pt
 oEmitValue !== .tFetchBoolean on line 5275 of mbust.pt
 % value emitted 14833 !== .tNot on line 5276 of mbust.pt
-.tVarParm !== .tNot on line 5277 of mbust.pt
-.tParmEnd !== .tWhileTest on line 5278 of mbust.pt
-.tCallEnd !== oEmitNullAddress on line 5279 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 5280 of mbust.pt
-% value emitted 824 !== .tCallBegin on line 5281 of mbust.pt
-.tWhileBegin !== .tCallEnd on line 5282 of mbust.pt
-.tWhilePreBreak !== oEmitValue on line 5283 of mbust.pt
-oEmitNullAddress !== % value emitted 162 on line 5284 of mbust.pt
-% value emitted -32767 !== .tCallBegin on line 5285 of mbust.pt
-.tWhileBreakIf !== .tLiteralAddress on line 5286 of mbust.pt
-.tLiteralAddress !== oEmitValue on line 5287 of mbust.pt
-oEmitValue !== % value emitted 14833 on line 5288 of mbust.pt
-% value emitted 14833 !== .tVarParm on line 5289 of mbust.pt
-.tFetchBoolean !== .tParmEnd on line 5290 of mbust.pt
-.tNot !== .tCallEnd on line 5291 of mbust.pt
-.tNot !== oEmitValue on line 5292 of mbust.pt
-.tWhileTest !== % value emitted 1546 on line 5293 of mbust.pt
-.tCallBegin !== .tWhileBegin on line 5294 of mbust.pt
-.tCallEnd !== .tWhilePreBreak on line 5295 of mbust.pt
-oEmitValue !== .tWhileBreakIf on line 5296 of mbust.pt
-% value emitted 162 !== .tLiteralAddress on line 5297 of mbust.pt
-.tCallBegin !== oEmitValue on line 5298 of mbust.pt
+.tFetchBoolean !== .tNot on line 5277 of mbust.pt
+.tNot !== .tWhileTest on line 5278 of mbust.pt
+.tNot !== oEmitNullAddress on line 5279 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 5280 of mbust.pt
+% value emitted 1556 !== % value emitted 1546 on line 5293 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5296 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5297 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 5298 of mbust.pt
 .tLiteralAddress !== % value emitted 14833 on line 5299 of mbust.pt
 oEmitValue !== .tFetchBoolean on line 5300 of mbust.pt
 % value emitted 14833 !== .tNot on line 5301 of mbust.pt
-.tVarParm !== .tNot on line 5302 of mbust.pt
-.tParmEnd !== .tWhileTest on line 5303 of mbust.pt
-.tCallEnd !== oEmitNullAddress on line 5304 of mbust.pt
-oEmitValue !== % value emitted -32767 on line 5305 of mbust.pt
-% value emitted 1556 !== .tCallBegin on line 5306 of mbust.pt
-.tWhileBegin !== .tCallEnd on line 5307 of mbust.pt
-.tWhilePreBreak !== oEmitValue on line 5308 of mbust.pt
-oEmitNullAddress !== % value emitted 2225 on line 5309 of mbust.pt
-% value emitted -32767 !== .tWhileBegin on line 5310 of mbust.pt
-.tWhileBreakIf !== .tWhilePreBreak on line 5311 of mbust.pt
-.tLiteralAddress !== .tWhileBreakIf on line 5312 of mbust.pt
-oEmitValue !== .tLiteralAddress on line 5313 of mbust.pt
-% value emitted 14833 !== oEmitValue on line 5314 of mbust.pt
-.tFetchBoolean !== % value emitted 109 on line 5315 of mbust.pt
-.tNot !== .tFetchBoolean on line 5316 of mbust.pt
-.tCallBegin !== oEmitNullAddress on line 5319 of mbust.pt
-.tCallEnd !== % value emitted -32767 on line 5320 of mbust.pt
-oEmitValue !== .tCallBegin on line 5321 of mbust.pt
-% value emitted 2235 !== .tCallEnd on line 5322 of mbust.pt
-.tWhileBegin !== oEmitValue on line 5323 of mbust.pt
-.tWhilePreBreak !== % value emitted 3447 on line 5324 of mbust.pt
-oEmitNullAddress !== .tWhileEnd on line 5325 of mbust.pt
-% value emitted -32767 !== % value emitted 5005 on line 5326 of mbust.pt
-.tWhileBreakIf !== .tWhileBegin on line 5327 of mbust.pt
-.tLiteralAddress !== .tWhilePreBreak on line 5328 of mbust.pt
-oEmitValue !== .tWhileBreakIf on line 5329 of mbust.pt
-% value emitted 109 !== .tLiteralAddress on line 5330 of mbust.pt
-.tFetchBoolean !== oEmitValue on line 5331 of mbust.pt
-.tNot !== % value emitted 108 on line 5332 of mbust.pt
-.tWhileTest !== .tFetchBoolean on line 5333 of mbust.pt
-.tCallBegin !== .tNot on line 5334 of mbust.pt
-.tCallEnd !== .tWhileTest on line 5335 of mbust.pt
-oEmitValue !== oEmitNullAddress on line 5336 of mbust.pt
-% value emitted 3461 !== % value emitted -32767 on line 5337 of mbust.pt
-% value emitted 5020 !== .tCallBegin on line 5338 of mbust.pt
-.tWhileEnd !== .tCallEnd on line 5339 of mbust.pt
-.tWhileBegin !== oEmitValue on line 5340 of mbust.pt
-.tWhilePreBreak !== % value emitted 2689 on line 5341 of mbust.pt
-oEmitNullAddress !== .tWhileEnd on line 5342 of mbust.pt
-% value emitted -32767 !== % value emitted 5025 on line 5343 of mbust.pt
-.tWhileBreakIf !== .tCallBegin on line 5344 of mbust.pt
-% value emitted 108 !== % value emitted 14833 on line 5347 of mbust.pt
-.tFetchBoolean !== .tVarParm on line 5348 of mbust.pt
-.tNot !== .tParmEnd on line 5349 of mbust.pt
-.tWhileTest !== .tCallEnd on line 5350 of mbust.pt
-.tCallBegin !== oEmitValue on line 5351 of mbust.pt
-.tCallEnd !== % value emitted 1546 on line 5352 of mbust.pt
-oEmitValue !== .tWhileEnd on line 5353 of mbust.pt
-% value emitted 2703 !== % value emitted 4986 on line 5354 of mbust.pt
-% value emitted 5042 !== .tCallBegin on line 5355 of mbust.pt
-.tWhileEnd !== .tLiteralAddress on line 5356 of mbust.pt
-.tCallBegin !== oEmitValue on line 5357 of mbust.pt
-.tLiteralAddress !== % value emitted 14833 on line 5358 of mbust.pt
-oEmitValue !== .tVarParm on line 5359 of mbust.pt
-% value emitted 14833 !== .tParmEnd on line 5360 of mbust.pt
-.tVarParm !== .tCallEnd on line 5361 of mbust.pt
-.tParmEnd !== oEmitValue on line 5362 of mbust.pt
-.tCallEnd !== % value emitted 816 on line 5363 of mbust.pt
-oEmitValue !== .tWhileEnd on line 5364 of mbust.pt
-% value emitted 1556 !== % value emitted 4958 on line 5365 of mbust.pt
-% value emitted 5001 !== .tTrapBegin on line 5366 of mbust.pt
-.tWhileEnd !== .tTrap on line 5367 of mbust.pt
-.tCallBegin !== oEmitTrapKind(trHalt) on line 5368 of mbust.pt
-.tLiteralAddress !== % value emitted 0 on line 5369 of mbust.pt
-oEmitValue !==  on line 5370 of mbust.pt
+.tFetchBoolean !== .tNot on line 5302 of mbust.pt
+.tNot !== .tWhileTest on line 5303 of mbust.pt
+.tNot !== oEmitNullAddress on line 5304 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 5305 of mbust.pt
+% value emitted 2235 !== % value emitted 2225 on line 5309 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5312 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5313 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 5314 of mbust.pt
+.tLiteralAddress !== % value emitted 109 on line 5315 of mbust.pt
+oEmitValue !== .tFetchBoolean on line 5316 of mbust.pt
+% value emitted 109 !== .tNot on line 5317 of mbust.pt
+.tFetchBoolean !== .tWhileTest on line 5318 of mbust.pt
+.tNot !== oEmitNullAddress on line 5319 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 5320 of mbust.pt
+% value emitted 3461 !== % value emitted 3447 on line 5324 of mbust.pt
+% value emitted 5020 !== .tWhileEnd on line 5325 of mbust.pt
+.tWhileEnd !== % value emitted 5005 on line 5326 of mbust.pt
+oEmitNullAddress !== .tWhileBreakIf on line 5329 of mbust.pt
+% value emitted -32767 !== .tLiteralAddress on line 5330 of mbust.pt
+.tWhileBreakIf !== oEmitValue on line 5331 of mbust.pt
+.tLiteralAddress !== % value emitted 108 on line 5332 of mbust.pt
+oEmitValue !== .tFetchBoolean on line 5333 of mbust.pt
+% value emitted 108 !== .tNot on line 5334 of mbust.pt
+.tFetchBoolean !== .tWhileTest on line 5335 of mbust.pt
+.tNot !== oEmitNullAddress on line 5336 of mbust.pt
+.tWhileTest !== % value emitted -32767 on line 5337 of mbust.pt
+% value emitted 2703 !== % value emitted 2689 on line 5341 of mbust.pt
+% value emitted 5042 !== .tWhileEnd on line 5342 of mbust.pt
+.tWhileEnd !== % value emitted 5025 on line 5343 of mbust.pt
+% value emitted 1556 !== % value emitted 1546 on line 5352 of mbust.pt
+% value emitted 5001 !== .tWhileEnd on line 5353 of mbust.pt
+.tWhileEnd !== % value emitted 4986 on line 5354 of mbust.pt
+% value emitted 824 !== % value emitted 816 on line 5363 of mbust.pt
+% value emitted 4973 !== .tWhileEnd on line 5364 of mbust.pt
+.tWhileEnd !== % value emitted 4958 on line 5365 of mbust.pt
 
 ```
 end file
 --------------------------------
 Reading file mprimes.pt
+Lengths do not match!  Something went wrong in mprimes.pt
 
 Output is: 
 ```
@@ -31468,7 +21455,6 @@ Output is:
        % value emitted 124
        .tStoreParmInteger
        .tParmEnd
-       #eMutableVarReqd
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -31897,140 +21883,362 @@ Output is:
 File diff
 -------------------------
 ```
-#eMutableVarReqd !== .tAssignBegin on line 73 of mprimes.pt
-.tAssignBegin !== .tLiteralAddress on line 74 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 75 of mprimes.pt
-oEmitValue !== % value emitted 128 on line 76 of mprimes.pt
-% value emitted 128 !== .tFetchAddress on line 77 of mprimes.pt
-.tFetchAddress !== .tLiteralAddress on line 78 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 79 of mprimes.pt
-oEmitValue !== % value emitted 8 on line 80 of mprimes.pt
-% value emitted 8 !== .tSubscriptBegin on line 81 of mprimes.pt
-.tSubscriptBegin !== .tLiteralAddress on line 82 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 83 of mprimes.pt
-oEmitValue !== % value emitted 124 on line 84 of mprimes.pt
-% value emitted 124 !== .tFetchInteger on line 85 of mprimes.pt
-.tFetchInteger !== .tSubscriptBoolean on line 86 of mprimes.pt
-.tSubscriptBoolean !== .tFetchBoolean on line 87 of mprimes.pt
-.tFetchBoolean !== .tAssignBoolean on line 88 of mprimes.pt
-.tAssignBoolean !== .tProcedureEnd on line 89 of mprimes.pt
-.tProcedureEnd !== .tAssignBegin on line 90 of mprimes.pt
-.tAssignBegin !== .tLiteralAddress on line 91 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 92 of mprimes.pt
-oEmitValue !== % value emitted 132 on line 93 of mprimes.pt
-% value emitted 132 !== .tLiteralInteger on line 94 of mprimes.pt
-.tLiteralInteger !== oEmitValue on line 95 of mprimes.pt
-oEmitValue !== % value emitted 1 on line 96 of mprimes.pt
-% value emitted 1 !== .tAssignInteger on line 97 of mprimes.pt
-.tAssignInteger !== .tWhileBegin on line 98 of mprimes.pt
-.tWhileBegin !== .tLiteralAddress on line 99 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 100 of mprimes.pt
-oEmitValue !== % value emitted 132 on line 101 of mprimes.pt
-% value emitted 132 !== .tFetchInteger on line 102 of mprimes.pt
-.tFetchInteger !== .tLiteralInteger on line 103 of mprimes.pt
-.tLiteralInteger !== oEmitValue on line 104 of mprimes.pt
-oEmitValue !== % value emitted 100 on line 105 of mprimes.pt
-% value emitted 100 !== .tLE on line 106 of mprimes.pt
-.tLE !== .tWhileTest on line 107 of mprimes.pt
-.tWhileTest !== oEmitNullAddress on line 108 of mprimes.pt
-oEmitNullAddress !== % value emitted -32767 on line 109 of mprimes.pt
-% value emitted -32767 !== .tAssignBegin on line 110 of mprimes.pt
-.tAssignBegin !== .tLiteralAddress on line 111 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 112 of mprimes.pt
-oEmitValue !== % value emitted 8 on line 113 of mprimes.pt
-% value emitted 8 !== .tSubscriptBegin on line 114 of mprimes.pt
-.tSubscriptBegin !== .tLiteralAddress on line 115 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 116 of mprimes.pt
-oEmitValue !== % value emitted 132 on line 117 of mprimes.pt
-% value emitted 132 !== .tFetchInteger on line 118 of mprimes.pt
-.tFetchInteger !== .tSubscriptBoolean on line 119 of mprimes.pt
-.tSubscriptBoolean !== .tLiteralBoolean on line 120 of mprimes.pt
-.tLiteralBoolean !== oEmitValue on line 121 of mprimes.pt
-oEmitValue !== % value emitted 1 on line 122 of mprimes.pt
-% value emitted 1 !== .tAssignBoolean on line 123 of mprimes.pt
-.tAssignBoolean !== .tAssignBegin on line 124 of mprimes.pt
-.tAssignBegin !== .tLiteralAddress on line 125 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 126 of mprimes.pt
-oEmitValue !== % value emitted 132 on line 127 of mprimes.pt
-% value emitted 132 !== .tLiteralAddress on line 128 of mprimes.pt
-.tLiteralAddress !== oEmitValue on line 129 of mprimes.pt
-oEmitValue !== % value emitted 132 on line 130 of mprimes.pt
-% value emitted 132 !== .tFetchInteger on line 131 of mprimes.pt
-.tFetchInteger !== .tLiteralInteger on line 132 of mprimes.pt
-.tLiteralInteger !== oEmitValue on line 133 of mprimes.pt
-oEmitValue !== % value emitted 1 on line 134 of mprimes.pt
-% value emitted 1 !== .tAdd on line 135 of mprimes.pt
-.tAdd !== .tAssignInteger on line 136 of mprimes.pt
-.tAssignInteger !== .tWhileEnd on line 137 of mprimes.pt
-oEmitNullAddress !== .tWhileBreakIf on line 157 of mprimes.pt
-% value emitted -32767 !== .tLiteralAddress on line 158 of mprimes.pt
-.tWhileBreakIf !== oEmitValue on line 159 of mprimes.pt
-.tLiteralAddress !== % value emitted 140 on line 160 of mprimes.pt
-oEmitValue !== .tFetchInteger on line 161 of mprimes.pt
-% value emitted 140 !== .tLiteralAddress on line 162 of mprimes.pt
-.tFetchInteger !== oEmitValue on line 163 of mprimes.pt
-.tLiteralAddress !== % value emitted 4 on line 164 of mprimes.pt
-oEmitValue !== .tFetchInteger on line 165 of mprimes.pt
-% value emitted 4 !== .tGT on line 166 of mprimes.pt
-.tFetchInteger !== .tNot on line 167 of mprimes.pt
-.tGT !== .tWhileTest on line 168 of mprimes.pt
-.tNot !== oEmitNullAddress on line 169 of mprimes.pt
-.tWhileTest !== % value emitted -32767 on line 170 of mprimes.pt
-oEmitNullAddress !== .tWhileBreakIf on line 187 of mprimes.pt
-% value emitted -32767 !== .tLiteralAddress on line 188 of mprimes.pt
-.tWhileBreakIf !== oEmitValue on line 189 of mprimes.pt
-.tLiteralAddress !== % value emitted 136 on line 190 of mprimes.pt
-oEmitValue !== .tFetchInteger on line 191 of mprimes.pt
-% value emitted 136 !== .tLiteralInteger on line 192 of mprimes.pt
-.tFetchInteger !== oEmitValue on line 193 of mprimes.pt
-.tLiteralInteger !== % value emitted 100 on line 194 of mprimes.pt
-oEmitValue !== .tGT on line 195 of mprimes.pt
-% value emitted 100 !== .tNot on line 196 of mprimes.pt
-.tGT !== .tWhileTest on line 197 of mprimes.pt
-.tNot !== oEmitNullAddress on line 198 of mprimes.pt
-.tWhileTest !== % value emitted -32767 on line 199 of mprimes.pt
-% value emitted 184 !== .tWhileEnd on line 227 of mprimes.pt
-.tWhileEnd !== % value emitted 184 on line 228 of mprimes.pt
-oEmitNullAddress !== .tWhileBreakIf on line 258 of mprimes.pt
-% value emitted -32767 !== .tLiteralAddress on line 259 of mprimes.pt
-.tWhileBreakIf !== oEmitValue on line 260 of mprimes.pt
-.tLiteralAddress !== % value emitted 144 on line 261 of mprimes.pt
-oEmitValue !== .tFetchInteger on line 262 of mprimes.pt
-% value emitted 144 !== .tLiteralInteger on line 263 of mprimes.pt
-.tFetchInteger !== oEmitValue on line 264 of mprimes.pt
-.tLiteralInteger !== % value emitted 100 on line 265 of mprimes.pt
-oEmitValue !== .tGT on line 266 of mprimes.pt
-% value emitted 100 !== .tInfixOr on line 267 of mprimes.pt
-.tGT !== .tLiteralAddress on line 268 of mprimes.pt
-.tInfixOr !== oEmitValue on line 269 of mprimes.pt
-.tLiteralAddress !== % value emitted 148 on line 270 of mprimes.pt
-oEmitValue !== .tFetchBoolean on line 271 of mprimes.pt
-% value emitted 148 !== .tOr on line 272 of mprimes.pt
-.tFetchBoolean !== .tNot on line 273 of mprimes.pt
-.tOr !== .tWhileTest on line 274 of mprimes.pt
-.tNot !== oEmitNullAddress on line 275 of mprimes.pt
-.tWhileTest !== % value emitted -32767 on line 276 of mprimes.pt
-% value emitted 254 !== .tWhileEnd on line 304 of mprimes.pt
-.tWhileEnd !== % value emitted 252 on line 305 of mprimes.pt
-% value emitted 154 !== .tWhileEnd on line 315 of mprimes.pt
-.tWhileEnd !== % value emitted 154 on line 316 of mprimes.pt
-% value emitted 7 !== % value emitted 8 on line 369 of mprimes.pt
-oEmitNullAddress !== .tWhileBreakIf on line 413 of mprimes.pt
-% value emitted -32767 !== .tLiteralAddress on line 414 of mprimes.pt
-.tWhileBreakIf !== oEmitValue on line 415 of mprimes.pt
-.tLiteralAddress !== % value emitted 152 on line 416 of mprimes.pt
-oEmitValue !== .tFetchInteger on line 417 of mprimes.pt
-% value emitted 152 !== .tLiteralInteger on line 418 of mprimes.pt
-.tFetchInteger !== oEmitValue on line 419 of mprimes.pt
-.tLiteralInteger !== % value emitted 100 on line 420 of mprimes.pt
-oEmitValue !== .tGT on line 421 of mprimes.pt
-% value emitted 100 !== .tNot on line 422 of mprimes.pt
-.tGT !== .tWhileTest on line 423 of mprimes.pt
-.tNot !== oEmitNullAddress on line 424 of mprimes.pt
-.tWhileTest !== % value emitted -32767 on line 425 of mprimes.pt
-% value emitted 7 !== % value emitted 8 on line 466 of mprimes.pt
-% value emitted 397 !== .tWhileEnd on line 482 of mprimes.pt
-.tWhileEnd !== % value emitted 391 on line 483 of mprimes.pt
+% value emitted 98 !== .tWhileEnd on line 137 of mprimes.pt
+.tAssignBegin !== % value emitted 98 on line 138 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 139 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 140 of mprimes.pt
+% value emitted 136 !== oEmitValue on line 141 of mprimes.pt
+.tLiteralInteger !== % value emitted 136 on line 142 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 143 of mprimes.pt
+% value emitted 2 !== oEmitValue on line 144 of mprimes.pt
+.tAssignInteger !== % value emitted 2 on line 145 of mprimes.pt
+.tAssignBegin !== .tAssignInteger on line 146 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 147 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 148 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 149 of mprimes.pt
+.tLiteralInteger !== % value emitted 140 on line 150 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 151 of mprimes.pt
+% value emitted 2 !== oEmitValue on line 152 of mprimes.pt
+.tAssignInteger !== % value emitted 2 on line 153 of mprimes.pt
+.tWhileBegin !== .tAssignInteger on line 154 of mprimes.pt
+.tWhilePreBreak !== .tWhileBegin on line 155 of mprimes.pt
+oEmitNullAddress !== .tWhilePreBreak on line 156 of mprimes.pt
+% value emitted -32767 !== .tWhileBreakIf on line 157 of mprimes.pt
+.tWhileBreakIf !== .tLiteralAddress on line 158 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 159 of mprimes.pt
+oEmitValue !== % value emitted 140 on line 160 of mprimes.pt
+% value emitted 140 !== .tFetchInteger on line 161 of mprimes.pt
+.tFetchInteger !== .tLiteralAddress on line 162 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 163 of mprimes.pt
+oEmitValue !== % value emitted 4 on line 164 of mprimes.pt
+% value emitted 4 !== .tFetchInteger on line 165 of mprimes.pt
+.tFetchInteger !== .tGT on line 166 of mprimes.pt
+.tGT !== .tNot on line 167 of mprimes.pt
+.tNot !== .tWhileTest on line 168 of mprimes.pt
+.tWhileTest !== oEmitNullAddress on line 169 of mprimes.pt
+.tAssignBegin !== % value emitted -32767 on line 170 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 171 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 172 of mprimes.pt
+% value emitted 136 !== oEmitValue on line 173 of mprimes.pt
+.tLiteralAddress !== % value emitted 136 on line 174 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 175 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 176 of mprimes.pt
+.tFetchInteger !== % value emitted 140 on line 177 of mprimes.pt
+.tLiteralAddress !== .tFetchInteger on line 178 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 179 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 180 of mprimes.pt
+.tFetchInteger !== % value emitted 140 on line 181 of mprimes.pt
+.tAdd !== .tFetchInteger on line 182 of mprimes.pt
+.tAssignInteger !== .tAdd on line 183 of mprimes.pt
+.tWhileBegin !== .tAssignInteger on line 184 of mprimes.pt
+.tWhilePreBreak !== .tWhileBegin on line 185 of mprimes.pt
+oEmitNullAddress !== .tWhilePreBreak on line 186 of mprimes.pt
+% value emitted -32767 !== .tWhileBreakIf on line 187 of mprimes.pt
+.tWhileBreakIf !== .tLiteralAddress on line 188 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 189 of mprimes.pt
+oEmitValue !== % value emitted 136 on line 190 of mprimes.pt
+% value emitted 136 !== .tFetchInteger on line 191 of mprimes.pt
+.tFetchInteger !== .tLiteralInteger on line 192 of mprimes.pt
+.tLiteralInteger !== oEmitValue on line 193 of mprimes.pt
+oEmitValue !== % value emitted 100 on line 194 of mprimes.pt
+% value emitted 100 !== .tGT on line 195 of mprimes.pt
+.tGT !== .tNot on line 196 of mprimes.pt
+.tNot !== .tWhileTest on line 197 of mprimes.pt
+.tWhileTest !== oEmitNullAddress on line 198 of mprimes.pt
+.tCallBegin !== % value emitted -32767 on line 199 of mprimes.pt
+.tLiteralAddress !== .tCallBegin on line 200 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 201 of mprimes.pt
+% value emitted 136 !== oEmitValue on line 202 of mprimes.pt
+.tFetchInteger !== % value emitted 136 on line 203 of mprimes.pt
+.tParmEnd !== .tFetchInteger on line 204 of mprimes.pt
+.tLiteralBoolean !== .tParmEnd on line 205 of mprimes.pt
+oEmitValue !== .tLiteralBoolean on line 206 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 207 of mprimes.pt
+.tParmEnd !== % value emitted 0 on line 208 of mprimes.pt
+.tCallEnd !== .tParmEnd on line 209 of mprimes.pt
+oEmitValue !== .tCallEnd on line 210 of mprimes.pt
+% value emitted 34 !== oEmitValue on line 211 of mprimes.pt
+.tAssignBegin !== % value emitted 34 on line 212 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 213 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 214 of mprimes.pt
+% value emitted 136 !== oEmitValue on line 215 of mprimes.pt
+.tLiteralAddress !== % value emitted 136 on line 216 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 217 of mprimes.pt
+% value emitted 136 !== oEmitValue on line 218 of mprimes.pt
+.tFetchInteger !== % value emitted 136 on line 219 of mprimes.pt
+.tLiteralAddress !== .tFetchInteger on line 220 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 221 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 222 of mprimes.pt
+.tFetchInteger !== % value emitted 140 on line 223 of mprimes.pt
+.tAdd !== .tFetchInteger on line 224 of mprimes.pt
+.tAssignInteger !== .tAdd on line 225 of mprimes.pt
+% value emitted 184 !== .tAssignInteger on line 226 of mprimes.pt
+.tAssignBegin !== % value emitted 184 on line 228 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 229 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 230 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 231 of mprimes.pt
+.tLiteralAddress !== % value emitted 144 on line 232 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 233 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 234 of mprimes.pt
+.tFetchInteger !== % value emitted 140 on line 235 of mprimes.pt
+.tLiteralInteger !== .tFetchInteger on line 236 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 237 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 238 of mprimes.pt
+.tAdd !== % value emitted 1 on line 239 of mprimes.pt
+.tAssignInteger !== .tAdd on line 240 of mprimes.pt
+.tCallBegin !== .tAssignInteger on line 241 of mprimes.pt
+.tLiteralAddress !== .tCallBegin on line 242 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 243 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 244 of mprimes.pt
+.tFetchInteger !== % value emitted 144 on line 245 of mprimes.pt
+.tParmEnd !== .tFetchInteger on line 246 of mprimes.pt
+.tLiteralAddress !== .tParmEnd on line 247 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 248 of mprimes.pt
+% value emitted 148 !== oEmitValue on line 249 of mprimes.pt
+.tVarParm !== % value emitted 148 on line 250 of mprimes.pt
+.tParmEnd !== .tVarParm on line 251 of mprimes.pt
+.tCallEnd !== .tParmEnd on line 252 of mprimes.pt
+oEmitValue !== .tCallEnd on line 253 of mprimes.pt
+% value emitted 62 !== oEmitValue on line 254 of mprimes.pt
+.tWhileBegin !== % value emitted 62 on line 255 of mprimes.pt
+.tWhilePreBreak !== .tWhileBegin on line 256 of mprimes.pt
+oEmitNullAddress !== .tWhilePreBreak on line 257 of mprimes.pt
+% value emitted -32767 !== .tWhileBreakIf on line 258 of mprimes.pt
+.tWhileBreakIf !== .tLiteralAddress on line 259 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 260 of mprimes.pt
+oEmitValue !== % value emitted 144 on line 261 of mprimes.pt
+% value emitted 144 !== .tFetchInteger on line 262 of mprimes.pt
+.tFetchInteger !== .tLiteralInteger on line 263 of mprimes.pt
+.tLiteralInteger !== oEmitValue on line 264 of mprimes.pt
+oEmitValue !== % value emitted 100 on line 265 of mprimes.pt
+% value emitted 100 !== .tGT on line 266 of mprimes.pt
+.tGT !== .tInfixOr on line 267 of mprimes.pt
+.tInfixOr !== .tLiteralAddress on line 268 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 269 of mprimes.pt
+oEmitValue !== % value emitted 148 on line 270 of mprimes.pt
+% value emitted 148 !== .tFetchBoolean on line 271 of mprimes.pt
+.tFetchBoolean !== .tOr on line 272 of mprimes.pt
+.tOr !== .tNot on line 273 of mprimes.pt
+.tNot !== .tWhileTest on line 274 of mprimes.pt
+.tWhileTest !== oEmitNullAddress on line 275 of mprimes.pt
+.tAssignBegin !== % value emitted -32767 on line 276 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 277 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 278 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 279 of mprimes.pt
+.tLiteralAddress !== % value emitted 144 on line 280 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 281 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 282 of mprimes.pt
+.tFetchInteger !== % value emitted 144 on line 283 of mprimes.pt
+.tLiteralInteger !== .tFetchInteger on line 284 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 285 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 286 of mprimes.pt
+.tAdd !== % value emitted 1 on line 287 of mprimes.pt
+.tAssignInteger !== .tAdd on line 288 of mprimes.pt
+.tCallBegin !== .tAssignInteger on line 289 of mprimes.pt
+.tLiteralAddress !== .tCallBegin on line 290 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 291 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 292 of mprimes.pt
+.tFetchInteger !== % value emitted 144 on line 293 of mprimes.pt
+.tParmEnd !== .tFetchInteger on line 294 of mprimes.pt
+.tLiteralAddress !== .tParmEnd on line 295 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 296 of mprimes.pt
+% value emitted 148 !== oEmitValue on line 297 of mprimes.pt
+.tVarParm !== % value emitted 148 on line 298 of mprimes.pt
+.tParmEnd !== .tVarParm on line 299 of mprimes.pt
+.tCallEnd !== .tParmEnd on line 300 of mprimes.pt
+oEmitValue !== .tCallEnd on line 301 of mprimes.pt
+% value emitted 62 !== oEmitValue on line 302 of mprimes.pt
+% value emitted 254 !== % value emitted 62 on line 303 of mprimes.pt
+.tAssignBegin !== % value emitted 252 on line 305 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 306 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 307 of mprimes.pt
+% value emitted 140 !== oEmitValue on line 308 of mprimes.pt
+.tLiteralAddress !== % value emitted 140 on line 309 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 310 of mprimes.pt
+% value emitted 144 !== oEmitValue on line 311 of mprimes.pt
+.tFetchInteger !== % value emitted 144 on line 312 of mprimes.pt
+.tAssignInteger !== .tFetchInteger on line 313 of mprimes.pt
+% value emitted 154 !== .tAssignInteger on line 314 of mprimes.pt
+.tWriteBegin !== % value emitted 154 on line 316 of mprimes.pt
+.tTrapBegin !== .tWriteBegin on line 317 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 318 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 319 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 320 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 321 of mprimes.pt
+.tParmEnd !== .tVarParm on line 322 of mprimes.pt
+.tLiteralString !== .tParmEnd on line 323 of mprimes.pt
+oEmitValue !== .tLiteralString on line 324 of mprimes.pt
+% value emitted 17 !== oEmitValue on line 325 of mprimes.pt
+oEmitString !== % value emitted 17 on line 326 of mprimes.pt
+% value emitted 84 !== oEmitString on line 327 of mprimes.pt
+% value emitted 104 !== % value emitted 84 on line 328 of mprimes.pt
+% value emitted 101 !== % value emitted 104 on line 329 of mprimes.pt
+% value emitted 32 !== % value emitted 101 on line 330 of mprimes.pt
+% value emitted 112 !== % value emitted 32 on line 331 of mprimes.pt
+% value emitted 114 !== % value emitted 112 on line 332 of mprimes.pt
+% value emitted 105 !== % value emitted 114 on line 333 of mprimes.pt
+% value emitted 109 !== % value emitted 105 on line 334 of mprimes.pt
+% value emitted 101 !== % value emitted 109 on line 335 of mprimes.pt
+% value emitted 115 !== % value emitted 101 on line 336 of mprimes.pt
+% value emitted 32 !== % value emitted 115 on line 337 of mprimes.pt
+% value emitted 117 !== % value emitted 32 on line 338 of mprimes.pt
+% value emitted 112 !== % value emitted 117 on line 339 of mprimes.pt
+% value emitted 32 !== % value emitted 112 on line 340 of mprimes.pt
+% value emitted 116 !== % value emitted 32 on line 341 of mprimes.pt
+% value emitted 111 !== % value emitted 116 on line 342 of mprimes.pt
+% value emitted 32 !== % value emitted 111 on line 343 of mprimes.pt
+.tParmEnd !== % value emitted 32 on line 344 of mprimes.pt
+.tLiteralInteger !== .tParmEnd on line 345 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 346 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 347 of mprimes.pt
+.tParmEnd !== % value emitted 1 on line 348 of mprimes.pt
+.tTrap !== .tParmEnd on line 349 of mprimes.pt
+oEmitTrapKind(trWriteString) !== .tTrap on line 350 of mprimes.pt
+% value emitted 109 !== oEmitTrapKind(trWriteString) on line 351 of mprimes.pt
+.tTrapBegin !== % value emitted 109 on line 352 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 353 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 354 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 355 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 356 of mprimes.pt
+.tParmEnd !== .tVarParm on line 357 of mprimes.pt
+.tLiteralInteger !== .tParmEnd on line 358 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 359 of mprimes.pt
+% value emitted 100 !== oEmitValue on line 360 of mprimes.pt
+.tParmEnd !== % value emitted 100 on line 361 of mprimes.pt
+.tLiteralInteger !== .tParmEnd on line 362 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 363 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 364 of mprimes.pt
+.tParmEnd !== % value emitted 1 on line 365 of mprimes.pt
+.tTrap !== .tParmEnd on line 366 of mprimes.pt
+oEmitTrapKind(trWriteInteger) !== .tTrap on line 367 of mprimes.pt
+% value emitted 7 !== oEmitTrapKind(trWriteInteger) on line 368 of mprimes.pt
+.tTrapBegin !== % value emitted 8 on line 369 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 370 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 371 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 372 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 373 of mprimes.pt
+.tParmEnd !== .tVarParm on line 374 of mprimes.pt
+.tLiteralString !== .tParmEnd on line 375 of mprimes.pt
+oEmitValue !== .tLiteralString on line 376 of mprimes.pt
+% value emitted 5 !== oEmitValue on line 377 of mprimes.pt
+oEmitString !== % value emitted 5 on line 378 of mprimes.pt
+% value emitted 32 !== oEmitString on line 379 of mprimes.pt
+% value emitted 97 !== % value emitted 32 on line 380 of mprimes.pt
+% value emitted 114 !== % value emitted 97 on line 381 of mprimes.pt
+% value emitted 101 !== % value emitted 114 on line 382 of mprimes.pt
+% value emitted 58 !== % value emitted 101 on line 383 of mprimes.pt
+.tParmEnd !== % value emitted 58 on line 384 of mprimes.pt
+.tLiteralInteger !== .tParmEnd on line 385 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 386 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 387 of mprimes.pt
+.tParmEnd !== % value emitted 1 on line 388 of mprimes.pt
+.tTrap !== .tParmEnd on line 389 of mprimes.pt
+oEmitTrapKind(trWriteString) !== .tTrap on line 390 of mprimes.pt
+% value emitted 109 !== oEmitTrapKind(trWriteString) on line 391 of mprimes.pt
+.tWriteEnd !== % value emitted 109 on line 392 of mprimes.pt
+.tTrapBegin !== .tWriteEnd on line 393 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 394 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 395 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 396 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 397 of mprimes.pt
+.tParmEnd !== .tVarParm on line 398 of mprimes.pt
+.tTrap !== .tParmEnd on line 399 of mprimes.pt
+oEmitTrapKind(trWriteln) !== .tTrap on line 400 of mprimes.pt
+% value emitted 6 !== oEmitTrapKind(trWriteln) on line 401 of mprimes.pt
+.tAssignBegin !== % value emitted 6 on line 402 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 403 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 404 of mprimes.pt
+% value emitted 152 !== oEmitValue on line 405 of mprimes.pt
+.tLiteralInteger !== % value emitted 152 on line 406 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 407 of mprimes.pt
+% value emitted 2 !== oEmitValue on line 408 of mprimes.pt
+.tAssignInteger !== % value emitted 2 on line 409 of mprimes.pt
+.tWhileBegin !== .tAssignInteger on line 410 of mprimes.pt
+.tWhilePreBreak !== .tWhileBegin on line 411 of mprimes.pt
+oEmitNullAddress !== .tWhilePreBreak on line 412 of mprimes.pt
+% value emitted -32767 !== .tWhileBreakIf on line 413 of mprimes.pt
+.tWhileBreakIf !== .tLiteralAddress on line 414 of mprimes.pt
+.tLiteralAddress !== oEmitValue on line 415 of mprimes.pt
+oEmitValue !== % value emitted 152 on line 416 of mprimes.pt
+% value emitted 152 !== .tFetchInteger on line 417 of mprimes.pt
+.tFetchInteger !== .tLiteralInteger on line 418 of mprimes.pt
+.tLiteralInteger !== oEmitValue on line 419 of mprimes.pt
+oEmitValue !== % value emitted 100 on line 420 of mprimes.pt
+% value emitted 100 !== .tGT on line 421 of mprimes.pt
+.tGT !== .tNot on line 422 of mprimes.pt
+.tNot !== .tWhileTest on line 423 of mprimes.pt
+.tWhileTest !== oEmitNullAddress on line 424 of mprimes.pt
+.tCallBegin !== % value emitted -32767 on line 425 of mprimes.pt
+.tLiteralAddress !== .tCallBegin on line 426 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 427 of mprimes.pt
+% value emitted 152 !== oEmitValue on line 428 of mprimes.pt
+.tFetchInteger !== % value emitted 152 on line 429 of mprimes.pt
+.tParmEnd !== .tFetchInteger on line 430 of mprimes.pt
+.tLiteralAddress !== .tParmEnd on line 431 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 432 of mprimes.pt
+% value emitted 156 !== oEmitValue on line 433 of mprimes.pt
+.tVarParm !== % value emitted 156 on line 434 of mprimes.pt
+.tParmEnd !== .tVarParm on line 435 of mprimes.pt
+.tCallEnd !== .tParmEnd on line 436 of mprimes.pt
+oEmitValue !== .tCallEnd on line 437 of mprimes.pt
+% value emitted 62 !== oEmitValue on line 438 of mprimes.pt
+.tIfBegin !== % value emitted 62 on line 439 of mprimes.pt
+.tLiteralAddress !== .tIfBegin on line 440 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 441 of mprimes.pt
+% value emitted 156 !== oEmitValue on line 442 of mprimes.pt
+.tFetchBoolean !== % value emitted 156 on line 443 of mprimes.pt
+.tIfThen !== .tFetchBoolean on line 444 of mprimes.pt
+oEmitNullAddress !== .tIfThen on line 445 of mprimes.pt
+% value emitted -32767 !== oEmitNullAddress on line 446 of mprimes.pt
+.tWriteBegin !== % value emitted -32767 on line 447 of mprimes.pt
+.tTrapBegin !== .tWriteBegin on line 448 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 449 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 450 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 451 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 452 of mprimes.pt
+.tParmEnd !== .tVarParm on line 453 of mprimes.pt
+.tLiteralAddress !== .tParmEnd on line 454 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 455 of mprimes.pt
+% value emitted 152 !== oEmitValue on line 456 of mprimes.pt
+.tFetchInteger !== % value emitted 152 on line 457 of mprimes.pt
+.tParmEnd !== .tFetchInteger on line 458 of mprimes.pt
+.tLiteralInteger !== .tParmEnd on line 459 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 460 of mprimes.pt
+% value emitted 4 !== oEmitValue on line 461 of mprimes.pt
+.tParmEnd !== % value emitted 4 on line 462 of mprimes.pt
+.tTrap !== .tParmEnd on line 463 of mprimes.pt
+oEmitTrapKind(trWriteInteger) !== .tTrap on line 464 of mprimes.pt
+% value emitted 7 !== oEmitTrapKind(trWriteInteger) on line 465 of mprimes.pt
+.tWriteEnd !== % value emitted 8 on line 466 of mprimes.pt
+.tIfEnd !== .tWriteEnd on line 467 of mprimes.pt
+.tAssignBegin !== .tIfEnd on line 468 of mprimes.pt
+.tLiteralAddress !== .tAssignBegin on line 469 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 470 of mprimes.pt
+% value emitted 152 !== oEmitValue on line 471 of mprimes.pt
+.tLiteralAddress !== % value emitted 152 on line 472 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 473 of mprimes.pt
+% value emitted 152 !== oEmitValue on line 474 of mprimes.pt
+.tFetchInteger !== % value emitted 152 on line 475 of mprimes.pt
+.tLiteralInteger !== .tFetchInteger on line 476 of mprimes.pt
+oEmitValue !== .tLiteralInteger on line 477 of mprimes.pt
+% value emitted 1 !== oEmitValue on line 478 of mprimes.pt
+.tAdd !== % value emitted 1 on line 479 of mprimes.pt
+.tAssignInteger !== .tAdd on line 480 of mprimes.pt
+% value emitted 397 !== .tAssignInteger on line 481 of mprimes.pt
+.tTrapBegin !== % value emitted 391 on line 483 of mprimes.pt
+.tLiteralAddress !== .tTrapBegin on line 484 of mprimes.pt
+oEmitValue !== .tLiteralAddress on line 485 of mprimes.pt
+% value emitted 0 !== oEmitValue on line 486 of mprimes.pt
+.tVarParm !== % value emitted 0 on line 487 of mprimes.pt
+.tParmEnd !== .tVarParm on line 488 of mprimes.pt
+.tTrap !== .tParmEnd on line 489 of mprimes.pt
+oEmitTrapKind(trWriteln) !== .tTrap on line 490 of mprimes.pt
+% value emitted 6 !== oEmitTrapKind(trWriteln) on line 491 of mprimes.pt
+.tTrapBegin !== % value emitted 6 on line 492 of mprimes.pt
+.tTrap !== .tTrapBegin on line 493 of mprimes.pt
+oEmitTrapKind(trHalt) !== .tTrap on line 494 of mprimes.pt
+% value emitted 0 !== oEmitTrapKind(trHalt) on line 495 of mprimes.pt
+ !== % value emitted 0 on line 496 of mprimes.pt
 
 ```
 end file

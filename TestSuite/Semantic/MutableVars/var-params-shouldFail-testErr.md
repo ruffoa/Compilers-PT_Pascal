@@ -18,7 +18,6 @@ mod main (output) {
 Test Errors:
 -------------------------
 ```
-semantic error, line 6: mutable variable required for assignment
 semantic error, line 9: mutable variable required for assignment
 
 ```
