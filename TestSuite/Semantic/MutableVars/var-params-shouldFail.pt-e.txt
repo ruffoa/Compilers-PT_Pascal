@@ -40,7 +40,7 @@ oEmitValue
 .tCallBegin             // call foo
 .tLiteralAddress        // address pf 'i'
 oEmitValue
-.tVarParm
+.tFetchInteger
 .tParmEnd               // end param i
 #eMutableVarReqd        // wanted a mutable variable, but j is immutable!
 .tCallEnd               // end call to foo

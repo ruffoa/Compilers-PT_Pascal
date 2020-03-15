@@ -10,6 +10,12 @@ oEmitValue
 oEmitValue
 .tAssignInteger         // assign i = 0
 #eMutableVarReqd        // try to assign i = 1 -> error
+.tAssignBegin           // perform assignment anyways to flush token stream
+.tLiteralAddress
+oEmitValue
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // end 'assignment'
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0
