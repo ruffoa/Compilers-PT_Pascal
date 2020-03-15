@@ -1480,7 +1480,7 @@ CallBlockWithScope :     %Enters a new scope calls @Block and exits the scope
 AssignmentStmt :
         sIdentifier  oSymbolStkPushIdentifier
         [ oSymbolStkChooseKind
-            | syMutableVariable:
+            | syMutableVariable, syVarParameter:
                 @Assignment
             | *:
                 #eMutableVarReqd
