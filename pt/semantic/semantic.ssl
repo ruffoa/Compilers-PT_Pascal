@@ -1673,9 +1673,8 @@ VarActual :
                         ]
                     | *:
                         #eMutableVarReqd
-                        % Flush the rest of the variable declaration
-                        @Variable
-                        .tVarParm
+                        % Flush the rest of the expression
+                        @Expression
                 ]
             | *:
                 #eParameterTypeMismatch
