@@ -1615,6 +1615,8 @@ ActualParameters :
                         [
                             | sMutable:
                                 #eMutableVarParam
+                                @Expression     %% flush and handle variable to try and recover
+                                @CompareAndSwapTypes
                             | *:
                                 % value parameter, actual should be an expression
                                 @Expression
@@ -1626,6 +1628,7 @@ ActualParameters :
                                 @VarActual
                             | *:
                                 #eMutableVarParamReqd
+                                @VarActual      %% Flush variable to try and recover
                         ]
                 ]
                 oSymbolStkPop  oTypeStkPop      % actual
