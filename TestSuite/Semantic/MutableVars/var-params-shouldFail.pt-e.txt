@@ -43,6 +43,9 @@ oEmitValue
 .tFetchInteger
 .tParmEnd               // end param i
 #eMutableVarReqd        // wanted a mutable variable, but j is immutable!
+.tLiteralAddress        // 'j'
+oEmitValue
+.tParmEnd               // end param j
 .tCallEnd               // end call to foo
 oEmitValue
 .tTrapBegin             // begin end of main program
