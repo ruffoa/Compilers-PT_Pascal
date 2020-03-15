@@ -17,12 +17,12 @@ oEmitValue
 .tAssignInteger         // end j = 0
 .tSkipProc              // start foo declaration
 oEmitNullAddress
-.tLiteralAddress        // b: int - stack is last -> first!
+.tLiteralAddress        // address of 'a'
 oEmitValue
-.tStoreParmInteger      // store integer value of b
-.tLiteralAddress        // a declaration
+.tStoreParmAddress      // store as address
+.tLiteralAddress        // address of 'b'
 oEmitValue
-.tStoreParmAddress      // store address of passed variable
+.tStoreParmInteger      // store as value
 .tParmEnd               // end parameters of foo
 .tAssignBegin           // a += 1
 .tLiteralAddress        // address of 'a'

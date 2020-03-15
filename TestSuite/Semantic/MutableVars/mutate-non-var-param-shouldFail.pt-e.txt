@@ -48,7 +48,6 @@ oEmitValue
 .tParmEnd               // end param 'b'
 .tCallEnd               // end call to foo
 oEmitValue
-% value emitted 27
 .tTrapBegin             // begin end of main program
 .tTrap                  // call trap to end the main program
 oEmitTrapKind(trHalt)   // emits 0
