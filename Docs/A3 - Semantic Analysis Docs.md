@@ -402,6 +402,84 @@ CaseDefault:
 No changes needed to be made in the semantic phase as this was handled in the parser phase.
 
 # Mutable and Immutable Vars
+## `Semantic.ssl` Changes
+- Add in new errors, `eMutableVarReqd` `eMutableVarParam` and `eMutableVarParamReqd`
+- Add in new type, `syMutableVariable`
+- Update ssl to accept `syMutableVariable` everywhere `syVariable` is accepted
+- Update variable declarations to accept a `sMutable` token, and set the type of the variable as `syMutableVariable` if found
+    ```diff
+    +        [
+    +            | sMutable:
+    +                oSymbolStkSetKind(syMutableVariable)
+    +                oSymbolTblUpdate
+    +            | *:
+    +        ]
+    ```
+- Update `AssignmentStmt` rule to require a `syMutableVariable` or a `syVarParameter`, else throw an error
+    ``` diff
+    -        @Assignment
+    +        [ oSymbolStkChooseKind
+    +            | syMutableVariable, syVarParameter:
+    +                @Assignment
+    +            | *:
+    +                #eMutableVarReqd
+    +                @Assignment     %% flush the assignment statement
+    +        ]
+    ```
+- Update `ActualParameters` to also look for `sMutable` tokens for variable parameters, else error
+    ```diff
+            | syVarParameter:
+    -            @VarActual
+    +            [
+    +                | sMutable:
+    +                    @VarActual
+    +                | *:
+    +                    #eMutableVarParamReqd
+    +                    @VarActual      %% Flush variable to try and recover
+    +            ]
+    ```
+- Update `ActualParameters` to error if a `sMutable` token is found when handling a value parameter
+    ```diff
+            | syVariable:
+    -            % value parameter, actual should be an expression
+    -            @Expression
+    -            @CompareAndSwapTypes
+    +            [
+    +                | sMutable:
+    +                    #eMutableVarParam
+    +                    @Expression     %% flush and handle variable to try and recover
+    +                    @CompareAndSwapTypes
+    +                | *:
+    +                    % value parameter, actual should be an expression
+    +                    @Expression
+    +                    @CompareAndSwapTypes
+    +            ]
+    ```
+- Update `VarActual` to check for a `syMutableVariable`, else throw an error
+    ```diff
+            ...
+            oSymbolStkPushIdentifier
+    +        [   oSymbolStkChooseKind
+    +            | syMutableVariable:
+    +            | *:
+    +                #eMutableVarReqd
+    +        ]
+
+            @Variable
+            ...
+    ```
+
+## `Semantic.pt` Changes
+- Add in the new tokens from `semantic.def`
+- Handle the new error toekns, and add in new error messages for them
+```diff
++        eMutableVarReqd:
++            write('mutable variable required for assignment');
++        eMutableVarParam:
++            write('unexpected mutable keyword in variable parameters');
++        eMutableVarParamReqd:
++            write('exprected mutable host variable for parameter');
+```
 
 # String Type
 ## `Semantic.ssl` Changes
