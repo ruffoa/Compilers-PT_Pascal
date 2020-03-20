@@ -1674,7 +1674,22 @@ VarActual :
                     | *:
                         #eMutableVarReqd
                         % Flush the rest of the expression
-                        @Expression
+                        @Variable
+                        .tVarParm
+                        [ oTypeStkCompareNames
+                            | yes:
+                            | *:
+                                #eParameterTypeMismatch
+                        ]
+                        % The actual parameter expression
+                        % should consist of a single variable
+                        [
+                            | sExpnEnd:
+                            | *:
+                                #eParameterTypeMismatch
+                                % Flush the rest of the expression
+                                @Expression
+                        ]
                 ]
             | *:
                 #eParameterTypeMismatch
