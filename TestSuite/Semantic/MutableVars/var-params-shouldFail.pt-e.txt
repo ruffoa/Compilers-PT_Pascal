@@ -45,6 +45,7 @@ oEmitValue
 #eMutableVarReqd        // wanted a mutable variable, but j is immutable!
 .tLiteralAddress        // 'j'
 oEmitValue
+.tVarParm
 .tParmEnd               // end param j
 .tCallEnd               // end call to foo
 oEmitValue
