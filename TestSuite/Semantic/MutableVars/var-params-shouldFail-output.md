@@ -153,18 +153,13 @@ Test output is:
 ```
 
 
-Warning, output length does not match (54 vs 53)!  (Newlines are not the issue here!) `var-params-shouldFail.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--.tVarParm !== .tParmEnd on line 47 of var-params-shouldFail.pt
--.tParmEnd !== .tCallEnd on line 48 of var-params-shouldFail.pt
--.tCallEnd !== oEmitValue on line 49 of var-params-shouldFail.pt
--oEmitValue !== .tTrapBegin on line 50 of var-params-shouldFail.pt
--.tTrapBegin !== .tTrap on line 51 of var-params-shouldFail.pt
--.tTrap !== oEmitTrapKind(trHalt) on line 52 of var-params-shouldFail.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
