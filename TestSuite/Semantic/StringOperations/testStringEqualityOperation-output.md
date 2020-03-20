@@ -8,7 +8,7 @@ Test Content:
 ```
 mod main (output) {
     let a : str;
-    let b : bool;
+    let mut b : bool;
 
     b = "Hello" == "Hello";
 }
@@ -31,6 +31,7 @@ Parser Output:
   .sVar
   .sIdentifier
      .sIdentifier
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sAssignmentStmt

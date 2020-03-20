@@ -7,10 +7,10 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a : bool = false;
+    let mut a : bool = false;
 
     mod one {
-        let b = 1;
+        let mut b = 1;
 
         fn test(){
             a = true;
@@ -40,6 +40,7 @@ Parser Output:
     .sInitialValue
         .sIdentifier
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
   .sModule
@@ -51,6 +52,7 @@ Parser Output:
      .sInitialValue
          .sInteger
      .sExpnEnd
+   .sMutable
    % .sNewLine
    % .sNewLine
    .sProcedure

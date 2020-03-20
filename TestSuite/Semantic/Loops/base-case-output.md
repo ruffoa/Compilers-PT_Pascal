@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) { 
-    let i = 0;
+    let mut i = 0;
 
     loop {
         break if i >= 5;
@@ -32,6 +32,7 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sLoopStmt

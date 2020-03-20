@@ -1,0 +1,1 @@
+This is to test that const assignment does not work

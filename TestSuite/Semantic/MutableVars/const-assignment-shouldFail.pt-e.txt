@@ -1,0 +1,14 @@
+.tLiteralInteger
+oEmitValue              // value emitted is 2
+.tLiteralAddress
+oEmitDataAddress        // value emitted is 0
+.tFileDescriptor        // File for main program
+#eMutableVarReqd        // error -> can't assign to const var
+.tAssignBegin           // assignment code anyways - flushing token stream
+#eVariableReqd          // obviously also an error since you can assign to a const!
+.tLiteralInteger
+oEmitValue
+.tAssignInteger         // 'assign' to the cost
+.tTrapBegin             // begin end of main program
+.tTrap                  // call trap to end the main program
+oEmitTrapKind(trHalt)   // emits 0

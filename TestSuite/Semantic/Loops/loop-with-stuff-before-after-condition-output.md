@@ -7,8 +7,8 @@ Test Content:
 -------------------------
 ```
 mod main (output) { 
-    let i = 0;
-    let j = 0;
+    let mut i = 0;
+    let mut j = 0;
 
     loop {
         j -= 1;
@@ -35,12 +35,14 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   .sVar
   .sIdentifier
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sLoopStmt

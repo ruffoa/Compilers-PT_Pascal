@@ -7,7 +7,7 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let i = 10;
+    let mut i = 10;
 
     match i {
         | 12 => {
@@ -32,6 +32,7 @@ Parser Output:
     .sInitialValue
         .sInteger
     .sExpnEnd
+  .sMutable
   % .sNewLine
   % .sNewLine
    .sCaseStmt

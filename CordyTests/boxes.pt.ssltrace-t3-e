@@ -19,7 +19,7 @@
      % value emitted 4
      .tVarParm
      .tParmEnd
-       .tLiteralString
+       .tLiteralString    // enter box width ...
        oEmitValue
        % value emitted 28
        oEmitString
