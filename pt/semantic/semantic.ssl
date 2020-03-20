@@ -1655,41 +1655,25 @@ VarActual :
                 oSymbolStkPushIdentifier
                 [   oSymbolStkChooseKind
                     | syMutableVariable:
-                        @Variable
-                        .tVarParm
-                        [ oTypeStkCompareNames
-                            | yes:
-                            | *:
-                                #eParameterTypeMismatch
-                        ]
-                        % The actual parameter expression
-                        % should consist of a single variable
-                        [
-                            | sExpnEnd:
-                            | *:
-                                #eParameterTypeMismatch
-                                % Flush the rest of the expression
-                                @Expression
-                        ]
                     | *:
                         #eMutableVarReqd
+                ]
+                
+                @Variable
+                .tVarParm
+                [ oTypeStkCompareNames
+                    | yes:
+                    | *:
+                        #eParameterTypeMismatch
+                ]
+                % The actual parameter expression
+                % should consist of a single variable
+                [
+                    | sExpnEnd:
+                    | *:
+                        #eParameterTypeMismatch
                         % Flush the rest of the expression
-                        @Variable
-                        .tVarParm
-                        [ oTypeStkCompareNames
-                            | yes:
-                            | *:
-                                #eParameterTypeMismatch
-                        ]
-                        % The actual parameter expression
-                        % should consist of a single variable
-                        [
-                            | sExpnEnd:
-                            | *:
-                                #eParameterTypeMismatch
-                                % Flush the rest of the expression
-                                @Expression
-                        ]
+                        @Expression
                 ]
             | *:
                 #eParameterTypeMismatch
