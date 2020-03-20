@@ -753,13 +753,13 @@ No changes needed to be made in the semantic phase as this was handled in the pa
                         | *:
                             #eOperandOperatorTypeMismatch
                     ]
-    -           | tpChar:
-    -               oTypeStkPop
-    -               [ oTypeStkChooseKind
-    -                   | tpChar:
-    -                   | *:
-    -                       #eOperandOperatorTypeMismatch
-    -               ]
+-               | tpChar:
+-                   oTypeStkPop
+-                   [ oTypeStkChooseKind
+-                       | tpChar:
+-                       | *:
+-                           #eOperandOperatorTypeMismatch
+-                   ]
                 | *:
                     #eOperandOperatorTypeMismatch
                     oTypeStkPop
