@@ -17,7 +17,6 @@ oEmitValue
 .tAssignInteger         // end j = 0
 .tWhileBegin            // loop start
 .tWhilePreBreak         // loop contents before break statement
-oEmitNullAddress
 .tAssignBegin           // j -= 1;
 .tLiteralAddress
 oEmitValue
@@ -37,6 +36,7 @@ oEmitValue
 .tEQ                    // i == 5              
 .tNot                   // not sure why syntax calls for a not here, but okay
 .tWhileTest             // loop contents after break statement
+oEmitNullAddress
 .tAssignBegin           // i += 1;
 .tLiteralAddress
 oEmitValue
