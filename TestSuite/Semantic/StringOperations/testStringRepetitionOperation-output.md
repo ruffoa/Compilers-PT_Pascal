@@ -55,20 +55,35 @@ Test output is:
      .tLiteralAddress
      oEmitValue
      % value emitted 4
-### Semantic pass S/SL program failure:  Semantic choice failed
-### Semantic assertion 4 failed: 
+      .tLiteralString
+      oEmitValue
+      % value emitted 5
+      oEmitString
+      % value emitted 72
+      % value emitted 101
+      % value emitted 108
+      % value emitted 108
+      % value emitted 111
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 4
+      .tRepeatString
+    .tAssignString
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (10 vs 18)!  (Newlines are not the issue here!) `testStringRepetitionOperation.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  Semantic choice failed !== .tLiteralString on line 8 of testStringRepetitionOperation.pt
--### Semantic assertion 4 failed: !== oEmitValue on line 9 of testStringRepetitionOperation.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

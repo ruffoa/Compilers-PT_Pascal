@@ -55,20 +55,46 @@ Test output is:
      .tLiteralAddress
      oEmitValue
      % value emitted 4
-### Semantic pass S/SL program failure:  Semantic choice failed
-### Semantic assertion 4 failed: 
+      .tLiteralString
+      oEmitValue
+      % value emitted 11
+      oEmitString
+      % value emitted 72
+      % value emitted 101
+      % value emitted 108
+      % value emitted 108
+      % value emitted 111
+      % value emitted 32
+      % value emitted 87
+      % value emitted 111
+      % value emitted 114
+      % value emitted 108
+      % value emitted 100
+    .tAssignString
+    .tAssignBegin
+     .tLiteralAddress
+     oEmitValue
+     % value emitted 1028
+       .tLiteralAddress
+       oEmitValue
+       % value emitted 4
+       .tFetchString
+    .tAssignString
+ .tTrapBegin
+ .tTrap
+ oEmitTrapKind(trHalt)
+ % value emitted 0
 
 ```
 
 
-Warning, output length does not match (10 vs 22)!  (Newlines are not the issue here!) `multiple-lets.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
--### Semantic pass S/SL program failure:  Semantic choice failed !== .tLiteralString on line 8 of multiple-lets.pt
--### Semantic assertion 4 failed: !== oEmitValue on line 9 of multiple-lets.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
