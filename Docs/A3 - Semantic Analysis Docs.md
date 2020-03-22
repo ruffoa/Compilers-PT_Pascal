@@ -321,7 +321,7 @@ ProcedureDefinition :
 - Added support for the `syPublicProcedure` everywhere where an assertion is checking for the `syProcedure` kind at the top of the symbol stack.
 
 # Loop Statement
-- Add in the `LoopStmt` routine, based off of the `WhileStmt` routine
+- Add in the `LoopStmt` rule, based off of the `WhileStmt` rule
     - Replace call to `CallBlockWithScope` for manually creating a single scope for then entire loop statement
     - Call `@Block` for the individual components of the loop
     - Add in support for `sLoopBreakIf` and output the correct tokens
@@ -351,7 +351,7 @@ LoopStmt :
 +        oFixPopForwardBranch;
 ```
 
-- Remove the `RepeatStmt` routine
+- Remove the `RepeatStmt` rule
 
 # Match Satement and Default
 - Modify `CaseStmt` to handle the `sCaseOtherwise` token

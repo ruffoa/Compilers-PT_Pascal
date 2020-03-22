@@ -156,7 +156,7 @@ jobs:
         echo $validTests
         exit $ourTests
 
-    # - name: Cordy's Test Suite Passed
-    #   shell: bash
-    #   run: |
-    #     exit $cordyTests
+    - name: Cordy's Test Suite Passed
+      shell: bash
+      run: |
+        exit $cordyTests
