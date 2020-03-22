@@ -107,8 +107,6 @@ Test output is:
     .tAssignInteger
    .tWhileBegin
    .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -133,6 +131,8 @@ Test output is:
       .tEQ
    .tNot
    .tWhileTest
+   oEmitNullAddress
+   % value emitted -32767
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -146,23 +146,42 @@ Test output is:
         % value emitted 1
         .tAdd
       .tAssignInteger
-   % value emitted 27
    .tWhileEnd
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 
 
+Warning, output length does not match (54 vs 53)!  (Newlines are not the issue here!) `loop-with-stuff-before-after-condition.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tAssignBegin !== oEmitNullAddress on line 19 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== .tAssignBegin on line 20 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralAddress on line 21 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== oEmitValue on line 22 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralAddress on line 23 of loop-with-stuff-before-after-condition.pt
+-.tFetchInteger !== oEmitValue on line 24 of loop-with-stuff-before-after-condition.pt
+-.tLiteralInteger !== .tFetchInteger on line 25 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralInteger on line 26 of loop-with-stuff-before-after-condition.pt
+-.tSubtract !== oEmitValue on line 27 of loop-with-stuff-before-after-condition.pt
+-.tAssignInteger !== .tSubtract on line 28 of loop-with-stuff-before-after-condition.pt
+-.tWhileBreakIf !== .tAssignInteger on line 29 of loop-with-stuff-before-after-condition.pt
+-.tLiteralAddress !== .tWhileBreakIf on line 30 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralAddress on line 31 of loop-with-stuff-before-after-condition.pt
+-.tFetchInteger !== oEmitValue on line 32 of loop-with-stuff-before-after-condition.pt
+-.tLiteralInteger !== .tFetchInteger on line 33 of loop-with-stuff-before-after-condition.pt
+-oEmitValue !== .tLiteralInteger on line 34 of loop-with-stuff-before-after-condition.pt
+-.tEQ !== oEmitValue on line 35 of loop-with-stuff-before-after-condition.pt
+-.tNot !== .tEQ on line 36 of loop-with-stuff-before-after-condition.pt
+-.tWhileTest !== .tNot on line 37 of loop-with-stuff-before-after-condition.pt
+-oEmitNullAddress !== .tWhileTest on line 38 of loop-with-stuff-before-after-condition.pt
 
 ```
 end file
