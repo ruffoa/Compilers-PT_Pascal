@@ -921,10 +921,10 @@ ConstantValue :         % An identifier token has just been accepted
                 oTypeStkPushSymbol
                 oValuePushStringLength
                 [ oValueChoose
-                    | zero:
-                        #eNullString
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
+                    % | zero:
+                    %     #eNullString
+                    %     oSymbolStkPush(syExpression)
+                    %     oTypeStkPush(tpString)
                     | *:
                         oSymbolStkPush(syExpression)
                         oTypeStkPush(tpString)
@@ -1893,10 +1893,10 @@ Operand :
             | sStringLiteral:
                 oValuePushStringLength
                 [ oValueChoose
-                    | zero:
-                        #eNullString
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
+                    % | zero:
+                    %     #eNullString
+                    %     oSymbolStkPush(syExpression)
+                    %     oTypeStkPush(tpString)
                     | *:
                         oSymbolStkPush(syExpression)
                         oTypeStkPush(tpString)
