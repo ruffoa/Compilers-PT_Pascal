@@ -920,18 +920,24 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
                 oTypeStkPushSymbol
                 oValuePushStringLength
-                [ oValueChoose
-                    % | zero:
-                    %     #eNullString
-                    %     oSymbolStkPush(syExpression)
-                    %     oTypeStkPush(tpString)
-                    | *:
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                        .tLiteralString
-                        oEmitValue      % string length
-                        oEmitString     % string value
-                ]
+                % [ oValueChoose
+                %     | zero:
+                %         #eNullString
+                %         oSymbolStkPush(syExpression)
+                %         oTypeStkPush(tpString)
+                %     | *:
+                %         oSymbolStkPush(syExpression)
+                %         oTypeStkPush(tpString)
+                %         .tLiteralString
+                %         oEmitValue      % string length
+                %         oEmitString     % string value
+                % ]
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+                .tLiteralString
+                oEmitValue      % string length
+                oEmitString     % string value
+
                 oValuePop
                 .tAssignString
                 oSymbolStkPop  oTypeStkPop      % Expression
@@ -1892,18 +1898,25 @@ Operand :
                 oValuePop
             | sStringLiteral:
                 oValuePushStringLength
-                [ oValueChoose
-                    % | zero:
-                    %     #eNullString
-                    %     oSymbolStkPush(syExpression)
-                    %     oTypeStkPush(tpString)
-                    | *:
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                        .tLiteralString
-                        oEmitValue      % string length
-                        oEmitString     % string value
-                ]
+                % [ oValueChoose
+                %     | zero:
+                %         #eNullString
+                %         oSymbolStkPush(syExpression)
+                %         oTypeStkPush(tpString)
+                %     | *:
+                %         oSymbolStkPush(syExpression)
+                %         oTypeStkPush(tpString)
+                %         .tLiteralString
+                %         oEmitValue      % string length
+                %         oEmitString     % string value
+                % ]
+
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+                .tLiteralString
+                oEmitValue      % string length
+                oEmitString     % string value
+                
                 oValuePop
             | sFile:
                 @Expression
