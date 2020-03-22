@@ -1724,8 +1724,6 @@ LoopStmt :
         .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
         oFixPushForwardBranch
-        oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
         sBegin
         oSymbolTblPushScope 
         @Block
@@ -1735,13 +1733,15 @@ LoopStmt :
         @BooleanControlExpression
         .tNot
         .tWhileTest
+        oEmitNullAddress                % exit branch
+        oFixSwap                % top-of-loop target back on top
         sBegin
         @Block
         sEnd
         oSymbolTblPopScope
+        .tWhileEnd;
         oFixPopTargetAddress
         oFixPopForwardBranch
-        .tWhileEnd;
 
 CaseStmt :
         .tCaseBegin
@@ -1916,7 +1916,7 @@ Operand :
                 .tLiteralString
                 oEmitValue      % string length
                 oEmitString     % string value
-                
+
                 oValuePop
             | sFile:
                 @Expression
