@@ -195,26 +195,9 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.tWhileBreakIf !== oEmitNullAddress on line 13 of nested-loops.pt
--.tLiteralAddress !== .tWhileBreakIf on line 14 of nested-loops.pt
--oEmitValue !== .tLiteralAddress on line 15 of nested-loops.pt
--.tFetchInteger !== oEmitValue on line 16 of nested-loops.pt
--.tLiteralInteger !== .tFetchInteger on line 17 of nested-loops.pt
--oEmitValue !== .tLiteralInteger on line 18 of nested-loops.pt
--.tGE !== oEmitValue on line 19 of nested-loops.pt
--.tNot !== .tGE on line 20 of nested-loops.pt
--.tWhileTest !== .tNot on line 21 of nested-loops.pt
--oEmitNullAddress !== .tWhileTest on line 22 of nested-loops.pt
--.tWhileBreakIf !== oEmitNullAddress on line 31 of nested-loops.pt
--.tLiteralAddress !== .tWhileBreakIf on line 32 of nested-loops.pt
--oEmitValue !== .tLiteralAddress on line 33 of nested-loops.pt
--.tFetchInteger !== oEmitValue on line 34 of nested-loops.pt
--.tLiteralInteger !== .tFetchInteger on line 35 of nested-loops.pt
--oEmitValue !== .tLiteralInteger on line 36 of nested-loops.pt
--.tGT !== oEmitValue on line 37 of nested-loops.pt
--.tNot !== .tGT on line 38 of nested-loops.pt
--.tWhileTest !== .tNot on line 39 of nested-loops.pt
--oEmitNullAddress !== .tWhileTest on line 40 of nested-loops.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file

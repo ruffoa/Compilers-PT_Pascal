@@ -123,16 +123,9 @@ Showing as much of the diff as possible...
 File diff
 -------------------------
 ```diff
--.tWhileBreakIf !== oEmitNullAddress on line 13 of base-case.pt
--.tLiteralAddress !== .tWhileBreakIf on line 14 of base-case.pt
--oEmitValue !== .tLiteralAddress on line 15 of base-case.pt
--.tFetchInteger !== oEmitValue on line 16 of base-case.pt
--.tLiteralInteger !== .tFetchInteger on line 17 of base-case.pt
--oEmitValue !== .tLiteralInteger on line 18 of base-case.pt
--.tGE !== oEmitValue on line 19 of base-case.pt
--.tNot !== .tGE on line 20 of base-case.pt
--.tWhileTest !== .tNot on line 21 of base-case.pt
--oEmitNullAddress !== .tWhileTest on line 22 of base-case.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
