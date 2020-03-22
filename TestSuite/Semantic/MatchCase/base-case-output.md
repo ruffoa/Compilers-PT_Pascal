@@ -88,50 +88,12 @@ Test output is:
       oEmitValue
       % value emitted 10
     .tAssignInteger
-   .tCaseBegin
-       .tLiteralAddress
-       oEmitValue
-       % value emitted 4
-       .tFetchInteger
-   .tCaseSelect
-   oEmitNullAddress
-   % value emitted -32767
-        .tAssignBegin
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 4
-          .tLiteralInteger
-          oEmitValue
-          % value emitted 0
-        .tAssignInteger
-    .tCaseMerge
-    oEmitNullAddress
-    % value emitted -32767
-   .tCaseEnd
-    oEmitCaseBranchTable
-    % value emitted 12
-    % value emitted 12
-    % value emitted 23
-    .tCaseOtherwise
-        .tAssignBegin
-         .tLiteralAddress
-         oEmitValue
-         % value emitted 4
-          .tLiteralInteger
-          oEmitValue
-          % value emitted 1
-        .tAssignInteger
-    .tCaseMerge
-    oEmitNullAddress
-    % value emitted -32767
- .tTrapBegin
- .tTrap
- oEmitTrapKind(trHalt)
- % value emitted 0
 
 ```
 
 
+Warning, output length does not match (11 vs 39)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------

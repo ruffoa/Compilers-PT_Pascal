@@ -81,8 +81,6 @@ Test output is:
     .tAssignInteger
    .tWhileBegin
    .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
    .tWhileBreakIf
        .tLiteralAddress
        oEmitValue
@@ -94,6 +92,8 @@ Test output is:
       .tGE
    .tNot
    .tWhileTest
+   oEmitNullAddress
+   % value emitted -32767
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -107,23 +107,32 @@ Test output is:
         % value emitted 1
         .tAdd
       .tAssignInteger
-   % value emitted 19
    .tWhileEnd
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
+### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 
 
+Warning, output length does not match (38 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tWhileBreakIf !== oEmitNullAddress on line 13 of base-case.pt
+-.tLiteralAddress !== .tWhileBreakIf on line 14 of base-case.pt
+-oEmitValue !== .tLiteralAddress on line 15 of base-case.pt
+-.tFetchInteger !== oEmitValue on line 16 of base-case.pt
+-.tLiteralInteger !== .tFetchInteger on line 17 of base-case.pt
+-oEmitValue !== .tLiteralInteger on line 18 of base-case.pt
+-.tGE !== oEmitValue on line 19 of base-case.pt
+-.tNot !== .tGE on line 20 of base-case.pt
+-.tWhileTest !== .tNot on line 21 of base-case.pt
+-oEmitNullAddress !== .tWhileTest on line 22 of base-case.pt
 
 ```
 end file
