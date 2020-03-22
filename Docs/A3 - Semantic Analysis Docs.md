@@ -153,7 +153,7 @@ Program :
 - Swap the order of `@IndexType` and `@ComponentType` in the `TypeBody` SSL rule
 
 # Initial Values
-- Modify the `VariableDeclarations` routine to check for the existance of the `sInitialValue` token and call the `Assignment` routine if it does.  Also modify to allow for not having a type, and assigning `int` as the type if one is not provided
+- Modify the `VariableDeclarations` rule to check for the existance of the `sInitialValue` token and call the `Assignment` rule if it does.  Also modify to allow for not having a type, and assigning `int` as the type if one is not provided
 
 ```diff
 -        @TypeBody
@@ -355,8 +355,8 @@ LoopStmt :
 
 # Match Satement and Default
 - Modify `CaseStmt` to handle the `sCaseOtherwise` token
-    - Refactor `CaseStmt` to do this nicely by adding a new routine called `EmitCaseBranchTabl`
-    - Add in a `CaseDefault` routine to handle the default case (just to make things a tad easier to read!)
+    - Refactor `CaseStmt` to do this nicely by adding a new rule called `EmitCaseBranchTabl`
+    - Add in a `CaseDefault` rule to handle the default case (just to make things a tad easier to read!)
 
 ```diff
         ...
