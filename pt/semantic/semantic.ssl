@@ -1528,14 +1528,6 @@ Assignment :
         oSymbolStkPop  oTypeStkPop      % Expression
         oTypeStkPop;                    % Assigned variable
 
-BeginStmt :
-        {[
-            | sEnd:
-                >
-            | *:
-                @CallBlockWithScope
-        ]};
-
 CallStmt :
         sIdentifier  oSymbolStkPushIdentifier   % Procedure being called
         [ oSymbolStkChooseKind
@@ -1734,14 +1726,16 @@ LoopStmt :
         .tWhileTest
         oFixPushForwardBranch
         oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
+        % oFixSwap                % top-of-loop target back on top
         sBegin
         @Block
         sEnd
         oSymbolTblPopScope
         .tWhileEnd
-        oFixPopTargetAddress
-        oFixPopForwardBranch;
+        oFixPopForwardBranch
+        oFixPopTargetAddress;
+        % oFixPopTargetAddress
+        % oFixPopForwardBranch;
 
 CaseStmt :
         .tCaseBegin

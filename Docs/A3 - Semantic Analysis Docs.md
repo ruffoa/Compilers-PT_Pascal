@@ -14,6 +14,7 @@ The following documents all changes made to semantic.ssl structured according to
 - Removed handling of the `sBegin` and `sRepeat` statements as they're not supported in Qust.
 - Removed acceptance of the sBegin token at the end of the `Block` rule as it now marks the begining of a block and will be handled by the calling rules.
 - Removed a call to the `BeginStmt` rule as it is no longer necessary since statements are part of the `Block` rule.
+- Deleted the `BeginStmt` rule as it is no longer used.
 - Added support for module declarations
 ```diff
 Block :
