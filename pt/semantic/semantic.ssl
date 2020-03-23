@@ -1700,8 +1700,8 @@ IfStmt :
         oFixPopForwardBranch;
 
 WhileStmt :
-        .tWhileBegin
         oFixPushTargetAddress           % top-of-loop branch target
+        .tWhileBegin
         @BooleanControlExpression
         .tWhileTest
         oFixPushForwardBranch
@@ -1714,8 +1714,8 @@ WhileStmt :
 
 LoopStmt :
         .tWhileBegin
-        .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
+        .tWhilePreBreak
         sBegin
         oSymbolTblPushScope 
         @Block
