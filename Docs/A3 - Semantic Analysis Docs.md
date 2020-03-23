@@ -14,6 +14,7 @@ The following documents all changes made to semantic.ssl structured according to
 - Removed handling of the `sBegin` and `sRepeat` statements as they're not supported in Qust.
 - Removed acceptance of the sBegin token at the end of the `Block` rule as it now marks the begining of a block and will be handled by the calling rules.
 - Removed a call to the `BeginStmt` rule as it is no longer necessary since statements are part of the `Block` rule.
+- Deleted the `BeginStmt` rule as it is no longer used.
 - Added support for module declarations
 ```diff
 Block :
@@ -153,7 +154,7 @@ Program :
 - Swap the order of `@IndexType` and `@ComponentType` in the `TypeBody` SSL rule
 
 # Initial Values
-- Modify the `VariableDeclarations` routine to check for the existance of the `sInitialValue` token and call the `Assignment` routine if it does.  Also modify to allow for not having a type, and assigning `int` as the type if one is not provided
+- Modify the `VariableDeclarations` rule to check for the existance of the `sInitialValue` token and call the `Assignment` rule if it does.  Also modify to allow for not having a type, and assigning `int` as the type if one is not provided
 
 ```diff
 -        @TypeBody
@@ -321,19 +322,15 @@ ProcedureDefinition :
 - Added support for the `syPublicProcedure` everywhere where an assertion is checking for the `syProcedure` kind at the top of the symbol stack.
 
 # Loop Statement
-- Add in the `LoopStmt` routine, based off of the `WhileStmt` routine
+- Add in the `LoopStmt` rule, based off of the `WhileStmt` rule
     - Replace call to `CallBlockWithScope` for manually creating a single scope for then entire loop statement
     - Call `@Block` for the individual components of the loop
     - Add in support for `sLoopBreakIf` and output the correct tokens
 ```diff
-LoopStmt :
++   LoopStmt :
 +        .tWhileBegin
 +        .tWhilePreBreak
 +        oFixPushTargetAddress           % top-of-loop branch target
-+        .tRepeatControl
-+        oFixPushForwardBranch
-+        oEmitNullAddress                % exit branch
-+        oFixSwap                % top-of-loop target back on top
 +        sBegin
 +        oSymbolTblPushScope 
 +        @Block
@@ -343,20 +340,24 @@ LoopStmt :
 +        @BooleanControlExpression
 +        .tNot
 +        .tWhileTest
++        oFixPushForwardBranch          % push exit branch instruction with temp address
++        oEmitNullAddress               % temp address
++        oFixSwap                       % top-of-loop target back on top
 +        sBegin
 +        @Block
 +        sEnd
 +        oSymbolTblPopScope
-+        oFixPopTargetAddress
-+        oFixPopForwardBranch;
++        .tWhileEnd
++        oFixPopTargetAddress           % emit and pop top of loop target address
++        oFixPopForwardBranch;          % patch exit branch instruction with correct address
 ```
-
-- Remove the `RepeatStmt` routine
+- Added the `tWhileEnd` token to the end of the `WhileStmt` rule to keep consistant with the new `LoopStmt` rule.
+- Remove the `RepeatStmt` rule
 
 # Match Satement and Default
 - Modify `CaseStmt` to handle the `sCaseOtherwise` token
-    - Refactor `CaseStmt` to do this nicely by adding a new routine called `EmitCaseBranchTabl`
-    - Add in a `CaseDefault` routine to handle the default case (just to make things a tad easier to read!)
+    - Refactor `CaseStmt` to do this nicely by adding a new rule called `EmitCaseBranchTabl`
+    - Add in a `CaseDefault` rule to handle the default case (just to make things a tad easier to read!)
 
 ```diff
         ...

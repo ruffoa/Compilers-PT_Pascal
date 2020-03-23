@@ -106,6 +106,7 @@ Test output is:
          % value emitted 1
          .tAdd
        .tAssignInteger
+   .tWhileEnd
    % value emitted 18
  .tTrapBegin
  .tTrap

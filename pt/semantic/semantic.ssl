@@ -552,11 +552,11 @@ type TrapKind :
         trReadln = 4
         trWrite = 5
         trWriteln = 6
-        trWriteInteger = 7
+        trWriteInteger = 8
         trWriteString = 109
-        trReadInteger = 9
+        trReadInteger = 10
         trReadString = 108
-        trAssign = 11;
+        trAssign = 12;
 
 mechanism Emit :
     % Emit writes to the output "t-code" stream (the code area),
@@ -920,18 +920,12 @@ ConstantValue :         % An identifier token has just been accepted
                 oValuePop
                 oTypeStkPushSymbol
                 oValuePushStringLength
-                [ oValueChoose
-                    | zero:
-                        #eNullString
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                    | *:
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                        .tLiteralString
-                        oEmitValue      % string length
-                        oEmitString     % string value
-                ]
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+                .tLiteralString
+                oEmitValue      % string length
+                oEmitString     % string value
+
                 oValuePop
                 .tAssignString
                 oSymbolStkPop  oTypeStkPop      % Expression
@@ -1522,14 +1516,6 @@ Assignment :
         oSymbolStkPop  oTypeStkPop      % Expression
         oTypeStkPop;                    % Assigned variable
 
-BeginStmt :
-        {[
-            | sEnd:
-                >
-            | *:
-                @CallBlockWithScope
-        ]};
-
 CallStmt :
         sIdentifier  oSymbolStkPushIdentifier   % Procedure being called
         [ oSymbolStkChooseKind
@@ -1708,18 +1694,16 @@ WhileStmt :
         .tWhileTest
         oFixPushForwardBranch
         oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
+        oFixSwap                        % top-of-loop target back on top
         @CallBlockWithScope
+        .tWhileEnd                      % add tWhileEnd token to keep consistent with loops
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
 LoopStmt :
         .tWhileBegin
-        .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
-        oFixPushForwardBranch
-        oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
+        .tWhilePreBreak
         sBegin
         oSymbolTblPushScope 
         @Block
@@ -1729,13 +1713,16 @@ LoopStmt :
         @BooleanControlExpression
         .tNot
         .tWhileTest
+        oFixPushForwardBranch           % push exit branch instruction with temp address
+        oEmitNullAddress                % temp address
+        oFixSwap                        % top-of-loop target back on top
         sBegin
         @Block
         sEnd
         oSymbolTblPopScope
-        oFixPopTargetAddress
-        oFixPopForwardBranch
-        .tWhileEnd;
+        .tWhileEnd
+        oFixPopTargetAddress            % emit and pop top of loop target address
+        oFixPopForwardBranch;           % patch exit branch instruction with correct address
 
 CaseStmt :
         .tCaseBegin
@@ -1892,18 +1879,13 @@ Operand :
                 oValuePop
             | sStringLiteral:
                 oValuePushStringLength
-                [ oValueChoose
-                    | zero:
-                        #eNullString
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                    | *:
-                        oSymbolStkPush(syExpression)
-                        oTypeStkPush(tpString)
-                        .tLiteralString
-                        oEmitValue      % string length
-                        oEmitString     % string value
-                ]
+
+                oSymbolStkPush(syExpression)
+                oTypeStkPush(tpString)
+                .tLiteralString
+                oEmitValue      % string length
+                oEmitString     % string value
+
                 oValuePop
             | sFile:
                 @Expression

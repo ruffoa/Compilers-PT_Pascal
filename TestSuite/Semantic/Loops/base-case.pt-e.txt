@@ -11,7 +11,6 @@ oEmitValue
 .tAssignInteger         // end i = 0
 .tWhileBegin            // loop start
 .tWhilePreBreak         // loop contents before break statement
-oEmitNullAddress        // null statement
 .tWhileBreakIf          // loop break conditions - i >= 5
 .tLiteralAddress        // address of i
 oEmitValue
@@ -21,6 +20,7 @@ oEmitValue
 .tGE                    // i >= 5
 .tNot                   // not sure why syntax calls for a not here, but okay
 .tWhileTest             // loop contents after break statement
+oEmitNullAddress        // temp address for exit branch        
 .tAssignBegin           // i += 1;
 .tLiteralAddress
 oEmitValue

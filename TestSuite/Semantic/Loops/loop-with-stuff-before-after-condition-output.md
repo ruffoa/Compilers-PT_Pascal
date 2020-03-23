@@ -107,8 +107,6 @@ Test output is:
     .tAssignInteger
    .tWhileBegin
    .tWhilePreBreak
-   oEmitNullAddress
-   % value emitted -32767
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -133,6 +131,8 @@ Test output is:
       .tEQ
    .tNot
    .tWhileTest
+   oEmitNullAddress
+   % value emitted -32767
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -146,8 +146,8 @@ Test output is:
         % value emitted 1
         .tAdd
       .tAssignInteger
-   % value emitted 27
    .tWhileEnd
+   % value emitted 26
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
