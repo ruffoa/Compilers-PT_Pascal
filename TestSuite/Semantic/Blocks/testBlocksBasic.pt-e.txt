@@ -27,7 +27,8 @@ oEmitValue         //value emitted is 1 (from the const)
     .tLiteralInteger
     oEmitValue          //value emitted 1
     .tAdd
-    .tAssignInteger     //value emitted after from the branching is 18
+    .tAssignInteger     
+.tWhileEend             //value emitted after from the branching is 18
 .tTrapBegin
 .tTrap
 oEmitTrapKind(trHalt)   //emits 0

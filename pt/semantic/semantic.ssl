@@ -1708,6 +1708,7 @@ WhileStmt :
         oEmitNullAddress                % exit branch
         oFixSwap                % top-of-loop target back on top
         @CallBlockWithScope
+        .tWhileEnd                      % add tWhileEnd token to keep consistent with loops
         oFixPopTargetAddress
         oFixPopForwardBranch;
 
@@ -1724,18 +1725,16 @@ LoopStmt :
         @BooleanControlExpression
         .tNot
         .tWhileTest
-        oFixPushForwardBranch
-        oEmitNullAddress                % exit branch
-        % oFixSwap                % top-of-loop target back on top
+        oFixPushForwardBranch           % push exit branch instruction with temp address
+        oEmitNullAddress                % temp address
+        oFixSwap                        % top-of-loop target back on top
         sBegin
         @Block
         sEnd
         oSymbolTblPopScope
         .tWhileEnd
-        oFixPopForwardBranch
-        oFixPopTargetAddress;
-        % oFixPopTargetAddress
-        % oFixPopForwardBranch;
+        oFixPopTargetAddress            % emit and pop top of loop target address
+        oFixPopForwardBranch;           % patch exit branch instruction with correct address
 
 CaseStmt :
         .tCaseBegin

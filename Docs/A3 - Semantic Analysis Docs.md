@@ -327,14 +327,10 @@ ProcedureDefinition :
     - Call `@Block` for the individual components of the loop
     - Add in support for `sLoopBreakIf` and output the correct tokens
 ```diff
-LoopStmt :
++   LoopStmt :
 +        .tWhileBegin
 +        .tWhilePreBreak
 +        oFixPushTargetAddress           % top-of-loop branch target
-+        .tRepeatControl
-+        oFixPushForwardBranch
-+        oEmitNullAddress                % exit branch
-+        oFixSwap                % top-of-loop target back on top
 +        sBegin
 +        oSymbolTblPushScope 
 +        @Block
@@ -344,14 +340,18 @@ LoopStmt :
 +        @BooleanControlExpression
 +        .tNot
 +        .tWhileTest
++        oFixPushForwardBranch          % push exit branch instruction with temp address
++        oEmitNullAddress               % temp address
++        oFixSwap                       % top-of-loop target back on top
 +        sBegin
 +        @Block
 +        sEnd
 +        oSymbolTblPopScope
-+        oFixPopTargetAddress
-+        oFixPopForwardBranch;
++        .tWhileEnd
++        oFixPopTargetAddress           % emit and pop top of loop target address
++        oFixPopForwardBranch;          % patch exit branch instruction with correct address
 ```
-
+- Added the `tWhileEnd` token to the end of the `WhileStmt` rule to keep consistant with the new `LoopStmt` rule.
 - Remove the `RepeatStmt` rule
 
 # Match Satement and Default
