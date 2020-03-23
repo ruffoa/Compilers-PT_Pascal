@@ -1739,9 +1739,9 @@ LoopStmt :
         @Block
         sEnd
         oSymbolTblPopScope
-        .tWhileEnd;
+        .tWhileEnd
         oFixPopTargetAddress
-        oFixPopForwardBranch
+        oFixPopForwardBranch;
 
 CaseStmt :
         .tCaseBegin
