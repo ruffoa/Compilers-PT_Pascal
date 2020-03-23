@@ -1713,8 +1713,8 @@ WhileStmt :
         oFixPopForwardBranch;
 
 LoopStmt :
-        .tWhileBegin
         oFixPushTargetAddress           % top-of-loop branch target
+        .tWhileBegin
         .tWhilePreBreak
         sBegin
         oSymbolTblPushScope 
