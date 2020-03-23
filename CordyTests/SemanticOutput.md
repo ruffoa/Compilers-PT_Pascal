@@ -392,7 +392,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 219
+   % value emitted 218
    .tWriteBegin
     .tTrapBegin
     .tLiteralAddress
@@ -517,7 +517,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 416
+     % value emitted 415
      .tWriteBegin
       .tTrapBegin
       .tLiteralAddress
@@ -561,7 +561,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 391
+   % value emitted 390
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -571,9 +571,8 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 219 !== % value emitted 218 on line 388 of boxes.pt
-% value emitted 416 !== % value emitted 413 on line 513 of boxes.pt
-% value emitted 391 !== % value emitted 388 on line 557 of boxes.pt
+% value emitted 415 !== % value emitted 413 on line 513 of boxes.pt
+% value emitted 390 !== % value emitted 388 on line 557 of boxes.pt
 
 ```
 end file
@@ -796,7 +795,7 @@ Output is:
      oEmitNullAddress
      % value emitted -32767
      .tWhileEnd
-     % value emitted 156
+     % value emitted 155
      .tTrapBegin
       .tLiteralAddress
       oEmitValue
@@ -920,7 +919,7 @@ Output is:
               .tAdd
             .tAssignInteger
         .tWhileEnd
-        % value emitted 257
+        % value emitted 254
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -935,7 +934,7 @@ Output is:
            .tSubtract
          .tAssignInteger
      .tWhileEnd
-     % value emitted 238
+     % value emitted 235
    .tProcedureEnd
     .tAssignBegin
      .tLiteralAddress
@@ -1029,7 +1028,7 @@ Output is:
    oEmitNullAddress
    % value emitted -32767
    .tWhileEnd
-   % value emitted 372
+   % value emitted 371
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -1059,10 +1058,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 156 !== % value emitted 155 on line 214 of bubblesort.pt
-% value emitted 257 !== % value emitted 255 on line 338 of bubblesort.pt
-% value emitted 238 !== % value emitted 236 on line 353 of bubblesort.pt
-% value emitted 372 !== % value emitted 369 on line 447 of bubblesort.pt
+% value emitted 254 !== % value emitted 255 on line 338 of bubblesort.pt
+% value emitted 235 !== % value emitted 236 on line 353 of bubblesort.pt
+% value emitted 371 !== % value emitted 369 on line 447 of bubblesort.pt
 % value emitted 223 !== % value emitted 221 on line 463 of bubblesort.pt
 
 ```
@@ -1293,7 +1291,7 @@ Output is:
      oEmitNullAddress
      % value emitted -32767
      .tWhileEnd
-     % value emitted 170
+     % value emitted 169
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -1352,7 +1350,7 @@ Output is:
          oEmitValue
          % value emitted 64
        .tWhileEnd
-       % value emitted 239
+       % value emitted 238
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -1420,7 +1418,7 @@ Output is:
      oEmitNullAddress
      % value emitted -32767
      .tWhileEnd
-     % value emitted 223
+     % value emitted 222
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -1597,7 +1595,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 435
+     % value emitted 434
    .tProcedureEnd
    .tSkipProc
    oEmitNullAddress
@@ -2124,7 +2122,7 @@ Output is:
              oEmitTrapKind(trReadln)
              % value emitted 4
            .tWhileEnd
-           % value emitted 929
+           % value emitted 928
         .tIfEnd
         .tIfBegin
             .tLiteralAddress
@@ -3651,7 +3649,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 2297
+     % value emitted 2296
      .tWhileBegin
      .tWhilePreBreak
      .tWhileBreakIf
@@ -3707,7 +3705,7 @@ Output is:
           .tSubtract
         .tAssignInteger
      .tWhileEnd
-     % value emitted 2433
+     % value emitted 2432
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -6388,7 +6386,7 @@ Output is:
          oEmitValue
          % value emitted 3262
        .tWhileEnd
-       % value emitted 5006
+       % value emitted 5005
        .tWhileBegin
        .tWhilePreBreak
        .tWhileBreakIf
@@ -6405,7 +6403,7 @@ Output is:
          oEmitValue
          % value emitted 2504
        .tWhileEnd
-       % value emitted 5028
+       % value emitted 5027
        .tCallBegin
           .tLiteralAddress
           oEmitValue
@@ -6416,7 +6414,7 @@ Output is:
        oEmitValue
        % value emitted 1357
      .tWhileEnd
-     % value emitted 4987
+     % value emitted 4986
      .tCallBegin
         .tLiteralAddress
         oEmitValue
@@ -6427,7 +6425,7 @@ Output is:
      oEmitValue
      % value emitted 625
    .tWhileEnd
-   % value emitted 4959
+   % value emitted 4958
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -6437,11 +6435,10 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 170 !== % value emitted 169 on line 221 of bust.pt
-% value emitted 239 !== % value emitted 236 on line 280 of bust.pt
-% value emitted 223 !== % value emitted 220 on line 348 of bust.pt
-% value emitted 435 !== % value emitted 428 on line 525 of bust.pt
-% value emitted 929 !== % value emitted 920 on line 1052 of bust.pt
+% value emitted 238 !== % value emitted 236 on line 280 of bust.pt
+% value emitted 222 !== % value emitted 220 on line 348 of bust.pt
+% value emitted 434 !== % value emitted 428 on line 525 of bust.pt
+% value emitted 928 !== % value emitted 920 on line 1052 of bust.pt
 % value emitted 514 !== % value emitted 506 on line 1182 of bust.pt
 % value emitted 514 !== % value emitted 506 on line 1390 of bust.pt
 % value emitted 389 !== % value emitted 383 on line 1450 of bust.pt
@@ -6467,8 +6464,8 @@ File diff
 % value emitted 2324 !== % value emitted 2314 on line 2543 of bust.pt
 % value emitted 2324 !== % value emitted 2314 on line 2544 of bust.pt
 % value emitted 2324 !== % value emitted 2314 on line 2545 of bust.pt
-% value emitted 2297 !== % value emitted 2286 on line 2579 of bust.pt
-% value emitted 2433 !== % value emitted 2420 on line 2635 of bust.pt
+% value emitted 2296 !== % value emitted 2286 on line 2579 of bust.pt
+% value emitted 2432 !== % value emitted 2420 on line 2635 of bust.pt
 % value emitted 2253 !== % value emitted 2243 on line 2678 of bust.pt
 % value emitted 2002 !== % value emitted 1992 on line 2864 of bust.pt
 % value emitted 514 !== % value emitted 506 on line 3057 of bust.pt
@@ -6490,13 +6487,13 @@ File diff
 % value emitted 1357 !== % value emitted 1347 on line 5283 of bust.pt
 % value emitted 2036 !== % value emitted 2026 on line 5299 of bust.pt
 % value emitted 3262 !== % value emitted 3248 on line 5314 of bust.pt
-% value emitted 5006 !== % value emitted 4991 on line 5316 of bust.pt
+% value emitted 5005 !== % value emitted 4991 on line 5316 of bust.pt
 % value emitted 2504 !== % value emitted 2490 on line 5331 of bust.pt
-% value emitted 5028 !== % value emitted 5011 on line 5333 of bust.pt
+% value emitted 5027 !== % value emitted 5011 on line 5333 of bust.pt
 % value emitted 1357 !== % value emitted 1347 on line 5342 of bust.pt
-% value emitted 4987 !== % value emitted 4972 on line 5344 of bust.pt
+% value emitted 4986 !== % value emitted 4972 on line 5344 of bust.pt
 % value emitted 625 !== % value emitted 617 on line 5353 of bust.pt
-% value emitted 4959 !== % value emitted 4944 on line 5355 of bust.pt
+% value emitted 4958 !== % value emitted 4944 on line 5355 of bust.pt
 
 ```
 end file
@@ -6739,7 +6736,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 161
+     % value emitted 158
    .tProcedureEnd
    .tSkipProc
    oEmitNullAddress
@@ -6890,7 +6887,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 297
+     % value emitted 294
    .tProcedureEnd
    .tSkipProc
    oEmitNullAddress
@@ -7007,7 +7004,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 407
+     % value emitted 404
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -7161,7 +7158,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 498
+     % value emitted 495
    .tProcedureEnd
    .tSkipProc
    oEmitNullAddress
@@ -7387,7 +7384,7 @@ Output is:
               .tAdd
             .tAssignInteger
         .tWhileEnd
-        % value emitted 760
+        % value emitted 757
          .tAssignBegin
           .tLiteralAddress
           oEmitValue
@@ -7402,7 +7399,7 @@ Output is:
            .tSubtract
          .tAssignInteger
      .tWhileEnd
-     % value emitted 725
+     % value emitted 722
    .tProcedureEnd
    .tSkipProc
    oEmitNullAddress
@@ -7523,7 +7520,7 @@ Output is:
             .tAssignInteger
         .tIfEnd
      .tWhileEnd
-     % value emitted 903
+     % value emitted 900
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -7975,7 +7972,7 @@ Output is:
          .tAdd
        .tAssignInteger
    .tWhileEnd
-   % value emitted 1371
+   % value emitted 1368
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -8242,7 +8239,7 @@ Output is:
          .tAdd
        .tAssignInteger
    .tWhileEnd
-   % value emitted 1621
+   % value emitted 1618
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -8301,7 +8298,7 @@ Output is:
          .tAdd
        .tAssignInteger
    .tWhileEnd
-   % value emitted 1669
+   % value emitted 1666
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -8563,7 +8560,7 @@ Output is:
          .tAdd
        .tAssignInteger
    .tWhileEnd
-   % value emitted 1905
+   % value emitted 1902
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -8713,7 +8710,18 @@ Output is:
 File diff
 -------------------------
 ```
+% value emitted 158 !== % value emitted 161 on line 234 of cache.pt
+% value emitted 294 !== % value emitted 297 on line 385 of cache.pt
+% value emitted 404 !== % value emitted 407 on line 502 of cache.pt
+% value emitted 495 !== % value emitted 498 on line 656 of cache.pt
+% value emitted 757 !== % value emitted 760 on line 882 of cache.pt
+% value emitted 722 !== % value emitted 725 on line 897 of cache.pt
+% value emitted 900 !== % value emitted 903 on line 1018 of cache.pt
 % .sNewLine !== % value emitted 54 on line 1084 of cache.pt
+% value emitted 1368 !== % value emitted 1371 on line 1470 of cache.pt
+% value emitted 1618 !== % value emitted 1621 on line 1737 of cache.pt
+% value emitted 1666 !== % value emitted 1669 on line 1796 of cache.pt
+% value emitted 1902 !== % value emitted 1905 on line 2058 of cache.pt
 
 ```
 end file
@@ -8905,7 +8913,7 @@ Output is:
      oEmitTrapKind(trReadln)
      % value emitted 4
    .tWhileEnd
-   % value emitted 95
+   % value emitted 94
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -8914,10 +8922,8 @@ Output is:
 ```
 File diff
 -------------------------
-```
-% value emitted 95 !== % value emitted 94 on line 183 of double.pt
 
-```
+Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file francais.pt
@@ -9995,7 +10001,7 @@ Output is:
      oEmitTrapKind(trReadln)
      % value emitted 4
    .tWhileEnd
-   % value emitted 16
+   % value emitted 15
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -10004,10 +10010,8 @@ Output is:
 ```
 File diff
 -------------------------
-```
-% value emitted 16 !== % value emitted 15 on line 1071 of francais.pt
 
-```
+Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file helloworld.pt
@@ -11003,7 +11007,7 @@ Output is:
           .tSubtract
         .tAssignInteger
      .tWhileEnd
-     % value emitted 729
+     % value emitted 728
      .tIfBegin
          .tLiteralAddress
          oEmitValue
@@ -11126,7 +11130,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 574
+   % value emitted 573
    .tTrapBegin
     .tLiteralAddress
     oEmitValue
@@ -11337,11 +11341,8 @@ Output is:
 ```
 File diff
 -------------------------
-```
-% value emitted 729 !== % value emitted 728 on line 926 of lunch.pt
-% value emitted 574 !== % value emitted 573 on line 1049 of lunch.pt
 
-```
+Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file mbubblesort.pt
@@ -11544,7 +11545,7 @@ Output is:
        oEmitNullAddress
        % value emitted -32767
        .tWhileEnd
-       % value emitted 138
+       % value emitted 137
        .tTrapBegin
         .tLiteralAddress
         oEmitValue
@@ -11647,7 +11648,7 @@ Output is:
      oEmitNullAddress
      % value emitted -32767
      .tWhileEnd
-     % value emitted 225
+     % value emitted 224
    .tSkipProc
    oEmitNullAddress
    % value emitted -32767
@@ -11767,7 +11768,7 @@ Output is:
             .tAdd
           .tAssignInteger
        .tWhileEnd
-       % value emitted 334
+       % value emitted 333
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -11782,7 +11783,7 @@ Output is:
           .tSubtract
         .tAssignInteger
      .tWhileEnd
-     % value emitted 310
+     % value emitted 309
    .tProcedureEnd
    .tCallBegin
    .tCallEnd
@@ -11805,10 +11806,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 138 !== % value emitted 137 on line 196 of mbubblesort.pt
-% value emitted 225 !== % value emitted 222 on line 299 of mbubblesort.pt
-% value emitted 334 !== % value emitted 331 on line 419 of mbubblesort.pt
-% value emitted 310 !== % value emitted 307 on line 434 of mbubblesort.pt
+% value emitted 224 !== % value emitted 222 on line 299 of mbubblesort.pt
+% value emitted 333 !== % value emitted 331 on line 419 of mbubblesort.pt
+% value emitted 309 !== % value emitted 307 on line 434 of mbubblesort.pt
 % value emitted 294 !== % value emitted 292 on line 443 of mbubblesort.pt
 
 ```
@@ -12050,7 +12050,7 @@ Output is:
        oEmitNullAddress
        % value emitted -32767
        .tWhileEnd
-       % value emitted 187
+       % value emitted 186
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -12109,7 +12109,7 @@ Output is:
            oEmitValue
            % value emitted 64
          .tWhileEnd
-         % value emitted 256
+         % value emitted 255
           .tAssignBegin
            .tLiteralAddress
            oEmitValue
@@ -12177,7 +12177,7 @@ Output is:
        oEmitNullAddress
        % value emitted -32767
        .tWhileEnd
-       % value emitted 240
+       % value emitted 239
         .tAssignBegin
          .tLiteralAddress
          oEmitValue
@@ -12368,7 +12368,7 @@ Output is:
             .tAdd
           .tAssignInteger
        .tWhileEnd
-       % value emitted 464
+       % value emitted 463
      .tProcedureEnd
       .tAssignBegin
        .tLiteralAddress
@@ -13091,7 +13091,7 @@ Output is:
              oEmitTrapKind(trReadln)
              % value emitted 4
            .tWhileEnd
-           % value emitted 1128
+           % value emitted 1127
         .tIfEnd
         .tIfBegin
             .tLiteralAddress
@@ -14618,7 +14618,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 2496
+     % value emitted 2495
      .tWhileBegin
      .tWhilePreBreak
      .tWhileBreakIf
@@ -14674,7 +14674,7 @@ Output is:
           .tSubtract
         .tAssignInteger
      .tWhileEnd
-     % value emitted 2632
+     % value emitted 2631
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -17144,7 +17144,7 @@ Output is:
          oEmitValue
          % value emitted 3461
        .tWhileEnd
-       % value emitted 5020
+       % value emitted 5019
        .tWhileBegin
        .tWhilePreBreak
        .tWhileBreakIf
@@ -17161,7 +17161,7 @@ Output is:
          oEmitValue
          % value emitted 2703
        .tWhileEnd
-       % value emitted 5042
+       % value emitted 5041
        .tCallBegin
           .tLiteralAddress
           oEmitValue
@@ -17172,7 +17172,7 @@ Output is:
        oEmitValue
        % value emitted 1556
      .tWhileEnd
-     % value emitted 5001
+     % value emitted 5000
      .tCallBegin
         .tLiteralAddress
         oEmitValue
@@ -17183,7 +17183,7 @@ Output is:
      oEmitValue
      % value emitted 824
    .tWhileEnd
-   % value emitted 4973
+   % value emitted 4972
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -17193,12 +17193,11 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 187 !== % value emitted 186 on line 232 of mbust.pt
-% value emitted 256 !== % value emitted 253 on line 291 of mbust.pt
-% value emitted 240 !== % value emitted 237 on line 359 of mbust.pt
-% value emitted 464 !== % value emitted 457 on line 550 of mbust.pt
+% value emitted 255 !== % value emitted 253 on line 291 of mbust.pt
+% value emitted 239 !== % value emitted 237 on line 359 of mbust.pt
+% value emitted 463 !== % value emitted 457 on line 550 of mbust.pt
 % .sNewLine !== % value emitted 54 on line 640 of mbust.pt
-% value emitted 1128 !== % value emitted 1119 on line 1273 of mbust.pt
+% value emitted 1127 !== % value emitted 1119 on line 1273 of mbust.pt
 % value emitted 713 !== % value emitted 705 on line 1403 of mbust.pt
 % value emitted 713 !== % value emitted 705 on line 1611 of mbust.pt
 % value emitted 406 !== % value emitted 400 on line 1671 of mbust.pt
@@ -17224,8 +17223,8 @@ File diff
 % value emitted 2523 !== % value emitted 2513 on line 2764 of mbust.pt
 % value emitted 2523 !== % value emitted 2513 on line 2765 of mbust.pt
 % value emitted 2523 !== % value emitted 2513 on line 2766 of mbust.pt
-% value emitted 2496 !== % value emitted 2485 on line 2800 of mbust.pt
-% value emitted 2632 !== % value emitted 2619 on line 2856 of mbust.pt
+% value emitted 2495 !== % value emitted 2485 on line 2800 of mbust.pt
+% value emitted 2631 !== % value emitted 2619 on line 2856 of mbust.pt
 % value emitted 2452 !== % value emitted 2442 on line 2899 of mbust.pt
 % value emitted 2201 !== % value emitted 2191 on line 3085 of mbust.pt
 % value emitted 713 !== % value emitted 705 on line 3278 of mbust.pt
@@ -17246,13 +17245,13 @@ File diff
 % value emitted 1556 !== % value emitted 1546 on line 5293 of mbust.pt
 % value emitted 2235 !== % value emitted 2225 on line 5309 of mbust.pt
 % value emitted 3461 !== % value emitted 3447 on line 5324 of mbust.pt
-% value emitted 5020 !== % value emitted 5005 on line 5326 of mbust.pt
+% value emitted 5019 !== % value emitted 5005 on line 5326 of mbust.pt
 % value emitted 2703 !== % value emitted 2689 on line 5341 of mbust.pt
-% value emitted 5042 !== % value emitted 5025 on line 5343 of mbust.pt
+% value emitted 5041 !== % value emitted 5025 on line 5343 of mbust.pt
 % value emitted 1556 !== % value emitted 1546 on line 5352 of mbust.pt
-% value emitted 5001 !== % value emitted 4986 on line 5354 of mbust.pt
+% value emitted 5000 !== % value emitted 4986 on line 5354 of mbust.pt
 % value emitted 824 !== % value emitted 816 on line 5363 of mbust.pt
-% value emitted 4973 !== % value emitted 4958 on line 5365 of mbust.pt
+% value emitted 4972 !== % value emitted 4958 on line 5365 of mbust.pt
 
 ```
 end file
@@ -17399,7 +17398,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 98
+     % value emitted 95
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -17489,7 +17488,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 185
+     % value emitted 184
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -17566,7 +17565,7 @@ Output is:
        oEmitValue
        % value emitted 62
      .tWhileEnd
-     % value emitted 255
+     % value emitted 254
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -17577,7 +17576,7 @@ Output is:
          .tFetchInteger
       .tAssignInteger
    .tWhileEnd
-   % value emitted 155
+   % value emitted 154
    .tWriteBegin
      .tTrapBegin
      .tLiteralAddress
@@ -17744,7 +17743,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 398
+   % value emitted 397
    .tTrapBegin
     .tLiteralAddress
     oEmitValue
@@ -17763,10 +17762,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 185 !== % value emitted 184 on line 228 of mprimes.pt
-% value emitted 255 !== % value emitted 252 on line 305 of mprimes.pt
-% value emitted 155 !== % value emitted 154 on line 316 of mprimes.pt
-% value emitted 398 !== % value emitted 391 on line 483 of mprimes.pt
+% value emitted 95 !== % value emitted 98 on line 138 of mprimes.pt
+% value emitted 254 !== % value emitted 252 on line 305 of mprimes.pt
+% value emitted 397 !== % value emitted 391 on line 483 of mprimes.pt
 
 ```
 end file
@@ -17944,7 +17942,7 @@ Output is:
    oEmitNullAddress
    % value emitted -32767
    .tWhileEnd
-   % value emitted 123
+   % value emitted 122
    .tWriteBegin
      .tTrapBegin
      .tLiteralAddress
@@ -18027,7 +18025,7 @@ Output is:
            .tSubtract
          .tAssignInteger
      .tWhileEnd
-     % value emitted 212
+     % value emitted 209
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -18089,7 +18087,7 @@ Output is:
            .tAdd
          .tAssignInteger
      .tWhileEnd
-     % value emitted 256
+     % value emitted 253
      .tTrapBegin
       .tLiteralAddress
       oEmitValue
@@ -18126,7 +18124,7 @@ Output is:
    oEmitNullAddress
    % value emitted -32767
    .tWhileEnd
-   % value emitted 200
+   % value emitted 199
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -18136,10 +18134,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 123 !== % value emitted 122 on line 169 of pascal.pt
-% value emitted 212 !== % value emitted 210 on line 252 of pascal.pt
-% value emitted 256 !== % value emitted 254 on line 314 of pascal.pt
-% value emitted 200 !== % value emitted 197 on line 351 of pascal.pt
+% value emitted 209 !== % value emitted 210 on line 252 of pascal.pt
+% value emitted 253 !== % value emitted 254 on line 314 of pascal.pt
+% value emitted 199 !== % value emitted 197 on line 351 of pascal.pt
 
 ```
 end file
@@ -18229,7 +18226,7 @@ Output is:
          .tAdd
        .tAssignInteger
    .tWhileEnd
-   % value emitted 41
+   % value emitted 38
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -18320,7 +18317,7 @@ Output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 128
+     % value emitted 127
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -18399,7 +18396,7 @@ Output is:
            .tFetchBoolean
         .tAssignBoolean
      .tWhileEnd
-     % value emitted 200
+     % value emitted 199
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -18410,7 +18407,7 @@ Output is:
          .tFetchInteger
       .tAssignInteger
    .tWhileEnd
-   % value emitted 98
+   % value emitted 97
    .tWriteBegin
      .tTrapBegin
      .tLiteralAddress
@@ -18578,7 +18575,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 344
+   % value emitted 343
    .tTrapBegin
     .tLiteralAddress
     oEmitValue
@@ -18597,10 +18594,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 128 !== % value emitted 127 on line 172 of primes.pt
-% value emitted 200 !== % value emitted 197 on line 251 of primes.pt
-% value emitted 98 !== % value emitted 97 on line 262 of primes.pt
-% value emitted 344 !== % value emitted 337 on line 430 of primes.pt
+% value emitted 38 !== % value emitted 41 on line 81 of primes.pt
+% value emitted 199 !== % value emitted 197 on line 251 of primes.pt
+% value emitted 343 !== % value emitted 337 on line 430 of primes.pt
 
 ```
 end file
@@ -18706,7 +18702,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 27
+   % value emitted 26
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
@@ -18715,10 +18711,8 @@ Output is:
 ```
 File diff
 -------------------------
-```
-% value emitted 27 !== % value emitted 26 on line 97 of stars.pt
 
-```
+Test output matches the expected output! :heavy_check_mark:
 end file
 --------------------------------
 Reading file treesort.pt
@@ -19053,7 +19047,7 @@ Output is:
         oEmitNullAddress
         % value emitted -32767
         .tWhileEnd
-        % value emitted 133
+        % value emitted 132
      .tIfEnd
       .tAssignBegin
        .tLiteralAddress
@@ -19295,7 +19289,7 @@ Output is:
      oEmitNullAddress
      % value emitted -32767
      .tWhileEnd
-     % value emitted 379
+     % value emitted 378
      .tTrapBegin
       .tLiteralAddress
       oEmitValue
@@ -19385,7 +19379,7 @@ Output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 577
+   % value emitted 576
     .tAssignBegin
      .tLiteralAddress
      oEmitValue
@@ -19529,7 +19523,7 @@ Output is:
    oEmitNullAddress
    % value emitted -32767
    .tWhileEnd
-   % value emitted 734
+   % value emitted 733
    .tCallBegin
    .tCallEnd
    oEmitValue
@@ -19543,10 +19537,9 @@ Output is:
 File diff
 -------------------------
 ```
-% value emitted 133 !== % value emitted 132 on line 328 of treesort.pt
-% value emitted 379 !== % value emitted 376 on line 570 of treesort.pt
-% value emitted 577 !== % value emitted 572 on line 660 of treesort.pt
-% value emitted 734 !== % value emitted 727 on line 804 of treesort.pt
+% value emitted 378 !== % value emitted 376 on line 570 of treesort.pt
+% value emitted 576 !== % value emitted 572 on line 660 of treesort.pt
+% value emitted 733 !== % value emitted 727 on line 804 of treesort.pt
 % value emitted 337 !== % value emitted 335 on line 808 of treesort.pt
 
 ```

@@ -147,7 +147,7 @@ Test output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 27
+   % value emitted 26
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)

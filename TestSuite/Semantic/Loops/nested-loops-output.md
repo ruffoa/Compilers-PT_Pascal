@@ -165,7 +165,7 @@ Test output is:
           .tAdd
         .tAssignInteger
      .tWhileEnd
-     % value emitted 43
+     % value emitted 42
       .tAssignBegin
        .tLiteralAddress
        oEmitValue
@@ -180,7 +180,7 @@ Test output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 19
+   % value emitted 18
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
