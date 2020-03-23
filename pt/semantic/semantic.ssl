@@ -1723,7 +1723,6 @@ LoopStmt :
         .tWhileBegin
         .tWhilePreBreak
         oFixPushTargetAddress           % top-of-loop branch target
-        oFixPushForwardBranch
         sBegin
         oSymbolTblPushScope 
         @Block
@@ -1733,6 +1732,7 @@ LoopStmt :
         @BooleanControlExpression
         .tNot
         .tWhileTest
+        oFixPushForwardBranch
         oEmitNullAddress                % exit branch
         oFixSwap                % top-of-loop target back on top
         sBegin
