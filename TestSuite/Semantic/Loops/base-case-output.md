@@ -108,17 +108,15 @@ Test output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
+   % value emitted 19
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
  % value emitted 0
-### Semantic assertion 34 failed: invalid code address patch (missing oEmitNullAddress after branch instruction)
 
 ```
 
 
-Warning, output length does not match (38 vs 37)!  (Newlines are not the issue here!) `base-case.pt`
-Showing as much of the diff as possible...
 
 File diff
 -------------------------
