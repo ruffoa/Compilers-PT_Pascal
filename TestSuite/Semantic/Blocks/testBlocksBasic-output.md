@@ -120,7 +120,9 @@ Test output is:
 File diff
 -------------------------
 ```diff
--.tWhileEnd !== .tWhileEend on line 30 of testBlocksBasic.pt
+
+```
+Test output matches the expected output! :heavy_check_mark:
 
 ```
 end file
