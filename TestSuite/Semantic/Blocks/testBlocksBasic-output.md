@@ -106,6 +106,7 @@ Test output is:
          % value emitted 1
          .tAdd
        .tAssignInteger
+   .tWhileEnd
    % value emitted 18
  .tTrapBegin
  .tTrap
@@ -119,9 +120,7 @@ Test output is:
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tWhileEnd !== .tWhileEend on line 30 of testBlocksBasic.pt
 
 ```
 end file
