@@ -1706,7 +1706,7 @@ WhileStmt :
         .tWhileTest
         oFixPushForwardBranch
         oEmitNullAddress                % exit branch
-        oFixSwap                % top-of-loop target back on top
+        oFixSwap                        % top-of-loop target back on top
         @CallBlockWithScope
         .tWhileEnd                      % add tWhileEnd token to keep consistent with loops
         oFixPopTargetAddress
