@@ -1879,18 +1879,6 @@ Operand :
                 oValuePop
             | sStringLiteral:
                 oValuePushStringLength
-                % [ oValueChoose
-                %     | zero:
-                %         #eNullString
-                %         oSymbolStkPush(syExpression)
-                %         oTypeStkPush(tpString)
-                %     | *:
-                %         oSymbolStkPush(syExpression)
-                %         oTypeStkPush(tpString)
-                %         .tLiteralString
-                %         oEmitValue      % string length
-                %         oEmitString     % string value
-                % ]
 
                 oSymbolStkPush(syExpression)
                 oTypeStkPush(tpString)
