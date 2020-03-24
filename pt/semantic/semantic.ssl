@@ -915,12 +915,13 @@ ConstantValue :         % An identifier token has just been accepted
 
                 .tAssignBegin           %% perform the assignment
                 .tLiteralAddress
-                oValuePushSymbol
+                oValuePushSymbol        % string identifier
                 oEmitValue
                 oValuePop
                 oTypeStkPushSymbol
+
                 oValuePushStringLength
-                oSymbolStkPush(syExpression)
+                oSymbolStkPush(syExpression)    
                 oTypeStkPush(tpString)
                 .tLiteralString
                 oEmitValue      % string length
@@ -992,7 +993,7 @@ TypeBody :
                         ]
                 ]
                 oValuePop       % subrange upper
-                oValuePop       %          lower bound-----
+                oValuePop       % lower bound-----
                 oSymbolStkPop
         ]
         % If it's a new type, enter it in the Type Table
@@ -1018,8 +1019,8 @@ IndexType :
                 @ValuePushValuePlusOne
         	oTypeStkEnterBounds
         ]
-        oValuePop       % subrange upper
-        oValuePop;      %          lower bound
+        oValuePop       % subrange upper bound
+        oValuePop;      % lower bound
 
 ComponentType :
         % Accept and fill in an  array or file component type
@@ -1080,10 +1081,10 @@ SimpleType :
                         oValuePush(one)
                         oValuePush(one)
                 ]
-            | sRange:   % subrange specification
-                oValuePush(one)
+            | sRange:                      % subrange specification
+                oValuePush(one)            % push lower bound
                 oSymbolStkPush(syConstant)
-                @SubrangeUpperBound        % pushes value on value stack
+                @SubrangeUpperBound        % pushes upper bound on to value stack
             | *:
                 #eSimpleTypeReqd
                 @SymbolStkPushDefaultIntegerType
@@ -1162,7 +1163,7 @@ VariableDeclarations :
                         oValuePush(one)
                         oTypeStkPushSymbol
                         oValuePop       % subrange upper
-                        oValuePop       %          lower bound-----
+                        oValuePop       % lower bound
                         oSymbolStkPop
                         @TypeTblEnterIfNew
                         @EnterVariableAttributes
@@ -1290,7 +1291,7 @@ ModuleDefinition:
                 % identifier already in use
         ]
 
-        oSymbolStkSetKind(syModule)
+        oSymbolStkSetKind(syModule)         % set symbol kind to be a module
         oSymbolStkEnterCodeAddress
         oTypeStkPush(tpNull)
         oTypeStkSetRecursionFlag(yes)
@@ -1300,7 +1301,7 @@ ModuleDefinition:
 
         oSymbolTblPushScope         % module scope
         
-        sBegin @Block sEnd
+        sBegin @Block sEnd          % module contents
         
         oSymbolTblUpdate
         oSymbolStkPop
@@ -1345,14 +1346,14 @@ ProcedureDefinition :
 
         @ProcedureHeading
         
-        sBegin @Block sEnd
+        sBegin @Block sEnd      % procedure contents
 
         oSymbolTblUpdate
         oSymbolStkPop
         oTypeStkSetRecursionFlag(no)
         oTypeTblUpdate
         oTypeStkPop
-        oSymbolTblPopScope
+        oSymbolTblPopScope      % pop procedure scope
 
         .tProcedureEnd
         oFixPopForwardBranch;   % fix branch around procedure above
@@ -1697,8 +1698,8 @@ WhileStmt :
         oFixSwap                        % top-of-loop target back on top
         @CallBlockWithScope
         .tWhileEnd                      % add tWhileEnd token to keep consistent with loops
-        oFixPopTargetAddress
-        oFixPopForwardBranch;
+        oFixPopTargetAddress            % branch instruction for top-of-loop address
+        oFixPopForwardBranch;           % fix exit branch instruction with correct address
 
 LoopStmt :
         .tWhileBegin
@@ -1721,7 +1722,7 @@ LoopStmt :
         sEnd
         oSymbolTblPopScope
         .tWhileEnd
-        oFixPopTargetAddress            % emit and pop top of loop target address
+        oFixPopTargetAddress            % emit and pop top of loop target address for backward branch
         oFixPopForwardBranch;           % patch exit branch instruction with correct address
 
 CaseStmt :
@@ -1906,7 +1907,7 @@ UnaryOperator :
                 @CompareAndSwapTypes
                 oTypeStkPop
             | sLength:
-                .tLength
+                .tLength                
                 oTypeStkPush(tpInteger) % result type
                 oTypeStkSwap            % swap tpString to top of stack
                 oTypeStkPop             % pop tpString from type stack leaving result type
@@ -1924,14 +1925,14 @@ BinaryOperator :
             | sAdd:
                 @CompareAndSwapTypes
                 [ oTypeStkChooseKind
-                    | tpString:
+                    | tpString:                     % string concatenation
                         .tConcatenate
                         oTypeStkPush(tpString)      % push result type
                     | tpInteger:
                         .tAdd
                         oTypeStkPush(tpInteger)     % push result type
                 ]
-                @CompareOperandAndResultTypes
+                @CompareOperandAndResultTypes       % compare result and operand types to make sure they are compatible
             | sSubtract:
                 .tSubtract
                 oTypeStkPush(tpInteger)
@@ -1958,9 +1959,9 @@ BinaryOperator :
                 @CompareEqualityOperandTypes
             | sNE:
                 [ oTypeStkChooseKind
-                    | tpString:
+                    | tpString:         % string not equal
                         .tStringEqual
-                        .tNot
+                        .tNot           % invert the output of the string equality check
                     | *:
                         .tNE
                 ]
@@ -1984,9 +1985,9 @@ BinaryOperator :
                         .tMultiply
                         oTypeStkPush(tpInteger)         % push result type
                         @CompareOperandAndResultTypes
-                    | tpString:
+                    | tpString:                         % string repetition
                         .tRepeatString
-                        oTypeStkSwap                    % swap again so integer is top
+                        oTypeStkSwap                    % swap again so integer is top (right operand)
                         oTypeStkPop                     % pop integer type so we are left with string type which is the result type
                         oSymbolStkPop
                         oSymbolStkSetKind(syExpression)
