@@ -1,7 +1,7 @@
 # CMPE 458 – A3 Semantic Analysis Docs
 Alex Ruffo – 10180070, David Findlay – 10187718
 ----------------------------------------------------------------------------
-The following documents all changes made to semantic.ssl structured according to the sections outlined in the A3 handout.
+The following documents all changes made to semantic.ssl and semantic.pt structured according to the sections outlined in the A3 handout.
 
 # Programs
 - Updated the input token list to the semantic phase to match the output tokens from the parser phase.
