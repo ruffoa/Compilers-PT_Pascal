@@ -14,12 +14,14 @@ const ptHomePath = path.join(__dirname, `../pt/`);
 
 const phaseMap = {
     'Scanner': '1',
-    'Parser': '2'
+    'Parser': '2',
+    'Semantic': '3'
 };
 
 const defMap = {
     'Scanner': 'scan',
-    'Parser': 'parser'
+    'Parser': 'parser',
+    'Semantic': 'semantic'
 };
 
 const outputMap = {
@@ -33,6 +35,8 @@ const phaseNum = phaseMap[segment];
 const defName = defMap[segment];
 
 const nLineTokenNumber = getNewLineNumber();
+
+let passed = true;
 
 function getNewLineNumber() {
     const parserDefs = fs.readFileSync(`${ptHomePath}parser/parser.pt`, 'utf-8').trim();
@@ -60,7 +64,9 @@ async function findAllFilesInDir() {
             
             core.endGroup();
         }
-    }          
+    }
+    
+    core.exportVariable('cordyTests', passed ? '0' : '1');  // throw an non-zero exit code if it failed!
 }
 
 async function runFile(file) {
@@ -144,7 +150,7 @@ function compareResults(content, file) {
     for (var i = 0; i < smallerOutput; i++) {
         // console.log(expectedOutput[i], testOutput[i]);
 
-        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].split('//')[0].trim().split(' ')[0].trim() && testOutput[i].trim() !== expectedOutput[i].split('//')[0].trim()) {
+        if (outputMap[testOutput[i].trim()] !== expectedOutput[i].split('//')[0].trim().split('\'')[0].split(' ')[0].split('"')[0].trim() && testOutput[i].trim() !== expectedOutput[i].split('//')[0].split('\'')[0].split('"')[0].trim()) {
             console.error(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             // core.setFailed(`${outputMap[testOutput[i].trim()] ? outputMap[testOutput[i].trim()] : testOutput[i]} !== ${expectedOutput[i]} on line ${i} of ${file}`);
             
@@ -159,6 +165,7 @@ function compareResults(content, file) {
     } else {
         output += diffStr;
         output += '\n```\n';
+        passed = false;
     }
 
     stream.write(output);

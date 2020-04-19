@@ -19,17 +19,17 @@ mod main (input, output) {
     top = ""; middle = ""; bottom = "";
     let mut i = 0;
     loop {
-	break if i > width * Nacross ;
-	if i % width == 0 {
-	    top += " ";
-	    middle += "|";
-	    bottom += "|";
-	} else {
-	    top += "_";
-	    middle += " ";
-	    bottom += "_";
-	}
-	i += 1;
+		break if i > width * Nacross ;
+		if i % width == 0 {
+			top += " ";
+			middle += "|";
+			bottom += "|";
+		} else {
+			top += "_";
+			middle += " ";
+			bottom += "_";
+		}
+		i += 1;
     }
 
     // Now outprint the whole thing

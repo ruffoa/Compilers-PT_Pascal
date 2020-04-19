@@ -1,0 +1,1 @@
+The purpose of this test is to verify that functions declared as public should be callable from outside of the module.

@@ -19,6 +19,10 @@ if [ "$1" != "" ]; then
         DIR="Parser"
         SEGMENT="-o2 -t2"
         DEF_FILE="parser.def"
+    elif [ "$1" == "semantic" ] || [ "$1" == "Semantic" ]; then 
+        DIR="Semantic"
+        SEGMENT="-o3 -t3"
+        DEF_FILE="semantic.def"
     else
         echo "Sorry, directory does not exist, or tests have not yet been implemented yet"
     fi

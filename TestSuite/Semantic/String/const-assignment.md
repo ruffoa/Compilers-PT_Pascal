@@ -1,0 +1,1 @@
+This is to test that Qust const strings work, and that they are properly inserted into the symbol table

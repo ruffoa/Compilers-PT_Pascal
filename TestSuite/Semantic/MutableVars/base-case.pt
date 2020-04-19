@@ -1,0 +1,4 @@
+mod main (output) { 
+    let mut i = 1;
+    i += 1;
+}

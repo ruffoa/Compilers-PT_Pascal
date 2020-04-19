@@ -1,0 +1,1 @@
+The purpose of this test is to verify that variables declared within a module are not visible outside the module.

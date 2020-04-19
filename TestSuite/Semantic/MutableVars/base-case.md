@@ -1,0 +1,1 @@
+This is to check that mutable vars are recognized by the compiler

@@ -1,0 +1,6 @@
+mod main (output) {  
+    let mut c: bool;
+    c = false;
+    let mut d: int;
+    d = 1;
+}

@@ -1,0 +1,5 @@
+mod main (output) {
+    let mut b : bool;
+
+    b = "Hello" != "Test";
+}

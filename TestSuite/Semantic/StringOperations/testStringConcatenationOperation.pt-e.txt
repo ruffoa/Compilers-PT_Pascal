@@ -1,0 +1,19 @@
+.tLiteralInteger
+oEmitValue          //value emitted is 2
+.tLiteralAddress
+oEmitDataAddress    //value emitted is 0
+.tFileDescriptor
+.tAssignBegin
+.tLiteralAddress
+oEmitValue          // value emitted 4
+.tLiteralString
+oEmitValue          // string length is 7
+oEmitString         // "Hello, "
+.tLiteralString
+oEmitValue          // string length is 6
+oEmitString         // "World!"
+.tConcatenate
+.tAssignString
+.tTrapBegin
+.tTrap
+oEmitTrapKind(trHalt)

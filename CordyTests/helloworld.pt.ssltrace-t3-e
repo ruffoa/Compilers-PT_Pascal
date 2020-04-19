@@ -1,0 +1,51 @@
+   .tLiteralInteger         // a literal integer value - http://cisc458.caslab.queensu.ca/forum/viewtopic.php?f=10&t=226&p=642#p642
+   oEmitValue               // emit value 2
+   % value emitted 2
+   .tLiteralAddress         // a address value
+   oEmitDataAddress         // address 0 (the starting one!)
+   % value emitted 0        // value of address emmited
+   .tFileDescriptor         // this file?
+   .tWriteBegin             // the print() function
+     .tTrapBegin            // setup call to print function
+     .tLiteralAddress       // address (0)
+     oEmitValue
+     % value emitted 0
+     .tVarParm              // extra parameters for print?
+     .tParmEnd              // end parameters for print?
+       .tLiteralString      // "Hello world"
+       oEmitValue
+       % value emitted 11   // integer value of string reference in memory table? 
+       oEmitString          // emit the actual string value
+       % value emitted 72   'h'
+       % value emitted 101  "e"
+       % value emitted 108  "l"
+       % value emitted 108  'l'
+       % value emitted 111  'o'
+       % value emitted 32   ' '
+       % value emitted 119  'w'
+       % value emitted 111  'o'
+       % value emitted 114  'r'
+       % value emitted 108  'l'
+       % value emitted 100  'd'
+     .tParmEnd              // end the string parameters
+      .tLiteralInteger
+      oEmitValue
+      % value emitted 1
+      .tParmEnd             // end the parameters for print()
+      .tTrap                // hit the trap (call the function)
+      oEmitTrapKind(trWriteString)  // of type print()
+      % value emitted 109   // value of function call in table
+    .tWriteEnd        // end the setup for the print() call
+   .tTrapBegin        // println() call
+    .tLiteralAddress  // address of the file variable of the write stream
+    oEmitValue        // address pf the file stream - http://cisc458.caslab.queensu.ca/forum/viewtopic.php?f=10&t=226&p=642#p641
+    % value emitted 0
+    .tVarParm         // println() params
+    .tParmEnd         // end params for println()
+   .tTrap             // call the function (I think?)
+   oEmitTrapKind(trWriteln) // reference to println() (I think?)
+   % value emitted 6
+ .tTrapBegin          // begin "end of program" trap
+ .tTrap               // hit the end of program trap
+ oEmitTrapKind(trHalt)  // halt - end of program
+ % value emitted 0    // exit cleanly with code 0

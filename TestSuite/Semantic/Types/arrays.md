@@ -1,0 +1,1 @@
+This is to check that Qust array declarations work properly

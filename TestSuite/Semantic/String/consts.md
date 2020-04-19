@@ -1,0 +1,1 @@
+This is to test that Qust const strings work, and that the output should be the exact same as a equivalent let declaration

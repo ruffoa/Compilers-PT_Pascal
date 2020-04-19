@@ -1,0 +1,8 @@
+mod main (output) {
+    const ONE = 1;
+    let mut a : int;
+    a = ONE;
+    while (a < 5){
+        a += 1;
+    }
+}
