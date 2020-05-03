@@ -730,7 +730,7 @@ program Coder (output, coderSsl, tCode, object, options);
                         assert18:
                             write ('compound token tCode is not tLiteralInteger in oOperandPushInteger');
                         assert19:
-                            write ('compound token tCode is not tLiteralChar in oOperandPushChar');
+                            write ('compound token tCode is not tLiteralString in oOperandPushString');
                         assert20:
                             write ('compound token tCode is not tLiteralBoolean in oOperandPushBoolean');
                         assert21:
@@ -1837,7 +1837,7 @@ program Coder (output, coderSsl, tCode, object, options);
                     nextTCodeAddress := nextTCodeAddress + 1;
 
                     case compoundToken of
-                        tLiteralAddress, tLiteralInteger, tLiteralChar,
+                        tLiteralAddress, tLiteralInteger, tLiteralString,
                         tLiteralBoolean, tStringDescriptor, tSkipString,
                         tWhileTest, tWhileEnd, tRepeatTest, tCallEnd,
                         tLineNumber, tTrap, tIfThen, tIfMerge, tSkipProc,
@@ -2226,9 +2226,9 @@ program Coder (output, coderSsl, tCode, object, options);
                             OperandPush (mManifest, compoundTokenValue, undefined, word)
                         end;
 
-                    oOperandPushChar:
+                    oOperandPushString:
                         begin
-                            Assert ( (compoundToken = tLiteralChar), assert19);
+                            Assert ( (compoundToken = tLiteralString), assert19);
                             OperandPush (mManifest, compoundTokenValue, undefined, byte)
                         end;
 
