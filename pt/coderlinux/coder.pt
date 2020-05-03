@@ -748,7 +748,7 @@ program Coder (output, coderSsl, tCode, object, options);
                         assert27:
                             write ('compound token tCode is not tCallEnd in oOperandPushProcedure');
                         assert28:
-                            write ('compound token tCode is not tStringDescriptor in oOperandPushStringDescriptor');
+                            write ('compound token tCode is not tLiteralString in oOperandPushStringDescriptor');
                         assert29:
                             write ('less than two operands in operand stack in oOperandFoldManifestSubscript');
                         assert30:
@@ -1562,7 +1562,7 @@ program Coder (output, coderSsl, tCode, object, options);
     procedure OperandPushStringDescriptor;
         { Push an operand stack entry for the string descriptor }
         begin
-            Assert ( (compoundToken = tStringDescriptor), assert28);
+            Assert ( (compoundToken = tLiteralString), assert28);
             OperandPush (mString, compoundTokenValue, undefined, word);
         end { OperandPushStringDescriptor };
 
@@ -1838,7 +1838,7 @@ program Coder (output, coderSsl, tCode, object, options);
 
                     case compoundToken of
                         tLiteralAddress, tLiteralInteger, tLiteralString,
-                        tLiteralBoolean, tStringDescriptor, tSkipString,
+                        tLiteralBoolean,
                         tWhileTest, tWhileEnd, tRepeatTest, tCallEnd,
                         tLineNumber, tTrap, tIfThen, tIfMerge, tSkipProc,
                         tCaseSelect, tCaseMerge:
@@ -1856,20 +1856,20 @@ program Coder (output, coderSsl, tCode, object, options);
                                 until i > caseHigh - caseLow + 1;
                                 nextTCodeAddress := nextTCodeAddress + (caseHigh - caseLow) + 2
                             end;
-                        tLiteralString:
-                            begin
-                                compoundTokenLength := compoundTokenValue;
-                                compoundTokenValue := tCodeAddress;
-                                i := 1;
-                                while i <= compoundTokenLength do
-                                    begin
-                                        read (tCode, compoundTokenText[i]);
-                                        i := i + 1
-                                    end;
-                                nextTCodeAddress := nextTCodeAddress + compoundTokenLength;
-                                if compoundTokenLength mod 2 <> 0 then
-                                    compoundTokenText[compoundTokenLength+1] := null
-                            end;
+                        // tLiteralString:
+                        //     begin
+                        //         compoundTokenLength := compoundTokenValue;
+                        //         compoundTokenValue := tCodeAddress;
+                        //         i := 1;
+                        //         while i <= compoundTokenLength do
+                        //             begin
+                        //                 read (tCode, compoundTokenText[i]);
+                        //                 i := i + 1
+                        //             end;
+                        //         nextTCodeAddress := nextTCodeAddress + compoundTokenLength;
+                        //         if compoundTokenLength mod 2 <> 0 then
+                        //             compoundTokenText[compoundTokenLength+1] := null
+                        //     end;
                     end         { case compoundToken }
                 end;
 
