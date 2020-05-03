@@ -48,22 +48,22 @@ Input:
         tVarParm
         tFetchAddress
         tFetchInteger
-        tFetchChar
+        tFetchString
         tFetchBoolean
         tAssignBegin
         tAssignAddress
         tAssignInteger
-        tAssignChar
         tAssignBoolean
+        tAssignString
         tStoreParmAddress
         tStoreParmInteger
-        tStoreParmChar
         tStoreParmBoolean
+        tStoreParmString
         tSubscriptBegin
         tSubscriptAddress
         tSubscriptInteger
-        tSubscriptChar
         tSubscriptBoolean
+        tSubscriptString
         tArrayDescriptor
         tFileDescriptor
         tIfBegin
@@ -80,12 +80,16 @@ Input:
         tTrapBegin
         tWriteEnd
         tReadEnd
+        tConcatenate
+        tRepeatString
+        tSubstring
+        tLength
+        tStringEqual
 
         % Compound T-codes - T-code operations that take an operand
         tLiteralAddress
         firstCompoundTcode = tLiteralAddress
         tLiteralInteger
-        tLiteralChar
         tLiteralBoolean
         tLiteralString
         tStringDescriptor
@@ -95,8 +99,11 @@ Input:
         tCaseSelect
         tCaseMerge
         tCaseEnd
+        tCaseOtherwise
         tWhileTest
         tWhileEnd
+        tWhilePreBreak
+        tWhileBreakIf
         tRepeatTest
         tSkipProc
         tCallEnd
@@ -141,9 +148,9 @@ type Integer:
         trWriteln = 6
         trWriteString = 7
         trWriteInteger = 8
-        trWriteChar = 9
+        trWriteString = 109
         trReadInteger = 10
-        trReadChar = 11
+        trReadString = 108
         trAssign = 12
         trSubscriptAbort = 13
         trCaseAbort = 14
@@ -252,7 +259,7 @@ mechanism OperandStack:
         % Push an entry with the value of the last accepted integer
         % (tLiteralInteger tcode), length word and manifest addressing mode.
 
-    oOperandPushChar
+    oOperandPushString
         % Push an entry with the value of the last accepted character
         % (tLiteralChar tcode), length byte and manifest addressing mode.
 
@@ -781,7 +788,7 @@ Routine:
                     @OperandPopAndFreeTemp      % ... 8(%ebp), formal
                     @OperandPopAndFreeTemp      % ... 8(%ebp)
 
-                | tStoreParmChar, tStoreParmBoolean:
+                | tStoreParmString, tStoreParmBoolean:
                     oOperandSwap                % ... formal, 8(%ebp)
                     oOperandPushCopy            % ... formal, 8(%ebp), 8(%ebp)
                     oOperandSwapLeftAndDest     % ... 8(%ebp), formal, 8(%ebp)
@@ -1445,8 +1452,8 @@ OperandPushExpression:
             @OperandPushVariable
         | tLiteralInteger:
             oOperandPushInteger
-        | tLiteralChar:
-            oOperandPushChar
+        | tLiteralString:
+            oOperandPushString
         | tLiteralBoolean:
             oOperandPushBoolean
         | tStringDescriptor:
@@ -1541,8 +1548,8 @@ OperandPushVariable:
             [
                 | tSubscriptInteger:
                     @OperandSubscriptIntegerPop
-                | tSubscriptChar:
-                    @OperandSubscriptCharPop
+                | tSubscriptString:
+                    @OperandSubscriptStringPop
                 | tSubscriptBoolean:
                     @OperandSubscriptBooleanPop
             ]
@@ -1551,7 +1558,7 @@ OperandPushVariable:
     ]
     [
         | tFetchInteger:
-        | tFetchChar, tFetchBoolean:
+        | tFetchString, tFetchBoolean:
             oOperandSetLength(byte)
         | *: 
             % Value is not to be loaded
@@ -1580,7 +1587,7 @@ OperandSubscriptIntegerPop:
     oOperandSetLength(word);
 
 
-OperandSubscriptCharPop:
+OperandSubscriptStringPop:
     % similar to above
     [ oOperandChooseMode
         | mManifest:
@@ -1588,7 +1595,7 @@ OperandSubscriptCharPop:
             [ oOperandChooseMode
                 | mTempIndirect:
                     oOperandSwap
-                    @OperandSubscriptNonManifestCharPop
+                    @OperandSubscriptNonManifestStringPop
                 | *:
                     % tell the folder we are working on bytes
                     oOperandSetLength(byte)     
@@ -1597,13 +1604,13 @@ OperandSubscriptCharPop:
                     oOperandPop
             ]
         | *:
-            @OperandSubscriptNonManifestCharPop
+            @OperandSubscriptNonManifestStringPop
     ]
     oOperandSetLength(byte);
 
 
 OperandSubscriptBooleanPop:
-    @OperandSubscriptCharPop;
+    @OperandSubscriptStringPop;
 
 
 OperandSubscriptNonManifestIntegerPop:
@@ -1801,16 +1808,16 @@ OperandUncheckedSubscriptNonManifestIntegerPop:
     ];
 
 
-OperandSubscriptNonManifestCharPop:
+OperandSubscriptNonManifestStringPop:
     [ oOptionTestChecking
         | yes:
-            @OperandCheckedSubscriptNonManifestCharPop
+            @OperandCheckedSubscriptNonManifestStringPop
         | *:
-            @OperandUncheckedSubscriptNonManifestCharPop
+            @OperandUncheckedSubscriptNonManifestStringPop
     ];
 
 
-OperandCheckedSubscriptNonManifestCharPop:
+OperandCheckedSubscriptNonManifestStringPop:
     % Default bounds checking subscript operation
 
     % Get subscript                             % ... arraydesc, subscript
@@ -1861,7 +1868,7 @@ OperandCheckedSubscriptNonManifestCharPop:
     oOperandSetLength(byte);
 
 
-OperandUncheckedSubscriptNonManifestCharPop:
+OperandUncheckedSubscriptNonManifestStringPop:
     % Optimized non-bounds checking subscript operation
     oOperandSwap                                % ... subscript, arraydesc
 
@@ -1870,7 +1877,7 @@ OperandUncheckedSubscriptNonManifestCharPop:
             % Var parameter array - don't know the characteristics
             % until run time, so give up and use regular checked subscripting
             oOperandSwap
-            @OperandCheckedSubscriptNonManifestCharPop
+            @OperandCheckedSubscriptNonManifestStringPop
 
         | mStatic:
             % Any other array - know all the characteristics now,
@@ -1916,15 +1923,15 @@ OperandPushExpressionAssignPopPop:
             @OperandPushVariable
         | tLiteralInteger:
             oOperandPushInteger
-        | tLiteralChar:
-            oOperandPushChar
+        | tLiteralString:
+            oOperandPushString
         | tLiteralBoolean:
             oOperandPushBoolean
         | tAssignInteger:
             @OperandAssignIntegerPopPop
             >
-        | tAssignChar:
-            @OperandAssignCharPopPop
+        | tAssignString:
+            @OperandAssignStringPopPop
             >
         | tAssignBoolean:
             @OperandAssignBooleanPopPop
@@ -2792,7 +2799,7 @@ OperandAssignIntegerPopPop:
     ];
 
 
-OperandAssignCharPopPop:
+OperandAssignStringPopPop:
     % Generate code to assign the right (top) operand's value to
     % the left (second) operand and pop both operands.
 
@@ -2807,7 +2814,7 @@ OperandAssignBooleanPopPop:
     % the left (second) operand and pop both operands.
 
     @OperandConvertJumpConditionToData
-    @OperandAssignCharPopPop;
+    @OperandAssignStringPopPop;
 
 
 OperandPopAndFreeTemp:
