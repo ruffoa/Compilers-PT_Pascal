@@ -106,7 +106,6 @@ Test output is:
          % value emitted 1
          .tAdd
        .tAssignInteger
-   .tWhileEnd
    % value emitted 18
  .tTrapBegin
  .tTrap
@@ -116,13 +115,15 @@ Test output is:
 ```
 
 
+Warning, output length does not match (33 vs 34)!  (Newlines are not the issue here!) `testBlocksBasic.pt`
+Showing as much of the diff as possible...
 
 File diff
 -------------------------
 ```diff
-
-```
-Test output matches the expected output! :heavy_check_mark:
+-.tTrapBegin !== .tWhileEnd on line 30 of testBlocksBasic.pt
+-.tTrap !== .tTrapBegin on line 31 of testBlocksBasic.pt
+-oEmitTrapKind(trHalt) !== .tTrap on line 32 of testBlocksBasic.pt
 
 ```
 end file

@@ -108,7 +108,7 @@ Test output is:
         .tAdd
       .tAssignInteger
    .tWhileEnd
-   % value emitted 18
+   % value emitted 19
  .tTrapBegin
  .tTrap
  oEmitTrapKind(trHalt)
