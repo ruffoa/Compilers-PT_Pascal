@@ -75,6 +75,9 @@ jobs:
     - name: Build and export the Test Suite Results
       run: |
         export PATH=$PATH:~/binaries
+        
+        rm -f bin
+        mkdir bin
 
         make
         ls -l
