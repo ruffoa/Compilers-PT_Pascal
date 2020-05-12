@@ -77,7 +77,8 @@ jobs:
         export PATH=$PATH:~/binaries
 
         make
-
+        ls -l
+        ls -l bin
         cd ../scripts
         
         npm install
