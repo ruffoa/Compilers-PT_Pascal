@@ -63,7 +63,7 @@ jobs:
 
         make
 
-        cd ../../scripts
+        cd ../scripts
         
         npm install
         npm install @actions/core
@@ -78,7 +78,7 @@ jobs:
 
         make
 
-        cd ../../scripts
+        cd ../scripts
         
         npm install
         npm install @actions/core
