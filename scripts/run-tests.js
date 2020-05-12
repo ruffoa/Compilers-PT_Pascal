@@ -54,7 +54,7 @@ async function findAllFilesInDir(dir) {
 
 async function getFileAssemblyOutput(file, dir) {
     try {
-        const output = await exec(`${ptHomePath}/bin/ptc -S ${relativeFolderPath}${dir}/${file}`);
+        const output = await exec(`${ptHomePath}bin/ptc -S ${relativeFolderPath}${dir}/${file}`);
         // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
         
@@ -77,7 +77,7 @@ async function getFileAssemblyOutput(file, dir) {
 
 async function runFileAndGetOutput(file, dir) {
     try {
-        const buildOutput = await exec(`${ptHomePath}/bin/ptc -S ${relativeFolderPath}${dir}/${file}`);
+        const buildOutput = await exec(`${ptHomePath}bin/ptc -S ${relativeFolderPath}${dir}/${file}`);
         // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
         
