@@ -61,12 +61,6 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
-        make
-        make
-
-        cd ../semantic
-        make
         make
 
         cd ../../scripts
@@ -74,7 +68,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        node ./validate-tests.js Semantic
+        node ./validate-tests.js CodeGen
       working-directory: ./pt
       id: test_tests
 
@@ -82,12 +76,6 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
-        make
-        make
-
-        cd ../semantic
-        make
         make
 
         cd ../../scripts
@@ -95,7 +83,7 @@ jobs:
         npm install
         npm install @actions/core
 
-        node ./get-test-output.js Semantic
+        node ./run-tests.js CodeGen
       working-directory: ./pt
       id: test_suite
 
@@ -103,12 +91,6 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
 
-        cd parser
-        make
-        make
-
-        cd ../semantic
-        make
         make
 
         cd ../../scripts
@@ -116,8 +98,8 @@ jobs:
         npm install
         npm install @actions/core
 
-        rm -f ../CordyTests/SemanticOutput.md
-        node ./run-cordys-tests.js Semantic
+        rm -f ../CordyTests/CodeGenOutput.md
+        node ./run-cordys-tests.js CodeGen
       working-directory: ./pt
       id: cordy_tests
 
@@ -127,9 +109,9 @@ jobs:
         git config --local user.name "GitHub Action"
         git add TestSuite/\*-output.md
         git add TestSuite/\*-testErr.md
-        git add CordyTests/\SemanticOutput.md
+        git add CordyTests/\CodeGenOutput.md
         git status
-        git commit -m "Update Semantic test suite output files with latest test results" || echo "Test outputs are up to date" 
+        git commit -m "Update code gen test suite output files with latest test results" || echo "Test outputs are up to date" 
       
     - name: Extract branch name
       shell: bash

@@ -16,7 +16,9 @@ const ptHomePath = path.join(__dirname, `../pt/`);
 const getSegment = {
     'Scanner': '-o1 -t1',
     'Parser': '-o2 -t2',
-    'Semantic': '-o3 -t3'
+    'Semantic': '-o3 -t3',
+    'CodeGen': '-o3 -t3'    // This is the same as the semantic phase, as we are only testing to make sure the tests are valid Qust, 
+                            // so if it passes the semantic phase, it's valid code
 };
 
 let passed = true;
