@@ -94,8 +94,8 @@ async function runFileAndGetOutput(file, dir) {
         res += buildOutput.stderr && isRealError || buildOutput.stdout;
         res += `\n\`\`\`\n------------------------\n`;
 
-        await exec(`ls -l`);
-        await exec(`ls -l ${ptHomePath}bin`);
+        console.log(await (await exec(`ls -l`)).stdout);
+        console.log(await (await exec(`ls -l ${ptHomePath}bin`)).stdout);
 
         const output = await exec(`${ptHomePath}bin/${file.substr(0, file.indexOf('.pt'))}.out`);
         if (output.stderr) {
