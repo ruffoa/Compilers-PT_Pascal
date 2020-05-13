@@ -94,6 +94,9 @@ async function runFileAndGetOutput(file, dir) {
         res += buildOutput.stderr && isRealError || buildOutput.stdout;
         res += `\n\`\`\`\n------------------------\n`;
 
+        const buildOutput = await exec(`ls -l`);
+        const buildOutput = await exec(`ls -l ${ptHomePath}bin`);
+
         const output = await exec(`${ptHomePath}bin/${file.substr(0, file.indexOf('.pt'))}.out`);
         if (output.stderr) {
             if (output.stderr.indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
