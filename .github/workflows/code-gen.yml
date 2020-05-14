@@ -79,9 +79,6 @@ jobs:
       run: |
         export PATH=$PATH:~/binaries
         
-        rm -f bin
-        mkdir bin
-
         make
         ls -l
         ls -l bin
@@ -94,21 +91,21 @@ jobs:
       working-directory: ./pt
       id: test_suite
 
-    - name: Run Cordy's Tests
-      run: |
-        export PATH=$PATH:~/binaries
+    # - name: Run Cordy's Tests
+    #   run: |
+    #     export PATH=$PATH:~/binaries
 
-        make
+    #     make
 
-        cd ../scripts
+    #     cd ../scripts
         
-        npm install
-        npm install @actions/core
+    #     npm install
+    #     npm install @actions/core
 
-        rm -f ../CordyTests/CodeGenOutput.md
-        node ./run-cordys-tests.js CodeGen
-      working-directory: ./pt
-      id: cordy_tests
+    #     rm -f ../CordyTests/CodeGenOutput.md
+    #     node ./run-cordys-tests.js CodeGen
+    #   working-directory: ./pt
+    #   id: cordy_tests
 
     - name: Commit new test results
       run: |

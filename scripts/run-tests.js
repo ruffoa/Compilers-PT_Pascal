@@ -145,7 +145,7 @@ function compareResults(assembly, programOutput, file, dir) {
     
     if (assembly) {        
         if (programOutput) {
-            output += `\n${programOutput.replace(regex, '% .sNewLine')}\n`;
+            output += `\n${assembly}\n`;
             output += 'Program output is: \n-------------------------\n';
             output += `\`\`\`\n${programOutput}\n\`\`\`\n`;
             output += `\n\n`;
