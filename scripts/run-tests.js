@@ -73,7 +73,7 @@ async function getFileAssemblyOutput(file, dir) {
         return output.stderr && isRealError || fileContents.stdout;
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
-        core.setFailed("Bash command failed, aborting" + e.message);
+        // core.setFailed("Bash command failed, aborting" + e.message);
     }
 }
 
@@ -113,7 +113,7 @@ async function runFileAndGetOutput(file, dir) {
 
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
-        core.setFailed("Bash command failed, aborting" + e.message);
+        // core.setFailed("Bash command failed, aborting" + e.message);
     }
 
     return "";
