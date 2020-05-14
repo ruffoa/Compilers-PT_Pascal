@@ -68,7 +68,9 @@ async function getFileAssemblyOutput(file, dir) {
             }
         }
 
-        return output.stderr && isRealError || output.stdout;
+        const fileContents = await exec(`cat ${file.substr(0, file.indexOf('.pt'))}.s`);
+
+        return output.stderr && isRealError || fileContents.stdout;
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         core.setFailed("Bash command failed, aborting" + e.message);
@@ -77,7 +79,7 @@ async function getFileAssemblyOutput(file, dir) {
 
 async function runFileAndGetOutput(file, dir) {
     try {
-        const buildOutput = await exec(`${ptHomePath}bin/ptc -L ${ptHomePath}lib/pt/ -S ${relativeFolderPath}${dir}/${file}`);
+        const buildOutput = await exec(`${ptHomePath}bin/ptc -L ${ptHomePath}lib/pt/ ${relativeFolderPath}${dir}/${file}`);
         // const output = await exec(`cat ${relativeFolderPath}${dir}/basic-block-program-output`);
         // console.log(output.stdout, output.stderr || output.stdout);
         
@@ -94,10 +96,7 @@ async function runFileAndGetOutput(file, dir) {
         res += buildOutput.stderr && isRealError || buildOutput.stdout;
         res += `\n\`\`\`\n------------------------\n`;
 
-        console.log(await (await exec(`ls -l`)).stdout);
-        console.log(await (await exec(`ls -l ${ptHomePath}bin`)).stdout);
-
-        const output = await exec(`${ptHomePath}bin/${file.substr(0, file.indexOf('.pt'))}.out`);
+        const output = await exec(`./${file.substr(0, file.indexOf('.pt'))}.out`);
         if (output.stderr) {
             if (output.stderr.indexOf("PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto") >= 0) {
                 isRealError = false;

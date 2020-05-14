@@ -72,8 +72,8 @@ jobs:
       working-directory: ./pt
       id: test_tests
 
-    - name: Setup tmate session       # Debugging terminal
-      uses: mxschmitt/action-tmate@v1
+    # - name: Setup tmate session       # Debugging terminal
+    #   uses: mxschmitt/action-tmate@v1
 
     - name: Build and export the Test Suite Results
       run: |
