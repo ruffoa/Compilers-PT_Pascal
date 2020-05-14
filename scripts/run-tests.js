@@ -74,6 +74,7 @@ async function getFileAssemblyOutput(file, dir) {
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         // core.setFailed("Bash command failed, aborting" + e.message);
+        passed = false;
     }
 }
 
@@ -114,6 +115,7 @@ async function runFileAndGetOutput(file, dir) {
     } catch (e) {
         console.error("Bash command failed, aborting! ", e);
         // core.setFailed("Bash command failed, aborting" + e.message);
+        passed = false;
     }
 
     return "";
