@@ -164,7 +164,7 @@ function compareResults(assembly, programOutput, file, dir) {
             let eFile = `the local test ouput (results from ${file})`;
 
             if (!expectedResultFile) {
-                eFile = "Expected results"
+                eFile = "Expected results file; file not found";
             }
 
             console.log("No ", eFile);
