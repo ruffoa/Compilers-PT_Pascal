@@ -750,11 +750,28 @@ Block:
             @Routine
             oFixForwardBranch   
             oFixPopAddress
+        | tAssignBegin:
+            @AssignStmt
+        | tCallBegin:
+            @CallStmt
+        | tIfBegin:
+            @IfStmt
+        | tWhileBegin:
+            @WhileStmt
+        | tRepeatBegin:
+            @RepeatStmt
+        | tCaseBegin:
+            @CaseStmt
+        | tWriteBegin:
+            @WriteProc
+        | tReadBegin:
+            @ReadProc
+        | tTrapBegin:
+            @TrapStmt
         | *:
-            >
-    ]}
-    @Statements;
+            >   % End of statement list or empty statement
 
+    ]};
 
 Routine:
     oEmitProcLabel(mProc)                       % pNN:
@@ -819,33 +836,6 @@ OperandNextParameter:
     oOperandAddManifestValues           % ... 8, 4
     oOperandPop                         % ... 8
     oOperandSetMode(mArgument);         % ... 8(%ebp)
-
-
-Statements:
-    % Previous passes have removed redundant begin-end markers.
-    {[
-        | tAssignBegin:
-            @AssignStmt
-        | tCallBegin:
-            @CallStmt
-        | tIfBegin:
-            @IfStmt
-        | tWhileBegin:
-            @WhileStmt
-        | tRepeatBegin:
-            @RepeatStmt
-        | tCaseBegin:
-            @CaseStmt
-        | tWriteBegin:
-            @WriteProc
-        | tReadBegin:
-            @ReadProc
-        | tTrapBegin:
-            @TrapStmt
-        | *:
-            >   % End of statement list or empty statement
-    ]};
-
 
 AssignStmt:
     oEmitSourceCoordinate
