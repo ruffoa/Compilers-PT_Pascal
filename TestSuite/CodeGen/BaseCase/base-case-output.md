@@ -11,7 +11,7 @@ mod main (output) {
 ```
 ------------------------
 
-```   
+```
     .data    
     .comm    u,4
 n:    .long    0
