@@ -2281,7 +2281,10 @@ program Coder (output, coderSsl, tCode, object, options);
                         OperandPushProcedure;
 
                     oOperandPushStringDescriptor:
-                        oOperandPushString;
+                        begin
+                            Assert ( (compoundToken = tLiteralString), assert19);
+                            OperandPush (mManifest, compoundTokenValue, undefined, byte)
+                        end;
 
                     oOperandPushTrap:
                         begin
