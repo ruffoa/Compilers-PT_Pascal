@@ -160,7 +160,7 @@ function compareResults(assembly, programOutput, file, dir) {
         const expectedResultFile = fs.readFileSync(`${relativeFolderPath}${dir}/${file}-e.txt`, 'utf-8');
         // console.log(results, content)
 
-        if (!expectedResultFile || !content) {
+        if (!expectedResultFile || !programOutput) {
             let eFile = `the local test ouput (results from ${file})`;
 
             if (!expectedResultFile) {
@@ -180,7 +180,7 @@ function compareResults(assembly, programOutput, file, dir) {
             expectedOutput.splice(0, 1);
         }
 
-        let testOutput = content.trim().split('\n');
+        let testOutput = programOutput.trim().split('\n');
         testOutput = testOutput.map((tLine) => {
             if (tLine.search(/%.+[\n\r]*/) >= 0) {  //using search enables use of regex too look for any commented line. i.e this is more versatile
                 tLine = "% .sNewLine";
@@ -199,7 +199,7 @@ function compareResults(assembly, programOutput, file, dir) {
                 output += `Test output matches the expected output! :heavy_check_mark:\n`;
             } else {
                 console.error("Lengths do not match!  Something went wrong in ", file);
-                console.error(`Output is: \n-------------------------\n${content}\n------------------------`);
+                console.error(`Output is: \n-------------------------\n${programOutput}\n------------------------`);
                 // core.setFailed("Lengths do not match!  Something went wrong in " + file);
 
                 output += `Warning, output length does not match (${testOutputWithoutNewLines.length} vs ${expectedOutput.length})!  (Newlines are not the issue here!) \`${file}\`\nShowing as much of the diff as possible...\n`;
