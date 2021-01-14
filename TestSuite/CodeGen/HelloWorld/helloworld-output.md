@@ -60,5 +60,13 @@ Runtime Output:
 ```
 
 
+Warning, output length does not match (14 vs 1)!  (Newlines are not the issue here!) `helloworld.pt`
+Showing as much of the diff as possible...
 
+File diff
+-------------------------
+```diff
+-Build Output: !== Hello World on line 0 of helloworld.pt
+
+```
 end file
