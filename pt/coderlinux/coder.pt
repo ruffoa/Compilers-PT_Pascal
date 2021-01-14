@@ -1856,7 +1856,7 @@ program Coder (output, coderSsl, tCode, object, options);
                                 until i > caseHigh - caseLow + 1;
                                 nextTCodeAddress := nextTCodeAddress + (caseHigh - caseLow) + 2
                             end;
-                     {   tLiteralString:
+                        tLiteralString:
                             begin
                                 compoundTokenLength := compoundTokenValue;
                                 compoundTokenValue := tCodeAddress;
@@ -1869,7 +1869,7 @@ program Coder (output, coderSsl, tCode, object, options);
                                 nextTCodeAddress := nextTCodeAddress + compoundTokenLength;
                                 if compoundTokenLength mod 2 <> 0 then
                                     compoundTokenText[compoundTokenLength+1] := null
-                            end; }
+                            end;
                     end         { case compoundToken }
                 end;
 
@@ -2281,7 +2281,7 @@ program Coder (output, coderSsl, tCode, object, options);
                         OperandPushProcedure;
 
                     oOperandPushStringDescriptor:
-                        OperandPushStringDescriptor;
+                        oOperandPushString;
 
                     oOperandPushTrap:
                         begin
