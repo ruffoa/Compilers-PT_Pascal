@@ -1,0 +1,5 @@
+mod main (output) {
+    let mut a = 1;
+    a = a + 2;
+    let mut b = a;
+}

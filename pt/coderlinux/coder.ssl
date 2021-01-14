@@ -750,11 +750,28 @@ Block:
             @Routine
             oFixForwardBranch   
             oFixPopAddress
+        | tAssignBegin:
+            @AssignStmt
+        | tCallBegin:
+            @CallStmt
+        | tIfBegin:
+            @IfStmt
+        | tWhileBegin:
+            @WhileStmt
+        | tRepeatBegin:
+            @RepeatStmt
+        | tCaseBegin:
+            @CaseStmt
+        | tWriteBegin:
+            @WriteProc
+        | tReadBegin:
+            @ReadProc
+        | tTrapBegin:
+            @TrapStmt
         | *:
-            >
-    ]}
-    @Statements;
+            >   % End of statement list or empty statement
 
+    ]};
 
 Routine:
     oEmitProcLabel(mProc)                       % pNN:
@@ -819,33 +836,6 @@ OperandNextParameter:
     oOperandAddManifestValues           % ... 8, 4
     oOperandPop                         % ... 8
     oOperandSetMode(mArgument);         % ... 8(%ebp)
-
-
-Statements:
-    % Previous passes have removed redundant begin-end markers.
-    {[
-        | tAssignBegin:
-            @AssignStmt
-        | tCallBegin:
-            @CallStmt
-        | tIfBegin:
-            @IfStmt
-        | tWhileBegin:
-            @WhileStmt
-        | tRepeatBegin:
-            @RepeatStmt
-        | tCaseBegin:
-            @CaseStmt
-        | tWriteBegin:
-            @WriteProc
-        | tReadBegin:
-            @ReadProc
-        | tTrapBegin:
-            @TrapStmt
-        | *:
-            >   % End of statement list or empty statement
-    ]};
-
 
 AssignStmt:
     oEmitSourceCoordinate
@@ -920,7 +910,7 @@ IfStmt:
         | *:
             @OperandComplementJumpCondition
             @OperandInfixOr
-            @Statements                         % the then part
+            @Block                         % the then part
             [
                 | tIfMerge:                     % i.e. else
                     % Emit exit branch for the then clause
@@ -931,7 +921,7 @@ IfStmt:
                     oFixPushLastAddress         %  of jmp just emitted
 
                     oEmitMergeSourceCoordinate
-                    @Statements                 % the else part
+                    @Block                 % the else part
                     oFixForwardBranch           % fNNN:
                     oFixPopAddress
                     tIfEnd
@@ -982,7 +972,7 @@ FoldIfStmt:
             % condition is always true
             oFixAndFreeShuntList        % all pending branches lead here
             oFixAndFreeFalseBranches
-            @Statements                 % keep only the then part
+            @Block                 % keep only the then part
             @SkipToEndIf                % throw away the else part
 
         | iJnever:
@@ -992,7 +982,7 @@ FoldIfStmt:
             % throw away everything but the else part
             {[
                 | tIfMerge:
-                    @Statements         % keep only the else part
+                    @Block         % keep only the else part
                     tIfEnd
                     >
                 | tIfEnd:
@@ -1048,7 +1038,7 @@ WhileStmt:
             @OperandInfixOr                     %       j!cond  fNNN
     ]
 
-    @Statements                                 % loop body
+    @Block                                 % loop body
     tWhileEnd
     oEmitUnconditionalBackwardBranch            %       jmp     bNNN
     oFixPopAddress
@@ -1071,7 +1061,7 @@ RepeatStmt:
     % Save the target address for the top-of-loop branch
     oFixPushAddress                             % bNNN:
     oEmitMergeSourceCoordinate
-    @Statements                                 % loop body
+    @Block                                 % loop body
     tRepeatControl
     @OperandPushBooleanControlExpression        % ... cond
     tRepeatTest
@@ -1142,7 +1132,7 @@ CaseVariant:
     % An alternative body of the case statement
     oCaseEnterVariantAddress            % vNNN:
     oEmitMergeSourceCoordinate
-    @Statements
+    @Block
     tCaseMerge
     % Merge branch to exit the case statement
     oEmitCaseMergeBranch;               %       jmp     mNNN
