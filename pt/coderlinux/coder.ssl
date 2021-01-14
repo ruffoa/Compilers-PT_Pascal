@@ -1009,6 +1009,12 @@ WhileStmt:
     % Save the target address for the top-of-loop branch
     oFixPushAddress                             % bNNN:
     oEmitMergeSourceCoordinate
+
+    tWhilePreBreak
+    @Block
+    tWhileBreakIf
+    @Block
+    
     @OperandPushBooleanControlExpression        % ... cond
     tWhileTest
     @OperandComplementJumpCondition             % ... !cond
