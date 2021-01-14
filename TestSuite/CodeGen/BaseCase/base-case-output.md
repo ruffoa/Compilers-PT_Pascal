@@ -11,7 +11,8 @@ mod main (output) {
 ```
 ------------------------
 
-```    .data    
+```   
+    .data    
     .comm    u,4
 n:    .long    0
     .text    

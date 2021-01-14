@@ -1,0 +1,1 @@
+Adds 2 to a number and assigns the result to a new variable

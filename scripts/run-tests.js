@@ -147,7 +147,7 @@ function compareResults(assembly, programOutput, file, dir) {
     
     if (assembly) {        
         if (programOutput) {
-            output += `\n\`\`\`${assembly}\`\`\`\n`;
+            output += `\n\`\`\`\n${assembly}\`\`\`\n`;
             output += 'Program output is: \n-------------------------\n';
             output += `\`\`\`\n${programOutput}\n\`\`\`\n`;
             output += `\n\n`;
