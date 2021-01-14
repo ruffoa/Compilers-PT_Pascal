@@ -712,10 +712,9 @@ Block:
     % array bounds and file descriptors which are emitted as assignment
     % statements, nested procedure definitions and finally statements.
     {[
-        | tSkipString:
+        | tLiteralString:
             % Emit a string constant to the data area
             oEmitNone(iData)                    %       .data
-            tLiteralString
             oEmitString                         % sNN:  .asciz  "SSSSS"
             oEmitNone(iText)                    %       .text
         | tLiteralInteger:
@@ -1010,6 +1009,12 @@ WhileStmt:
     % Save the target address for the top-of-loop branch
     oFixPushAddress                             % bNNN:
     oEmitMergeSourceCoordinate
+
+    tWhilePreBreak
+    @Block
+    tWhileBreakIf
+    @Block
+    
     @OperandPushBooleanControlExpression        % ... cond
     tWhileTest
     @OperandComplementJumpCondition             % ... !cond
@@ -1441,23 +1446,15 @@ OperandPushExpression:
             @OperandPushVariable
         | tLiteralInteger:
             oOperandPushInteger
-        | tLiteralString:
-            oOperandPushString
         | tLiteralBoolean:
             oOperandPushBoolean
-        | tStringDescriptor:
-            oOperandPushStringDescriptor
-            % Get a string literal's address
-            @EmitStringDescriptor               %       lea     sNNN, %T
-        | tSkipString:
+        | tLiteralString:
             % Emit string literal to data area
             oEmitNone(iData)                    %       .data
             % Emit the string
             tLiteralString
             oEmitString                         % sNNN: .asciz  "SSSSS"
             oEmitNone(iText)                    %       .text
-            % Get the string literal's address
-            tStringDescriptor
             oOperandPushStringDescriptor
             @EmitStringDescriptor               %       lea     sNNN, %T
         | tNegate:
