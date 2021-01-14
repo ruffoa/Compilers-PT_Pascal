@@ -97,7 +97,7 @@ main (argc, argv)
 
     arg = 0;
 
-    fprintf (stderr, "PT Pascal v4.2 (c) 2019 Queen's University, (c) 1980 University of Toronto\n");
+    fprintf (stderr, "Modified PT Pascal v4.2 - Qust Compiler (c) 2020 Queen's University, (c) 1980 University of Toronto\n");
 
     if (argc == 1)  useerror ();
 
@@ -457,7 +457,7 @@ char suffix (as)
 help ()
 { 
     char c;
-    printf ("'ptc' invokes the PT compiler to compile a PT source program.\n");
+    printf ("'ptc' invokes the Qust compiler to compile a Qust source program.\n");
     printf ("The command syntax is:\n\n");
     printf ("   %s\n\n", usage);
     printf ("The input source program is assumed to be in progname.pt .\n");

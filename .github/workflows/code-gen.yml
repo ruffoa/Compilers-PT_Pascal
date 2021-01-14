@@ -1,0 +1,149 @@
+name: Code Generation CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: install 32bit libs
+      run: |
+        sudo apt-get update
+        sudo apt-get install gcc-multilib lib32z1-dev
+    
+    - name: setup files
+      run: |
+        mkdir ~/binaries
+        cp -r ../binaries/. ~/binaries
+
+        chmod +x ~/binaries/ptc
+        chmod +x ~/binaries/ssl
+        chmod +x ~/binaries/ssltrace
+        
+        mkdir -p /opt/caslab/lib/
+        # cp -r lib/pt/. /opt/caslab/lib/pt/
+        # cp -r ../base-files/ssl/. /opt/caslab/lib/ssl/
+        cp -r ../base-files/. /opt/caslab/lib/
+
+        chmod -R 755 /opt/caslab/lib/
+
+        export PATH=$PATH:~/binaries
+      working-directory: ./pt
+
+    # - name: Debug CI Job  # from https://github.com/sdras/awesome-actions
+    #   on: [push]
+    #   jobs:
+    #     build:
+    #       runs-on: ubuntu-latest
+    #       steps:
+    #       - uses: actions/checkout@v1
+    #       - name: Setup tmate session
+    #         uses: mxschmitt/action-tmate@v1
+
+    - name: make code gen
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make
+        cd coderlinux
+        ssl coder.ssl
+      working-directory: ./pt
+    
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Test the Test Suite
+      run: |
+        export PATH=$PATH:~/binaries
+
+        make
+
+        cd ../scripts
+        
+        npm install
+        npm install @actions/core
+
+        node ./validate-tests.js CodeGen
+      working-directory: ./pt
+      id: test_tests
+
+    # - name: Setup tmate session       # Debugging terminal
+    #   uses: mxschmitt/action-tmate@v1
+
+    - name: Build and export the Test Suite Results
+      run: |
+        export PATH=$PATH:~/binaries
+        
+        make
+        ls -l
+        ls -l bin
+        cd ../scripts
+        
+        npm install
+        npm install @actions/core
+
+        node ./run-tests.js CodeGen
+      working-directory: ./pt
+      id: test_suite
+
+    # - name: Run Cordy's Tests
+    #   run: |
+    #     export PATH=$PATH:~/binaries
+
+    #     make
+
+    #     cd ../scripts
+        
+    #     npm install
+    #     npm install @actions/core
+
+    #     rm -f ../CordyTests/CodeGenOutput.md
+    #     node ./run-cordys-tests.js CodeGen
+    #   working-directory: ./pt
+    #   id: cordy_tests
+
+    - name: Commit new test results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add TestSuite/\*-output.md
+        git add TestSuite/\*-testErr.md
+        git add CordyTests/\CodeGenOutput.md
+        git status
+        git commit -m "Update code gen test suite output files with latest test results" || echo "Test outputs are up to date" 
+      
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
+    - name: Push Changes
+      uses: ad-m/github-push-action@v0.5.0
+      with: 
+        branch: ${{ steps.extract_branch.outputs.branch }}
+        github_token: ${{ secrets.GITHUB_TOKEN	}}
+
+    # - name: Setup tmate session       # Debugging terminal
+    #   uses: mxschmitt/action-tmate@v1
+
+    - name: Tests are valid
+      shell: bash
+      run: |
+        echo $validTests
+        exit $validTests
+
+    - name: Our Test Suite Passed
+      shell: bash
+      run: |
+        echo $validTests
+        exit $ourTests
+
+    # - name: Cordy's Test Suite Passed
+    #   shell: bash
+    #   run: |
+    #     exit $cordyTests

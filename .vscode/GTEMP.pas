@@ -1837,7 +1837,7 @@ program Coder (output, coderSsl, tCode, object, options);
                     nextTCodeAddress := nextTCodeAddress + 1;
 
                     case compoundToken of
-                        tLiteralAddress, tLiteralInteger,
+                        tLiteralAddress, tLiteralInteger, tLiteralString,
                         tLiteralBoolean,
                         tWhileTest, tWhileEnd, tRepeatTest, tCallEnd,
                         tLineNumber, tTrap, tIfThen, tIfMerge, tSkipProc,
@@ -1856,7 +1856,7 @@ program Coder (output, coderSsl, tCode, object, options);
                                 until i > caseHigh - caseLow + 1;
                                 nextTCodeAddress := nextTCodeAddress + (caseHigh - caseLow) + 2
                             end;
-                        tLiteralString:
+                     {   tLiteralString:
                             begin
                                 compoundTokenLength := compoundTokenValue;
                                 compoundTokenValue := tCodeAddress;
@@ -1869,7 +1869,7 @@ program Coder (output, coderSsl, tCode, object, options);
                                 nextTCodeAddress := nextTCodeAddress + compoundTokenLength;
                                 if compoundTokenLength mod 2 <> 0 then
                                     compoundTokenText[compoundTokenLength+1] := null
-                            end;
+                            end; }
                     end         { case compoundToken }
                 end;
 
@@ -2281,10 +2281,7 @@ program Coder (output, coderSsl, tCode, object, options);
                         OperandPushProcedure;
 
                     oOperandPushStringDescriptor:
-                        begin
-                            Assert ( (compoundToken = tLiteralString), assert19);
-                            OperandPush (mManifest, compoundTokenValue, undefined, byte)
-                        end;
+                        OperandPushStringDescriptor;
 
                     oOperandPushTrap:
                         begin
