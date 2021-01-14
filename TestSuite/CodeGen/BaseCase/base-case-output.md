@@ -11,7 +11,7 @@ mod main (output) {
 ```
 ------------------------
 
-    .data    
+```    .data    
     .comm    u,4
 n:    .long    0
     .text    
@@ -23,7 +23,7 @@ ptmain:    pushl   %ebp
     call    pttrap0
     leave    
     ret    
-
+```
 Program output is: 
 -------------------------
 ```
