@@ -7,9 +7,9 @@ Test Content:
 -------------------------
 ```
 mod main (output) {
-    let a = 1;
+    let mut a = 1;
     a = a + 2;
-    b = a;
+    const b = a;
 }
 ```
 ------------------------
